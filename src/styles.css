@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --font-display: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-bg: #eaf3f0;
+  --color-bg-2: #dceae6;
+  --color-surface: #fff;
+  --color-surface-2: #f4faf8;
+  --color-ink: #1a2422;
+  --color-ink-soft: #3a4845;
+  --color-muted: #6b807a;
+  --color-faint: #8b9c97;
+  --color-line: #c5d8d2;
+  --color-tool: #0b6e62;
+  --color-tool-fg: #f4fbff;
+  --color-tool-on: #2a867a;
+  --color-tool-soft: #cfe6e1;
+  --color-tool-ring: #0b6e6266;
+  --color-tool-2: #b7d8d1;
+  --color-catalog: #1b7f72;
+  --color-catalog-fg: #f4fbff;
+  --color-catalog-soft: #d5efe9;
+  --color-btn: #0b6e62;
+  --color-btn-fg: #f4fbff;
+  --color-btn-soft: #cfe6e1;
+  --color-btn-ring: #0b6e6266;
+  --color-warn: #9a5b1c;
+  --color-ok: #2f6b45;
+  --color-danger: #9b3a2f;
+  --color-lawn-wash: #c5d4b0;
+  --color-tile: #d9cbb4;
+  --shadow-border: 0px 0px 0px 1px #1b1f2414, 0px 1px 2px -1px #1b1f240f, 0px 4px 12px 0px #1b1f240a;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --ui-ctrl: 2.25rem;
+  --ui-font: 0.75rem;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: none;
+  }
+  html,
+  body {
+    overscroll-behavior: none;
+    background: var(--color-bg);
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    color: var(--color-ink);
+    overflow: hidden;
+    position: relative;
+  }
+  html[data-ui-size="xs"] { --ui-ctrl: 1.85rem; --ui-font: 0.625rem; }
+  html[data-ui-size="s"] { --ui-ctrl: 2.05rem; --ui-font: 0.6875rem; }
+  html, html[data-ui-size="m"] { --ui-ctrl: 2.25rem; --ui-font: 0.75rem; }
+  html[data-ui-size="l"] { --ui-ctrl: 2.55rem; --ui-font: 0.8125rem; }
+  html[data-ui-size="xl"] { --ui-ctrl: 2.85rem; --ui-font: 0.875rem; }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+.head-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 99px;
+  outline: none;
+  accent-color: currentColor;
+}
+.head-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: currentColor;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px currentColor;
+}
+.head-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: currentColor;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px currentColor;
+}
+.app-shell {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
+}
+.app-header {
+  padding-top: env(safe-area-inset-top, 0px);
+  min-height: calc(var(--ui-ctrl) + 0.7rem + env(safe-area-inset-top, 0px));
+  background: var(--header-bg, var(--color-tool));
+  color: var(--color-tool-fg);
+}
+.app-header button {
+  height: var(--ui-ctrl) !important;
+  min-height: var(--ui-ctrl) !important;
+  min-width: var(--ui-ctrl);
+  font-size: var(--ui-font);
+}
+.info-sheet {
+  top: calc(env(safe-area-inset-top, 0px) + 3.25rem);
+}
+@media (min-width: 640px) {
+  .info-sheet {
+    top: 0;
+  }
+}
+.app-footer {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.grid-step-pop {
+  bottom: calc(2.75rem + env(safe-area-inset-bottom, 0px) + 0.25rem);
+}
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overflow-x: auto;
+}
+.scroll-touch::-webkit-scrollbar {
+  display: none;
+}
+.touch-pan-y {
+  touch-action: pan-y;
+}
+.catalog-list {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  touch-action: pan-y;
+}
+.catalog-list::-webkit-scrollbar {
+  display: none;
+}
+.catalog-scroll-track {
+  position: relative;
+  width: 22px;
+  flex-shrink: 0;
+  margin: 4px 4px 10px 0;
+  border: 1px solid #d4cbb8;
+  border-radius: 11px;
+  background: #ece6d8;
+}
+.catalog-scroll-thumb {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  width: 16px;
+  min-height: 56px;
+  border-radius: 8px;
+  background: var(--color-tool);
+  touch-action: none;
+  cursor: pointer;
+}
+
+html[data-head-drag] [data-catalog] {
+  pointer-events: none;
+  outline: 2px dashed var(--color-tool);
+  outline-offset: -2px;
+  opacity: 0.72;
+}
+
+[data-design-canvas] {
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+[data-design-canvas] .konvajs-content,
+[data-design-canvas] canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  display: block;
+}
