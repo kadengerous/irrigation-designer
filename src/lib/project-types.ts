@@ -75,6 +75,7 @@ export type Geom = {
   hidden: boolean;
   /** Circle radius in metres; ignored otherwise. */
   radius?: number;
+  ellipse?: { cx: number; cy: number; rx: number; ry: number; rot?: number };
   cadType?: RegionType;
   fill?: string;
   name?: string;
@@ -93,6 +94,7 @@ export type Head = {
   zone: number;
   designPressure: number;
   bodyId: string | null;
+  popUpMm: number | null;
   locked: boolean;
   needsReview: boolean;
 };

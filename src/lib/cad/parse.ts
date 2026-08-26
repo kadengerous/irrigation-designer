@@ -40,8 +40,8 @@ export function parseCadInput(raw: string, localeUsesComma = true): ParsedMeasur
     if (n != null) return { ok: true, kind: "angle", deg: n };
   }
 
-  const area = s.match(/^(?:s|пл(?:ощадь)?)[=:]?([+-]?\d+(?:[.,]\d+)?)(m²|м²|m2|м2|sqm)?$/i);
-  if (area && (/^(s|пл)/i.test(s) || /m²|м²|m2|м2|sqm/i.test(area[2] ?? ""))) {
+  const area = s.match(/^(?:s|a|пл(?:ощадь)?)[=:]?([+-]?\d+(?:[.,]\d+)?)(m²|м²|m2|м2|sqm|ft²|sqft)?$/i);
+  if (area && (/^(s|a|пл)/i.test(s) || /m²|м²|m2|м2|sqm|ft²|sqft/i.test(area[2] ?? ""))) {
     const n = parseNumberToken(area[1]!, localeUsesComma);
     if (n != null && n > 0) return { ok: true, kind: "area", meters2: n };
   }

@@ -2,6 +2,7 @@ import { emptyDrawing } from "../src/lib/cad/types";
 import {
   addRect,
   addChain,
+  addEllipse,
   faceArea,
   isInternalEdge,
   deleteBoundary,
@@ -11,7 +12,11 @@ import {
   tessellateEdge,
   moveFace,
   setRectFromDiag,
+  setRectFromEdge,
   setRectSize,
+  setEllipseRadii,
+  scaleEllipse,
+  inferEllipseFromPoints,
   facePoints,
   toPolygons,
   rotateFace,
@@ -77,6 +82,12 @@ if (Math.abs(moved.faces[rid]!.rect!.x - 3) > 1e-9 || Math.abs(moved.faces[rid]!
 }
 const sized = setRectSize(rectD, rid, 8, 5);
 if (Math.abs(faceArea(sized, rid) - 40) > 0.05) throw new Error("setRectSize area " + faceArea(sized, rid));
+const fromRight = setRectFromEdge(rectD, rid, 1, { x: 12, y: 3 });
+if (Math.abs(fromRight.faces[rid]!.rect!.w - 12) > 0.05) throw new Error("edge width " + fromRight.faces[rid]!.rect!.w);
+if (Math.abs(fromRight.faces[rid]!.rect!.h - 6) > 0.05) throw new Error("edge kept height");
+const fromTop = setRectFromEdge(rectD, rid, 0, { x: 5, y: -2 });
+if (Math.abs(fromTop.faces[rid]!.rect!.h - 8) > 0.05) throw new Error("edge height " + fromTop.faces[rid]!.rect!.h);
+if (Math.abs(fromTop.faces[rid]!.rect!.w - 10) > 0.05) throw new Error("edge kept width");
 const rot = rotateFace(rectD, rid, 90);
 const rc = rectWorldCorners(rot.faces[rid]!.rect!);
 const cen = faceCentroid(rot, rid);
@@ -111,5 +122,34 @@ if (Object.values(many.faces).filter((f) => f.circle).length !== 1) throw new Er
 const polys = toPolygons(many);
 if (polys.filter((g) => g.type === "rect").length !== 3) throw new Error("toPolygons rects");
 if (polys.filter((g) => g.type === "circle").length !== 1) throw new Error("toPolygons circle");
+
+const ellD = addEllipse(emptyDrawing(), { x: 2, y: 3 }, 5, 3, "lawn");
+const ellId = Object.keys(ellD.faces)[0]!;
+const ell0 = ellD.faces[ellId]!.ellipse!;
+if (Math.abs(ell0.rx - 5) > 1e-9 || Math.abs(ell0.ry - 3) > 1e-9) throw new Error("ellipse radii");
+if (Math.abs(ell0.cx - 2) > 1e-9 || Math.abs(ell0.cy - 3) > 1e-9) throw new Error("ellipse center");
+const ellS = scaleEllipse(ellD, ellId, 1.5);
+const ell1 = ellS.faces[ellId]!.ellipse!;
+if (Math.abs(ell1.rx - 7.5) > 1e-6 || Math.abs(ell1.ry - 4.5) > 1e-6) throw new Error("scaleEllipse radii " + JSON.stringify(ell1));
+if (Math.abs(ell1.cx - 2) > 1e-9 || Math.abs(ell1.cy - 3) > 1e-9) throw new Error("scaleEllipse moved center");
+if (Math.abs(ell1.rx / ell1.ry - 5 / 3) > 1e-9) throw new Error("scaleEllipse aspect");
+const a0 = Math.PI * 5 * 3;
+const a1 = Math.PI * ell1.rx * ell1.ry;
+if (Math.abs(a1 / a0 - 2.25) > 1e-6) throw new Error("scaleEllipse area k²");
+const ellAxis = setEllipseRadii(ellD, ellId, 8, 3);
+if (Math.abs(ellAxis.faces[ellId]!.ellipse!.ry - 3) > 1e-9) throw new Error("axis B changed");
+if (Math.abs(ellAxis.faces[ellId]!.ellipse!.cx - 2) > 1e-9) throw new Error("axis handle moved center");
+const inferred = inferEllipseFromPoints(
+  Array.from({ length: 24 }, (_, i) => {
+    const a = (Math.PI * 2 * i) / 24;
+    return { x: 2 + 5 * Math.cos(a), y: 3 + 3 * Math.sin(a) };
+  }),
+);
+if (!inferred || Math.abs(inferred.rx - 5) > 0.05 || Math.abs(inferred.ry - 3) > 0.05) throw new Error("inferEllipse " + JSON.stringify(inferred));
+if (inferEllipseFromPoints([{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0.5, y: 2 }])) throw new Error("inferEllipse triangle");
+const ellMoved = moveFace(ellD, ellId, 4, -3);
+const em = ellMoved.faces[ellId]!.ellipse!;
+if (Math.abs(em.cx - 6) > 1e-9 || Math.abs(em.cy - 0) > 1e-9) throw new Error("moveFace ellipse center " + JSON.stringify(em));
+if (Math.abs(em.rx - 5) > 1e-9 || Math.abs(em.ry - 3) > 1e-9) throw new Error("moveFace ellipse radii");
 
 console.log("CAD tests ok", { area, area2, area3, ca, faces: Object.keys(b.faces).length, internals: internals.length, arcR: r });

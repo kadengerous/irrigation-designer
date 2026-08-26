@@ -34,6 +34,7 @@ function makeHead(partial: Pick<Head, "catalogId" | "x" | "y" | "arc" | "start" 
     zone: 1,
     designPressure: item?.recommendedPressureBar ?? 2.8,
     bodyId: item ? defaultBodyFor(item) : "PRS40",
+    popUpMm: item?.popUpMm ?? 100,
     locked: false,
     needsReview: false,
   };

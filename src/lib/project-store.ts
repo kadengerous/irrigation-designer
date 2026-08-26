@@ -97,6 +97,7 @@ import {
   drawingOrMigrate,
   duplicateFace,
   extendEdge,
+  faceArea,
   faceCentroid,
   facePoints,
   filletFace,
@@ -107,9 +108,12 @@ import {
   insertVertexOnEdge,
   intersectFaces,
   setCircleRadius,
-  setRectFromDiag,
-  setRectSize,
   setEllipseRadii,
+  scaleEllipse,
+  scaleFaceAbout,
+  setRectFromDiag,
+  setRectFromEdge,
+  setRectSize,
   mirrorCopyFace,
   mirrorFace,
   lengthenEdge,
@@ -132,6 +136,7 @@ import {
   setFaceLocked,
   setFaceType,
   ensureRectMeta,
+  ensureEllipseMeta,
   snapFaceToGrid,
   smartFill,
   unionFaces,
@@ -280,6 +285,7 @@ type State = {
   applyCadArea: (m2: number, hover: Pt | null) => void;
   applyCadRadius: (r: number, hover: Pt | null) => void;
   setRectCorner: (opposite: Pt, p: Pt) => void;
+  setRectEdge: (edge: 0 | 1 | 2 | 3, p: Pt) => void;
   setRectWH: (w: number, h: number) => void;
   setRectRotation: (deg: number) => void;
   removeBoundary: (edgeId: string) => { warning?: string };
@@ -319,6 +325,9 @@ type State = {
   intersectSelected: () => void;
   setCircleR: (r: number) => void;
   setEllipseR: (rx: number, ry: number) => void;
+  scaleSelectedFace: (k: number) => void;
+  setFaceVertex: (vertexId: string, p: Pt) => void;
+  setFaceArea: (m2: number) => void;
   setSplinePt: (index: number, p: Pt) => void;
   addAngleGuides: (p: Pt) => void;
   addPlantAt: (p: Pt, kind: "tree" | "shrub") => void;
@@ -400,6 +409,7 @@ function migrateHead(h: Partial<Head> & { catalogId?: string; x: number; y: numb
     zone: h.zone ?? 1,
     designPressure: h.designPressure ?? item?.recommendedPressureBar ?? 2.8,
     bodyId: h.bodyId ?? (item ? defaultBodyFor(item) : "PRS40"),
+    popUpMm: h.popUpMm ?? item?.popUpMm ?? 100,
     locked: h.locked ?? false,
     needsReview: h.needsReview ?? !item,
   };
@@ -537,7 +547,7 @@ export const useProject = create<State>()(
         catalogVisible: true,
         rightOpen: false,
         rightMode: "drawing",
-        projectFormOpen: false,
+        projectFormOpen: true,
         familyFilter: "mp",
         polyKind: "lawn",
         regionType: "lawn",
@@ -614,7 +624,7 @@ export const useProject = create<State>()(
             selectedIds: selectedId ? [selectedId] : [],
             selectedPolyId: null,
             selectedEdgeId: null,
-            rightMode: selectedId ? (get().catalogOpen ? "zone" : get().rightMode) : get().rightMode === "object" ? "zone" : get().rightMode,
+            rightMode: selectedId ? "zone" : get().rightMode === "object" ? "zone" : get().rightMode,
             rightOpen: selectedId ? true : get().rightOpen,
           }),
         selectHeads: (selectedIds) =>
@@ -623,7 +633,7 @@ export const useProject = create<State>()(
             selectedId: selectedIds[0] ?? null,
             selectedPolyId: null,
             selectedEdgeId: null,
-            rightMode: selectedIds.length && get().catalogOpen ? "zone" : get().rightMode,
+            rightMode: selectedIds.length ? "zone" : get().rightMode,
             rightOpen: selectedIds.length ? true : get().rightOpen,
           }),
         selectPoly: (selectedPolyId, add) => {
@@ -651,7 +661,7 @@ export const useProject = create<State>()(
             selectedId: null,
             selectedIds: [],
             rightMode: "drawing",
-            cadEditId: null,
+            cadEditId: selectedPolyId === get().cadEditId ? get().cadEditId : add ? get().cadEditId : null,
             tool: "draw",
             catalogOpen: false,
             drawSub: "none",
@@ -696,7 +706,7 @@ export const useProject = create<State>()(
             if (locked) return;
             const pr = get().project;
             const d0 = drawingOrMigrate(pr);
-            const stamped = ensureRectMeta(d0, cadEditId);
+            const stamped = ensureEllipseMeta(ensureRectMeta(d0, cadEditId), cadEditId);
             if (stamped !== d0) {
               set({
                 project: { ...pr, drawing: stamped, polygons: toPolygons(stamped) },
@@ -948,6 +958,11 @@ export const useProject = create<State>()(
           if (!id) return;
           get().commitDrawing(setRectFromDiag(drawingOrMigrate(get().project), id, opposite, p), id, true);
         },
+        setRectEdge: (edge, p) => {
+          const id = get().cadEditId ?? get().selectedPolyId;
+          if (!id) return;
+          get().commitDrawing(setRectFromEdge(drawingOrMigrate(get().project), id, edge, p), id, true);
+        },
         setRectWH: (w, h) => {
           const id = get().cadEditId ?? get().selectedPolyId;
           if (!id || w <= 0 || h <= 0) return;
@@ -958,8 +973,9 @@ export const useProject = create<State>()(
           if (!id || !Number.isFinite(deg)) return;
           const d0 = drawingOrMigrate(get().project);
           const f = d0.faces[id];
-          if (!f?.rect || f.locked) return;
-          const cur = normDeg(f.rect.rot);
+          if (f?.locked) return;
+          const cur = f?.rect ? normDeg(f.rect.rot) : f?.ellipse ? normDeg(f.ellipse.rot ?? 0) : null;
+          if (cur == null) return;
           const target = normDeg(deg);
           let delta = target - cur;
           if (delta > 180) delta -= 360;
@@ -1185,9 +1201,30 @@ export const useProject = create<State>()(
           get().commitDrawing(setCircleRadius(drawingOrMigrate(get().project), id, r), id, true);
         },
         setEllipseR: (rx, ry) => {
-          const id = get().selectedPolyId;
+          const id = get().cadEditId ?? get().selectedPolyId;
           if (!id) return;
           get().commitDrawing(setEllipseRadii(drawingOrMigrate(get().project), id, rx, ry), id, true);
+        },
+        scaleSelectedFace: (k) => {
+          const id = get().cadEditId ?? get().selectedPolyId;
+          if (!id || !(k > 0) || !Number.isFinite(k)) return;
+          const d0 = drawingOrMigrate(get().project);
+          const f = d0.faces[id];
+          const next = f?.ellipse ? scaleEllipse(d0, id, k) : scaleFaceAbout(d0, id, k);
+          get().commitDrawing(next, id, true);
+        },
+        setFaceVertex: (vertexId, p) => {
+          const id = get().cadEditId ?? get().selectedPolyId;
+          if (!id) return;
+          get().commitDrawing(moveVertex(drawingOrMigrate(get().project), vertexId, p), id, true);
+        },
+        setFaceArea: (m2) => {
+          const id = get().cadEditId ?? get().selectedPolyId;
+          if (!id || m2 <= 0) return;
+          const d0 = drawingOrMigrate(get().project);
+          const cur = faceArea(d0, id);
+          if (cur <= 1e-9) return;
+          get().commitDrawing(scaleFaceAbout(d0, id, Math.sqrt(m2 / cur)), id, true);
         },
         setSplinePt: (index, p) => {
           const id = get().selectedPolyId;
@@ -1317,6 +1354,15 @@ export const useProject = create<State>()(
           const face = next.faces[id];
           if (face?.rect) {
             const rot = normDeg(face.rect.rot);
+            const q = Math.round(rot / 45) * 45;
+            let ad = Math.abs(rot - q);
+            if (ad > 180) ad = 360 - ad;
+            if (ad <= 10) {
+              const extra = q - rot;
+              if (Math.abs(extra) > 1e-6) next = rotateFace(next, id, extra);
+            }
+          } else if (face?.ellipse) {
+            const rot = normDeg(face.ellipse.rot ?? 0);
             const q = Math.round(rot / 45) * 45;
             let ad = Math.abs(rot - q);
             if (ad > 180) ad = 360 - ad;
@@ -1482,6 +1528,7 @@ export const useProject = create<State>()(
             zone: get().activeZoneId,
             designPressure: workingPressureBar(item, defaultBodyFor(item), nz?.id),
             bodyId: defaultBodyFor(item),
+            popUpMm: item.popUpMm ?? 100,
             locked: false,
             needsReview: false,
           };
@@ -1793,7 +1840,7 @@ export const useProject = create<State>()(
             catalogOpen: false,
             rightMode: "project",
             rightOpen: false,
-            projectFormOpen: false,
+            projectFormOpen: true,
             past: [],
             future: [],
             fitNonce: get().fitNonce + 1,
@@ -1986,7 +2033,7 @@ export const useProject = create<State>()(
   ),
 );
 
-function isNamed(p: Project): boolean {
+export function isNamed(p: Project): boolean {
   const n = p.name.trim();
   return n.length > 0 && n !== "Без названия";
 }

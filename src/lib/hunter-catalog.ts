@@ -568,12 +568,22 @@ export function bomLineName(item: CatalogItem): string {
   return `Сопло Hunter ${item.id}`;
 }
 export function bodiesFor(item: CatalogItem): CatalogItem[] {
-  if (item.type === "rotor") return [item];
+  if (item.type === "rotor") return [];
   const bodies = CATALOG.filter((c) => c.type === "body");
   if (item.family === "mp" || item.family === "mp800" || item.family === "strip") {
     return bodies.filter((b) => b.id === "PRS40" || b.id === "PRO-SPRAY" || b.id === "PS-ULTRA");
   }
   return bodies.filter((b) => b.id === "PRS30" || b.id === "PRO-SPRAY" || b.id === "PS-ULTRA");
+}
+
+export const POP_UP_MM = [100, 150, 200, 300, 400] as const;
+
+export function popUpHeights(item: CatalogItem): number[] {
+  if (item.family === "st" || item.family === "golf") {
+    const mm = item.popUpMm ?? 100;
+    return POP_UP_MM.includes(mm as (typeof POP_UP_MM)[number]) ? [...POP_UP_MM] : [mm, ...POP_UP_MM];
+  }
+  return [...POP_UP_MM];
 }
 export function workingPressureBar(item: CatalogItem, bodyId?: string | null, _nozzleId?: string | null) {
   if (bodyId === "PRS40") return 2.8;

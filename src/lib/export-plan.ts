@@ -1,5 +1,6 @@
 import { bomLineName, defaultBodyFor, itemById } from "@/lib/hunter-catalog";
 import { drawingOrMigrate, facePoints, resolveDim } from "@/lib/cad/engine";
+import { REGION_FILL } from "@/lib/cad/types";
 import { flowLpm } from "@/lib/flow";
 import { boundsOf, fmt1, polygonArea, sectorLocal, type Pt } from "@/lib/geometry";
 import type { Project } from "@/lib/project-types";
@@ -34,13 +35,30 @@ export async function exportPng(dataUrl: string, name: string) {
   await saveFile(dataUrlToBlob(dataUrl), `${name}.png`);
 }
 
-export function projectToSvg(project: Project): string {
+function collectPts(project: Project): Pt[] {
   const pts: Pt[] = [];
+  const d = drawingOrMigrate(project);
+  for (const f of Object.values(d.faces)) {
+    if (f.hidden) continue;
+    if (f.circle) {
+      const { cx, cy, r } = f.circle;
+      pts.push({ x: cx - r, y: cy - r }, { x: cx + r, y: cy + r });
+    } else {
+      pts.push(...facePoints(d, f.id));
+    }
+  }
   for (const poly of project.polygons) pts.push(...poly.points);
-  for (const h of project.heads) pts.push({ x: h.x, y: h.y }, { x: h.x + h.r, y: h.y + h.r });
-  const box = boundsOf(pts, 1.2) ?? { minX: 0, minY: 0, maxX: 20, maxY: 16 };
-  const w = box.maxX - box.minX;
-  const h = box.maxY - box.minY;
+  for (const h of project.heads) {
+    pts.push({ x: h.x - h.r, y: h.y - h.r }, { x: h.x + h.r, y: h.y + h.r });
+  }
+  return pts;
+}
+
+export function projectToSvg(project: Project): string {
+  const d = drawingOrMigrate(project);
+  const box = boundsOf(collectPts(project), 1.2) ?? { minX: 0, minY: 0, maxX: 20, maxY: 16 };
+  const w = Math.max(1, box.maxX - box.minX);
+  const h = Math.max(1, box.maxY - box.minY);
   const kindFill: Record<string, string> = {
     lawn: "#c5d4b0",
     bed: "#c4b7a8",
@@ -50,15 +68,40 @@ export function projectToSvg(project: Project): string {
 
   const parts: string[] = [
     `<?xml version="1.0" encoding="UTF-8"?>`,
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${box.minX} ${box.minY} ${w} ${h}" width="${Math.round(w * 40)}" height="${Math.round(h * 40)}">`,
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${box.minX} ${box.minY} ${w} ${h}" width="${Math.round(w * 48)}" height="${Math.round(h * 48)}">`,
     `<rect x="${box.minX}" y="${box.minY}" width="${w}" height="${h}" fill="#fffdf8"/>`,
   ];
 
   for (const poly of project.polygons) {
-    const d = poly.points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") + " Z";
+    if (poly.ellipse) {
+      const e = poly.ellipse;
+      const rot = e.rot ?? 0;
+      parts.push(
+        `<ellipse cx="${e.cx}" cy="${e.cy}" rx="${e.rx}" ry="${e.ry}" transform="rotate(${rot} ${e.cx} ${e.cy})" fill="${kindFill[poly.kind] ?? "#ddd"}" fill-opacity="${poly.kind === "lawn" ? 0.78 : 0.5}" stroke="#1c1b17" stroke-width="0.06"/>`,
+      );
+      continue;
+    }
+    if (poly.points.length < 3) continue;
+    const path = poly.points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") + " Z";
     parts.push(
-      `<path d="${d}" fill="${kindFill[poly.kind] ?? "#ddd"}" fill-opacity="${poly.kind === "lawn" ? 0.78 : 0.5}" stroke="#1c1b17" stroke-width="0.06"/>`,
+      `<path d="${path}" fill="${kindFill[poly.kind] ?? "#ddd"}" fill-opacity="${poly.kind === "lawn" ? 0.78 : 0.5}" stroke="#1c1b17" stroke-width="0.06"/>`,
     );
+  }
+
+  for (const f of Object.values(d.faces)) {
+    if (f.hidden) continue;
+    const fill = f.fill ?? REGION_FILL[f.type] ?? "#d0ccc4";
+    const op = fill === "transparent" ? 0 : 0.72;
+    if (f.circle) {
+      parts.push(
+        `<circle cx="${f.circle.cx}" cy="${f.circle.cy}" r="${f.circle.r}" fill="${fill}" fill-opacity="${op}" stroke="#1c1b17" stroke-width="0.05"/>`,
+      );
+      continue;
+    }
+    const pts = facePoints(d, f.id);
+    if (pts.length < 2) continue;
+    const path = pts.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") + " Z";
+    parts.push(`<path d="${path}" fill="${fill}" fill-opacity="${op}" stroke="#1c1b17" stroke-width="0.05"/>`);
   }
 
   const hidden = new Set(project.zones.filter((z) => z.hidden).map((z) => z.id));
@@ -67,40 +110,62 @@ export function projectToSvg(project: Project): string {
     const item = itemById(head.catalogId);
     const color = item?.color ?? "#e25b1a";
     const local = sectorLocal(head.r, head.start, head.arc);
-    const d = local
+    const path = local
       .reduce((acc, n, i) => {
         if (i % 2 === 0) acc.push(`${i === 0 ? "M" : "L"} ${head.x + n}`);
         else acc[acc.length - 1] += ` ${head.y + n}`;
         return acc;
       }, [] as string[])
       .join(" ");
-    parts.push(
-      `<path d="${d} Z" fill="${color}" fill-opacity="0.38" stroke="${color}" stroke-width="0.04"/>`,
-    );
-    parts.push(
-      `<circle cx="${head.x}" cy="${head.y}" r="0.18" fill="#fffdf8" stroke="#1c1b17" stroke-width="0.04"/>`,
-    );
+    parts.push(`<path d="${path} Z" fill="${color}" fill-opacity="0.38" stroke="${color}" stroke-width="0.04"/>`);
+    parts.push(`<circle cx="${head.x}" cy="${head.y}" r="0.18" fill="#fffdf8" stroke="#1c1b17" stroke-width="0.04"/>`);
     parts.push(`<circle cx="${head.x}" cy="${head.y}" r="0.1" fill="${color}"/>`);
   }
 
-  const drawing = project.drawing;
-  if (drawing?.dims) {
-    for (const dim of Object.values(drawing.dims)) {
-      const len = Math.hypot(dim.b.x - dim.a.x, dim.b.y - dim.a.y);
-      const mx = (dim.a.x + dim.b.x) / 2;
-      const my = (dim.a.y + dim.b.y) / 2;
-      parts.push(`<line x1="${dim.a.x}" y1="${dim.a.y}" x2="${dim.b.x}" y2="${dim.b.y}" stroke="#2b6f9a" stroke-width="0.04"/>`);
+  if (d.dims) {
+    for (const dim of Object.values(d.dims)) {
+      const { a, b } = resolveDim(d, dim);
+      const len = Math.hypot(b.x - a.x, b.y - a.y);
+      const mx = (a.x + b.x) / 2;
+      const my = (a.y + b.y) / 2;
+      parts.push(`<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="#2b6f9a" stroke-width="0.04"/>`);
       parts.push(`<text x="${mx}" y="${my - 0.15}" font-size="0.35" fill="#2b6f9a" text-anchor="middle">${len.toFixed(2)} m</text>`);
     }
   }
-  if (drawing?.texts) {
-    for (const tx of Object.values(drawing.texts)) {
+  if (d.texts) {
+    for (const tx of Object.values(d.texts)) {
       parts.push(`<text x="${tx.x}" y="${tx.y}" font-size="${tx.size}" fill="#1b1f24">${escapeXml(tx.text)}</text>`);
     }
   }
 
   parts.push(`</svg>`);
   return parts.join("\n");
+}
+
+export async function rasterizeSvg(svg: string, width = 1800): Promise<string> {
+  const url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }));
+  try {
+    const img = new Image();
+    img.decoding = "sync";
+    const ready = new Promise<void>((resolve, reject) => {
+      img.onload = () => resolve();
+      img.onerror = () => reject(new Error("svg"));
+    });
+    img.src = url;
+    await ready;
+    const c = document.createElement("canvas");
+    const scale = width / Math.max(1, img.width);
+    c.width = width;
+    c.height = Math.max(1, Math.round(img.height * scale));
+    const ctx = c.getContext("2d");
+    if (!ctx) throw new Error("canvas");
+    ctx.fillStyle = "#fffdf8";
+    ctx.fillRect(0, 0, c.width, c.height);
+    ctx.drawImage(img, 0, 0, c.width, c.height);
+    return c.toDataURL("image/png");
+  } finally {
+    URL.revokeObjectURL(url);
+  }
 }
 
 export async function exportSvg(project: Project, name: string) {
@@ -110,6 +175,24 @@ export async function exportSvg(project: Project, name: string) {
 
 export async function exportDxf(project: Project, name: string) {
   await saveFile(new Blob([projectToDxf(project)], { type: "application/dxf" }), `${name}.dxf`);
+}
+
+export async function exportProjectJson(project: Project, name: string) {
+  const stem = name.replace(/[^\wа-яё -]+/gi, " ").trim() || "project";
+  await saveFile(
+    new Blob([JSON.stringify({ schemaVersion: 1, type: "irrigationproject", project }, null, 2)], { type: "application/json" }),
+    `${stem}.json`,
+  );
+}
+
+export async function exportPngFromProject(project: Project, name: string) {
+  const png = await rasterizeSvg(projectToSvg(project));
+  await exportPng(png, name);
+}
+
+export async function exportPdfFromProject(project: Project, name: string, pngDataUrl?: string) {
+  const png = pngDataUrl ?? (await rasterizeSvg(projectToSvg(project)));
+  await exportPdf(png, project, name);
 }
 
 function dxfPair(code: number, value: string | number) {

@@ -23,6 +23,7 @@ import {
   Maximize2,
   Menu,
   Minus,
+  MoreHorizontal,
   MoveHorizontal,
   PaintBucket,
   Pencil,
@@ -51,18 +52,19 @@ import { SettingsPanel } from "@/components/designer/settings-panel";
 import { layoutOnDrawing, layoutOnPolygon } from "@/lib/auto-layout";
 import { checkProject } from "@/lib/check-project";
 import { coverageStats, exclusionPolygons, lawnPolygon } from "@/lib/coverage";
-import { CATEGORIES, bodiesFor, bomLineName, catalogPhoto, categoryPhoto, defaultBodyFor, itemById, nozzleRange, placeableCatalog, workingPressureBar, type CatalogItem } from "@/lib/hunter-catalog";
+import { CATEGORIES, bodiesFor, bomLineName, catalogPhoto, categoryPhoto, defaultBodyFor, itemById, nozzleRange, placeableCatalog, popUpHeights, workingPressureBar, type CatalogItem } from "@/lib/hunter-catalog";
 import { docsForFamily } from "@/lib/hunter-docs";
-import { exportDxf, exportEstimateExcel, exportEstimatePdf, exportEstimateWord, exportPdf, exportPng } from "@/lib/export-plan";
+import { exportDxf, exportEstimateExcel, exportEstimatePdf, exportEstimateWord, exportPdf, exportPdfFromProject, exportPng, exportPngFromProject, exportProjectJson, exportSvg } from "@/lib/export-plan";
 import { downloadProjectFile, fileStem, parseProjectFile, toProjectFile } from "@/lib/project-file";
+import { downloadSourceZip } from "@/lib/download-source";
 import { headFlow, runTimeMin, totalAreaPrecip } from "@/lib/flow";
 import { dist, fmt1, fmtM, headingDeg, parseMeasureUnit, pointInPoly, polygonArea, toMeters, uid, type Pt } from "@/lib/geometry";
 import { parseCadInput } from "@/lib/cad/parse";
 import { drawingOrMigrate, faceArea, faceCentroid, faceLayerNumber, facePerimeter, facePoints, headInsideFace, isInternalEdge, rectWorldCorners } from "@/lib/cad/engine";
 import { CAD_LAYERS, FACE_FILLS, REGION_FILL, layerForType } from "@/lib/cad/types";
 import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, recommendPump } from "@/lib/hydro";
-import { type Head, zoneColor } from "@/lib/project-types";
-import { useProject } from "@/lib/project-store";
+import { type Head, type Project, zoneColor } from "@/lib/project-types";
+import { isNamed, useProject } from "@/lib/project-store";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CanvasHost } from "@/components/designer/canvas-host";
@@ -161,6 +163,7 @@ export function DesignerApp() {
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [sourceOpen, setSourceOpen] = useState(false);
+  const [sourcePct, setSourcePct] = useState<number | null>(null);
   const [sourcePacks, setSourcePacks] = useState<{ file: string; label: string }[]>([
     { file: "irrigation-designer-source.zip", label: "Irrigation Designer" },
   ]);
@@ -206,6 +209,7 @@ export function DesignerApp() {
   const selectedId = useProject((s) => s.selectedId);
   const selectedPolyId = useProject((s) => s.selectedPolyId);
   const cadEditId = useProject((s) => s.cadEditId);
+  const cadLiveRot = useProject((s) => s.cadLiveRot);
   const selectedIds = useProject((s) => s.selectedIds);
   const familyFilter = useProject((s) => s.familyFilter);
   const showGrid = useProject((s) => s.showGrid);
@@ -672,6 +676,39 @@ export function DesignerApp() {
     }
   };
 
+  const exportLibrary = async (p: Project, kind: "pdf" | "dxf" | "png" | "svg" | "json") => {
+    const name = fileStem(p.name);
+    try {
+      if (kind === "pdf") {
+        const snap = p.id === project.id ? exportFn.current?.() ?? undefined : undefined;
+        await exportPdfFromProject(p, name, snap);
+        toast(t("toastPdfOut"));
+        return;
+      }
+      if (kind === "dxf") {
+        await exportDxf(p, name);
+        toast(t("toastDxf"));
+        return;
+      }
+      if (kind === "png") {
+        const snap = p.id === project.id ? exportFn.current?.() : undefined;
+        if (snap) await exportPng(snap, name);
+        else await exportPngFromProject(p, name);
+        toast(t("toastPng"));
+        return;
+      }
+      if (kind === "svg") {
+        await exportSvg(p, name);
+        toast("SVG");
+        return;
+      }
+      await exportProjectJson(p, name);
+      toast(t("toastSaved"));
+    } catch {
+      toast(t("toastExportFail"));
+    }
+  };
+
   const autoPlace = () => {
     const d = drawingOrMigrate(project);
     const fromCad = layoutOnDrawing(d);
@@ -829,12 +866,22 @@ export function DesignerApp() {
       ? Math.hypot(hover.x - draft.points[draft.points.length - 1]!.x, hover.y - draft.points[draft.points.length - 1]!.y)
       : lastSeg;
   const a0 = draft.points[0];
+  const editFace = cadEditId ? drawingOrMigrate(project).faces[cadEditId] : null;
+  const editPts = cadEditId ? facePoints(drawingOrMigrate(project), cadEditId) : [];
   const liveWH =
-    cadEditId && drawingOrMigrate(project).faces[cadEditId]?.rect
-      ? { w: drawingOrMigrate(project).faces[cadEditId]!.rect!.w, h: drawingOrMigrate(project).faces[cadEditId]!.rect!.h }
-      : tool === "draw" && (drawSub === "rect" || drawSub === "ellipse") && a0 && hover
-        ? { w: Math.abs(hover.x - a0.x), h: Math.abs(hover.y - a0.y) }
-        : null;
+    editFace?.rect
+      ? { w: editFace.rect.w, h: editFace.rect.h }
+      : editFace?.ellipse
+        ? { w: editFace.ellipse.rx * 2, h: editFace.ellipse.ry * 2 }
+        : editFace && !editFace.circle && editPts.length >= 3
+          ? (() => {
+              const xs = editPts.map((p) => p.x);
+              const ys = editPts.map((p) => p.y);
+              return { w: Math.max(0.01, Math.max(...xs) - Math.min(...xs)), h: Math.max(0.01, Math.max(...ys) - Math.min(...ys)) };
+            })()
+          : tool === "draw" && (drawSub === "rect" || drawSub === "ellipse") && a0 && hover
+            ? { w: Math.abs(hover.x - a0.x), h: Math.abs(hover.y - a0.y) }
+            : null;
   const liveR = tool === "draw" && drawSub === "circle" && a0 && hover ? Math.hypot(hover.x - a0.x, hover.y - a0.y) : null;
   const liveArc =
     tool === "draw" && drawSub === "arc" && draft.points.length >= 2 && hover
@@ -996,7 +1043,9 @@ export function DesignerApp() {
         </div>
       </header>
 
-      {projectFormOpen && <ProjectFormBar />}
+      {projectFormOpen || (!isNamed(project) && library.length === 0 && Object.keys(drawingOrMigrate(project).faces).length === 0 && project.heads.length === 0) ? (
+        <ProjectFormBar />
+      ) : null}
       {mergePrompt && (
         <div className="absolute inset-0 z-40 grid place-items-center bg-ink/30 p-4">
           <div className="w-full max-w-sm rounded-lg bg-surface p-4 shadow-border">
@@ -1227,12 +1276,19 @@ export function DesignerApp() {
               drawSub={
                 cadEditId && drawingOrMigrate(project).faces[cadEditId]?.circle
                   ? "circle"
-                  : cadEditId
-                    ? "rect"
-                    : drawSub
+                  : cadEditId && drawingOrMigrate(project).faces[cadEditId]?.ellipse
+                    ? "ellipse"
+                    : cadEditId
+                      ? "rect"
+                      : drawSub
               }
               liveLen={liveLen}
               liveWH={liveWH}
+              liveRot={
+                cadEditId && drawingOrMigrate(project).faces[cadEditId]?.ellipse
+                  ? (drawingOrMigrate(project).faces[cadEditId]!.ellipse!.rot ?? 0)
+                  : cadLiveRot
+              }
               liveR={
                 cadEditId && drawingOrMigrate(project).faces[cadEditId]?.circle
                   ? drawingOrMigrate(project).faces[cadEditId]!.circle!.r
@@ -1549,6 +1605,7 @@ export function DesignerApp() {
                       setProjectsOpen(false);
                     }}
                     onDelete={() => setDeleteAsk({ id: p.id, name: p.name })}
+                    onExport={(kind) => void exportLibrary(p, kind)}
                   />
                 ))}
             </ul>
@@ -1649,20 +1706,35 @@ export function DesignerApp() {
           <div className="max-h-[80vh] w-full max-w-md overflow-y-auto rounded-lg bg-surface p-4 text-ink shadow-border" onPointerUp={(e) => e.stopPropagation()}>
             <p className="font-display text-lg">{t("downloadSource")}</p>
             <p className="mt-2 text-sm text-ink-soft">{t("downloadSourceHint")}</p>
-            <ul className="mt-3 space-y-1.5">
-              {sourcePacks.map((pack) => (
-                <li key={pack.file}>
-                  <a
-                    href={`/downloads/${pack.file}`}
-                    download={pack.file}
-                    className="flex items-center justify-between rounded-md border border-line px-3 py-2 text-sm hover:bg-panel"
-                  >
-                    <span>{pack.label}</span>
-                    <FileDown className="size-4 text-btn" />
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <p className="mt-1 text-xs text-ink-soft">Файл ~95 МБ, остаёшься в приложении — не уходим на другую страницу.</p>
+            <button
+              type="button"
+              disabled={sourcePct !== null}
+              onClick={() => {
+                setSourcePct(0);
+                void downloadSourceZip(setSourcePct)
+                  .then(() => {
+                    toast("Архив скачан");
+                    setSourcePct(null);
+                  })
+                  .catch(() => {
+                    toast("Не удалось скачать архив. Попробуй ещё раз.");
+                    setSourcePct(null);
+                  });
+              }}
+              className="mt-3 flex w-full items-center justify-between rounded-md border border-line px-3 py-2 text-left text-sm hover:bg-panel disabled:opacity-60"
+            >
+              <span>{sourcePacks[0]?.label ?? "Irrigation Designer (95 МБ)"}</span>
+              <FileDown className="size-4 text-btn" />
+            </button>
+            {sourcePct !== null && (
+              <div className="mt-2">
+                <div className="h-1.5 overflow-hidden rounded-full bg-line">
+                  <div className="h-full bg-btn" style={{ width: `${sourcePct}%` }} />
+                </div>
+                <p className="mt-1 text-xs text-ink-soft">Скачивание {sourcePct}%</p>
+              </div>
+            )}
             <Button className="mt-3 w-full" size="sm" onClick={() => setSourceOpen(false)}>
               {t("close")}
             </Button>
@@ -1833,13 +1905,17 @@ function LibraryRow({
   active,
   onOpen,
   onDelete,
+  onExport,
 }: {
   name: string;
   updatedAt?: string;
   active: boolean;
   onOpen: () => void;
   onDelete: () => void;
+  onExport: (kind: "pdf" | "dxf" | "png" | "svg" | "json") => void;
 }) {
+  const t = useT();
+  const [dl, setDl] = useState(false);
   const hold = useRef<number | null>(null);
   const skip = useRef(false);
   const when = updatedAt
@@ -1852,33 +1928,62 @@ function LibraryRow({
     }
   };
   return (
-    <li className={cn("flex items-center gap-2 border-b border-line py-2", active && "bg-btn-soft/60")}>
-      <button
-        type="button"
-        className="min-w-0 flex-1 text-left"
-        onPointerDown={() => {
-          skip.current = false;
-          clear();
-          hold.current = window.setTimeout(() => {
-            skip.current = true;
-            onDelete();
-          }, 500);
-        }}
-        onPointerUp={clear}
-        onPointerCancel={clear}
-        onPointerLeave={clear}
-        onClick={() => {
-          if (skip.current) return;
-          onOpen();
-        }}
-      >
-        <p className="truncate font-medium">{name}</p>
-        <p className="text-xs text-muted">{when}</p>
-      </button>
-      <Button size="xs" variant="ghost" className="text-danger" aria-label="Удалить проект" onClick={onDelete}>
-        <Trash2 />
-        Удалить
-      </Button>
+    <li className={cn("border-b border-line py-2", active && "bg-btn-soft/60")}>
+      <div className="flex items-center gap-1.5">
+        <button
+          type="button"
+          className="min-w-0 flex-1 text-left"
+          onPointerDown={() => {
+            skip.current = false;
+            clear();
+            hold.current = window.setTimeout(() => {
+              skip.current = true;
+              onDelete();
+            }, 500);
+          }}
+          onPointerUp={clear}
+          onPointerCancel={clear}
+          onPointerLeave={clear}
+          onClick={() => {
+            if (skip.current) return;
+            onOpen();
+          }}
+        >
+          <p className="truncate font-medium">{name}</p>
+          <p className="text-xs text-muted">{when}</p>
+        </button>
+        <Button
+          size="xs"
+          variant="solid"
+          className="shrink-0 bg-[#7ec8f2] px-1.5 text-[#1b2430]"
+          onClick={() => setDl((v) => !v)}
+        >
+          <FileDown className="size-3.5" />
+          {t("download")}
+        </Button>
+        <Button size="xs" variant="ghost" className="shrink-0 text-danger" aria-label={t("deleteProject")} onClick={onDelete}>
+          <Trash2 />
+        </Button>
+      </div>
+      {dl && (
+        <div className="mt-1.5 flex flex-wrap gap-1">
+          <Button size="xs" variant="outline" onClick={() => onExport("pdf")}>
+            PDF
+          </Button>
+          <Button size="xs" variant="outline" onClick={() => onExport("dxf")}>
+            {t("exportDxfCad")}
+          </Button>
+          <Button size="xs" variant="outline" onClick={() => onExport("png")}>
+            {t("exportPngFile")}
+          </Button>
+          <Button size="xs" variant="outline" onClick={() => onExport("svg")}>
+            {t("exportSvg")}
+          </Button>
+          <Button size="xs" variant="outline" onClick={() => onExport("json")}>
+            {t("exportJson")}
+          </Button>
+        </div>
+      )}
     </li>
   );
 }
@@ -1956,6 +2061,8 @@ function CadEditBar({ faceId }: { faceId: string }) {
   const panY = useProject((s) => s.panY);
   const px = useProject((s) => s.pxPerMeter);
   const project = useProject((s) => s.project);
+  const themeId = useProject((s) => s.themeId);
+  const dark = themeId === "dusk" || themeId === "night" || themeId === "graphite";
   const [askDel, setAskDel] = useState(false);
   const [fillOpen, setFillOpen] = useState(false);
   const [tip, setTip] = useState<string | null>(null);
@@ -2008,28 +2115,35 @@ function CadEditBar({ faceId }: { faceId: string }) {
   const box = { l: Math.min(...xs), r: Math.max(...xs), t: Math.min(...ys), b: Math.max(...ys) };
   const bw = Math.max(8, box.r - box.l);
   const bh = Math.max(8, box.b - box.t);
-  const vertical = bh > bw * 1.15;
-  const barW = vertical ? 104 : 220;
-  const barH = vertical ? 168 : 40;
+  const barW = 232;
+  const barH = 42;
   const palW = 152;
   const palH = 128;
   const host = typeof document !== "undefined" ? document.querySelector("[data-design-canvas]") : null;
   const cw = host instanceof HTMLElement ? host.clientWidth : 480;
   const ch = host instanceof HTMLElement ? host.clientHeight : 480;
-  let left: number;
-  let top: number;
-  if (vertical) {
-    left = box.r + 10;
-    top = box.t + (bh - barH) / 2;
-    if (left + barW > cw - 8) left = box.l - 10 - barW;
-  } else {
-    left = box.l + (bw - barW) / 2;
-    top = box.t - 10 - barH;
-    if (top < 14) top = box.b + 10;
-  }
-  left = Math.max(8, Math.min(left, cw - barW - 8));
-  top = Math.max(14, Math.min(top, ch - barH - 8));
-  const palLeft0 = Math.max(8, Math.min(vertical ? left : left + (barW - palW) / 2, cw - palW - 8));
+  const gapA = 56;
+  const gapB = 68;
+  const keep = { l: box.l - 12, r: box.r + gapB, t: box.t - gapA, b: box.b + 16 };
+  const clampPos = (left: number, top: number) => ({
+    left: Math.max(8, Math.min(left, cw - barW - 8)),
+    top: Math.max(14, Math.min(top, ch - barH - 8)),
+  });
+  const hits = (p: { left: number; top: number }) =>
+    p.left < keep.r && p.left + barW > keep.l && p.top < keep.b && p.top + barH > keep.t;
+  const candidates = [
+    clampPos(box.l - gapB - barW, box.t + (bh - barH) / 2),
+    clampPos(box.l + (bw - barW) / 2, box.b + 28),
+    clampPos(box.l + (bw - barW) / 2, box.t - gapA - barH),
+    clampPos(8, box.b + 28),
+    clampPos(cw - barW - 8, box.b + 28),
+    clampPos(8, 14),
+    clampPos(cw - barW - 8, 14),
+  ];
+  const placed = candidates.find((p) => !hits(p)) ?? candidates[5]!;
+  const left = placed.left;
+  const top = placed.top;
+  const palLeft0 = Math.max(8, Math.min(left + (barW - palW) / 2, cw - palW - 8));
   let palLeft = palLeft0;
   let palTop = top - palH - 6;
   if (palTop < 8) {
@@ -2058,7 +2172,7 @@ function CadEditBar({ faceId }: { faceId: string }) {
       aria-label={label}
       className={cn(
         "relative flex size-9 shrink-0 items-center justify-center rounded-sm",
-        danger ? "text-danger hover:bg-danger/10" : "text-ink hover:bg-btn-soft",
+        danger ? "text-danger hover:bg-danger/10" : dark ? "text-[#1b2430] hover:bg-white/35" : "text-ink hover:bg-btn-soft",
       )}
       onPointerEnter={() => showTip(label)}
       onPointerDown={(e) => {
@@ -2075,8 +2189,10 @@ function CadEditBar({ faceId }: { faceId: string }) {
     <div ref={wrapRef} className="pointer-events-none absolute inset-0 z-40">
       <div
         className={cn(
-          "pointer-events-auto absolute flex rounded-md border border-line bg-surface shadow-border",
-          vertical ? "flex-col items-stretch p-1" : "flex-row items-center gap-0.5 p-0.5",
+          "pointer-events-auto absolute flex flex-row items-center gap-0.5 rounded-md p-0.5 shadow-border",
+          dark
+            ? "border border-sky-300/50 bg-sky-200/40 text-[#1b2430] backdrop-blur-md"
+            : "border border-line bg-surface",
         )}
         style={{ left, top, width: barW, height: barH }}
       >
@@ -2101,11 +2217,11 @@ function CadEditBar({ faceId }: { faceId: string }) {
             }
           }}
           className={cn(
-            "rounded-sm bg-bg-2 px-1.5 text-[11px] text-ink shadow-border placeholder:text-muted/55",
-            vertical ? "mb-1 h-8 w-full" : "h-8 w-[4.75rem] shrink-0",
+            "h-8 w-[4.75rem] shrink-0 rounded-sm px-1.5 text-[11px] shadow-border placeholder:text-muted/55",
+            dark ? "bg-white/45 text-[#1b2430] placeholder:text-[#1b2430]/45" : "bg-bg-2 text-ink",
           )}
         />
-        <div className={cn("flex", vertical ? "flex-col items-center" : "flex-row items-center")}>
+        <div className="flex flex-row items-center">
           <Btn
             label={t("fillShapeHint")}
             onPress={() => {
@@ -2150,7 +2266,10 @@ function CadEditBar({ faceId }: { faceId: string }) {
       </div>
       {fillOpen && (
         <div
-          className="pointer-events-auto absolute z-50 grid w-[9.5rem] grid-cols-5 gap-1 rounded-md border border-line bg-surface p-1.5 shadow-border"
+          className={cn(
+            "pointer-events-auto absolute z-50 grid w-[9.5rem] grid-cols-5 gap-1 rounded-md p-1.5 shadow-border",
+            dark ? "border border-sky-300/50 bg-sky-200/50 backdrop-blur-md" : "border border-line bg-surface",
+          )}
           style={{ left: palLeft, top: palTop }}
         >
           {FACE_FILLS.map((c) => (
@@ -2174,13 +2293,16 @@ function CadEditBar({ faceId }: { faceId: string }) {
       )}
       {askDel && (
         <div
-          className="pointer-events-auto absolute z-50 w-[11.5rem] rounded-md border border-line bg-surface p-2 shadow-border"
+          className={cn(
+            "pointer-events-auto absolute z-50 w-[11.5rem] rounded-md p-2 shadow-border",
+            dark ? "border border-sky-300/50 bg-sky-200/50 text-[#1b2430] backdrop-blur-md" : "border border-line bg-surface",
+          )}
           style={{
-            left: Math.max(8, Math.min(vertical ? left + barW + 6 : left, cw - 192)),
-            top: Math.max(14, Math.min(vertical ? top : top + barH + 6, ch - 96)),
+            left: Math.max(8, Math.min(left, cw - 192)),
+            top: Math.max(14, Math.min(top + barH + 6, ch - 96)),
           }}
         >
-          <p className="text-xs font-medium text-ink">{t("deleteShapeAsk")}</p>
+          <p className={cn("text-xs font-medium", dark ? "text-[#1b2430]" : "text-ink")}>{t("deleteShapeAsk")}</p>
           <div className="mt-2 flex gap-1">
             <Button size="xs" variant="ghost" className="flex-1" onClick={() => setAskDel(false)}>
               {t("cancel")}
@@ -2229,6 +2351,7 @@ function DrawMeasurePad({
   drawSub,
   liveLen,
   liveWH,
+  liveRot,
   liveR,
   liveArc,
   measureText,
@@ -2241,6 +2364,7 @@ function DrawMeasurePad({
   drawSub: string;
   liveLen: number;
   liveWH: { w: number; h: number } | null;
+  liveRot: number | null;
   liveR: number | null;
   liveArc: { r: number; sag: number } | null;
   measureText: string;
@@ -2259,7 +2383,9 @@ function DrawMeasurePad({
   const [sIn, setSIn] = useState("");
   const [wIn, setWIn] = useState("");
   const [lIn, setLIn] = useState("");
-  const dirty = useRef<"r" | "d" | "s" | "w" | "l" | null>(null);
+  const [kIn, setKIn] = useState("100");
+  const [rotIn, setRotIn] = useState("0");
+  const dirty = useRef<"r" | "d" | "s" | "w" | "l" | "k" | "rot" | null>(null);
   const param =
     drawSub === "circle" ? t("drawRadius") :
     drawSub === "rect" || drawSub === "ellipse" ? t("drawSize") :
@@ -2281,7 +2407,14 @@ function DrawMeasurePad({
     if (!liveWH || dirty.current) return;
     setWIn(fmtN(fromMeters(liveWH.w, units.length), lenDec));
     setLIn(fmtN(fromMeters(liveWH.h, units.length), lenDec));
-  }, [liveWH, units.length]);
+    const area = drawSub === "ellipse" ? Math.PI * (liveWH.w / 2) * (liveWH.h / 2) : liveWH.w * liveWH.h;
+    setSIn(fmtN(fromM2(area, units.area), areaDec));
+  }, [liveWH, units.length, units.area, drawSub]);
+  useEffect(() => {
+    if (liveRot == null || dirty.current === "rot") return;
+    const n = ((liveRot % 360) + 360) % 360;
+    setRotIn(n % 1 === 0 ? String(Math.round(n)) : n.toFixed(1));
+  }, [liveRot]);
   const parseN = (raw: string) => {
     const n = Number(raw.trim().replace(",", "."));
     return Number.isFinite(n) && n > 0 ? n : null;
@@ -2328,24 +2461,63 @@ function DrawMeasurePad({
     } else if (parsed.kind === "size") st.applyCadSize(parsed.width, parsed.height, hover);
     else if (parsed.kind === "area") st.applyCadArea(parsed.meters2, hover);
   };
-  const areaM2 = drawSub === "circle" && liveR != null ? Math.PI * liveR * liveR : liveWH ? liveWH.w * liveWH.h : null;
-  const applyRectFrom = () => {
+  const areaM2 =
+    drawSub === "circle" && liveR != null
+      ? Math.PI * liveR * liveR
+      : drawSub === "ellipse" && liveWH
+        ? Math.PI * (liveWH.w / 2) * (liveWH.h / 2)
+        : liveWH
+          ? liveWH.w * liveWH.h
+          : null;
+  const applyRectFrom = (which: "w" | "l" | "s" | "k" | "rot" = dirty.current === "s" ? "s" : dirty.current === "k" ? "k" : dirty.current === "rot" ? "rot" : "w") => {
+    const st = useProject.getState();
+    const dnow = drawingOrMigrate(st.project);
+    const f = editFaceId ? dnow.faces[editFaceId] : null;
+    const curW = liveWH?.w ?? 1;
+    const curH = liveWH?.h ?? 1;
+    if (which === "rot") {
+      const n = Number(rotIn.trim().replace(",", "."));
+      if (!Number.isFinite(n)) return;
+      st.setRectRotation(n);
+      dirty.current = null;
+      return;
+    }
+    if (which === "k") {
+      const n = parseN(kIn);
+      if (n == null || n <= 0) return;
+      if (editFaceId) st.scaleSelectedFace(n / 100);
+      dirty.current = null;
+      setKIn("100");
+      return;
+    }
+    if (which === "s") {
+      const n = parseN(sIn);
+      if (n == null) return;
+      const area = toM2(n, units.area);
+      if (area <= 0) return;
+      if (editFaceId) {
+        st.setFaceArea(area);
+      } else {
+        const k = Math.sqrt(area / Math.max(curW * curH, 1e-9));
+        st.applyCadSize(Math.max(0.01, curW * k), Math.max(0.01, curH * k), hover);
+      }
+      dirty.current = null;
+      return;
+    }
     const wn = parseN(wIn);
     const ln = parseN(lIn);
     if (wn == null && ln == null) return;
-    const st = useProject.getState();
-    const curW = liveWH?.w ?? (wn != null ? toMetersLen(wn, units.length) : 0);
-    const curH = liveWH?.h ?? (ln != null ? toMetersLen(ln, units.length) : 0);
     const w = wn != null ? toMetersLen(wn, units.length) : curW;
     const h = ln != null ? toMetersLen(ln, units.length) : curH;
     if (w <= 0 || h <= 0) return;
-    if (editFaceId) st.setRectWH(w, h);
+    if (editFaceId && f?.ellipse) st.setEllipseR(w / 2, h / 2);
+    else if (editFaceId) st.setRectWH(w, h);
     else st.applyCadSize(w, h, hover);
     dirty.current = null;
   };
-  const field = (label: string, unit: string, value: string, which: "r" | "d" | "s" | "w" | "l", set: (v: string) => void) => (
+  const field = (label: string, unit: string, value: string, which: "r" | "d" | "s" | "w" | "l" | "k" | "rot", set: (v: string) => void) => (
     <label className="flex items-center gap-1 sm:gap-2">
-      <span className="w-14 shrink-0 truncate text-[11px] font-semibold text-ink sm:w-16 sm:text-sm">{label}</span>
+      <span className="w-[4.85rem] shrink-0 whitespace-nowrap text-[11px] font-semibold text-ink sm:w-24 sm:text-sm">{label}</span>
       <input
         inputMode="decimal"
         className="h-7 min-w-0 flex-1 rounded-sm bg-bg-2 px-1.5 text-[11px] tabular shadow-border sm:h-10 sm:px-2 sm:text-sm"
@@ -2361,7 +2533,7 @@ function DrawMeasurePad({
         onKeyDown={(e) => {
           e.stopPropagation();
           if (e.key === "Enter") {
-            if (which === "w" || which === "l") applyRectFrom();
+            if (which === "w" || which === "l" || which === "k" || which === "rot" || (which === "s" && (drawSub === "rect" || drawSub === "ellipse"))) applyRectFrom(which === "s" ? "s" : which === "k" ? "k" : which === "rot" ? "rot" : which);
             else applyCircleFrom(which);
             (e.target as HTMLInputElement).blur();
           }
@@ -2372,18 +2544,18 @@ function DrawMeasurePad({
   );
   return (
     <div
-      className="pointer-events-auto fixed left-2 z-[90] w-[11.25rem] rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border sm:w-[16.5rem] sm:px-2.5 sm:py-2"
+      className="pointer-events-auto fixed left-2 z-[90] w-[13.5rem] rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border sm:w-[18rem] sm:px-2.5 sm:py-2"
       style={{ bottom: `calc(3.4rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)` }}
     >
       {drawSub === "circle" ? (
         <div className="space-y-1 sm:space-y-1.5">
           {field("R", lenLabel(units.length), rIn, "r", setRIn)}
           {field("Ø", lenLabel(units.length), dIn, "d", setDIn)}
-          {field("S", areaLabel(units.area), sIn, "s", setSIn)}
+          {field(t("drawArea"), areaLabel(units.area), sIn, "s", setSIn)}
           <Button
             size="xs"
             variant="pale-on"
-            className="h-7 w-full text-[11px] sm:h-10 sm:text-sm"
+            className="h-7 w-full bg-[#7ec8f2] text-[11px] text-[#1b2430] sm:h-10 sm:text-sm"
             disabled={!rIn.trim() && !dIn.trim() && !sIn.trim()}
             onClick={() => {
               const d = dirty.current;
@@ -2393,19 +2565,33 @@ function DrawMeasurePad({
             {t("applySize")}
           </Button>
         </div>
-      ) : drawSub === "rect" || drawSub === "ellipse" ? (
+      ) : drawSub === "ellipse" ? (
         <div className="space-y-1 sm:space-y-1.5">
-          {field(t("drawWidth"), lenLabel(units.length), wIn, "w", setWIn)}
-          {field(t("drawHeight"), lenLabel(units.length), lIn, "l", setLIn)}
-          {liveWH && (
-            <p className="text-[10px] tabular text-muted">S {formatAreaU(liveWH.w * liveWH.h, units.area)}</p>
-          )}
+          {field(t("axisA"), lenLabel(units.length), wIn, "w", setWIn)}
+          {field(t("axisB"), lenLabel(units.length), lIn, "l", setLIn)}
+          {field(t("rotation"), "°", rotIn, "rot", setRotIn)}
+          {field(t("drawArea"), areaLabel(units.area), sIn, "s", setSIn)}
           <Button
             size="xs"
             variant="pale-on"
-            className="h-7 w-full text-[11px] sm:h-10 sm:text-sm"
-            disabled={!wIn.trim() && !lIn.trim()}
-            onClick={() => applyRectFrom()}
+            className="h-7 w-full bg-[#7ec8f2] text-[11px] text-[#1b2430] sm:h-10 sm:text-sm"
+            disabled={!wIn.trim() && !lIn.trim() && !sIn.trim() && !rotIn.trim()}
+            onClick={() => applyRectFrom(dirty.current === "s" ? "s" : dirty.current === "rot" ? "rot" : dirty.current === "l" ? "l" : "w")}
+          >
+            {t("applySize")}
+          </Button>
+        </div>
+      ) : drawSub === "rect" ? (
+        <div className="space-y-1 sm:space-y-1.5">
+          {field(t("drawWidth"), lenLabel(units.length), wIn, "w", setWIn)}
+          {field(t("drawHeight"), lenLabel(units.length), lIn, "l", setLIn)}
+          {field(t("drawArea"), areaLabel(units.area), sIn, "s", setSIn)}
+          <Button
+            size="xs"
+            variant="pale-on"
+            className="h-7 w-full bg-[#7ec8f2] text-[11px] text-[#1b2430] sm:h-10 sm:text-sm"
+            disabled={!wIn.trim() && !lIn.trim() && !sIn.trim()}
+            onClick={() => applyRectFrom(dirty.current === "s" ? "s" : dirty.current === "l" ? "l" : "w")}
           >
             {t("applySize")}
           </Button>
@@ -2414,7 +2600,7 @@ function DrawMeasurePad({
         <>
           <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{param}</p>
           <p className="truncate text-xs tabular font-medium text-ink">{cadBuf || (hasPoint ? measureText : "—")}</p>
-          {areaM2 != null && <p className="text-[10px] tabular text-muted">S {formatAreaU(areaM2, units.area)}</p>}
+          {areaM2 != null && <p className="text-[10px] tabular text-muted">{formatAreaU(areaM2, units.area)}</p>}
           <div className="mt-1 flex items-center gap-1">
             <input
               inputMode="decimal"
@@ -2650,9 +2836,11 @@ function focusWithoutScroll(el: HTMLInputElement) {
 
 function ProjectFormBar() {
   const t = useT();
+  const kbLift = useKbLift();
   const project = useProject((s) => s.project);
   const nameRef = useRef<HTMLInputElement>(null);
   const [name, setName] = useState(project.name === "Без названия" ? "" : project.name);
+  const [nameError, setNameError] = useState(false);
   const [more, setMore] = useState(false);
   const [meta, setMeta] = useState({
     address: project.meta.address,
@@ -2686,16 +2874,23 @@ function ProjectFormBar() {
   );
 
   const canSave = name.trim().length > 0;
+  const required = project.name.trim() === "" || project.name === "Без названия";
   const closeForm = () => {
+    if (required) {
+      setNameError(true);
+      return;
+    }
     nameRef.current?.blur();
     unlockScreen(() => useProject.getState().setProjectFormOpen(false));
   };
   const save = () => {
     const n = (nameRef.current?.value ?? name).trim();
     if (!n) {
+      setNameError(true);
       toast(t("enterName"));
       return;
     }
+    setNameError(false);
     useProject.getState().patchProject({
       name: n,
       meta: {
@@ -2706,12 +2901,40 @@ function ProjectFormBar() {
     });
     useProject.getState().saveCurrentToLibrary();
     useProject.getState().setRightOpen(false);
-    closeForm();
+    nameRef.current?.blur();
+    unlockScreen(() => useProject.getState().setProjectFormOpen(false));
   };
 
-  return (
-    <div className="shrink-0 border-b border-line bg-surface px-2 py-1.5">
-      <div className="flex items-center gap-2">
+  if (typeof document === "undefined") return null;
+
+  return createPortal(
+    <div
+      className={cn(
+        "fixed inset-0 z-[80] flex justify-center bg-ink/45 px-4",
+        kbLift > 0 ? "items-end" : "items-center",
+      )}
+      style={{
+        paddingTop: 16,
+        paddingBottom: kbLift > 0 ? kbLift + 16 : 24,
+      }}
+      onPointerDown={(e) => {
+        if (e.target !== e.currentTarget) return;
+        if (required) {
+          setNameError(true);
+          return;
+        }
+        closeForm();
+      }}
+    >
+      <div
+        className={cn(
+          "mb-2 w-full max-w-sm rounded-lg bg-surface p-4 shadow-border",
+          nameError && "ring-2 ring-danger",
+        )}
+        onPointerDown={(e) => e.stopPropagation()}
+      >
+        <p className="text-center font-display text-lg">{t("projectName")}</p>
+        <p className={cn("mt-1 text-center text-xs", nameError ? "font-medium text-danger" : "text-muted")}>{t("enterName")}</p>
         <input
           ref={nameRef}
           value={name}
@@ -2722,6 +2945,8 @@ function ProjectFormBar() {
           enterKeyHint="done"
           inputMode="text"
           aria-required
+          aria-invalid={nameError}
+          autoFocus
           onPointerDown={() => lockScreen()}
           onTouchEnd={(e) => {
             e.preventDefault();
@@ -2731,7 +2956,10 @@ function ProjectFormBar() {
             e.preventDefault();
             focusWithoutScroll(e.currentTarget);
           }}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => {
+            setName(e.target.value);
+            if (e.target.value.trim()) setNameError(false);
+          }}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               e.preventDefault();
@@ -2739,49 +2967,55 @@ function ProjectFormBar() {
             }
           }}
           className={cn(
-            "h-9 min-w-0 flex-1 rounded-sm bg-bg-2 px-2 text-base leading-normal text-ink shadow-border",
-            !canSave && "ring-2 ring-tool/70",
+            "mt-4 h-11 w-full rounded-md px-3 text-center text-base leading-normal text-ink shadow-border",
+            nameError ? "bg-danger/10 ring-2 ring-danger" : "bg-bg-2",
+            !canSave && !nameError && "ring-2 ring-tool/70",
           )}
         />
-        <button
-          type="button"
-          className={cn(
-            "inline-flex h-9 shrink-0 items-center justify-center rounded-sm px-3 text-sm font-medium",
-            canSave ? "bg-btn text-btn-fg" : "bg-btn-soft text-btn",
+        <div className="mt-3 flex gap-2">
+          <button
+            type="button"
+            className={cn(
+              "inline-flex h-10 min-w-0 flex-1 items-center justify-center rounded-sm px-3 text-sm font-medium",
+              canSave ? "bg-btn text-btn-fg" : "bg-btn-soft text-btn",
+            )}
+            onPointerDown={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              save();
+            }}
+            onClick={() => save()}
+          >
+            {t("save")}
+          </button>
+          {!required && (
+            <button
+              type="button"
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-line text-tool"
+              aria-label={t("close")}
+              onPointerDown={(e) => {
+                e.preventDefault();
+                closeForm();
+              }}
+            >
+              <X />
+            </button>
           )}
-          onPointerDown={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            save();
-          }}
-          onClick={() => save()}
-        >
-          {t("save")}
-        </button>
-        <button
-          type="button"
-          className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-line text-tool"
-          aria-label={t("close")}
-          onPointerDown={(e) => {
-            e.preventDefault();
-            closeForm();
-          }}
-        >
-          <X />
-        </button>
-      </div>
-      <button type="button" className="mt-1 text-[11px] font-medium text-muted" onClick={() => setMore((v) => !v)}>
-        {more ? t("extraHide") : t("extra")}
-      </button>
-      {more && (
-        <div className="mt-1 grid max-h-36 grid-cols-2 gap-1 overflow-y-auto">
-          <Field label={t("address")} value={meta.address} onChange={(v) => setMeta({ ...meta, address: v })} />
-          <Field label={t("client")} value={meta.client} onChange={(v) => setMeta({ ...meta, client: v })} />
-          <Field label={t("phone")} value={meta.phone} onChange={(v) => setMeta({ ...meta, phone: v })} />
-          <Field label={t("notes")} value={meta.notes} onChange={(v) => setMeta({ ...meta, notes: v })} />
         </div>
-      )}
-    </div>
+        <button type="button" className="mt-2 w-full text-center text-[11px] font-medium text-muted" onClick={() => setMore((v) => !v)}>
+          {more ? t("extraHide") : t("extra")}
+        </button>
+        {more && (
+          <div className="mt-1 grid max-h-36 grid-cols-2 gap-1 overflow-y-auto">
+            <Field label={t("address")} value={meta.address} onChange={(v) => setMeta({ ...meta, address: v })} />
+            <Field label={t("client")} value={meta.client} onChange={(v) => setMeta({ ...meta, client: v })} />
+            <Field label={t("phone")} value={meta.phone} onChange={(v) => setMeta({ ...meta, phone: v })} />
+            <Field label={t("notes")} value={meta.notes} onChange={(v) => setMeta({ ...meta, notes: v })} />
+          </div>
+        )}
+      </div>
+    </div>,
+    document.body,
   );
 }
 
@@ -3019,6 +3253,11 @@ function DrawingCard() {
   );
 }
 
+function formatPopUp(mm: number, u: ReturnType<typeof useProject.getState>["units"]["length"]): string {
+  if (u === "in" || u === "ft") return `${Math.round(mm / 25.4)} in`;
+  return `${Math.round(mm / 10)} cm`;
+}
+
 function HeadCard({ head }: { head: Head }) {
   const item = itemById(head.catalogId);
   const units = useProject((s) => s.units);
@@ -3032,8 +3271,7 @@ function HeadCard({ head }: { head: Head }) {
   const live = (patch: Partial<Head>) => useProject.getState().patchHeadLive(head.id, patch);
   const nozzle = item.nozzles.find((n) => n.id === head.nozzleId) ?? item.nozzles[0];
   const bodies = bodiesFor(item);
-  const recBody = defaultBodyFor(item);
-  const bodyId = head.bodyId && bodies.some((b) => b.id === head.bodyId) ? head.bodyId : recBody;
+  const bodyId = head.bodyId && bodies.some((b) => b.id === head.bodyId) ? head.bodyId : defaultBodyFor(item);
   const nzSt = nozzle && nozzle.performance.length ? nozzleRange(nozzle) : null;
   const rotorRack = item.type === "rotor" && item.nozzles.length > 1;
   const rMin = rotorRack ? item.rMin : nzSt && nzSt.rMax > nzSt.rMin ? nzSt.rMin : item.rMin;
@@ -3053,7 +3291,8 @@ function HeadCard({ head }: { head: Head }) {
   };
   return (
     <div className="p-1.5 sm:p-3">
-      <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{item.series}</p>
+      <CatalogPic item={item} className="mx-auto h-28 w-full max-w-[11rem]" />
+      <p className="mt-1 text-[10px] font-semibold tracking-wide text-muted uppercase">{item.series}</p>
       <h2 className="font-display text-sm leading-tight">{item.id}</h2>
       <p className="text-[11px] text-ink-soft">{item.name}</p>
       {item.type === "rotor" && item.nozzles.length > 1 && (
@@ -3115,9 +3354,11 @@ function HeadCard({ head }: { head: Head }) {
         <Stat k={tx("flow")} v={fl.lpm == null ? tx("noData") : formatFlowU(fl.lpm, units.flow)} />
         <Stat k={tx("radius")} v={formatLenU(head.r, units.length)} />
         <Stat k={tx("m3h")} v={fl.m3h == null ? "—" : fmt1(fl.m3h)} />
-        <Stat k={tx("intensity")} v={fl.precipMmHr == null ? "—" : `${fmt1(fl.precipMmHr)} ${tx("mmhr")}`} />
+        <Stat k={tx("workingPressure")} v={formatPressureU(head.designPressure, units.pressure)} />
+        <Stat k={tx("precipSpeed")} v={fl.precipMmHr == null ? "—" : `${fmt1(fl.precipMmHr)} ${tx("mmhr")}`} />
         <Stat k="Траектория" v={nozzle?.trajectoryDeg != null ? `${nozzle.trajectoryDeg}°` : "—"} />
         <Stat k={tx("runTime")} v={t == null ? "—" : `${Math.round(t)} ${tx("min")}`} />
+        <Stat k={tx("popUp")} v={formatPopUp(head.popUpMm ?? item.popUpMm ?? 100, units.length)} />
       </dl>
       {fl.note && <p className="mt-1 text-[10px] text-muted">{fl.note}</p>}
       {item.nozzles.length > 1 && item.type !== "rotor" && (
@@ -3133,7 +3374,7 @@ function HeadCard({ head }: { head: Head }) {
         </label>
       )}
       <div className="mt-2 grid grid-cols-1 gap-1.5">
-        {bodies.length > 0 && (
+        {item.type !== "rotor" && bodies.length > 0 && (
           <label className="block text-[10px] text-muted">
             {tx("body")}
             <select
@@ -3147,12 +3388,25 @@ function HeadCard({ head }: { head: Head }) {
               {bodies.map((b) => (
                 <option key={b.id} value={b.id}>
                   {b.name}
-                  {b.id === recBody ? ` — ${tx("recommended")}` : ""}
                 </option>
               ))}
             </select>
           </label>
         )}
+        <label className="block text-[10px] text-muted">
+          {tx("popUp")}
+          <select
+            value={head.popUpMm ?? item.popUpMm ?? 100}
+            onChange={(e) => upd({ popUpMm: Number(e.target.value) })}
+            className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[13px] text-ink shadow-border"
+          >
+            {popUpHeights(item).map((mm) => (
+              <option key={mm} value={mm}>
+                {formatPopUp(mm, units.length)}
+              </option>
+            ))}
+          </select>
+        </label>
         <label className="block text-[10px] text-muted">
           {tx("zone")}
           <select
@@ -3568,8 +3822,6 @@ function PumpBox() {
   const units = useProject((s) => s.units);
   const rec = recommendPump(project);
   if (!rec) return null;
-  const src = project.water.dynamicBar;
-  const short = src != null && src + 0.05 < rec.workingBar;
   const us = units.flow === "gpm" || units.flow === "gph" || units.pressure === "psi" || units.length === "ft" || units.length === "in";
   const qMain = formatFlowU(rec.qLpm, us ? "gpm" : "lpm");
   const qAlt = formatFlowU(rec.qLpm, us ? "gph" : "m3h");
@@ -3588,7 +3840,6 @@ function PumpBox() {
         {t("pumpOneZone")}: {rec.zoneName} ({formatFlowU(rec.zoneMaxLpm, us ? "gpm" : "lpm")})
       </p>
       <p className="text-[10px] leading-snug text-muted">{t("pumpNote")}</p>
-      {short && <p className="mt-0.5 text-[10px] text-warn">{t("pumpNeed")}</p>}
     </div>
   );
 }

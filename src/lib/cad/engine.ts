@@ -767,6 +767,7 @@ export function moveFace(d0: CadDrawing, faceId: string, dx: number, dy: number)
     if (vt) d.vertices[id] = { ...vt, x: vt.x + dx, y: vt.y + dy };
   }
   if (f.circle) f.circle = { ...f.circle, cx: f.circle.cx + dx, cy: f.circle.cy + dy };
+  if (f.ellipse) f.ellipse = { ...f.ellipse, cx: f.ellipse.cx + dx, cy: f.ellipse.cy + dy };
   if (f.rect) f.rect = { ...f.rect, x: f.rect.x + dx, y: f.rect.y + dy };
   return d;
 }
@@ -795,6 +796,7 @@ export function rotateFace(d0: CadDrawing, faceId: string, deg: number, origin?:
     f.circle = { ...f.circle, cx: q.x, cy: q.y };
   }
   if (f.rect) f.rect = { ...f.rect, rot: (f.rect.rot + deg) % 360 };
+  if (f.ellipse) f.ellipse = { ...f.ellipse, rot: ((f.ellipse.rot ?? 0) + deg) % 360 };
   return d;
 }
 
@@ -949,15 +951,26 @@ export function cleanupDrawing(d0: CadDrawing): CadDrawing {
   return d;
 }
 
-export function addEllipse(d0: CadDrawing, c: Pt, rx: number, ry: number, type: RegionType): CadDrawing {
-  if (Math.abs(rx) < EPS || Math.abs(ry) < EPS) return d0;
-  const n = 24;
+export function ellipseWorldPts(cx: number, cy: number, rx: number, ry: number, rot = 0, n = 96): Pt[] {
+  const rad = ((rot || 0) * Math.PI) / 180;
+  const c = Math.cos(rad);
+  const s = Math.sin(rad);
+  const ax = Math.abs(rx);
+  const ay = Math.abs(ry);
   const pts: Pt[] = [];
   for (let i = 0; i < n; i++) {
     const a = (Math.PI * 2 * i) / n;
-    pts.push({ x: c.x + Math.abs(rx) * Math.cos(a), y: c.y + Math.abs(ry) * Math.sin(a) });
+    const lx = ax * Math.cos(a);
+    const ly = ay * Math.sin(a);
+    pts.push({ x: cx + lx * c - ly * s, y: cy + lx * s + ly * c });
   }
-  return addIsolatedLoop(d0, pts, type, { ellipse: { cx: c.x, cy: c.y, rx: Math.abs(rx), ry: Math.abs(ry) } });
+  return pts;
+}
+
+export function addEllipse(d0: CadDrawing, c: Pt, rx: number, ry: number, type: RegionType): CadDrawing {
+  if (Math.abs(rx) < EPS || Math.abs(ry) < EPS) return d0;
+  const pts = ellipseWorldPts(c.x, c.y, rx, ry, 0, 96);
+  return addIsolatedLoop(d0, pts, type, { ellipse: { cx: c.x, cy: c.y, rx: Math.abs(rx), ry: Math.abs(ry), rot: 0 } });
 }
 
 export function rectWorldCorners(r: { x: number; y: number; w: number; h: number; rot: number }): Pt[] {
@@ -1002,11 +1015,88 @@ function writeRectMeta(d: CadDrawing, faceId: string, r: { x: number; y: number;
 
 export function setRectSize(d0: CadDrawing, faceId: string, w: number, h: number): CadDrawing {
   const f = d0.faces[faceId];
-  if (!f?.rect || w <= EPS || h <= EPS) return d0;
-  const cx = f.rect.x + f.rect.w / 2;
-  const cy = f.rect.y + f.rect.h / 2;
+  if (!f || w <= EPS || h <= EPS) return d0;
+  if (f.rect) {
+    const cx = f.rect.x + f.rect.w / 2;
+    const cy = f.rect.y + f.rect.h / 2;
+    const d = cloneDrawing(d0);
+    writeRectMeta(d, faceId, { x: cx - w / 2, y: cy - h / 2, w, h, rot: f.rect.rot || 0 });
+    return d;
+  }
+  if (f.ellipse) return setEllipseRadii(d0, faceId, w / 2, h / 2);
   const d = cloneDrawing(d0);
-  writeRectMeta(d, faceId, { x: cx - w / 2, y: cy - h / 2, w, h, rot: f.rect.rot || 0 });
+  const pts = facePoints(d, faceId);
+  if (pts.length < 2) return d0;
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  for (const p of pts) {
+    minX = Math.min(minX, p.x);
+    minY = Math.min(minY, p.y);
+    maxX = Math.max(maxX, p.x);
+    maxY = Math.max(maxY, p.y);
+  }
+  const ow = maxX - minX;
+  const oh = maxY - minY;
+  if (ow < EPS || oh < EPS) return d0;
+  const cx = (minX + maxX) / 2;
+  const cy = (minY + maxY) / 2;
+  const sx = w / ow;
+  const sy = h / oh;
+  for (const id of faceVertexIds(d, faceId)) {
+    const vt = d.vertices[id];
+    if (!vt) continue;
+    d.vertices[id] = { ...vt, x: cx + (vt.x - cx) * sx, y: cy + (vt.y - cy) * sy };
+  }
+  return d;
+}
+
+/** edge 0 top, 1 right, 2 bottom, 3 left in local unrotated frame. Opposite side stays put. */
+export function rectFromEdge(
+  r: { x: number; y: number; w: number; h: number; rot: number },
+  edge: 0 | 1 | 2 | 3,
+  p: Pt,
+  min = EPS,
+): { x: number; y: number; w: number; h: number; rot: number } {
+  const cx = r.x + r.w / 2;
+  const cy = r.y + r.h / 2;
+  const rad = ((r.rot || 0) * Math.PI) / 180;
+  const ux = Math.cos(rad);
+  const uy = Math.sin(rad);
+  const vx = -uy;
+  const vy = ux;
+  const dx = p.x - cx;
+  const dy = p.y - cy;
+  const lx = dx * ux + dy * uy;
+  const ly = dx * vx + dy * vy;
+  let w = r.w;
+  let h = r.h;
+  let ncx = cx;
+  let ncy = cy;
+  if (edge === 1 || edge === 3) {
+    const opp = edge === 1 ? -r.w / 2 : r.w / 2;
+    w = Math.max(min, Math.abs(lx - opp));
+    const nlx = (lx + opp) / 2;
+    ncx = cx + ux * nlx;
+    ncy = cy + uy * nlx;
+  } else {
+    const opp = edge === 0 ? r.h / 2 : -r.h / 2;
+    h = Math.max(min, Math.abs(ly - opp));
+    const nly = (ly + opp) / 2;
+    ncx = cx + vx * nly;
+    ncy = cy + vy * nly;
+  }
+  return { x: ncx - w / 2, y: ncy - h / 2, w, h, rot: r.rot || 0 };
+}
+
+export function setRectFromEdge(
+  d0: CadDrawing,
+  faceId: string,
+  edge: 0 | 1 | 2 | 3,
+  p: Pt,
+): CadDrawing {
+  const d = cloneDrawing(d0);
+  const f = d.faces[faceId];
+  if (!f?.rect) return d;
+  writeRectMeta(d, faceId, rectFromEdge(f.rect, edge, p));
   return d;
 }
 
@@ -1079,15 +1169,53 @@ export function setEllipseRadii(d0: CadDrawing, faceId: string, rx: number, ry: 
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f) return d;
-  const ell = f.ellipse ?? { cx: faceCentroid(d, faceId).x, cy: faceCentroid(d, faceId).y, rx: 1, ry: 1 };
-  const sx = rx / (ell.rx || 1);
-  const sy = ry / (ell.ry || 1);
+  const c = faceCentroid(d, faceId);
+  const ell = f.ellipse ?? { cx: c.x, cy: c.y, rx: 1, ry: 1, rot: 0 };
+  const nrx = Math.max(0.05, Math.abs(rx));
+  const nry = Math.max(0.05, Math.abs(ry));
+  const ids = faceVertexIds(d, faceId);
+  const pts = ellipseWorldPts(ell.cx, ell.cy, nrx, nry, ell.rot ?? 0, Math.max(8, ids.length));
+  ids.forEach((id, i) => {
+    const vt = d.vertices[id];
+    const p = pts[i];
+    if (vt && p) d.vertices[id] = { ...vt, x: p.x, y: p.y };
+  });
+  f.ellipse = { ...ell, rx: nrx, ry: nry };
+  return d;
+}
+
+/** Uniform scale of an ellipse about its center. Aspect ratio, center and rotation stay the same. */
+export function scaleEllipse(d0: CadDrawing, faceId: string, k: number): CadDrawing {
+  const f = d0.faces[faceId];
+  if (!f?.ellipse || !(k > 0) || !Number.isFinite(k)) return d0;
+  const { cx, cy } = f.ellipse;
+  const next = setEllipseRadii(d0, faceId, f.ellipse.rx * k, f.ellipse.ry * k);
+  const e = next.faces[faceId]?.ellipse;
+  if (e) next.faces[faceId] = { ...next.faces[faceId]!, ellipse: { ...e, cx, cy } };
+  return next;
+}
+
+export function scaleFaceAbout(d0: CadDrawing, faceId: string, k: number, origin?: Pt): CadDrawing {
+  const d = cloneDrawing(d0);
+  const f = d.faces[faceId];
+  if (!f || !(k > 0) || !Number.isFinite(k)) return d;
+  const c = origin ?? (f.circle ? { x: f.circle.cx, y: f.circle.cy } : f.ellipse ? { x: f.ellipse.cx, y: f.ellipse.cy } : faceCentroid(d, faceId));
   for (const id of faceVertexIds(d, faceId)) {
     const vt = d.vertices[id];
     if (!vt) continue;
-    d.vertices[id] = { ...vt, x: ell.cx + (vt.x - ell.cx) * sx, y: ell.cy + (vt.y - ell.cy) * sy };
+    d.vertices[id] = { ...vt, x: c.x + (vt.x - c.x) * k, y: c.y + (vt.y - c.y) * k };
   }
-  f.ellipse = { ...ell, rx: Math.abs(rx), ry: Math.abs(ry) };
+  if (f.circle) f.circle = { ...f.circle, r: Math.abs(f.circle.r * k) };
+  if (f.ellipse) f.ellipse = { ...f.ellipse, rx: Math.abs(f.ellipse.rx * k), ry: Math.abs(f.ellipse.ry * k) };
+  if (f.rect) {
+    f.rect = {
+      ...f.rect,
+      x: c.x + (f.rect.x - c.x) * k,
+      y: c.y + (f.rect.y - c.y) * k,
+      w: Math.abs(f.rect.w * k),
+      h: Math.abs(f.rect.h * k),
+    };
+  }
   return d;
 }
 
@@ -1741,7 +1869,7 @@ export function pickCandidates(
 }
 
 export function inferRectFromPoints(pts: Pt[]): { x: number; y: number; w: number; h: number; rot: number } | null {
-  if (pts.length < 4) return null;
+  if (pts.length !== 4) return null;
   const a = pts[0]!;
   const b = pts[1]!;
   const c = pts[2]!;
@@ -1756,13 +1884,47 @@ export function inferRectFromPoints(pts: Pt[]): { x: number; y: number; w: numbe
 
 export function ensureRectMeta(d0: CadDrawing, faceId: string): CadDrawing {
   const f = d0.faces[faceId];
-  if (!f || f.rect || f.circle) return d0;
+  if (!f || f.rect || f.circle || f.ellipse) return d0;
   const pts = faceVertices(d0, faceId);
   if (pts.length !== 4) return d0;
   const r = inferRectFromPoints(pts);
   if (!r) return d0;
   const d = cloneDrawing(d0);
   writeRectMeta(d, faceId, r);
+  return d;
+}
+
+export function inferEllipseFromPoints(pts: Pt[]): { cx: number; cy: number; rx: number; ry: number; rot: number } | null {
+  if (pts.length < 8) return null;
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  for (const p of pts) {
+    minX = Math.min(minX, p.x);
+    minY = Math.min(minY, p.y);
+    maxX = Math.max(maxX, p.x);
+    maxY = Math.max(maxY, p.y);
+  }
+  const cx = (minX + maxX) / 2;
+  const cy = (minY + maxY) / 2;
+  const rx = (maxX - minX) / 2;
+  const ry = (maxY - minY) / 2;
+  if (rx < EPS || ry < EPS) return null;
+  let err = 0;
+  for (const p of pts) {
+    const nx = (p.x - cx) / rx;
+    const ny = (p.y - cy) / ry;
+    err += Math.abs(nx * nx + ny * ny - 1);
+  }
+  if (err / pts.length > 0.18) return null;
+  return { cx, cy, rx, ry, rot: 0 };
+}
+
+export function ensureEllipseMeta(d0: CadDrawing, faceId: string): CadDrawing {
+  const f = d0.faces[faceId];
+  if (!f || f.ellipse || f.circle || f.rect) return d0;
+  const ell = inferEllipseFromPoints(faceVertices(d0, faceId));
+  if (!ell) return d0;
+  const d = cloneDrawing(d0);
+  d.faces[faceId] = { ...d.faces[faceId]!, ellipse: ell };
   return d;
 }
 
@@ -1877,6 +2039,22 @@ export function toPolygons(d: CadDrawing): Geom[] {
         cadType: f.type,
         points: [{ x: f.circle.cx, y: f.circle.cy }],
         radius: f.circle.r,
+        closed: true,
+        locked: f.locked,
+        hidden: f.hidden,
+        fill: f.fill,
+        name: f.name,
+      });
+      continue;
+    }
+    if (f.ellipse) {
+      geoms.push({
+        id: f.id,
+        type: "poly",
+        kind,
+        cadType: f.type,
+        points: ellipseWorldPts(f.ellipse.cx, f.ellipse.cy, f.ellipse.rx, f.ellipse.ry, f.ellipse.rot ?? 0, 96),
+        ellipse: { ...f.ellipse },
         closed: true,
         locked: f.locked,
         hidden: f.hidden,

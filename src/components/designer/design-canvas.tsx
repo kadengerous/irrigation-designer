@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Arc, Circle, Group, Image as KImage, Layer, Line, Rect, Shape, Stage, Text } from "react-konva";
+import { Arc, Circle, Ellipse, Group, Image as KImage, Layer, Line, Rect, Shape, Stage, Text } from "react-konva";
 import type Konva from "konva";
 import { Copy, SlidersHorizontal, Trash2 } from "lucide-react";
 import { toast } from "sonner";
@@ -14,7 +14,7 @@ import { zoneColor, type Geom, type Head } from "@/lib/project-types";
 import { useProject } from "@/lib/project-store";
 import type { DesignCanvasProps } from "@/components/designer/canvas-types";
 import { cadSnap } from "@/lib/cad/snap";
-import { addEllipse, addRect, addSpline, addRotatedRect, addTriangle, drawingOrMigrate, faceArea, faceCentroid, faceEdges, facePoints, faceVertices, filletPreview, inferRectFromPoints, isInternalEdge, moveVertex, offsetPoints, pickCandidates, pickEdgeAt, pickFaceAt, pickVertexAt, rectWorldCorners, resolveDim, selfIntersects } from "@/lib/cad/engine";
+import { addEllipse, addRect, addSpline, addRotatedRect, addTriangle, drawingOrMigrate, faceArea, faceCentroid, faceEdges, facePoints, faceVertices, filletPreview, inferEllipseFromPoints, inferRectFromPoints, isInternalEdge, moveVertex, offsetPoints, pickCandidates, pickEdgeAt, pickFaceAt, pickVertexAt, rectFromEdge, rectWorldCorners, resolveDim, selfIntersects } from "@/lib/cad/engine";
 import { REGION_FILL } from "@/lib/cad/types";
 
 const DRAW_CREATE = new Set([
@@ -162,6 +162,7 @@ export function DesignCanvas({ onScalePair, onMeasure, onHover, onExportReady }:
     const face = drawingOrMigrate(st.project).faces[id];
     if (face?.locked) return;
     if (cadHold.current) window.clearTimeout(cadHold.current);
+    if (editDrag.current) return;
     cadHold.current = window.setTimeout(() => {
       cadHold.current = null;
       skipClick.current = true;
@@ -512,7 +513,7 @@ export function DesignCanvas({ onScalePair, onMeasure, onHover, onExportReady }:
   };
 
   const handleClick = (e: Konva.KonvaEventObject<MouseEvent | TouchEvent>) => {
-    if (skipClick.current) {
+    if (skipClick.current || editDrag.current) {
       skipClick.current = false;
       return;
     }
@@ -573,6 +574,7 @@ export function DesignCanvas({ onScalePair, onMeasure, onHover, onExportReady }:
     if (st.tool === "draw") {
       if (!st.drawSub || st.drawSub === "none") {
         const face = pickFaceAt(drawingOrMigrate(st.project), p);
+        if (st.cadEditId && face === st.cadEditId) return;
         if (face) {
           st.selectPoly(face);
           return;
@@ -1276,6 +1278,7 @@ export function DesignCanvas({ onScalePair, onMeasure, onHover, onExportReady }:
                 panX={panX}
                 panY={panY}
                 editDrag={editDrag}
+                skipClick={skipClick}
               />
               {drawingOrMigrate(project).faces[cadEditId]?.circle && (
                 <CircleMeasure
@@ -1292,7 +1295,7 @@ export function DesignCanvas({ onScalePair, onMeasure, onHover, onExportReady }:
               )}
             </>
           )}
-          {draft.points.length >= 1 && (
+          {draft.points.length >= 1 && drawSub !== "ellipse" && drawSub !== "circle" && (
             <Line
               points={draft.points.flatMap((pt) => [sx(pt.x), sy(pt.y)])}
               stroke="#2b6f9a"
@@ -1354,6 +1357,51 @@ export function DesignCanvas({ onScalePair, onMeasure, onHover, onExportReady }:
               />
             </>
           )}
+          {rubberFrom && rubberTo && drawSub === "ellipse" && (
+            <>
+              <Ellipse
+                x={sx(rubberFrom.x)}
+                y={sy(rubberFrom.y)}
+                radiusX={Math.max(0.02, Math.abs(rubberTo.x - rubberFrom.x)) * px}
+                radiusY={Math.max(0.02, Math.abs(rubberTo.y - rubberFrom.y)) * px}
+                stroke="#2b6f9a"
+                dash={[5, 4]}
+                strokeWidth={1.5}
+                listening={false}
+              />
+              <Text
+                x={sx(rubberFrom.x + Math.abs(rubberTo.x - rubberFrom.x)) + 10}
+                y={sy(rubberFrom.y) - 8}
+                width={88}
+                text={`A ${formatLen(Math.abs(rubberTo.x - rubberFrom.x) * 2, measureUnit)}`}
+                fontSize={12}
+                fontFamily="IBM Plex Sans, sans-serif"
+                fill="#1b1f24"
+                listening={false}
+              />
+              <Text
+                x={sx(rubberFrom.x) - 44}
+                y={sy(rubberFrom.y - Math.abs(rubberTo.y - rubberFrom.y)) - 20}
+                width={88}
+                align="center"
+                text={`B ${formatLen(Math.abs(rubberTo.y - rubberFrom.y) * 2, measureUnit)}`}
+                fontSize={12}
+                fontFamily="IBM Plex Sans, sans-serif"
+                fill="#1b1f24"
+                listening={false}
+              />
+              <Text
+                x={sx(rubberFrom.x) + 16}
+                y={sy(rubberFrom.y) - 8}
+                width={88}
+                text={formatAreaU(Math.PI * Math.abs(rubberTo.x - rubberFrom.x) * Math.abs(rubberTo.y - rubberFrom.y), useProject.getState().units.area)}
+                fontSize={12}
+                fontFamily="IBM Plex Sans, sans-serif"
+                fill="#1b1f24"
+                listening={false}
+              />
+            </>
+          )}
           {rubberFrom && rubberTo && drawSub === "circle" && (
             <>
               <Circle
@@ -1404,7 +1452,7 @@ export function DesignCanvas({ onScalePair, onMeasure, onHover, onExportReady }:
               listening={false}
             />
           )}
-          {rubberFrom && rubberTo && drawSub !== "rect" && drawSub !== "circle" && (
+          {rubberFrom && rubberTo && drawSub !== "rect" && drawSub !== "circle" && drawSub !== "ellipse" && (
             <>
               <Line
                 points={[sx(rubberFrom.x), sy(rubberFrom.y), sx(rubberTo.x), sy(rubberTo.y)]}
@@ -1766,7 +1814,7 @@ function CircleMeasure({
         y={sy(cy + r * 0.42) - 8}
         width={104}
         align="center"
-        text={`S ${formatAreaU(Math.PI * r * r, areaU)}`}
+        text={formatAreaU(Math.PI * r * r, areaU)}
         fontSize={13}
         fontFamily="IBM Plex Sans, sans-serif"
         fill="#1b1f24"
@@ -1850,7 +1898,7 @@ function RectMeasure({
         y={sy(ay) - 8}
         width={80}
         align="center"
-        text={`S ${formatAreaU(w * len, areaU)}`}
+        text={formatAreaU(w * len, areaU)}
         fontSize={12}
         fontFamily="IBM Plex Sans, sans-serif"
         fill="#1b1f24"
@@ -1858,6 +1906,121 @@ function RectMeasure({
       />
     </>
   );
+}
+
+function ellipsePts(cx: number, cy: number, rx: number, ry: number, rotDeg = 0, n = 96): Pt[] {
+  const rad = ((rotDeg || 0) * Math.PI) / 180;
+  const c = Math.cos(rad);
+  const s = Math.sin(rad);
+  const pts: Pt[] = [];
+  for (let i = 0; i < n; i++) {
+    const a = (Math.PI * 2 * i) / n;
+    const lx = rx * Math.cos(a);
+    const ly = ry * Math.sin(a);
+    pts.push({ x: cx + lx * c - ly * s, y: cy + lx * s + ly * c });
+  }
+  return pts;
+}
+
+function clientXY(ev: { clientX?: number; clientY?: number; touches?: TouchList; changedTouches?: TouchList }): { clientX: number; clientY: number } {
+  if (typeof ev.clientX === "number" && typeof ev.clientY === "number") return { clientX: ev.clientX, clientY: ev.clientY };
+  const t = ev.touches?.item(0) ?? ev.changedTouches?.item(0);
+  return { clientX: t?.clientX ?? 0, clientY: t?.clientY ?? 0 };
+}
+
+function worldFromClient(ev: { clientX?: number; clientY?: number; touches?: TouchList; changedTouches?: TouchList }, stage: Konva.Stage | null, panX: number, panY: number, px: number): Pt {
+  const { clientX, clientY } = clientXY(ev);
+  const box = stage?.container().getBoundingClientRect();
+  if (!box) return { x: 0, y: 0 };
+  return { x: (clientX - box.left - panX) / px, y: (clientY - box.top - panY) / px };
+}
+
+function bindPointerDrag(
+  e: Konva.KonvaEventObject<PointerEvent | MouseEvent | TouchEvent>,
+  editDrag: { current: boolean },
+  panX: number,
+  panY: number,
+  px: number,
+  onStart: (p: Pt) => void,
+  onMove: (p: Pt) => void,
+  onEnd: (p: Pt) => void,
+  skipClick?: { current: boolean },
+) {
+  if (editDrag.current) return;
+  e.cancelBubble = true;
+  const native = e.evt as PointerEvent & TouchEvent;
+  native.preventDefault?.();
+  native.stopPropagation?.();
+  const stage = e.target.getStage();
+  editDrag.current = true;
+  onStart(worldFromClient(native, stage, panX, panY, px));
+  const move = (ev: PointerEvent | TouchEvent) => {
+    ev.preventDefault();
+    onMove(worldFromClient(ev, stage, panX, panY, px));
+  };
+  const end = (ev: PointerEvent | TouchEvent) => {
+    window.removeEventListener("pointermove", move as EventListener, true);
+    window.removeEventListener("pointerup", end as EventListener, true);
+    window.removeEventListener("pointercancel", end as EventListener, true);
+    window.removeEventListener("touchmove", move as EventListener, true);
+    window.removeEventListener("touchend", end as EventListener, true);
+    window.removeEventListener("touchcancel", end as EventListener, true);
+    if (skipClick) {
+      skipClick.current = true;
+      window.setTimeout(() => {
+        skipClick.current = false;
+      }, 500);
+    }
+    editDrag.current = false;
+    onEnd(worldFromClient(ev, stage, panX, panY, px));
+  };
+  window.addEventListener("pointermove", move as EventListener, { capture: true, passive: false });
+  window.addEventListener("pointerup", end as EventListener, { capture: true });
+  window.addEventListener("pointercancel", end as EventListener, { capture: true });
+  window.addEventListener("touchmove", move as EventListener, { capture: true, passive: false });
+  window.addEventListener("touchend", end as EventListener, { capture: true });
+  window.addEventListener("touchcancel", end as EventListener, { capture: true });
+}
+
+function bindClientDeltaDrag(
+  e: Konva.KonvaEventObject<PointerEvent | MouseEvent | TouchEvent>,
+  editDrag: { current: boolean },
+  skipClick: { current: boolean },
+  onDelta: (dxPx: number, dyPx: number, commit: boolean) => void,
+) {
+  if (editDrag.current) return;
+  e.cancelBubble = true;
+  const native = e.evt as PointerEvent & TouchEvent;
+  native.preventDefault?.();
+  native.stopPropagation?.();
+  const s0 = clientXY(native);
+  editDrag.current = true;
+  const move = (ev: PointerEvent | TouchEvent) => {
+    ev.preventDefault();
+    const c = clientXY(ev);
+    onDelta(c.clientX - s0.clientX, c.clientY - s0.clientY, false);
+  };
+  const end = (ev: PointerEvent | TouchEvent) => {
+    window.removeEventListener("pointermove", move as EventListener, true);
+    window.removeEventListener("pointerup", end as EventListener, true);
+    window.removeEventListener("pointercancel", end as EventListener, true);
+    window.removeEventListener("touchmove", move as EventListener, true);
+    window.removeEventListener("touchend", end as EventListener, true);
+    window.removeEventListener("touchcancel", end as EventListener, true);
+    skipClick.current = true;
+    window.setTimeout(() => {
+      skipClick.current = false;
+    }, 500);
+    editDrag.current = false;
+    const c = clientXY(ev);
+    onDelta(c.clientX - s0.clientX, c.clientY - s0.clientY, true);
+  };
+  window.addEventListener("pointermove", move as EventListener, { capture: true, passive: false });
+  window.addEventListener("pointerup", end as EventListener, { capture: true });
+  window.addEventListener("pointercancel", end as EventListener, { capture: true });
+  window.addEventListener("touchmove", move as EventListener, { capture: true, passive: false });
+  window.addEventListener("touchend", end as EventListener, { capture: true });
+  window.addEventListener("touchcancel", end as EventListener, { capture: true });
 }
 
 function CadHandles({
@@ -1868,6 +2031,7 @@ function CadHandles({
   panX,
   panY,
   editDrag,
+  skipClick,
 }: {
   faceId: string;
   sx: (n: number) => number;
@@ -1876,14 +2040,18 @@ function CadHandles({
   panX: number;
   panY: number;
   editDrag: { current: boolean };
+  skipClick: { current: boolean };
 }) {
   const bitsRef = useRef<Konva.Group>(null);
   const rotRef = useRef<Konva.Group>(null);
+  const scaleRef = useRef<Konva.Group>(null);
   const bodyRef = useRef<Konva.Line>(null);
   const centerRef = useRef<Konva.Group>(null);
   const rim = useRef<Konva.Group>(null);
   const cornerRefs = useRef<(Konva.Group | null)[]>([null, null, null, null]);
+  const midRefs = useRef<(Konva.Group | null)[]>([null, null, null, null]);
   const rot0 = useRef(0);
+  const scale0 = useRef({ rx: 1, ry: 1, d: 1, k: 1 });
   const d = drawingOrMigrate(useProject.getState().project);
   const face = d.faces[faceId];
   if (!face || face.locked) return null;
@@ -1893,7 +2061,8 @@ function CadHandles({
     return { x: (p.x - panX) / px, y: (p.y - panY) / px };
   };
   const circle = face.circle;
-  const rect = face.rect ?? (circle ? undefined : inferRectFromPoints(faceVertices(d, faceId)) ?? undefined);
+  const inferredEll = face.ellipse ?? inferEllipseFromPoints(faceVertices(d, faceId)) ?? undefined;
+  const rect = face.rect ?? (circle || inferredEll ? undefined : inferRectFromPoints(faceVertices(d, faceId)) ?? undefined);
   const corners: Pt[] = rect ? rectWorldCorners(rect) : [];
   const geom = (node: Konva.Node) => node.getStage()?.findOne(`#face-${faceId}`) as Konva.Shape | undefined;
   const paintDims = (node: Konva.Node, nr: number, cx: number, cy: number) => {
@@ -1917,7 +2086,7 @@ function CadHandles({
     stext?.setAttrs({
       x: sx(cx) - 52,
       y: sy(cy + nr * 0.42) - 8,
-      text: `S ${formatAreaU(Math.PI * nr * nr, areaU)}`,
+      text: formatAreaU(Math.PI * nr * nr, areaU),
     });
   };
   const rotPos = (pts: Pt[]) => {
@@ -1963,10 +2132,10 @@ function CadHandles({
     stage.findOne("#rect-atext")?.setAttrs({
       x: sx(ax) - 40,
       y: sy(ay) - 8,
-      text: `S ${formatAreaU(w * len, areaU)}`,
+      text: formatAreaU(w * len, areaU),
     });
   };
-  const applyLiveCorners = (pts: Pt[], node: Konva.Node | undefined, skipCorner?: number, skipRot?: boolean) => {
+  const applyLiveCorners = (pts: Pt[], node: Konva.Node | undefined, skipCorner?: number, skipRot?: boolean, skipMid?: number) => {
     const flat = pts.flatMap((pt) => [sx(pt.x), sy(pt.y)]);
     if (node?.getClassName() === "Line") {
       (node as Konva.Line).points(flat);
@@ -1978,6 +2147,12 @@ function CadHandles({
       const mx = (pts[0]!.x + pts[2]!.x) / 2;
       const my = (pts[0]!.y + pts[2]!.y) / 2;
       centerRef.current?.position({ x: sx(mx), y: sy(my) });
+      for (let i = 0; i < 4; i++) {
+        if (i === skipMid) continue;
+        const a = pts[i]!;
+        const b = pts[(i + 1) % 4]!;
+        midRefs.current[i]?.position({ x: sx((a.x + b.x) / 2), y: sy((a.y + b.y) / 2) });
+      }
     }
     pts.forEach((pt, i) => {
       if (i === skipCorner) return;
@@ -2003,11 +2178,12 @@ function CadHandles({
     const mid = { x: (opp.x + p.x) / 2, y: (opp.y + p.y) / 2 };
     return rectWorldCorners({ x: mid.x - w / 2, y: mid.y - h / 2, w, h, rot: rotDeg });
   };
+  const cornersFromSide = (edge: 0 | 1 | 2 | 3, p: Pt): Pt[] => {
+    const min = Math.max(useProject.getState().gridStep || 0.01, 0.002);
+    return rectWorldCorners(rectFromEdge(rect!, edge, p, min));
+  };
 
-  if (circle || face.ellipse) {
-    if (!circle) {
-      return null;
-    }
+  if (circle) {
     return (
       <>
         <Group
@@ -2102,6 +2278,455 @@ function CadHandles({
     );
   }
 
+  if (inferredEll) {
+    const ell = inferredEll;
+    const rot0deg = ell.rot ?? 0;
+    const ellPt = (rx: number, ry: number, param: number, cx = ell.cx, cy = ell.cy, rot = rot0deg) => {
+      const rad = (rot * Math.PI) / 180;
+      const c = Math.cos(rad);
+      const s = Math.sin(rad);
+      const lx = rx * Math.cos(param);
+      const ly = ry * Math.sin(param);
+      return { x: cx + lx * c - ly * s, y: cy + lx * s + ly * c };
+    };
+    const scalePos = (rx: number, ry: number, cx = ell.cx, cy = ell.cy, rot = rot0deg) => ellPt(rx, ry, -Math.PI / 4, cx, cy, rot);
+    const rotHandlePos = (rx: number, ry: number, cx = ell.cx, cy = ell.cy, rot = rot0deg) => ellPt(rx, ry, (3 * Math.PI) / 4, cx, cy, rot);
+    const offAxis = (end: Pt, cx = ell.cx, cy = ell.cy, outPx = 20) => {
+      const dx = end.x - cx;
+      const dy = end.y - cy;
+      const len = Math.hypot(dx, dy) || 1;
+      const out = outPx / px;
+      const side = 10 / px;
+      return {
+        x: end.x + (dx / len) * out - (dy / len) * side,
+        y: end.y + (dy / len) * out + (dx / len) * side,
+      };
+    };
+    const axisLabel = (end: Pt, cx: number, cy: number, outPx: number) => {
+      const p = offAxis(end, cx, cy, outPx);
+      const awayRight = sx(p.x) >= sx(end.x);
+      return { x: sx(p.x), y: sy(p.y), offsetX: awayRight ? 0 : 88, offsetY: 8 };
+    };
+    const paintEll = (node: Konva.Node | undefined, rx: number, ry: number, cx = ell.cx, cy = ell.cy, rot = rot0deg) => {
+      const pts = ellipsePts(cx, cy, rx, ry, rot);
+      if (node?.getClassName() === "Line") {
+        (node as Konva.Line).points(pts.flatMap((p) => [sx(p.x), sy(p.y)]));
+        node.x(0);
+        node.y(0);
+      } else if (node?.getClassName() === "Circle") {
+        node.x(sx(cx));
+        node.y(sy(cy));
+      } else if (node?.getClassName() === "Ellipse") {
+        const ellNode = node as Konva.Ellipse;
+        ellNode.x(sx(cx));
+        ellNode.y(sy(cy));
+        ellNode.radiusX(rx * px);
+        ellNode.radiusY(ry * px);
+        ellNode.rotation(rot);
+      }
+      bodyRef.current?.points(pts.flatMap((p) => [sx(p.x), sy(p.y)]));
+      const next = [
+        ellPt(rx, ry, 0, cx, cy, rot),
+        ellPt(rx, ry, Math.PI, cx, cy, rot),
+        ellPt(rx, ry, Math.PI / 2, cx, cy, rot),
+        ellPt(rx, ry, -Math.PI / 2, cx, cy, rot),
+      ];
+      next.forEach((pt, j) => midRefs.current[j]?.position({ x: sx(pt.x), y: sy(pt.y) }));
+      const sp = scalePos(rx, ry, cx, cy, rot);
+      const rp = rotHandlePos(rx, ry, cx, cy, rot);
+      scaleRef.current?.position({ x: sx(sp.x), y: sy(sp.y) });
+      rotRef.current?.position({ x: sx(rp.x), y: sy(rp.y) });
+      centerRef.current?.position({ x: sx(cx), y: sy(cy) });
+      const stage = node?.getStage() ?? bitsRef.current?.getStage() ?? scaleRef.current?.getStage();
+      const unit = useProject.getState().measureUnit;
+      const areaU = useProject.getState().units.area;
+      const top = ellPt(rx, ry, -Math.PI / 2, cx, cy, rot);
+      const right = ellPt(rx, ry, 0, cx, cy, rot);
+      const left = ellPt(rx, ry, Math.PI, cx, cy, rot);
+      const bottom = ellPt(rx, ry, Math.PI / 2, cx, cy, rot);
+      const aLab = axisLabel(right, cx, cy, 36);
+      const bLab = axisLabel(top, cx, cy, 22);
+      stage?.findOne("#ell-axis-a")?.setAttrs({
+        points: [sx(left.x), sy(left.y), sx(right.x), sy(right.y)],
+      });
+      stage?.findOne("#ell-axis-b")?.setAttrs({
+        points: [sx(top.x), sy(top.y), sx(bottom.x), sy(bottom.y)],
+      });
+      stage?.findOne("#ell-wtext")?.setAttrs({
+        x: aLab.x,
+        y: aLab.y,
+        offsetX: aLab.offsetX,
+        offsetY: aLab.offsetY,
+        text: `A ${formatLen(rx * 2, unit)}`,
+      });
+      stage?.findOne("#ell-htext")?.setAttrs({
+        x: bLab.x,
+        y: bLab.y,
+        offsetX: bLab.offsetX,
+        offsetY: bLab.offsetY,
+        text: `B ${formatLen(ry * 2, unit)}`,
+      });
+      const twoOclock = -Math.PI / 3;
+      stage?.findOne("#ell-atext")?.setAttrs({
+        x: sx(cx) + 30 * Math.cos(twoOclock),
+        y: sy(cy) + 30 * Math.sin(twoOclock),
+        text: formatAreaU(Math.PI * rx * ry, areaU),
+      });
+    };
+    const snapK = (k: number) => {
+      if (!useProject.getState().snapOn) return k;
+      for (const s of [0.5, 1, 1.5, 2, 2.5, 3]) {
+        if (Math.abs(k - s) < 0.07) return s;
+      }
+      return k;
+    };
+    const sides: { key: string; param: number; axis: "x" | "y" }[] = [
+      { key: "e", param: 0, axis: "x" },
+      { key: "w", param: Math.PI, axis: "x" },
+      { key: "s", param: Math.PI / 2, axis: "y" },
+      { key: "n", param: -Math.PI / 2, axis: "y" },
+    ];
+    const sp0 = scalePos(ell.rx, ell.ry);
+    const rp0 = rotHandlePos(ell.rx, ell.ry);
+    const axisLen = (p: Pt, axis: "x" | "y", cx = ell.cx, cy = ell.cy, rot = rot0deg) => {
+      const rad = (rot * Math.PI) / 180;
+      const ux = Math.cos(rad);
+      const uy = Math.sin(rad);
+      const vx = -uy;
+      const vy = ux;
+      return axis === "x"
+        ? Math.max(0.05, Math.abs((p.x - cx) * ux + (p.y - cy) * uy))
+        : Math.max(0.05, Math.abs((p.x - cx) * vx + (p.y - cy) * vy));
+    };
+    const applyScale = (p: Pt, commit: boolean) => {
+      let k = dist(p, { x: ell.cx, y: ell.cy }) / scale0.current.d;
+      k = snapK(Math.max(0.05, k));
+      scale0.current.k = k;
+      const rx = Math.max(0.05, scale0.current.rx * k);
+      const ry = Math.max(0.05, scale0.current.ry * k);
+      const sp = scalePos(rx, ry);
+      scaleRef.current?.position({ x: sx(sp.x), y: sy(sp.y) });
+      const host = scaleRef.current ?? bitsRef.current;
+      paintEll(host ? geom(host) : undefined, rx, ry);
+      if (commit) useProject.getState().setEllipseR(rx, ry);
+    };
+    const applyRot = (p: Pt, commit: boolean) => {
+      const ang = Math.atan2(p.y - ell.cy, p.x - ell.cx);
+      const deg = snapDeltaToAngle(rot0deg, ((ang - rot0.current) * 180) / Math.PI, 45, 10);
+      paintEll(bitsRef.current ? geom(bitsRef.current) : undefined, ell.rx, ell.ry, ell.cx, ell.cy, rot0deg + deg);
+      useProject.getState().setCadLiveRot(normDeg(rot0deg + deg));
+      if (commit) useProject.getState().rotateSelectedFace(deg);
+    };
+    const applyBodyMove = (dxPx: number, dyPx: number, commit: boolean) => {
+      let dx = dxPx / px;
+      let dy = dyPx / px;
+      if (useProject.getState().snapOn) {
+        const g = Math.max(useProject.getState().gridStep || 0.1, 1e-4);
+        dx = Math.round((ell.cx + dx) / g) * g - ell.cx;
+        dy = Math.round((ell.cy + dy) / g) * g - ell.cy;
+      }
+      const x = dx * px;
+      const y = dy * px;
+      bitsRef.current?.position({ x, y });
+      const node = bitsRef.current ? geom(bitsRef.current) : undefined;
+      if (node) {
+        if (node.getClassName() === "Ellipse" || node.getClassName() === "Circle") {
+          node.position({ x: sx(ell.cx) + x, y: sy(ell.cy) + y });
+        } else {
+          node.position({ x, y });
+        }
+      }
+      if (commit) {
+        bitsRef.current?.position({ x: 0, y: 0 });
+        if (node) {
+          if (node.getClassName() === "Ellipse" || node.getClassName() === "Circle") {
+            node.position({ x: sx(ell.cx), y: sy(ell.cy) });
+          } else {
+            node.position({ x: 0, y: 0 });
+          }
+        }
+        if (Math.abs(dx) > 1e-9 || Math.abs(dy) > 1e-9) useProject.getState().moveSelectedFace(dx, dy);
+      }
+    };
+    return (
+      <Group ref={bitsRef} x={0} y={0} listening>
+        <Line
+          ref={bodyRef}
+          points={ellipsePts(ell.cx, ell.cy, ell.rx, ell.ry, rot0deg).flatMap((pt) => [sx(pt.x), sy(pt.y)])}
+          closed
+          fill="rgba(43,111,154,0.04)"
+          strokeEnabled={false}
+          hitStrokeWidth={36}
+          onMouseDown={(e) => {
+            e.cancelBubble = true;
+          }}
+          onPointerDown={(e) => {
+            bindClientDeltaDrag(e, editDrag, skipClick, applyBodyMove);
+          }}
+          onTouchStart={(e) => {
+            if (e.evt.touches.length >= 2) return;
+            bindClientDeltaDrag(e, editDrag, skipClick, applyBodyMove);
+          }}
+        />
+        <Line
+          id="ell-axis-a"
+          points={[
+            sx(ellPt(ell.rx, ell.ry, Math.PI).x),
+            sy(ellPt(ell.rx, ell.ry, Math.PI).y),
+            sx(ellPt(ell.rx, ell.ry, 0).x),
+            sy(ellPt(ell.rx, ell.ry, 0).y),
+          ]}
+          stroke="#1b1f24"
+          strokeWidth={0.55}
+          dash={[4, 5]}
+          opacity={0.38}
+          listening={false}
+        />
+        <Line
+          id="ell-axis-b"
+          points={[
+            sx(ellPt(ell.rx, ell.ry, -Math.PI / 2).x),
+            sy(ellPt(ell.rx, ell.ry, -Math.PI / 2).y),
+            sx(ellPt(ell.rx, ell.ry, Math.PI / 2).x),
+            sy(ellPt(ell.rx, ell.ry, Math.PI / 2).y),
+          ]}
+          stroke="#1b1f24"
+          strokeWidth={0.55}
+          dash={[4, 5]}
+          opacity={0.38}
+          listening={false}
+        />
+        <Group ref={centerRef} x={sx(ell.cx)} y={sy(ell.cy)} listening={false}>
+          <Line points={[-10, 0, -2.5, 0]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[2.5, 0, 10, 0]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[0, -10, 0, -2.5]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[0, 2.5, 0, 10]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[-10, 0, -7, -2.4]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[-10, 0, -7, 2.4]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[10, 0, 7, -2.4]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[10, 0, 7, 2.4]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[0, -10, -2.4, -7]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[0, -10, 2.4, -7]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[0, 10, -2.4, 7]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+          <Line points={[0, 10, 2.4, 7]} stroke="#111" strokeWidth={1.4} lineCap="round" />
+        </Group>
+        {sides.map((s, i) => {
+          const hp = ellPt(ell.rx, ell.ry, s.param);
+          return (
+          <Group
+            key={s.key}
+            ref={(n) => {
+              midRefs.current[i] = n;
+            }}
+            x={sx(hp.x)}
+            y={sy(hp.y)}
+            onMouseDown={(e) => {
+              e.cancelBubble = true;
+            }}
+            onPointerDown={(e) => {
+              bindPointerDrag(
+                e,
+                editDrag,
+                panX,
+                panY,
+                px,
+                () => {},
+                (p) => {
+                  const q = snapIfMagnet(p);
+                  const rx = s.axis === "x" ? axisLen(q, "x") : ell.rx;
+                  const ry = s.axis === "y" ? axisLen(q, "y") : ell.ry;
+                  paintEll(geom(e.target), rx, ry);
+                },
+                (p) => {
+                  const q = snapIfMagnet(p);
+                  const rx = s.axis === "x" ? axisLen(q, "x") : ell.rx;
+                  const ry = s.axis === "y" ? axisLen(q, "y") : ell.ry;
+                  useProject.getState().setEllipseR(rx, ry);
+                },
+                skipClick,
+              );
+            }}
+            onTouchStart={(e) => {
+              bindPointerDrag(
+                e,
+                editDrag,
+                panX,
+                panY,
+                px,
+                () => {},
+                (p) => {
+                  const q = snapIfMagnet(p);
+                  const rx = s.axis === "x" ? axisLen(q, "x") : ell.rx;
+                  const ry = s.axis === "y" ? axisLen(q, "y") : ell.ry;
+                  paintEll(geom(e.target), rx, ry);
+                },
+                (p) => {
+                  const q = snapIfMagnet(p);
+                  const rx = s.axis === "x" ? axisLen(q, "x") : ell.rx;
+                  const ry = s.axis === "y" ? axisLen(q, "y") : ell.ry;
+                  useProject.getState().setEllipseR(rx, ry);
+                },
+                skipClick,
+              );
+            }}
+          >
+            <Circle radius={22} fill="rgba(255,255,255,0.001)" />
+            <Rect x={-6} y={-6} width={12} height={12} fill="#c45c26" stroke="#fff" strokeWidth={2} listening={false} />
+          </Group>
+          );
+        })}
+        <Group
+          ref={rotRef}
+          x={sx(rp0.x)}
+          y={sy(rp0.y)}
+          onMouseDown={(e) => {
+            e.cancelBubble = true;
+          }}
+          onPointerDown={(e) => {
+            bindPointerDrag(
+              e,
+              editDrag,
+              panX,
+              panY,
+              px,
+              (p) => {
+                rot0.current = Math.atan2(p.y - ell.cy, p.x - ell.cx);
+                useProject.getState().setCadLiveRot(rot0deg);
+              },
+              (p) => applyRot(p, false),
+              (p) => applyRot(p, true),
+              skipClick,
+            );
+          }}
+          onTouchStart={(e) => {
+            bindPointerDrag(
+              e,
+              editDrag,
+              panX,
+              panY,
+              px,
+              (p) => {
+                rot0.current = Math.atan2(p.y - ell.cy, p.x - ell.cx);
+                useProject.getState().setCadLiveRot(rot0deg);
+              },
+              (p) => applyRot(p, false),
+              (p) => applyRot(p, true),
+              skipClick,
+            );
+          }}
+        >
+          <Circle radius={22} fill="rgba(255,255,255,0.001)" />
+          <Circle radius={12} fill="#fff" stroke="#1b1f24" strokeWidth={1.5} listening={false} />
+          <Arc
+            innerRadius={5}
+            outerRadius={7.5}
+            angle={230}
+            rotation={-35}
+            fillEnabled={false}
+            stroke="#1b1f24"
+            strokeWidth={1.4}
+            listening={false}
+          />
+          <Line points={[5.2, -7.4, 9.2, -3.6, 3.4, -3.2]} closed fill="#1b1f24" listening={false} />
+        </Group>
+        <Group
+          ref={scaleRef}
+          x={sx(sp0.x)}
+          y={sy(sp0.y)}
+          onMouseDown={(e) => {
+            e.cancelBubble = true;
+          }}
+          onPointerDown={(e) => {
+            bindPointerDrag(
+              e,
+              editDrag,
+              panX,
+              panY,
+              px,
+              (p) => {
+                scale0.current = {
+                  rx: ell.rx,
+                  ry: ell.ry,
+                  d: Math.max(1e-6, dist(p, { x: ell.cx, y: ell.cy })),
+                  k: 1,
+                };
+              },
+              (p) => applyScale(p, false),
+              (p) => applyScale(p, true),
+              skipClick,
+            );
+          }}
+          onTouchStart={(e) => {
+            bindPointerDrag(
+              e,
+              editDrag,
+              panX,
+              panY,
+              px,
+              (p) => {
+                scale0.current = {
+                  rx: ell.rx,
+                  ry: ell.ry,
+                  d: Math.max(1e-6, dist(p, { x: ell.cx, y: ell.cy })),
+                  k: 1,
+                };
+              },
+              (p) => applyScale(p, false),
+              (p) => applyScale(p, true),
+              skipClick,
+            );
+          }}
+        >
+          <Circle radius={22} fill="rgba(255,255,255,0.001)" />
+          <Circle radius={8} fill="#1565c0" stroke="#fff" strokeWidth={1.8} listening={false} />
+          <Line points={[-5, 5, 5, -5]} stroke="#fff" strokeWidth={1.6} lineCap="round" listening={false} />
+          <Line points={[1.8, -5.4, 5, -5, 5.4, -1.8]} stroke="#fff" strokeWidth={1.6} lineCap="round" lineJoin="round" listening={false} />
+          <Line points={[-1.8, 5.4, -5, 5, -5.4, 1.8]} stroke="#fff" strokeWidth={1.6} lineCap="round" lineJoin="round" listening={false} />
+        </Group>
+        <Text
+          id="ell-wtext"
+          x={axisLabel(ellPt(ell.rx, ell.ry, 0), ell.cx, ell.cy, 36).x}
+          y={axisLabel(ellPt(ell.rx, ell.ry, 0), ell.cx, ell.cy, 36).y}
+          offsetX={axisLabel(ellPt(ell.rx, ell.ry, 0), ell.cx, ell.cy, 36).offsetX}
+          offsetY={8}
+          width={88}
+          align="center"
+          text={`A ${formatLen(ell.rx * 2, useProject.getState().measureUnit)}`}
+          fontSize={12}
+          fontFamily="IBM Plex Sans, sans-serif"
+          fill="#1b1f24"
+          listening={false}
+        />
+        <Text
+          id="ell-htext"
+          x={axisLabel(ellPt(ell.rx, ell.ry, -Math.PI / 2), ell.cx, ell.cy, 22).x}
+          y={axisLabel(ellPt(ell.rx, ell.ry, -Math.PI / 2), ell.cx, ell.cy, 22).y}
+          offsetX={axisLabel(ellPt(ell.rx, ell.ry, -Math.PI / 2), ell.cx, ell.cy, 22).offsetX}
+          offsetY={8}
+          width={88}
+          align="center"
+          text={`B ${formatLen(ell.ry * 2, useProject.getState().measureUnit)}`}
+          fontSize={12}
+          fontFamily="IBM Plex Sans, sans-serif"
+          fill="#1b1f24"
+          listening={false}
+        />
+        <Text
+          id="ell-atext"
+          x={sx(ell.cx) + 30 * Math.cos(-Math.PI / 3)}
+          y={sy(ell.cy) + 30 * Math.sin(-Math.PI / 3)}
+          width={80}
+          align="left"
+          text={formatAreaU(Math.PI * ell.rx * ell.ry, useProject.getState().units.area)}
+          fontSize={12}
+          fontFamily="IBM Plex Sans, sans-serif"
+          fill="#1b1f24"
+          listening={false}
+        />
+      </Group>
+    );
+  }
+
   if (rect && corners.length >= 4) {
     const rp = rotPos(corners);
     return (
@@ -2141,6 +2766,10 @@ function CadHandles({
         }}
         onDragEnd={(e) => {
           e.cancelBubble = true;
+          skipClick.current = true;
+          window.setTimeout(() => {
+            skipClick.current = false;
+          }, 500);
           editDrag.current = false;
           const dx = e.target.x() / px;
           const dy = e.target.y() / px;
@@ -2218,6 +2847,55 @@ function CadHandles({
             </Group>
           );
         })}
+        {([0, 1, 2, 3] as const).map((edge) => {
+          const a = corners[edge]!;
+          const b = corners[(edge + 1) % 4]!;
+          return (
+            <Group
+              key={`m${edge}`}
+              ref={(n) => {
+                midRefs.current[edge] = n;
+              }}
+              x={sx((a.x + b.x) / 2)}
+              y={sy((a.y + b.y) / 2)}
+              draggable
+              onMouseDown={(e) => {
+                e.cancelBubble = true;
+              }}
+              onTouchStart={(e) => {
+                e.cancelBubble = true;
+              }}
+              onDragStart={(e) => {
+                e.cancelBubble = true;
+                editDrag.current = true;
+              }}
+              onDragMove={(e) => {
+                e.cancelBubble = true;
+                let p = toWorld(e.target);
+                p = snapIfMagnet(p);
+                const next = cornersFromSide(edge, p);
+                applyLiveCorners(next, geom(e.target));
+                const a2 = next[edge]!;
+                const b2 = next[(edge + 1) % 4]!;
+                e.target.position({ x: sx((a2.x + b2.x) / 2), y: sy((a2.y + b2.y) / 2) });
+              }}
+              onDragEnd={(e) => {
+                e.cancelBubble = true;
+                editDrag.current = false;
+                let p = toWorld(e.target);
+                p = snapIfMagnet(p);
+                const next = cornersFromSide(edge, p);
+                const a2 = next[edge]!;
+                const b2 = next[(edge + 1) % 4]!;
+                const mid = { x: (a2.x + b2.x) / 2, y: (a2.y + b2.y) / 2 };
+                useProject.getState().setRectEdge(edge, mid);
+              }}
+            >
+              <Circle radius={22} fill="rgba(255,255,255,0.001)" />
+              <Rect x={-5} y={-5} width={10} height={10} fill="#c45c26" stroke="#fff" strokeWidth={2} listening={false} />
+            </Group>
+          );
+        })}
         <Group
           ref={rotRef}
           x={rp.x}
@@ -2287,6 +2965,194 @@ function CadHandles({
     );
   }
 
+  const verts = faceVertices(d, faceId);
+  if (verts.length === 3) {
+    const tri = verts.map((v) => ({ x: v.x, y: v.y }));
+    const aLen = dist(tri[0]!, tri[1]!);
+    const bLen = dist(tri[1]!, tri[2]!);
+    const area = faceArea(d, faceId);
+    const paintTri = (pts: Pt[], node?: Konva.Node, skip?: number) => {
+      const flat = pts.flatMap((pt) => [sx(pt.x), sy(pt.y)]);
+      if (node?.getClassName() === "Line") {
+        (node as Konva.Line).points(flat);
+        node.x(0);
+        node.y(0);
+      }
+      bodyRef.current?.points(flat);
+      pts.forEach((pt, i) => {
+        if (i === skip) return;
+        cornerRefs.current[i]?.position({ x: sx(pt.x), y: sy(pt.y) });
+      });
+      const mx = (pts[0]!.x + pts[1]!.x + pts[2]!.x) / 3;
+      const my = (pts[0]!.y + pts[1]!.y + pts[2]!.y) / 3;
+      centerRef.current?.position({ x: sx(mx), y: sy(my) });
+      const locale = useProject.getState().locale;
+      const unit = useProject.getState().measureUnit;
+      const areaU = useProject.getState().units.area;
+      const stage = node?.getStage() ?? bitsRef.current?.getStage();
+      const midA = { x: (pts[0]!.x + pts[1]!.x) / 2, y: (pts[0]!.y + pts[1]!.y) / 2 };
+      const midB = { x: (pts[1]!.x + pts[2]!.x) / 2, y: (pts[1]!.y + pts[2]!.y) / 2 };
+      stage?.findOne("#tri-atext")?.setAttrs({
+        x: sx(midA.x) - 40,
+        y: sy(midA.y) - 14,
+        text: `${tr(locale, "drawW")} ${formatLen(dist(pts[0]!, pts[1]!), unit)}`,
+      });
+      stage?.findOne("#tri-btext")?.setAttrs({
+        x: sx(midB.x) - 8,
+        y: sy(midB.y) - 8,
+        text: `${tr(locale, "drawH")} ${formatLen(dist(pts[1]!, pts[2]!), unit)}`,
+      });
+      stage?.findOne("#tri-stext")?.setAttrs({
+        x: sx(mx) - 40,
+        y: sy(my) - 8,
+        text: formatAreaU(Math.abs((pts[0]!.x * (pts[1]!.y - pts[2]!.y) + pts[1]!.x * (pts[2]!.y - pts[0]!.y) + pts[2]!.x * (pts[0]!.y - pts[1]!.y)) / 2), areaU),
+      });
+    };
+    return (
+      <Group
+        ref={bitsRef}
+        x={0}
+        y={0}
+        draggable
+        onMouseDown={(e) => {
+          e.cancelBubble = true;
+        }}
+        onTouchStart={(e) => {
+          if (e.evt.touches.length >= 2) return;
+          e.cancelBubble = true;
+        }}
+        onDragStart={(e) => {
+          e.cancelBubble = true;
+          editDrag.current = true;
+        }}
+        onDragMove={(e) => {
+          e.cancelBubble = true;
+          let x = e.target.x();
+          let y = e.target.y();
+          if (useProject.getState().snapOn) {
+            const g = Math.max(useProject.getState().gridStep || 0.1, 1e-4);
+            const nx = Math.round((c.x + x / px) / g) * g;
+            const ny = Math.round((c.y + y / px) / g) * g;
+            x = (nx - c.x) * px;
+            y = (ny - c.y) * px;
+            e.target.position({ x, y });
+          }
+          const node = geom(e.target);
+          if (node) {
+            node.x(x);
+            node.y(y);
+          }
+        }}
+        onDragEnd={(e) => {
+          e.cancelBubble = true;
+          skipClick.current = true;
+          window.setTimeout(() => {
+            skipClick.current = false;
+          }, 500);
+          editDrag.current = false;
+          const dx = e.target.x() / px;
+          const dy = e.target.y() / px;
+          const node = geom(e.target);
+          if (node) {
+            node.x(0);
+            node.y(0);
+          }
+          e.target.position({ x: 0, y: 0 });
+          if (Math.abs(dx) > 1e-9 || Math.abs(dy) > 1e-9) useProject.getState().moveSelectedFace(dx, dy);
+        }}
+      >
+        <Line
+          ref={bodyRef}
+          points={tri.flatMap((pt) => [sx(pt.x), sy(pt.y)])}
+          closed
+          fill="rgba(0,0,0,0.01)"
+          strokeEnabled={false}
+        />
+        <Group ref={centerRef} x={sx(c.x)} y={sy(c.y)} listening>
+          <Circle radius={22} fill="rgba(0,0,0,0.001)" />
+          <Line points={[-10, 0, -2.5, 0]} stroke="#111" strokeWidth={1.4} lineCap="round" listening={false} />
+          <Line points={[2.5, 0, 10, 0]} stroke="#111" strokeWidth={1.4} lineCap="round" listening={false} />
+          <Line points={[0, -10, 0, -2.5]} stroke="#111" strokeWidth={1.4} lineCap="round" listening={false} />
+          <Line points={[0, 2.5, 0, 10]} stroke="#111" strokeWidth={1.4} lineCap="round" listening={false} />
+        </Group>
+        {verts.map((v, i) => (
+          <Group
+            key={v.id}
+            ref={(n) => {
+              cornerRefs.current[i] = n;
+            }}
+            x={sx(v.x)}
+            y={sy(v.y)}
+            draggable
+            onMouseDown={(e) => {
+              e.cancelBubble = true;
+            }}
+            onTouchStart={(e) => {
+              e.cancelBubble = true;
+            }}
+            onDragStart={(e) => {
+              e.cancelBubble = true;
+              editDrag.current = true;
+            }}
+            onDragMove={(e) => {
+              e.cancelBubble = true;
+              let p = toWorld(e.target);
+              p = snapIfMagnet(p);
+              e.target.position({ x: sx(p.x), y: sy(p.y) });
+              const next = tri.map((pt, j) => (j === i ? p : pt));
+              paintTri(next, geom(e.target), i);
+            }}
+            onDragEnd={(e) => {
+              e.cancelBubble = true;
+              editDrag.current = false;
+              let p = toWorld(e.target);
+              p = snapIfMagnet(p);
+              useProject.getState().setFaceVertex(v.id, p);
+            }}
+          >
+            <Circle radius={22} fill="rgba(255,255,255,0.001)" />
+            <Rect x={-6} y={-6} width={12} height={12} fill="#c45c26" stroke="#fff" strokeWidth={2} listening={false} />
+          </Group>
+        ))}
+        <Text
+          id="tri-atext"
+          x={sx((tri[0]!.x + tri[1]!.x) / 2) - 40}
+          y={sy((tri[0]!.y + tri[1]!.y) / 2) - 14}
+          width={88}
+          align="center"
+          text={`${tr(useProject.getState().locale, "drawW")} ${formatLen(aLen, useProject.getState().measureUnit)}`}
+          fontSize={12}
+          fontFamily="IBM Plex Sans, sans-serif"
+          fill="#1b1f24"
+          listening={false}
+        />
+        <Text
+          id="tri-btext"
+          x={sx((tri[1]!.x + tri[2]!.x) / 2) - 8}
+          y={sy((tri[1]!.y + tri[2]!.y) / 2) - 8}
+          width={88}
+          text={`${tr(useProject.getState().locale, "drawH")} ${formatLen(bLen, useProject.getState().measureUnit)}`}
+          fontSize={12}
+          fontFamily="IBM Plex Sans, sans-serif"
+          fill="#1b1f24"
+          listening={false}
+        />
+        <Text
+          id="tri-stext"
+          x={sx(c.x) - 40}
+          y={sy(c.y) - 8}
+          width={80}
+          align="center"
+          text={formatAreaU(area, useProject.getState().units.area)}
+          fontSize={12}
+          fontFamily="IBM Plex Sans, sans-serif"
+          fill="#1b1f24"
+          listening={false}
+        />
+      </Group>
+    );
+  }
+
   return null;
 }
 
@@ -2343,6 +3209,25 @@ function renderGeom(
         x={sx(poly.points[0].x)}
         y={sy(poly.points[0].y)}
         radius={poly.radius * px}
+        fill={fill}
+        opacity={0.72}
+        stroke={selected ? "#2b6f9a" : "#1b1f24"}
+        strokeWidth={selected ? 2.5 : 1.5}
+        {...hold}
+      />
+    );
+  }
+  if (poly.ellipse) {
+    const e = poly.ellipse;
+    return (
+      <Ellipse
+        key={poly.id}
+        id={`face-${poly.id}`}
+        x={sx(e.cx)}
+        y={sy(e.cy)}
+        radiusX={e.rx * px}
+        radiusY={e.ry * px}
+        rotation={e.rot ?? 0}
         fill={fill}
         opacity={0.72}
         stroke={selected ? "#2b6f9a" : "#1b1f24"}

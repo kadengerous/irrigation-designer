@@ -19,6 +19,7 @@ mkdirSync(STAGING, { recursive: true });
 mkdirSync(OUT, { recursive: true });
 
 const copies = [
+  "README.md",
   "package.json",
   "package-lock.json",
   "tsconfig.json",
@@ -33,6 +34,7 @@ const copies = [
   "public/og.jpg",
   "public/original-plan.jpg",
   "public/x-banner.jpg",
+  "public/fonts",
   "public/__grok",
   "public/catalog",
 ];

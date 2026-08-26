@@ -94,9 +94,9 @@ const THEMES: Record<ThemeId, ThemeBase> = {
   sand: { dark: false, bg: "#f6f1e8", surface: "#fffaf2", ink: "#2a241c", tool: "#8a6230", btn: "#8a6230" },
   clay: { dark: false, bg: "#f7f0eb", surface: "#fff8f4", ink: "#2a1f1b", tool: "#b45a32", btn: "#b45a32" },
   berry: { dark: false, bg: "#f6f0f4", surface: "#fff7fb", ink: "#241b22", tool: "#7a3e6e", btn: "#7a3e6e" },
-  dusk: { dark: true, bg: "#152028", surface: "#1c2a34", ink: "#e8f4f2", tool: "#1a333c", btn: "#3ec6b0" },
-  night: { dark: true, bg: "#101318", surface: "#1a1f27", ink: "#e8edf2", tool: "#151a22", btn: "#4fc3f7" },
-  graphite: { dark: true, bg: "#181b1f", surface: "#23272d", ink: "#e6eaee", tool: "#2a3038", btn: "#e0b85a" },
+  dusk: { dark: true, bg: "#152028", surface: "#1c2a34", ink: "#e8f4f2", tool: "#7ec8f2", btn: "#7ec8f2" },
+  night: { dark: true, bg: "#101318", surface: "#1a1f27", ink: "#e8edf2", tool: "#7ec8f2", btn: "#7ec8f2" },
+  graphite: { dark: true, bg: "#181b1f", surface: "#23272d", ink: "#e6eaee", tool: "#7ec8f2", btn: "#7ec8f2" },
 };
 
 function buildVars(base: ThemeBase): Vars {
@@ -104,7 +104,7 @@ function buildVars(base: ThemeBase): Vars {
   const bg = base.bg;
   const surface = base.surface;
   const ink = base.ink;
-  const header = base.tool;
+  const header = dark ? base.btn : base.tool;
   const button = base.btn;
   const bg2 = mix(bg, header, dark ? 0.12 : 0.08);
   const surface2 = mix(surface, header, dark ? 0.1 : 0.04);
@@ -176,7 +176,8 @@ export function resolveButton(themeId: ThemeId, _buttonStyle?: ButtonStyle, _acc
 }
 
 export function themeSwatch(id: ThemeId): string {
-  return THEMES[parseThemeId(id)].tool;
+  const t = THEMES[parseThemeId(id)];
+  return t.dark ? t.btn : t.tool;
 }
 
 export function themePreview(id: ThemeId, _themeAccent = "#0b6e62"): { bg: string; surface: string; tool: string; ink: string; btn: string } {

@@ -42,7 +42,7 @@ export type CadFace = {
   hidden: boolean;
   /** Parametric circle kept exact (not tessellated). */
   circle?: { cx: number; cy: number; r: number };
-  ellipse?: { cx: number; cy: number; rx: number; ry: number };
+  ellipse?: { cx: number; cy: number; rx: number; ry: number; rot?: number };
   rect?: { x: number; y: number; w: number; h: number; rot: number };
   spline?: { pts: Pt[]; closed: boolean };
   hydro?: { need: "low" | "medium" | "high"; method: "spray" | "mp" | "rotor" | "drip" | "bubbler" | "none" };
