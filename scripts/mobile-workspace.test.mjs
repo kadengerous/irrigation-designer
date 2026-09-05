@@ -254,11 +254,14 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.match(css, /\.layer-eye\[data-hidden="true"\]::after/);
   assert.match(app, /mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet/);
   assert.match(app, /mobilePanel === "tools" && !catalogGhost && <div className="mobile-tool-strip-panel"/);
-  const toolStrip = app.slice(app.indexOf('mobilePanel === "tools"'), app.indexOf('mobilePanel && mobilePanel !== "layers"'));
+  const toolStrip = app.slice(app.indexOf('mobilePanel === "tools" && !catalogGhost && <div className="mobile-tool-strip-panel"'), app.indexOf('mobilePanel && mobilePanel !== "layers"'));
   assert.match(toolStrip, /DRAW_SUBS\.filter\(\(item\) => item\.id !== "arc"\)/);
-  assert.doesNotMatch(toolStrip, /Назначение|Дополнительные инструменты|MOBILE_EXTRA_DRAW|setMeasureSub\("guide"\)|setTool\("scale"\)|setCadMode\("move_object"\)/);
-  assert.match(css, /\.mobile-tool-strip-panel \{[^}]*height: 42px/);
-  assert.match(css, /\.mobile-tool-strip \{[^}]*overflow-x: auto/);
+  assert.doesNotMatch(toolStrip, /Назначение|Дополнительные инструменты|MOBILE_EXTRA_DRAW|setMeasureSub\("guide"\)|setTool\("scale"\)|setCadMode\("move_object"\)|Замкнуть|finishOpenDraw|setMobileWorkspaceMode\("irrigation"\)|setMobilePanel\("estimate"\)|setIssuesOpen\(true\)|setLabels/);
+  assert.doesNotMatch(toolStrip, /<span>/);
+  assert.match(app, /if \(current === "tools"\) return current/);
+  assert.match(app, /const chooseMobileTool = \(choose: \(\) => void\) => \{ choose\(\); \}/);
+  assert.match(css, /\.mobile-tool-strip \{[^}]*display: grid[^}]*grid-template-columns: repeat\(8, minmax\(0, 1fr\)\)[^}]*overflow: hidden/);
+  assert.match(css, /\.mobile-tool-strip button \{[^}]*max-width: 44px[^}]*aspect-ratio: 1/);
   assert.match(css, /\.mobile-top-layers \{ position: absolute; top: 4px/);
   assert.match(helper, /closest<HTMLElement>\("\.mobile-layers-list"\)\?\.scrollTo\(\{ left: 0/);
   assert.doesNotMatch(helper, /selectedRow\.current\?\.scrollIntoView/);

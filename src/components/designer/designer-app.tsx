@@ -347,6 +347,8 @@ export function DesignerApp() {
     if (selectedId || tool === "place") setMobileWorkspaceMode("irrigation");
     else if (selectedPolyId || selectedEdgeId || constructing) setMobileWorkspaceMode("drawing");
     setMobilePanel((current) => {
+      // The drawing palette is persistent and is closed only by its dock button.
+      if (current === "tools") return current;
       // Only interface state changes here; selecting never enters geometry editing.
       if (editing || constructing || selectedId) return "properties";
       return current === "properties" ? null : current;
@@ -1026,7 +1028,7 @@ export function DesignerApp() {
       } else faceEdges(mobileDrawing, mobileFace.id).forEach((edge, i) => mobileFaceDimensions.push({ label: sideLetter(i), value: arcLength(edge.a, edge.b, edge.bulge) }));
     }
   }
-  const chooseMobileTool = (choose: () => void) => { choose(); setMobilePanel("properties"); };
+  const chooseMobileTool = (choose: () => void) => { choose(); };
   const contextControls = <div className={isPhone ? "mobile-context-content" : "contents"}>
           {!isPhone && cadEditId && !catalogOpen && !draft.points.length && <CadEditBar faceId={cadEditId} />}
           {cadEditId && editingFreeformFace && (!catalogOpen || isPhone) && !draft.points.length && (
@@ -1722,18 +1724,11 @@ export function DesignerApp() {
       {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} · коснитесь чертежа</span><button type="button" aria-label="Закончить размещение" onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
       {isPhone && mobilePanel === "tools" && !catalogGhost && <div className="mobile-tool-strip-panel" role="toolbar" aria-label="Инструменты">
         <div className="mobile-tool-strip scroll-touch">
-          {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} aria-label={t("edit")} title={t("edit")} onClick={() => { useProject.getState().setCadEdit(mobileFace.id); setMobilePanel("properties"); }}><Pencil size={18} /><span>{t("edit")}</span></button>}
-          {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} aria-label="Копировать" title="Копировать" onClick={() => { useProject.getState().duplicateSelected(); setMobilePanel(null); }}><Copy size={18} /><span>Копировать</span></button>}
-          {["polygon", "polyline", "spline", "freehand", "path"].includes(drawSub) && draft.points.length > 1 && <button type="button" disabled={drawSub === "polygon" && draft.points.length < 4} aria-label={drawSub === "polygon" ? "Замкнуть" : "Завершить"} onClick={() => { const st = useProject.getState(); if (st.drawSub === "polygon") st.closePolygon(); else st.finishOpenDraw(); setMobilePanel(null); }}><Check size={18} /><span>{drawSub === "polygon" ? "Замкнуть" : "Завершить"}</span></button>}
-          {DRAW_SUBS.filter((item) => item.id !== "arc").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}<span>{t(item.key)}</span></button>)}
-          <button type="button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><Ruler size={18} /><span>{t("ruler")}</span></button>
-          <button type="button" aria-label={t("irrigation")} title={t("irrigation")} onClick={() => { setMobileWorkspaceMode("irrigation"); setMobilePanel(null); }}><Droplets size={18} /><span>{t("irrigation")}</span></button>
-          <button type="button" aria-label={t("estimate")} title={t("estimate")} onClick={() => setMobilePanel("estimate")}><FileText size={18} /><span>{t("estimate")}</span></button>
-          <button type="button" aria-label={t("issuesTitle")} title={t("issuesTitle")} onClick={() => { setMobilePanel(null); setIssuesOpen(true); }}><Check size={18} /><span>{t("issuesTitle")}</span></button>
-          {project.heads.length > 0 && <>
-            <button type="button" aria-label={t("sectors")} title={t("sectors")} aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={18} /><span>{t("sectors")}</span></button>
-            <button type="button" aria-label={t("labels")} title={t("labels")} aria-pressed={showLabels} onClick={() => useProject.getState().setLabels(!showLabels)}><Tag size={18} /><span>{t("labels")}</span></button>
-          </>}
+          {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} aria-label={t("edit")} title={t("edit")} onClick={() => useProject.getState().setCadEdit(mobileFace.id)}><Pencil size={20} /></button>}
+          {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} aria-label="Копировать" title="Копировать" onClick={() => useProject.getState().duplicateSelected()}><Copy size={20} /></button>}
+          {DRAW_SUBS.filter((item) => item.id !== "arc").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}</button>)}
+          <button type="button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><Ruler size={20} /></button>
+          {project.heads.length > 0 && <button type="button" aria-label={t("sectors")} title={t("sectors")} aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={20} /></button>}
         </div>
       </div>}
       {isPhone && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("irrigation") : mobilePanel === "estimate" ? t("estimate") : contextTitle} onClose={() => setMobilePanel(null)}
