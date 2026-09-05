@@ -3,7 +3,8 @@ dist
 .output
 .tanstack
 .vercel
-.grok
+.grok/*
+!.grok/app-env.json
 artifacts
 attachments
 screenshots

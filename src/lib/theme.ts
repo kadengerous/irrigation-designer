@@ -1,13 +1,10 @@
 export const THEME_IDS = [
-  "irrigation",
-  "lawn",
-  "water",
-  "mist",
+  "crystal",
+  "pearl",
+  "sage",
+  "ice",
   "sand",
-  "clay",
-  "berry",
-  "dusk",
-  "night",
+  "matte",
   "graphite",
 ] as const;
 export type ThemeId = (typeof THEME_IDS)[number];
@@ -20,22 +17,24 @@ export const UI_SIZES = ["xs", "s", "m", "l", "xl"] as const;
 export type UiSize = (typeof UI_SIZES)[number];
 
 const THEME_ALIAS: Record<string, ThemeId> = {
-  blue: "irrigation",
-  green: "lawn",
-  light: "mist",
-  dark: "night",
-  night: "night",
-  neutral: "mist",
-  custom: "irrigation",
-  ocean: "water",
-  forest: "lawn",
+  irrigation: "crystal", lawn: "sage", water: "ice", mist: "pearl",
+  clay: "sand", berry: "pearl", dusk: "graphite",
+  blue: "pearl",
+  green: "sage",
+  light: "pearl",
+  dark: "graphite",
+  night: "graphite",
+  neutral: "matte",
+  custom: "crystal",
+  ocean: "ice",
+  forest: "sage",
   slate: "graphite",
 };
 
 export function parseThemeId(v: unknown): ThemeId {
   if (THEME_IDS.includes(v as ThemeId)) return v as ThemeId;
   if (typeof v === "string" && THEME_ALIAS[v]) return THEME_ALIAS[v]!;
-  return "irrigation";
+  return "crystal";
 }
 
 export function parseButtonStyle(v: unknown): ButtonStyle {
@@ -74,7 +73,8 @@ function luma(hex: string): number {
 }
 
 function fgOn(bg: string): string {
-  return luma(bg) > 155 ? "#1b1f24" : "#f4fbff";
+  const [r, g, b] = hexToRgb(bg).map((c) => c / 255).map((c) => c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.179 ? "#000000" : "#ffffff";
 }
 
 type ThemeBase = {
@@ -87,17 +87,27 @@ type ThemeBase = {
 };
 
 const THEMES: Record<ThemeId, ThemeBase> = {
-  irrigation: { dark: false, bg: "#eaf3f0", surface: "#ffffff", ink: "#1a2422", tool: "#0b6e62", btn: "#0b6e62" },
-  lawn: { dark: false, bg: "#eef4ee", surface: "#ffffff", ink: "#1b241d", tool: "#2a6b3c", btn: "#2a6b3c" },
-  water: { dark: false, bg: "#eef3f7", surface: "#ffffff", ink: "#1b1f24", tool: "#1a6fa3", btn: "#1a6fa3" },
-  mist: { dark: false, bg: "#f2f3f5", surface: "#ffffff", ink: "#22262b", tool: "#3d5568", btn: "#2f4d61" },
-  sand: { dark: false, bg: "#f6f1e8", surface: "#fffaf2", ink: "#2a241c", tool: "#8a6230", btn: "#8a6230" },
-  clay: { dark: false, bg: "#f7f0eb", surface: "#fff8f4", ink: "#2a1f1b", tool: "#b45a32", btn: "#b45a32" },
-  berry: { dark: false, bg: "#f6f0f4", surface: "#fff7fb", ink: "#241b22", tool: "#7a3e6e", btn: "#7a3e6e" },
-  dusk: { dark: true, bg: "#152028", surface: "#1c2a34", ink: "#e8f4f2", tool: "#7ec8f2", btn: "#7ec8f2" },
-  night: { dark: true, bg: "#101318", surface: "#1a1f27", ink: "#e8edf2", tool: "#7ec8f2", btn: "#7ec8f2" },
-  graphite: { dark: true, bg: "#181b1f", surface: "#23272d", ink: "#e6eaee", tool: "#7ec8f2", btn: "#7ec8f2" },
+  crystal: { dark: false, bg: "#F8FBFC", surface: "#FFFFFF", ink: "#202C30", tool: "#0A7C66", btn: "#0A7C66" },
+  pearl: { dark: false, bg: "#F7F9FB", surface: "#FFFFFF", ink: "#202A35", tool: "#0A84FF", btn: "#0A84FF" },
+  sage: { dark: false, bg: "#F5F8F5", surface: "#F3F7F4", ink: "#263730", tool: "#52796F", btn: "#52796F" },
+  ice: { dark: false, bg: "#F4F9FC", surface: "#F2F8FC", ink: "#253442", tool: "#3A7CA5", btn: "#3A7CA5" },
+  sand: { dark: false, bg: "#FBF8F2", surface: "#FAF6EE", ink: "#362F24", tool: "#756B55", btn: "#756B55" },
+  matte: { dark: false, bg: "#F5FAF8", surface: "#F0F8F5", ink: "#22352F", tool: "#167564", btn: "#167564" },
+  graphite: { dark: true, bg: "#172126", surface: "#202B2F", ink: "#EFF8F5", tool: "#62D6B1", btn: "#62D6B1" },
 };
+
+export const THEME_NAMES: Record<ThemeId, string> = {
+  crystal: "Кристалл", pearl: "Жемчуг", sage: "Шалфей", ice: "Лёд",
+  sand: "Песок", matte: "Матовый", graphite: "Графит",
+};
+
+/** Render-only values: never write these into project geometry or object colours. */
+export function canvasTheme(id: ThemeId) {
+  const t = THEMES[parseThemeId(id)];
+  return { bg: t.bg, ink: t.ink, accent: t.btn, surface: t.surface,
+    minor: mix(t.bg, t.ink, 0.09), major: mix(t.bg, t.ink, 0.18),
+    axis: mix(t.bg, t.ink, 0.34), handleOutline: t.dark ? "#EFF8F5" : "#FFFFFF" };
+}
 
 function buildVars(base: ThemeBase): Vars {
   const dark = base.dark;
@@ -108,7 +118,6 @@ function buildVars(base: ThemeBase): Vars {
   const button = base.btn;
   const bg2 = mix(bg, header, dark ? 0.12 : 0.08);
   const surface2 = mix(surface, header, dark ? 0.1 : 0.04);
-  const fg = fgOn(header);
   const btnFg = fgOn(button);
   return {
     "--color-bg": bg,
@@ -117,25 +126,30 @@ function buildVars(base: ThemeBase): Vars {
     "--color-surface-2": surface2,
     "--color-ink": ink,
     "--color-ink-soft": mix(ink, bg, 0.28),
-    "--color-muted": mix(ink, bg, 0.45),
-    "--color-faint": mix(ink, bg, 0.58),
+    "--color-muted": mix(ink, bg, 0.25),
+    "--color-faint": mix(ink, bg, 0.28),
     "--color-line": dark ? mix(surface, "#ffffff", 0.12) : mix(bg, "#1b1f24", 0.14),
     "--color-line-strong": dark ? mix(surface, "#ffffff", 0.2) : mix(bg, "#1b1f24", 0.22),
-    "--color-tool": header,
-    "--color-tool-fg": fg,
-    "--color-tool-on": mix(header, "#ffffff", dark ? 0.22 : 0.28),
+    "--color-tool": surface,
+    "--color-tool-fg": ink,
+    "--color-tool-on": mix(surface, button, 0.16),
     "--color-tool-soft": mix(surface, header, dark ? 0.3 : 0.18),
     "--color-tool-2": mix(header, dark ? "#0e1216" : "#ffffff", 0.35),
     "--color-tool-ring": `rgb(${hexToRgb(header).join(" ")} / 40%)`,
-    "--color-catalog": mix(header, dark ? button : "#1b1f24", dark ? 0.25 : 0.12),
-    "--color-catalog-fg": fgOn(mix(header, "#000000", 0.08)),
+    "--color-catalog": button,
+    "--color-catalog-fg": btnFg,
     "--color-catalog-soft": mix(surface, header, 0.16),
     "--color-btn": button,
     "--color-btn-fg": btnFg,
     "--color-btn-soft": mix(surface, button, dark ? 0.35 : 0.18),
     "--color-btn-ring": `rgb(${hexToRgb(button).join(" ")} / 45%)`,
-    "--header-bg": header,
-    "--header-to": header,
+    "--header-bg": surface,
+    "--header-to": surface,
+    "--panel-glass": `rgb(${hexToRgb(surface).join(" ")} / 88%)`,
+    "--panel-shadow": dark ? "0 6px 24px #00000030" : "0 6px 24px #2035300c",
+    "--color-warn": dark ? "#F3C27D" : "#82521D",
+    "--color-danger": dark ? "#FFAAAA" : "#9B3A2F",
+    "--color-ok": dark ? "#87D9AE" : "#2F6B45",
   };
 }
 
@@ -169,6 +183,9 @@ export function applyTheme(
   const root = document.documentElement;
   for (const [k, v] of Object.entries(vars)) root.style.setProperty(k, v);
   root.dataset.theme = base.dark ? "dark" : "light";
+  root.dataset.appearance = id;
+  root.style.colorScheme = base.dark ? "dark" : "light";
+  root.style.setProperty("--panel-glass", `rgb(${hexToRgb(base.surface).join(" ")} / ${id === "crystal" ? 76 : id === "matte" ? 98 : 92}%)`);
 }
 
 export function resolveButton(themeId: ThemeId, _buttonStyle?: ButtonStyle, _accent?: string, _themeAccent?: string): string {

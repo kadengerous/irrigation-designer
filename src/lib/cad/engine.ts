@@ -1,4 +1,4 @@
-import { closestOnSegment, dist, pointInPoly, polygonArea, shoelace, type Pt } from "@/lib/geometry";
+import { closedPathSideStarts, closestOnSegment, dist, pointInPoly, polygonArea, shoelace, type Pt } from "@/lib/geometry";
 import { applyConstraints, autoSegmentConstraints } from "@/lib/cad/constraints";
 import { defaultLayerState, emptyDrawing, layerForType, type CadDim, type CadDrawing, type CadEdge, type CadFace, type CadLayerId, type CadVertex, type RegionType } from "@/lib/cad/types";
 import type { Geom, Head, PolyKind } from "@/lib/project-types";
@@ -24,6 +24,17 @@ function e(d: CadDrawing, id: string): CadEdge {
 
 export function vertPt(vert: CadVertex): Pt {
   return { x: vert.x, y: vert.y };
+}
+
+export function faceBoundaryKey(face: Pick<CadFace, "id" | "outer">): string {
+  // Exact primitives and open drawn paths have no topological edge loop. Their
+  // ids must still remain distinct; treating every empty loop as the same face
+  // caused unrelated circles/curves to be replaced or deleted together.
+  if (!face.outer.length) return `standalone:${face.id}`;
+  return face.outer
+    .map((half) => `${half.e}:${half.dir}`)
+    .sort()
+    .join("|");
 }
 
 export function findVertexAt(d: CadDrawing, p: Pt, tol = 1e-6): string | null {
@@ -133,7 +144,13 @@ function addRawEdge(d: CadDrawing, a: string, b: string, bulge = 0): string | nu
 }
 
 /** Insert polyline, splitting existing edges and intersections. */
-export function addChain(d0: CadDrawing, pts: Pt[], close: boolean, type: RegionType): CadDrawing {
+export function addChain(
+  d0: CadDrawing,
+  pts: Pt[],
+  close: boolean,
+  type: RegionType,
+  autoConstraints = true,
+): CadDrawing {
   const d = cloneDrawing(d0);
   if (pts.length < 2) return d;
   const cleaned: Pt[] = [];
@@ -154,6 +171,7 @@ export function addChain(d0: CadDrawing, pts: Pt[], close: boolean, type: Region
     insertSegment(d, vids[i]!, vids[i + 1]!);
   }
   rebuildFaces(d, type);
+  if (!autoConstraints) return d;
   let out = d;
   for (let i = 0; i < vids.length - 1; i++) out = autoSegmentConstraints(out, vids[i]!, vids[i + 1]!);
   return out;
@@ -201,7 +219,135 @@ export function addRect(d: CadDrawing, a: Pt, c: Pt, type: RegionType): CadDrawi
 
 export function addTriangle(d: CadDrawing, pts: Pt[], type: RegionType): CadDrawing {
   if (pts.length < 3) return d;
-  return addIsolatedLoop(d, pts.slice(0, 3), type);
+  const tri = pts.slice(0, 3);
+  if (!triangleMetrics(tri)) return d;
+  return addIsolatedLoop(d, tri, type);
+}
+
+/** A symmetric six-sided polygon fitted into the same two-corner box used by triangles. */
+export function hexagonFromBounds(a: Pt, c: Pt): Pt[] {
+  const x0 = Math.min(a.x, c.x);
+  const y0 = Math.min(a.y, c.y);
+  const x1 = Math.max(a.x, c.x);
+  const y1 = Math.max(a.y, c.y);
+  const w = x1 - x0;
+  const cy = (y0 + y1) / 2;
+  return [
+    { x: x0 + w / 4, y: y0 },
+    { x: x0 + (w * 3) / 4, y: y0 },
+    { x: x1, y: cy },
+    { x: x0 + (w * 3) / 4, y: y1 },
+    { x: x0 + w / 4, y: y1 },
+    { x: x0, y: cy },
+  ];
+}
+
+export function addHexagon(d: CadDrawing, pts: Pt[], type: RegionType): CadDrawing {
+  if (pts.length < 6) return d;
+  const hex = pts.slice(0, 6);
+  const xs = hex.map((p) => p.x);
+  const ys = hex.map((p) => p.y);
+  if (Math.max(...xs) - Math.min(...xs) < EPS || Math.max(...ys) - Math.min(...ys) < EPS) return d;
+  return addIsolatedLoop(d, hex, type);
+}
+
+/** An upright isosceles triangle fitted into the same two-corner box used by rectangles. */
+export function triangleFromBounds(a: Pt, c: Pt): Pt[] {
+  const x0 = Math.min(a.x, c.x);
+  const y0 = Math.min(a.y, c.y);
+  const x1 = Math.max(a.x, c.x);
+  const y1 = Math.max(a.y, c.y);
+  return [
+    { x: (x0 + x1) / 2, y: y0 },
+    { x: x1, y: y1 },
+    { x: x0, y: y1 },
+  ];
+}
+
+export function triangleMetrics(pts: Pt[]): {
+  apex: Pt;
+  baseA: Pt;
+  baseB: Pt;
+  baseMid: Pt;
+  foot: Pt;
+  center: Pt;
+  ux: number;
+  uy: number;
+  nx: number;
+  ny: number;
+  width: number;
+  height: number;
+  leftSide: number;
+  rightSide: number;
+  area: number;
+  rotation: number;
+} | null {
+  if (pts.length < 3) return null;
+  const apex = pts[0]!;
+  const baseB = pts[1]!;
+  const baseA = pts[2]!;
+  const width = dist(baseA, baseB);
+  if (width < EPS) return null;
+  const ux = (baseB.x - baseA.x) / width;
+  const uy = (baseB.y - baseA.y) / width;
+  let nx = -uy;
+  let ny = ux;
+  const baseMid = { x: (baseA.x + baseB.x) / 2, y: (baseA.y + baseB.y) / 2 };
+  const signedHeight = (apex.x - baseMid.x) * nx + (apex.y - baseMid.y) * ny;
+  if (signedHeight < 0) {
+    nx = -nx;
+    ny = -ny;
+  }
+  const height = Math.abs(signedHeight);
+  if (height < EPS) return null;
+  const along = (apex.x - baseMid.x) * ux + (apex.y - baseMid.y) * uy;
+  const foot = { x: baseMid.x + ux * along, y: baseMid.y + uy * along };
+  const center = {
+    x: (apex.x + baseA.x + baseB.x) / 3,
+    y: (apex.y + baseA.y + baseB.y) / 3,
+  };
+  return {
+    apex,
+    baseA,
+    baseB,
+    baseMid,
+    foot,
+    center,
+    ux,
+    uy,
+    nx,
+    ny,
+    width,
+    height,
+    leftSide: dist(apex, baseA),
+    rightSide: dist(apex, baseB),
+    area: (width * height) / 2,
+    rotation: (Math.atan2(baseB.y - baseA.y, baseB.x - baseA.x) * 180) / Math.PI,
+  };
+}
+
+/** Identify an ordinary three-edge face as a triangle, excluding numbered-point contours. */
+export function isTriangleFace(d: CadDrawing, faceId: string): boolean {
+  const face = d.faces[faceId];
+  if (!face || face.circle || face.ellipse || face.spline || face.freehand || face.pointShape || face.nodeEdit) return false;
+  return faceVertices(d, faceId).length === 3;
+}
+
+/** Curves and pencil contours never expose their sampled CAD segments as sides. */
+export function isDrawnCurveFace(d: CadDrawing, faceId: string): boolean {
+  const face = d.faces[faceId];
+  if (!face) return false;
+  if (face.spline || face.freehand) return true;
+  // Compatibility with contours saved by older builds, where a smooth stroke
+  // was expanded into dozens of tiny straight sides without source metadata.
+  return Boolean(
+    !face.circle &&
+      !face.ellipse &&
+      !face.rect &&
+      !face.pointShape &&
+      !face.nodeEdit &&
+      face.outer.length >= 16,
+  );
 }
 
 export function addRotatedRect(d: CadDrawing, a: Pt, b: Pt, width: number, type: RegionType): CadDrawing {
@@ -421,6 +567,13 @@ function pointInLoop(d: CadDrawing, p: Pt, loop: Half[]): boolean {
 
 export function rebuildFaces(d: CadDrawing, defaultType: RegionType) {
   const prev = { ...d.faces };
+  // Exact primitives such as circles do not have an edge loop. Keep them
+  // intact while rebuilding the topology of edge-based faces. A face that is
+  // intentionally deleted is already absent from `prev`, so it is not
+  // restored here.
+  const standaloneFaces = Object.values(prev)
+    .filter((face) => face.outer.length === 0)
+    .map((face) => structuredClone(face));
   const used = new Set<string>();
   const allHalves: Half[] = [];
   for (const ed of Object.values(d.edges)) {
@@ -449,8 +602,8 @@ export function rebuildFaces(d: CadDrawing, defaultType: RegionType) {
 
   const faces: CadFace[] = [];
   for (const cand of pos) {
-    const id = nid("f");
     const old = Object.values(prev).find((f) => loopsEqual(f.outer, cand.loop));
+    const id = old?.id ?? nid("f");
     faces.push({
       id,
       type: old?.type ?? defaultType,
@@ -462,8 +615,12 @@ export function rebuildFaces(d: CadDrawing, defaultType: RegionType) {
       ellipse: old?.ellipse,
       rect: old?.rect,
       spline: old?.spline,
+      freehand: old?.freehand,
+      pointShape: old?.pointShape,
+      nodeEdit: old?.nodeEdit,
       hydro: old?.hydro,
       name: old?.name,
+      fill: old?.fill,
     });
     d.faces[id] = faces[faces.length - 1]!;
   }
@@ -491,6 +648,9 @@ export function rebuildFaces(d: CadDrawing, defaultType: RegionType) {
   }
   for (const f of Object.values(d.faces)) {
     assignLoopFaces(d, f.outer, f.id);
+  }
+  for (const face of standaloneFaces) {
+    d.faces[face.id] = face;
   }
 }
 
@@ -521,6 +681,8 @@ function assignLoopFaces(d: CadDrawing, loop: Half[], faceId: string) {
 export function facePoints(d: CadDrawing, faceId: string): Pt[] {
   const f = d.faces[faceId];
   if (!f) return [];
+  if (f.spline) return catmullRom(f.spline.pts, 8, f.spline.closed);
+  if (f.freehand) return f.freehand.pts.map((point) => ({ ...point }));
   if (f.circle) {
     const { cx, cy, r } = f.circle;
     const n = 48;
@@ -566,6 +728,9 @@ export function faceArea(d: CadDrawing, faceId: string): number {
   const f = d.faces[faceId];
   if (!f) return 0;
   if (f.circle) return Math.PI * f.circle.r * f.circle.r;
+  if (!f.outer.length && (f.spline?.closed || f.freehand?.closed)) {
+    return polygonArea(facePoints(d, faceId));
+  }
   let a = Math.abs(loopAreaBulge(d, f.outer));
   for (const h of f.holes) a -= Math.abs(loopAreaBulge(d, h));
   return Math.max(0, a);
@@ -575,6 +740,17 @@ export function facePerimeter(d: CadDrawing, faceId: string): number {
   const f = d.faces[faceId];
   if (!f) return 0;
   if (f.circle) return 2 * Math.PI * f.circle.r;
+  if (!f.outer.length && (f.spline || f.freehand)) {
+    const points = facePoints(d, faceId);
+    let total = 0;
+    for (let index = 0; index < points.length - 1; index += 1) {
+      total += dist(points[index]!, points[index + 1]!);
+    }
+    if ((f.spline?.closed || f.freehand?.closed) && points.length > 2) {
+      total += dist(points[points.length - 1]!, points[0]!);
+    }
+    return total;
+  }
   const len = (loop: Half[]) => {
     let s = 0;
     for (const h of loop) {
@@ -695,6 +871,53 @@ export function deleteBoundary(d0: CadDrawing, edgeId: string, keep?: RegionType
   return { drawing: cleanupDrawing(d) };
 }
 
+/** Delete a standalone or dangling in-face construction segment without affecting a closed boundary. */
+export function deleteLooseEdge(d0: CadDrawing, edgeId: string): CadDrawing {
+  const d = cloneDrawing(d0);
+  const edge = d.edges[edgeId];
+  if (!edge) return d;
+  const inFaceId = edge.faceL && edge.faceL === edge.faceR ? edge.faceL : null;
+  if ((edge.faceL || edge.faceR) && !inFaceId) return d;
+  const oldFace = inFaceId ? d.faces[inFaceId] : null;
+  const oldCenter = inFaceId ? faceCentroid(d, inFaceId) : null;
+  const endpointIds = new Set([edge.a, edge.b]);
+  delete d.edges[edgeId];
+  const usedVertices = new Set<string>();
+  for (const other of Object.values(d.edges)) {
+    usedVertices.add(other.a);
+    usedVertices.add(other.b);
+  }
+  if (d.constraints) {
+    for (const constraint of Object.values(d.constraints)) {
+      if (
+        constraint.a === edgeId ||
+        constraint.b === edgeId ||
+        (endpointIds.has(constraint.a) && !usedVertices.has(constraint.a)) ||
+        (constraint.b && endpointIds.has(constraint.b) && !usedVertices.has(constraint.b))
+      ) {
+        delete d.constraints[constraint.id];
+      }
+    }
+  }
+  if (oldFace && oldCenter) {
+    rebuildFaces(d, oldFace.type);
+    const replacement = Object.values(d.faces).sort(
+      (a, b) => dist(faceCentroid(d, a.id), oldCenter) - dist(faceCentroid(d, b.id), oldCenter),
+    )[0];
+    if (replacement) {
+      replacement.type = oldFace.type;
+      replacement.locked = oldFace.locked;
+      replacement.hidden = oldFace.hidden;
+      replacement.hydro = oldFace.hydro;
+      replacement.name = oldFace.name;
+      replacement.fill = oldFace.fill;
+      replacement.pointShape = oldFace.pointShape;
+      replacement.nodeEdit = oldFace.nodeEdit;
+    }
+  }
+  return cleanupDrawing(d);
+}
+
 export function deleteFace(d0: CadDrawing, faceId: string): CadDrawing {
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
@@ -728,6 +951,240 @@ export function moveVertex(d0: CadDrawing, vertexId: string, p: Pt): CadDrawing 
   return applyConstraints(d);
 }
 
+/** Move one merged-contour node without reapplying primitive CAD constraints. */
+export function moveNodeEditVertex(d0: CadDrawing, faceId: string, vertexId: string, p: Pt): CadDrawing {
+  const d = cloneDrawing(d0);
+  const face = d.faces[faceId];
+  const vertex = d.vertices[vertexId];
+  if (!face?.nodeEdit || !vertex) return d;
+  const vertexIds = face.outer.map((half) => startOf(d, half));
+  const index = vertexIds.indexOf(vertexId);
+  if (index < 0) return d;
+  const dx = p.x - vertex.x;
+  const dy = p.y - vertex.y;
+  const curved = new Set(face.nodeEdit.curvedVertexIds);
+  const moveBy = (id: string, weight: number) => {
+    const current = d.vertices[id];
+    if (current) d.vertices[id] = { ...current, x: current.x + dx * weight, y: current.y + dy * weight };
+  };
+  moveBy(vertexId, 1);
+  if (curved.has(vertexId) && vertexIds.length > 3) {
+    const weights = [0.62, 0.32, 0.14];
+    for (let distance = 1; distance <= weights.length; distance += 1) {
+      for (const direction of [-1, 1]) {
+        const neighborId = vertexIds[(index + direction * distance + vertexIds.length) % vertexIds.length]!;
+        if (curved.has(neighborId)) moveBy(neighborId, weights[distance - 1]!);
+      }
+    }
+  }
+  face.rect = undefined;
+  clearFaceGeometryConstraints(d, face);
+  return d;
+}
+
+function clearFaceGeometryConstraints(d: CadDrawing, face: CadFace) {
+  if (!d.constraints) return;
+  const geometryIds = new Set<string>();
+  for (const half of face.outer) {
+    geometryIds.add(half.e);
+    geometryIds.add(startOf(d, half));
+    geometryIds.add(endOf(d, half));
+  }
+  for (const constraint of Object.values(d.constraints)) {
+    if (
+      geometryIds.has(constraint.a) ||
+      (constraint.b != null && geometryIds.has(constraint.b))
+    ) {
+      delete d.constraints[constraint.id];
+    }
+  }
+}
+
+/** Mark a numbered-point contour as freely editable, without CAD auto-locks. */
+export function markPointShape(d0: CadDrawing, faceId: string): CadDrawing {
+  const d = cloneDrawing(d0);
+  const face = d.faces[faceId];
+  if (!face) return d;
+  face.pointShape = true;
+  face.rect = undefined;
+  clearFaceGeometryConstraints(d, face);
+  return d;
+}
+
+/** Commit the exact displayed vertices of a numbered-point contour. */
+export function setPointShapeVertices(
+  d0: CadDrawing,
+  faceId: string,
+  points: Pt[],
+): CadDrawing {
+  const d = cloneDrawing(d0);
+  const face = d.faces[faceId];
+  if (!face?.pointShape || points.length !== face.outer.length) return d;
+  face.outer.forEach((half, index) => {
+    const vertexId = startOf(d, half);
+    const vertex = d.vertices[vertexId];
+    const point = points[index];
+    if (vertex && point) d.vertices[vertexId] = { ...vertex, x: point.x, y: point.y };
+  });
+  for (const item of Object.values(d.faces)) item.rect = undefined;
+  clearFaceGeometryConstraints(d, face);
+  return d;
+}
+
+/**
+ * Set one boundary side to an exact length without turning its neighbouring
+ * orthogonal side into a diagonal. The side end stays fixed; its start and the
+ * preceding cap move together along the side direction.
+ */
+export function setFaceEdgeLength(
+  d0: CadDrawing,
+  faceId: string,
+  edgeId: string,
+  targetLength: number,
+): CadDrawing {
+  const d = cloneDrawing(d0);
+  const face = d.faces[faceId];
+  const halfIndex = face?.outer.findIndex((item) => item.e === edgeId) ?? -1;
+  const half = halfIndex >= 0 ? face?.outer[halfIndex] : undefined;
+  const previousHalf =
+    face && halfIndex >= 0
+      ? face.outer[(halfIndex - 1 + face.outer.length) % face.outer.length]
+      : undefined;
+  if (
+    !face ||
+    !half ||
+    !previousHalf ||
+    !Number.isFinite(targetLength) ||
+    targetLength <= 0
+  )
+    return d;
+  const startId = startOf(d, half);
+  const endId = endOf(d, half);
+  const previousStartId = startOf(d, previousHalf);
+  const start = d.vertices[startId];
+  const end = d.vertices[endId];
+  const previousStart = d.vertices[previousStartId];
+  if (!start || !end || !previousStart) return d;
+  const currentLength = dist(start, end);
+  if (currentLength < 1e-9) return d;
+  const scale = targetLength / currentLength;
+  const nextStart = {
+    x: end.x + (start.x - end.x) * scale,
+    y: end.y + (start.y - end.y) * scale,
+  };
+  const dx = nextStart.x - start.x;
+  const dy = nextStart.y - start.y;
+  d.vertices[startId] = { ...start, ...nextStart };
+  d.vertices[previousStartId] = {
+    ...previousStart,
+    x: previousStart.x + dx,
+    y: previousStart.y + dy,
+  };
+  for (const item of Object.values(d.faces)) item.rect = undefined;
+  // Numeric editing is authoritative; stale automatic constraints attached to
+  // the moved cap must not undo it on a later handle edit.
+  if (d.constraints) {
+    for (const constraint of Object.values(d.constraints)) {
+      if (
+        constraint.a === startId ||
+        constraint.b === startId ||
+        constraint.a === previousStartId ||
+        constraint.b === previousStartId ||
+        constraint.a === edgeId ||
+        constraint.b === edgeId
+      ) {
+        delete d.constraints[constraint.id];
+      }
+    }
+  }
+  return d;
+}
+
+/** Set a complete visible side (possibly split into collinear CAD edges). */
+export function setFaceSideLength(
+  d0: CadDrawing,
+  faceId: string,
+  startEdgeId: string,
+  targetLength: number,
+): CadDrawing {
+  const d = cloneDrawing(d0);
+  const face = d.faces[faceId];
+  if (!face || !Number.isFinite(targetLength) || targetLength <= 0) return d;
+  const points = face.outer.map((half) => vertPt(v(d, startOf(d, half))));
+  const starts = closedPathSideStarts(points);
+  const rawIndex = face.outer.findIndex((half) => half.e === startEdgeId);
+  const sidePosition = starts.findIndex((start, index) => {
+    const end = starts[(index + 1) % starts.length]!;
+    return start <= end
+      ? rawIndex >= start && rawIndex < end
+      : rawIndex >= start || rawIndex < end;
+  });
+  if (rawIndex < 0 || sidePosition < 0) return d;
+
+  const sideStart = starts[sidePosition]!;
+  const sideEnd = starts[(sidePosition + 1) % starts.length]!;
+  const previousSideStart = starts[(sidePosition - 1 + starts.length) % starts.length]!;
+  const startId = startOf(d, face.outer[sideStart]!);
+  const endId = startOf(d, face.outer[sideEnd]!);
+  const start = d.vertices[startId];
+  const end = d.vertices[endId];
+  if (!start || !end) return d;
+  const currentLength = dist(start, end);
+  if (currentLength < 1e-9) return d;
+  const scale = targetLength / currentLength;
+  const movedIds = new Set<string>();
+
+  const forCyclicRange = (from: number, to: number, visit: (index: number) => void) => {
+    let index = from;
+    while (index !== to) {
+      visit(index);
+      index = (index + 1) % face.outer.length;
+    }
+  };
+
+  // Scale every stored vertex on the selected straight side while its far end
+  // stays fixed, so an internally split side remains one straight line.
+  forCyclicRange(sideStart, sideEnd, (index) => {
+    const vertexId = startOf(d, face.outer[index]!);
+    const vertex = d.vertices[vertexId];
+    if (!vertex) return;
+    d.vertices[vertexId] = {
+      ...vertex,
+      x: end.x + (vertex.x - end.x) * scale,
+      y: end.y + (vertex.y - end.y) * scale,
+    };
+    movedIds.add(vertexId);
+  });
+  const movedStart = d.vertices[startId]!;
+  const dx = movedStart.x - start.x;
+  const dy = movedStart.y - start.y;
+
+  if (!face.pointShape) {
+    // Orthogonal freeforms resize like rectangles: translate the preceding
+    // cap as one unit so it does not turn into a diagonal.
+    forCyclicRange(previousSideStart, sideStart, (index) => {
+      const vertexId = startOf(d, face.outer[index]!);
+      const vertex = d.vertices[vertexId];
+      if (!vertex) return;
+      d.vertices[vertexId] = { ...vertex, x: vertex.x + dx, y: vertex.y + dy };
+      movedIds.add(vertexId);
+    });
+  }
+
+  for (const item of Object.values(d.faces)) item.rect = undefined;
+  if (d.constraints) {
+    for (const constraint of Object.values(d.constraints)) {
+      if (
+        (constraint.a && movedIds.has(constraint.a)) ||
+        (constraint.b && movedIds.has(constraint.b))
+      ) {
+        delete d.constraints[constraint.id];
+      }
+    }
+  }
+  return d;
+}
+
 export function faceVertexIds(d: CadDrawing, faceId: string): string[] {
   const f = d.faces[faceId];
   if (!f) return [];
@@ -741,6 +1198,29 @@ export function faceCentroid(d: CadDrawing, faceId: string): Pt {
   const f = d.faces[faceId];
   if (!f) return { x: 0, y: 0 };
   if (f.circle) return { x: f.circle.cx, y: f.circle.cy };
+  if (!f.outer.length && (f.spline || f.freehand)) {
+    const points = facePoints(d, faceId);
+    if (!points.length) return { x: 0, y: 0 };
+    if ((f.spline?.closed || f.freehand?.closed) && points.length >= 3) {
+      const area = shoelace(points);
+      if (Math.abs(area) > 1e-12) {
+        let cx = 0;
+        let cy = 0;
+        for (let index = 0; index < points.length; index += 1) {
+          const point = points[index]!;
+          const next = points[(index + 1) % points.length]!;
+          const cross = point.x * next.y - next.x * point.y;
+          cx += (point.x + next.x) * cross;
+          cy += (point.y + next.y) * cross;
+        }
+        return { x: cx / (6 * area), y: cy / (6 * area) };
+      }
+    }
+    return {
+      x: points.reduce((sum, point) => sum + point.x, 0) / points.length,
+      y: points.reduce((sum, point) => sum + point.y, 0) / points.length,
+    };
+  }
   const pts = loopPoints(d, f.outer);
   const a = shoelace(pts);
   if (Math.abs(a) < 1e-12) {
@@ -769,6 +1249,8 @@ export function moveFace(d0: CadDrawing, faceId: string, dx: number, dy: number)
   if (f.circle) f.circle = { ...f.circle, cx: f.circle.cx + dx, cy: f.circle.cy + dy };
   if (f.ellipse) f.ellipse = { ...f.ellipse, cx: f.ellipse.cx + dx, cy: f.ellipse.cy + dy };
   if (f.rect) f.rect = { ...f.rect, x: f.rect.x + dx, y: f.rect.y + dy };
+  if (f.spline) f.spline = { ...f.spline, pts: f.spline.pts.map((p) => ({ x: p.x + dx, y: p.y + dy })) };
+  if (f.freehand) f.freehand = { ...f.freehand, pts: f.freehand.pts.map((p) => ({ x: p.x + dx, y: p.y + dy })) };
   return d;
 }
 
@@ -797,6 +1279,8 @@ export function rotateFace(d0: CadDrawing, faceId: string, deg: number, origin?:
   }
   if (f.rect) f.rect = { ...f.rect, rot: (f.rect.rot + deg) % 360 };
   if (f.ellipse) f.ellipse = { ...f.ellipse, rot: ((f.ellipse.rot ?? 0) + deg) % 360 };
+  if (f.spline) f.spline = { ...f.spline, pts: f.spline.pts.map(rot) };
+  if (f.freehand) f.freehand = { ...f.freehand, pts: f.freehand.pts.map(rot) };
   return d;
 }
 
@@ -863,6 +1347,16 @@ export function duplicateFace(d0: CadDrawing, faceId: string, dx = 0.8, dy = 0.8
     circle: f.circle ? { cx: f.circle.cx + dx, cy: f.circle.cy + dy, r: f.circle.r } : undefined,
     ellipse: f.ellipse ? { ...f.ellipse, cx: f.ellipse.cx + dx, cy: f.ellipse.cy + dy } : undefined,
     rect: f.rect ? { ...f.rect, x: f.rect.x + dx, y: f.rect.y + dy } : undefined,
+    spline: f.spline
+      ? { ...f.spline, pts: f.spline.pts.map((point) => ({ x: point.x + dx, y: point.y + dy })) }
+      : undefined,
+    freehand: f.freehand
+      ? { ...f.freehand, pts: f.freehand.pts.map((point) => ({ x: point.x + dx, y: point.y + dy })) }
+      : undefined,
+    pointShape: f.pointShape,
+    nodeEdit: f.nodeEdit
+      ? { curvedVertexIds: f.nodeEdit.curvedVertexIds.map((id) => vmap.get(id)).filter((id): id is string => Boolean(id)) }
+      : undefined,
     hydro: f.hydro,
     name: f.name,
     fill: f.fill,
@@ -908,19 +1402,70 @@ export function catmullRom(pts: Pt[], samples = 8, closed = false): Pt[] {
 
 export function addSpline(d: CadDrawing, pts: Pt[], close: boolean, type: RegionType): CadDrawing {
   if (pts.length < 2) return d;
-  const next = addChain(d, catmullRom(pts, 8, close), close, type);
-  const face = Object.values(next.faces).sort((a, b) => faceArea(next, b.id) - faceArea(next, a.id))[0];
-  if (face) face.spline = { pts: pts.map((p) => ({ ...p })), closed: close };
+  if (!close) {
+    const next = cloneDrawing(d);
+    const id = nid("f");
+    next.faces[id] = {
+      id,
+      type,
+      outer: [],
+      holes: [],
+      locked: false,
+      hidden: false,
+      spline: { pts: pts.map((point) => ({ ...point })), closed: false },
+    };
+    return next;
+  }
+  const before = new Set(Object.values(d.faces).map(faceBoundaryKey));
+  const next = addChain(d, catmullRom(pts, 8, true), true, type, false);
+  const face = Object.values(next.faces)
+    .filter((candidate) => !before.has(faceBoundaryKey(candidate)))
+    .sort((a, b) => faceArea(next, b.id) - faceArea(next, a.id))[0];
+  if (face) face.spline = { pts: pts.map((point) => ({ ...point })), closed: true };
   return next;
 }
 
-export function updateSpline(d0: CadDrawing, faceId: string, pts: Pt[]): CadDrawing {
+export function updateSpline(
+  d0: CadDrawing,
+  faceId: string,
+  pts: Pt[],
+  closedOverride?: boolean,
+): CadDrawing {
   const f = d0.faces[faceId];
   if (!f?.spline) return d0;
-  const closed = f.spline.closed;
+  const closed = closedOverride ?? f.spline.closed;
+  if (!closed) {
+    const d = cloneDrawing(d0);
+    d.faces[faceId] = {
+      ...d.faces[faceId]!,
+      spline: { pts: pts.map((point) => ({ ...point })), closed: false },
+    };
+    return d;
+  }
   const type = f.type;
   const d = deleteFace(d0, faceId);
-  return addSpline(d, pts, closed, type);
+  const remainingIds = new Set(Object.keys(d.faces));
+  const next = addSpline(d, pts, true, type);
+  const created = Object.values(next.faces).find(
+    (candidate) => candidate.spline && !remainingIds.has(candidate.id),
+  );
+  if (!created) return d0;
+  const createdId = created.id;
+  delete next.faces[createdId];
+  next.faces[faceId] = {
+    ...created,
+    id: faceId,
+    locked: f.locked,
+    hidden: f.hidden,
+    hydro: f.hydro,
+    name: f.name,
+    fill: f.fill,
+  };
+  for (const edge of Object.values(next.edges)) {
+    if (edge.faceL === createdId) edge.faceL = faceId;
+    if (edge.faceR === createdId) edge.faceR = faceId;
+  }
+  return next;
 }
 
 export function cleanupDrawing(d0: CadDrawing): CadDrawing {
@@ -1046,6 +1591,63 @@ export function setRectSize(d0: CadDrawing, faceId: string, w: number, h: number
     if (!vt) continue;
     d.vertices[id] = { ...vt, x: cx + (vt.x - cx) * sx, y: cy + (vt.y - cy) * sy };
   }
+  return d;
+}
+
+/** Resize a triangle in its own base/altitude frame while keeping its centroid and orientation. */
+export function setTriangleSize(d0: CadDrawing, faceId: string, w: number, h: number): CadDrawing {
+  if (w <= EPS || h <= EPS) return d0;
+  const verts = faceVertices(d0, faceId).slice(0, 3);
+  const metrics = triangleMetrics(verts);
+  if (verts.length !== 3 || !metrics) return d0;
+  const d = cloneDrawing(d0);
+  const sx = w / metrics.width;
+  const sy = h / metrics.height;
+  verts.forEach((v) => {
+    const dx = v.x - metrics.center.x;
+    const dy = v.y - metrics.center.y;
+    const lx = dx * metrics.ux + dy * metrics.uy;
+    const ly = dx * metrics.nx + dy * metrics.ny;
+    const cur = d.vertices[v.id];
+    if (!cur) return;
+    d.vertices[v.id] = {
+      ...cur,
+      x: metrics.center.x + metrics.ux * lx * sx + metrics.nx * ly * sy,
+      y: metrics.center.y + metrics.uy * lx * sx + metrics.ny * ly * sy,
+    };
+  });
+  return d;
+}
+
+/** Set all three triangle sides while preserving its centroid and base orientation. */
+export function setTriangleSides(d0: CadDrawing, faceId: string, base: number, left: number, right: number): CadDrawing {
+  if (base <= EPS || left <= EPS || right <= EPS || left + right <= base + EPS || base + left <= right + EPS || base + right <= left + EPS) return d0;
+  const verts = faceVertices(d0, faceId).slice(0, 3);
+  const metrics = triangleMetrics(verts);
+  if (verts.length !== 3 || !metrics) return d0;
+  const apexX = (left * left - right * right) / (2 * base);
+  const height2 = left * left - (apexX + base / 2) ** 2;
+  if (height2 <= EPS * EPS) return d0;
+  const height = Math.sqrt(height2);
+  const local = [
+    { x: apexX, y: height },
+    { x: base / 2, y: 0 },
+    { x: -base / 2, y: 0 },
+  ];
+  const centroid = { x: apexX / 3, y: height / 3 };
+  const d = cloneDrawing(d0);
+  verts.forEach((v, i) => {
+    const p = local[i]!;
+    const lx = p.x - centroid.x;
+    const ly = p.y - centroid.y;
+    const cur = d.vertices[v.id];
+    if (!cur) return;
+    d.vertices[v.id] = {
+      ...cur,
+      x: metrics.center.x + metrics.ux * lx + metrics.nx * ly,
+      y: metrics.center.y + metrics.uy * lx + metrics.ny * ly,
+    };
+  });
   return d;
 }
 
@@ -1214,6 +1816,24 @@ export function scaleFaceAbout(d0: CadDrawing, faceId: string, k: number, origin
       y: c.y + (f.rect.y - c.y) * k,
       w: Math.abs(f.rect.w * k),
       h: Math.abs(f.rect.h * k),
+    };
+  }
+  if (f.spline) {
+    f.spline = {
+      ...f.spline,
+      pts: f.spline.pts.map((point) => ({
+        x: c.x + (point.x - c.x) * k,
+        y: c.y + (point.y - c.y) * k,
+      })),
+    };
+  }
+  if (f.freehand) {
+    f.freehand = {
+      ...f.freehand,
+      pts: f.freehand.pts.map((point) => ({
+        x: c.x + (point.x - c.x) * k,
+        y: c.y + (point.y - c.y) * k,
+      })),
     };
   }
   return d;
@@ -1772,6 +2392,773 @@ export function unionFaces(d0: CadDrawing, aId: string, bId: string): CadDrawing
   return cleanupDrawing(d);
 }
 
+export type FaceBoundaryHit = {
+  faceId: string;
+  pt: Pt;
+  distance: number;
+};
+
+export type OpenSplineEndpointHit = FaceBoundaryHit & {
+  endpoint: "start" | "end";
+  opposite: Pt;
+};
+
+/** Closest editable endpoint of a visible open spline. */
+export function nearestOpenSplineEndpoint(
+  drawing: CadDrawing,
+  point: Pt,
+  tolerance: number,
+): OpenSplineEndpointHit | null {
+  let best: OpenSplineEndpointHit | null = null;
+  for (const face of Object.values(drawing.faces)) {
+    if (face.hidden || face.locked || !face.spline || face.spline.closed) continue;
+    const layer = drawing.layers?.[layerForType(face.type)];
+    if (layer?.visible === false || layer?.locked) continue;
+    const points = face.spline.pts;
+    if (points.length < 2) continue;
+    const start = points[0]!;
+    const end = points[points.length - 1]!;
+    const candidates = [
+      { endpoint: "end" as const, pt: end, opposite: start },
+      { endpoint: "start" as const, pt: start, opposite: end },
+    ];
+    for (const candidate of candidates) {
+      const distance = dist(point, candidate.pt);
+      if (distance > tolerance || (best && distance >= best.distance)) continue;
+      best = {
+        faceId: face.id,
+        endpoint: candidate.endpoint,
+        pt: { ...candidate.pt },
+        opposite: { ...candidate.opposite },
+        distance,
+      };
+    }
+  }
+  return best;
+}
+
+/** Closest visible figure boundary, including exact circles. */
+export function nearestFaceBoundary(
+  drawing: CadDrawing,
+  point: Pt,
+  tolerance: number,
+): FaceBoundaryHit | null {
+  let best: FaceBoundaryHit | null = null;
+  for (const face of Object.values(drawing.faces)) {
+    if (face.hidden) continue;
+    const layer = drawing.layers?.[layerForType(face.type)];
+    if (layer?.visible === false) continue;
+    const points = facePoints(drawing, face.id);
+    if (points.length < 2) continue;
+    const closed = !(
+      (face.spline && !face.spline.closed) ||
+      (face.freehand && !face.freehand.closed)
+    );
+    const segmentCount = closed ? points.length : points.length - 1;
+    for (let index = 0; index < segmentCount; index += 1) {
+      const a = points[index]!;
+      const b = points[(index + 1) % points.length]!;
+      const projected = projectT(point, a, b);
+      if (projected.d > tolerance || (best && projected.d >= best.distance)) continue;
+      best = { faceId: face.id, pt: projected.pt, distance: projected.d };
+    }
+  }
+  return best;
+}
+
+/**
+ * Simplify and softly round a finger/mouse stroke. Open strokes retain their
+ * exact endpoints so they can still land on an existing figure boundary.
+ */
+export function smoothFreehandPoints(
+  raw: Pt[],
+  tolerance = 0.03,
+  closed = false,
+): Pt[] {
+  const cleaned: Pt[] = [];
+  for (const point of raw) {
+    const previous = cleaned[cleaned.length - 1];
+    if (!previous || dist(previous, point) > Math.max(1e-6, tolerance * 0.15)) {
+      cleaned.push({ x: point.x, y: point.y });
+    }
+  }
+  if (
+    closed &&
+    cleaned.length > 2 &&
+    dist(cleaned[0]!, cleaned[cleaned.length - 1]!) <= Math.max(tolerance * 3, 1e-5)
+  ) {
+    cleaned.pop();
+  }
+  if (cleaned.length < 2) return cleaned;
+  let points = rdp(cleaned, Math.max(1e-5, tolerance));
+  if (closed && points.length < 3) points = cleaned.slice(0, 3);
+  for (let iteration = 0; iteration < 2; iteration += 1) {
+    if (points.length < (closed ? 3 : 2)) break;
+    const rounded: Pt[] = [];
+    if (!closed) rounded.push({ ...points[0]! });
+    const segmentCount = closed ? points.length : points.length - 1;
+    for (let index = 0; index < segmentCount; index += 1) {
+      const a = points[index]!;
+      const b = points[(index + 1) % points.length]!;
+      rounded.push(
+        { x: a.x * 0.75 + b.x * 0.25, y: a.y * 0.75 + b.y * 0.25 },
+        { x: a.x * 0.25 + b.x * 0.75, y: a.y * 0.25 + b.y * 0.75 },
+      );
+    }
+    if (!closed) rounded.push({ ...points[points.length - 1]! });
+    points = rounded;
+  }
+  return points;
+}
+
+export type FreehandStrokeResult = {
+  drawing: CadDrawing;
+  faceId: string | null;
+  closed: boolean;
+  attached: boolean;
+};
+
+function materializeFreehandTarget(d0: CadDrawing, faceId: string): CadDrawing {
+  const current = d0.faces[faceId];
+  if (!current || current.outer.length) return cloneDrawing(d0);
+  const points = facePoints(d0, faceId);
+  if (points.length < 3) return cloneDrawing(d0);
+  const drawing = cloneDrawing(d0);
+  const face = drawing.faces[faceId]!;
+  const vertexIds = points.map((point) => {
+    const id = nid("v");
+    drawing.vertices[id] = { id, x: point.x, y: point.y };
+    return id;
+  });
+  const halves: Half[] = [];
+  for (let index = 0; index < vertexIds.length; index += 1) {
+    const id = nid("e");
+    drawing.edges[id] = {
+      id,
+      a: vertexIds[index]!,
+      b: vertexIds[(index + 1) % vertexIds.length]!,
+      bulge: 0,
+      faceL: null,
+      faceR: null,
+    };
+    halves.push({ e: id, dir: 1 });
+  }
+  face.outer = shoelace(points) < 0
+    ? halves.map((half) => ({ e: half.e, dir: -1 as const })).reverse()
+    : halves;
+  face.holes = [];
+  face.circle = undefined;
+  face.ellipse = undefined;
+  face.rect = undefined;
+  face.spline = undefined;
+  face.freehand = undefined;
+  face.pointShape = undefined;
+  assignLoopFaces(drawing, face.outer, faceId);
+  return drawing;
+}
+
+function faceInteriorSample(drawing: CadDrawing, faceId: string): Pt {
+  const points = facePoints(drawing, faceId);
+  const center = faceCentroid(drawing, faceId);
+  if (points.length < 3 || pointInPoly(center, points)) return center;
+  const average = {
+    x: points.reduce((sum, point) => sum + point.x, 0) / points.length,
+    y: points.reduce((sum, point) => sum + point.y, 0) / points.length,
+  };
+  if (pointInPoly(average, points)) return average;
+  for (let index = 0; index < points.length; index += 1) {
+    const a = points[index]!;
+    const b = points[(index + 1) % points.length]!;
+    const sample = {
+      x: (a.x + b.x) * 0.49 + average.x * 0.02,
+      y: (a.y + b.y) * 0.49 + average.y * 0.02,
+    };
+    if (pointInPoly(sample, points)) return sample;
+  }
+  return points[0]!;
+}
+
+function pointNearPolyline(point: Pt, points: Pt[], tolerance: number): boolean {
+  for (let index = 0; index < points.length - 1; index += 1) {
+    if (projectT(point, points[index]!, points[index + 1]!).d <= tolerance) return true;
+  }
+  return false;
+}
+
+function isClosedBoundaryFace(face: CadFace): boolean {
+  return Boolean(
+    face.outer.length ||
+      face.circle ||
+      face.ellipse ||
+      face.spline?.closed ||
+      face.freehand?.closed,
+  );
+}
+
+function pointInFaceBoundary(drawing: CadDrawing, faceId: string, point: Pt): boolean {
+  const face = drawing.faces[faceId];
+  if (!face || !isClosedBoundaryFace(face)) return false;
+  const outer = facePoints(drawing, faceId);
+  if (outer.length < 3 || !pointInPoly(point, outer)) return false;
+  return !faceHoles(drawing, faceId).some((hole) => pointInPoly(point, hole));
+}
+
+function nearestClosedFaceBoundary(
+  drawing: CadDrawing,
+  point: Pt,
+  tolerance: number,
+): FaceBoundaryHit | null {
+  let best: FaceBoundaryHit | null = null;
+  for (const face of Object.values(drawing.faces)) {
+    if (face.hidden || !isClosedBoundaryFace(face)) continue;
+    const layer = drawing.layers?.[layerForType(face.type)];
+    if (layer?.visible === false) continue;
+    const boundary = facePoints(drawing, face.id);
+    for (let index = 0; index < boundary.length; index += 1) {
+      const projected = projectT(point, boundary[index]!, boundary[(index + 1) % boundary.length]!);
+      if (projected.d > tolerance || (best && projected.d >= best.distance)) continue;
+      best = { faceId: face.id, pt: projected.pt, distance: projected.d };
+    }
+  }
+  return best;
+}
+
+type StrokeBoundaryContact = { position: number; pt: Pt };
+
+function faceStrokeContacts(
+  drawing: CadDrawing,
+  faceId: string,
+  points: Pt[],
+  tolerance: number,
+): StrokeBoundaryContact[] {
+  const boundary = facePoints(drawing, faceId);
+  if (points.length < 2 || boundary.length < 3) return [];
+  const contacts: StrokeBoundaryContact[] = [];
+  const add = (contact: StrokeBoundaryContact) => {
+    if (
+      contacts.some(
+        (current) =>
+          Math.abs(current.position - contact.position) < 1e-5 &&
+          dist(current.pt, contact.pt) < Math.max(1e-5, tolerance * 0.1),
+      )
+    ) return;
+    contacts.push(contact);
+  };
+
+  for (let pointIndex = 0; pointIndex < points.length; pointIndex += 1) {
+    let best: { pt: Pt; distance: number } | null = null;
+    for (let edgeIndex = 0; edgeIndex < boundary.length; edgeIndex += 1) {
+      const projected = projectT(
+        points[pointIndex]!,
+        boundary[edgeIndex]!,
+        boundary[(edgeIndex + 1) % boundary.length]!,
+      );
+      if (projected.d <= tolerance && (!best || projected.d < best.distance)) {
+        best = { pt: projected.pt, distance: projected.d };
+      }
+    }
+    if (best) add({ position: pointIndex, pt: best.pt });
+  }
+
+  for (let strokeIndex = 0; strokeIndex < points.length - 1; strokeIndex += 1) {
+    for (let edgeIndex = 0; edgeIndex < boundary.length; edgeIndex += 1) {
+      const crossing = segIntersect(
+        points[strokeIndex]!,
+        points[strokeIndex + 1]!,
+        boundary[edgeIndex]!,
+        boundary[(edgeIndex + 1) % boundary.length]!,
+      );
+      if (crossing) add({ position: strokeIndex + crossing.t, pt: crossing.pt });
+    }
+  }
+
+  return contacts.sort((a, b) => a.position - b.position);
+}
+
+function pathBetweenContacts(
+  points: Pt[],
+  start: StrokeBoundaryContact,
+  end: StrokeBoundaryContact,
+): Pt[] {
+  if (end.position <= start.position + 1e-6) return [];
+  const result: Pt[] = [{ ...start.pt }];
+  for (let index = 0; index < points.length; index += 1) {
+    if (index > start.position + 1e-6 && index < end.position - 1e-6) {
+      result.push({ ...points[index]! });
+    }
+  }
+  if (dist(result[result.length - 1]!, end.pt) > 1e-7) result.push({ ...end.pt });
+  return result;
+}
+
+function removeStandaloneFaces(drawing: CadDrawing, faceIds: Set<string>): CadDrawing {
+  if (!faceIds.size) return cloneDrawing(drawing);
+  const next = cloneDrawing(drawing);
+  for (const faceId of faceIds) delete next.faces[faceId];
+  return next;
+}
+
+/** Join newly drawn pencil input to the endpoints of earlier open pencil strokes. */
+function collectConnectedFreehandStroke(
+  drawing: CadDrawing,
+  raw: Pt[],
+  tolerance: number,
+): { drawing: CadDrawing; points: Pt[] } {
+  let points = raw.map((point) => ({ ...point }));
+  const consumed = new Set<string>();
+
+  while (points.length >= 2) {
+    let best:
+      | {
+          faceId: string;
+          distance: number;
+          side: "prepend" | "append";
+          reverse: boolean;
+        }
+      | null = null;
+    const chainStart = points[0]!;
+    const chainEnd = points[points.length - 1]!;
+
+    for (const face of Object.values(drawing.faces)) {
+      if (
+        consumed.has(face.id) ||
+        face.hidden ||
+        face.locked ||
+        !face.freehand ||
+        face.freehand.closed ||
+        face.freehand.pts.length < 2
+      ) continue;
+      const faceStart = face.freehand.pts[0]!;
+      const faceEnd = face.freehand.pts[face.freehand.pts.length - 1]!;
+      const candidates = [
+        { distance: dist(faceEnd, chainStart), side: "prepend" as const, reverse: false },
+        { distance: dist(faceStart, chainStart), side: "prepend" as const, reverse: true },
+        { distance: dist(chainEnd, faceStart), side: "append" as const, reverse: false },
+        { distance: dist(chainEnd, faceEnd), side: "append" as const, reverse: true },
+      ];
+      for (const candidate of candidates) {
+        if (candidate.distance > tolerance || (best && candidate.distance >= best.distance)) continue;
+        best = { faceId: face.id, ...candidate };
+      }
+    }
+
+    if (!best) break;
+    const stored = drawing.faces[best.faceId]!.freehand!.pts.map((point) => ({ ...point }));
+    const oriented = best.reverse ? stored.reverse() : stored;
+    if (best.side === "prepend") {
+      const join = {
+        x: (oriented[oriented.length - 1]!.x + points[0]!.x) / 2,
+        y: (oriented[oriented.length - 1]!.y + points[0]!.y) / 2,
+      };
+      oriented[oriented.length - 1] = join;
+      points[0] = join;
+      points = [...oriented, ...points.slice(1)];
+    } else {
+      const join = {
+        x: (points[points.length - 1]!.x + oriented[0]!.x) / 2,
+        y: (points[points.length - 1]!.y + oriented[0]!.y) / 2,
+      };
+      points[points.length - 1] = join;
+      oriented[0] = join;
+      points = [...points, ...oriented.slice(1)];
+    }
+    consumed.add(best.faceId);
+  }
+
+  return { drawing: removeStandaloneFaces(drawing, consumed), points };
+}
+
+function findFreehandAttachment(
+  drawing: CadDrawing,
+  points: Pt[],
+  tolerance: number,
+): { faceId: string; points: Pt[] } | null {
+  if (points.length < 2) return null;
+  const start = points[0]!;
+  const startHit = nearestClosedFaceBoundary(drawing, start, tolerance);
+  const endHit = nearestClosedFaceBoundary(drawing, points[points.length - 1]!, tolerance);
+  const orderedFaces = Object.values(drawing.faces)
+    .filter((face) => !face.hidden && isClosedBoundaryFace(face))
+    .sort((a, b) => {
+      const priority = (face: CadFace) => {
+        if (startHit?.faceId === face.id && endHit?.faceId === face.id) return 0;
+        if (startHit?.faceId === face.id) return 1;
+        if (pointInFaceBoundary(drawing, face.id, start)) return 2;
+        return 3;
+      };
+      return priority(a) - priority(b) || faceArea(drawing, a.id) - faceArea(drawing, b.id);
+    });
+
+  for (const face of orderedFaces) {
+    const startsOnOrInside =
+      startHit?.faceId === face.id || pointInFaceBoundary(drawing, face.id, start);
+    if (!startsOnOrInside) continue;
+    const contacts = faceStrokeContacts(drawing, face.id, points, tolerance);
+    if (contacts.length < 2) continue;
+    const section = pathBetweenContacts(points, contacts[0]!, contacts[contacts.length - 1]!);
+    if (section.length < 2) continue;
+    const leavesFigure = section.some((point, index) => {
+      if (index === 0 || index === section.length - 1) return false;
+      return !pointInFaceBoundary(drawing, face.id, point);
+    });
+    if (!leavesFigure) continue;
+    return { faceId: face.id, points: section };
+  }
+  return null;
+}
+
+function nearestFreehandContact(
+  drawing: CadDrawing,
+  points: Pt[],
+  tolerance: number,
+): FaceBoundaryHit | null {
+  let best: FaceBoundaryHit | null = null;
+  for (const point of points) {
+    const hit = nearestFaceBoundary(drawing, point, tolerance);
+    if (hit && (!best || hit.distance < best.distance)) best = hit;
+  }
+  if (best?.distance === 0 || points.length < 2) return best;
+
+  for (const face of Object.values(drawing.faces)) {
+    if (face.hidden || !isClosedBoundaryFace(face)) continue;
+    const layer = drawing.layers?.[layerForType(face.type)];
+    if (layer?.visible === false) continue;
+    const boundary = facePoints(drawing, face.id);
+    if (boundary.length < 2) continue;
+    for (let strokeIndex = 0; strokeIndex < points.length - 1; strokeIndex += 1) {
+      const strokeA = points[strokeIndex]!;
+      const strokeB = points[strokeIndex + 1]!;
+      for (let edgeIndex = 0; edgeIndex < boundary.length; edgeIndex += 1) {
+        const edgeA = boundary[edgeIndex]!;
+        const edgeB = boundary[(edgeIndex + 1) % boundary.length]!;
+        const crossing = segIntersect(strokeA, strokeB, edgeA, edgeB);
+        if (crossing) return { faceId: face.id, pt: crossing.pt, distance: 0 };
+        for (const edgePoint of [edgeA, edgeB]) {
+          const projected = projectT(edgePoint, strokeA, strokeB);
+          if (projected.d <= tolerance && (!best || projected.d < best.distance)) {
+            best = { faceId: face.id, pt: { ...edgePoint }, distance: projected.d };
+          }
+        }
+      }
+    }
+  }
+  return best;
+}
+
+function insertClosedContact(points: Pt[], contact: Pt, tolerance: number): Pt[] {
+  let edgeIndex = 0;
+  let bestDistance = Infinity;
+  for (let index = 0; index < points.length; index += 1) {
+    const projected = projectT(contact, points[index]!, points[(index + 1) % points.length]!);
+    if (projected.d < bestDistance) {
+      bestDistance = projected.d;
+      edgeIndex = index;
+    }
+  }
+  const nextIndex = (edgeIndex + 1) % points.length;
+  if (dist(points[edgeIndex]!, contact) <= tolerance) {
+    return points.map((point, index) => (index === edgeIndex ? { ...contact } : point));
+  }
+  if (dist(points[nextIndex]!, contact) <= tolerance) {
+    return points.map((point, index) => (index === nextIndex ? { ...contact } : point));
+  }
+  return [...points.slice(0, edgeIndex + 1), { ...contact }, ...points.slice(edgeIndex + 1)];
+}
+
+function mergeFreehandCells(
+  d0: CadDrawing,
+  included: Set<string>,
+  type: RegionType,
+  seed: Pt,
+  source: CadFace,
+  curvedPath: Pt[],
+  curvedTolerance: number,
+): { drawing: CadDrawing; faceId: string | null; merged: boolean } {
+  const drawing = cloneDrawing(d0);
+  let removed = 0;
+  for (const edge of Object.values(drawing.edges)) {
+    if (
+      edge.faceL &&
+      edge.faceR &&
+      edge.faceL !== edge.faceR &&
+      included.has(edge.faceL) &&
+      included.has(edge.faceR)
+    ) {
+      delete drawing.edges[edge.id];
+      removed += 1;
+    }
+  }
+  if (!removed) return { drawing: d0, faceId: null, merged: false };
+  rebuildFaces(drawing, type);
+  const faceId =
+    pickFaceAt(drawing, seed) ??
+    Object.values(drawing.faces).sort(
+      (a, b) => faceArea(drawing, b.id) - faceArea(drawing, a.id),
+    )[0]?.id ??
+    null;
+  if (faceId && drawing.faces[faceId]) {
+    drawing.faces[faceId] = {
+      ...drawing.faces[faceId]!,
+      type: source.type,
+      locked: source.locked,
+      hidden: source.hidden,
+      hydro: source.hydro,
+      name: source.name,
+      fill: source.fill,
+      circle: undefined,
+      ellipse: undefined,
+      rect: undefined,
+      spline: undefined,
+      freehand: undefined,
+      pointShape: undefined,
+      nodeEdit: undefined,
+    };
+  }
+  const cleaned = cleanupDrawing(drawing);
+  const mergedFace = faceId ? cleaned.faces[faceId] : null;
+  if (mergedFace) {
+    const previousCurved = new Set(source.nodeEdit?.curvedVertexIds ?? []);
+    const sourceWasCurved = Boolean(source.circle || source.ellipse || source.spline || source.freehand);
+    const curvedVertexIds = faceVertices(cleaned, mergedFace.id)
+      .filter((vertex) =>
+        sourceWasCurved ||
+        previousCurved.has(vertex.id) ||
+        pointNearPolyline(vertex, curvedPath, Math.max(1e-5, curvedTolerance)))
+      .map((vertex) => vertex.id);
+    mergedFace.nodeEdit = { curvedVertexIds };
+    clearFaceGeometryConstraints(cleaned, mergedFace);
+  }
+  return { drawing: cleaned, faceId, merged: true };
+}
+
+function newPathEdgeIds(drawing: CadDrawing, beforeEdges: Set<string>, points: Pt[], tolerance: number): Set<string> {
+  return new Set(
+    Object.values(drawing.edges)
+      .filter((edge) => {
+        if (beforeEdges.has(edge.id)) return false;
+        const a = drawing.vertices[edge.a];
+        const b = drawing.vertices[edge.b];
+        return Boolean(a && b && pointNearPolyline(a, points, tolerance) && pointNearPolyline(b, points, tolerance));
+      })
+      .map((edge) => edge.id),
+  );
+}
+
+function attachOpenDrawnPath(
+  baseDrawing: CadDrawing,
+  sourcePoints: Pt[],
+  type: RegionType,
+  attachTolerance: number,
+  pathTolerance: number,
+): FreehandStrokeResult | null {
+  if (sourcePoints.length < 2) return null;
+  const startHit = nearestClosedFaceBoundary(baseDrawing, sourcePoints[0]!, attachTolerance);
+  const endHit = nearestClosedFaceBoundary(baseDrawing, sourcePoints[sourcePoints.length - 1]!, attachTolerance);
+  const directlyAttached =
+    startHit && endHit && startHit.faceId === endHit.faceId && isClosedBoundaryFace(baseDrawing.faces[startHit.faceId]!)
+      ? startHit.faceId
+      : null;
+  const attachment = findFreehandAttachment(baseDrawing, sourcePoints, attachTolerance);
+  const openTarget = attachment?.faceId ?? directlyAttached;
+  if (!openTarget) return null;
+  const points = (attachment?.points ?? sourcePoints).map((point) => ({ ...point }));
+  if (points.length < 2) return null;
+  points[0] = { ...(attachment ? attachment.points[0]! : startHit!.pt) };
+  points[points.length - 1] = { ...(attachment ? attachment.points[attachment.points.length - 1]! : endHit!.pt) };
+
+  const source = structuredClone(baseDrawing.faces[openTarget]!) as CadFace;
+  const targetPolygon = facePoints(baseDrawing, openTarget);
+  const seed = faceInteriorSample(baseDrawing, openTarget);
+  const base = materializeFreehandTarget(baseDrawing, openTarget);
+  const beforeEdges = new Set(Object.keys(base.edges));
+  const divided = addChain(base, points, false, type, false);
+  const insideTarget = new Set(
+    Object.values(divided.faces)
+      .filter((face) => pointInPoly(faceInteriorSample(divided, face.id), targetPolygon))
+      .map((face) => face.id),
+  );
+  const strokeEdgeIds = newPathEdgeIds(divided, beforeEdges, points, Math.max(1e-5, pathTolerance));
+  const candidate = Object.values(divided.faces)
+    .filter((face) => !insideTarget.has(face.id))
+    .map((face) => ({ face, score: face.outer.reduce((sum, half) => sum + (strokeEdgeIds.has(half.e) ? 1 : 0), 0) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || faceArea(divided, b.face.id) - faceArea(divided, a.face.id))[0]?.face;
+  if (!candidate) return null;
+  const merged = mergeFreehandCells(
+    divided,
+    new Set([...insideTarget, candidate.id]),
+    type,
+    seed,
+    source,
+    points,
+    Math.max(1e-5, pathTolerance * 2),
+  );
+  return merged.merged
+    ? { drawing: merged.drawing, faceId: merged.faceId, closed: false, attached: true }
+    : null;
+}
+
+/**
+ * Finish a freehand gesture. A near-start endpoint creates a filled figure.
+ * A stroke whose two ends land on the same figure grows that figure and
+ * removes the shared internal boundary.
+ */
+export function addFreehandStroke(
+  d0: CadDrawing,
+  raw: Pt[],
+  type: RegionType,
+  options: {
+    closeTolerance?: number;
+    attachTolerance?: number;
+    smoothTolerance?: number;
+  } = {},
+): FreehandStrokeResult {
+  if (raw.length < 2) {
+    return { drawing: cloneDrawing(d0), faceId: null, closed: false, attached: false };
+  }
+  const closeTolerance = Math.max(1e-4, options.closeTolerance ?? 0.2);
+  const attachTolerance = Math.max(1e-4, options.attachTolerance ?? closeTolerance);
+  const smoothTolerance = Math.max(1e-4, options.smoothTolerance ?? closeTolerance * 0.12);
+  const connected = collectConnectedFreehandStroke(d0, raw, attachTolerance);
+  const baseDrawing = connected.drawing;
+  let sourcePoints = connected.points;
+  const closed =
+    sourcePoints.length >= 3 &&
+    dist(sourcePoints[0]!, sourcePoints[sourcePoints.length - 1]!) <= closeTolerance;
+  const startHit = nearestClosedFaceBoundary(baseDrawing, sourcePoints[0]!, attachTolerance);
+  const endHit = nearestClosedFaceBoundary(
+    baseDrawing,
+    sourcePoints[sourcePoints.length - 1]!,
+    attachTolerance,
+  );
+  const hitFace = startHit ? baseDrawing.faces[startHit.faceId] : null;
+  const hitFaceClosed = Boolean(hitFace && isClosedBoundaryFace(hitFace));
+  const attachedTarget =
+    startHit && endHit && startHit.faceId === endHit.faceId && hitFaceClosed ? startHit.faceId : null;
+  const attachment = closed ? null : findFreehandAttachment(baseDrawing, sourcePoints, attachTolerance);
+  if (attachment) sourcePoints = attachment.points;
+  let points = smoothFreehandPoints(sourcePoints, smoothTolerance, closed);
+  if (points.length < 2 || (closed && points.length < 3)) {
+    return { drawing: cloneDrawing(d0), faceId: null, closed, attached: false };
+  }
+
+  if (closed) {
+    const contactHit = nearestFreehandContact(baseDrawing, sourcePoints, attachTolerance);
+    if (contactHit) {
+      points = insertClosedContact(points, contactHit.pt, Math.max(1e-5, smoothTolerance));
+    }
+    const targetId = attachedTarget ?? contactHit?.faceId ?? null;
+    if (!targetId) {
+      const before = new Set(Object.values(baseDrawing.faces).map(faceBoundaryKey));
+      const drawing = addChain(baseDrawing, points, true, type, false);
+      const faceId =
+        Object.values(drawing.faces)
+          .filter((face) => !before.has(faceBoundaryKey(face)))
+          .filter((face) => pointInPoly(faceInteriorSample(drawing, face.id), points))
+          .sort((a, b) => faceArea(drawing, b.id) - faceArea(drawing, a.id))[0]?.id ?? null;
+      if (faceId && drawing.faces[faceId]) {
+        drawing.faces[faceId]!.freehand = {
+          pts: points.map((point) => ({ ...point })),
+          closed: true,
+        };
+      }
+      return { drawing, faceId, closed: true, attached: false };
+    }
+    const source = structuredClone(baseDrawing.faces[targetId]!) as CadFace;
+    const targetPolygon = facePoints(baseDrawing, targetId);
+    const seed = faceInteriorSample(baseDrawing, targetId);
+    const base = materializeFreehandTarget(baseDrawing, targetId);
+    const divided = addChain(base, points, true, type, false);
+    const included = new Set(
+      Object.values(divided.faces)
+        .filter((face) => {
+          const sample = faceInteriorSample(divided, face.id);
+          return pointInPoly(sample, targetPolygon) || pointInPoly(sample, points);
+        })
+        .map((face) => face.id),
+    );
+    const merged = mergeFreehandCells(
+      divided,
+      included,
+      type,
+      seed,
+      source,
+      [...points, points[0]!],
+      Math.max(1e-5, smoothTolerance * 0.5),
+    );
+    if (merged.merged) {
+      return { drawing: merged.drawing, faceId: merged.faceId, closed: true, attached: true };
+    }
+    const fallbackId = pickFaceAt(divided, seed) ?? null;
+    return { drawing: divided, faceId: fallbackId, closed: true, attached: false };
+  }
+
+  const mergedOpen = attachOpenDrawnPath(
+    baseDrawing,
+    points,
+    type,
+    attachTolerance,
+    Math.max(1e-5, smoothTolerance * 0.15),
+  );
+  if (mergedOpen) return mergedOpen;
+
+  const drawing = cloneDrawing(baseDrawing);
+  const faceId = nid("f");
+  drawing.faces[faceId] = {
+    id: faceId,
+    type,
+    outer: [],
+    holes: [],
+    locked: false,
+    hidden: false,
+    freehand: { pts: points.map((point) => ({ ...point })), closed: false },
+  };
+  return { drawing, faceId, closed: false, attached: false };
+}
+
+/** Finish an open spline and union its outside excursion with a touched figure. */
+export function addSplineStroke(
+  d0: CadDrawing,
+  controls: Pt[],
+  type: RegionType,
+  options: { attachTolerance?: number; samples?: number } = {},
+): FreehandStrokeResult {
+  if (controls.length < 2) return { drawing: cloneDrawing(d0), faceId: null, closed: false, attached: false };
+  const attachTolerance = Math.max(1e-4, options.attachTolerance ?? 0.2);
+  const continuation = nearestOpenSplineEndpoint(d0, controls[0]!, attachTolerance);
+  if (continuation) {
+    const source = d0.faces[continuation.faceId];
+    const stored = source?.spline?.pts;
+    if (source?.spline && stored?.length) {
+      const existing = continuation.endpoint === "end"
+        ? stored.map((point) => ({ ...point }))
+        : stored.map((point) => ({ ...point })).reverse();
+      const extension = controls.map((point) => ({ ...point }));
+      extension[0] = { ...existing[existing.length - 1]! };
+      let joined = [...existing, ...extension.slice(1)];
+      const closes =
+        joined.length >= 3 &&
+        dist(joined[0]!, joined[joined.length - 1]!) <= attachTolerance;
+      if (closes) joined = joined.slice(0, -1);
+      const drawing = updateSpline(d0, continuation.faceId, joined, closes);
+      const closed = Boolean(drawing.faces[continuation.faceId]?.spline?.closed);
+      return {
+        drawing,
+        faceId: continuation.faceId,
+        closed,
+        attached: drawing !== d0,
+      };
+    }
+  }
+  const curve = catmullRom(controls, Math.max(4, options.samples ?? 8), false);
+  const merged = attachOpenDrawnPath(d0, curve, type, attachTolerance, Math.max(1e-5, attachTolerance * 0.01));
+  if (merged) return merged;
+  const before = new Set(Object.keys(d0.faces));
+  const drawing = addSpline(d0, controls, false, type);
+  const faceId = Object.keys(drawing.faces).find((id) => !before.has(id)) ?? null;
+  return { drawing, faceId, closed: false, attached: false };
+}
+
 export function addPlant(d0: CadDrawing, kind: "tree" | "shrub", p: Pt, r = kind === "tree" ? 2 : 0.8): CadDrawing {
   const d = cloneDrawing(d0);
   d.plants = { ...(d.plants ?? {}) };
@@ -1831,6 +3218,7 @@ export function pickFaceAt(d: CadDrawing, p: Pt): string | null {
   let bestA = Infinity;
   for (const f of Object.values(d.faces)) {
     if (f.hidden) continue;
+    if ((f.spline && !f.spline.closed) || (f.freehand && !f.freehand.closed)) continue;
     const ls = d.layers?.[layerForType(f.type)];
     if (ls && ls.visible === false) continue;
     if (pointInPoly(p, facePoints(d, f.id))) {
@@ -1853,6 +3241,7 @@ export function pickCandidates(
   const faces: { kind: "face"; id: string; d: number }[] = [];
   for (const f of Object.values(d.faces)) {
     if (f.hidden) continue;
+    if ((f.spline && !f.spline.closed) || (f.freehand && !f.freehand.closed)) continue;
     const ls = d.layers?.[layerForType(f.type)];
     if (ls && ls.visible === false) continue;
     if (pointInPoly(p, facePoints(d, f.id))) faces.push({ kind: "face", id: f.id, d: Math.sqrt(Math.max(0, faceArea(d, f.id))) });
@@ -1891,6 +3280,37 @@ export function ensureRectMeta(d0: CadDrawing, faceId: string): CadDrawing {
   if (!r) return d0;
   const d = cloneDrawing(d0);
   writeRectMeta(d, faceId, r);
+  return d;
+}
+
+/** True when stored rectangle metadata still describes the face's real vertices. */
+export function rectMetaMatchesFace(d: CadDrawing, faceId: string): boolean {
+  const f = d.faces[faceId];
+  if (!f?.rect) return false;
+  const verts = faceVertices(d, faceId);
+  if (verts.length !== 4) return false;
+  const corners = rectWorldCorners(f.rect);
+  let best = Infinity;
+  for (let start = 0; start < 4; start++) {
+    for (const dir of [1, -1]) {
+      let worst = 0;
+      for (let i = 0; i < 4; i++) {
+        const corner = corners[(((start + i * dir) % 4) + 4) % 4]!;
+        worst = Math.max(worst, dist(verts[i]!, corner));
+      }
+      best = Math.min(best, worst);
+    }
+  }
+  const scale = Math.max(1, Math.abs(f.rect.w), Math.abs(f.rect.h));
+  return best <= Math.max(1e-6, scale * 1e-5);
+}
+
+/** Remove stale rectangle metadata without changing any contour vertex. */
+export function clearInvalidRectMeta(d0: CadDrawing, faceId: string): CadDrawing {
+  const f = d0.faces[faceId];
+  if (!f?.rect || rectMetaMatchesFace(d0, faceId)) return d0;
+  const d = cloneDrawing(d0);
+  delete d.faces[faceId]?.rect;
   return d;
 }
 
@@ -2006,6 +3426,15 @@ export function fromPolygons(geoms: Geom[]): CadDrawing {
   for (const g of geoms) {
     if (g.type === "guide" || g.hidden) continue;
     const type = KIND_MAP[g.kind] ?? (g.kind as RegionType) ?? "other";
+    if (g.ellipse) {
+      d = addIsolatedLoop(
+        d,
+        ellipseWorldPts(g.ellipse.cx, g.ellipse.cy, g.ellipse.rx, g.ellipse.ry, g.ellipse.rot ?? 0, 96),
+        type,
+        { ellipse: { ...g.ellipse } },
+      );
+      continue;
+    }
     if (g.type === "circle" && g.points[0] && g.radius) {
       d = addCircle(d, g.points[0], g.radius, type);
       continue;
@@ -2031,6 +3460,25 @@ export function toPolygons(d: CadDrawing): Geom[] {
     const ls = d.layers?.[layerForType(f.type)];
     if (ls && ls.visible === false) continue;
     const kind = (["lawn", "bed", "path", "hardscape"].includes(f.type) ? f.type : f.type === "building" || f.type === "no_irrigation" ? "hardscape" : f.type === "pool" || f.type === "water" ? "path" : "bed") as PolyKind;
+    if (f.spline || f.freehand) {
+      const points = facePoints(d, f.id);
+      const closed = f.spline?.closed ?? f.freehand?.closed ?? false;
+      if (points.length >= 2) {
+        geoms.push({
+          id: f.id,
+          type: closed ? "poly" : "line",
+          kind,
+          cadType: f.type,
+          points,
+          closed,
+          locked: f.locked,
+          hidden: f.hidden,
+          fill: f.fill,
+          name: f.name,
+        });
+      }
+      continue;
+    }
     if (f.circle) {
       geoms.push({
         id: f.id,

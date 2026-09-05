@@ -655,12 +655,12 @@ export function categoryPhoto(id: Family | "all"): string | null {
     spray: "group-spray",
     prostrip: "group-prostrip",
   };
-  return bundledPhoto(map[id]) ?? `/catalog/${map[id] ?? "MP2000"}.png?v=7`;
+  return bundledPhoto(map[id]) ?? `/catalog/${map[id] ?? "MP2000"}.png?v=9`;
 }
 
 export function catalogPhoto(item: CatalogItem): string {
   return (
     bundledPhoto(item.id, item.sku, item.series.replace(/\s+/g, ""), item.series.replace(/\s+/g, "-")) ??
-    `/catalog/${item.id}.png?v=8`
+    `/catalog/${item.id}.png?v=9`
   );
 }

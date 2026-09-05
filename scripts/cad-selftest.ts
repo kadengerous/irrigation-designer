@@ -5,8 +5,10 @@ import {
   addEllipse,
   faceArea,
   isInternalEdge,
+  isTriangleFace,
   deleteBoundary,
   addCircle,
+  addTriangle,
   setEdgeBulge,
   bulgeForRadius,
   tessellateEdge,
@@ -22,6 +24,11 @@ import {
   rotateFace,
   rectWorldCorners,
   faceCentroid,
+  setTriangleSize,
+  scaleFaceAbout,
+  setTriangleSides,
+  triangleFromBounds,
+  triangleMetrics,
 } from "../src/lib/cad/engine";
 import { dist, snapDeltaToAngle } from "../src/lib/geometry";
 import { parseCadInput } from "../src/lib/cad/parse";
@@ -31,6 +38,36 @@ const faces = Object.values(a.faces);
 if (!faces.length) throw new Error("no faces after rect");
 const area = faces.reduce((s, f) => s + faceArea(a, f.id), 0);
 if (Math.abs(area - 60) > 0.05) throw new Error("rect area " + area);
+
+const triD = addTriangle(emptyDrawing(), triangleFromBounds({ x: 0, y: 0 }, { x: 10, y: 6 }), "lawn");
+const triId = Object.keys(triD.faces)[0]!;
+if (!isTriangleFace(triD, triId)) throw new Error("triangle topology was not recognized");
+const triWithStaleRect = {
+  ...triD,
+  faces: {
+    ...triD.faces,
+    [triId]: { ...triD.faces[triId]!, rect: { x: 0, y: 0, w: 10, h: 6, rot: 0 } },
+  },
+};
+if (!isTriangleFace(triWithStaleRect, triId)) throw new Error("stale rectangle metadata changed triangle classification");
+const tri0 = triangleMetrics(facePoints(triD, triId));
+if (!tri0 || Math.abs(tri0.width - 10) > 1e-9 || Math.abs(tri0.height - 6) > 1e-9) throw new Error("triangle bounds " + JSON.stringify(tri0));
+if (Math.abs(faceArea(triD, triId) - 30) > 0.05) throw new Error("triangle area " + faceArea(triD, triId));
+const triSized = setTriangleSize(triD, triId, 8, 5);
+const tri1 = triangleMetrics(facePoints(triSized, triId));
+if (!tri1 || Math.abs(tri1.width - 8) > 1e-6 || Math.abs(tri1.height - 5) > 1e-6) throw new Error("triangle resize " + JSON.stringify(tri1));
+if (Math.abs(faceArea(triSized, triId) - 20) > 0.05) throw new Error("triangle resized area " + faceArea(triSized, triId));
+const triScaled = scaleFaceAbout(triD, triId, 1.5);
+const tri2 = triangleMetrics(facePoints(triScaled, triId));
+if (!tri2 || Math.abs(tri2.width - 15) > 1e-6 || Math.abs(tri2.height - 9) > 1e-6) throw new Error("triangle scale " + JSON.stringify(tri2));
+if (dist(tri2.center, tri0.center) > 1e-9) throw new Error("triangle scale moved center");
+if (Math.abs(faceArea(triScaled, triId) / faceArea(triD, triId) - 2.25) > 1e-6) throw new Error("triangle scale area k²");
+const triSides = setTriangleSides(triD, triId, 8, 6, 5);
+const triSidesM = triangleMetrics(facePoints(triSides, triId));
+if (!triSidesM || Math.abs(triSidesM.width - 8) > 1e-6 || Math.abs(triSidesM.leftSide - 6) > 1e-6 || Math.abs(triSidesM.rightSide - 5) > 1e-6) {
+  throw new Error("triangle sides " + JSON.stringify(triSidesM));
+}
+if (dist(triSidesM.center, tri0.center) > 1e-9) throw new Error("triangle sides moved center");
 
 const b = addChain(
   a,

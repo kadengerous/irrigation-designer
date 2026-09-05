@@ -51,7 +51,7 @@ export function parseProjectFile(text: string): ProjectFilePayload {
     showGrid: Boolean(o.showGrid),
     snapOn: o.snapOn !== false,
     snapGridOn: Boolean(o.snapGridOn),
-    gridStep: typeof o.gridStep === "number" ? o.gridStep : 1,
+    gridStep: typeof o.gridStep === "number" ? o.gridStep : 0.5,
     measureUnit: typeof o.measureUnit === "string" ? o.measureUnit : "m",
     activeZoneId: typeof o.activeZoneId === "number" ? o.activeZoneId : 1,
   };

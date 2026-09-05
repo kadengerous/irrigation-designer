@@ -2,10 +2,12 @@
 
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode, type RefObject } from "react";
 import { createPortal } from "react-dom";
+import * as Popover from "@radix-ui/react-popover";
 import {
   ChevronLeft,
   ChevronRight,
   Circle,
+  Check,
   Copy,
   Crosshair,
   Droplets,
@@ -17,8 +19,10 @@ import {
   Lock,
   Unlock,
   Grid3x3,
+  Hexagon,
   ImageDown,
   LayoutGrid,
+  Layers,
   Magnet,
   Maximize2,
   Menu,
@@ -58,9 +62,9 @@ import { exportDxf, exportEstimateExcel, exportEstimatePdf, exportEstimateWord, 
 import { downloadProjectFile, fileStem, parseProjectFile, toProjectFile } from "@/lib/project-file";
 import { downloadSourceZip } from "@/lib/download-source";
 import { headFlow, runTimeMin, totalAreaPrecip } from "@/lib/flow";
-import { dist, fmt1, fmtM, headingDeg, parseMeasureUnit, pointInPoly, polygonArea, toMeters, uid, type Pt } from "@/lib/geometry";
+import { closedPathSideStarts, dist, fmt1, fmtM, headingDeg, parseMeasureUnit, pointInPoly, polygonArea, toMeters, uid, type Pt } from "@/lib/geometry";
 import { parseCadInput } from "@/lib/cad/parse";
-import { drawingOrMigrate, faceArea, faceCentroid, faceLayerNumber, facePerimeter, facePoints, headInsideFace, isInternalEdge, rectWorldCorners } from "@/lib/cad/engine";
+import { arcLength, drawingOrMigrate, faceArea, faceCentroid, faceEdges, faceLayerNumber, facePerimeter, facePoints, headInsideFace, isDrawnCurveFace, isInternalEdge, isTriangleFace, rectMetaMatchesFace, rectWorldCorners, setFaceSideLength, triangleMetrics } from "@/lib/cad/engine";
 import { CAD_LAYERS, FACE_FILLS, REGION_FILL, layerForType } from "@/lib/cad/types";
 import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, recommendPump } from "@/lib/hydro";
 import { type Head, type Project, zoneColor } from "@/lib/project-types";
@@ -68,6 +72,9 @@ import { isNamed, useProject } from "@/lib/project-store";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CanvasHost } from "@/components/designer/canvas-host";
+import { MobilePreview } from "@/components/designer/mobile-preview";
+import { MobileGridButton } from "@/components/designer/mobile-grid-button";
+import { MobileLayers, MobileSheet, selectedObjectKey, usePhoneWorkspace, useWorkspaceViewport, type MobilePanel } from "@/components/designer/mobile-workspace";
 
 const MEASURE_SUBS: { id: "measure" | "guide"; key: string }[] = [
   { id: "measure", key: "measure" },
@@ -97,12 +104,34 @@ function IconCurve() {
     </svg>
   );
 }
+function IconPointShape() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="size-5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 17 8 7l7-2 5 8" />
+      <path d="M20 13 4 17" strokeDasharray="2.5 2.5" />
+      <circle cx="4" cy="17" r="1.6" fill="currentColor" stroke="none" />
+      <circle cx="8" cy="7" r="1.6" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="5" r="1.6" fill="currentColor" stroke="none" />
+      <circle cx="20" cy="13" r="1.6" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 const DRAW_SUBS: { id: import("@/lib/project-types").DrawSub; key: string; icon: ReactNode }[] = [
   { id: "line", key: "drawLine", icon: <Minus className="size-5" strokeWidth={1.4} /> },
+  { id: "polygon", key: "drawPointShape", icon: <IconPointShape /> },
   { id: "rect", key: "drawRect", icon: <Square className="size-5" strokeWidth={1.4} /> },
   { id: "circle", key: "drawCircle", icon: <Circle className="size-5" strokeWidth={1.4} /> },
   { id: "triangle", key: "drawTriangle", icon: <Triangle className="size-5" strokeWidth={1.4} /> },
+  { id: "hexagon", key: "drawHexagon", icon: <Hexagon className="size-5" strokeWidth={1.4} /> },
   { id: "ellipse", key: "drawEllipse", icon: <Circle className="size-5 scale-x-125" strokeWidth={1.4} /> },
   { id: "arc", key: "drawArc", icon: <IconArc /> },
   { id: "spline", key: "drawSpline", icon: <IconCurve /> },
@@ -112,6 +141,15 @@ const DRAW_SUBS: { id: import("@/lib/project-types").DrawSub; key: string; icon:
 ];
 
 const DRAW_PRIMARY = DRAW_SUBS;
+const MOBILE_EXTRA_DRAW: { id: import("@/lib/project-types").DrawSub; key: string }[] = [
+  { id: "polyline", key: "drawPolyline" }, { id: "rotrect", key: "drawRotRect" },
+  { id: "offset", key: "drawOffset" }, { id: "fillet", key: "drawFillet" },
+  { id: "chamfer", key: "drawChamfer" }, { id: "fill", key: "drawFill" },
+  { id: "trim", key: "drawTrim" }, { id: "extend", key: "drawExtend" },
+  { id: "copy", key: "drawCopy" }, { id: "array", key: "drawArray" },
+  { id: "polar", key: "drawPolar" }, { id: "hole", key: "drawHole" },
+  { id: "match", key: "drawMatch" }, { id: "path", key: "drawPath" },
+];
 
 const DRAW_KINDS: { id: import("@/lib/cad/types").RegionType; key: string }[] = [
   { id: "lawn", key: "lawn" },
@@ -133,14 +171,12 @@ const DRAW_KINDS: { id: import("@/lib/cad/types").RegionType; key: string }[] = 
 ];
 
 const GRID_STEPS = [
-  { id: 0.005, label: "0,5 см" },
-  { id: 0.01, label: "1 см" },
-  { id: 0.05, label: "5 см" },
-  { id: 0.1, label: "10 см" },
-  { id: 0.2, label: "20 см" },
-  { id: 0.5, label: "50 см" },
-  { id: 0.8, label: "80 см" },
-  { id: 1, label: "100 см" },
+  { id: 0.1, label: "0,10 м" },
+  { id: 0.25, label: "0,25 м" },
+  { id: 0.5, label: "0,50 м" },
+  { id: 1, label: "1,00 м" },
+  { id: 2, label: "2,00 м" },
+  { id: 5, label: "5,00 м" },
 ] as const;
 
 function useT() {
@@ -149,6 +185,20 @@ function useT() {
 }
 
 export function DesignerApp() {
+  const isPhone = usePhoneWorkspace();
+  useWorkspaceViewport();
+  const [mobilePanel, setMobilePanel] = useState<MobilePanel>(null);
+  const [mobilePreview, setMobilePreview] = useState(false);
+  const [mobileLayersVisible, setMobileLayersVisible] = useState(false);
+  useEffect(() => useProject.subscribe((state, previous) => {
+    // Selection actions create a new selection array even when the same face is tapped.
+    // Geometry/viewport updates must not undo a manual visibility toggle.
+    if (state.selectedPolyIds !== previous.selectedPolyIds || state.selectedEdgeId !== previous.selectedEdgeId || state.cadEditId !== previous.cadEditId) {
+      setMobileLayersVisible(Boolean(state.selectedPolyId || state.selectedEdgeId || state.cadEditId));
+    }
+  }), []);
+  const [mobileWorkspaceMode, setMobileWorkspaceMode] = useState<"drawing" | "irrigation">("drawing");
+  const mobileInspectTarget = useRef<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const exportFn = useRef<(() => string | null) | null>(null);
   const [scalePair, setScalePair] = useState<{ a: { x: number; y: number }; b: { x: number; y: number } } | null>(null);
@@ -178,6 +228,8 @@ export function DesignerApp() {
   }, [sourceOpen]);
   const [issuesOpen, setIssuesOpen] = useState(false);
   const [gridOpen, setGridOpen] = useState(false);
+  const [customGridOpen, setCustomGridOpen] = useState(false);
+  const [customGridDraft, setCustomGridDraft] = useState("");
   const [nameAsk, setNameAsk] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
   const [deleteAsk, setDeleteAsk] = useState<{ id: string; name: string } | null>(null);
@@ -244,6 +296,7 @@ export function DesignerApp() {
     document.documentElement.dataset.uiSize = uiSize;
   }, [themeId, buttonStyle, accent, themeAccent, themeAccent2, themeGradient, uiSize]);
   useEffect(() => {
+    if (isPhone) return;
     if (!libInfo && !catInfo) return;
     let armed = false;
     const arm = window.setTimeout(() => {
@@ -265,7 +318,7 @@ export function DesignerApp() {
       window.clearTimeout(arm);
       window.removeEventListener("pointerdown", close, true);
     };
-  }, [libInfo, catInfo]);
+  }, [libInfo, catInfo, isPhone]);
   const activeZoneId = useProject((s) => s.activeZoneId);
   const saveState = useProject((s) => s.saveState);
   const past = useProject((s) => s.past);
@@ -274,7 +327,6 @@ export function DesignerApp() {
   const [kindsOpen, setKindsOpen] = useState(false);
   const future = useProject((s) => s.future);
   const snapOn = useProject((s) => s.snapOn);
-  const orthoOn = useProject((s) => s.orthoOn);
   const arrayCount = useProject((s) => s.arrayCount);
   const mergePrompt = useProject((s) => s.mergePrompt);
   const snapGridOn = useProject((s) => s.snapGridOn);
@@ -286,6 +338,20 @@ export function DesignerApp() {
     setCleanSig(`${project.id}:${project.updatedAt}:${project.name}`);
   }, [project.id]);
   const draft = useProject((s) => s.draft);
+  useEffect(() => {
+    if (!isPhone) return;
+    const selectionKey = selectedObjectKey({ selectedPolyId, selectedId, selectedEdgeId, cadEditId });
+    if (mobileInspectTarget.current !== selectionKey) mobileInspectTarget.current = null;
+    const editing = (cadEditId && !selectedId) || (selectionKey && mobileInspectTarget.current === selectionKey);
+    const constructing = (tool === "draw" && drawSub !== "none") || tool === "measure" || tool === "scale";
+    if (selectedId || tool === "place") setMobileWorkspaceMode("irrigation");
+    else if (selectedPolyId || selectedEdgeId || constructing) setMobileWorkspaceMode("drawing");
+    setMobilePanel((current) => {
+      // Only interface state changes here; selecting never enters geometry editing.
+      if (editing || constructing || selectedId) return "properties";
+      return current === "properties" ? null : current;
+    });
+  }, [isPhone, cadEditId, selectedPolyId, selectedId, selectedEdgeId, tool, drawSub]);
   const library = useProject((s) => s.projects);
   const lastSeg =
     draft.points.length >= 2
@@ -493,6 +559,7 @@ export function DesignerApp() {
           else if (parsed.ok && parsed.kind === "angle") st.rotateSelectedFace(parsed.deg);
           return;
         }
+        if (st.drawSub === "line") return;
         if (st.drawSub === "polygon") st.closePolygon();
         else st.finishOpenDraw();
       }
@@ -784,6 +851,7 @@ export function DesignerApp() {
         /* ignore */
       }
       setLibInfo(null);
+      if (isPhone) setMobilePanel(null);
       setCatalogGhost({ id: d.id, x: d.lastX, y: d.lastY });
     }, 380);
 
@@ -812,7 +880,7 @@ export function DesignerApp() {
     };
 
     let finished = false;
-    const finish = (clientX?: number, clientY?: number) => {
+    const finish = (clientX?: number, clientY?: number, cancelled = false) => {
       if (finished) return;
       finished = true;
       window.clearTimeout(holdTimer);
@@ -821,13 +889,19 @@ export function DesignerApp() {
       window.removeEventListener("pointercancel", onCancel, true);
       window.removeEventListener("touchmove", onTouchMove, true);
       window.removeEventListener("touchend", onTouchEnd, true);
-      window.removeEventListener("touchcancel", onTouchEnd, true);
+      window.removeEventListener("touchcancel", onTouchCancel, true);
       const d = catalogDrag.current;
       catalogDrag.current = null;
       setCatalogGhost(null);
-      if (!d?.hold) return;
+      if (!d?.hold || cancelled) return;
       setLibInfo(null);
-      dropCatalogAt(clientX || d.lastX, clientY || d.lastY, d.id);
+      const x = clientX ?? d.lastX;
+      const y = clientY ?? d.lastY;
+      const canvas = document.querySelector("[data-design-canvas]")?.getBoundingClientRect();
+      if (canvas && x >= canvas.left && x <= canvas.right && y >= canvas.top && y <= canvas.bottom) {
+        dropCatalogAt(x, y, d.id);
+        if (isPhone) useProject.getState().setCatalogVisible(false);
+      }
     };
 
     const onUp = (ev: PointerEvent) => {
@@ -835,14 +909,10 @@ export function DesignerApp() {
       finish(ev.clientX, ev.clientY);
     };
     const onCancel = (ev: PointerEvent) => {
-      const d = catalogDrag.current;
-      if (d?.hold) {
-        ev.preventDefault();
-        trackFrom(ev.clientX, ev.clientY);
-        return;
-      }
-      finish();
+      if (catalogDrag.current?.pointerId !== ev.pointerId) return;
+      finish(undefined, undefined, true);
     };
+    const onTouchCancel = () => finish(undefined, undefined, true);
     const onTouchEnd = (ev: TouchEvent) => {
       const d = catalogDrag.current;
       if (!d?.hold) {
@@ -858,31 +928,60 @@ export function DesignerApp() {
     window.addEventListener("pointercancel", onCancel, { capture: true });
     window.addEventListener("touchmove", onTouchMove, { capture: true, passive: false });
     window.addEventListener("touchend", onTouchEnd, { capture: true });
-    window.addEventListener("touchcancel", onTouchEnd, { capture: true });
+    window.addEventListener("touchcancel", onTouchCancel, { capture: true });
   };
 
+  const editDrawing = drawingOrMigrate(project);
+  const selectedEdge = selectedEdgeId ? editDrawing.edges[selectedEdgeId] : null;
+  const selectedEdgeA = selectedEdge ? editDrawing.vertices[selectedEdge.a] : null;
+  const selectedEdgeB = selectedEdge ? editDrawing.vertices[selectedEdge.b] : null;
+  const selectedEdgeLen =
+    selectedEdgeA && selectedEdgeB
+      ? Math.hypot(selectedEdgeB.x - selectedEdgeA.x, selectedEdgeB.y - selectedEdgeA.y)
+      : null;
   const liveLen =
-    tool === "draw" && draft.points.length >= 1 && hover
+    selectedEdgeLen != null
+      ? selectedEdgeLen
+      : tool === "draw" && drawSub === "line" && draft.points.length >= 2
+      ? lastSeg
+      : tool === "draw" && draft.points.length >= 1 && hover
       ? Math.hypot(hover.x - draft.points[draft.points.length - 1]!.x, hover.y - draft.points[draft.points.length - 1]!.y)
       : lastSeg;
   const a0 = draft.points[0];
-  const editFace = cadEditId ? drawingOrMigrate(project).faces[cadEditId] : null;
-  const editPts = cadEditId ? facePoints(drawingOrMigrate(project), cadEditId) : [];
+  const editFace = cadEditId ? editDrawing.faces[cadEditId] : null;
+  const editPts = cadEditId ? facePoints(editDrawing, cadEditId) : [];
+  const editingTriangle = cadEditId ? isTriangleFace(editDrawing, cadEditId) : false;
+  const editRect = cadEditId && editFace?.rect && rectMetaMatchesFace(editDrawing, cadEditId) ? editFace.rect : null;
+  const editingDrawnCurve = Boolean(
+    cadEditId && isDrawnCurveFace(editDrawing, cadEditId),
+  );
+  const editingNodeContour = Boolean(editFace?.nodeEdit);
+  const editingFreeformFace = Boolean(
+    editFace &&
+      !editingDrawnCurve &&
+      !editingNodeContour &&
+      !editFace.circle &&
+      !editFace.ellipse &&
+      !editRect &&
+      !editingTriangle,
+  );
+  const editTriangle = editingTriangle ? triangleMetrics(editPts) : null;
   const liveWH =
-    editFace?.rect
-      ? { w: editFace.rect.w, h: editFace.rect.h }
+    editTriangle
+      ? { w: editTriangle.width, h: editTriangle.height }
+      : editRect
+      ? { w: editRect.w, h: editRect.h }
       : editFace?.ellipse
         ? { w: editFace.ellipse.rx * 2, h: editFace.ellipse.ry * 2 }
-        : editFace && !editFace.circle && editPts.length >= 3
-          ? (() => {
-              const xs = editPts.map((p) => p.x);
-              const ys = editPts.map((p) => p.y);
-              return { w: Math.max(0.01, Math.max(...xs) - Math.min(...xs)), h: Math.max(0.01, Math.max(...ys) - Math.min(...ys)) };
-            })()
-          : tool === "draw" && (drawSub === "rect" || drawSub === "ellipse") && a0 && hover
+        : tool === "draw" && (drawSub === "rect" || drawSub === "ellipse" || drawSub === "triangle" || drawSub === "hexagon") && a0 && hover
             ? { w: Math.abs(hover.x - a0.x), h: Math.abs(hover.y - a0.y) }
             : null;
   const liveR = tool === "draw" && drawSub === "circle" && a0 && hover ? Math.hypot(hover.x - a0.x, hover.y - a0.y) : null;
+  const liveTriangleSides = editTriangle
+    ? { base: editTriangle.width, height: editTriangle.height, left: editTriangle.leftSide, right: editTriangle.rightSide }
+    : drawSub === "triangle" && liveWH
+      ? { base: liveWH.w, height: liveWH.h, left: Math.hypot(liveWH.w / 2, liveWH.h), right: Math.hypot(liveWH.w / 2, liveWH.h) }
+      : null;
   const liveArc =
     tool === "draw" && drawSub === "arc" && draft.points.length >= 2 && hover
       ? (() => {
@@ -908,11 +1007,220 @@ export function DesignerApp() {
 
   const context = catalogOpen || tool === "measure" || tool === "scale" || tool === "draw";
   const activeQ = zoneFlows.map.get(activeZoneId);
+  const libraryFamily = CATEGORIES.find((category) => category.id === familyFilter)?.id ?? "all";
+  const mobileFaceId = selected ? null : cadEditId ?? selectedPolyId;
+  const mobileDrawing = drawingOrMigrate(project);
+  const mobileFace = mobileFaceId ? mobileDrawing.faces[mobileFaceId] : null;
+  const contextTitle = mobileFace ? (mobileFace.name?.trim() || t("layerN", { n: Object.keys(mobileDrawing.faces).indexOf(mobileFace.id) + 1 }))
+    : selected ? selected.catalogId : tool === "draw" ? t([...DRAW_SUBS, ...MOBILE_EXTRA_DRAW].find((s) => s.id === drawSub)?.key ?? "draw") : tool === "scale" ? t("calibrateScale") : t("measure");
+  const mobileFaceDimensions: { label: string; value: number }[] = [];
+  if (mobileFace) {
+    if (mobileFace.circle) mobileFaceDimensions.push({ label: "R", value: mobileFace.circle.r }, { label: "Ø", value: mobileFace.circle.r * 2 });
+    else if (mobileFace.ellipse) mobileFaceDimensions.push({ label: t("axisA"), value: mobileFace.ellipse.rx * 2 }, { label: t("axisB"), value: mobileFace.ellipse.ry * 2 });
+    else if (mobileFace.rect && rectMetaMatchesFace(mobileDrawing, mobileFace.id)) mobileFaceDimensions.push({ label: t("drawWidth"), value: mobileFace.rect.w }, { label: t("drawHeight"), value: mobileFace.rect.h });
+    else {
+      const curve = mobileFace.spline ?? mobileFace.freehand;
+      if (curve) {
+        const count = curve.closed ? curve.pts.length : Math.max(0, curve.pts.length - 1);
+        for (let i = 0; i < count; i++) mobileFaceDimensions.push({ label: sideLetter(i), value: dist(curve.pts[i]!, curve.pts[(i + 1) % curve.pts.length]!) });
+      } else faceEdges(mobileDrawing, mobileFace.id).forEach((edge, i) => mobileFaceDimensions.push({ label: sideLetter(i), value: arcLength(edge.a, edge.b, edge.bulge) }));
+    }
+  }
+  const chooseMobileTool = (choose: () => void) => { choose(); setMobilePanel("properties"); };
+  const contextControls = <div className={isPhone ? "mobile-context-content" : "contents"}>
+          {!isPhone && cadEditId && !catalogOpen && !draft.points.length && <CadEditBar faceId={cadEditId} />}
+          {cadEditId && editingFreeformFace && (!catalogOpen || isPhone) && !draft.points.length && (
+            <FreeformSidesPad faceId={cadEditId} />
+          )}
+          {(!catalogOpen || isPhone) &&
+            ((tool === "draw" && drawSub === "spline") ||
+              (cadEditId && editingDrawnCurve && !draft.points.length)) && (
+              <SplineLengthsPad
+                compact={isPhone}
+                faceId={cadEditId && editingDrawnCurve && !draft.points.length ? cadEditId : null}
+              />
+            )}
+          {((tool === "draw" && drawSub !== "none") || cadEditId || selectedEdgeId) &&
+            !(tool === "draw" && drawSub === "spline") &&
+            !editingFreeformFace &&
+            !editingDrawnCurve &&
+            !editingNodeContour && (
+            <DrawMeasurePad
+              compact={isPhone}
+              drawSub={
+                selectedEdgeId
+                  ? "line"
+                  : cadEditId && drawingOrMigrate(project).faces[cadEditId]?.circle
+                  ? "circle"
+                  : cadEditId && drawingOrMigrate(project).faces[cadEditId]?.ellipse
+                    ? "ellipse"
+                    : cadEditId && editingTriangle
+                      ? "triangle"
+                    : cadEditId && editRect
+                      ? "rect"
+                      : drawSub
+              }
+              liveLen={liveLen}
+              liveWH={liveWH}
+              liveTriangle={liveTriangleSides}
+              liveRot={
+                cadEditId && drawingOrMigrate(project).faces[cadEditId]?.ellipse
+                  ? (drawingOrMigrate(project).faces[cadEditId]!.ellipse!.rot ?? 0)
+                  : cadLiveRot
+              }
+              liveR={
+                cadEditId && drawingOrMigrate(project).faces[cadEditId]?.circle
+                  ? drawingOrMigrate(project).faces[cadEditId]!.circle!.r
+                  : liveR
+              }
+              liveArc={liveArc}
+              measureText={measureText}
+              cadBuf={cadBuf.current}
+              hasPoint={draft.points.length >= 1 || Boolean(cadEditId) || Boolean(selectedEdgeId)}
+              hover={hover}
+              last={draft.points[draft.points.length - 1] ?? null}
+              editFaceId={cadEditId}
+            />
+          )}
+  </div>;
+
+  const gridControls = <>
+        <Button
+          size="xs"
+          variant={snapOn ? "pressed" : "ghost"}
+          aria-label={t("magnet")}
+          aria-pressed={snapOn}
+          className="size-8 shrink-0 rounded-sm border border-tool p-0 sm:w-auto sm:border-transparent sm:px-2"
+          onClick={() => useProject.getState().setSnap(!useProject.getState().snapOn)}
+        >
+          <Magnet className="size-3.5" />
+          <span className="hidden sm:inline">{t("magnet")}</span>
+        </Button>
+        <Popover.Root modal={!isPhone} open={gridOpen} onOpenChange={setGridOpen}>
+        <div className="relative shrink-0">
+          <div className="flex items-stretch gap-1 sm:gap-0 sm:overflow-hidden sm:rounded-md sm:border sm:border-tool">
+            {isPhone ? <Popover.Anchor><MobileGridButton enabled={showGrid} open={gridOpen} label={t("grid")}
+              onToggle={() => { useProject.getState().setGrid(!showGrid); setGridOpen(!showGrid); setCustomGridOpen(false); setMobilePanel(null); setFileMenuOpen(false); }}
+              onHold={() => { setGridOpen(true); setCustomGridOpen(false); setMobilePanel(null); setFileMenuOpen(false); }} /></Popover.Anchor> : <Button
+              size="xs"
+              aria-label={t("grid")}
+              aria-pressed={showGrid}
+              variant={showGrid ? "pressed" : "ghost"}
+              className="size-8 rounded-sm border border-tool p-0 sm:w-auto sm:rounded-none sm:border-0 sm:px-2"
+              onClick={() => {
+                useProject.getState().setGrid(!showGrid);
+                setGridOpen(false);
+                setFileMenuOpen(false);
+              }}
+            >
+              <Grid3x3 />
+              <span className="hidden sm:inline">{t("grid")}</span>
+            </Button>}
+            {!isPhone && <span className="hidden w-px self-stretch bg-tool/35 sm:block" aria-hidden />}
+            {!isPhone && <Popover.Trigger asChild><Button
+              size="xs"
+              aria-label={`${t("gridStep")}: ${formatGridStep(gridStep, units.length)}`}
+              data-grid-step-trigger
+              variant={gridOpen ? "pressed" : "ghost"}
+              className="shrink-0 rounded-sm border border-tool px-2 sm:rounded-none sm:border-0"
+              onClick={() => {
+                if (isPhone) setMobilePanel(null);
+                setCustomGridOpen(false);
+                setFileMenuOpen(false);
+              }}
+            >
+              {formatGridStep(gridStep, units.length)}
+              <ChevronRight className={cn("size-3 -rotate-90 transition-transform sm:hidden", gridOpen && "rotate-90")} />
+            </Button></Popover.Trigger>}
+          </div>
+        </div>
+          <Popover.Portal>
+            <Popover.Content side={isPhone ? "bottom" : "top"} align="end" sideOffset={8} collisionPadding={8} sticky="always"
+              data-mobile={isPhone} data-custom-open={customGridOpen} aria-label={t("gridStep")}
+              className="grid-step-pop z-50 rounded-md border border-line bg-surface p-2 text-ink shadow-border"
+              onOpenAutoFocus={(e) => { if (isPhone) e.preventDefault(); }}
+              onCloseAutoFocus={(e) => { if (isPhone) e.preventDefault(); }}
+              onInteractOutside={(e) => { if (isPhone) e.preventDefault(); }}
+              onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()}
+              onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+              <div className="grid-step-heading flex items-center justify-between gap-2">
+                <p className="px-1 text-sm font-semibold">{t("gridStep")}</p>
+                <Popover.Close asChild><button type="button" className="mobile-icon-button" aria-label="Закрыть шаг сетки"><X size={20} /></button></Popover.Close>
+              </div>
+              <div className="flex flex-col gap-0.5">
+                {GRID_STEPS.map((g) => (
+                  <button
+                    key={g.id}
+                    type="button"
+                    aria-pressed={gridStep === g.id}
+                    className={cn(
+                      "grid-step-option h-8 rounded-sm px-2 text-left text-xs font-medium text-ink",
+                    )}
+                    onClick={() => {
+                      useProject.getState().setGridStep(g.id);
+                      if (!isPhone) useProject.getState().setGrid(true);
+                      setCustomGridOpen(false);
+                    }}
+                  >
+                    <span className="inline-block w-4" aria-hidden>{gridStep === g.id ? "●" : ""}</span>
+                    {g.label}
+                  </button>
+                ))}
+                <button
+                  type="button"
+                  aria-pressed={customGridOpen}
+                  className={cn(
+                    "grid-step-option h-8 rounded-sm px-2 text-left text-xs font-medium",
+                    customGridOpen ? "bg-btn-soft text-ink" : "text-ink hover:bg-btn-soft",
+                  )}
+                  onClick={() => {
+                    setCustomGridDraft(String(Number(fromMeters(gridStep, units.length).toFixed(3))).replace(".", ","));
+                    setCustomGridOpen((open) => !open);
+                  }}
+                >
+                  <span className="inline-block w-4" aria-hidden />
+                  {t("pal_custom")}…
+                </button>
+                {customGridOpen && (
+                  <form
+                    className="mt-1 flex items-center gap-1 border-t border-line pt-2"
+                    onSubmit={(event) => {
+                      event.preventDefault();
+                      const value = Number(customGridDraft.trim().replace(",", "."));
+                      const meters = toMetersLen(value, units.length);
+                      if (!Number.isFinite(meters) || meters <= 0) return;
+                      useProject.getState().setGridStep(meters);
+                      if (!isPhone) useProject.getState().setGrid(true);
+                      setCustomGridOpen(false);
+                    }}
+                  >
+                    <label className="sr-only" htmlFor="custom-grid-step">{t("gridStep")}</label>
+                    <input
+                      id="custom-grid-step"
+                      type="text"
+                      inputMode="decimal"
+                      value={customGridDraft}
+                      onChange={(event) => setCustomGridDraft(event.target.value)}
+                      className="h-8 min-w-0 flex-1 rounded-sm border border-line bg-bg px-2 text-xs outline-none focus:border-btn"
+                      autoFocus
+                    />
+                    <span className="shrink-0 text-[10px] text-muted">{lenLabel(units.length)}</span>
+                    <button type="submit" aria-label="Применить шаг сетки" className="h-8 rounded-sm bg-btn px-2 text-[10px] font-semibold text-btn-fg">
+                      ✓
+                    </button>
+                  </form>
+                )}
+              </div>
+            </Popover.Content>
+          </Popover.Portal>
+        </Popover.Root>
+  </>;
 
   return (
-    <div className="app-shell bg-bg text-ink">
+    <div className="app-shell bg-bg text-ink" data-mobile={isPhone} data-preview={isPhone && mobilePreview}>
+      {isPhone && mobilePreview && <MobilePreview onBack={() => setMobilePreview(false)} />}
       <Toaster position="bottom-center" />
-      {(fileMenuOpen || gridOpen) && (
+      {fileMenuOpen && (
         <div
           className="fixed inset-0 z-20"
           onClick={() => {
@@ -931,6 +1239,7 @@ export function DesignerApp() {
             className="max-sm:size-10"
             aria-label={t("file")}
             onClick={() => {
+              if (isPhone) setMobilePanel(null);
               setFileMenuOpen((v) => !v);
               setExportDrawOpen(false);
               setGridOpen(false);
@@ -939,7 +1248,7 @@ export function DesignerApp() {
             <Menu />
           </Button>
           {fileMenuOpen && (
-            <div className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md bg-surface p-1 text-ink shadow-border">
+            <div className="project-menu absolute left-0 top-full z-50 mt-1 w-64 rounded-md bg-surface p-1 text-ink shadow-border">
               <div className="px-2 py-2">
                 <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("currentProject")}</p>
                 <p className="mt-0.5 truncate text-sm font-medium">{project.name === "Без названия" ? t("untitled") : project.name}</p>
@@ -958,6 +1267,11 @@ export function DesignerApp() {
                 icon={<Save className="size-3.5" />}
                 label={t("saveProject")}
               />
+              <MenuBtn icon={<Plus className="size-4" />} label={t("newProject")} onClick={() => { useProject.getState().saveCurrentToLibrary(); useProject.getState().newProject(); setFileMenuOpen(false); setMobilePanel(null); }} />
+              <MenuBtn icon={<Pencil className="size-4" />} label={t("projectName")} onClick={() => { useProject.getState().setProjectFormOpen(true); setFileMenuOpen(false); }} />
+              <MenuBtn icon={<Upload className="size-4" />} label="Загрузить проект или чертёж" onClick={() => { fileRef.current?.click(); setFileMenuOpen(false); }} />
+              <MenuBtn icon={<FileDown className="size-4" />} label="PDF / PNG / SVG / JSON" onClick={() => setExportDrawOpen((v) => !v)} />
+              {exportDrawOpen && <div className="grid grid-cols-2 gap-1 p-1">{(["pdf", "png", "svg", "json"] as const).map((kind) => <Button key={kind} onClick={() => { void exportLibrary(project, kind); setFileMenuOpen(false); }}>{kind.toUpperCase()}</Button>)}</div>}
               <MenuBtn
                 onClick={() => {
                   setFileMenuOpen(false);
@@ -999,18 +1313,16 @@ export function DesignerApp() {
         <Button size="icon" variant="bar" className="max-sm:size-10" disabled={!future.length} onClick={() => useProject.getState().redo()} aria-label={t("redo")}>
           <Redo2 />
         </Button>
-        <BarTool
+        {!isPhone && <BarTool
           id="draw"
           label={t("draw")}
           active={tool === "draw"}
           onClick={() => {
             const st = useProject.getState();
             st.setTool(st.tool === "draw" ? null : "draw");
-            st.setRightMode("drawing");
-            st.setRightOpen(true);
           }}
-        />
-        <BarTool
+        />}
+        {!isPhone && <BarTool
           id="place"
           label={t("sprinklers")}
           active={catalogOpen}
@@ -1020,20 +1332,30 @@ export function DesignerApp() {
               st.setCatalogOpen(false);
             } else {
               st.setCatalogOpen(true);
-              st.setRightMode("zone");
-              st.setRightOpen(true);
             }
           }}
-        />
-        {catalogOpen && (
+        />}
+        {!isPhone && catalogOpen && (
           <Button size="xs" variant="bar" className="shrink-0" onClick={autoPlace} aria-label={t("autoPlace")}>
             <LayoutGrid />
             <span className="hidden sm:inline">{t("autoPlace")}</span>
           </Button>
         )}
+      {isPhone && <nav className="mobile-canvas-controls" aria-label="Сетка и навигация чертежа">
+        {gridControls}
+        <button type="button" className="mobile-icon-button" aria-label={t("layers")} aria-pressed={mobileWorkspaceMode === "drawing" && mobileLayersVisible} onClick={() => { setMobileLayersVisible(mobileWorkspaceMode !== "drawing" || !mobileLayersVisible); setMobileWorkspaceMode("drawing"); setMobilePanel(null); setGridOpen(false); }}><Layers /></button>
+        <button type="button" className="mobile-icon-button" aria-label="Вернуться к центру" title="Вернуться к центру" onClick={() => {
+          const bounds = document.querySelector("[data-design-canvas]")?.getBoundingClientRect();
+          if (bounds) useProject.getState().setPan(bounds.width / 2, bounds.height / 2);
+        }}><Crosshair size={22} /></button>
+        <button type="button" className="mobile-icon-button" aria-label="Предпросмотр" onClick={() => { setGridOpen(false); setFileMenuOpen(false); setMobilePreview(true); }}><Eye /></button>
+      </nav>}
         </div>
         <div className="flex shrink-0 items-center gap-1 pl-1">
+          {isPhone && <button type="button" className="mobile-icon-button" aria-label={t("estimate")} aria-pressed={mobilePanel === "estimate"} onClick={() => { setMobilePanel(mobilePanel === "estimate" ? null : "estimate"); setGridOpen(false); setFileMenuOpen(false); }}><FileText /></button>}
           <Button size="xs" variant="bar" className="max-sm:size-10 max-sm:px-0" aria-label={t("projects")} onClick={() => {
+            setMobilePanel(null);
+            setFileMenuOpen(false);
             useProject.getState().saveCurrentToLibrary();
             setProjectsOpen(true);
           }}>
@@ -1064,7 +1386,7 @@ export function DesignerApp() {
         </div>
       )}
 
-      {context && (
+      {!isPhone && context && (
         <div className="relative z-30 shrink-0 overflow-visible" data-cat-bar>
         <div className="flex h-[42px] items-center gap-1 overflow-visible border-b border-line bg-tool-2/90 px-2">
           {catalogOpen &&
@@ -1118,8 +1440,8 @@ export function DesignerApp() {
         </div>
       )}
 
-      <div className="relative flex min-h-0 flex-1">
-        {catalogOpen && catalogVisible && (
+      <div className="designer-workspace relative flex min-h-0 flex-1">
+        {!isPhone && catalogOpen && catalogVisible && (
           <aside
             className={cn(
               "absolute inset-y-0 left-0 z-20 flex w-56 flex-col border-r border-line bg-surface shadow-border lg:static lg:h-auto lg:w-56",
@@ -1132,7 +1454,7 @@ export function DesignerApp() {
               <Button
                 size="xs"
                 variant="solid"
-                className="shrink-0 border-[#c45c26] bg-[#c45c26] text-white hover:bg-[#b35220]"
+                className="shrink-0 border-line bg-surface text-ink hover:bg-btn-soft"
                 onClick={() => useProject.getState().setCatalogVisible(false)}
               >
                 <ChevronLeft className="size-3.5" />
@@ -1175,10 +1497,10 @@ export function DesignerApp() {
             </div>
           </aside>
         )}
-        {catalogOpen && !catalogVisible && (
+        {!isPhone && catalogOpen && !catalogVisible && (
           <button
             type="button"
-            className="absolute left-0 top-1/2 z-20 flex h-16 w-7 -translate-y-1/2 items-center justify-center rounded-r-md border border-l-0 border-[#c45c26]/40 bg-[#c45c26]/55 text-white shadow-border"
+            className="absolute left-0 top-1/2 z-20 flex h-16 w-7 -translate-y-1/2 items-center justify-center rounded-r-md border border-l-0 border-line bg-surface text-ink shadow-border"
             onClick={() => useProject.getState().setCatalogVisible(true)}
             aria-label={t("library")}
           >
@@ -1186,7 +1508,7 @@ export function DesignerApp() {
           </button>
         )}
 
-        {catalogOpen && (libInfo || catInfo) && (
+        {!isPhone && catalogOpen && (libInfo || catInfo) && (
           <div className="pointer-events-none absolute left-[14.25rem] top-2 z-30 w-[22rem] max-w-[min(22rem,calc(100vw-15rem))] rounded-lg bg-surface/80 p-3 text-ink shadow-border backdrop-blur-[2px]">
             {libInfo &&
               (() => {
@@ -1195,7 +1517,7 @@ export function DesignerApp() {
                 return (
                   <>
                     <CatalogPic item={item} className="mx-auto h-32 w-32" />
-                    <p className="mt-2 text-center text-sm font-semibold leading-tight text-[#0077a3]">{item.id}</p>
+                    <p className="mt-2 text-center text-sm font-semibold leading-tight text-ink">{item.id}</p>
                     <p className="mt-0.5 text-center text-[11px] text-muted">{item.series}</p>
                     <p className="mt-2 text-xs leading-relaxed text-ink-soft">{item.use}</p>
                     <p className="mt-2 text-xs leading-relaxed text-ink">
@@ -1256,6 +1578,13 @@ export function DesignerApp() {
         )}
 
         <section className="relative min-w-0 flex-1 overflow-visible">
+          {isPhone && !catalogGhost && (mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <section className="mobile-top-layers" data-workspace-mode={mobileWorkspaceMode} aria-label={mobileWorkspaceMode === "drawing" ? t("layers") : t("irrigation")}
+            onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+            {mobileWorkspaceMode === "drawing" ? <MobileLayers onEdit={(id) => { useProject.getState().setCadEdit(id); setMobilePanel("properties"); }} onInspect={() => { mobileInspectTarget.current = selectedObjectKey(useProject.getState()); setMobilePanel("properties"); }} /> : <div className="mobile-zone-strip">
+              {project.zones.map((zone) => <button type="button" key={zone.id} aria-pressed={zone.id === activeZoneId} onClick={() => useProject.getState().setActiveZone(zone.id)}><span style={{ background: zoneColor(zone.id) }} />{zone.name}</button>)}
+              <Popover.Root modal><Popover.Trigger asChild><button type="button" aria-label="Подробнее о зонах полива">Подробнее <ChevronRight size={16} /></button></Popover.Trigger><Popover.Portal><Popover.Content side="bottom" align="end" sideOffset={4} collisionPadding={8} aria-label="Зоны полива" className="layer-details-dialog" onPointerDown={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}><div className="layer-dialog-body"><ZoneList /><PumpBox /><Popover.Close asChild><Button className="w-full">Закрыть</Button></Popover.Close></div></Popover.Content></Popover.Portal></Popover.Root>
+            </div>}
+          </section>}
           <CanvasHost
             onScalePair={(a, b) => setScalePair({ a, b })}
             onMeasure={(m) => toast(formatLenU(m, useProject.getState().units.length))}
@@ -1264,62 +1593,33 @@ export function DesignerApp() {
               exportFn.current = fn;
             }}
           />
-          {tool === "draw" && drawSub !== "none" && (
+          {isPhone && gridOpen && <div className="mobile-grid-dismiss" aria-hidden
+            onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); setGridOpen(false); }} />}
+          {!isPhone && tool === "draw" && drawSub !== "none" && (
             <div className="pointer-events-none absolute bottom-12 left-1/2 z-30 max-w-[min(92%,22rem)] -translate-x-1/2 rounded-md bg-ink/80 px-2.5 py-1 text-center text-[11px] leading-snug text-white shadow-border">
               {t(DRAW_PRIMARY.find((s) => s.id === drawSub)?.key ?? "draw")}
               {t(`hint_${drawSub}`) ? ` · ${t(`hint_${drawSub}`)}` : ""}
             </div>
           )}
-          {cadEditId && !catalogOpen && !draft.points.length && <CadEditBar faceId={cadEditId} />}
-          {((tool === "draw" && drawSub !== "none") || cadEditId) && (
-            <DrawMeasurePad
-              drawSub={
-                cadEditId && drawingOrMigrate(project).faces[cadEditId]?.circle
-                  ? "circle"
-                  : cadEditId && drawingOrMigrate(project).faces[cadEditId]?.ellipse
-                    ? "ellipse"
-                    : cadEditId
-                      ? "rect"
-                      : drawSub
-              }
-              liveLen={liveLen}
-              liveWH={liveWH}
-              liveRot={
-                cadEditId && drawingOrMigrate(project).faces[cadEditId]?.ellipse
-                  ? (drawingOrMigrate(project).faces[cadEditId]!.ellipse!.rot ?? 0)
-                  : cadLiveRot
-              }
-              liveR={
-                cadEditId && drawingOrMigrate(project).faces[cadEditId]?.circle
-                  ? drawingOrMigrate(project).faces[cadEditId]!.circle!.r
-                  : liveR
-              }
-              liveArc={liveArc}
-              measureText={measureText}
-              cadBuf={cadBuf.current}
-              hasPoint={draft.points.length >= 1 || Boolean(cadEditId)}
-              hover={hover}
-              last={draft.points[draft.points.length - 1] ?? null}
-              editFaceId={cadEditId}
-            />
-          )}
+          {!isPhone && contextControls}
         </section>
 
-        {rightOpen ? (
-          <aside className="info-panel absolute inset-y-0 right-0 z-40 flex w-36 flex-col overflow-y-auto border-l border-line bg-surface shadow-border sm:w-[min(100%,22rem)] lg:static lg:h-auto lg:w-[320px]">
-            <div className="flex shrink-0 items-center gap-1 border-b border-line px-1 py-1 sm:gap-2 sm:px-2 sm:py-2">
+        {!isPhone && (rightOpen ? (
+          <aside className="info-panel absolute inset-x-0 top-0 z-40 flex max-h-[45vh] flex-col overflow-y-auto border-b border-line bg-surface shadow-border sm:inset-x-auto sm:inset-y-0 sm:right-0 sm:max-h-none sm:w-[min(100%,22rem)] sm:border-b-0 sm:border-l lg:static lg:h-auto lg:w-[320px] lg:shrink-0">
+            <div className="hidden shrink-0 items-center gap-2 border-b border-line px-2 py-2 sm:flex">
               <Button
                 type="button"
                 size="xs"
                 variant="solid"
-                className="shrink-0 border-[#c45c26] bg-[#c45c26] text-white hover:bg-[#b35220]"
+                className="shrink-0 border-line bg-surface text-ink hover:bg-btn-soft"
                 onPointerUp={(e) => {
                   e.preventDefault();
                   useProject.getState().setRightOpen(false);
                 }}
               >
                 {t("hide")}
-                <ChevronRight className="size-3.5" />
+                <ChevronRight className="size-3.5 -rotate-90 sm:rotate-0" />
               </Button>
               <div className="ml-auto flex min-w-0 flex-row overflow-x-auto">
                 {(
@@ -1368,70 +1668,22 @@ export function DesignerApp() {
         ) : (
           <button
             type="button"
-            className="absolute right-0 top-1/2 z-20 flex h-16 w-7 -translate-y-1/2 items-center justify-center rounded-l-md border border-r-0 border-[#c45c26]/40 bg-[#c45c26]/55 text-white shadow-border"
+            className="absolute left-1/2 top-0 z-20 flex h-7 w-16 -translate-x-1/2 items-center justify-center rounded-b-md border border-t-0 border-line bg-surface text-ink shadow-border sm:left-auto sm:right-0 sm:top-1/2 sm:h-16 sm:w-7 sm:translate-x-0 sm:-translate-y-1/2 sm:rounded-b-none sm:rounded-l-md sm:border-r-0 sm:border-t"
             onClick={() => useProject.getState().setRightOpen(true)}
             aria-label={t("showPanel")}
           >
-            <ChevronLeft className="size-4" />
+            <ChevronLeft className="size-4 -rotate-90 sm:rotate-0" />
           </button>
-        )}
+        ))}
       </div>
 
       <footer className="app-footer relative z-30 flex min-h-11 shrink-0 items-center gap-2 scroll-touch border-t border-line bg-surface px-2 py-1 text-xs">
-        <div className="relative shrink-0">
-          <div className="flex items-stretch overflow-hidden rounded-md border border-tool">
-            <Button
-              size="xs"
-              variant={showGrid ? "pressed" : "ghost"}
-              className="rounded-none border-0"
-              onClick={() => {
-                useProject.getState().setGrid(!showGrid);
-                setGridOpen(false);
-                setFileMenuOpen(false);
-              }}
-            >
-              <Grid3x3 />
-              {t("grid")}
-            </Button>
-            <span className="w-px self-stretch bg-tool/35" aria-hidden />
-            <Button
-              size="xs"
-              variant={gridOpen ? "pressed" : "ghost"}
-              className="shrink-0 rounded-none border-0"
-              onClick={() => {
-                setGridOpen((v) => !v);
-                setFileMenuOpen(false);
-              }}
-            >
-              {t("step")} {formatGridStep(gridStep, units.length)}
-            </Button>
-          </div>
-          {gridOpen && (
-            <div className="grid-step-pop fixed left-2 z-50 w-36 rounded-md bg-surface p-2 text-ink shadow-border">
-              <p className="px-1 pb-1 text-[10px] font-semibold tracking-wide text-muted uppercase">{t("gridStep")}</p>
-              <div className="flex flex-col gap-0.5">
-                {GRID_STEPS.map((g) => (
-                  <button
-                    key={g.id}
-                    type="button"
-                    className={cn(
-                      "h-8 rounded-sm px-2 text-left text-xs font-medium",
-                      gridStep === g.id ? "bg-btn text-btn-fg" : "text-ink hover:bg-btn-soft",
-                    )}
-                    onClick={() => {
-                      useProject.getState().setGridStep(g.id);
-                      useProject.getState().setGrid(true);
-                      setGridOpen(false);
-                    }}
-                  >
-                    {formatLenU(g.id, units.length)}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-        {project.heads.length > 0 && (
+        {isPhone && <>
+          <button type="button" className="mobile-dock-button" title="Инструменты" aria-label="Инструменты" aria-pressed={mobilePanel === "tools" || tool === "draw" || tool === "measure" || tool === "scale"} onClick={() => { setMobilePanel(mobilePanel === "tools" ? null : "tools"); setGridOpen(false); setFileMenuOpen(false); }}><Pencil size={22} /></button>
+          <button type="button" className="mobile-dock-button" title={t("library")} aria-label={t("library")} aria-pressed={mobilePanel === "library" || tool === "place"} onClick={() => { setMobilePanel(mobilePanel === "library" ? null : "library"); setGridOpen(false); setFileMenuOpen(false); }}><Droplets size={22} /></button>
+        </>}
+        {!isPhone && gridControls}
+        {!isPhone && project.heads.length > 0 && (
           <div className="flex items-stretch overflow-hidden rounded-md border border-tool">
             <Button
               size="xs"
@@ -1462,31 +1714,70 @@ export function DesignerApp() {
             </>
           ) : null}
         </span>
-        <Button
-          size="xs"
-          variant={snapOn ? "pressed" : "ghost"}
-          className="shrink-0"
-          onClick={() => useProject.getState().setSnap(!useProject.getState().snapOn)}
-        >
-          <Magnet className="size-3.5" />
-          <span className="hidden sm:inline">{t("magnet")}</span>
-        </Button>
-        <button
-          type="button"
-          className={cn("inline-flex h-8 shrink-0 items-center gap-1 rounded-sm px-1.5", orthoOn ? "text-ok" : "text-muted")}
-          onClick={() => useProject.getState().setOrtho(!useProject.getState().orthoOn)}
-        >
-          <MoveHorizontal className="size-3.5" />
-          <span className="hidden sm:inline">{t("ortho")}</span>
-          {orthoOn ? "●" : "○"}
-        </button>
-        <span className={cn("shrink-0", project.scaleCalibrated ? "text-ok" : "text-warn")}>
-          {project.scaleCalibrated ? t("scaleOk") : t("scaleWarn")}
-        </span>
         <span className="ml-auto hidden shrink-0 tabular text-muted sm:inline">
           {lastOp ? lastOp : ""} {saveState === "saved" ? t("savedOk") : saveState === "saving" ? t("saving") : ""}
         </span>
       </footer>
+
+      {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} · коснитесь чертежа</span><button type="button" aria-label="Закончить размещение" onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
+      {isPhone && mobilePanel && mobilePanel !== "layers" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "tools" ? "Инструменты" : mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("irrigation") : mobilePanel === "estimate" ? t("estimate") : contextTitle} onClose={() => setMobilePanel(null)}
+        footer={mobilePanel === "properties" && selected ? <div className="mobile-context-footer">
+          <Button className="ml-auto" aria-label="Готово" title="Готово" onPointerDown={(e) => e.preventDefault()} onClick={() => { (document.activeElement as HTMLElement)?.blur?.(); if (selected) setMobilePanel(null); }}><Check /></Button>
+        </div> : undefined}>
+        {mobilePanel === "tools" && <div className="mobile-tools">
+          {(mobileFace || (tool === "draw" && drawSub !== "none")) && <section><h3>{mobileFace ? contextTitle : t("draw")}</h3>
+            <div className="mobile-tool-grid">
+              {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} onClick={() => { useProject.getState().setCadEdit(mobileFace.id); setMobilePanel("properties"); }}><Pencil size={22} />{t("edit")}</button>}
+              {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} onClick={() => { useProject.getState().duplicateSelected(); setMobilePanel(null); }}><Copy size={22} />Копировать</button>}
+              {["polygon", "polyline", "spline", "freehand", "path"].includes(drawSub) && draft.points.length > 1 && <button type="button" disabled={drawSub === "polygon" && draft.points.length < 4} onClick={() => { const st = useProject.getState(); if (st.drawSub === "polygon") st.closePolygon(); else st.finishOpenDraw(); setMobilePanel(null); }}><Check size={22} />{drawSub === "polygon" ? "Замкнуть" : "Завершить"}</button>}
+            </div>
+            <label className="mobile-region-select">Назначение<select value={mobileFace?.type ?? polyKind} onChange={(event) => { const value = event.target.value as typeof polyKind; if (mobileFace) useProject.getState().setRegionType(mobileFace.id, value); else useProject.getState().setRegionTypeDraft(value); }} disabled={Boolean(mobileFace?.locked)}>{DRAW_KINDS.map((kind) => <option key={kind.id} value={kind.id}>{t(kind.key)}</option>)}</select></label>
+          </section>}
+          {selectedEdgeId && <DrawingCard onlyConstraints />}
+          {[
+            { title: "Контуры", ids: ["line", "polygon", "spline", "arc", "freehand"] },
+            { title: "Фигуры", ids: ["rect", "circle", "ellipse", "triangle", "hexagon"] },
+            { title: "Размеры и надписи", ids: ["dim", "text"] },
+          ].map((group) => <section key={group.title}><h3>{group.title}</h3><div className="mobile-tool-grid">{DRAW_SUBS.filter((s) => group.ids.includes(s.id)).map((s) => <button key={s.id} type="button" aria-pressed={tool === "draw" && drawSub === s.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(s.id))}>{s.icon}<span>{t(s.key)}</span></button>)}</div></section>)}
+          <section><h3>Измерение и правка</h3><div className="mobile-tool-grid">
+            <button type="button" aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><Ruler size={22} />{t("ruler")}</button>
+            <button type="button" aria-pressed={tool === "measure" && measureSub === "guide"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("guide"))}><MoveHorizontal size={22} />{t("guide")}</button>
+            <button type="button" aria-pressed={tool === "scale"} onClick={() => chooseMobileTool(() => useProject.getState().setTool("scale"))}><Maximize2 size={22} />{t("calibrateScale")}</button>
+            <button type="button" onClick={() => { useProject.getState().setCadMode("move_object"); setMobilePanel(null); }}><Crosshair size={22} />Перемещение</button>
+          </div></section>
+          <details><summary>Дополнительные инструменты</summary><div className="mobile-tool-grid">{MOBILE_EXTRA_DRAW.map((item) => <button type="button" key={item.id} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}><Pencil size={22} /><span>{t(item.key)}</span></button>)}</div></details>
+          <section><h3>Полив и расчёты</h3><div className="mobile-tool-grid">
+            <button type="button" onClick={() => { setMobileWorkspaceMode("irrigation"); setMobilePanel(null); }}><Droplets size={22} />{t("irrigation")}</button>
+            <button type="button" onClick={() => setMobilePanel("estimate")}><FileText size={22} />{t("estimate")}</button>
+            <button type="button" onClick={() => { setMobilePanel(null); setIssuesOpen(true); }}><Check size={22} />{t("issuesTitle")}</button>
+          </div></section>
+          {project.heads.length > 0 && <section><h3>На чертеже</h3><div className="mobile-tool-grid">
+            <button type="button" aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={22} />{t("sectors")}</button>
+            <button type="button" aria-pressed={showLabels} onClick={() => useProject.getState().setLabels(!showLabels)}><Tag size={22} />{t("labels")}</button>
+          </div></section>}
+        </div>}
+        {mobilePanel === "library" && <div className="mobile-catalog" data-catalog>
+          <div className="mobile-categories" data-cat-bar>{CATEGORIES.map((category) => <button type="button" key={category.id} aria-pressed={familyFilter === category.id} onClick={() => { useProject.getState().setFamily(category.id); setLibInfo(null); }}>{t(`cat_${category.id}`)}</button>)}</div>
+          <div className="mobile-library-actions"><Button aria-label={t("autoPlace")} onClick={() => { autoPlace(); setMobilePanel(null); }}><LayoutGrid />Авторасстановка</Button><span>Выбрать — касание. Перенести — удерживать ⊕.</span></div>
+          {libraryFamily !== "all" && <details className="mobile-series-info"><summary>{t("docs")} · {t(`cat_${libraryFamily}`)}</summary><p>{t(`catInfo_${libraryFamily}`)}</p>{categoryPhoto(libraryFamily) && <img src={categoryPhoto(libraryFamily)!} alt={t(`cat_${libraryFamily}`)} />}{docsForFamily(libraryFamily, locale, units).map((doc) => <a key={doc.url + doc.label} href={doc.url} target="_blank" rel="noopener noreferrer">{doc.label ?? t(doc.titleKey)}</a>)}</details>}
+          <ul className="mobile-catalog-list">{catalog.map((item) => <li key={item.id} className="mobile-catalog-card" data-selected={placeId === item.id}>
+            <button type="button" className="mobile-catalog-select" aria-label={`Разместить ${item.id}`} onClick={() => { const st = useProject.getState(); st.setTool("place"); st.setPlaceId(item.id); st.setCatalogVisible(false); setMobilePanel(null); }}>
+              <CatalogPic item={item} className="h-16 w-16 shrink-0" />
+              <span><strong>{item.id}</strong><span>{formatLenU(item.rMin, units.length)}–{formatLenU(item.rMax, units.length)}</span><span>{item.arcMin === item.arcMax ? `${item.arcMax}°` : `${item.arcMin}–${item.arcMax}°`}</span></span>
+              <CatalogThumb color={item.color} arc={item.arcMax} />
+            </button>
+            <div className="mobile-catalog-card-actions"><button type="button" className="mobile-icon-button mobile-drag-handle" aria-label={`Перенести ${item.id}`} onPointerDown={(e) => { e.preventDefault(); useProject.getState().setTool("place"); startCatalogDrag(e, item.id); }}><Crosshair size={22} /></button><button type="button" className="mobile-icon-button" aria-label={`Подробнее о ${item.id}`} aria-expanded={libInfo === item.id} onClick={() => setLibInfo(libInfo === item.id ? null : item.id)}><MoreHorizontal size={22} /></button></div>
+            {libInfo === item.id && <p className="mobile-catalog-description">{item.series} · {item.use}{item.thread ? ` · ${item.thread}` : ""}</p>}
+          </li>)}</ul>
+        </div>}
+        {mobilePanel === "properties" && <>
+          {mobileFace && (!cadEditId || editingNodeContour) && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{formatLenU(dimension.value, units.length)}</output></span>)}</div>}
+          {selected ? <HeadCard head={selected} /> : (!mobileFace || cadEditId) ? contextControls : null}
+          {tool === "scale" && <p className="mobile-context-hint">{t("scaleHint")}</p>}
+          {tool === "measure" && <p className="mobile-context-hint">Коснитесь двух точек на чертеже.</p>}
+        </>}
+        {mobilePanel === "estimate" && <EstimateCard onCheck={() => setIssuesOpen(true)} />}
+      </MobileSheet>}
 
       <input
         ref={fileRef}
@@ -1551,7 +1842,7 @@ export function DesignerApp() {
         </div>
       )}
 
-      {scalePair && (
+      {nameAsk && (
         <KeyboardSheet onBackdrop={() => setNameAsk(false)}>
           <div className="p-5">
             <p className="font-display text-lg">{t("projectName")}</p>
@@ -1869,14 +2160,14 @@ function CatalogThumb({ color, arc }: { color: string; arc: number }) {
 function CatalogPic({ item, className }: { item: CatalogItem; className?: string }) {
   const fallback =
     item.type === "rotor" || item.family === "rotor"
-      ? "/catalog/PGP-ADJ.png?v=8"
+      ? "/catalog/PGP-ADJ.png?v=9"
       : item.type === "bubbler" || item.family === "bubbler"
-        ? "/catalog/MSBN-50Q.png?v=8"
+        ? "/catalog/MSBN-50Q.png?v=9"
         : item.family === "mp" || item.family === "mp800" || item.family === "strip"
-        ? "/catalog/MP2000.png?v=8"
+        ? "/catalog/MP2000.png?v=9"
         : item.type === "body"
-          ? "/catalog/body.png?v=8"
-          : "/catalog/8A.png?v=8";
+          ? "/catalog/body.png?v=9"
+          : "/catalog/8A.png?v=9";
   return (
     <img
       src={catalogPhoto(item)}
@@ -1955,7 +2246,7 @@ function LibraryRow({
         <Button
           size="xs"
           variant="solid"
-          className="shrink-0 bg-[#7ec8f2] px-1.5 text-[#1b2430]"
+          className="shrink-0 bg-btn-soft px-1.5 text-ink"
           onClick={() => setDl((v) => !v)}
         >
           <FileDown className="size-3.5" />
@@ -2057,100 +2348,39 @@ function ColorSlider({
 
 function CadEditBar({ faceId }: { faceId: string }) {
   const t = useT();
-  const panX = useProject((s) => s.panX);
-  const panY = useProject((s) => s.panY);
-  const px = useProject((s) => s.pxPerMeter);
   const project = useProject((s) => s.project);
   const themeId = useProject((s) => s.themeId);
-  const dark = themeId === "dusk" || themeId === "night" || themeId === "graphite";
+  const dark = themeId === "graphite";
   const [askDel, setAskDel] = useState(false);
   const [fillOpen, setFillOpen] = useState(false);
   const [tip, setTip] = useState<string | null>(null);
-  const [name, setName] = useState("");
   const hideTip = useRef(0);
-  const nameRef = useRef("");
   const wrapRef = useRef<HTMLDivElement>(null);
+  const paletteRef = useRef<HTMLDivElement>(null);
+  const fillTriggerRef = useRef<HTMLButtonElement>(null);
   const d = drawingOrMigrate(project);
   const face = d.faces[faceId];
-  nameRef.current = name;
   useEffect(() => {
     setAskDel(false);
     setFillOpen(false);
     setTip(null);
-    const n = drawingOrMigrate(useProject.getState().project).faces[faceId]?.name ?? "";
-    setName(n);
-    nameRef.current = n;
     return () => window.clearTimeout(hideTip.current);
   }, [faceId]);
-  const saveName = () => {
-    const next = nameRef.current.trim();
-    const cur = drawingOrMigrate(useProject.getState().project).faces[faceId]?.name ?? "";
-    if (next === cur) return;
-    useProject.getState().setFaceName(next);
-  };
   useEffect(() => {
     const onDown = (e: PointerEvent) => {
       const node = e.target as Node | null;
+      if (fillOpen) {
+        if (paletteRef.current?.contains(node) || fillTriggerRef.current?.contains(node)) return;
+        setFillOpen(false);
+      }
       if (wrapRef.current?.contains(node)) return;
-      saveName();
-      setFillOpen(false);
       setAskDel(false);
       setTip(null);
     };
     document.addEventListener("pointerdown", onDown, true);
     return () => document.removeEventListener("pointerdown", onDown, true);
-  }, [faceId]);
+  }, [faceId, fillOpen]);
   if (!face || face.locked) return null;
-  const pts = face.circle
-    ? [
-        { x: face.circle.cx - face.circle.r, y: face.circle.cy - face.circle.r },
-        { x: face.circle.cx + face.circle.r, y: face.circle.cy + face.circle.r },
-      ]
-    : face.rect
-      ? rectWorldCorners(face.rect)
-      : facePoints(d, faceId);
-  if (pts.length < 2) return null;
-  const xs = pts.map((p) => p.x * px + panX);
-  const ys = pts.map((p) => p.y * px + panY);
-  const box = { l: Math.min(...xs), r: Math.max(...xs), t: Math.min(...ys), b: Math.max(...ys) };
-  const bw = Math.max(8, box.r - box.l);
-  const bh = Math.max(8, box.b - box.t);
-  const barW = 232;
-  const barH = 42;
-  const palW = 152;
-  const palH = 128;
-  const host = typeof document !== "undefined" ? document.querySelector("[data-design-canvas]") : null;
-  const cw = host instanceof HTMLElement ? host.clientWidth : 480;
-  const ch = host instanceof HTMLElement ? host.clientHeight : 480;
-  const gapA = 56;
-  const gapB = 68;
-  const keep = { l: box.l - 12, r: box.r + gapB, t: box.t - gapA, b: box.b + 16 };
-  const clampPos = (left: number, top: number) => ({
-    left: Math.max(8, Math.min(left, cw - barW - 8)),
-    top: Math.max(14, Math.min(top, ch - barH - 8)),
-  });
-  const hits = (p: { left: number; top: number }) =>
-    p.left < keep.r && p.left + barW > keep.l && p.top < keep.b && p.top + barH > keep.t;
-  const candidates = [
-    clampPos(box.l - gapB - barW, box.t + (bh - barH) / 2),
-    clampPos(box.l + (bw - barW) / 2, box.b + 28),
-    clampPos(box.l + (bw - barW) / 2, box.t - gapA - barH),
-    clampPos(8, box.b + 28),
-    clampPos(cw - barW - 8, box.b + 28),
-    clampPos(8, 14),
-    clampPos(cw - barW - 8, 14),
-  ];
-  const placed = candidates.find((p) => !hits(p)) ?? candidates[5]!;
-  const left = placed.left;
-  const top = placed.top;
-  const palLeft0 = Math.max(8, Math.min(left + (barW - palW) / 2, cw - palW - 8));
-  let palLeft = palLeft0;
-  let palTop = top - palH - 6;
-  if (palTop < 8) {
-    palTop = top;
-    palLeft = left + barW + 6;
-    if (palLeft + palW > cw - 8) palLeft = Math.max(8, left - palW - 6);
-  }
   const showTip = (msg: string) => {
     window.clearTimeout(hideTip.current);
     setTip(msg);
@@ -2159,25 +2389,29 @@ function CadEditBar({ faceId }: { faceId: string }) {
   const Btn = ({
     label,
     danger,
+    buttonRef,
     onPress,
     children,
   }: {
     label: string;
     danger?: boolean;
+    buttonRef?: RefObject<HTMLButtonElement | null>;
     onPress: () => void;
     children: ReactNode;
   }) => (
     <button
+      ref={buttonRef}
       type="button"
       aria-label={label}
       className={cn(
-        "relative flex size-9 shrink-0 items-center justify-center rounded-sm",
-        danger ? "text-danger hover:bg-danger/10" : dark ? "text-[#1b2430] hover:bg-white/35" : "text-ink hover:bg-btn-soft",
+        "relative flex size-10 shrink-0 items-center justify-center rounded-sm",
+        danger ? "text-danger hover:bg-danger/10" : dark ? "text-ink hover:bg-white/35" : "text-ink hover:bg-btn-soft",
       )}
       onPointerEnter={() => showTip(label)}
       onPointerDown={(e) => {
-        e.preventDefault();
         e.stopPropagation();
+      }}
+      onClick={() => {
         showTip(label);
         onPress();
       }}
@@ -2186,44 +2420,19 @@ function CadEditBar({ faceId }: { faceId: string }) {
     </button>
   );
   return (
-    <div ref={wrapRef} className="pointer-events-none absolute inset-0 z-40">
+    <div ref={wrapRef} data-cad-actions className="pointer-events-none absolute inset-0 z-40">
       <div
         className={cn(
-          "pointer-events-auto absolute flex flex-row items-center gap-0.5 rounded-md p-0.5 shadow-border",
+          "cad-edit-drawer pointer-events-auto absolute left-0 top-1/2 flex h-auto w-[2.875rem] -translate-y-1/2 flex-col items-center gap-0.5 rounded-r-md border-[1.5px] border-l-0 border-line p-0.5 shadow-border",
           dark
-            ? "border border-sky-300/50 bg-sky-200/40 text-[#1b2430] backdrop-blur-md"
-            : "border border-line bg-surface",
+            ? "bg-surface text-ink backdrop-blur-md"
+            : "bg-surface",
         )}
-        style={{ left, top, width: barW, height: barH }}
       >
-        <input
-          aria-label={t("faceName")}
-          placeholder={t("layerN", { n: faceLayerNumber(d, faceId) })}
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-            nameRef.current = e.target.value;
-          }}
-          onFocus={(e) => {
-            showTip(t("faceName"));
-            e.currentTarget.select();
-          }}
-          onBlur={saveName}
-          onKeyDown={(e) => {
-            e.stopPropagation();
-            if (e.key === "Enter") {
-              saveName();
-              (e.target as HTMLInputElement).blur();
-            }
-          }}
-          className={cn(
-            "h-8 w-[4.75rem] shrink-0 rounded-sm px-1.5 text-[11px] shadow-border placeholder:text-muted/55",
-            dark ? "bg-white/45 text-[#1b2430] placeholder:text-[#1b2430]/45" : "bg-bg-2 text-ink",
-          )}
-        />
-        <div className="flex flex-row items-center">
+        <div className="flex flex-col items-center">
           <Btn
             label={t("fillShapeHint")}
+            buttonRef={fillTriggerRef}
             onPress={() => {
               setAskDel(false);
               setFillOpen((v) => !v);
@@ -2259,18 +2468,19 @@ function CadEditBar({ faceId }: { faceId: string }) {
           </Btn>
         </div>
         {tip && !askDel && !fillOpen && (
-          <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-1 w-max max-w-[12rem] -translate-x-1/2 rounded-sm bg-ink px-2 py-1 text-[10px] leading-snug text-white shadow-border">
+          <span className="pointer-events-none absolute left-full top-1/2 z-10 ml-1 w-max max-w-[12rem] -translate-y-1/2 rounded-sm bg-ink px-2 py-1 text-[10px] leading-snug text-white shadow-border">
             {tip}
           </span>
         )}
       </div>
       {fillOpen && (
         <div
+          ref={paletteRef}
+          data-cad-palette
           className={cn(
-            "pointer-events-auto absolute z-50 grid w-[9.5rem] grid-cols-5 gap-1 rounded-md p-1.5 shadow-border",
-            dark ? "border border-sky-300/50 bg-sky-200/50 backdrop-blur-md" : "border border-line bg-surface",
+            "pointer-events-auto absolute left-[3.25rem] top-1/2 z-50 grid w-[9.5rem] -translate-y-1/2 grid-cols-5 gap-1 rounded-md p-1.5 shadow-border",
+            dark ? "border border-line bg-surface backdrop-blur-md" : "border border-line bg-surface",
           )}
-          style={{ left: palLeft, top: palTop }}
         >
           {FACE_FILLS.map((c) => (
             <button
@@ -2281,7 +2491,7 @@ function CadEditBar({ faceId }: { faceId: string }) {
                 "size-6 rounded-sm border",
                 (face.fill ?? "") === c ? "border-tool ring-1 ring-tool" : "border-line",
               )}
-              style={{ background: c }}
+              style={c === "transparent" ? { background: "linear-gradient(135deg, transparent 45%, #d45b5b 46%, #d45b5b 54%, transparent 55%), #fff" } : { background: c }}
               onPointerDown={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -2293,16 +2503,13 @@ function CadEditBar({ faceId }: { faceId: string }) {
       )}
       {askDel && (
         <div
+          data-cad-delete
           className={cn(
-            "pointer-events-auto absolute z-50 w-[11.5rem] rounded-md p-2 shadow-border",
-            dark ? "border border-sky-300/50 bg-sky-200/50 text-[#1b2430] backdrop-blur-md" : "border border-line bg-surface",
+            "pointer-events-auto absolute left-[3.25rem] top-1/2 z-50 w-[11.5rem] -translate-y-1/2 rounded-md p-2 shadow-border",
+            dark ? "border border-line bg-surface text-ink backdrop-blur-md" : "border border-line bg-surface",
           )}
-          style={{
-            left: Math.max(8, Math.min(left, cw - 192)),
-            top: Math.max(14, Math.min(top + barH + 6, ch - 96)),
-          }}
         >
-          <p className={cn("text-xs font-medium", dark ? "text-[#1b2430]" : "text-ink")}>{t("deleteShapeAsk")}</p>
+          <p className={cn("text-xs font-medium", dark ? "text-ink" : "text-ink")}>{t("deleteShapeAsk")}</p>
           <div className="mt-2 flex gap-1">
             <Button size="xs" variant="ghost" className="flex-1" onClick={() => setAskDel(false)}>
               {t("cancel")}
@@ -2347,10 +2554,293 @@ function useKbLift() {
   return lift;
 }
 
+function sideLetter(index: number) {
+  let value = index + 1;
+  let label = "";
+  while (value > 0) {
+    value -= 1;
+    label = String.fromCharCode(65 + (value % 26)) + label;
+    value = Math.floor(value / 26);
+  }
+  return label;
+}
+
+function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; compact?: boolean }) {
+  const project = useProject((s) => s.project);
+  const draft = useProject((s) => s.draft);
+  const splinePreview = useProject((s) => s.splinePreview);
+  const units = useProject((s) => s.units);
+  const kbLift = useKbLift();
+  const drawing = drawingOrMigrate(project);
+  const spline = faceId ? drawing.faces[faceId]?.spline : null;
+  const points =
+    faceId && splinePreview?.faceId === faceId
+      ? splinePreview.points
+      : spline?.pts ?? draft.points;
+  const closed = Boolean(spline?.closed);
+  const segmentCount = closed ? points.length : Math.max(0, points.length - 1);
+  const lengths = Array.from({ length: segmentCount }, (_, index) =>
+    dist(points[index]!, points[(index + 1) % points.length]!),
+  );
+  const totalLength = lengths.reduce((sum, length) => sum + length, 0);
+  const lengthsKey = lengths.map((length) => length.toFixed(8)).join("|");
+  const digits = units.length === "mm" ? 0 : units.length === "cm" ? 1 : 2;
+  const formatLength = (meters: number) => {
+    const fixed = fromMeters(meters, units.length).toFixed(digits);
+    return fixed.includes(".") ? fixed.replace(/\.?0+$/, "") : fixed;
+  };
+  const [values, setValues] = useState<string[]>(() => lengths.map(formatLength));
+  const [nextValue, setNextValue] = useState("");
+  const cancelNextBlur = useRef(false);
+
+  useEffect(() => {
+    setValues(lengths.map(formatLength));
+    // Geometry key keeps every field current when one control point changes two segments.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [faceId, lengthsKey, units.length]);
+
+  useEffect(() => {
+    setNextValue("");
+  }, [points.length, faceId]);
+
+  const pointAtLength = (a: Pt, b: Pt, meters: number) => {
+    const current = dist(a, b);
+    if (current <= 1e-9) return { x: a.x + meters, y: a.y };
+    return {
+      x: a.x + ((b.x - a.x) / current) * meters,
+      y: a.y + ((b.y - a.y) / current) * meters,
+    };
+  };
+
+  const resetValue = (index: number) => {
+    setValues((current) => {
+      const next = [...current];
+      next[index] = formatLength(lengths[index] ?? 0);
+      return next;
+    });
+  };
+
+  const applySegmentLength = (index: number) => {
+    const entered = Number((values[index] ?? "").trim().replace(",", "."));
+    if (!Number.isFinite(entered) || entered <= 0) {
+      resetValue(index);
+      return;
+    }
+    const targetLength = toMetersLen(entered, units.length);
+    const state = useProject.getState();
+    if (faceId) {
+      const latestFace = drawingOrMigrate(state.project).faces[faceId];
+      const latestPoints = latestFace?.spline?.pts;
+      if (!latestPoints?.length) return;
+      const latestCount = latestFace.spline!.closed
+        ? latestPoints.length
+        : Math.max(0, latestPoints.length - 1);
+      if (index >= latestCount) return;
+      const nextIndex = (index + 1) % latestPoints.length;
+      const a = latestPoints[index]!;
+      const b = latestPoints[nextIndex]!;
+      if (Math.abs(dist(a, b) - targetLength) <= 1e-9) {
+        resetValue(index);
+        return;
+      }
+      state.setSplinePt(nextIndex, pointAtLength(a, b, targetLength));
+      return;
+    }
+    const latestPoints = state.draft.points;
+    if (index >= latestPoints.length - 1) return;
+    const a = latestPoints[index]!;
+    const b = latestPoints[index + 1]!;
+    if (Math.abs(dist(a, b) - targetLength) <= 1e-9) {
+      resetValue(index);
+      return;
+    }
+    const next = [...latestPoints];
+    next[index + 1] = pointAtLength(a, b, targetLength);
+    state.setDraftPoints(next);
+  };
+
+  const addNextSegment = () => {
+    const entered = Number(nextValue.trim().replace(",", "."));
+    if (!Number.isFinite(entered) || entered <= 0 || !points.length || faceId) return;
+    const state = useProject.getState();
+    if (state.tool !== "draw" || state.drawSub !== "spline") return;
+    state.applyCadLength(toMetersLen(entered, units.length), null);
+    setNextValue("");
+  };
+
+  return (
+    <div
+      className="dimension-pad pointer-events-auto fixed inset-x-2 z-[90] overflow-x-auto overscroll-x-contain rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border"
+      style={{ bottom: `calc(3.55rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)` }}
+      onPointerDown={(event) => event.stopPropagation()}
+    >
+      <div className="flex h-10 w-max min-w-full items-center gap-1.5">
+        <div
+          className="dimension-total flex h-9 shrink-0 items-center gap-1 rounded-sm bg-tool/10 px-1.5"
+          title="Общая длина кривой"
+        >
+          <span className="min-w-5 text-center text-xs font-bold text-ink">Σ</span>
+          <output
+            aria-label="Общая длина кривой"
+            className="min-w-[4.4rem] text-right text-sm font-semibold tabular-nums text-ink"
+          >
+            {formatLength(totalLength)}
+          </output>
+          <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+        </div>
+        {lengths.map((length, index) => (
+          <label key={`${faceId ?? "draft"}-${index}`} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
+            <span className="min-w-5 text-center text-xs font-bold text-ink">{sideLetter(index)}</span>
+            <input
+              aria-label={`Отрезок ${sideLetter(index)}`}
+              inputMode="decimal"
+              className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none focus:border-tool"
+              value={values[index] ?? formatLength(length)}
+              onChange={(event) => {
+                const next = [...values];
+                next[index] = event.target.value;
+                setValues(next);
+              }}
+              onFocus={(event) => event.currentTarget.select()}
+              onBlur={() => applySegmentLength(index)}
+              onKeyDown={(event) => {
+                event.stopPropagation();
+                if (event.key === "Enter") event.currentTarget.blur();
+                if (event.key === "Escape") {
+                  resetValue(index);
+                  event.currentTarget.blur();
+                }
+              }}
+            />
+            <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+          </label>
+        ))}
+        {!faceId && points.length >= 1 && (
+          <label className="flex h-9 shrink-0 items-center gap-1 rounded-sm border border-dashed border-tool/60 bg-bg-2 px-1.5">
+            <span className="min-w-5 text-center text-xs font-bold text-tool">{sideLetter(segmentCount)}</span>
+            <input
+              aria-label={`Новый отрезок ${sideLetter(segmentCount)}`}
+              inputMode="decimal"
+              placeholder="+"
+              className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none placeholder:text-muted focus:border-tool"
+              value={nextValue}
+              onChange={(event) => setNextValue(event.target.value)}
+              onFocus={(event) => event.currentTarget.select()}
+              onBlur={() => { if (compact && !cancelNextBlur.current) addNextSegment(); cancelNextBlur.current = false; }}
+              onKeyDown={(event) => {
+                event.stopPropagation();
+                if (event.key === "Enter") { if (compact) event.currentTarget.blur(); else addNextSegment(); }
+                if (event.key === "Escape") {
+                  cancelNextBlur.current = true;
+                  setNextValue("");
+                  event.currentTarget.blur();
+                }
+              }}
+            />
+            <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+            {!compact && <button
+              type="button"
+              aria-label={`Построить отрезок ${sideLetter(segmentCount)}`}
+              className="grid size-7 place-items-center rounded-sm bg-tool text-white disabled:opacity-40"
+              disabled={!nextValue.trim()}
+              onClick={addNextSegment}
+            >
+              <Plus className="size-4" />
+            </button>}
+          </label>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function FreeformSidesPad({ faceId }: { faceId: string }) {
+  const project = useProject((s) => s.project);
+  const units = useProject((s) => s.units);
+  const kbLift = useKbLift();
+  const drawing = drawingOrMigrate(project);
+  const edges = faceEdges(drawing, faceId);
+  const starts = closedPathSideStarts(edges.map((edge) => edge.a));
+  const sides = starts.map((start, index) => {
+    const end = starts[(index + 1) % starts.length]!;
+    return { id: edges[start]!.id, a: edges[start]!.a, b: edges[end]!.a };
+  });
+  const lengths = sides.map((side) => dist(side.a, side.b));
+  const lengthsKey = lengths.map((length) => length.toFixed(8)).join("|");
+  const digits = units.length === "mm" ? 0 : units.length === "cm" ? 1 : 2;
+  const formatLength = (meters: number) => {
+    const fixed = fromMeters(meters, units.length).toFixed(digits);
+    return fixed.includes(".") ? fixed.replace(/\.?0+$/, "") : fixed;
+  };
+  const [values, setValues] = useState<string[]>(() => lengths.map(formatLength));
+
+  useEffect(() => {
+    setValues(lengths.map(formatLength));
+    // Geometry key is intentionally used so inputs refresh after a handle or another side moves.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [faceId, lengthsKey, units.length]);
+
+  const applySideLength = (index: number) => {
+    const entered = Number((values[index] ?? "").trim().replace(",", "."));
+    if (!Number.isFinite(entered) || entered <= 0) {
+      setValues(lengths.map(formatLength));
+      return;
+    }
+    const targetLength = toMetersLen(entered, units.length);
+    const latestDrawing = drawingOrMigrate(useProject.getState().project);
+    const side = sides[index];
+    if (!side || !(targetLength > 0)) return;
+    useProject
+      .getState()
+      .commitDrawing(setFaceSideLength(latestDrawing, faceId, side.id, targetLength), faceId, true);
+  };
+
+  if (!sides.length) return null;
+  return (
+    <div
+      className="dimension-pad pointer-events-auto fixed inset-x-2 z-[90] overflow-x-auto overscroll-x-contain rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border"
+      style={{ bottom: `calc(3.55rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)` }}
+      onPointerDown={(event) => event.stopPropagation()}
+    >
+      <div className="flex h-10 w-max min-w-full items-center gap-1.5">
+        {sides.map((side, index) => (
+          <label key={side.id} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
+            <span className="min-w-5 text-center text-xs font-bold text-ink">{sideLetter(index)}</span>
+            <input
+              aria-label={`Сторона ${sideLetter(index)}`}
+              inputMode="decimal"
+              className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none focus:border-tool"
+              value={values[index] ?? ""}
+              onChange={(event) => {
+                const next = [...values];
+                next[index] = event.target.value;
+                setValues(next);
+              }}
+              onBlur={() => applySideLength(index)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") event.currentTarget.blur();
+                if (event.key === "Escape") {
+                  const next = [...values];
+                  next[index] = formatLength(lengths[index] ?? 0);
+                  setValues(next);
+                  event.currentTarget.blur();
+                }
+              }}
+            />
+            <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function DrawMeasurePad({
+  compact = false,
   drawSub,
   liveLen,
   liveWH,
+  liveTriangle,
   liveRot,
   liveR,
   liveArc,
@@ -2361,9 +2851,11 @@ function DrawMeasurePad({
   last,
   editFaceId,
 }: {
+  compact?: boolean;
   drawSub: string;
   liveLen: number;
   liveWH: { w: number; h: number } | null;
+  liveTriangle: { base: number; height: number; left: number; right: number } | null;
   liveRot: number | null;
   liveR: number | null;
   liveArc: { r: number; sag: number } | null;
@@ -2374,6 +2866,7 @@ function DrawMeasurePad({
   last: Pt | null;
   editFaceId: string | null;
 }) {
+  type InputKey = "r" | "d" | "s" | "w" | "l" | "b" | "c" | "k" | "rot";
   const t = useT();
   const kbLift = useKbLift();
   const units = useProject((s) => s.units);
@@ -2383,12 +2876,14 @@ function DrawMeasurePad({
   const [sIn, setSIn] = useState("");
   const [wIn, setWIn] = useState("");
   const [lIn, setLIn] = useState("");
+  const [bIn, setBIn] = useState("");
+  const [cIn, setCIn] = useState("");
   const [kIn, setKIn] = useState("100");
   const [rotIn, setRotIn] = useState("0");
-  const dirty = useRef<"r" | "d" | "s" | "w" | "l" | "k" | "rot" | null>(null);
+  const dirty = useRef<InputKey | null>(null);
   const param =
     drawSub === "circle" ? t("drawRadius") :
-    drawSub === "rect" || drawSub === "ellipse" ? t("drawSize") :
+    drawSub === "rect" || drawSub === "ellipse" || drawSub === "triangle" || drawSub === "hexagon" ? t("drawSize") :
     drawSub === "arc" ? t("drawRadius") :
     t("drawLength");
   const lenDec = units.length === "mm" ? 0 : units.length === "cm" ? 1 : 2;
@@ -2407,9 +2902,14 @@ function DrawMeasurePad({
     if (!liveWH || dirty.current) return;
     setWIn(fmtN(fromMeters(liveWH.w, units.length), lenDec));
     setLIn(fmtN(fromMeters(liveWH.h, units.length), lenDec));
-    const area = drawSub === "ellipse" ? Math.PI * (liveWH.w / 2) * (liveWH.h / 2) : liveWH.w * liveWH.h;
+    const area = drawSub === "ellipse" ? Math.PI * (liveWH.w / 2) * (liveWH.h / 2) : drawSub === "triangle" ? (liveWH.w * liveWH.h) / 2 : drawSub === "hexagon" ? liveWH.w * liveWH.h * 0.75 : liveWH.w * liveWH.h;
     setSIn(fmtN(fromM2(area, units.area), areaDec));
   }, [liveWH, units.length, units.area, drawSub]);
+  useEffect(() => {
+    if (!liveTriangle || dirty.current) return;
+    setBIn(fmtN(fromMeters(liveTriangle.left, units.length), lenDec));
+    setCIn(fmtN(fromMeters(liveTriangle.right, units.length), lenDec));
+  }, [liveTriangle, units.length]);
   useEffect(() => {
     if (liveRot == null || dirty.current === "rot") return;
     const n = ((liveRot % 360) + 360) % 360;
@@ -2456,7 +2956,7 @@ function DrawMeasurePad({
       return;
     }
     if (parsed.kind === "length") {
-      if (drawSub === "rect" || drawSub === "ellipse") st.applyCadSize(parsed.meters, parsed.meters, hover);
+      if (drawSub === "rect" || drawSub === "ellipse" || drawSub === "triangle" || drawSub === "hexagon") st.applyCadSize(parsed.meters, parsed.meters, hover);
       else st.applyCadLength(parsed.meters, hover);
     } else if (parsed.kind === "size") st.applyCadSize(parsed.width, parsed.height, hover);
     else if (parsed.kind === "area") st.applyCadArea(parsed.meters2, hover);
@@ -2466,9 +2966,34 @@ function DrawMeasurePad({
       ? Math.PI * liveR * liveR
       : drawSub === "ellipse" && liveWH
         ? Math.PI * (liveWH.w / 2) * (liveWH.h / 2)
+        : drawSub === "triangle" && liveWH
+          ? (liveWH.w * liveWH.h) / 2
+        : drawSub === "hexagon" && liveWH
+          ? liveWH.w * liveWH.h * 0.75
         : liveWH
           ? liveWH.w * liveWH.h
           : null;
+  const applyTriangleSides = () => {
+    const baseN = parseN(wIn);
+    const leftN = parseN(bIn);
+    const rightN = parseN(cIn);
+    if (baseN == null || leftN == null || rightN == null) return;
+    const base = toMetersLen(baseN, units.length);
+    const left = toMetersLen(leftN, units.length);
+    const right = toMetersLen(rightN, units.length);
+    if (left + right <= base || base + left <= right || base + right <= left) {
+      toast(t("invalidTriangle"));
+      return;
+    }
+    const st = useProject.getState();
+    if (editFaceId) st.setTriangleSides(base, left, right);
+    else {
+      const x = (left * left - right * right) / (2 * base);
+      const h = Math.sqrt(Math.max(0, left * left - (x + base / 2) ** 2));
+      st.applyCadSize(base, h, hover);
+    }
+    dirty.current = null;
+  };
   const applyRectFrom = (which: "w" | "l" | "s" | "k" | "rot" = dirty.current === "s" ? "s" : dirty.current === "k" ? "k" : dirty.current === "rot" ? "rot" : "w") => {
     const st = useProject.getState();
     const dnow = drawingOrMigrate(st.project);
@@ -2498,7 +3023,8 @@ function DrawMeasurePad({
       if (editFaceId) {
         st.setFaceArea(area);
       } else {
-        const k = Math.sqrt(area / Math.max(curW * curH, 1e-9));
+        const currentArea = drawSub === "triangle" ? (curW * curH) / 2 : drawSub === "hexagon" ? curW * curH * 0.75 : drawSub === "ellipse" ? Math.PI * (curW / 2) * (curH / 2) : curW * curH;
+        const k = Math.sqrt(area / Math.max(currentArea, 1e-9));
         st.applyCadSize(Math.max(0.01, curW * k), Math.max(0.01, curH * k), hover);
       }
       dirty.current = null;
@@ -2515,9 +3041,9 @@ function DrawMeasurePad({
     else st.applyCadSize(w, h, hover);
     dirty.current = null;
   };
-  const field = (label: string, unit: string, value: string, which: "r" | "d" | "s" | "w" | "l" | "k" | "rot", set: (v: string) => void) => (
+  const field = (label: string, unit: string, value: string, which: InputKey, set: (v: string) => void) => (
     <label className="flex items-center gap-1 sm:gap-2">
-      <span className="w-[4.85rem] shrink-0 whitespace-nowrap text-[11px] font-semibold text-ink sm:w-24 sm:text-sm">{label}</span>
+      <span className={cn("shrink-0 whitespace-nowrap text-[11px] font-semibold text-ink sm:text-sm", drawSub === "triangle" ? "w-[7rem] sm:w-32" : "w-[4.85rem] sm:w-24")}>{label}</span>
       <input
         inputMode="decimal"
         className="h-7 min-w-0 flex-1 rounded-sm bg-bg-2 px-1.5 text-[11px] tabular shadow-border sm:h-10 sm:px-2 sm:text-sm"
@@ -2533,8 +3059,9 @@ function DrawMeasurePad({
         onKeyDown={(e) => {
           e.stopPropagation();
           if (e.key === "Enter") {
-            if (which === "w" || which === "l" || which === "k" || which === "rot" || (which === "s" && (drawSub === "rect" || drawSub === "ellipse"))) applyRectFrom(which === "s" ? "s" : which === "k" ? "k" : which === "rot" ? "rot" : which);
-            else applyCircleFrom(which);
+            if (drawSub === "triangle" && (which === "w" || which === "b" || which === "c")) applyTriangleSides();
+            else if (which === "w" || which === "l" || which === "k" || which === "rot" || (which === "s" && (drawSub === "rect" || drawSub === "ellipse" || drawSub === "triangle" || drawSub === "hexagon"))) applyRectFrom(which === "s" ? "s" : which === "k" ? "k" : which === "rot" ? "rot" : which);
+            else if (which === "r" || which === "d" || which === "s") applyCircleFrom(which);
             (e.target as HTMLInputElement).blur();
           }
         }}
@@ -2542,9 +3069,103 @@ function DrawMeasurePad({
       <span className="w-6 shrink-0 text-[10px] text-muted sm:w-8 sm:text-[11px]">{unit}</span>
     </label>
   );
+  const applyCompactField = (which: InputKey) => {
+    if (drawSub === "circle" && (which === "r" || which === "d" || which === "s")) {
+      applyCircleFrom(which);
+      return;
+    }
+    if (drawSub === "triangle" && (which === "w" || which === "b" || which === "c")) {
+      applyTriangleSides();
+      return;
+    }
+    if (which === "w" || which === "l" || which === "s" || which === "rot") {
+      applyRectFrom(which);
+    }
+  };
+  const compactField = (
+    label: string,
+    unit: string,
+    value: string,
+    which: InputKey,
+    set: (value: string) => void,
+  ) => (
+    <label key={which} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
+      <span className="min-w-5 text-center text-xs font-bold text-ink">{label}</span>
+      <input
+        aria-label={label}
+        inputMode="decimal"
+        className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none focus:border-tool"
+        value={value}
+        onChange={(event) => {
+          dirty.current = which;
+          set(event.target.value);
+        }}
+        onFocus={(event) => {
+          dirty.current = which;
+          event.currentTarget.select();
+        }}
+        onBlur={() => applyCompactField(which)}
+        onKeyDown={(event) => {
+          event.stopPropagation();
+          if (event.key === "Enter") event.currentTarget.blur();
+        }}
+      />
+      <span className="pr-0.5 text-[11px] text-muted">{unit}</span>
+    </label>
+  );
+  if ((editFaceId || compact) && ["circle", "rect", "ellipse", "triangle", ...(compact ? ["hexagon"] : [])].includes(drawSub)) {
+    const lengthUnit = lenLabel(units.length);
+    const areaUnit = areaLabel(units.area);
+    return (
+      <div
+        className="dimension-pad pointer-events-auto fixed inset-x-2 z-[90] overflow-x-auto overscroll-x-contain rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border"
+        style={{ bottom: `calc(3.55rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)` }}
+        onPointerDown={(event) => event.stopPropagation()}
+      >
+        <div className="flex h-10 w-max min-w-full items-center gap-1.5">
+          {drawSub === "circle" && (
+            <>
+              {compactField("R", lengthUnit, rIn, "r", setRIn)}
+              {compactField("Ø", lengthUnit, dIn, "d", setDIn)}
+              {compactField("S", areaUnit, sIn, "s", setSIn)}
+            </>
+          )}
+          {(drawSub === "rect" || drawSub === "hexagon") && (
+            <>
+              {compactField("A", lengthUnit, wIn, "w", setWIn)}
+              {compactField("B", lengthUnit, lIn, "l", setLIn)}
+              {compactField("S", areaUnit, sIn, "s", setSIn)}
+            </>
+          )}
+          {drawSub === "ellipse" && (
+            <>
+              {compactField("A", lengthUnit, wIn, "w", setWIn)}
+              {compactField("B", lengthUnit, lIn, "l", setLIn)}
+              {compactField("°", "°", rotIn, "rot", setRotIn)}
+              {compactField("S", areaUnit, sIn, "s", setSIn)}
+            </>
+          )}
+          {drawSub === "triangle" && (
+            <>
+              {compactField("A", lengthUnit, wIn, "w", setWIn)}
+              {compactField("B", lengthUnit, bIn, "b", setBIn)}
+              {compactField("C", lengthUnit, cIn, "c", setCIn)}
+              {compactField("S", areaUnit, sIn, "s", setSIn)}
+            </>
+          )}
+        </div>
+      </div>
+    );
+  }
+  if (compact) return <div className="dimension-pad"><label>
+    <span>A</span><input aria-label={param} inputMode="decimal" value={text} placeholder={hasPoint ? String(fromMeters(liveLen, units.length).toFixed(lenDec)) : "0"}
+      onChange={(e) => setText(e.target.value)} onFocus={(e) => e.currentTarget.select()}
+      onBlur={() => { if (text.trim()) { apply(text); setText(""); } }}
+      onKeyDown={(e) => { e.stopPropagation(); if (e.key === "Enter") e.currentTarget.blur(); }} /><span>{lenLabel(units.length)}</span>
+  </label></div>;
   return (
     <div
-      className="pointer-events-auto fixed left-2 z-[90] w-[13.5rem] rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border sm:w-[18rem] sm:px-2.5 sm:py-2"
+      className={cn("dimension-pad pointer-events-auto fixed left-2 z-[90] rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border sm:px-2.5 sm:py-2", drawSub === "triangle" ? "w-[17rem] sm:w-[22rem]" : "w-[13.5rem] sm:w-[18rem]")}
       style={{ bottom: `calc(3.4rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)` }}
     >
       {drawSub === "circle" ? (
@@ -2555,7 +3176,7 @@ function DrawMeasurePad({
           <Button
             size="xs"
             variant="pale-on"
-            className="h-7 w-full bg-[#7ec8f2] text-[11px] text-[#1b2430] sm:h-10 sm:text-sm"
+            className="h-7 w-full bg-btn-soft text-[11px] text-ink sm:h-10 sm:text-sm"
             disabled={!rIn.trim() && !dIn.trim() && !sIn.trim()}
             onClick={() => {
               const d = dirty.current;
@@ -2574,14 +3195,30 @@ function DrawMeasurePad({
           <Button
             size="xs"
             variant="pale-on"
-            className="h-7 w-full bg-[#7ec8f2] text-[11px] text-[#1b2430] sm:h-10 sm:text-sm"
+            className="h-7 w-full bg-btn-soft text-[11px] text-ink sm:h-10 sm:text-sm"
             disabled={!wIn.trim() && !lIn.trim() && !sIn.trim() && !rotIn.trim()}
             onClick={() => applyRectFrom(dirty.current === "s" ? "s" : dirty.current === "rot" ? "rot" : dirty.current === "l" ? "l" : "w")}
           >
             {t("applySize")}
           </Button>
         </div>
-      ) : drawSub === "rect" ? (
+      ) : drawSub === "triangle" ? (
+        <div className="space-y-1 sm:space-y-1.5">
+          {field(t("triangleBase"), lenLabel(units.length), wIn, "w", setWIn)}
+          {field(t("triangleLeft"), lenLabel(units.length), bIn, "b", setBIn)}
+          {field(t("triangleRight"), lenLabel(units.length), cIn, "c", setCIn)}
+          {field(t("drawArea"), areaLabel(units.area), sIn, "s", setSIn)}
+          <Button
+            size="xs"
+            variant="pale-on"
+            className="h-7 w-full bg-btn-soft text-[11px] text-ink sm:h-10 sm:text-sm"
+            disabled={!wIn.trim() && !bIn.trim() && !cIn.trim() && !sIn.trim()}
+            onClick={() => dirty.current === "s" ? applyRectFrom("s") : applyTriangleSides()}
+          >
+            {t("applySize")}
+          </Button>
+        </div>
+      ) : drawSub === "rect" || drawSub === "hexagon" ? (
         <div className="space-y-1 sm:space-y-1.5">
           {field(t("drawWidth"), lenLabel(units.length), wIn, "w", setWIn)}
           {field(t("drawHeight"), lenLabel(units.length), lIn, "l", setLIn)}
@@ -2589,7 +3226,7 @@ function DrawMeasurePad({
           <Button
             size="xs"
             variant="pale-on"
-            className="h-7 w-full bg-[#7ec8f2] text-[11px] text-[#1b2430] sm:h-10 sm:text-sm"
+            className="h-7 w-full bg-btn-soft text-[11px] text-ink sm:h-10 sm:text-sm"
             disabled={!wIn.trim() && !lIn.trim() && !sIn.trim()}
             onClick={() => applyRectFrom(dirty.current === "s" ? "s" : dirty.current === "l" ? "l" : "w")}
           >
@@ -2604,7 +3241,7 @@ function DrawMeasurePad({
           <div className="mt-1 flex items-center gap-1">
             <input
               inputMode="decimal"
-              placeholder={drawSub === "rect" || drawSub === "ellipse" ? "10x6" : "5"}
+              placeholder={drawSub === "rect" || drawSub === "ellipse" || drawSub === "triangle" || drawSub === "hexagon" ? "10x6" : "5"}
               className="h-10 min-w-0 flex-1 rounded-sm bg-bg-2 px-2 text-sm tabular shadow-border"
               value={text}
               onChange={(e) => setText(e.target.value)}
@@ -3069,131 +3706,21 @@ function LayerIrrigCard() {
   );
 }
 
-function DrawingCard() {
+function DrawingCard({ onlyConstraints = false }: { onlyConstraints?: boolean }) {
   const t = useT();
   const project = useProject((s) => s.project);
-  const selectedPolyId = useProject((s) => s.selectedPolyId);
-  const selectedPolyIds = useProject((s) => s.selectedPolyIds);
   const selectedEdgeId = useProject((s) => s.selectedEdgeId);
-  const units = useProject((s) => s.units);
-  const [openId, setOpenId] = useState<string | null>(null);
   const d = drawingOrMigrate(project);
-  const face = (openId && d.faces[openId]) || (selectedPolyId ? d.faces[selectedPolyId] : null);
   const internal = selectedEdgeId ? isInternalEdge(d, selectedEdgeId) : false;
-  const faces = Object.values(d.faces);
-  const showDetail = Boolean(face && openId === face.id);
   return (
-    <div className="space-y-2 p-1.5 sm:space-y-3 sm:p-3">
-      <div className="flex items-center gap-1">
-        <h2 className="min-w-0 flex-1 truncate font-display text-sm sm:text-base">
-          {project.name === "Без названия" ? t("untitled") : project.name}
-        </h2>
-        <Button
-          size="xs"
-          variant="pale"
-          className="h-6 shrink-0 px-1.5 text-[10px]"
-          onClick={() => useProject.getState().setProjectFormOpen(true)}
-        >
-          {t("edit")}
-        </Button>
-      </div>
-      <div>
-        <p className="px-0.5 pb-1 text-[10px] font-semibold tracking-wide text-muted uppercase">{t("layers")}</p>
-        {faces.length === 0 ? (
-          <p className="px-0.5 text-[11px] text-muted">{t("noLayers")}</p>
-        ) : (
-          <div className="flex flex-col gap-1">
-            {faces.map((f, i) => {
-              const n = i + 1;
-              const label = f.name?.trim() || t("layerN", { n });
-              const open = openId === f.id;
-              const on = selectedPolyId === f.id || open;
-              return (
-                <div key={f.id} className={cn("rounded-sm border border-line", on ? "bg-btn-soft" : "bg-surface")}>
-                  <div className="flex h-8 items-center gap-0.5 px-0.5">
-                    <button
-                      type="button"
-                      className={cn("relative flex size-7 shrink-0 items-center justify-center", f.hidden ? "text-danger" : "text-muted")}
-                      aria-label={f.hidden ? t("showLayer") : t("hideLayer")}
-                      onClick={() => {
-                        const st = useProject.getState();
-                        st.selectPoly(f.id);
-                        st.hideSelected(!f.hidden);
-                      }}
-                    >
-                      <Eye className="size-3.5" />
-                      {f.hidden && <span className="absolute inset-x-1.5 top-1/2 h-[1.5px] -rotate-45 bg-danger" />}
-                    </button>
-                    <button
-                      type="button"
-                      className={cn("flex size-7 shrink-0 items-center justify-center", f.locked ? "text-danger" : "text-muted")}
-                      aria-label={f.locked ? t("unlockLayer") : t("lockLayer")}
-                      onClick={() => {
-                        const st = useProject.getState();
-                        st.selectPoly(f.id);
-                        st.lockSelected(!f.locked);
-                      }}
-                    >
-                      {f.locked ? <Lock className="size-3.5" /> : <Unlock className="size-3.5" />}
-                    </button>
-                    <span
-                      className="mx-0.5 size-2.5 shrink-0 rounded-[2px] border border-black/15"
-                      style={{ background: f.fill ?? REGION_FILL[f.type] ?? "#ccc" }}
-                    />
-                    <button
-                      type="button"
-                      className={cn("min-w-0 flex-1 truncate text-left text-[11px]", f.hidden && "text-muted")}
-                      onClick={() => useProject.getState().selectPoly(f.id)}
-                    >
-                      {label}
-                    </button>
-                    <button
-                      type="button"
-                      className="shrink-0 px-1.5 text-[10px] font-medium text-tool"
-                      onClick={() => {
-                        useProject.getState().selectPoly(f.id);
-                        setOpenId(open ? null : f.id);
-                      }}
-                    >
-                      {t("layerMore")}
-                    </button>
-                  </div>
-                  {open && showDetail && face && face.id === f.id && (
-                    <div className="border-t border-line p-2">
-          <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("region")}</p>
-          <input
-            className="mt-1 h-7 w-full rounded-sm bg-bg-2 px-2 text-[11px] shadow-border"
-            defaultValue={face.name ?? ""}
-            key={`${face.id}-${face.name ?? ""}`}
-            placeholder={t("layerN", { n: faceLayerNumber(d, face.id) })}
-            onBlur={(e) => useProject.getState().setFaceName(e.target.value)}
-            onKeyDown={(e) => {
-              e.stopPropagation();
-              if (e.key === "Enter") (e.target as HTMLInputElement).blur();
-            }}
-          />
-          <p className="mt-1 text-xs tabular">
-            {t("area")}: {formatAreaU(faceArea(d, face.id), units.area)}
-          </p>
-          <p className="text-xs tabular">
-            {t("perimeter")}: {formatLenU(facePerimeter(d, face.id), units.length)}
-          </p>
-          {face.rect && (
-            <p className="text-xs tabular">
-              {t("drawWidth")} {formatLenU(face.rect.w, units.length)} · {t("drawHeight")} {formatLenU(face.rect.h, units.length)}
-            </p>
-          )}
-          {face.circle && (
-            <p className="text-xs tabular">Ø {formatLenU(face.circle.r * 2, units.length)}</p>
-          )}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
+    <div className="space-y-1 p-1 sm:space-y-3 sm:p-3">
+      {!onlyConstraints && <>
+        <div className="flex items-center gap-2 px-2">
+          <h2 className="min-w-0 flex-1 break-words text-base font-semibold">{project.name === "Без названия" ? t("untitled") : project.name}</h2>
+          <Button onClick={() => useProject.getState().setProjectFormOpen(true)}>{t("edit")}</Button>
+        </div>
+        <MobileLayers onEdit={(id) => useProject.getState().setCadEdit(id)} onInspect={() => { const st = useProject.getState(); st.setRightMode(st.selectedId ? "object" : "drawing"); st.setRightOpen(true); }} />
+      </>}
       {selectedEdgeId && (
         <div className="flex flex-wrap gap-1">
           {d.edges[selectedEdgeId] && Math.abs(d.edges[selectedEdgeId]!.bulge) > 1e-6 && (
@@ -3661,7 +4188,7 @@ function ZoneList({ compact }: { compact?: boolean }) {
   const holes = exclusionPolygons(project.polygons);
   const d = drawingOrMigrate(project);
   return (
-    <div>
+    <div className="zone-list">
       <div className="flex items-center gap-1">
         <p className="min-w-0 flex-1 px-0.5 text-[10px] font-semibold tracking-wide text-muted uppercase">{t("zonesTitle")}</p>
         <button

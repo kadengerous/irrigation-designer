@@ -1,4 +1,6 @@
 /** Static URLs from /public/catalog — no eager ESM glob (Safari fails at ~150 module scripts). */
+const PHOTO_VERSION = "9";
+
 const PHOTO: Record<string, string> = {
   "10A": "/catalog/10A.png",
   "10A-HE": "/catalog/10A-HE.png",
@@ -159,7 +161,7 @@ const PHOTO: Record<string, string> = {
 
 export function bundledPhoto(...ids: Array<string | undefined | null>): string | undefined {
   for (const id of ids) {
-    if (id && PHOTO[id]) return PHOTO[id];
+    if (id && PHOTO[id]) return `${PHOTO[id]}?v=${PHOTO_VERSION}`;
   }
   return undefined;
 }

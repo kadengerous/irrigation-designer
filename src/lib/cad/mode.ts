@@ -16,6 +16,8 @@ export type CadMode =
   | "draw_rotrect"
   | "draw_circle"
   | "draw_ellipse"
+  | "draw_triangle"
+  | "draw_hexagon"
   | "draw_arc"
   | "draw_spline"
   | "draw_freehand"
@@ -42,6 +44,8 @@ const DRAW_MODES: Partial<Record<DrawSub, CadMode>> = {
   rotrect: "draw_rotrect",
   circle: "draw_circle",
   ellipse: "draw_ellipse",
+  triangle: "draw_triangle",
+  hexagon: "draw_hexagon",
   arc: "draw_arc",
   spline: "draw_spline",
   freehand: "draw_freehand",

@@ -23,6 +23,7 @@ export type DrawSub =
   | "ellipse"
   | "polygon"
   | "triangle"
+  | "hexagon"
   | "spline"
   | "freehand"
   | "offset"

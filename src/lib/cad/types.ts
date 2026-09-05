@@ -45,6 +45,12 @@ export type CadFace = {
   ellipse?: { cx: number; cy: number; rx: number; ry: number; rot?: number };
   rect?: { x: number; y: number; w: number; h: number; rot: number };
   spline?: { pts: Pt[]; closed: boolean };
+  /** Smoothed pencil stroke. Open strokes live as standalone faces without CAD edges. */
+  freehand?: { pts: Pt[]; closed: boolean };
+  /** Free-form contour created with the numbered point tool. */
+  pointShape?: boolean;
+  /** Joined pencil/spline contour edited only through boundary nodes. */
+  nodeEdit?: { curvedVertexIds: string[] };
   hydro?: { need: "low" | "medium" | "high"; method: "spray" | "mp" | "rotor" | "drip" | "bubbler" | "none" };
   name?: string;
   fill?: string;
@@ -235,6 +241,7 @@ export const REGION_FILL: Record<RegionType, string> = {
 };
 
 export const FACE_FILLS = [
+  "transparent",
   "#c8e6b0",
   "#b8e0d2",
   "#efe3c0",
@@ -249,6 +256,10 @@ export const FACE_FILLS = [
   "#e4f0c8",
   "#d6e8f5",
   "#ead9e8",
+  "#ef4444",
+  "#7f1d1d",
+  "#facc15",
+  "#8b5cf6",
   "#8b5a3c",
   "#6b5344",
   "#8a8a86",
@@ -256,3 +267,6 @@ export const FACE_FILLS = [
   "#3a3a38",
   "#1a1a18",
 ] as const;
+
+/** Automatic fill order for newly drawn shapes (transparent is a manual choice). */
+export const SHAPE_FILL_CYCLE = ["#c8e6b0", "#c5ddf2", "#f3d4b8", "#dcccec", "#facc15", "#b8e0d2", "#f0c9c9", "#8b5cf6"] as const;

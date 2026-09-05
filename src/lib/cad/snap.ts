@@ -2,7 +2,7 @@ import { dist, headingDeg, mid, type Pt } from "@/lib/geometry";
 import type { CadDrawing, SnapHit, SnapKind } from "@/lib/cad/types";
 import { vertPt } from "@/lib/cad/engine";
 
-const PRIORITY: SnapKind[] = ["close", "end", "intersect", "center", "mid", "tangent", "perp", "parallel", "horiz", "vert", "extend", "edge", "head", "grid", "none"];
+const PRIORITY: SnapKind[] = ["close", "end", "intersect", "center", "mid", "tangent", "edge", "head", "grid", "perp", "parallel", "horiz", "vert", "extend", "none"];
 
 function better(a: SnapKind, b: SnapKind) {
   return PRIORITY.indexOf(a) < PRIORITY.indexOf(b);
@@ -27,18 +27,25 @@ export function cadSnap(
   const pxTol =
     opts.pointerType === "touch" ? 22 : opts.pointerType === "pen" ? 14 : 12;
   const tol = pxTol / Math.max(opts.pxPerMeter, 1e-6);
+  const gridPxTol =
+    opts.pointerType === "touch" ? 34 : opts.pointerType === "pen" ? 24 : 18;
+  const gridTol = Math.min(
+    gridPxTol / Math.max(opts.pxPerMeter, 1e-6),
+    opts.gridStep * 0.45,
+  );
   let best: SnapHit = { pt: p, kind: "none" };
   let bestD = tol;
   const cell = Math.max(tol * 2.5, 0.25);
 
-  const consider = (q: Pt, kind: SnapKind, extra?: Partial<SnapHit>) => {
+  const consider = (q: Pt, kind: SnapKind, extra?: Partial<SnapHit>, maxDistance = tol) => {
     const dd = dist(p, q);
-    if (dd <= bestD || (dd <= tol * 1.15 && better(kind, best.kind))) {
-      if (dd < bestD || better(kind, best.kind)) {
-        bestD = dd;
-        best = { pt: q, kind, ...extra };
-      }
-    }
+    if (dd > maxDistance * 1.15) return;
+    const firstHit = best.kind === "none" && dd <= maxDistance;
+    const higherPriority = best.kind !== "none" && better(kind, best.kind);
+    const samePriorityAndCloser = kind === best.kind && dd < bestD;
+    if (!firstHit && !higherPriority && !samePriorityAndCloser) return;
+    bestD = dd;
+    best = { pt: q, kind, ...extra };
   };
 
   if (opts.closeTo && dist(p, opts.closeTo) < Math.max(tol, 28 / opts.pxPerMeter)) {
@@ -137,9 +144,17 @@ export function cadSnap(
     }
   }
 
-  if (opts.snapOn && opts.gridStep > 0) {
+  if (opts.snapGridOn && opts.gridStep > 0) {
     const g = opts.gridStep;
-    consider({ x: Math.round(p.x / g) * g, y: Math.round(p.y / g) * g }, "grid");
+    const gridX = Math.round(p.x / g) * g;
+    const gridY = Math.round(p.y / g) * g;
+    const nearX = Math.abs(p.x - gridX) <= gridTol;
+    const nearY = Math.abs(p.y - gridY) <= gridTol;
+    if (nearX || nearY) {
+      const q = { x: nearX ? gridX : p.x, y: nearY ? gridY : p.y };
+      const maxDistance = nearX && nearY ? gridTol * Math.SQRT2 : gridTol;
+      consider(q, "grid", undefined, maxDistance);
+    }
   }
 
   if (opts.lock && opts.angleFrom && (opts.lock === "horiz" || opts.lock === "vert" || opts.lock === "parallel" || opts.lock === "perp")) {

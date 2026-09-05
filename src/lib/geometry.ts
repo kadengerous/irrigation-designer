@@ -350,6 +350,96 @@ export function uid(prefix: string): string {
   return `${prefix}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
+/**
+ * Return the vertex indexes where the visible sides of a closed path start.
+ * Consecutive collinear segments are treated as one side. This also makes the
+ * result independent of whether the stored contour happens to start in the
+ * middle of a straight side.
+ */
+export function closedPathSideStarts(points: Pt[]): number[] {
+  if (points.length < 2) return points.map((_, index) => index);
+  const starts: number[] = [];
+  points.forEach((point, index) => {
+    const previous = points[(index - 1 + points.length) % points.length]!;
+    const next = points[(index + 1) % points.length]!;
+    const ax = point.x - previous.x;
+    const ay = point.y - previous.y;
+    const bx = next.x - point.x;
+    const by = next.y - point.y;
+    const an = Math.hypot(ax, ay);
+    const bn = Math.hypot(bx, by);
+    const straight =
+      an > 1e-9 &&
+      bn > 1e-9 &&
+      Math.abs(ax * by - ay * bx) / (an * bn) < 1e-4 &&
+      (ax * bx + ay * by) / (an * bn) > 0.9999;
+    if (!straight) starts.push(index);
+  });
+  return starts.length >= 2 ? starts : points.map((_, index) => index);
+}
+
+/**
+ * Snap a shape translation by its boundary anchors, never by its center.
+ * Horizontal and vertical corrections are chosen independently, so a corner
+ * can settle on a grid intersection while a side can settle on one grid line.
+ */
+export function snapShapeTranslationToGrid(
+  anchors: Pt[],
+  dx: number,
+  dy: number,
+  gridStep: number,
+  pxPerMeter: number,
+  tolerancePx = 20,
+): { dx: number; dy: number } {
+  if (!anchors.length || !(gridStep > 0)) return { dx, dy };
+  const tolerance = tolerancePx / Math.max(8, pxPerMeter);
+  let correctionX: number | null = null;
+  let correctionY: number | null = null;
+  for (const anchor of anchors) {
+    const movedX = anchor.x + dx;
+    const movedY = anchor.y + dy;
+    const candidateX = Math.round(movedX / gridStep) * gridStep - movedX;
+    const candidateY = Math.round(movedY / gridStep) * gridStep - movedY;
+    if (
+      Math.abs(candidateX) <= tolerance &&
+      (correctionX === null || Math.abs(candidateX) < Math.abs(correctionX))
+    ) {
+      correctionX = candidateX;
+    }
+    if (
+      Math.abs(candidateY) <= tolerance &&
+      (correctionY === null || Math.abs(candidateY) < Math.abs(correctionY))
+    ) {
+      correctionY = candidateY;
+    }
+  }
+  return {
+    dx: dx + (correctionX ?? 0),
+    dy: dy + (correctionY ?? 0),
+  };
+}
+
+/** Grid anchors at the exact world-space extents of a rotated ellipse. */
+export function ellipseBoundaryGridAnchors(
+  cx: number,
+  cy: number,
+  rx: number,
+  ry: number,
+  rotationDeg = 0,
+): Pt[] {
+  const rotation = (rotationDeg * Math.PI) / 180;
+  const cos = Math.cos(rotation);
+  const sin = Math.sin(rotation);
+  const extentX = Math.hypot(rx * cos, ry * sin);
+  const extentY = Math.hypot(rx * sin, ry * cos);
+  return [
+    { x: cx - extentX, y: cy },
+    { x: cx + extentX, y: cy },
+    { x: cx, y: cy - extentY },
+    { x: cx, y: cy + extentY },
+  ];
+}
+
 export function snapInProject(
   p: Pt,
   project: {
@@ -395,4 +485,3 @@ export function snapInProject(
     angleFrom: opts.snapOn ? (opts.angleFrom ?? null) : null,
   });
 }
-

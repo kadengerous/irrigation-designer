@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from "react";
 import { LOCALES, tr } from "@/lib/i18n";
-import { THEME_IDS, UI_SIZES, themeSwatch } from "@/lib/theme";
+import { THEME_IDS, THEME_NAMES, UI_SIZES, themePreview, type ThemeId } from "@/lib/theme";
+import { Check } from "lucide-react";
 import {
   AREA_OPTS,
   FLOW_OPTS,
@@ -40,24 +41,28 @@ function Chip({
   );
 }
 
-function Swatch({
-  color,
+function ThemeCard({
+  id,
   active,
   label,
   onClick,
 }: {
-  color?: string;
+  id: ThemeId;
   active: boolean;
   label: string;
   onClick?: () => void;
 }) {
+  const palette = themePreview(id);
   return (
-    <button type="button" onClick={onClick} className="flex w-12 flex-col items-center gap-1">
-      <span
-        className={cn("size-7 rounded-full border border-black/10", active && "ring-2 ring-btn ring-offset-2 ring-offset-surface")}
-        style={{ background: color }}
-      />
-      <span className={cn("truncate text-[10px] leading-tight", active ? "font-semibold text-ink" : "text-muted")}>{label}</span>
+    <button type="button" aria-pressed={active} aria-label={label} onClick={onClick}
+      className={cn("theme-card min-w-0 rounded-md border p-3 text-left",
+        active ? "border-btn ring-1 ring-btn bg-btn-soft" : "border-line bg-surface hover:bg-bg-2")}>
+      <span className="mb-2 flex h-8 overflow-hidden rounded-sm border border-line" aria-hidden="true">
+        {[palette.bg, palette.surface, palette.btn].map((color, i) => <span key={i} className="flex-1" style={{ background: color }} />)}
+      </span>
+      <span className="flex items-center justify-between gap-1 text-sm font-medium text-ink">
+        {label}{active && <Check className="size-4 shrink-0" aria-hidden="true" />}
+      </span>
     </button>
   );
 }
@@ -74,6 +79,7 @@ export function SettingsPanel({ onClose }: { onClose: () => void }) {
   return (
     <div className="absolute inset-0 z-50 grid place-items-center bg-ink/30 p-3 sm:p-4" onClick={onClose}>
       <div
+        role="dialog" aria-modal="true" aria-label={t("appSettings")}
         className="flex max-h-[min(92dvh,36rem)] w-full max-w-md flex-col overflow-hidden rounded-lg bg-surface shadow-border"
         onClick={(e) => e.stopPropagation()}
       >
@@ -93,7 +99,7 @@ export function SettingsPanel({ onClose }: { onClose: () => void }) {
             ))}
           </div>
         </div>
-        <div className="min-h-0 flex-1 overflow-y-auto p-4">
+        <div className="min-h-0 flex-1 overflow-y-auto touch-pan-y p-4">
           {tab === "ui" && (
             <div className="space-y-4">
               <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("uiSize")}</p>
@@ -112,14 +118,14 @@ export function SettingsPanel({ onClose }: { onClose: () => void }) {
                   </button>
                 ))}
               </div>
-              <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("colorTheme")}</p>
-              <div className="flex flex-wrap gap-x-2 gap-y-3">
+              <p className="text-sm font-semibold text-ink">{locale === "ru" ? "Оформление" : "Appearance"}</p>
+              <div className="grid grid-cols-2 gap-2">
                 {THEME_IDS.map((id) => (
-                  <Swatch
+                  <ThemeCard
                     key={id}
-                    color={themeSwatch(id)}
+                    id={id}
                     active={themeId === id}
-                    label={t(`th_${id}`)}
+                    label={THEME_NAMES[id]}
                     onClick={() => useProject.getState().setThemeId(id)}
                   />
                 ))}
