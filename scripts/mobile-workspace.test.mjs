@@ -252,7 +252,13 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.match(helper, /<LayerColorPicker title=\{title\}/);
   assert.match(css, /\.mobile-layer \.layer-lock\[aria-pressed="true"\] \{ color: var\(--color-danger\)/);
   assert.match(css, /\.layer-eye\[data-hidden="true"\]::after/);
-  assert.match(app, /mobilePanel !== "layers" && !catalogGhost && <MobileSheet/);
+  assert.match(app, /mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet/);
+  assert.match(app, /mobilePanel === "tools" && !catalogGhost && <div className="mobile-tool-strip-panel"/);
+  const toolStrip = app.slice(app.indexOf('mobilePanel === "tools"'), app.indexOf('mobilePanel && mobilePanel !== "layers"'));
+  assert.match(toolStrip, /DRAW_SUBS\.filter\(\(item\) => item\.id !== "arc"\)/);
+  assert.doesNotMatch(toolStrip, /Назначение|Дополнительные инструменты|MOBILE_EXTRA_DRAW|setMeasureSub\("guide"\)|setTool\("scale"\)|setCadMode\("move_object"\)/);
+  assert.match(css, /\.mobile-tool-strip-panel \{[^}]*height: 42px/);
+  assert.match(css, /\.mobile-tool-strip \{[^}]*overflow-x: auto/);
   assert.match(css, /\.mobile-top-layers \{ position: absolute; top: 4px/);
   assert.match(helper, /closest<HTMLElement>\("\.mobile-layers-list"\)\?\.scrollTo\(\{ left: 0/);
   assert.doesNotMatch(helper, /selectedRow\.current\?\.scrollIntoView/);

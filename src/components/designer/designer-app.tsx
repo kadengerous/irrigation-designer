@@ -1720,42 +1720,26 @@ export function DesignerApp() {
       </footer>
 
       {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} · коснитесь чертежа</span><button type="button" aria-label="Закончить размещение" onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
-      {isPhone && mobilePanel && mobilePanel !== "layers" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "tools" ? "Инструменты" : mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("irrigation") : mobilePanel === "estimate" ? t("estimate") : contextTitle} onClose={() => setMobilePanel(null)}
+      {isPhone && mobilePanel === "tools" && !catalogGhost && <div className="mobile-tool-strip-panel" role="toolbar" aria-label="Инструменты">
+        <div className="mobile-tool-strip scroll-touch">
+          {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} aria-label={t("edit")} title={t("edit")} onClick={() => { useProject.getState().setCadEdit(mobileFace.id); setMobilePanel("properties"); }}><Pencil size={18} /><span>{t("edit")}</span></button>}
+          {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} aria-label="Копировать" title="Копировать" onClick={() => { useProject.getState().duplicateSelected(); setMobilePanel(null); }}><Copy size={18} /><span>Копировать</span></button>}
+          {["polygon", "polyline", "spline", "freehand", "path"].includes(drawSub) && draft.points.length > 1 && <button type="button" disabled={drawSub === "polygon" && draft.points.length < 4} aria-label={drawSub === "polygon" ? "Замкнуть" : "Завершить"} onClick={() => { const st = useProject.getState(); if (st.drawSub === "polygon") st.closePolygon(); else st.finishOpenDraw(); setMobilePanel(null); }}><Check size={18} /><span>{drawSub === "polygon" ? "Замкнуть" : "Завершить"}</span></button>}
+          {DRAW_SUBS.filter((item) => item.id !== "arc").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}<span>{t(item.key)}</span></button>)}
+          <button type="button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><Ruler size={18} /><span>{t("ruler")}</span></button>
+          <button type="button" aria-label={t("irrigation")} title={t("irrigation")} onClick={() => { setMobileWorkspaceMode("irrigation"); setMobilePanel(null); }}><Droplets size={18} /><span>{t("irrigation")}</span></button>
+          <button type="button" aria-label={t("estimate")} title={t("estimate")} onClick={() => setMobilePanel("estimate")}><FileText size={18} /><span>{t("estimate")}</span></button>
+          <button type="button" aria-label={t("issuesTitle")} title={t("issuesTitle")} onClick={() => { setMobilePanel(null); setIssuesOpen(true); }}><Check size={18} /><span>{t("issuesTitle")}</span></button>
+          {project.heads.length > 0 && <>
+            <button type="button" aria-label={t("sectors")} title={t("sectors")} aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={18} /><span>{t("sectors")}</span></button>
+            <button type="button" aria-label={t("labels")} title={t("labels")} aria-pressed={showLabels} onClick={() => useProject.getState().setLabels(!showLabels)}><Tag size={18} /><span>{t("labels")}</span></button>
+          </>}
+        </div>
+      </div>}
+      {isPhone && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("irrigation") : mobilePanel === "estimate" ? t("estimate") : contextTitle} onClose={() => setMobilePanel(null)}
         footer={mobilePanel === "properties" && selected ? <div className="mobile-context-footer">
           <Button className="ml-auto" aria-label="Готово" title="Готово" onPointerDown={(e) => e.preventDefault()} onClick={() => { (document.activeElement as HTMLElement)?.blur?.(); if (selected) setMobilePanel(null); }}><Check /></Button>
         </div> : undefined}>
-        {mobilePanel === "tools" && <div className="mobile-tools">
-          {(mobileFace || (tool === "draw" && drawSub !== "none")) && <section><h3>{mobileFace ? contextTitle : t("draw")}</h3>
-            <div className="mobile-tool-grid">
-              {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} onClick={() => { useProject.getState().setCadEdit(mobileFace.id); setMobilePanel("properties"); }}><Pencil size={22} />{t("edit")}</button>}
-              {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} onClick={() => { useProject.getState().duplicateSelected(); setMobilePanel(null); }}><Copy size={22} />Копировать</button>}
-              {["polygon", "polyline", "spline", "freehand", "path"].includes(drawSub) && draft.points.length > 1 && <button type="button" disabled={drawSub === "polygon" && draft.points.length < 4} onClick={() => { const st = useProject.getState(); if (st.drawSub === "polygon") st.closePolygon(); else st.finishOpenDraw(); setMobilePanel(null); }}><Check size={22} />{drawSub === "polygon" ? "Замкнуть" : "Завершить"}</button>}
-            </div>
-            <label className="mobile-region-select">Назначение<select value={mobileFace?.type ?? polyKind} onChange={(event) => { const value = event.target.value as typeof polyKind; if (mobileFace) useProject.getState().setRegionType(mobileFace.id, value); else useProject.getState().setRegionTypeDraft(value); }} disabled={Boolean(mobileFace?.locked)}>{DRAW_KINDS.map((kind) => <option key={kind.id} value={kind.id}>{t(kind.key)}</option>)}</select></label>
-          </section>}
-          {selectedEdgeId && <DrawingCard onlyConstraints />}
-          {[
-            { title: "Контуры", ids: ["line", "polygon", "spline", "arc", "freehand"] },
-            { title: "Фигуры", ids: ["rect", "circle", "ellipse", "triangle", "hexagon"] },
-            { title: "Размеры и надписи", ids: ["dim", "text"] },
-          ].map((group) => <section key={group.title}><h3>{group.title}</h3><div className="mobile-tool-grid">{DRAW_SUBS.filter((s) => group.ids.includes(s.id)).map((s) => <button key={s.id} type="button" aria-pressed={tool === "draw" && drawSub === s.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(s.id))}>{s.icon}<span>{t(s.key)}</span></button>)}</div></section>)}
-          <section><h3>Измерение и правка</h3><div className="mobile-tool-grid">
-            <button type="button" aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><Ruler size={22} />{t("ruler")}</button>
-            <button type="button" aria-pressed={tool === "measure" && measureSub === "guide"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("guide"))}><MoveHorizontal size={22} />{t("guide")}</button>
-            <button type="button" aria-pressed={tool === "scale"} onClick={() => chooseMobileTool(() => useProject.getState().setTool("scale"))}><Maximize2 size={22} />{t("calibrateScale")}</button>
-            <button type="button" onClick={() => { useProject.getState().setCadMode("move_object"); setMobilePanel(null); }}><Crosshair size={22} />Перемещение</button>
-          </div></section>
-          <details><summary>Дополнительные инструменты</summary><div className="mobile-tool-grid">{MOBILE_EXTRA_DRAW.map((item) => <button type="button" key={item.id} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}><Pencil size={22} /><span>{t(item.key)}</span></button>)}</div></details>
-          <section><h3>Полив и расчёты</h3><div className="mobile-tool-grid">
-            <button type="button" onClick={() => { setMobileWorkspaceMode("irrigation"); setMobilePanel(null); }}><Droplets size={22} />{t("irrigation")}</button>
-            <button type="button" onClick={() => setMobilePanel("estimate")}><FileText size={22} />{t("estimate")}</button>
-            <button type="button" onClick={() => { setMobilePanel(null); setIssuesOpen(true); }}><Check size={22} />{t("issuesTitle")}</button>
-          </div></section>
-          {project.heads.length > 0 && <section><h3>На чертеже</h3><div className="mobile-tool-grid">
-            <button type="button" aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={22} />{t("sectors")}</button>
-            <button type="button" aria-pressed={showLabels} onClick={() => useProject.getState().setLabels(!showLabels)}><Tag size={22} />{t("labels")}</button>
-          </div></section>}
-        </div>}
         {mobilePanel === "library" && <div className="mobile-catalog" data-catalog>
           <div className="mobile-categories" data-cat-bar>{CATEGORIES.map((category) => <button type="button" key={category.id} aria-pressed={familyFilter === category.id} onClick={() => { useProject.getState().setFamily(category.id); setLibInfo(null); }}>{t(`cat_${category.id}`)}</button>)}</div>
           <div className="mobile-library-actions"><Button aria-label={t("autoPlace")} onClick={() => { autoPlace(); setMobilePanel(null); }}><LayoutGrid />Авторасстановка</Button><span>Выбрать — касание. Перенести — удерживать ⊕.</span></div>
