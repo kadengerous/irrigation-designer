@@ -82,7 +82,7 @@ import {
   hexagonFromBounds,
   triangleMetrics,
 } from "@/lib/cad/engine";
-import { REGION_FILL, layerForType, type CadDrawing } from "@/lib/cad/types";
+import { FACE_TEXTURES, REGION_FILL, layerForType, type CadDrawing } from "@/lib/cad/types";
 
 const DRAW_CREATE = new Set([
   "line",
@@ -357,6 +357,8 @@ const PREVIEW_EMPTY_DRAFT = { points: [], scaleA: null, scaleB: null, measureA: 
 
 export function DesignCanvas({
   previewView,
+  multiSelect = false,
+  mobile = false,
   onScalePair,
   onMeasure,
   onHover,
@@ -390,12 +392,14 @@ export function DesignCanvas({
   const [pinching, setPinching] = useState(false);
   const skipClick = useRef(false);
   const [img, setImg] = useState<HTMLImageElement | null>(null);
+  const [textureImages, setTextureImages] = useState<Record<string, HTMLImageElement>>({});
   const lastFit = useRef(-1);
   const midDown = useRef(false);
   const [hoverPt, setHoverPt] = useState<Pt | null>(null);
   const [snapHit, setSnapHit] = useState<{ kind: string; pt: Pt } | null>(null);
   const [selectedDraftSegment, setSelectedDraftSegment] = useState<number | null>(null);
   const [selectedDraftEdgeId, setSelectedDraftEdgeId] = useState<string | null>(null);
+  const [activeDraftPolygonPoint, setActiveDraftPolygonPoint] = useState<number | null>(null);
   const [activeDraftSplinePoint, setActiveDraftSplinePoint] = useState<number | null>(null);
   const lineEditingRef = useRef(false);
   const lineTapGuardUntil = useRef(0);
@@ -554,6 +558,17 @@ export function DesignCanvas({
   useEffect(() => {
     if (
       tool !== "draw" ||
+      drawSub !== "polygon" ||
+      activeDraftPolygonPoint == null ||
+      activeDraftPolygonPoint >= draft.points.length
+    ) {
+      setActiveDraftPolygonPoint(null);
+    }
+  }, [tool, drawSub, draft.points.length, activeDraftPolygonPoint]);
+
+  useEffect(() => {
+    if (
+      tool !== "draw" ||
       drawSub !== "line" ||
       selectedDraftSegment == null ||
       selectedDraftSegment >= draft.points.length - 1
@@ -690,6 +705,21 @@ export function DesignCanvas({
     im.onerror = () => setImg(null);
     im.src = src;
   }, [project.underlay?.src, project.underlay?.visible]);
+
+  useEffect(() => {
+    let active = true;
+    const loaded: Record<string, HTMLImageElement> = {};
+    for (const texture of FACE_TEXTURES) {
+      const image = new window.Image();
+      image.onload = () => {
+        if (!active) return;
+        loaded[texture.id] = image;
+        setTextureImages({ ...loaded });
+      };
+      image.src = texture.src;
+    }
+    return () => { active = false; };
+  }, []);
 
   useEffect(() => {
     onExportReady?.(() => {
@@ -1069,7 +1099,7 @@ export function DesignCanvas({
           : null;
         if (edgeFace) {
           if (st.cadEditId === edgeFace) return;
-          st.selectPoly(edgeFace);
+          st.selectPoly(edgeFace, multiSelect);
           return;
         }
         if (edge) {
@@ -1078,7 +1108,7 @@ export function DesignCanvas({
         }
         if (st.cadEditId && face === st.cadEditId) return;
         if (face) {
-          st.selectPoly(face);
+          st.selectPoly(face, multiSelect);
           return;
         }
         if (e.target.name() === "bg") {
@@ -1363,6 +1393,7 @@ export function DesignCanvas({
           st.closePolygon();
           return;
         }
+        setActiveDraftPolygonPoint(null);
         st.addDraftPoint(p);
         pendingHover.current = null;
         if (hoverRaf.current) cancelAnimationFrame(hoverRaf.current);
@@ -1450,7 +1481,7 @@ export function DesignCanvas({
       }
       return;
     }
-    if (!st.tool || st.tool === "move") {
+    if (!st.tool || st.tool === "move" || multiSelect) {
       const d = drawingOrMigrate(st.project);
       const eTol = 14 / px;
       const cands = pickCandidates(
@@ -1459,7 +1490,7 @@ export function DesignCanvas({
         eTol,
         st.project.heads.map((h) => ({ id: h.id, x: h.x, y: h.y })),
       );
-      if (cands.length > 1) {
+      if (!mobile && cands.length > 1) {
         const faces = cands.filter((c) => c.kind === "face");
         if (
           faces.length > 1 &&
@@ -1479,7 +1510,7 @@ export function DesignCanvas({
         st.unionWith(face);
         return;
       }
-      if (ctrl && face) {
+      if ((ctrl || multiSelect) && face) {
         st.selectPoly(face, true);
         return;
       }
@@ -1621,6 +1652,9 @@ export function DesignCanvas({
     drawSub === "polygon" && draft.points.length
       ? [draft.points[0]!, ...polygonLivePoints]
       : [];
+  const activeConstructionPoint =
+    (drawSub === "polygon" ? activeDraftPolygonPoint : activeDraftSplinePoint) ??
+    (draft.points.length > 1 ? draft.points.length - 1 : null);
   const beginPolygonDraftPointDrag = (
     pointIndex: number,
     e: Konva.KonvaEventObject<PointerEvent | MouseEvent | TouchEvent>,
@@ -1641,6 +1675,7 @@ export function DesignCanvas({
       panY,
       px,
       () => {
+        setActiveDraftPolygonPoint(pointIndex);
         setHoverPt(null);
         setSnapHit(null);
       },
@@ -1934,6 +1969,7 @@ export function DesignCanvas({
                     ? liveCadPath.points
                     : null,
                   appearance,
+                  textureImages,
                 ),
           )}
           {Object.values(drawingOrMigrate(project).plants ?? {}).map((pl) =>
@@ -2299,12 +2335,10 @@ export function DesignCanvas({
               />
             )}
           {drawSub === "spline" && draft.points.length >= 2 && (
-            <OpenPathMeasures
-              points={draft.points}
-              showLetters
+            <PathTotalMeasure
+              points={catmullRom(draft.points, 8, false)}
               sx={sx}
               sy={sy}
-              px={px}
               unit={measureUnit}
             />
           )}
@@ -2353,26 +2387,12 @@ export function DesignCanvas({
                 listening={false}
               />
               )}
-              <OpenPathMeasures
-                points={polygonLivePoints}
+              <PathTotalMeasure
+                points={polygonFillPoints}
                 sx={sx}
                 sy={sy}
-                px={px}
                 unit={measureUnit}
               />
-              {polygonFillPoints.length >= 3 && (
-                <Text
-                  x={sx(polygonMassCenter(polygonFillPoints).x) - 48}
-                  y={sy(polygonMassCenter(polygonFillPoints).y) - 8}
-                  width={96}
-                  align="center"
-                  text={formatAreaU(polygonArea(polygonFillPoints), useProject.getState().units.area)}
-                  fontSize={13}
-                  fontFamily="IBM Plex Sans, sans-serif"
-                  fill={appearance.ink} stroke={appearance.bg} strokeWidth={2} fillAfterStrokeEnabled
-                  listening={false}
-                />
-              )}
             </>
           )}
           {drawSub !== "line" &&
@@ -2397,8 +2417,8 @@ export function DesignCanvas({
                 >
                   <Circle radius={20} fill="rgba(255,255,255,0.001)" />
                   <Circle
-                    radius={10}
-                    fill="#d56a2b"
+                    radius={activeConstructionPoint === i ? 11 : i === 0 ? 9 : 7}
+                    fill={activeConstructionPoint === i ? "#f5222d" : i === 0 ? appearance.accent : "#d56a2b"}
                     stroke={appearance.handleOutline}
                     strokeWidth={1.5}
                     listening={false}
@@ -2429,12 +2449,12 @@ export function DesignCanvas({
                 >
                   <Circle radius={20} fill="rgba(255,255,255,0.001)" />
                   <Circle
-                    radius={i === 0 ? 8 : 6}
+                    radius={activeConstructionPoint === i ? 11 : i === 0 ? 9 : 7}
                     fill={
-                      i === 0
-                        ? "#171717"
-                        : i === draft.points.length - 1 || activeDraftSplinePoint === i
-                          ? "#cf2f2f"
+                      activeConstructionPoint === i
+                        ? "#f5222d"
+                        : i === 0
+                          ? appearance.accent
                           : "#d56a2b"
                     }
                     stroke={appearance.handleOutline}
@@ -3911,6 +3931,53 @@ function OpenPathMeasures({
         );
       })}
     </Group>
+  );
+}
+
+function PathTotalMeasure({
+  points,
+  sx,
+  sy,
+  unit,
+}: {
+  points: Pt[];
+  sx: (n: number) => number;
+  sy: (n: number) => number;
+  unit: ReturnType<typeof useProject.getState>["measureUnit"];
+}) {
+  const appearance = canvasTheme(useProject((s) => s.themeId));
+  if (points.length < 2) return null;
+  const lengths = points.slice(1).map((point, index) => dist(points[index]!, point));
+  const total = lengths.reduce((sum, length) => sum + length, 0);
+  if (total < 0.002) return null;
+  let remaining = total / 2;
+  let center = points[0]!;
+  for (let index = 0; index < lengths.length; index++) {
+    const length = lengths[index]!;
+    if (remaining <= length) {
+      const a = points[index]!;
+      const b = points[index + 1]!;
+      const ratio = length > 0 ? remaining / length : 0;
+      center = { x: a.x + (b.x - a.x) * ratio, y: a.y + (b.y - a.y) * ratio };
+      break;
+    }
+    remaining -= length;
+  }
+  return (
+    <Text
+      x={sx(center.x) - 55}
+      y={sy(center.y) - 9}
+      width={110}
+      align="center"
+      text={formatLen(total, unit)}
+      fontSize={13}
+      fontFamily="IBM Plex Sans, sans-serif"
+      fill={appearance.ink}
+      stroke={appearance.bg}
+      strokeWidth={2}
+      fillAfterStrokeEnabled
+      listening={false}
+    />
   );
 }
 
@@ -6738,10 +6805,20 @@ function renderGeom(
   passThrough: boolean,
   previewPoints: Pt[] | null = null,
   appearance = canvasTheme("crystal"),
+  textureImages: Record<string, HTMLImageElement> = {},
 ) {
   if (poly.hidden) return null;
   const selected = poly.id === selectedPolyId || selectedPolyIds.includes(poly.id);
   const fill = poly.fill ?? fillOf(poly.cadType ?? poly.kind);
+  const texture = textureImages[fill];
+  const solidFill = fill.startsWith("texture:") ? "#d8d4cc" : fill;
+  const pattern = texture ? {
+    fill: undefined,
+    fillPatternImage: texture,
+    fillPatternRepeat: "repeat" as const,
+    fillPatternScaleX: 0.24,
+    fillPatternScaleY: 0.24,
+  } : { fill: solidFill };
   const hold = passThrough
     ? { listening: false as const }
     : {
@@ -6782,7 +6859,7 @@ function renderGeom(
         x={sx(poly.points[0].x)}
         y={sy(poly.points[0].y)}
         radius={poly.radius * px}
-        fill={fill}
+        {...pattern}
         opacity={0.72}
         stroke={selected ? appearance.accent : appearance.ink}
         strokeWidth={selected ? 2.5 : 1.5}
@@ -6801,7 +6878,7 @@ function renderGeom(
         radiusX={e.rx * px}
         radiusY={e.ry * px}
         rotation={e.rot ?? 0}
-        fill={fill}
+        {...pattern}
         opacity={0.72}
         stroke={selected ? appearance.accent : appearance.ink}
         strokeWidth={selected ? 2.5 : 1.5}
@@ -6818,7 +6895,7 @@ function renderGeom(
       y={0}
       points={shownPoints.flatMap((p) => [sx(p.x), sy(p.y)])}
       closed={poly.closed}
-      fill={poly.closed ? fill : undefined}
+      {...(poly.closed ? pattern : { fill: undefined })}
       opacity={poly.closed ? 0.72 : poly.type === "line" ? 0.9 : 0.5}
       stroke={selected ? appearance.accent : poly.type === "line" ? appearance.accent : appearance.ink}
       strokeWidth={selected ? 2.5 : 2}

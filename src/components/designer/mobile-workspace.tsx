@@ -1,9 +1,9 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import * as Popover from "@radix-ui/react-popover";
-import { ChevronDown, Eye, Lock, Unlock, Trash2, Check, Droplets, Minus } from "lucide-react";
+import { ChevronDown, Eye, Lock, Unlock, Trash2, Check, Copy, Droplets, Minus, SquarePen } from "lucide-react";
 import { useProject } from "@/lib/project-store";
 import { arcLength, drawingOrMigrate, faceArea, facePerimeter } from "@/lib/cad/engine";
-import { FACE_FILLS, REGION_FILL } from "@/lib/cad/types";
+import { FACE_FILLS, FACE_TEXTURES, REGION_FILL } from "@/lib/cad/types";
 import { formatAreaU, formatFlowU, formatLenU, type UnitPrefs } from "@/lib/units";
 import { tr, type Locale } from "@/lib/i18n";
 import { itemById } from "@/lib/hunter-catalog";
@@ -149,10 +149,14 @@ export function layerRows(project: Project, selection: LayerSelection, locale: L
 
 export function LayerColorPicker({ title, color, onChange }: { title: string; color: string; onChange: (color: string) => void }) {
   const [open, setOpen] = useState(false);
+  const selectedTexture = FACE_TEXTURES.find((texture) => texture.id === color);
+  const customColor = /^#[0-9a-f]{6}$/i.test(color) ? color : "#0a7c66";
+  const isCustomColor = !FACE_FILLS.includes(color as (typeof FACE_FILLS)[number]) && !selectedTexture && /^#[0-9a-f]{6}$/i.test(color);
   return <Popover.Root open={open} onOpenChange={setOpen}>
-    <Popover.Trigger asChild><button type="button" className="mobile-icon-button layer-color-button" aria-label={`Изменить цвет: ${title}`}><span className="mobile-layer-color" style={{ background: color }} /></button></Popover.Trigger>
-    <Popover.Portal><Popover.Content side="bottom" align="start" sideOffset={4} collisionPadding={8} className="layer-color-popover" aria-label={`Палитра: ${title}`} onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
-      <div className="mobile-palette">{FACE_FILLS.map((swatch) => <button key={swatch} type="button" aria-label={swatch === "transparent" ? "Без заливки" : swatch} aria-pressed={color === swatch} style={{ background: swatch }} onClick={() => { onChange(swatch); setOpen(false); }}>{swatch === "transparent" ? "∅" : color === swatch ? <Check size={20} /> : null}</button>)}</div>
+    <Popover.Trigger asChild><button type="button" className="mobile-icon-button layer-color-button" aria-label={`Изменить цвет или материал: ${title}`}><span className="mobile-layer-color" style={selectedTexture ? { backgroundImage: `url(${selectedTexture.src})` } : { background: color }} /></button></Popover.Trigger>
+    <Popover.Portal><Popover.Content side="bottom" align="center" sideOffset={4} collisionPadding={4} className="layer-color-popover" aria-label={`Палитра: ${title}`} onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+      <section className="layer-palette-section"><h3>Цвета</h3><div className="mobile-palette">{FACE_FILLS.map((swatch) => <button key={swatch} type="button" aria-label={swatch === "transparent" ? "Без заливки" : swatch} aria-pressed={color === swatch} data-transparent={swatch === "transparent"} style={{ background: swatch }} onClick={() => { onChange(swatch); setOpen(false); }}>{color === swatch ? <Check size={18} /> : null}</button>)}<label className="custom-color-swatch" data-selected={isCustomColor}><input type="color" aria-label="Свой цвет" value={customColor} onChange={(event) => { onChange(event.currentTarget.value); setOpen(false); }} /><span>Свой</span></label></div></section>
+      <section className="layer-palette-section"><h3>Материалы</h3><div className="material-palette">{FACE_TEXTURES.map((texture) => <button key={texture.id} type="button" aria-label={texture.label} title={texture.label} aria-pressed={color === texture.id} style={{ backgroundImage: `url(${texture.src})` }} onClick={() => { onChange(texture.id); setOpen(false); }}>{color === texture.id ? <Check size={18} /> : null}<span>{texture.label}</span></button>)}</div></section>
     </Popover.Content></Popover.Portal>
   </Popover.Root>;
 }
@@ -168,7 +172,7 @@ export function MobileLayers({ onEdit, onInspect }: { onEdit: (id: string) => vo
   return <LayerList project={project} selection={{ selectedPolyId, selectedId, selectedEdgeId, cadEditId }} units={units} locale={locale} onEdit={onEdit} onInspect={onInspect} />;
 }
 
-export function LayerList({ project, selection, units, locale }: {
+export function LayerList({ project, selection, units, locale, onEdit }: {
   project: Project; selection: LayerSelection; units: UnitPrefs; locale: Locale;
   onEdit: (id: string) => void; onInspect?: () => void;
 }) {
@@ -214,6 +218,9 @@ export function LayerList({ project, selection, units, locale }: {
             onFocus={select}
             onBlur={(e) => { const next = e.currentTarget.value.trim(); if (next && next !== title) { select(); useProject.getState().setFaceName(next); } else e.currentTarget.value = title; }}
             onKeyDown={(e) => { e.stopPropagation(); if (e.key === "Escape") { e.currentTarget.value = title; e.currentTarget.blur(); } else if (e.key === "Enter") e.currentTarget.blur(); }} />
+          <button type="button" className="mobile-icon-button layer-duplicate" aria-label={`Дублировать: ${title}`} title="Дублировать" disabled={locked || face.hidden} onClick={() => { select(); useProject.getState().duplicateSelected(); }}><Copy size={17} /></button>
+          <button type="button" className="mobile-icon-button layer-edit" aria-label={`Редактировать: ${title}`} title="Редактировать" disabled={locked || face.hidden} onClick={() => { select(); onEdit(id); }}><SquarePen size={17} /></button>
+          <button type="button" className="mobile-icon-button layer-delete-direct text-danger" aria-label={`Удалить: ${title}`} title="Удалить" onClick={() => { select(); setDeleting(true); setMenu(row.key); }}><Trash2 size={17} /></button>
         </> : <button type="button" className="mobile-layer-select" aria-pressed={row.selected} title={title} onClick={select}>
           {head ? <Droplets size={18} className="shrink-0" /> : <Minus size={18} className="shrink-0" />}<span>{title}</span>
         </button>}
@@ -221,27 +228,26 @@ export function LayerList({ project, selection, units, locale }: {
       </div>
     </article></Popover.Anchor>
       {menu === row.key && <Popover.Portal>
-        <Popover.Content side="bottom" align="start" sideOffset={3} collisionPadding={4} aria-label={title} className="layer-details-dialog layer-details-compact" data-confirming={deleting} onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+        <Popover.Content side="bottom" align={deleting ? "end" : "start"} sideOffset={2} collisionPadding={4} aria-label={title} className="layer-details-dialog layer-details-compact" data-confirming={deleting} onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
           <div className="layer-dialog-body">
-            {face && <dl className="layer-detail-stats">
+            {!deleting && face && <dl className="layer-detail-stats">
               <div><dt>{t("area")}</dt><dd>{formatAreaU(faceArea(d, id), units.area)}</dd></div>
               <div><dt>{t("perimeter")}</dt><dd>{formatLenU(facePerimeter(d, id), units.length)}</dd></div>
             </dl>}
-            {head && <><p className="layer-model-name">{item?.name ?? head.catalogId}</p><dl className="layer-detail-stats">
+            {!deleting && head && <><p className="layer-model-name">{item?.name ?? head.catalogId}</p><dl className="layer-detail-stats">
               <div><dt>{t("radius")}</dt><dd>{formatLenU(head.r, units.length)}</dd></div>
               <div><dt>{t("sector")}</dt><dd>{Math.round(head.arc)}°</dd></div>
               <div><dt>{t("zone")}</dt><dd>{zone?.name ?? head.zone}</dd></div>
               <div><dt>{t("flow")}</dt><dd>{headFlow(head).lpm == null ? t("noData") : formatFlowU(headFlow(head).lpm!, units.flow)}</dd></div>
             </dl></>}
-            {edge && d.vertices[edge.a] && d.vertices[edge.b] && <dl className="layer-detail-stats"><div><dt>Длина</dt><dd>{formatLenU(arcLength(d.vertices[edge.a]!, d.vertices[edge.b]!, edge.bulge), units.length)}</dd></div></dl>}
-            <div className="mobile-layer-menu">
-              {!deleting && <button type="button" className="text-danger layer-delete-button" aria-label={t("delete")} title={t("delete")} onClick={() => setDeleting(true)}><Trash2 size={16} /></button>}
-              {deleting && <div className="mobile-layer-confirm" role="alert">
+            {!deleting && edge && d.vertices[edge.a] && d.vertices[edge.b] && <dl className="layer-detail-stats"><div><dt>Длина</dt><dd>{formatLenU(arcLength(d.vertices[edge.a]!, d.vertices[edge.b]!, edge.bulge), units.length)}</dd></div></dl>}
+            {deleting && <div className="mobile-layer-menu">
+              <div className="mobile-layer-confirm" role="alert">
                 <p>{tr(locale, "deleteConfirm", { name: title })}</p>
                 <button type="button" onClick={() => setDeleting(false)}>{t("cancel")}</button>
                 <button type="button" className="text-danger" onClick={() => { if (head) useProject.getState().removeHead(id); else { select(); useProject.getState().deleteSelected(); } close(); }}>{t("delete")}</button>
-              </div>}
-            </div>
+              </div>
+            </div>}
           </div>
         </Popover.Content>
       </Popover.Portal>}

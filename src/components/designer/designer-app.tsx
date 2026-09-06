@@ -23,11 +23,13 @@ import {
   ImageDown,
   LayoutGrid,
   Layers,
+  Combine,
   Magnet,
   Maximize2,
   Menu,
   Minus,
   MoreHorizontal,
+  MousePointer2,
   MoveHorizontal,
   PaintBucket,
   Pencil,
@@ -64,8 +66,8 @@ import { downloadSourceZip } from "@/lib/download-source";
 import { headFlow, runTimeMin, totalAreaPrecip } from "@/lib/flow";
 import { closedPathSideStarts, dist, fmt1, fmtM, headingDeg, parseMeasureUnit, pointInPoly, polygonArea, toMeters, uid, type Pt } from "@/lib/geometry";
 import { parseCadInput } from "@/lib/cad/parse";
-import { arcLength, drawingOrMigrate, faceArea, faceCentroid, faceEdges, faceLayerNumber, facePerimeter, facePoints, headInsideFace, isDrawnCurveFace, isInternalEdge, isTriangleFace, rectMetaMatchesFace, rectWorldCorners, setFaceSideLength, triangleMetrics } from "@/lib/cad/engine";
-import { CAD_LAYERS, FACE_FILLS, REGION_FILL, layerForType } from "@/lib/cad/types";
+import { arcLength, drawingOrMigrate, faceArea, faceCentroid, faceEdges, faceLayerNumber, facePerimeter, facePoints, headInsideFace, isDrawnCurveFace, isInternalEdge, isTriangleFace, rectMetaMatchesFace, rectWorldCorners, setFaceSideLength, triangleMetrics, unionFaces } from "@/lib/cad/engine";
+import { CAD_LAYERS, FACE_FILLS, FACE_TEXTURES, REGION_FILL, layerForType } from "@/lib/cad/types";
 import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, recommendPump } from "@/lib/hydro";
 import { type Head, type Project, zoneColor } from "@/lib/project-types";
 import { isNamed, useProject } from "@/lib/project-store";
@@ -188,6 +190,7 @@ export function DesignerApp() {
   const isPhone = usePhoneWorkspace();
   useWorkspaceViewport();
   const [mobilePanel, setMobilePanel] = useState<MobilePanel>(null);
+  const [mobileMultiSelect, setMobileMultiSelect] = useState(false);
   const [mobilePreview, setMobilePreview] = useState(false);
   const [mobileLayersVisible, setMobileLayersVisible] = useState(false);
   useEffect(() => useProject.subscribe((state, previous) => {
@@ -260,6 +263,7 @@ export function DesignerApp() {
   const placeId = useProject((s) => s.placeId);
   const selectedId = useProject((s) => s.selectedId);
   const selectedPolyId = useProject((s) => s.selectedPolyId);
+  const selectedPolyIds = useProject((s) => s.selectedPolyIds);
   const cadEditId = useProject((s) => s.cadEditId);
   const cadLiveRot = useProject((s) => s.cadLiveRot);
   const selectedIds = useProject((s) => s.selectedIds);
@@ -1029,6 +1033,29 @@ export function DesignerApp() {
     }
   }
   const chooseMobileTool = (choose: () => void) => { choose(); };
+  const mergeMobileSelection = () => {
+    const st = useProject.getState();
+    const ids = st.selectedPolyIds.length ? st.selectedPolyIds : st.selectedPolyId ? [st.selectedPolyId] : [];
+    if (ids.length < 2) return;
+    let drawing = drawingOrMigrate(st.project);
+    let baseId = ids[0]!;
+    let merged = 0;
+    for (const targetId of ids.slice(1)) {
+      if (!drawing.faces[baseId] || !drawing.faces[targetId]) continue;
+      const beforeIds = new Set(Object.keys(drawing.faces));
+      const next = unionFaces(drawing, baseId, targetId);
+      const nextBase = Object.keys(next.faces).find((id) => !beforeIds.has(id));
+      if (!nextBase) continue;
+      drawing = next;
+      baseId = nextBase;
+      merged += 1;
+    }
+    if (!merged) {
+      toast("Для объединения фигуры должны иметь общую границу");
+      return;
+    }
+    st.commitDrawing(drawing, baseId, true);
+  };
   const contextControls = <div className={isPhone ? "mobile-context-content" : "contents"}>
           {!isPhone && cadEditId && !catalogOpen && !draft.points.length && <CadEditBar faceId={cadEditId} />}
           {cadEditId && editingFreeformFace && (!catalogOpen || isPhone) && !draft.points.length && (
@@ -1087,7 +1114,15 @@ export function DesignerApp() {
   </div>;
 
   const gridControls = <>
-        <Button
+        {isPhone ? <button
+          type="button"
+          className="mobile-icon-button"
+          aria-label={t("magnet")}
+          aria-pressed={snapOn}
+          onClick={() => useProject.getState().setSnap(!useProject.getState().snapOn)}
+        >
+          <Magnet />
+        </button> : <Button
           size="xs"
           variant={snapOn ? "pressed" : "ghost"}
           aria-label={t("magnet")}
@@ -1097,7 +1132,7 @@ export function DesignerApp() {
         >
           <Magnet className="size-3.5" />
           <span className="hidden sm:inline">{t("magnet")}</span>
-        </Button>
+        </Button>}
         <Popover.Root modal={!isPhone} open={gridOpen} onOpenChange={setGridOpen}>
         <div className="relative shrink-0">
           <div className="flex items-stretch gap-1 sm:gap-0 sm:overflow-hidden sm:rounded-md sm:border sm:border-tool">
@@ -1315,6 +1350,10 @@ export function DesignerApp() {
         <Button size="icon" variant="bar" className="max-sm:size-10" disabled={!future.length} onClick={() => useProject.getState().redo()} aria-label={t("redo")}>
           <Redo2 />
         </Button>
+        {isPhone && <>
+          <button type="button" className="mobile-dock-button" title="Инструменты" aria-label="Инструменты" aria-pressed={mobilePanel === "tools"} onClick={() => { const closing = mobilePanel === "tools"; setMobilePanel(closing ? null : "tools"); if (closing) setMobileMultiSelect(false); setGridOpen(false); setFileMenuOpen(false); }}><Pencil size={22} /></button>
+          <button type="button" className="mobile-dock-button" title={t("library")} aria-label={t("library")} aria-pressed={mobilePanel === "library" || tool === "place"} onClick={() => { setMobilePanel(mobilePanel === "library" ? null : "library"); setGridOpen(false); setFileMenuOpen(false); }}><Droplets size={22} /></button>
+        </>}
         {!isPhone && <BarTool
           id="draw"
           label={t("draw")}
@@ -1343,15 +1382,6 @@ export function DesignerApp() {
             <span className="hidden sm:inline">{t("autoPlace")}</span>
           </Button>
         )}
-      {isPhone && <nav className="mobile-canvas-controls" aria-label="Сетка и навигация чертежа">
-        {gridControls}
-        <button type="button" className="mobile-icon-button" aria-label={t("layers")} aria-pressed={mobileWorkspaceMode === "drawing" && mobileLayersVisible} onClick={() => { setMobileLayersVisible(mobileWorkspaceMode !== "drawing" || !mobileLayersVisible); setMobileWorkspaceMode("drawing"); setMobilePanel(null); setGridOpen(false); }}><Layers /></button>
-        <button type="button" className="mobile-icon-button" aria-label="Вернуться к центру" title="Вернуться к центру" onClick={() => {
-          const bounds = document.querySelector("[data-design-canvas]")?.getBoundingClientRect();
-          if (bounds) useProject.getState().setPan(bounds.width / 2, bounds.height / 2);
-        }}><Crosshair size={22} /></button>
-        <button type="button" className="mobile-icon-button" aria-label="Предпросмотр" onClick={() => { setGridOpen(false); setFileMenuOpen(false); setMobilePreview(true); }}><Eye /></button>
-      </nav>}
         </div>
         <div className="flex shrink-0 items-center gap-1 pl-1">
           {isPhone && <button type="button" className="mobile-icon-button" aria-label={t("estimate")} aria-pressed={mobilePanel === "estimate"} onClick={() => { setMobilePanel(mobilePanel === "estimate" ? null : "estimate"); setGridOpen(false); setFileMenuOpen(false); }}><FileText /></button>}
@@ -1579,15 +1609,34 @@ export function DesignerApp() {
           </div>
         )}
 
-        <section className="relative min-w-0 flex-1 overflow-visible">
-          {isPhone && !catalogGhost && (mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <section className="mobile-top-layers" data-workspace-mode={mobileWorkspaceMode} aria-label={mobileWorkspaceMode === "drawing" ? t("layers") : t("irrigation")}
-            onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
-            {mobileWorkspaceMode === "drawing" ? <MobileLayers onEdit={(id) => { useProject.getState().setCadEdit(id); setMobilePanel("properties"); }} onInspect={() => { mobileInspectTarget.current = selectedObjectKey(useProject.getState()); setMobilePanel("properties"); }} /> : <div className="mobile-zone-strip">
-              {project.zones.map((zone) => <button type="button" key={zone.id} aria-pressed={zone.id === activeZoneId} onClick={() => useProject.getState().setActiveZone(zone.id)}><span style={{ background: zoneColor(zone.id) }} />{zone.name}</button>)}
-              <Popover.Root modal><Popover.Trigger asChild><button type="button" aria-label="Подробнее о зонах полива">Подробнее <ChevronRight size={16} /></button></Popover.Trigger><Popover.Portal><Popover.Content side="bottom" align="end" sideOffset={4} collisionPadding={8} aria-label="Зоны полива" className="layer-details-dialog" onPointerDown={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}><div className="layer-dialog-body"><ZoneList /><PumpBox /><Popover.Close asChild><Button className="w-full">Закрыть</Button></Popover.Close></div></Popover.Content></Popover.Portal></Popover.Root>
+        <section className="mobile-canvas-stage relative min-w-0 flex-1 overflow-visible">
+          {isPhone && !catalogGhost && (mobilePanel === "tools" || mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <div className="mobile-top-overlays">
+            {mobilePanel === "tools" && <div className="mobile-tool-stack">
+              {mobileFace && <section data-mobile-sheet="tool-properties" className="mobile-parameter-bar mobile-tool-parameter-bar" role="region" aria-label={contextTitle}
+                onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()}>
+                <div className="mobile-parameter-scroll">
+                  {(!cadEditId || editingNodeContour) && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{formatLenU(dimension.value, units.length)}</output></span>)}</div>}
+                  {cadEditId ? contextControls : null}
+                </div>
+              </section>}
+              <div className="mobile-tool-strip-panel" role="toolbar" aria-label="Инструменты">
+                <div className="mobile-tool-strip scroll-touch">
+                  {DRAW_SUBS.filter((item) => item.id !== "arc" && item.id !== "dim").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}</button>)}
+                  {project.heads.length > 0 && <button type="button" aria-label={t("sectors")} title={t("sectors")} aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={20} /></button>}
+                </div>
+              </div>
             </div>}
-          </section>}
+            {(mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <section className="mobile-top-layers" data-workspace-mode={mobileWorkspaceMode} aria-label={mobileWorkspaceMode === "drawing" ? t("layers") : t("irrigation")}
+              onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+              {mobileWorkspaceMode === "drawing" ? <MobileLayers onEdit={(id) => { useProject.getState().setCadEdit(id); setMobilePanel("properties"); }} onInspect={() => { mobileInspectTarget.current = selectedObjectKey(useProject.getState()); setMobilePanel("properties"); }} /> : <div className="mobile-zone-strip">
+                {project.zones.map((zone) => <button type="button" key={zone.id} aria-pressed={zone.id === activeZoneId} onClick={() => useProject.getState().setActiveZone(zone.id)}><span style={{ background: zoneColor(zone.id) }} />{zone.name}</button>)}
+                <Popover.Root modal><Popover.Trigger asChild><button type="button" aria-label="Подробнее о зонах полива">Подробнее <ChevronRight size={16} /></button></Popover.Trigger><Popover.Portal><Popover.Content side="bottom" align="end" sideOffset={4} collisionPadding={8} aria-label="Зоны полива" className="layer-details-dialog" onPointerDown={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}><div className="layer-dialog-body"><ZoneList /><PumpBox /><Popover.Close asChild><Button className="w-full">Закрыть</Button></Popover.Close></div></Popover.Content></Popover.Portal></Popover.Root>
+              </div>}
+            </section>}
+          </div>}
           <CanvasHost
+            mobile={isPhone}
+            multiSelect={isPhone && mobileMultiSelect}
             onScalePair={(a, b) => setScalePair({ a, b })}
             onMeasure={(m) => toast(formatLenU(m, useProject.getState().units.length))}
             onHover={setHover}
@@ -1680,10 +1729,19 @@ export function DesignerApp() {
       </div>
 
       <footer className="app-footer relative z-30 flex min-h-11 shrink-0 items-center gap-2 scroll-touch border-t border-line bg-surface px-2 py-1 text-xs">
-        {isPhone && <>
-          <button type="button" className="mobile-dock-button" title="Инструменты" aria-label="Инструменты" aria-pressed={mobilePanel === "tools" || tool === "draw" || tool === "measure" || tool === "scale"} onClick={() => { setMobilePanel(mobilePanel === "tools" ? null : "tools"); setGridOpen(false); setFileMenuOpen(false); }}><Pencil size={22} /></button>
-          <button type="button" className="mobile-dock-button" title={t("library")} aria-label={t("library")} aria-pressed={mobilePanel === "library" || tool === "place"} onClick={() => { setMobilePanel(mobilePanel === "library" ? null : "library"); setGridOpen(false); setFileMenuOpen(false); }}><Droplets size={22} /></button>
-        </>}
+        {isPhone && <nav className="mobile-canvas-controls" aria-label="Сетка и навигация чертежа">
+          <button type="button" className="mobile-icon-button" aria-label="Выбрать несколько фигур" title="Выбрать несколько фигур" aria-pressed={mobileMultiSelect} onClick={() => { const next = !mobileMultiSelect; setMobileMultiSelect(next); if (next) useProject.getState().setCadMode("select"); }}><MousePointer2 /></button>
+          <button type="button" className="mobile-icon-button" disabled={selectedPolyIds.length < 2} aria-label="Объединить выбранные фигуры" title="Объединить выбранные фигуры" onClick={mergeMobileSelection}><Combine /></button>
+          <button type="button" className="mobile-icon-button" aria-label={t("drawDim")} title={t("drawDim")} aria-pressed={tool === "draw" && drawSub === "dim"} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub("dim"))}><IconDim /></button>
+          <button type="button" className="mobile-icon-button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><Ruler /></button>
+          <button type="button" className="mobile-icon-button" aria-label="Вернуться к центру" title="Вернуться к центру" onClick={() => {
+            const bounds = document.querySelector("[data-design-canvas]")?.getBoundingClientRect();
+            if (bounds) useProject.getState().setPan(bounds.width / 2, bounds.height / 2);
+          }}><Crosshair size={22} /></button>
+          <button type="button" className="mobile-icon-button" aria-label="Предпросмотр" onClick={() => { setGridOpen(false); setFileMenuOpen(false); setMobilePreview(true); }}><Eye /></button>
+          <button type="button" className="mobile-icon-button" aria-label={t("layers")} aria-pressed={mobileWorkspaceMode === "drawing" && mobileLayersVisible} onClick={() => { setMobileLayersVisible(mobileWorkspaceMode !== "drawing" || !mobileLayersVisible); setMobileWorkspaceMode("drawing"); setMobilePanel(null); setGridOpen(false); }}><Layers /></button>
+          {gridControls}
+        </nav>}
         {!isPhone && gridControls}
         {!isPhone && project.heads.length > 0 && (
           <div className="flex items-stretch overflow-hidden rounded-md border border-tool">
@@ -1722,15 +1780,6 @@ export function DesignerApp() {
       </footer>
 
       {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} · коснитесь чертежа</span><button type="button" aria-label="Закончить размещение" onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
-      {isPhone && mobilePanel === "tools" && !catalogGhost && <div className="mobile-tool-strip-panel" role="toolbar" aria-label="Инструменты">
-        <div className="mobile-tool-strip scroll-touch">
-          {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} aria-label={t("edit")} title={t("edit")} onClick={() => useProject.getState().setCadEdit(mobileFace.id)}><Pencil size={20} /></button>}
-          {mobileFace && <button type="button" disabled={mobileFace.locked || mobileFace.hidden} aria-label="Копировать" title="Копировать" onClick={() => useProject.getState().duplicateSelected()}><Copy size={20} /></button>}
-          {DRAW_SUBS.filter((item) => item.id !== "arc").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}</button>)}
-          <button type="button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><Ruler size={20} /></button>
-          {project.heads.length > 0 && <button type="button" aria-label={t("sectors")} title={t("sectors")} aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={20} /></button>}
-        </div>
-      </div>}
       {isPhone && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("irrigation") : mobilePanel === "estimate" ? t("estimate") : contextTitle} onClose={() => setMobilePanel(null)}
         footer={mobilePanel === "properties" && selected ? <div className="mobile-context-footer">
           <Button className="ml-auto" aria-label="Готово" title="Готово" onPointerDown={(e) => e.preventDefault()} onClick={() => { (document.activeElement as HTMLElement)?.blur?.(); if (selected) setMobilePanel(null); }}><Check /></Button>
@@ -2360,6 +2409,7 @@ function CadEditBar({ faceId }: { faceId: string }) {
     return () => document.removeEventListener("pointerdown", onDown, true);
   }, [faceId, fillOpen]);
   if (!face || face.locked) return null;
+  const selectedTexture = FACE_TEXTURES.find((texture) => texture.id === face.fill);
   const showTip = (msg: string) => {
     window.clearTimeout(hideTip.current);
     setTip(msg);
@@ -2421,7 +2471,7 @@ function CadEditBar({ faceId }: { faceId: string }) {
               <PaintBucket className="size-4" />
               <span
                 className="absolute -right-0.5 -bottom-0.5 size-2 rounded-full border border-white"
-                style={{ background: face.fill ?? REGION_FILL[face.type] ?? "#c8e6b0" }}
+                style={selectedTexture ? { backgroundImage: `url(${selectedTexture.src})`, backgroundSize: "cover" } : { background: face.fill ?? REGION_FILL[face.type] ?? "#c8e6b0" }}
               />
             </span>
           </Btn>
@@ -2457,7 +2507,7 @@ function CadEditBar({ faceId }: { faceId: string }) {
           ref={paletteRef}
           data-cad-palette
           className={cn(
-            "pointer-events-auto absolute left-[3.25rem] top-1/2 z-50 grid w-[9.5rem] -translate-y-1/2 grid-cols-5 gap-1 rounded-md p-1.5 shadow-border",
+            "pointer-events-auto absolute left-[3.25rem] top-1/2 z-50 grid w-[12rem] -translate-y-1/2 grid-cols-6 gap-1 rounded-md p-1.5 shadow-border",
             dark ? "border border-line bg-surface backdrop-blur-md" : "border border-line bg-surface",
           )}
         >
@@ -2475,6 +2525,25 @@ function CadEditBar({ faceId }: { faceId: string }) {
                 e.preventDefault();
                 e.stopPropagation();
                 useProject.getState().setFaceFill(c);
+              }}
+            />
+          ))}
+          <p className="col-span-6 mt-1 border-t border-line pt-1 text-[10px] text-muted">Материалы</p>
+          {FACE_TEXTURES.map((texture) => (
+            <button
+              key={texture.id}
+              type="button"
+              aria-label={texture.label}
+              title={texture.label}
+              className={cn(
+                "size-6 rounded-sm border bg-cover bg-center",
+                (face.fill ?? "") === texture.id ? "border-tool ring-1 ring-tool" : "border-line",
+              )}
+              style={{ backgroundImage: `url(${texture.src})` }}
+              onPointerDown={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                useProject.getState().setFaceFill(texture.id);
               }}
             />
           ))}

@@ -66,22 +66,25 @@ test("curve construction shows distances, closes at its first point, and finishe
   assert.match(source, /pointIndex === lastIndex &&/);
   assert.match(
     source,
-    /drawSub === "spline" && draft\.points\.length >= 2 && \(\s+<OpenPathMeasures/,
+    /drawSub === "spline" && draft\.points\.length >= 2 && \(\s+<PathTotalMeasure/,
   );
-  assert.match(source, /points=\{draft\.points\}\s+showLetters/);
+  assert.match(source, /points=\{catmullRom\(draft\.points, 8, false\)\}/);
   assert.match(
     source,
     /st\.draft\.points\.length >= \(st\.drawSub === "spline" \? 3 : 2\)/,
   );
 });
 
-test("curve points use black start, red active, orange inactive, and dimensions have transparent backgrounds", async () => {
+test("point and curve construction use themed starts, red active points, orange inactive points, and transparent dimensions", async () => {
   const source = await readFile(
     new URL("../src/components/designer/design-canvas.tsx", import.meta.url),
     "utf8",
   );
-  assert.match(source, /i === 0\s+\? "#171717"/);
-  assert.match(source, /activeDraftSplinePoint === i/);
+  assert.match(source, /i === 0\s+\? appearance\.accent/);
+  assert.match(source, /activeConstructionPoint === i\s+\? "#f5222d"/);
+  assert.match(source, /setActiveDraftPolygonPoint\(pointIndex\)/);
+  assert.match(source, /setActiveDraftSplinePoint\(pointIndex\)/);
+  assert.match(source, /function PathTotalMeasure\(/);
   assert.match(source, /activeCurvePoint === index \? "#cf2f2f" : "#d56a2b"/);
   const lengthLabel = source.match(/function SegmentLengthText\([\s\S]*?\n\}/)?.[0];
   assert.ok(lengthLabel);

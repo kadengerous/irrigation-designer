@@ -268,5 +268,20 @@ export const FACE_FILLS = [
   "#1a1a18",
 ] as const;
 
+export const FACE_TEXTURES = [
+  { id: "texture:pavers-gray", label: "Серая плитка", src: "/materials/pavers-gray.png" },
+  { id: "texture:pavers-beige", label: "Бежевая плитка", src: "/materials/pavers-beige.png" },
+  { id: "texture:pavers-brick", label: "Клинкерная плитка", src: "/materials/pavers-brick.png" },
+  { id: "texture:asphalt", label: "Асфальт", src: "/materials/asphalt.png" },
+  { id: "texture:decking", label: "Террасная доска", src: "/materials/decking.png" },
+  { id: "texture:concrete", label: "Бетон", src: "/materials/concrete.png" },
+  { id: "texture:roof-shingle", label: "Мягкая кровля", src: "/materials/roof-shingle.png" },
+  { id: "texture:roof-tile", label: "Черепица", src: "/materials/roof-tile.png" },
+  { id: "texture:roof-metal", label: "Фальцевая кровля", src: "/materials/roof-metal.png" },
+  { id: "texture:pool-water", label: "Вода в бассейне", src: "/materials/pool-water.png" },
+  { id: "texture:lawn", label: "Газон", src: "/materials/lawn.png" },
+  { id: "texture:gravel", label: "Гравий", src: "/materials/gravel.png" },
+] as const;
+
 /** Automatic fill order for newly drawn shapes (transparent is a manual choice). */
 export const SHAPE_FILL_CYCLE = ["#c8e6b0", "#c5ddf2", "#f3d4b8", "#dcccec", "#facc15", "#b8e0d2", "#f0c9c9", "#8b5cf6"] as const;
