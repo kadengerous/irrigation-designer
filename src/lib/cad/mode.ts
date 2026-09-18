@@ -80,13 +80,14 @@ export function cadModeOf(s: {
   return "select";
 }
 
-export function fromCadMode(mode: CadMode): { tool: Tool; drawSub?: DrawSub; measureSub?: MeasureSub } {
-  if (mode === "select") return { tool: null };
+export function fromCadMode(mode: CadMode, currentTool: Tool = null): { tool: Tool; drawSub?: DrawSub; measureSub?: MeasureSub } {
+  // Selecting is a tool within the open drawing workspace, not an exit from it.
+  if (mode === "select") return currentTool === "draw" ? { tool: "draw", drawSub: "none" } : { tool: null };
   if (mode === "pan") return { tool: null };
   if (mode === "place") return { tool: "place" };
   if (mode === "calibrate") return { tool: "scale" };
-  if (mode === "measure") return { tool: "measure", measureSub: "measure" };
-  if (mode === "guide") return { tool: "measure", measureSub: "guide" };
+  if (mode === "measure") return { tool: "measure", measureSub: "measure", drawSub: "none" };
+  if (mode === "guide") return { tool: "measure", measureSub: "guide", drawSub: "none" };
   if (mode === "move_object") return { tool: "move" };
   const sub = mode.replace("draw_", "") as DrawSub;
   return { tool: "draw", drawSub: sub };

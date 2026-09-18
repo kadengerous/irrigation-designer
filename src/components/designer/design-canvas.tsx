@@ -1,3 +1,14 @@
+import { wheelCanvasView } from "@/lib/canvas-navigation";
+import { headAtPointer, HEAD_MOUSE_HIT_RADIUS } from "@/lib/head-hit-target";
+import { TapeMeasureIcon, TAPE_MEASURE_TIP } from "./tape-measure-icon";
+import {createPortal} from "react-dom";
+import {snapDimensionOffset} from "@/lib/cad/dimension-offset-snap";
+import { DimensionLine } from "./dimension-line";
+import { seamlessPattern } from "@/lib/cad/seamless-pattern";
+import { TextEditor } from "./text-editor";
+import { PlantGlyph } from "./plant-glyph";
+import type { CadPlant } from "@/lib/cad/types";
+import type { CadText } from "@/lib/cad/types";
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
@@ -14,9 +25,21 @@ import {
   Text,
 } from "react-konva";
 import type Konva from "konva";
-import { Copy, SlidersHorizontal, Trash2 } from "lucide-react";
+import { layerFrame, layerFaceIds, layerCenter, transformLayer } from "@/lib/cad/engine";
+import { snapLayerTransform } from "@/lib/cad/layer-snapping";
+import { EditPointGlyph, RotationHandleGlyph, EDIT_HANDLE_COLOR, EDIT_OUTLINE_COLOR, SELECTION_OUTLINE_COLOR, ROTATION_STEM_PX } from "./edit-handle-glyphs";
+import { snapFigurePoint, snapFigureTranslation } from "@/lib/cad/figure-snapping";
+import { segmentAlignmentAnchors, snapSegmentAlignment } from "@/lib/cad/segment-alignment";
+import { SegmentAlignmentGuides } from "./segment-alignment-guides";
+import { DrawingGuidance, ClosureGuide } from "./drawing-guidance";
+import { CanvasMagnifier } from "./canvas-magnifier";
+import { rotationHandleLayout } from "@/lib/cad/edit-handle-layout";
+import { installSingleFingerPan } from "./single-finger-pan";
+import { bindMaterialPattern } from "./material-pattern";
+import { textureFrame, texturePatternAttrs, validTextureSize } from "@/lib/cad/texture-mapping";
+import { Trash2, Pencil } from "lucide-react";
 import { toast } from "sonner";
-import { itemById } from "@/lib/hunter-catalog";
+import { defaultNozzle, itemById, stripAtPressure } from "@/lib/hunter-catalog";
 import { tr } from "@/lib/i18n";
 import { exclusionPolygons, lawnPolygon, sampleGrid } from "@/lib/coverage";
 import {
@@ -31,36 +54,41 @@ import {
   snapDeltaToAngle,
   normDeg,
   polygonArea,
+  centroid,
+  shoelace,
   closedPathSideStarts,
-  snapShapeTranslationToGrid,
   ellipseBoundaryGridAnchors,
   type Pt,
 } from "@/lib/geometry";
-import { formatAreaU } from "@/lib/units";
-import { zoneColor, type Geom, type Head } from "@/lib/project-types";
-import { canvasTheme } from "@/lib/theme";
-import { useProject } from "@/lib/project-store";
+import { formatAreaU, formatLenU } from "@/lib/units";
+import {dimensionLabelLayout} from "@/lib/cad/dimension-label-layout";
+import { zoneColor, type Geom } from "@/lib/project-types";
+import { canvasTheme, themeFigureFill } from "@/lib/theme";
+import { useProject, drawingForEditing as drawingOrMigrate } from "@/lib/project-store";
 import type { DesignCanvasProps } from "@/components/designer/canvas-types";
 import { cadSnap } from "@/lib/cad/snap";
+import { pathTouchesBox } from "@/lib/cad/workspace-selection";
+import { isDimensionGeometrySnap, snapDimension } from "@/lib/cad/dimension-snap";
 import {
   addChain,
+  addDrawingLines,
   addEllipse,
   addRect,
   addSpline,
+  updateSpline,
   catmullRom,
   addRotatedRect,
   addTriangle,
   addHexagon,
   deleteLooseEdge,
-  drawingOrMigrate,
   faceArea,
   faceBoundaryKey,
   faceCentroid,
   faceEdges,
   facePoints,
+  faceHoles,
   faceVertices,
   filletPreview,
-  isInternalEdge,
   isDrawnCurveFace,
   isTriangleFace,
   moveNodeEditVertex,
@@ -72,17 +100,21 @@ import {
   pickCandidates,
   pickEdgeAt,
   pickFaceAt,
+  pickOpenPathAt,
   pickVertexAt,
   rectFromEdge,
   rectMetaMatchesFace,
   rectWorldCorners,
   resolveDim,
+  setDimensionLabel,
+  outsideDimensionOffset,
+  deleteDimension,
   selfIntersects,
   triangleFromBounds,
   hexagonFromBounds,
   triangleMetrics,
 } from "@/lib/cad/engine";
-import { FACE_TEXTURES, REGION_FILL, layerForType, type CadDrawing } from "@/lib/cad/types";
+import { ALL_FACE_TEXTURES, REGION_FILL, layerForType, type CadDrawing } from "@/lib/cad/types";
 
 const DRAW_CREATE = new Set([
   "line",
@@ -171,10 +203,10 @@ function snapToGrid(p: Pt, step: number): Pt {
   return { x: Math.round(p.x / g) * g, y: Math.round(p.y / g) * g };
 }
 
-function snapIfMagnet(p: Pt): Pt {
-  const st = useProject.getState();
-  if (!st.snapOn) return p;
-  return snapToGrid(p, st.gridStep);
+function snapIfMagnet(p: Pt): Pt { return snapEditableEndpoint(p); }
+function snapShapeTranslationToGrid(anchors: Pt[], dx: number, dy: number, step: number, px: number) {
+  const st=useProject.getState();
+  return snapFigureTranslation(drawingOrMigrate(st.project),st.cadEditId,anchors,dx,dy,step,px,st.snapGridOn);
 }
 
 function pickDraftSegment(points: Pt[], p: Pt, tolerance: number): number | null {
@@ -376,9 +408,18 @@ export function DesignCanvas({
   } | null>(null);
   const stageRef = useRef<Konva.Stage>(null);
   const [size, setSize] = useState({ w: 640, h: 480 });
+  const [textEditor, setTextEditor] = useState<CadText | null>(null);
+  const [selectedNote, setSelectedNote] = useState<string | null>(null);
+  const [notePreview, setNotePreview] = useState<(Pt & {id:string;size?:number}) | null>(null);
   const panDrag = useRef<{ x: number; y: number } | null>(null);
+  const mousePan = useRef<{ pointerId: number; x: number; y: number; panX: number; panY: number } | null>(null);
+  const [mousePanning, setMousePanning] = useState(false);
+  const [hoveredHead, setHoveredHead] = useState<string | null>(null);
+  const [draggingHead, setDraggingHead] = useState(false);
+  const [pressedHead, setPressedHead] = useState<string | null>(null);
   const box = useRef<{ x: number; y: number } | null>(null);
   const [boxNow, setBoxNow] = useState<Pt | null>(null);
+  const marqueePointer = useRef<number | null>(null);
   const pinch = useRef<{
     dist: number;
     midX: number;
@@ -397,36 +438,41 @@ export function DesignCanvas({
   const midDown = useRef(false);
   const [hoverPt, setHoverPt] = useState<Pt | null>(null);
   const [snapHit, setSnapHit] = useState<{ kind: string; pt: Pt } | null>(null);
+  const [selectedDimension, setSelectedDimension] = useState<string | null>(null);
+  const dimensionInteraction = useRef(false);
+  const [dimensionPreview, setDimensionPreview] = useState<{id:string;offset:number}|null>(null);
+  const [dimensionEditor, setDimensionEditor] = useState<{id:string;value:string}|null>(null);
+  const applyDimensionLabel = () => {
+    if (!dimensionEditor) return;
+    const st=useProject.getState(),d=drawingOrMigrate(st.project);
+    const next=setDimensionLabel(d,dimensionEditor.id,dimensionEditor.value);
+    if(next!==d) st.commitDrawing(next,st.selectedPolyId,true);
+    setDimensionEditor(null);
+  };
   const [selectedDraftSegment, setSelectedDraftSegment] = useState<number | null>(null);
   const [selectedDraftEdgeId, setSelectedDraftEdgeId] = useState<string | null>(null);
   const [activeDraftPolygonPoint, setActiveDraftPolygonPoint] = useState<number | null>(null);
   const [activeDraftSplinePoint, setActiveDraftSplinePoint] = useState<number | null>(null);
   const lineEditingRef = useRef(false);
   const lineTapGuardUntil = useRef(0);
+  const segmentEditTapConsumed = useRef(false);
   const pointerType = useRef("mouse");
-  const hold = useRef<{
-    id: string;
-    timer: number;
-    node: Konva.Node;
-    pointerId: number | null;
-  } | null>(null);
   const lastClient = useRef({ x: 0, y: 0 });
   const headDragStart = useRef({ x: 0, y: 0 });
   const overCatalog = useRef(false);
-  const holdMenu = useRef(false);
   const editDrag = useRef(false);
   const headDragMove = useRef<((e: PointerEvent) => void) | null>(null);
-  const [deleteMenu, setDeleteMenu] = useState<{ id: string; x: number; y: number } | null>(null);
-  const [editHandles, setEditHandles] = useState<string | null>(null);
   const [liveCadPath, setLiveCadPath] = useState<{ faceId: string; points: Pt[] } | null>(null);
   const freehandOn = useRef(false);
   const cadHold = useRef<number | null>(null);
+  const segmentHoldStart = useRef<Pt | null>(null);
   const startCadHold = (id: string) => {
     if (pinch.current) return;
     const st = useProject.getState();
-    if (st.catalogOpen) return;
-    if (st.tool === "draw" && st.drawSub && st.drawSub !== "none") return;
+    if (st.tool === "place" || st.tool === "measure" || st.tool === "scale" || multiSelect) return;
     const face = drawingOrMigrate(st.project).faces[id];
+    const drawingSegment = st.tool === "draw" && st.drawSub === "line" && face?.segment;
+    if (st.tool === "draw" && st.drawSub && st.drawSub !== "none" && !drawingSegment) return;
     if (face?.locked) return;
     if (face?.freehand) {
       st.selectPoly(id);
@@ -441,6 +487,7 @@ export function DesignCanvas({
         skipClick.current = false;
       }, 400);
       useProject.getState().setCadEdit(id);
+      if (drawingSegment) useProject.setState({drawSub:"line",tool:"draw"});
       try {
         navigator.vibrate?.(20);
       } catch {
@@ -448,76 +495,48 @@ export function DesignCanvas({
       }
     }, 380);
   };
+  const startSegmentHold = (p: Pt) => {
+    const st=useProject.getState();
+    if(st.tool!=="draw" || st.drawSub!=="line" || st.cadEditId) return;
+    const d=drawingOrMigrate(st.project);
+    for(const face of Object.values(d.faces)) {
+      if(!face.segment || face.hidden || face.locked || face.layerId || !face.spline) continue;
+      const [a,b]=face.spline.pts;
+      if(!a || !b) continue;
+      const hit=projectOnSegment(p,a,b).pt;
+      const inset=Math.min(18/st.pxPerMeter,dist(a,b)*.2);
+      if(dist(p,hit)<=14/st.pxPerMeter && dist(hit,a)>inset && dist(hit,b)>inset) { segmentHoldStart.current=p; startCadHold(face.id); break; }
+    }
+  };
   const endCadHold = () => {
+    if(segmentHoldStart.current && !cadHold.current && useProject.getState().cadEditId) {
+      skipClick.current=true;
+      pinchSuppressClickUntil.current=Date.now()+650;
+    }
+    segmentHoldStart.current=null;
     if (cadHold.current) {
       window.clearTimeout(cadHold.current);
       cadHold.current = null;
     }
   };
 
-  const clearHold = () => {
-    if (hold.current) {
-      window.clearTimeout(hold.current.timer);
-      hold.current = null;
-    }
-  };
-
-  const beginHold = (id: string, node: Konva.Node, pointerId: number | null = null) => {
-    clearHold();
-    hold.current = {
-      id,
-      node,
-      pointerId,
-      timer: window.setTimeout(() => {
-        const cur = hold.current;
-        hold.current = null;
-        if (!cur || cur.id !== id) return;
-        skipClick.current = true;
-        holdMenu.current = true;
-        window.setTimeout(() => {
-          skipClick.current = false;
-        }, 500);
-        try {
-          cur.node.stopDrag();
-          const el = cur.node.getStage()?.container();
-          if (el && cur.pointerId != null && el.hasPointerCapture?.(cur.pointerId)) {
-            el.releasePointerCapture(cur.pointerId);
-          }
-        } catch {
-          /* ignore */
-        }
-        const st = useProject.getState();
-        const head = st.project.heads.find((h) => h.id === id);
-        if (!head) return;
-        const zone = st.project.zones.find((z) => z.id === head.zone);
-        if (head.locked || zone?.locked) return;
-        setDeleteMenu({
-          id,
-          x: head.x * st.pxPerMeter + st.panX,
-          y: head.y * st.pxPerMeter + st.panY,
-        });
-        try {
-          navigator.vibrate?.(20);
-        } catch {
-          /* ignore */
-        }
-      }, 500),
-    };
-  };
-
   const project = useProject((s) => s.project);
   const tool = useProject((s) => readOnly ? null : s.tool);
-  const drawSub = useProject((s) => readOnly ? "none" : s.drawSub);
+  const drawSub = useProject((s) => readOnly || s.tool !== "draw" ? "none" : s.drawSub);
   const measureSub = useProject((s) => s.measureSub);
   const px = useProject((s) => previewView?.px ?? s.pxPerMeter);
   const panX = useProject((s) => previewView?.panX ?? s.panX);
   const panY = useProject((s) => previewView?.panY ?? s.panY);
   const showCoverage = useProject((s) => s.showCoverage);
   const showGrid = useProject((s) => !readOnly && s.showGrid);
+  const textHidden = useProject((s) => s.textHidden);
   const showLabels = useProject((s) => s.showLabels);
   const selectedId = useProject((s) => readOnly ? null : s.selectedId);
   const selectedIds = useProject((s) => readOnly ? PREVIEW_EMPTY_IDS : s.selectedIds);
   const selectedPolyId = useProject((s) => readOnly ? null : s.selectedPolyId);
+  const selectedPlantId = useProject(s => readOnly ? null : s.selectedPlantId);
+  const pendingCatalogPlant = useProject(s => readOnly ? null : s.pendingCatalogPlant);
+  const [plantPreview, setPlantPreview] = useState<CadPlant | null>(null);
   const selectedEdgeId = useProject((s) => readOnly ? null : s.selectedEdgeId);
   const cadEditId = useProject((s) => readOnly ? null : s.cadEditId);
   const catalogOpen = useProject((s) => !readOnly && s.catalogOpen);
@@ -525,6 +544,7 @@ export function DesignCanvas({
   const draft = useProject((s) => readOnly ? PREVIEW_EMPTY_DRAFT : s.draft);
   const fitNonce = useProject((s) => s.fitNonce);
   const measureUnit = useProject((s) => s.measureUnit);
+  const areaUnit = useProject((s) => s.units.area);
   const spaceDown = useProject((s) => s.spaceDown);
   const gridStep = useProject((s) => s.gridStep);
   const analysis = useProject((s) => !readOnly && s.analysis);
@@ -532,6 +552,12 @@ export function DesignCanvas({
   const snapGridOn = useProject((s) => s.snapGridOn);
   const locale = useProject((s) => s.locale);
   const cadDrawing = drawingOrMigrate(project);
+  const dimensionsVisible = cadDrawing.layers?.dims?.visible !== false;
+  useEffect(()=>{
+    if(!dimensionsVisible) {
+      setSelectedDimension(null);setDimensionEditor(null);setDimensionPreview(null);dimensionInteraction.current=false;
+    }
+  },[dimensionsVisible]);
   const editedFace = cadEditId ? cadDrawing.faces[cadEditId] : null;
   const editedFaceEdges = cadEditId ? faceEdges(cadDrawing, cadEditId) : [];
   const editedFaceVertices = cadEditId ? faceVertices(cadDrawing, cadEditId) : [];
@@ -590,6 +616,24 @@ export function DesignCanvas({
     }
   }, [tool, drawSub, draft.points.length, activeDraftSplinePoint]);
 
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el || readOnly) return;
+    return installSingleFingerPan(el, {
+      canPan: () => {
+        const st = useProject.getState();
+        return !dimensionInteraction.current && !multiSelect && !pinchGestureActive.current && !editDrag.current && !st.cadEditId &&
+          !st.selectedEdgeId && !st.draft.points.length &&
+          (!st.tool || (st.tool === "draw" && st.drawSub === "none"));
+      },
+      readPan: () => { const st = useProject.getState(); return { x: st.panX, y: st.panY }; },
+      setPan: (x, y) => useProject.getState().setPan(x, y),
+      begin: () => { skipClick.current = false; pinchSuppressClickUntil.current = 0; },
+      suppressTap: () => { skipClick.current = true; pinchSuppressClickUntil.current = Date.now() + 650; },
+      cancelHold: () => { endCadHold(); },
+    });
+  }, [readOnly, multiSelect]);
+
   useLayoutEffect(() => {
     const el = wrapRef.current;
     if (!el) return;
@@ -612,7 +656,6 @@ export function DesignCanvas({
         window.clearTimeout(cadHold.current);
         cadHold.current = null;
       }
-      clearHold();
       skipClick.current = true;
       pinchGestureActive.current = true;
       setPinching(true);
@@ -638,7 +681,6 @@ export function DesignCanvas({
         window.clearTimeout(cadHold.current);
         cadHold.current = null;
       }
-      clearHold();
       const info = pinchInfo(e.touches, el);
       if (!info) return;
       if (!pinch.current) {
@@ -709,11 +751,13 @@ export function DesignCanvas({
   useEffect(() => {
     let active = true;
     const loaded: Record<string, HTMLImageElement> = {};
-    for (const texture of FACE_TEXTURES) {
+    for (const texture of ALL_FACE_TEXTURES) {
       const image = new window.Image();
-      image.onload = () => {
+      image.onload = async () => {
         if (!active) return;
-        loaded[texture.id] = image;
+        const prepared = await seamlessPattern(image);
+        if (!active) return;
+        loaded[texture.id] = prepared;
         setTextureImages({ ...loaded });
       };
       image.src = texture.src;
@@ -733,7 +777,18 @@ export function DesignCanvas({
     });
   }, [onExportReady]);
 
-  useEffect(() => () => clearHold(), []);
+  useEffect(() => {
+    if (!pressedHead) return;
+    const release = () => setPressedHead(null);
+    window.addEventListener("pointerup", release);
+    window.addEventListener("pointercancel", release);
+    window.addEventListener("blur", release);
+    return () => {
+      window.removeEventListener("pointerup", release);
+      window.removeEventListener("pointercancel", release);
+      window.removeEventListener("blur", release);
+    };
+  }, [pressedHead]);
 
   const toWorld = (stage: Konva.Stage | null): Pt => {
     const p = stage?.getPointerPosition();
@@ -750,13 +805,17 @@ export function DesignCanvas({
     if (extra?.free) return { pt: p, kind: "none" as const };
     const st = useProject.getState();
     const d = drawingOrMigrate(st.project);
+    if ((st.tool === "draw" && st.drawSub === "dim") || (st.tool === "measure" && st.measureSub === "measure")) {
+      return snapDimension(p,d,{pxPerMeter:st.pxPerMeter,pointerType:pointerType.current,
+        snapOn:st.snapOn,snapGridOn:st.snapGridOn,gridStep:st.gridStep});
+    }
     const canCloseDraft =
       st.tool === "draw" &&
       (st.drawSub === "polygon" ||
         st.drawSub === "polyline" ||
         st.drawSub === "line" ||
         st.drawSub === "spline") &&
-      st.draft.points.length >= (st.drawSub === "spline" ? 3 : 2);
+      st.draft.points.length >= (st.drawSub === "spline" || st.drawSub === "polygon" ? 3 : 2);
     const closeTo =
       canCloseDraft
         ? st.draft.points[0]!
@@ -787,12 +846,16 @@ export function DesignCanvas({
         return { pt: boundary.pt, kind: "edge" as const, faceId: boundary.faceId };
       }
     }
+    if (st.snapOn && st.tool === "draw" && st.drawSub === "line" && extra?.angleFrom && ['none','grid','horiz','vert','parallel','perp','extend'].includes(snapped.kind)) {
+      return {...snapped,pt:snapSegmentAlignment(p,snapped.pt,segmentAlignmentAnchors(d,extra.angleFrom),st.pxPerMeter)};
+    }
     return snapped;
   };
 
   const snapPolygonDraftPoint = (p: Pt, pointIndex: number) => {
     const st = useProject.getState();
     const d = drawingOrMigrate(st.project);
+    if (pointIndex === st.draft.points.length - 1 && pointIndex >= 3 && dist(p, st.draft.points[0]!) * st.pxPerMeter <= 18) return {pt: st.draft.points[0]!, kind: "close"};
     return cadSnap(p, d, {
       pxPerMeter: st.pxPerMeter,
       pointerType: pointerType.current,
@@ -801,13 +864,14 @@ export function DesignCanvas({
       orthoOn: st.orthoOn,
       lock: st.inferenceLock,
       gridStep: st.gridStep,
-      angleFrom: pointIndex > 0 ? st.draft.points[0] ?? null : null,
-      closeTo: null,
+      angleFrom: pointIndex > 0 ? st.draft.points[pointIndex - 1] ?? null : null,
+      closeTo: pointIndex === st.draft.points.length - 1 && pointIndex >= 3 ? st.draft.points[0]! : null,
       heads: st.project.heads.map((h) => ({ x: h.x, y: h.y })),
     });
   };
 
   const trackPointer = (p: Pt) => {
+    if(segmentHoldStart.current && dist(p,segmentHoldStart.current)*useProject.getState().pxPerMeter>8) endCadHold();
     const st = useProject.getState();
     const stretching =
       st.tool === "draw" &&
@@ -816,9 +880,7 @@ export function DesignCanvas({
     const angleFrom = stretching
       ? null
       : st.tool === "draw" && st.draft.points.length
-        ? st.drawSub === "polygon"
-          ? st.draft.points[0]!
-          : st.draft.points[st.draft.points.length - 1]!
+        ? st.draft.points[st.draft.points.length - 1]!
         : null;
     const snapped = applySnap(p, { angleFrom, free: stretching });
     pendingHover.current = snapped;
@@ -836,23 +898,18 @@ export function DesignCanvas({
     return snapped;
   };
 
-  const zoomAt = (pointerX: number, pointerY: number, nextPx: number) => {
-    const st = useProject.getState();
-    const old = st.pxPerMeter;
-    const clamped = clampPxPerMeter(nextPx);
-    const wx = (pointerX - st.panX) / old;
-    const wy = (pointerY - st.panY) / old;
-    st.setZoom(clamped);
-    st.setPan(pointerX - wx * clamped, pointerY - wy * clamped);
-  };
-
   const onWheel = (e: Konva.KonvaEventObject<WheelEvent>) => {
     e.evt.preventDefault();
+    if (editDrag.current) return;
+    endCadHold();
     const stage = e.target.getStage();
-    const pointer = stage?.getPointerPosition();
+    const rect = stage?.container().getBoundingClientRect();
+    const pointer = rect ? { x: e.evt.clientX - rect.left, y: e.evt.clientY - rect.top } : null;
     if (!pointer) return;
-    const old = useProject.getState().pxPerMeter;
-    zoomAt(pointer.x, pointer.y, e.evt.deltaY > 0 ? old * 0.92 : old * 1.08);
+    const st = useProject.getState();
+    if (e.evt.deltaY) useProject.setState(wheelCanvasView(st, pointer.x, pointer.y, e.evt.deltaY, e.evt.deltaMode, size.h, e.evt.ctrlKey || e.evt.metaKey));
+    const next = useProject.getState();
+    trackPointer({ x: (pointer.x - next.panX) / next.pxPerMeter, y: (pointer.y - next.panY) / next.pxPerMeter });
   };
 
   const startFreehand = (point: Pt) => {
@@ -1017,7 +1074,49 @@ export function DesignCanvas({
     }
   };
 
+  const finishSegmentEditOnTap = () => {
+    if (!useProject.getState().finishSegmentEdit()) return false;
+    lineEditingRef.current = false;
+    setSelectedDraftSegment(null);
+    setSelectedDraftEdgeId(null);
+    if (hoverRaf.current) cancelAnimationFrame(hoverRaf.current);
+    hoverRaf.current = 0;
+    setHoverPt(null);
+    setSnapHit(null);
+    setLiveCadPath(null);
+    // Block only this contact's compatibility click, not a fast next tap.
+    segmentEditTapConsumed.current = true;
+    return true;
+  };
+
+  const beginCanvasContact = () => {
+    if (pinchGestureActive.current || editDrag.current) return;
+    pinchSuppressClickUntil.current = 0;
+    segmentEditTapConsumed.current = false;
+    skipClick.current = false;
+    lineTapGuardUntil.current = 0;
+  };
+
+  useEffect(() => {
+    skipClick.current = false;
+    lineTapGuardUntil.current = 0;
+    segmentEditTapConsumed.current = false;
+    pinchSuppressClickUntil.current = 0;
+    lineEditingRef.current = false;
+  }, [tool, drawSub]);
+  useEffect(() => {
+    if (!("redoPoints" in draft) || !draft.redoPoints?.length) return;
+    pendingHover.current = null;
+    if (hoverRaf.current) cancelAnimationFrame(hoverRaf.current);
+    hoverRaf.current = 0;
+    setHoverPt(null);
+    onHover?.(null);
+    setSnapHit(null);
+  }, ["redoPoints" in draft ? draft.redoPoints : undefined]);
+
   const handleClick = (e: Konva.KonvaEventObject<MouseEvent | TouchEvent>) => {
+    if (textEditor || e.target.name() === "drawing-annotation") return;
+    if (segmentEditTapConsumed.current) return;
     if (pinchGestureActive.current || pinching) return;
     if (Date.now() < pinchSuppressClickUntil.current) return;
     if (Date.now() < lineTapGuardUntil.current) return;
@@ -1026,8 +1125,10 @@ export function DesignCanvas({
       return;
     }
     const raw = toWorld(e.target.getStage());
+    setSelectedNote(null);
     const st = useProject.getState();
     if (st.spaceDown) return;
+    if (finishSegmentEditOnTap()) return;
     const stretching =
       st.tool === "draw" &&
       st.draft.points.length >= 1 &&
@@ -1038,6 +1139,8 @@ export function DesignCanvas({
         ? st.draft.points[st.draft.points.length - 1]!
         : null;
     const p = applySnap(raw, { angleFrom, free: stretching }).pt;
+    if (st.pendingCatalogPlant) { st.placeCatalogPlant(raw); return; }
+    if (st.tool === "place") return; // Library objects are added only by a completed drag.
 
     if (st.tool === "scale") {
       if (!st.draft.scaleA)
@@ -1072,18 +1175,17 @@ export function DesignCanvas({
         useProject.setState({ draft: { ...st.draft, measureA: null } });
         return;
       }
-      const face = pickFaceAt(drawingOrMigrate(st.project), p);
-      if (!st.draft.measureA && face) {
-        toast(
-          `${tr(locale, "area")}: ${faceArea(drawingOrMigrate(st.project), face).toFixed(2)} m²`,
-        );
-      }
       if (!st.draft.measureA) useProject.setState({ draft: { ...st.draft, measureA: p } });
       else {
         onMeasure(dist(st.draft.measureA, p));
         useProject.setState({ draft: { ...st.draft, measureA: null } });
       }
       return;
+    }
+    if (!st.cadEditId && (!st.tool || st.tool === "move" || multiSelect || (st.tool === "draw" && st.drawSub === "none"))) {
+      const d = drawingOrMigrate(st.project);
+      const hit = pickOpenPathAt(d, p, 18 / px);
+      if (hit) { st.selectPoly(hit, multiSelect); return; }
     }
     if (st.tool === "draw") {
       if (!st.drawSub || st.drawSub === "none") {
@@ -1142,28 +1244,16 @@ export function DesignCanvas({
         return;
       }
       if (drawSub === "dim") {
-        const dnow = drawingOrMigrate(st.project);
-        const hit = Object.values(dnow.dims ?? {}).find((dim) => {
-          const pr = { x: (dim.a.x + dim.b.x) / 2, y: (dim.a.y + dim.b.y) / 2 };
-          return dist(p, pr) < 24 / px || dist(p, dim.a) < 16 / px;
-        });
-        if (hit) {
-          const next = { ...dnow, dims: { ...dnow.dims } };
-          delete next.dims![hit.id];
-          st.commitDrawing(next, st.selectedPolyId, true);
-          return;
-        }
         if (!st.draft.points.length) {
           st.addDraftPoint(p);
           return;
         }
         const a = st.draft.points[0]!;
-        st.addDimension(a, p, 0.45);
+        st.addDimension(a, p);
         return;
       }
       if (drawSub === "text") {
-        const label = window.prompt(tr(locale, "drawText"), tr(locale, "textPlaceholder"));
-        if (label) st.addNote(p, label);
+        setTextEditor({id:uid("txt"),x:p.x,y:p.y,text:"",size:0.35,fontFamily:"osifont",color:appearance.ink});
         return;
       }
       if (drawSub === "trim") {
@@ -1223,6 +1313,7 @@ export function DesignCanvas({
       }
       const kind = st.polyKind;
       if (st.drawSub === "line") {
+        if (st.cadEditId) { st.setCadEdit(null); return; }
         if (lineEditingRef.current) {
           const draftSegment = pickDraftSegment(st.draft.points, p, 14 / px);
           if (draftSegment != null) {
@@ -1292,28 +1383,6 @@ export function DesignCanvas({
           return;
         }
         const a = st.draft.points[st.draft.points.length - 1]!;
-        if (st.draft.points.length >= 3 && dist(st.draft.points[0]!, p) < Math.max(0.2, 28 / px)) {
-          if (selfIntersects([...st.draft.points, st.draft.points[0]!]))
-            toast(tr(locale, "selfIntersect"));
-          setSelectedDraftSegment(null);
-          setSelectedDraftEdgeId(null);
-          lineEditingRef.current = false;
-          st.closePolygon();
-          return;
-        }
-        const draftSegment = pickDraftSegment(st.draft.points, p, 14 / px);
-        if (draftSegment != null) {
-          lineEditingRef.current = true;
-          setSelectedDraftSegment(draftSegment);
-          setSelectedDraftEdgeId(
-            findStraightEdgeId(
-              drawingOrMigrate(st.project),
-              st.draft.points[draftSegment]!,
-              st.draft.points[draftSegment + 1]!,
-            ),
-          );
-          return;
-        }
         setSelectedDraftSegment(null);
         setSelectedDraftEdgeId(null);
         lineEditingRef.current = false;
@@ -1322,7 +1391,7 @@ export function DesignCanvas({
         const previousFaces = Object.values(currentDrawing.faces);
         const previousFaceKeys = new Set(previousFaces.map(faceBoundaryKey));
         const nextDrawing = mergeOpenCollinearEdges(
-          addChain(currentDrawing, [a, p], false, st.regionType),
+          addDrawingLines(currentDrawing, [a, st.draft.lineLength ? {x:a.x+(p.x-a.x)/dist(a,p)*st.draft.lineLength,y:a.y+(p.y-a.y)/dist(a,p)*st.draft.lineLength} : p], st.regionType),
         );
         const nextFaces = Object.values(nextDrawing.faces);
         const createdFaceId =
@@ -1335,7 +1404,7 @@ export function DesignCanvas({
         setSnapHit(null);
         if (createdFaceId) {
           useProject.setState({
-            draft: { ...st.draft, points: [] },
+            draft: { ...st.draft, lineLength: undefined, points: [] },
             tool: "draw",
             drawSub: "none",
             cadEditId: createdFaceId,
@@ -1348,7 +1417,7 @@ export function DesignCanvas({
           return;
         }
         useProject.setState({
-          draft: { ...st.draft, points: [] },
+          draft: { ...st.draft, lineLength: undefined, points: [] },
           tool: "draw",
           drawSub: "line",
           cadEditId: null,
@@ -1384,7 +1453,7 @@ export function DesignCanvas({
       if (drawSub === "polygon") {
         const current = st.draft.points;
         const closeM = Math.max(0.2, 32 / px);
-        if (current.length >= 4 && dist(current[1]!, p) < closeM) {
+        if (current.length >= 3 && dist(current[0]!, p) < closeM) {
           pendingHover.current = null;
           if (hoverRaf.current) cancelAnimationFrame(hoverRaf.current);
           hoverRaf.current = 0;
@@ -1527,12 +1596,9 @@ export function DesignCanvas({
         st.selectEdge(null);
         return;
       }
-      if (edge && isInternalEdge(d, edge)) {
-        st.selectEdge(edge);
-        return;
-      }
-      if (face) {
-        st.selectPoly(face);
+      const owner = face ?? (edge ? d.edges[edge]?.faceL ?? d.edges[edge]?.faceR : null);
+      if (owner && d.faces[owner]) {
+        st.selectPoly(owner);
         return;
       }
       if (edge) {
@@ -1545,8 +1611,6 @@ export function DesignCanvas({
       st.selectPoly(null);
       st.selectEdge(null);
       st.setCadEdit(null);
-      setDeleteMenu(null);
-      setEditHandles(null);
       return;
     }
   };
@@ -1579,13 +1643,23 @@ export function DesignCanvas({
   const y1 = Math.ceil((size.h - panY) / px) + 1;
   const visualGrid = visibleGridStep(gridStep, px, Math.max(x1 - x0, y1 - y0));
 
-  const cursor = spaceDown
-    ? "grab"
-    : tool === "draw" && drawSub === "line"
-      ? "none"
-      : tool
-        ? "crosshair"
-        : "default";
+  // The drawing workspace is also a selection workspace when no tool is armed.
+  // Hide the native crosshair only while its snapped canvas replacement is visible.
+  const selecting = !tool || tool === "move" ||
+    (tool === "draw" && (!drawSub || drawSub === "none" || !!cadEditId ||
+      (drawSub === "line" && (selectedDraftSegment != null || !!selectedEdgeId))));
+  const showLinePointer = !readOnly && tool === "draw" && (drawSub === "line" || drawSub === "dim") &&
+    !selecting && !spaceDown && !pinching && !!hoverPt;
+  const showFirstPoint = !readOnly && tool === "draw" && (drawSub === "polygon" || drawSub === "spline") &&
+    !draft.points.length && !selecting && !spaceDown && !pinching && !!hoverPt;
+  const showTapePointer = !readOnly && tool === "measure" && measureSub === "measure" &&
+    !spaceDown && !pinching && !!hoverPt;
+  const cursor = readOnly ? "default" : mousePanning || draggingHead || pressedHead ? "grabbing" : spaceDown ? "grab"
+    : pendingCatalogPlant ? "crosshair"
+    : hoveredHead && !multiSelect && (selecting || tool === "place") ? "pointer"
+    : selecting || tool === "place" ? "default"
+    : showLinePointer || showFirstPoint || showTapePointer ? "none"
+    : tool === "draw" && drawSub === "text" ? "text" : "crosshair";
   const lawn = lawnPolygon(project.polygons);
   const holes = exclusionPolygons(project.polygons);
   const visibleHeads = project.heads.filter((h) => !hiddenZones.has(h.zone));
@@ -1641,17 +1715,15 @@ export function DesignCanvas({
     drawSub === "polygon" && draft.points.length
       ? hoverPt ?? draft.points[draft.points.length - 1]!
       : null;
-  const polygonBoundaryPoints = drawSub === "polygon" ? draft.points.slice(1) : [];
+  const polygonBoundaryPoints = drawSub === "polygon" ? draft.points : [];
   const polygonLivePoints =
     polygonPreviewPt &&
     polygonBoundaryPoints.length &&
     dist(polygonBoundaryPoints[polygonBoundaryPoints.length - 1]!, polygonPreviewPt) > 1e-7
       ? [...polygonBoundaryPoints, polygonPreviewPt]
       : polygonBoundaryPoints;
-  const polygonFillPoints =
-    drawSub === "polygon" && draft.points.length
-      ? [draft.points[0]!, ...polygonLivePoints]
-      : [];
+  const polygonFillPoints = polygonLivePoints;
+  const polygonClosing = drawSub === "polygon" && snapHit?.kind === "close";
   const activeConstructionPoint =
     (drawSub === "polygon" ? activeDraftPolygonPoint : activeDraftSplinePoint) ??
     (draft.points.length > 1 ? draft.points.length - 1 : null);
@@ -1666,6 +1738,7 @@ export function DesignCanvas({
       if (!next[pointIndex]) return;
       next[pointIndex] = snapped.pt;
       st.setDraftPoints(next);
+      setHoverPt(pointIndex === next.length - 1 ? snapped.pt : null);
       setSnapHit(snapped.kind !== "none" ? { kind: snapped.kind, pt: snapped.pt } : null);
     };
     bindPointerDrag(
@@ -1677,11 +1750,19 @@ export function DesignCanvas({
       () => {
         setActiveDraftPolygonPoint(pointIndex);
         setHoverPt(null);
+        onHover?.(null);
         setSnapHit(null);
       },
       movePoint,
       (p) => {
         movePoint(p);
+        const st = useProject.getState();
+        const points = st.draft.points;
+        if (pointIndex === points.length - 1 && pointIndex >= 3 && dist(points[pointIndex]!, points[0]!) * px <= 18) {
+          st.setDraftPoints(points.slice(0, -1));
+          st.closePolygon();
+          setHoverPt(null);
+        }
         setSnapHit(null);
       },
       skipClick,
@@ -1689,7 +1770,7 @@ export function DesignCanvas({
       () => setSnapHit(null),
       () => {
         const st = useProject.getState();
-        if (pointIndex !== 1 || st.drawSub !== "polygon" || st.draft.points.length < 4) return;
+        if (pointIndex !== 0 || st.drawSub !== "polygon" || st.draft.points.length < 3) return;
         pendingHover.current = null;
         if (hoverRaf.current) cancelAnimationFrame(hoverRaf.current);
         hoverRaf.current = 0;
@@ -1766,13 +1847,183 @@ export function DesignCanvas({
     if (st.draft.points.length >= 2) st.finishOpenDraw();
   };
 
+  const noteEnabled = !readOnly && !cadEditId && !pendingCatalogPlant &&
+    (!tool || tool === "move" || (tool === "draw" && (drawSub === "none" || drawSub === "text"))) &&
+    cadDrawing.layers?.annotations?.locked !== true;
+  const beginNote = (tx:CadText, e:Konva.KonvaEventObject<PointerEvent | TouchEvent | MouseEvent>) => {
+    if(!noteEnabled || ("touches" in e.evt && e.evt.touches.length>1)) return;
+    let anchor:Pt={x:tx.x,y:tx.y};
+    const moved=(p:Pt)=>({x:tx.x+p.x-anchor.x,y:tx.y+p.y-anchor.y});
+    bindPointerDrag(e,editDrag,panX,panY,px,
+      p=>{anchor=p;setSelectedNote(tx.id);useProject.getState().selectPoly(null);useProject.getState().selectEdge(null);},
+      p=>setNotePreview({id:tx.id,...moved(p)}),
+      p=>{setNotePreview(null);useProject.getState().moveNote(tx.id,moved(p));},
+      skipClick,pinchGestureActive,()=>setNotePreview(null),()=>setNotePreview(null));
+  };
+  const beginNoteResize = (tx:CadText, corner:number, bounds:{width:number;height:number}, e:Konva.KonvaEventObject<PointerEvent | TouchEvent>) => {
+    if(!noteEnabled || ("touches" in e.evt && e.evt.touches.length>1)) return;
+    const right=corner===1 || corner===2, bottom=corner>=2;
+    const anchor={x:tx.x+(right?0:bounds.width/px),y:tx.y+(bottom?0:bounds.height/px)};
+    const vx=(right?1:-1)*bounds.width,vy=(bottom?1:-1)*bounds.height;
+    let start:Pt={x:0,y:0};
+    const scaled=(p:Pt)=>{
+      const factor=Math.max(0.1/tx.size,Math.min(10/tx.size,1+((p.x-start.x)*px*vx+(p.y-start.y)*px*vy)/Math.max(1,vx*vx+vy*vy)));
+      return {...tx,size:tx.size*factor,x:anchor.x-(right?0:bounds.width*factor/px),y:anchor.y-(bottom?0:bounds.height*factor/px)};
+    };
+    bindPointerDrag(e,editDrag,panX,panY,px,p=>{start=p;},p=>setNotePreview(scaled(p)),p=>{
+      const st=useProject.getState(),d=drawingOrMigrate(st.project);
+      setNotePreview(null);
+      if(d.texts?.[tx.id]) st.commitDrawing({...d,texts:{...d.texts,[tx.id]:scaled(p)}},null,true);
+    },skipClick,pinchGestureActive,()=>setNotePreview(null),()=>setNotePreview(null));
+  };
+  const beginPlantMove = (plant: CadPlant, event: Konva.KonvaEventObject<PointerEvent | TouchEvent>) => {
+    const st = useProject.getState();
+    if (st.pendingCatalogPlant || st.spaceDown || (st.tool && st.tool !== "move" && !(st.tool === "draw" && st.drawSub === "none"))) return;
+    if (plant.locked || cadDrawing.layers?.plants?.locked) { event.cancelBubble = true; st.selectPlant(plant.id); return; }
+    st.selectPlant(plant.id);
+    bindClientDeltaDrag(event, editDrag, skipClick, (dx, dy, commit) => {
+      const state = useProject.getState();
+      const hit = cadSnap({x:plant.x+dx/px,y:plant.y+dy/px}, drawingOrMigrate(state.project), {
+        pxPerMeter: px, snapOn: state.snapOn, snapGridOn: state.snapOn && state.snapGridOn,
+        gridStep: state.gridStep, heads: state.project.heads, excludePlant: plant.id,
+      });
+      if (commit) { setPlantPreview(null); setSnapHit(null); state.updatePlant(plant.id, hit.pt); }
+      else { setPlantPreview(dx || dy ? {...plant,...hit.pt} : null); setSnapHit(dx || dy ? hit : null); }
+    }, pinchGestureActive, () => {setPlantPreview(null); useProject.getState().selectPlant(plant.id);});
+  };
+  const beginPlantResize = (plant: CadPlant, event: Konva.KonvaEventObject<PointerEvent | TouchEvent>) => {
+    bindClientDeltaDrag(event, editDrag, skipClick, (dx, dy, commit) => {
+      const r = Math.max(0.025, Math.min(50, Math.hypot(plant.r+dx/px, dy/px)));
+      if (commit) { setPlantPreview(null); useProject.getState().updatePlant(plant.id, {r}); }
+      else setPlantPreview(dx || dy ? {...plant,r} : null);
+    }, pinchGestureActive, () => setPlantPreview(null));
+  };
+  const selectedText = selectedNote ? cadDrawing.texts?.[selectedNote] : undefined;
+
   return (
     <div
       ref={wrapRef}
       data-design-canvas="1"
+      onPointerDownCapture={event => {
+        if (!readOnly && event.pointerType === "mouse" && (event.button === 2 || event.button === 1) && (event.target as HTMLElement).tagName === "CANVAS") {
+          event.preventDefault(); event.stopPropagation(); endCadHold();
+          const st = useProject.getState();
+          mousePan.current = { pointerId: event.pointerId, x: event.clientX, y: event.clientY, panX: st.panX, panY: st.panY };
+          setMousePanning(true); setHoveredHead(null);
+          event.currentTarget.setPointerCapture(event.pointerId);
+          return;
+        }
+        if(dimensionEditor && !(event.target as HTMLElement).closest?.('.dimension-value-editor, .dimension-delete-action')) {
+          applyDimensionLabel();event.preventDefault();event.stopPropagation();return;
+        }
+        beginCanvasContact();
+        if (!multiSelect || readOnly || spaceDown || event.button !== 0 || (event.target as HTMLElement).tagName !== "CANVAS") return;
+        if (!event.isPrimary) {
+          box.current = null; setBoxNow(null); marqueePointer.current = null;
+          return;
+        }
+        event.preventDefault(); event.stopPropagation();
+        endCadHold();
+        const st = useProject.getState();
+        box.current = worldOfPointer(event.clientX,event.clientY,event.currentTarget,st.panX,st.panY,st.pxPerMeter);
+        setBoxNow(box.current);
+        marqueePointer.current = event.pointerId;
+        event.currentTarget.setPointerCapture(event.pointerId);
+      }}
+      onPointerMoveCapture={event => {
+        if (mousePan.current?.pointerId === event.pointerId) {
+          event.preventDefault(); event.stopPropagation();
+          const start = mousePan.current;
+          useProject.getState().setPan(start.panX + event.clientX - start.x, start.panY + event.clientY - start.y);
+          return;
+        }
+        if (event.pointerType === "mouse") {
+          pointerType.current = "mouse";
+          const st = useProject.getState();
+          const canHover = !readOnly && st.catalogOpen && !multiSelect && !st.pendingCatalogPlant && !st.spaceDown &&
+            (selecting || tool === "place") && (event.target as HTMLElement).tagName === "CANVAS";
+          const point = worldOfPointer(event.clientX, event.clientY, event.currentTarget, st.panX, st.panY, st.pxPerMeter);
+          setHoveredHead(canHover ? headAtPointer(st.project.heads, st.project.zones, point, st.pxPerMeter) : null);
+        }
+        if (marqueePointer.current !== event.pointerId || !box.current) return;
+        event.preventDefault(); event.stopPropagation();
+        const st = useProject.getState();
+        setBoxNow(worldOfPointer(event.clientX,event.clientY,event.currentTarget,st.panX,st.panY,st.pxPerMeter));
+      }}
+      onPointerLeave={() => setHoveredHead(null)}
+      onPointerUpCapture={event => {
+        setPressedHead(null);
+        if (mousePan.current?.pointerId === event.pointerId) {
+          event.preventDefault(); event.stopPropagation();
+          mousePan.current = null; setMousePanning(false);
+          if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+          return;
+        }
+        if (marqueePointer.current !== event.pointerId || !box.current) return;
+        event.preventDefault(); event.stopPropagation();
+        const st = useProject.getState(), d = drawingOrMigrate(st.project);
+        const a = box.current;
+        const b = worldOfPointer(event.clientX,event.clientY,event.currentTarget,st.panX,st.panY,st.pxPerMeter);
+        box.current = null; setBoxNow(null); marqueePointer.current = null;
+        if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+        skipClick.current = true;
+        if (Math.hypot(b.x-a.x,b.y-a.y)*st.pxPerMeter < 5) {
+          const head = st.catalogOpen ? st.project.heads.filter(h => !hiddenZones.has(h.zone) && dist(h,b) * st.pxPerMeter < 18).sort((a,c) => dist(a,b)-dist(c,b))[0] : null;
+          if (head) {
+            st.selectHeads(st.selectedIds.includes(head.id) ? st.selectedIds.filter(id => id !== head.id) : [...st.selectedIds,head.id]);
+            return;
+          }
+          const hit = pickOpenPathAt(d,b,14/st.pxPerMeter) ?? pickFaceAt(d,b);
+          if (hit) st.selectPoly(hit,true);
+          return;
+        }
+        const inside = (p:Pt) => p.x >= Math.min(a.x,b.x) && p.x <= Math.max(a.x,b.x) && p.y >= Math.min(a.y,b.y) && p.y <= Math.max(a.y,b.y);
+        const headIds = st.project.heads.filter(h => !hiddenZones.has(h.zone) && inside(h)).map(h => h.id);
+        if (st.catalogOpen && headIds.length) {
+          const previous = event.shiftKey || event.metaKey || event.ctrlKey ? st.selectedIds : [];
+          st.selectHeads([...new Set([...previous,...headIds])]);
+          return;
+        }
+        const ids = Object.values(d.faces).filter(face => {
+          if (face.hidden) return false;
+          if (d.layers?.[layerForType(face.type)]?.visible === false) return false;
+          const pts = facePoints(d,face.id);
+          const closed = !face.segment && (face.spline?.closed ?? face.freehand?.closed ?? true);
+          return pathTouchesBox(pts,closed,a,b,faceHoles(d,face.id));
+        }).map(face => face.id);
+        if (!event.shiftKey && !event.metaKey && !event.ctrlKey) st.selectPoly(null);
+        for (const id of ids) if (!useProject.getState().selectedPolyIds.includes(id)) st.selectPoly(id,true);
+        if (!ids.length && !event.shiftKey && !event.metaKey && !event.ctrlKey) st.selectHeads(headIds);
+      }}
+      onPointerCancelCapture={event => {
+        setPressedHead(null);
+        if (mousePan.current?.pointerId === event.pointerId) { mousePan.current = null; setMousePanning(false); }
+        if (marqueePointer.current !== event.pointerId) return;
+        box.current = null; setBoxNow(null); marqueePointer.current = null;
+      }}
+      onLostPointerCapture={event => {
+        if (mousePan.current?.pointerId === event.pointerId) { mousePan.current = null; setMousePanning(false); }
+        if (marqueePointer.current !== event.pointerId) return;
+        box.current = null; setBoxNow(null); marqueePointer.current = null;
+      }}
+      onClickCapture={event => { if (multiSelect && (event.target as HTMLElement).tagName === "CANVAS") { event.preventDefault(); event.stopPropagation(); } }}
+      onTouchStartCapture={beginCanvasContact}
       className="relative h-full min-h-0 w-full overflow-hidden touch-none bg-surface-2"
       onContextMenu={(e) => e.preventDefault()}
     >
+      {textEditor && <TextEditor key={textEditor.id} note={textEditor} onClose={()=>setTextEditor(null)} onSave={note=>{
+        const st=useProject.getState(),d=drawingOrMigrate(st.project);
+        st.commitDrawing({...d,texts:{...d.texts,[note.id]:note}},null,true);
+        st.deactivateDrawing();setSelectedNote(null);setTextEditor(null);
+      }}/>}
+      {selectedText && !textHidden && noteEnabled && !textEditor && !pinching && cadDrawing.layers?.annotations?.visible !== false &&
+        <div className="note-canvas-actions" onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()}>
+          <button type="button" onClick={()=>setTextEditor(selectedText)}><Pencil size={16}/>{tr(locale,"edit")}</button>
+          <button type="button" className="text-danger" onClick={()=>{
+            const st=useProject.getState(),d=drawingOrMigrate(st.project),texts={...d.texts};
+            delete texts[selectedText.id];st.commitDrawing({...d,texts},null,true);setSelectedNote(null);
+          }}><Trash2 size={16}/>{tr(locale,"delete")}</button>
+        </div>}
       <Stage
         ref={stageRef}
         listening={!readOnly}
@@ -1780,13 +2031,15 @@ export function DesignCanvas({
         height={size.h}
         style={{ position: "absolute", top: 0, left: 0, width: size.w, height: size.h, cursor }}
         onWheel={onWheel}
-        onClick={handleClick}
-        onTap={handleClick}
+        onClick={e=>{if(e.evt.button !== 0) return;setSelectedDimension(null);setDimensionEditor(null);dimensionInteraction.current=false;handleClick(e);}}
+        onTap={e=>{setSelectedDimension(null);setDimensionEditor(null);dimensionInteraction.current=false;handleClick(e);}}
         onDblClick={finishOpenDrawFromDoubleTap}
         onDblTap={finishOpenDrawFromDoubleTap}
+        onMouseEnter={(e) => trackPointer(toWorld(e.target.getStage()))}
         onMouseDown={(e) => {
           pointerType.current = "mouse";
-          if (e.evt.button === 0 && tool === "draw" && drawSub === "freehand") {
+          if(e.evt.button===0 && !spaceDown) startSegmentHold(toWorld(e.target.getStage()));
+          if (e.evt.button === 0 && !spaceDown && tool === "draw" && drawSub === "freehand") {
             startFreehand(toWorld(e.target.getStage()));
             return;
           }
@@ -1799,12 +2052,13 @@ export function DesignCanvas({
             startPan(e.target.getStage());
             return;
           }
-          if (!tool && e.target.name() === "bg") {
+          if (!tool && !pendingCatalogPlant && e.target.name() === "bg") {
             box.current = toWorld(e.target.getStage());
             setBoxNow(box.current);
           }
         }}
         onMouseUp={() => {
+          endCadHold();
           midDown.current = false;
           panDrag.current = null;
           if (box.current && boxNow) {
@@ -1826,8 +2080,13 @@ export function DesignCanvas({
           finishFreehand();
         }}
         onMouseLeave={() => {
+          endCadHold();
           panDrag.current = null;
+          pendingHover.current = null;
+          if (hoverRaf.current) cancelAnimationFrame(hoverRaf.current);
+          hoverRaf.current = 0;
           setHoverPt(null);
+          setSnapHit(null);
           onHover?.(null);
         }}
         onMouseMove={(e) => {
@@ -1849,6 +2108,8 @@ export function DesignCanvas({
           pointerType.current = "touch";
           const wrap = wrapRef.current;
           const touches = e.evt.touches;
+          if(touches.length===1) startSegmentHold(toWorld(e.target.getStage()));
+          else endCadHold();
           if (wrap && touches.length >= 2) {
             e.evt.preventDefault();
             pinchGestureActive.current = true;
@@ -1911,7 +2172,9 @@ export function DesignCanvas({
             trackPointer(wpt);
           }
         }}
+        onTouchCancel={()=>endCadHold()}
         onTouchEnd={(e) => {
+          endCadHold();
           if (pinchGestureActive.current) pinchSuppressClickUntil.current = Date.now() + 650;
           if (e.evt.touches.length < 2) pinch.current = null;
           if (e.evt.touches.length === 0) {
@@ -1954,37 +2217,38 @@ export function DesignCanvas({
           {project.polygons.map((poly) =>
             poly.type === "line" && (poly.id === selectedEdgeId || poly.id === selectedDraftEdgeId)
               ? null
-              : renderGeom(
-                  poly,
-                  sx,
-                  sy,
-                  px,
-                  selectedPolyId,
-                  selectedPolyIds,
-                  (k) => REGION_FILL[k as keyof typeof REGION_FILL] ?? "#ddd",
-                  startCadHold,
-                  endCadHold,
-                  DRAW_CREATE.has(drawSub) || catalogOpen,
-                  liveCadPath?.faceId === poly.id && cadEditId === poly.id
-                    ? liveCadPath.points
-                    : null,
-                  appearance,
-                  textureImages,
-                ),
+              : <RenderedGeom
+                  key={poly.id}
+                  poly={poly} sx={sx} sy={sy} px={px}
+                  selectedPolyId={selectedPolyId} selectedPolyIds={selectedPolyIds}
+                  fillOf={(k) => REGION_FILL[k as keyof typeof REGION_FILL] ?? "#ddd"}
+                  startHold={startCadHold} endHold={endCadHold}
+                  passThrough={DRAW_CREATE.has(drawSub) || tool === "place" || tool === "measure" || tool === "scale" || !!pendingCatalogPlant}
+                  previewPoints={liveCadPath?.faceId === poly.id && cadEditId === poly.id ? liveCadPath.points : null}
+                  appearance={appearance} textureImages={textureImages}
+                />,
           )}
-          {Object.values(drawingOrMigrate(project).plants ?? {}).map((pl) =>
-            drawingOrMigrate(project).layers?.plants?.visible === false ? null : (
-              <Group key={pl.id} x={sx(pl.x)} y={sy(pl.y)} listening={false}>
-                <Circle
-                  radius={pl.r * px}
-                  fill={pl.kind === "tree" ? "rgba(70,110,60,0.25)" : "rgba(90,120,70,0.25)"}
-                  stroke="#4a6a3a"
-                  strokeWidth={1}
-                />
-                <Circle radius={4} fill="#4a6a3a" />
-              </Group>
-            ),
-          )}
+          {Object.values(cadDrawing.faces).map((face) => {
+            if (!face.spline?.closed || face.hidden ||
+              cadDrawing.layers?.[layerForType(face.type)]?.visible === false ||
+              cadDrawing.layers?.dims?.visible === false ||
+              (cadEditId && layerFaceIds(cadDrawing, cadEditId).includes(face.id))) return null;
+            const center = faceCentroid(cadDrawing, face.id);
+            return <Text
+              key={`curve-area-${face.id}`}
+              x={sx(center.x) - 60} y={sy(center.y) - 8} width={120}
+              align="center" text={formatAreaU(faceArea(cadDrawing, face.id), areaUnit)}
+              fontSize={12} fontFamily="IBM Plex Sans, sans-serif"
+              fill={appearance.ink} stroke={appearance.bg} strokeWidth={2}
+              fillAfterStrokeEnabled listening={false}
+            />;
+          })}
+          {cadDrawing.layers?.plants?.visible !== false && Object.values(cadDrawing.plants ?? {}).map(original => {
+            const plant = plantPreview?.id === original.id ? plantPreview : original;
+            return <PlantGlyph key={plant.id} plant={plant} x={sx(plant.x)} y={sy(plant.y)} px={px}
+              selected={selectedPlantId === plant.id} showLabel={showLabels} interactive={!readOnly && !pendingCatalogPlant && !spaceDown && (!tool || tool === "move" || tool === "draw" && drawSub === "none")}
+              onBegin={e => beginPlantMove(original,e)} onResize={e => beginPlantResize(original,e)} />;
+          })}
           {heat.map((c, i) => (
             <Rect
               key={`h${i}`}
@@ -1998,34 +2262,32 @@ export function DesignCanvas({
             />
           ))}
           {Object.values(drawingOrMigrate(project).texts ?? {}).map((tx) =>
-            drawingOrMigrate(project).layers?.annotations?.visible === false ? null : (
-              <Text
+            textHidden || drawingOrMigrate(project).layers?.annotations?.visible === false ? null : (
+              <CanvasNote
                 key={tx.id}
-                x={sx(tx.x)}
-                y={sy(tx.y)}
-                text={tx.text}
-                fontSize={Math.max(11, tx.size * px)}
-                fontFamily="IBM Plex Sans, sans-serif"
-                fill={appearance.ink} stroke={appearance.bg} strokeWidth={2} fillAfterStrokeEnabled
-                draggable={!tool}
-                onDragEnd={(e) => {
-                  useProject.getState().moveNote(tx.id, {
-                    x: (e.target.x() - panX) / px,
-                    y: (e.target.y() - panY) / px,
-                  });
-                }}
+                note={{...tx,...(notePreview?.id===tx.id ? notePreview : {})}}
+                x={sx(notePreview?.id === tx.id ? notePreview.x : tx.x)}
+                y={sy(notePreview?.id === tx.id ? notePreview.y : tx.y)}
+                px={px} ink={appearance.ink} enabled={noteEnabled}
+                selected={noteEnabled && selectedNote===tx.id && !textEditor}
+                onBegin={e=>beginNote(tx,e)} onSelect={()=>setSelectedNote(tx.id)}
+                onResize={(corner,bounds,e)=>beginNoteResize(tx,corner,bounds,e)}
               />
             ),
           )}
           {Object.values(drawingOrMigrate(project).dims ?? {}).map((dim) => {
-            if (px < 14 || drawingOrMigrate(project).layers?.dims?.visible === false) return null;
+            if (!dimensionsVisible) return null;
             const { a, b } = resolveDim(drawingOrMigrate(project), dim);
             const dx = b.x - a.x;
             const dy = b.y - a.y;
             const len = Math.hypot(dx, dy) || 1;
             const nx = -dy / len;
             const ny = dx / len;
-            const o = dim.offset;
+            const o = dimensionPreview?.id === dim.id ? dimensionPreview.offset : dim.offset;
+            const active = selectedDimension === dim.id;
+            const dimensionColor = active ? "#1689e8" : "#7b8490";
+            const interactive = !readOnly && !pendingCatalogPlant && !multiSelect && !spaceDown &&
+              (selecting || (tool === "draw" && drawSub === "dim"));
             const a2 = { x: a.x + nx * o, y: a.y + ny * o };
             const b2 = { x: b.x + nx * o, y: b.y + ny * o };
             const mx = (a2.x + b2.x) / 2;
@@ -2033,15 +2295,33 @@ export function DesignCanvas({
             return (
               <Group
                 key={dim.id}
-                draggable={!tool}
+                listening={interactive}
+                draggable={interactive}
+                onMouseDown={e=>{e.cancelBubble=true;dimensionInteraction.current=true;setSelectedDimension(dim.id);}}
+                onTouchStart={e=>{e.cancelBubble=true;dimensionInteraction.current=true;setSelectedDimension(dim.id);}}
+                onClick={e=>{e.cancelBubble=true;setSelectedDimension(dim.id);}}
+                onTap={e=>{e.cancelBubble=true;setSelectedDimension(dim.id);}}
+                dragBoundFunc={pos=>{
+                  const mid={x:(a.x+b.x)/2,y:(a.y+b.y)/2};
+                  const raw=((pos.x-panX)/px-mid.x)*nx+((pos.y-panY)/px-mid.y)*ny;
+                  const offset=snapDimensionOffset(drawingOrMigrate(useProject.getState().project),dim.id,raw,px);
+                  return {x:sx(mid.x+offset*nx),y:sy(mid.y+offset*ny)};
+                }}
+                onDragStart={e=>{e.cancelBubble=true;setDimensionEditor(null);setSelectedDimension(dim.id);editDrag.current=true;}}
+                onDragMove={e=>{
+                  const delta=((e.target.x()-panX)/px-(a.x+b.x)/2)*nx+((e.target.y()-panY)/px-(a.y+b.y)/2)*ny;
+                  setDimensionPreview({id:dim.id,offset:delta});
+                }}
                 x={sx(mx)}
                 y={sy(my)}
                 onDragEnd={(e) => {
+                  e.cancelBubble=true;editDrag.current=false;skipClick.current=true;
                   const p = { x: (e.target.x() - panX) / px, y: (e.target.y() - panY) / px };
                   const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
                   useProject
                     .getState()
                     .setDimOffset(dim.id, (p.x - mid.x) * nx + (p.y - mid.y) * ny);
+                  setDimensionPreview(null);
                 }}
               >
                 <Line
@@ -2051,8 +2331,8 @@ export function DesignCanvas({
                     sx(a2.x) - sx(mx),
                     sy(a2.y) - sy(my),
                   ]}
-                  stroke={appearance.accent}
-                  strokeWidth={1}
+                  stroke={dimensionColor}
+                  strokeWidth={0.8}
                 />
                 <Line
                   points={[
@@ -2061,30 +2341,17 @@ export function DesignCanvas({
                     sx(b2.x) - sx(mx),
                     sy(b2.y) - sy(my),
                   ]}
-                  stroke={appearance.accent}
-                  strokeWidth={1}
+                  stroke={dimensionColor}
+                  strokeWidth={0.8}
                 />
-                <Line
-                  points={[
-                    sx(a2.x) - sx(mx),
-                    sy(a2.y) - sy(my),
-                    sx(b2.x) - sx(mx),
-                    sy(b2.y) - sy(my),
-                  ]}
-                  stroke={appearance.accent}
-                  strokeWidth={1.4}
-                />
-                <Circle radius={16} fill="rgba(255,255,255,0.001)" />
-                <Text
-                  x={-36}
-                  y={-8}
-                  width={72}
-                  align="center"
-                  text={formatLen(len, measureUnit)}
-                  fontSize={12}
-                  fontFamily="IBM Plex Sans, sans-serif"
-                  fill={appearance.accent}
-                />
+                <DimensionLine a={{x:sx(a2.x)-sx(mx),y:sy(a2.y)-sy(my)}}
+                  b={{x:sx(b2.x)-sx(mx),y:sy(b2.y)-sy(my)}}
+                  label={dim.label ?? formatLenU(len,useProject.getState().units.length)} color={dimensionColor} selected={active}
+                  offset={o} hideLabel={dimensionEditor?.id===dim.id}
+                  onEdit={interactive ? ()=>{
+                    setSelectedDimension(dim.id);dimensionInteraction.current=true;
+                    setDimensionEditor({id:dim.id,value:dim.label ?? formatLenU(len,useProject.getState().units.length)});
+                  }:undefined}/>
               </Group>
             );
           })}
@@ -2102,9 +2369,9 @@ export function DesignCanvas({
                 const item = itemById(h.catalogId);
                 const selected = h.id === selectedId || selectedIds.includes(h.id);
                 const rPx = h.r * px;
-                const rotorColor = item?.color ?? "#c45c26";
-                const strip = item?.strip;
-                const nz = item?.nozzles.find((n) => n.id === h.nozzleId) ?? item?.nozzles[0];
+                const strip = item && stripAtPressure(item, h.designPressure);
+                const nz = h.nozzleId ? item?.nozzles.find((n) => n.id === h.nozzleId) : item && defaultNozzle(item);
+                const rotorColor = nz?.color ?? item?.color ?? "#6b7280";
                 const size = nz?.size ?? nz?.name;
                 const model = item?.id ?? item?.name ?? "";
                 const nozzleWord = tr(locale, "nozzle").toLowerCase();
@@ -2119,7 +2386,8 @@ export function DesignCanvas({
                     ? 48
                     : 36;
                 const canDrag =
-                  tool !== "draw" &&
+                  !readOnly && !spaceDown && !multiSelect && !pendingCatalogPlant &&
+                  !(tool === "draw" && drawSub !== "none") &&
                   tool !== "measure" &&
                   tool !== "scale" &&
                   !h.locked &&
@@ -2127,6 +2395,7 @@ export function DesignCanvas({
                 return (
                   <Group
                     key={h.id}
+                    listening={!pendingCatalogPlant && !multiSelect}
                     x={sx(h.x)}
                     y={sy(h.y)}
                     draggable={canDrag}
@@ -2138,19 +2407,18 @@ export function DesignCanvas({
                       ctx.fillStrokeShape(shape);
                     }}
                     onPointerDown={(ev) => {
-                      if (tool === "draw" || tool === "measure" || tool === "scale") return;
+                      if ((ev.evt as PointerEvent).pointerType === "mouse" && (ev.evt as PointerEvent).button !== 0) return;
+                      if ((tool === "draw" && drawSub !== "none") || tool === "measure" || tool === "scale") return;
                       ev.cancelBubble = true;
                       pointerType.current = (ev.evt as PointerEvent).pointerType || "mouse";
-                      beginHold(h.id, ev.currentTarget, (ev.evt as PointerEvent).pointerId ?? null);
+                      if (canDrag) setPressedHead(h.id);
                     }}
-                    onPointerUp={clearHold}
-                    onPointerCancel={clearHold}
+                    onPointerUp={() => setPressedHead(null)}
+                    onPointerCancel={() => setPressedHead(null)}
                     onDragStart={(ev) => {
+                      setDraggingHead(true);
                       ev.cancelBubble = true;
-                      clearHold();
-                      holdMenu.current = false;
                       overCatalog.current = false;
-                      setDeleteMenu(null);
                       const native = ev.evt as MouseEvent & { touches?: TouchList };
                       const t = native.touches?.[0];
                       const sx0 = t?.clientX ?? native.clientX ?? 0;
@@ -2182,16 +2450,12 @@ export function DesignCanvas({
                       ev.target.position({ x: sx(pt.x), y: sy(pt.y) });
                     }}
                     onDragEnd={(ev) => {
+                      setDraggingHead(false); setPressedHead(null); setHoveredHead(h.id);
                       if (headDragMove.current) {
                         window.removeEventListener("pointermove", headDragMove.current, true);
                         headDragMove.current = null;
                       }
                       document.documentElement.removeAttribute("data-head-drag");
-                      if (holdMenu.current) {
-                        holdMenu.current = false;
-                        ev.target.position({ x: sx(h.x), y: sy(h.y) });
-                        return;
-                      }
                       const pt = lastClient.current;
                       const start = headDragStart.current;
                       const moved = Math.hypot(pt.x - start.x, pt.y - start.y) > 36;
@@ -2217,46 +2481,37 @@ export function DesignCanvas({
                       useProject.getState().finishMoveHead(h.id, world);
                     }}
                     onClick={(ev) => {
-                      if (tool === "draw" || tool === "measure" || tool === "scale") return;
+                      if (ev.evt.button !== 0) return;
+                      if ((tool === "draw" && drawSub !== "none") || tool === "measure" || tool === "scale") return;
                       ev.cancelBubble = true;
                       if (skipClick.current) return;
-                      setDeleteMenu(null);
                       useProject.getState().selectHead(h.id);
                     }}
                     onTap={(ev) => {
-                      if (tool === "draw" || tool === "measure" || tool === "scale") return;
+                      if ((tool === "draw" && drawSub !== "none") || tool === "measure" || tool === "scale") return;
                       ev.cancelBubble = true;
                       if (skipClick.current) return;
-                      setDeleteMenu(null);
                       useProject.getState().selectHead(h.id);
                     }}
                   >
-                    {showCoverage && visibleHeads.length <= 48 && !strip && (
+                    {showCoverage && (!item?.strip || strip) && item?.coverageKind !== "point" && (
                       <Line
-                        points={sectorLocal(rPx, h.start, h.arc)}
+                        points={strip ? stripLocal(strip, h.start, px) : sectorLocal(rPx, h.start, h.arc)}
                         closed
                         fill={rotorColor}
                         opacity={selected ? 0.55 : 0.32}
                         stroke={rotorColor}
                         strokeWidth={selected ? 2.5 : 1.5}
+                        lineJoin="miter"
                         listening={false}
                       />
                     )}
-                    {showCoverage && visibleHeads.length <= 48 && strip && (
-                      <Line
-                        points={stripLocal(strip, h.start, rPx / (h.r || 1))}
-                        closed
-                        fill={rotorColor}
-                        opacity={0.4}
-                        listening={false}
-                      />
-                    )}
-                    <Circle radius={grabR} fill="transparent" />
+                    <Circle radius={pointerType.current === "mouse" ? HEAD_MOUSE_HIT_RADIUS : grabR} fill="transparent" />
                     <Circle
                       radius={selected ? 13 : 11}
                       fill="#fff"
                       stroke={zoneColor(h.zone)}
-                      strokeWidth={2.6}
+                      strokeWidth={selected ? 3.2 : 2.6}
                       listening={false}
                     />
                     <Circle radius={4} fill={rotorColor} listening={false} />
@@ -2271,18 +2526,11 @@ export function DesignCanvas({
                         listening={false}
                       />
                     )}
-                    {editHandles === h.id && (
-                      <HeadHandles
-                        head={h}
-                        rPx={rPx}
-                        px={px}
-                        adjustable={item ? item.arcMin !== item.arcMax && h.arc < 359 : true}
-                      />
-                    )}
                   </Group>
                 );
               })}
-          {cadEditId && !catalogOpen && (
+          {cadEditId && drawingOrMigrate(project).faces[cadEditId]?.layerId && <LayerHandles faceId={cadEditId} px={px} panX={panX} panY={panY} editDrag={editDrag} skipClick={skipClick} gestureBlocked={pinchGestureActive} />}
+          {cadEditId && !drawingOrMigrate(project).faces[cadEditId]?.layerId && (
             <>
               <CadHandles
                 faceId={cadEditId}
@@ -2294,6 +2542,7 @@ export function DesignCanvas({
                 editDrag={editDrag}
                 skipClick={skipClick}
                 gestureBlocked={pinchGestureActive}
+                onSegmentEditDone={finishSegmentEditOnTap}
                 onPreviewPath={(points) =>
                   setLiveCadPath(points ? { faceId: cadEditId, points } : null)
                 }
@@ -2351,7 +2600,7 @@ export function DesignCanvas({
                   sx(polygonPreviewPt.x),
                   sy(polygonPreviewPt.y),
                 ]}
-                stroke="#d56a2b"
+                stroke={appearance.accent}
                 strokeWidth={1.5}
                 dash={[5, 5]}
                 opacity={0.8}
@@ -2387,12 +2636,9 @@ export function DesignCanvas({
                 listening={false}
               />
               )}
-              <PathTotalMeasure
-                points={polygonFillPoints}
-                sx={sx}
-                sy={sy}
-                unit={measureUnit}
-              />
+              {polygonFillPoints.slice(1).map((point, i) => <SegmentLengthText key={`draft-length-${i}`} a={polygonFillPoints[i]!} b={point} sx={sx} sy={sy} px={px} unit={measureUnit} outsideWinding={shoelace(polygonFillPoints)} />)}
+              {polygonFillPoints.length >= 3 && polygonArea(polygonFillPoints)>1e-8 && <Text x={sx(centroid(polygonFillPoints).x)-60} y={sy(centroid(polygonFillPoints).y)-8} width={120} align="center" text={formatAreaU(polygonArea(polygonFillPoints),areaUnit)} fontSize={14} fill={appearance.ink} stroke={appearance.bg} strokeWidth={2} fillAfterStrokeEnabled listening={false}/>}
+              {polygonClosing && polygonBoundaryPoints.length >= 3 && <Line points={[sx(polygonBoundaryPoints[polygonBoundaryPoints.length-2]!.x),sy(polygonBoundaryPoints[polygonBoundaryPoints.length-2]!.y),sx(polygonBoundaryPoints[0]!.x),sy(polygonBoundaryPoints[0]!.y)]} stroke={appearance.guideAligned} strokeWidth={1} dash={[5,4]} listening={false}/>}
             </>
           )}
           {drawSub !== "line" &&
@@ -2403,6 +2649,7 @@ export function DesignCanvas({
               drawSub === "polygon" ? (
                 <Group
                   key={`d${i}`}
+                  name="magnifier-symbol construction-point"
                   x={sx(pt.x)}
                   y={sy(pt.y)}
                   onMouseDown={(e) => {
@@ -2416,29 +2663,30 @@ export function DesignCanvas({
                   }}
                 >
                   <Circle radius={20} fill="rgba(255,255,255,0.001)" />
-                  <Circle
-                    radius={activeConstructionPoint === i ? 11 : i === 0 ? 9 : 7}
-                    fill={activeConstructionPoint === i ? "#f5222d" : i === 0 ? appearance.accent : "#d56a2b"}
+                  {i === 0 ? <ConstructionOrigin color={appearance.accent} closing={polygonClosing}/> : <Circle
+                    radius={i === 0 || polygonClosing ? 7 : activeConstructionPoint === i ? 11 : 7}
+                    fill={i === 0 ? "#d56a2b" : activeConstructionPoint === i ? "#f5222d" : "#d56a2b"}
                     stroke={appearance.handleOutline}
                     strokeWidth={1.5}
                     listening={false}
-                  />
-                  <Text
+                  />}
+                  {i !== 0 && <Text
                     x={-9}
                     y={-6}
                     width={18}
                     align="center"
-                    text={String(i)}
+                    text={String(i + 1)}
                     fontSize={10}
                     fontStyle="bold"
                     fontFamily="IBM Plex Sans, sans-serif"
                     fill="#fff"
                     listening={false}
-                  />
+                  />}
                 </Group>
               ) : drawSub === "spline" ? (
                 <Group
                   key={`d${i}`}
+                  name="magnifier-symbol construction-point"
                   x={sx(pt.x)}
                   y={sy(pt.y)}
                   onMouseDown={(e) => {
@@ -2448,23 +2696,21 @@ export function DesignCanvas({
                   onTouchStart={(e) => beginSplineDraftPointDrag(i, e)}
                 >
                   <Circle radius={20} fill="rgba(255,255,255,0.001)" />
-                  <Circle
-                    radius={activeConstructionPoint === i ? 11 : i === 0 ? 9 : 7}
+                  {i === 0 ? <ConstructionOrigin color={appearance.accent} closing={snapHit?.kind === "close"}/> : <Circle
+                    radius={i === 0 ? 9 : activeConstructionPoint === i ? 11 : 7}
                     fill={
-                      activeConstructionPoint === i
-                        ? "#f5222d"
-                        : i === 0
-                          ? appearance.accent
-                          : "#d56a2b"
+                      i === 0 ? appearance.accent : activeConstructionPoint === i
+                        ? "#f5222d" : "#d56a2b"
                     }
                     stroke={appearance.handleOutline}
                     strokeWidth={2}
                     listening={false}
-                  />
+                  />}
                 </Group>
               ) : (
-                <Circle
+                i === 0 ? <Group key={`d${i}`} name="magnifier-symbol" x={sx(pt.x)} y={sy(pt.y)} listening={false}><ConstructionStartMark color={appearance.accent}/></Group> : <Circle
                   key={`d${i}`}
+                  name="magnifier-symbol"
                   x={sx(pt.x)}
                   y={sy(pt.y)}
                   radius={i === 0 ? 9 : 6}
@@ -2475,6 +2721,7 @@ export function DesignCanvas({
                 />
               ),
             )}
+          {tool === "draw" && !pinching && <ClosureGuide points={draft.points} drawSub={drawSub} hover={hoverPt} px={px} sx={sx} sy={sy} />}
           {drawSub === "line" &&
             draft.points.length > 0 &&
             selectedDraftSegment == null &&
@@ -2499,6 +2746,7 @@ export function DesignCanvas({
                     lineCap="round"
                   />
                   <Circle x={x} y={y} radius={3} fill="#fff" stroke={appearance.accent} strokeWidth={1.5} />
+                  <Text x={x-50} y={y+14} width={100} align="center" text={formatLenU(0,useProject.getState().units.length)} fontSize={13} fill={appearance.ink} listening={false} />
                 </Group>
               );
             })()}
@@ -2517,7 +2765,7 @@ export function DesignCanvas({
               gestureBlocked={pinchGestureActive}
             />
           )}
-          {selectedEdgeId && !catalogOpen && (
+          {selectedEdgeId && (
             <SelectedEdgeHandles
               edgeId={selectedEdgeId}
               sx={sx}
@@ -2530,29 +2778,26 @@ export function DesignCanvas({
               gestureBlocked={pinchGestureActive}
             />
           )}
-          {tool === "draw" &&
-            drawSub === "line" &&
-            draft.points.length > 0 &&
-            hoverPt &&
-            selectedDraftSegment == null &&
-            !selectedEdgeId &&
-            !pinching && (
-              <Group listening={false}>
+          {showFirstPoint && hoverPt && (
+            <Group name="magnifier-symbol" x={sx(hoverPt.x)} y={sy(hoverPt.y)} listening={false}>
+              <Circle radius={6} fill={appearance.accent}/>
+            </Group>
+          )}
+          {showLinePointer && hoverPt && (
+              <Group name="magnifier-symbol" x={sx(hoverPt.x)} y={sy(hoverPt.y)} listening={false}>
                 <Line
-                  points={[sx(hoverPt.x) - 9, sy(hoverPt.y), sx(hoverPt.x) + 9, sy(hoverPt.y)]}
+                  points={[-9, 0, 9, 0]}
                   stroke={appearance.accent}
                   strokeWidth={2}
                   lineCap="round"
                 />
                 <Line
-                  points={[sx(hoverPt.x), sy(hoverPt.y) - 9, sx(hoverPt.x), sy(hoverPt.y) + 9]}
+                  points={[0, -9, 0, 9]}
                   stroke={appearance.accent}
                   strokeWidth={2}
                   lineCap="round"
                 />
                 <Circle
-                  x={sx(hoverPt.x)}
-                  y={sy(hoverPt.y)}
                   radius={3}
                   fill="#fff"
                   stroke={appearance.accent}
@@ -2560,6 +2805,8 @@ export function DesignCanvas({
                 />
               </Group>
             )}
+          {drawSub === "line" && !cadEditId && rubberFrom && rubberTo && dist(rubberFrom,rubberTo)*px > 6 &&
+            <SegmentAlignmentGuides drawing={cadDrawing} point={rubberTo} fixed={rubberFrom} sx={sx} sy={sy} px={px} appearance={appearance}/>}
           {rubberFrom &&
             rubberTo &&
             drawSub !== "line" &&
@@ -2570,10 +2817,10 @@ export function DesignCanvas({
                     ? [0, sy(rubberFrom.y), size.w, sy(rubberFrom.y)]
                     : [sx(rubberFrom.x), 0, sx(rubberFrom.x), size.h]
                 }
-                stroke={appearance.accent}
+                stroke={appearance.guideAligned}
                 strokeWidth={1}
                 dash={[4, 6]}
-                opacity={0.45}
+                opacity={0.95}
                 listening={false}
               />
             )}
@@ -2751,9 +2998,22 @@ export function DesignCanvas({
                 listening={false}
               />
             )}
+          {dimensionsVisible && tool === "draw" && drawSub === "dim" && rubberFrom && rubberTo && (()=>{
+            const st=useProject.getState(),length=dist(rubberFrom,rubberTo)||1;
+            const offset=outsideDimensionOffset(cadDrawing,rubberFrom,rubberTo,st.dimensionOffsetCustomized ? st.dimensionOffset : gridStep*2);
+            const nx=-(rubberTo.y-rubberFrom.y)/length,ny=(rubberTo.x-rubberFrom.x)/length;
+            const a={x:sx(rubberFrom.x+nx*offset),y:sy(rubberFrom.y+ny*offset)};
+            const b={x:sx(rubberTo.x+nx*offset),y:sy(rubberTo.y+ny*offset)};
+            return <Group listening={false}>
+              <Line points={[sx(rubberFrom.x),sy(rubberFrom.y),a.x,a.y]} stroke={appearance.accent} strokeWidth={0.8}/>
+              <Line points={[sx(rubberTo.x),sy(rubberTo.y),b.x,b.y]} stroke={appearance.accent} strokeWidth={0.8}/>
+              <DimensionLine a={a} b={b} offset={offset} label={formatLenU(dist(rubberFrom,rubberTo),useProject.getState().units.length)} color={appearance.accent}/>
+            </Group>;
+          })()}
           {rubberFrom &&
             rubberTo &&
             drawSub !== "rect" &&
+            drawSub !== "dim" &&
             drawSub !== "circle" &&
             drawSub !== "ellipse" &&
             drawSub !== "triangle" &&
@@ -2766,7 +3026,7 @@ export function DesignCanvas({
                   points={[sx(rubberFrom.x), sy(rubberFrom.y), sx(rubberTo.x), sy(rubberTo.y)]}
                   stroke={appearance.accent}
                   strokeWidth={drawSub === "line" ? 2.5 : 1.5}
-                  dash={drawSub === "line" ? undefined : [5, 4]}
+                  dash={[5, 4]}
                   listening={false}
                 />
                 <Text
@@ -2849,101 +3109,36 @@ export function DesignCanvas({
           )}
         </Layer>
       </Stage>
-      {editingLineEdgeId && lineDeletePosition && (
-        <div
-          className="absolute z-40 -translate-x-1/2 -translate-y-1/2 rounded-md bg-surface p-1 shadow-border"
-          style={{
-            left: lineDeletePosition.x,
-            top: lineDeletePosition.y,
-            pointerEvents: "auto",
-            touchAction: "manipulation",
-          }}
-          onPointerDown={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
-          }}
-        >
-          <button
-            type="button"
-            aria-label="Удалить отрезок"
-            className="flex size-9 items-center justify-center rounded-sm text-danger hover:bg-danger/10"
-            onPointerUp={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              const st = useProject.getState();
-              const current = drawingOrMigrate(st.project);
-              st.commitDrawing(deleteLooseEdge(current, editingLineEdgeId), undefined, true);
-              st.selectEdge(null);
-              st.cancelDraft();
-              setSelectedDraftSegment(null);
-              setSelectedDraftEdgeId(null);
-              lineEditingRef.current = false;
-              lineTapGuardUntil.current = Date.now() + 280;
-            }}
-          >
-            <Trash2 className="size-5" />
-          </button>
-        </div>
-      )}
-      {deleteMenu && (
-        <div
-          className="absolute z-40 flex -translate-x-1/2 -translate-y-[120%] items-center gap-1"
-          style={{
-            left: deleteMenu.x,
-            top: deleteMenu.y,
-            pointerEvents: "auto",
-            touchAction: "manipulation",
-          }}
-          onPointerDown={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
-          }}
-        >
-          <button
-            type="button"
-            aria-label="Ручки"
-            className="flex size-11 items-center justify-center rounded-md bg-surface text-tool shadow-border"
-            onPointerUp={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              useProject.getState().selectHead(deleteMenu.id);
-              setEditHandles(deleteMenu.id);
-              setDeleteMenu(null);
-            }}
-          >
-            <SlidersHorizontal className="size-5" />
-          </button>
-          <button
-            type="button"
-            aria-label="Дублировать дождеватель"
-            className="flex size-11 items-center justify-center rounded-md bg-surface text-tool shadow-border"
-            onPointerUp={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              useProject.getState().selectHead(deleteMenu.id);
-              useProject.getState().duplicateSelected();
-              setDeleteMenu(null);
-              setEditHandles(null);
-            }}
-          >
-            <Copy className="size-5" />
-          </button>
-          <button
-            type="button"
-            aria-label="Удалить дождеватель"
-            className="flex size-11 items-center justify-center rounded-md bg-surface text-danger shadow-border"
-            onPointerUp={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              useProject.getState().removeHead(deleteMenu.id);
-              setDeleteMenu(null);
-              setEditHandles(null);
-            }}
-          >
-            <Trash2 className="size-5" />
-          </button>
-        </div>
-      )}
+      {dimensionsVisible && selectedDimension && !readOnly && !multiSelect &&
+        (selecting || (tool==="draw" && drawSub==="dim")) && cadDrawing.dims?.[selectedDimension] && createPortal(
+        <div className="dimension-delete-action" onPointerDown={e=>e.stopPropagation()}>
+          <button type="button" className="bulk-delete" aria-label="Удалить размер" onClick={()=>{
+            const st=useProject.getState(),d=drawingOrMigrate(st.project);
+            st.commitDrawing(deleteDimension(d,selectedDimension),st.selectedPolyId,true);
+            setSelectedDimension(null);setDimensionEditor(null);setDimensionPreview(null);dimensionInteraction.current=false;
+          }}><Trash2 size={18}/>Удалить размер</button>
+        </div>,document.querySelector('.figure-actions-surface') ?? wrapRef.current!)}
+      {dimensionsVisible && dimensionEditor && !readOnly && (()=>{
+        const d=drawingOrMigrate(project), dim=d.dims?.[dimensionEditor.id];
+        if(!dim) return null;
+        const {a,b}=resolveDim(d,dim),length=dist(a,b)||1;
+        const nx=-(b.y-a.y)/length,ny=(b.x-a.x)/length;
+        const placement=dimensionLabelLayout({x:sx(a.x+nx*dim.offset),y:sy(a.y+ny*dim.offset)},
+          {x:sx(b.x+nx*dim.offset),y:sy(b.y+ny*dim.offset)},dim.offset);
+        return <form className="dimension-value-editor" style={{left:placement.x,top:placement.y,transform:`translate(-50%,-50%) rotate(${placement.angle}deg)`}}
+          onPointerDown={e=>e.stopPropagation()} onSubmit={e=>{e.preventDefault();applyDimensionLabel();}}>
+          <input autoFocus aria-label="Надпись размера" value={dimensionEditor.value}
+            onBlur={applyDimensionLabel} onFocus={e=>e.target.select()}
+            onChange={e=>setDimensionEditor({...dimensionEditor,value:e.target.value})}
+            onKeyDown={e=>{e.stopPropagation();if(e.key==="Escape"){e.preventDefault();setDimensionEditor(null);}}}/>
+        </form>;
+      })()}
+      {showTapePointer && hoverPt && <div className="tape-measure-pointer" aria-hidden="true"
+        style={{ left: sx(hoverPt.x) - TAPE_MEASURE_TIP.x * 28 / 24, top: sy(hoverPt.y) - TAPE_MEASURE_TIP.y * 28 / 24 }}>
+        <TapeMeasureIcon showTip snapped={isDimensionGeometrySnap(snapHit?.kind)}/>
+      </div>}
+      {!readOnly && <DrawingGuidance wrapRef={wrapRef} hover={hoverPt} />}
+      {!readOnly && <CanvasMagnifier stageRef={stageRef} wrapRef={wrapRef} editDrag={editDrag} gestureBlocked={pinchGestureActive} drawingFocus={hoverPt}/>}
       {pickList && (
         <div
           className="absolute z-30 min-w-36 rounded-md bg-surface p-1 text-ink shadow-border"
@@ -2997,127 +3192,6 @@ function niceScale(pxPerMeter: number) {
   const n = target / exp;
   const m = n < 1.5 ? 1 : n < 3.5 ? 2 : n < 7.5 ? 5 : 10;
   return m * exp;
-}
-
-const HANDLE_SNAP: { head: Head | null } = { head: null };
-
-function HeadHandles({
-  head,
-  rPx,
-  px,
-  adjustable,
-}: {
-  head: Head;
-  rPx: number;
-  px: number;
-  adjustable: boolean;
-}) {
-  const appearance = canvasTheme(useProject((s) => s.themeId));
-  const midA = head.start + head.arc / 2;
-  const endA = head.start + head.arc;
-  const rad = (d: number) => (d * Math.PI) / 180;
-  const at = (deg: number, r: number) => ({ x: r * Math.cos(rad(deg)), y: r * Math.sin(rad(deg)) });
-  const radiusPos = at(midA, rPx);
-  const rotPos = at(midA, Math.max(28, rPx * 0.42));
-  const startPos = at(head.start, rPx);
-  const endPos = at(endA, rPx);
-  const full = head.arc >= 359;
-
-  const begin = () => {
-    HANDLE_SNAP.head = { ...head };
-  };
-  const commit = (patch: Partial<Head>) => {
-    const orig = HANDLE_SNAP.head;
-    const st = useProject.getState();
-    if (orig) st.patchHeadLive(head.id, { r: orig.r, start: orig.start, arc: orig.arc });
-    st.updateHead(head.id, patch);
-    HANDLE_SNAP.head = null;
-  };
-
-  return (
-    <>
-      <Line
-        points={[0, 0, radiusPos.x, radiusPos.y]}
-        stroke={appearance.accent}
-        strokeWidth={1}
-        dash={[4, 3]}
-        listening={false}
-      />
-      <HandleDot
-        x={radiusPos.x}
-        y={radiusPos.y}
-        color="#2b6f9a"
-        onStart={begin}
-        onMove={(lx, ly, node) => {
-          const r = Math.max(0.05, Math.hypot(lx, ly) / px);
-          useProject.getState().patchHeadLive(head.id, { r });
-          node.position(at(midA, r * px));
-        }}
-        onEnd={(lx, ly) => commit({ r: Math.max(0.05, Math.hypot(lx, ly) / px) })}
-      />
-      <HandleDot
-        x={rotPos.x}
-        y={rotPos.y}
-        color="#c47a22"
-        onStart={begin}
-        onMove={(lx, ly, node) => {
-          const ang = (Math.atan2(ly, lx) * 180) / Math.PI;
-          useProject.getState().patchHeadLive(head.id, { start: ang - head.arc / 2 });
-          node.position(at(ang, Math.max(28, rPx * 0.42)));
-        }}
-        onEnd={(lx, ly) => {
-          const ang = (Math.atan2(ly, lx) * 180) / Math.PI;
-          commit({ start: ang - head.arc / 2 });
-        }}
-      />
-      {adjustable && !full && (
-        <>
-          <HandleDot
-            x={startPos.x}
-            y={startPos.y}
-            color="#2f6b45"
-            onStart={begin}
-            onMove={(lx, ly, node) => {
-              const ang = (Math.atan2(ly, lx) * 180) / Math.PI;
-              let arc = endA - ang;
-              while (arc <= 0) arc += 360;
-              while (arc > 360) arc -= 360;
-              useProject.getState().patchHeadLive(head.id, { start: ang, arc });
-              node.position(at(ang, rPx));
-            }}
-            onEnd={(lx, ly) => {
-              const ang = (Math.atan2(ly, lx) * 180) / Math.PI;
-              let arc = endA - ang;
-              while (arc <= 0) arc += 360;
-              while (arc > 360) arc -= 360;
-              commit({ start: ang, arc });
-            }}
-          />
-          <HandleDot
-            x={endPos.x}
-            y={endPos.y}
-            color="#6b4f7a"
-            onStart={begin}
-            onMove={(lx, ly, node) => {
-              const ang = (Math.atan2(ly, lx) * 180) / Math.PI;
-              let arc = ang - head.start;
-              while (arc <= 0) arc += 360;
-              while (arc > 360) arc -= 360;
-              useProject.getState().patchHeadLive(head.id, { arc });
-              node.position(at(ang, rPx));
-            }}
-            onEnd={(lx, ly) => {
-              const ang = (Math.atan2(ly, lx) * 180) / Math.PI;
-              let arc = ang - head.start;
-              while (arc <= 0) arc += 360;
-              while (arc > 360) arc -= 360;
-              commit({ arc });
-            }}
-          />
-        </>
-      )}
-    </>
-  );
 }
 
 function HandleDot({
@@ -3186,6 +3260,8 @@ function CircleMeasure({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
+  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  if(!visible) return null;
   if (r < 0.02) return null;
   const rAng = -Math.PI / 6;
   const rc = Math.cos(rAng);
@@ -3250,6 +3326,7 @@ function SegmentLengthText({
   unit,
   offsetFromLine = true,
   prefix,
+  outsideWinding,
 }: {
   a: Pt;
   b: Pt;
@@ -3259,8 +3336,11 @@ function SegmentLengthText({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
   offsetFromLine?: boolean;
   prefix?: string;
+  outsideWinding?: number;
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
+  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  if(!visible) return null;
   const length = dist(a, b);
   if (length < 0.002) return null;
   const dx = b.x - a.x;
@@ -3268,7 +3348,7 @@ function SegmentLengthText({
   const n = Math.hypot(dx, dy) || 1;
   let nx = -dy / n;
   let ny = dx / n;
-  if (ny > 0 || (Math.abs(ny) < 1e-7 && nx < 0)) {
+  if (outsideWinding !== undefined ? outsideWinding > 0 : ny > 0 || (Math.abs(ny) < 1e-7 && nx < 0)) {
     nx *= -1;
     ny *= -1;
   }
@@ -3462,6 +3542,8 @@ function RectMeasure({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
+  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  if(!visible) return null;
   if (corners.length < 4) return null;
   const a = corners[0]!;
   const b = corners[1]!;
@@ -3571,11 +3653,7 @@ function triangleLabelLayout(points: Pt[], px: number) {
 function triangleRotationPoint(points: Pt[], px: number): Pt | null {
   const metrics = triangleMetrics(points);
   if (!metrics) return null;
-  const dx = metrics.apex.x - metrics.center.x;
-  const dy = metrics.apex.y - metrics.center.y;
-  const n = Math.hypot(dx, dy) || 1;
-  const gap = Math.max(0.7, 34 / px);
-  return { x: metrics.apex.x + (dx / n) * gap, y: metrics.apex.y + (dy / n) * gap };
+  return rotationHandleLayout(metrics.apex, metrics.center, px).point;
 }
 
 function triangleScalePoint(points: Pt[]): Pt | null {
@@ -3601,6 +3679,8 @@ function TriangleMeasure({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
+  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  if(!visible) return null;
   const layout = triangleLabelLayout(points, px);
   if (!layout || layout.metrics.width < 0.02 || layout.metrics.height < 0.02) return null;
   const areaU = useProject.getState().units.area;
@@ -3664,85 +3744,6 @@ function TriangleMeasure({
         listening={false}
       />
     </>
-  );
-}
-
-const TRANSFORM_HANDLE_COLOR = "#e8892f";
-
-function RotationHandleGlyph() {
-  const appearance = canvasTheme(useProject((s) => s.themeId));
-  return (
-    <Text
-      x={-15}
-      y={-17}
-      width={30}
-      height={30}
-      align="center"
-      text="↻"
-      fontSize={29}
-      fontFamily="Arial, sans-serif"
-      fontStyle="bold"
-      fill={TRANSFORM_HANDLE_COLOR}
-      stroke={appearance.ink}
-      strokeWidth={0.75}
-      listening={false}
-    />
-  );
-}
-
-function ScaleHandleGlyph({ angle = 0 }: { angle?: number }) {
-  const shaft = [-10, 0, 10, 0];
-  const leftArrow = [-10, 0, -5.5, -4, -10, 0, -5.5, 4];
-  const rightArrow = [10, 0, 5.5, -4, 10, 0, 5.5, 4];
-  return (
-    <Group rotation={angle} listening={false}>
-      <Line
-        points={shaft}
-        stroke="#171717"
-        strokeWidth={3.5}
-        lineCap="round"
-        listening={false}
-      />
-      <Line
-        points={leftArrow}
-        stroke="#171717"
-        strokeWidth={3.5}
-        lineCap="round"
-        lineJoin="round"
-        listening={false}
-      />
-      <Line
-        points={rightArrow}
-        stroke="#171717"
-        strokeWidth={3.5}
-        lineCap="round"
-        lineJoin="round"
-        listening={false}
-      />
-      <Line
-        points={shaft}
-        stroke={TRANSFORM_HANDLE_COLOR}
-        strokeWidth={2.2}
-        lineCap="round"
-        listening={false}
-      />
-      <Line
-        points={leftArrow}
-        stroke={TRANSFORM_HANDLE_COLOR}
-        strokeWidth={2.2}
-        lineCap="round"
-        lineJoin="round"
-        listening={false}
-      />
-      <Line
-        points={rightArrow}
-        stroke={TRANSFORM_HANDLE_COLOR}
-        strokeWidth={2.2}
-        lineCap="round"
-        lineJoin="round"
-        listening={false}
-      />
-    </Group>
   );
 }
 
@@ -3946,6 +3947,8 @@ function PathTotalMeasure({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
+  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  if(!visible) return null;
   if (points.length < 2) return null;
   const lengths = points.slice(1).map((point, index) => dist(points[index]!, point));
   const total = lengths.reduce((sum, length) => sum + length, 0);
@@ -4199,6 +4202,7 @@ function bindClientDeltaDrag(
   skipClick: { current: boolean },
   onDelta: (dxPx: number, dyPx: number, commit: boolean) => void,
   gestureBlocked?: { current: boolean },
+  onTap?: () => void,
 ) {
   if (editDrag.current) return;
   e.cancelBubble = true;
@@ -4207,8 +4211,11 @@ function bindClientDeltaDrag(
   native.preventDefault?.();
   native.stopPropagation?.();
   const s0 = clientXY(native);
+  let maxDistance = 0;
   editDrag.current = true;
   const cleanup = () => {
+    window.removeEventListener("pointerdown", interrupt as EventListener, true);
+    window.removeEventListener("touchstart", interrupt as EventListener, true);
     window.removeEventListener("pointermove", move as EventListener, true);
     window.removeEventListener("pointerup", end as EventListener, true);
     window.removeEventListener("pointercancel", end as EventListener, true);
@@ -4221,20 +4228,27 @@ function bindClientDeltaDrag(
     editDrag.current = false;
     onDelta(0, 0, false);
   };
+  const interrupt = (ev: PointerEvent | TouchEvent) => {
+    if (("touches" in ev && ev.touches.length >= 2) ||
+      ("pointerId" in ev && ev.pointerType === "touch" && ev.pointerId !== native.pointerId)) cancel();
+  };
   const move = (ev: PointerEvent | TouchEvent) => {
     if (gestureBlocked?.current || ("touches" in ev && ev.touches.length >= 2)) {
       cancel();
       return;
     }
+    if ("pointerId" in ev && native.pointerId != null && ev.pointerId !== native.pointerId) return;
     ev.preventDefault();
     const c = clientXY(ev);
+    maxDistance = Math.max(maxDistance, Math.hypot(c.clientX - s0.clientX, c.clientY - s0.clientY));
     onDelta(c.clientX - s0.clientX, c.clientY - s0.clientY, false);
   };
   const end = (ev: PointerEvent | TouchEvent) => {
-    if (gestureBlocked?.current) {
+    if (gestureBlocked?.current || ev.type.endsWith("cancel")) {
       cancel();
       return;
     }
+    if ("pointerId" in ev && native.pointerId != null && ev.pointerId !== native.pointerId) return;
     cleanup();
     skipClick.current = true;
     window.setTimeout(() => {
@@ -4242,8 +4256,16 @@ function bindClientDeltaDrag(
     }, 500);
     editDrag.current = false;
     const c = clientXY(ev);
+    maxDistance = Math.max(maxDistance, Math.hypot(c.clientX - s0.clientX, c.clientY - s0.clientY));
+    if (onTap && maxDistance <= 6) {
+      onDelta(0, 0, false);
+      onTap();
+      return;
+    }
     onDelta(c.clientX - s0.clientX, c.clientY - s0.clientY, true);
   };
+  window.addEventListener("pointerdown", interrupt as EventListener, { capture: true });
+  window.addEventListener("touchstart", interrupt as EventListener, { capture: true });
   window.addEventListener("pointermove", move as EventListener, { capture: true, passive: false });
   window.addEventListener("pointerup", end as EventListener, { capture: true });
   window.addEventListener("pointercancel", end as EventListener, { capture: true });
@@ -4252,21 +4274,10 @@ function bindClientDeltaDrag(
   window.addEventListener("touchcancel", end as EventListener, { capture: true });
 }
 
-function snapEditableEndpoint(p: Pt): Pt {
+function snapEditableEndpoint(p: Pt, fixed?: Pt): Pt {
   const st = useProject.getState();
   if (!st.snapOn) return p;
-  return cadSnap(p, drawingOrMigrate(st.project), {
-    pxPerMeter: st.pxPerMeter,
-    pointerType: "touch",
-    snapOn: st.snapOn,
-    snapGridOn: st.snapGridOn,
-    orthoOn: false,
-    lock: null,
-    gridStep: st.gridStep,
-    angleFrom: null,
-    closeTo: null,
-    heads: st.project.heads.map((h) => ({ x: h.x, y: h.y })),
-  }).pt;
+  return snapFigurePoint(drawingOrMigrate(st.project),p,st.cadEditId,st.pxPerMeter,st.gridStep,st.snapGridOn,fixed);
 }
 
 function SegmentEndHandle({
@@ -4280,34 +4291,10 @@ function SegmentEndHandle({
   angle: number;
   onStart: (e: Konva.KonvaEventObject<PointerEvent | MouseEvent | TouchEvent>) => void;
 }) {
-  const appearance = canvasTheme(useProject((s) => s.themeId));
   return (
     <Group x={x} y={y} rotation={angle} onMouseDown={onStart} onTouchStart={onStart}>
-      <Circle radius={14} fill="rgba(0,0,0,0.001)" />
-      <Line
-        points={[-10, 0, 10, 0]}
-        stroke="#b94f1f"
-        strokeWidth={1.3}
-        lineCap="round"
-        listening={false}
-      />
-      <Line
-        points={[0, -10, 0, 10]}
-        stroke="#b94f1f"
-        strokeWidth={1.3}
-        lineCap="round"
-        listening={false}
-      />
-      <Rect
-        x={-5}
-        y={-5}
-        width={10}
-        height={10}
-        fill="#c45c26"
-        stroke={appearance.handleOutline}
-        strokeWidth={1.5}
-        listening={false}
-      />
+      <Circle radius={22} fill="rgba(0,0,0,0.001)" />
+      <EditPointGlyph corner />
     </Group>
   );
 }
@@ -4338,6 +4325,9 @@ function DraftSegmentHandles({
   gestureBlocked: { current: boolean };
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
+  const project = useProject((s) => s.project);
+  const [activeEndpoint, setActiveEndpoint] = useState<0 | 1 | null>(null);
+  useEffect(() => setActiveEndpoint(null), [segmentIndex, edgeId]);
   const a = points[segmentIndex];
   const b = points[segmentIndex + 1];
   if (!a || !b) return null;
@@ -4353,16 +4343,17 @@ function DraftSegmentHandles({
         panX,
         panY,
         px,
-        () => {},
+        () => setActiveEndpoint(endpoint),
         (p) => {
           const next = original.slice();
-          const q = snapEditableEndpoint(p);
+          const q = snapEditableEndpoint(p, fixed);
           next[segmentIndex + endpoint] = q;
           useProject.getState().setDraftPoints(next);
         },
         (p) => {
+          setActiveEndpoint(null);
           const next = original.slice();
-          const q = snapEditableEndpoint(p);
+          const q = snapEditableEndpoint(p, fixed);
           next[segmentIndex + endpoint] = q;
           const st = useProject.getState();
           const d0 = drawingOrMigrate(st.project);
@@ -4386,11 +4377,18 @@ function DraftSegmentHandles({
         },
         skipClick,
         gestureBlocked,
-        () => useProject.getState().setDraftPoints(original),
+        () => {
+          setActiveEndpoint(null);
+          useProject.getState().setDraftPoints(original);
+        },
       );
     };
   return (
     <Group>
+      {activeEndpoint !== null && !gestureBlocked.current && <SegmentAlignmentGuides
+        drawing={drawingOrMigrate(project)} point={activeEndpoint === 0 ? a : b} fixed={activeEndpoint === 0 ? b : a}
+        excludeEdgeId={edgeId ?? undefined} extraPoints={points.filter((_,index) => index !== segmentIndex + activeEndpoint)}
+        sx={sx} sy={sy} px={px} appearance={appearance}/>}
       <Line
         points={[sx(a.x), sy(a.y), sx(b.x), sy(b.y)]}
         stroke={appearance.accent}
@@ -4444,7 +4442,8 @@ function SelectedEdgeHandles({
     edge && [edge.faceL, edge.faceR].some((id) => id && d.faces[id]?.locked),
   );
   const [preview, setPreview] = useState<{ a: Pt; b: Pt } | null>(null);
-  useEffect(() => setPreview(null), [edgeId, a?.x, a?.y, b?.x, b?.y]);
+  const [activeEndpoint, setActiveEndpoint] = useState<0 | 1 | null>(null);
+  useEffect(() => { setPreview(null); setActiveEndpoint(null); }, [edgeId, a?.x, a?.y, b?.x, b?.y]);
   if (!edge || !a || !b || Math.abs(edge.bulge) > 1e-6 || edgeLocked) return null;
   const shownA = preview?.a ?? a;
   const shownB = preview?.b ?? b;
@@ -4458,14 +4457,15 @@ function SelectedEdgeHandles({
         panX,
         panY,
         px,
-        () => setPreview({ a, b }),
+        () => { setActiveEndpoint(endpoint); setPreview({ a, b }); },
         (p) => {
-          const q = snapEditableEndpoint(p);
+          const q = snapEditableEndpoint(p, fixed);
           setPreview(endpoint === 0 ? { a: q, b } : { a, b: q });
         },
         (p) => {
-          const q = snapEditableEndpoint(p);
+          const q = snapEditableEndpoint(p, fixed);
           setPreview(null);
+          setActiveEndpoint(null);
           const st = useProject.getState();
           const current = drawingOrMigrate(st.project);
           const currentEdge = current.edges[edgeId];
@@ -4476,15 +4476,19 @@ function SelectedEdgeHandles({
         },
         skipClick,
         gestureBlocked,
-        () => setPreview(null),
+        () => { setPreview(null); setActiveEndpoint(null); },
       );
     };
   return (
     <Group>
+      {activeEndpoint !== null && !gestureBlocked.current && <SegmentAlignmentGuides
+        drawing={d} point={activeEndpoint === 0 ? shownA : shownB} fixed={activeEndpoint === 0 ? shownB : shownA}
+        excludeFaceId={faceId ?? undefined} excludeEdgeId={edgeId}
+        sx={sx} sy={sy} px={px} appearance={appearance}/>}
       <Line
         points={[sx(shownA.x), sy(shownA.y), sx(shownB.x), sy(shownB.y)]}
-        stroke={appearance.accent}
-        strokeWidth={2}
+        stroke={EDIT_OUTLINE_COLOR}
+        strokeWidth={2.5}
         opacity={0.9}
         listening={false}
       />
@@ -4512,6 +4516,67 @@ function SelectedEdgeHandles({
   );
 }
 
+function LayerHandles({ faceId, px, panX, panY, editDrag, skipClick, gestureBlocked }: {
+  faceId: string; px: number; panX: number; panY: number;
+  editDrag: { current: boolean }; skipClick: { current: boolean }; gestureBlocked: { current: boolean };
+}) {
+  const project = useProject(s => s.project);
+  const d = drawingOrMigrate(project), ids = layerFaceIds(d, faceId);
+  const [preview, setPreview] = useState({ dx: 0, dy: 0, scale: 1, angle: 0 });
+  const center = layerCenter(d, faceId);
+  const screen = (p: Pt) => ({ x: p.x*px+panX, y: p.y*px+panY });
+  const transformed = (p: Pt) => {
+    const r=preview.angle*Math.PI/180, c=Math.cos(r), s=Math.sin(r);
+    return screen({ x: center.x+((p.x-center.x)*c-(p.y-center.y)*s)*preview.scale+preview.dx,
+      y: center.y+((p.x-center.x)*s+(p.y-center.y)*c)*preview.scale+preview.dy });
+  };
+  const corners = layerFrame(d, faceId);
+  const begin = (mode: "rotate" | "move", e: Konva.KonvaEventObject<PointerEvent | MouseEvent | TouchEvent>) => {
+    if (gestureBlocked.current) return;
+    const stage = e.target.getStage();
+    const nodes = ids.map(id => stage?.findOne(`#face-${id}`)).filter((n): n is Konva.Node => Boolean(n));
+    const attrs = nodes.map(n => ({ x:n.x(), y:n.y(), scaleX:n.scaleX(), scaleY:n.scaleY(), rotation:n.rotation() }));
+    let start = center, change = { dx:0, dy:0, scale:1, angle:0 };
+    const restore = () => {
+      const current = useProject.getState();
+      nodes.forEach((n,i) => {
+        const a = attrs[i]!;
+        const centered = n.getClassName() === "Circle" || n.getClassName() === "Ellipse";
+        n.setAttrs(centered ? { ...a, x:(a.x-panX)*current.pxPerMeter/px+current.panX, y:(a.y-panY)*current.pxPerMeter/px+current.panY } : a);
+      });
+      setPreview({ dx:0,dy:0,scale:1,angle:0 }); stage?.batchDraw();
+    };
+    const update = (p: Pt) => {
+      if (mode === "rotate") change = { ...change, angle:(Math.atan2(p.y-center.y,p.x-center.x)-Math.atan2(start.y-center.y,start.x-center.x))*180/Math.PI };
+      else change = { ...change, dx:p.x-start.x, dy:p.y-start.y };
+      change = { ...change, ...snapLayerTransform(d, faceId, mode, change, useProject.getState()) };
+      const o=screen(center), r=change.angle*Math.PI/180,c=Math.cos(r),s=Math.sin(r),k=change.scale;
+      nodes.forEach((n,i) => { const a=attrs[i]!,x=a.x-o.x,y=a.y-o.y; n.setAttrs({x:o.x+(x*c-y*s)*k+change.dx*px,y:o.y+(x*s+y*c)*k+change.dy*px,scaleX:a.scaleX*k,scaleY:a.scaleY*k,rotation:a.rotation+change.angle}); });
+      setPreview(change); stage?.batchDraw();
+    };
+    bindPointerDrag(e, editDrag, panX, panY, px, p => { start=p; }, update, p => {
+      update(p); restore();
+      useProject.getState().commitDrawing(transformLayer(d,faceId,change,center),faceId,true);
+    }, skipClick, gestureBlocked, restore, restore);
+  };
+  const body = transformed(center);
+  const axisAngle = ((d.faces[faceId]?.layerAngle ?? 0)-90)*Math.PI/180;
+  const radius = Math.max(...corners.map(p => (p.x-center.x)*Math.cos(axisAngle)+(p.y-center.y)*Math.sin(axisAngle))) + ROTATION_STEM_PX/px;
+  const rotate = transformed({ x:center.x+Math.cos(axisAngle)*radius, y:center.y+Math.sin(axisAngle)*radius });
+  const stemLength = Math.hypot(rotate.x-body.x, rotate.y-body.y) || 1;
+  const stemEnd = { x:rotate.x-(rotate.x-body.x)*12/stemLength, y:rotate.y-(rotate.y-body.y)*12/stemLength };
+  return <Group>
+    <Line points={corners.flatMap(p => {const q=transformed(p);return [q.x,q.y];})} closed stroke={EDIT_HANDLE_COLOR} strokeWidth={1} dash={[5,5]} fill="rgba(0,0,0,0.001)" onPointerDown={e=>begin("move",e)} onTouchStart={e=>begin("move",e)}/>
+    <Line points={[body.x,body.y,stemEnd.x,stemEnd.y]} stroke={EDIT_HANDLE_COLOR} strokeWidth={1.1} listening={false}/>
+    <Group x={body.x} y={body.y} onPointerDown={e=>begin("move",e)} onTouchStart={e=>begin("move",e)}>
+      <Circle radius={22} fill="rgba(0,0,0,0.001)"/><EditPointGlyph />
+    </Group>
+    <Group x={rotate.x} y={rotate.y} onPointerDown={e=>begin("rotate",e)} onTouchStart={e=>begin("rotate",e)}>
+      <Circle radius={22} fill="rgba(0,0,0,0.001)"/><RotationHandleGlyph stem={false} />
+    </Group>
+  </Group>;
+}
+
 function CadHandles({
   faceId,
   sx,
@@ -4523,6 +4588,7 @@ function CadHandles({
   skipClick,
   gestureBlocked,
   onPreviewPath,
+  onSegmentEditDone,
 }: {
   faceId: string;
   sx: (n: number) => number;
@@ -4534,6 +4600,7 @@ function CadHandles({
   skipClick: { current: boolean };
   gestureBlocked: { current: boolean };
   onPreviewPath: (points: Pt[] | null) => void;
+  onSegmentEditDone: () => void;
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
   const bitsRef = useRef<Konva.Group>(null);
@@ -4548,8 +4615,9 @@ function CadHandles({
   const scale0 = useRef({ rx: 1, ry: 1, d: 1, k: 1 });
   const [liveFreeformPath, setLiveFreeformPath] = useState<Pt[] | null>(null);
   const [liveSplineControls, setLiveSplineControls] = useState<Pt[] | null>(null);
+  const [segmentGuide, setSegmentGuide] = useState<{ point: Pt; fixed: Pt } | null>(null);
   const [activeCurvePoint, setActiveCurvePoint] = useState<number | null>(null);
-  useEffect(() => setActiveCurvePoint(null), [faceId]);
+  useEffect(() => { setActiveCurvePoint(null); setSegmentGuide(null); }, [faceId]);
   const d = drawingOrMigrate(useProject.getState().project);
   const face = d.faces[faceId];
   if (!face || face.locked) return null;
@@ -4596,6 +4664,12 @@ function CadHandles({
       const next = verts[(index + 1) % verts.length]!;
       if (position % curveStride === 0 || !curved.has(previous.id) || !curved.has(next.id)) visibleNodes.add(index);
     });
+    if(face.nodeEdit.curveRuns?.length) {
+      for(const index of curvedIndices) visibleNodes.delete(index);
+      for(const run of face.nodeEdit.curveRuns) for(const id of [run[0],run[Math.floor(run.length/2)],run.at(-1)]) {
+        const index=verts.findIndex(v=>v.id===id); if(index>=0) visibleNodes.add(index);
+      }
+    }
     if (!visibleNodes.size) {
       const stride = Math.max(1, Math.ceil(verts.length / 16));
       verts.forEach((_, index) => {
@@ -4625,7 +4699,7 @@ function CadHandles({
         <Line
           points={shownPath.flatMap((point) => [sx(point.x), sy(point.y)])}
           closed
-          stroke={appearance.accent}
+          stroke={EDIT_OUTLINE_COLOR}
           strokeWidth={2.5}
           lineCap="round"
           lineJoin="round"
@@ -4675,26 +4749,7 @@ function CadHandles({
               }}
             >
               <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-              {isCurveNode ? (
-                <Circle
-                  radius={7.5}
-                  fill={activeCurvePoint === index ? "#cf2f2f" : "#d56a2b"}
-                  stroke={appearance.handleOutline}
-                  strokeWidth={1.5}
-                  listening={false}
-                />
-              ) : (
-                <Rect
-                  x={-6}
-                  y={-6}
-                  width={12}
-                  height={12}
-                  fill={activeCurvePoint === index ? "#cf2f2f" : "#d56a2b"}
-                  stroke={appearance.handleOutline}
-                  strokeWidth={1.5}
-                  listening={false}
-                />
-              )}
+              <EditPointGlyph corner={!isCurveNode} active={activeCurvePoint === index} />
             </Group>
           );
         })}
@@ -4718,18 +4773,56 @@ function CadHandles({
       ? liveSplineControls
       : controls;
     const curve = catmullRom(shownControls, 8, face.spline.closed);
+    const clearSplineMove = () => {
+      setLiveSplineControls(null);
+      setSegmentGuide(null);
+      useProject.setState({ splinePreview: null });
+      onPreviewPath(null);
+    };
+    const moveCurve = (dxPx: number, dyPx: number, commit: boolean) => {
+      // Moving the body needs a drag. Segment body taps finish editing instead.
+      if (Math.hypot(dxPx, dyPx) < 6) {
+        clearSplineMove();
+        return;
+      }
+      const state = useProject.getState();
+      let dx = dxPx / px, dy = dyPx / px;
+      if (state.snapOn) {
+        const snapped = snapShapeTranslationToGrid(
+          controls, dx, dy, Math.max(state.gridStep || 0.1, 1e-4), px,
+        );
+        dx = snapped.dx;
+        dy = snapped.dy;
+      }
+      const next = controls.map(point => ({ x: point.x + dx, y: point.y + dy }));
+      if (commit) {
+        clearSplineMove();
+        state.commitDrawing(updateSpline(drawingOrMigrate(state.project), face.id, next), face.id, true);
+      } else {
+        setActiveCurvePoint(null);
+        setLiveSplineControls(next);
+        useProject.setState({ splinePreview: { faceId: face.id, points: next } });
+        onPreviewPath(catmullRom(next, 8, face.spline!.closed));
+      }
+    };
+    const beginControlMove = (index: number) => {
+      setActiveCurvePoint(index);
+      if (face.segment && controls.length === 2) setSegmentGuide({ point: controls[index]!, fixed: controls[1-index]! });
+    };
     const moveControl = (index: number, point: Pt, commit: boolean) => {
-      const snapped = snapEditableEndpoint(point);
+      const snapped = snapEditableEndpoint(point, face.segment && controls.length === 2 ? controls[1-index] : undefined);
       const next = controls.map((control, controlIndex) =>
         controlIndex === index ? snapped : control,
       );
       if (!commit) {
+        if (face.segment && controls.length === 2) setSegmentGuide({ point: snapped, fixed: controls[1-index]! });
         setLiveSplineControls(next);
         useProject.setState({ splinePreview: { faceId: face.id, points: next } });
         onPreviewPath(catmullRom(next, 8, face.spline!.closed));
         return;
       }
       useProject.getState().setSplinePt(index, snapped);
+      setSegmentGuide(null);
       setLiveSplineControls(null);
       onPreviewPath(null);
     };
@@ -4738,14 +4831,24 @@ function CadHandles({
       : null;
     return (
       <Group>
+        {face.segment && segmentGuide && !gestureBlocked.current && <SegmentAlignmentGuides
+          drawing={d} point={segmentGuide.point} fixed={segmentGuide.fixed} excludeFaceId={face.id}
+          sx={sx} sy={sy} px={px} appearance={appearance}/>}
         <Line
           points={curve.flatMap((point) => [sx(point.x), sy(point.y)])}
           closed={face.spline.closed}
-          stroke={appearance.accent}
+          stroke={EDIT_OUTLINE_COLOR}
           strokeWidth={2.5}
           lineCap="round"
           lineJoin="round"
-          listening={false}
+          fill={face.spline.closed ? "rgba(0,0,0,0.001)" : undefined}
+          hitStrokeWidth={24}
+          onMouseDown={event => { event.cancelBubble = true; }}
+          onPointerDown={event => bindClientDeltaDrag(event, editDrag, skipClick, moveCurve, gestureBlocked, face.segment ? onSegmentEditDone : undefined)}
+          onTouchStart={event => {
+            if (event.evt.touches.length >= 2) return;
+            bindClientDeltaDrag(event, editDrag, skipClick, moveCurve, gestureBlocked, face.segment ? onSegmentEditDone : undefined);
+          }}
         />
         <OpenPathMeasures
           points={shownControls}
@@ -4771,16 +4874,12 @@ function CadHandles({
                 panX,
                 panY,
                 px,
-                () => setActiveCurvePoint(index),
+                () => beginControlMove(index),
                 (next) => moveControl(index, next, false),
                 (next) => moveControl(index, next, true),
                 skipClick,
                 gestureBlocked,
-                () => {
-                  setLiveSplineControls(null);
-                  useProject.setState({ splinePreview: null });
-                  onPreviewPath(null);
-                },
+                clearSplineMove,
               );
             }}
             onTouchStart={(event) => {
@@ -4791,27 +4890,17 @@ function CadHandles({
                 panX,
                 panY,
                 px,
-                () => setActiveCurvePoint(index),
+                () => beginControlMove(index),
                 (next) => moveControl(index, next, false),
                 (next) => moveControl(index, next, true),
                 skipClick,
                 gestureBlocked,
-                () => {
-                  setLiveSplineControls(null);
-                  useProject.setState({ splinePreview: null });
-                  onPreviewPath(null);
-                },
+                clearSplineMove,
               );
             }}
           >
             <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-            <Circle
-              radius={7}
-              fill={activeCurvePoint === index ? "#cf2f2f" : "#d56a2b"}
-              stroke={appearance.handleOutline}
-              strokeWidth={1.5}
-              listening={false}
-            />
+            <EditPointGlyph corner={Boolean(face.segment)} active={activeCurvePoint === index} />
           </Group>
         ))}
         {center && (
@@ -4877,9 +4966,12 @@ function CadHandles({
     });
   };
   const rotPos = (pts: Pt[]) => {
-    const trPt = pts[1];
-    if (!trPt) return { x: 0, y: 0 };
-    return { x: sx(trPt.x), y: sy(trPt.y) };
+    const a = pts[0], b = pts[1], opposite = pts[2];
+    if (!a || !b || !opposite) return { x: 0, y: 0, rotation: 0 };
+    const top = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+    const center = { x: (a.x + opposite.x) / 2, y: (a.y + opposite.y) / 2 };
+    const handle = rotationHandleLayout(top, center, px);
+    return { x: sx(handle.point.x), y: sy(handle.point.y), rotation: handle.rotation };
   };
   const paintRectDims = (pts: Pt[], stage: Konva.Stage | null) => {
     if (!stage || pts.length < 4) return;
@@ -4959,7 +5051,7 @@ function CadHandles({
     });
     if (!skipRot) {
       const rp = rotPos(pts);
-      rotRef.current?.position(rp);
+      rotRef.current?.setAttrs(rp);
     }
     const stage = node?.getStage() ?? bitsRef.current?.getStage() ?? null;
     paintRectDims(pts, stage);
@@ -5167,16 +5259,7 @@ function CadHandles({
           }}
         >
           <Circle radius={26} fill="rgba(0,0,0,0.001)" />
-          <Rect
-            x={-5}
-            y={-5}
-            width={10}
-            height={10}
-            fill="#c45c26"
-            stroke={appearance.handleOutline}
-            strokeWidth={1.5}
-            listening={false}
-          />
+          <EditPointGlyph corner />
         </Group>
       </>
     );
@@ -5203,7 +5286,7 @@ function CadHandles({
     const scalePos = (rx: number, ry: number, cx = ell.cx, cy = ell.cy, rot = rot0deg) =>
       ellPt(rx, ry, -Math.PI / 4, cx, cy, rot);
     const rotHandlePos = (rx: number, ry: number, cx = ell.cx, cy = ell.cy, rot = rot0deg) =>
-      ellPt(rx, ry, (3 * Math.PI) / 4, cx, cy, rot);
+      ellPt(rx, ry + ROTATION_STEM_PX / px, -Math.PI / 2, cx, cy, rot);
     const offAxis = (end: Pt, cx = ell.cx, cy = ell.cy, outPx = 20) => {
       const dx = end.x - cx;
       const dy = end.y - cy;
@@ -5253,7 +5336,7 @@ function CadHandles({
       const sp = scalePos(rx, ry, cx, cy, rot);
       const rp = rotHandlePos(rx, ry, cx, cy, rot);
       scaleRef.current?.position({ x: sx(sp.x), y: sy(sp.y) });
-      rotRef.current?.position({ x: sx(rp.x), y: sy(rp.y) });
+      rotRef.current?.setAttrs({ x: sx(rp.x), y: sy(rp.y), rotation: rot });
       centerRef.current?.position({ x: sx(cx), y: sy(cy) });
       const stage = node?.getStage() ?? bitsRef.current?.getStage() ?? scaleRef.current?.getStage();
       const unit = useProject.getState().measureUnit;
@@ -5351,7 +5434,7 @@ function CadHandles({
       let dx = dxPx / px;
       let dy = dyPx / px;
       const state = useProject.getState();
-      if (state.snapOn && state.snapGridOn) {
+      if (state.snapOn) {
         const snapped = snapShapeTranslationToGrid(
           ellipseBoundaryGridAnchors(ell.cx, ell.cy, ell.rx, ell.ry, rot0deg),
           dx,
@@ -5512,16 +5595,7 @@ function CadHandles({
               }}
             >
               <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-              <Rect
-                x={-6}
-                y={-6}
-                width={12}
-                height={12}
-                fill="#c45c26"
-                stroke={appearance.handleOutline}
-                strokeWidth={2}
-                listening={false}
-              />
+              <EditPointGlyph corner />
             </Group>
           );
         })}
@@ -5529,6 +5603,7 @@ function CadHandles({
           ref={rotRef}
           x={sx(rp0.x)}
           y={sy(rp0.y)}
+          rotation={rot0deg}
           onMouseDown={(e) => {
             e.cancelBubble = true;
           }}
@@ -5615,7 +5690,7 @@ function CadHandles({
           }}
         >
           <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-          <ScaleHandleGlyph angle={readableLineAngle({ x: ell.cx, y: ell.cy }, sp0)} />
+          <EditPointGlyph />
         </Group>
         <Text
           id="ell-wtext"
@@ -5669,7 +5744,7 @@ function CadHandles({
       let dx = dxPx / px;
       let dy = dyPx / px;
       const state = useProject.getState();
-      if (state.snapOn && state.snapGridOn) {
+      if (state.snapOn) {
         const anchors = corners.flatMap((point, index) => {
           const next = corners[(index + 1) % corners.length]!;
           return [point, { x: (point.x + next.x) / 2, y: (point.y + next.y) / 2 }];
@@ -5818,7 +5893,6 @@ function CadHandles({
           />
         </Group>
         {corners.map((pt, i) => {
-          if (i === 1) return null;
           const opp = corners[(i + 2) % 4]!;
           return (
             <Group
@@ -5856,16 +5930,7 @@ function CadHandles({
               }}
             >
               <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-              <Rect
-                x={-6}
-                y={-6}
-                width={12}
-                height={12}
-                fill="#c45c26"
-                stroke={appearance.handleOutline}
-                strokeWidth={2}
-                listening={false}
-              />
+              <EditPointGlyph corner />
             </Group>
           );
         })}
@@ -5914,16 +5979,7 @@ function CadHandles({
               }}
             >
               <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-              <Rect
-                x={-5}
-                y={-5}
-                width={10}
-                height={10}
-                fill="#c45c26"
-                stroke={appearance.handleOutline}
-                strokeWidth={2}
-                listening={false}
-              />
+              <EditPointGlyph />
             </Group>
           );
         })}
@@ -5931,6 +5987,7 @@ function CadHandles({
           ref={rotRef}
           x={rp.x}
           y={rp.y}
+          rotation={rp.rotation}
           onMouseDown={(e) => {
             e.cancelBubble = true;
           }}
@@ -6015,7 +6072,7 @@ function CadHandles({
       });
       if (!skipRot) {
         const rp = triangleRotationPoint(pts, px);
-        if (rp) rotRef.current?.position({ x: sx(rp.x), y: sy(rp.y) });
+        if (rp) rotRef.current?.setAttrs({ x: sx(rp.x), y: sy(rp.y), rotation: rotationHandleLayout(layout.metrics.apex, layout.metrics.center, px).rotation });
       }
       const sp = triangleScalePoint(pts);
       if (sp) scaleRef.current?.position({ x: sx(sp.x), y: sy(sp.y) });
@@ -6057,7 +6114,7 @@ function CadHandles({
       let dx = dxPx / px;
       let dy = dyPx / px;
       const state = useProject.getState();
-      if (state.snapOn && state.snapGridOn) {
+      if (state.snapOn) {
         const anchors = tri.flatMap((point, index) => {
           const next = tri[(index + 1) % tri.length]!;
           return [point, { x: (point.x + next.x) / 2, y: (point.y + next.y) / 2 }];
@@ -6260,16 +6317,7 @@ function CadHandles({
             }}
           >
             <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-            <Rect
-              x={-6}
-              y={-6}
-              width={12}
-              height={12}
-              fill="#c45c26"
-              stroke={appearance.handleOutline}
-              strokeWidth={2}
-              listening={false}
-            />
+            <EditPointGlyph corner />
           </Group>
         ))}
         {scalePoint && (
@@ -6322,7 +6370,7 @@ function CadHandles({
             }}
           >
             <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-            <ScaleHandleGlyph angle={readableLineAngle(triCenter, scalePoint)} />
+            <EditPointGlyph />
           </Group>
         )}
         {rotPoint && (
@@ -6330,6 +6378,7 @@ function CadHandles({
             ref={rotRef}
             x={sx(rotPoint.x)}
             y={sy(rotPoint.y)}
+            rotation={rotationHandleLayout(metrics.apex, metrics.center, px).rotation}
             onMouseDown={(e) => {
               e.cancelBubble = true;
             }}
@@ -6394,7 +6443,7 @@ function CadHandles({
     const pathCenter = polygonMassCenter(path);
     const shownCenter = polygonMassCenter(shownPath);
     const frameAngle = (Math.atan2(frame.uy, frame.ux) * 180) / Math.PI;
-    const rotationGap = Math.max(0.7, 34 / px);
+    const rotationGap = ROTATION_STEM_PX / px;
     const rotationPoint = pathFramePoint(
       shownFrame,
       (shownFrame.minU + shownFrame.maxU) / 2,
@@ -6455,7 +6504,7 @@ function CadHandles({
       let dx = dxPx / px;
       let dy = dyPx / px;
       const state = useProject.getState();
-      if (state.snapOn && state.snapGridOn) {
+      if (state.snapOn) {
         const anchors = path.flatMap((point, index) => {
           const next = path[(index + 1) % path.length]!;
           return [point, { x: (point.x + next.x) / 2, y: (point.y + next.y) / 2 }];
@@ -6505,7 +6554,7 @@ function CadHandles({
         {!pointShape && (
           <Line
             points={[...corners, corners[0]!].flatMap((point) => [sx(point.x), sy(point.y)])}
-            stroke="#c45c26"
+            stroke={EDIT_HANDLE_COLOR}
             strokeWidth={1}
             dash={[5, 5]}
             opacity={0.42}
@@ -6571,16 +6620,7 @@ function CadHandles({
             }}
           >
             <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-            <Rect
-              x={-6}
-              y={-6}
-              width={12}
-              height={12}
-              fill="#c45c26"
-              stroke={appearance.handleOutline}
-              strokeWidth={2}
-              listening={false}
-            />
+            <EditPointGlyph corner />
           </Group>
         ))}
         {!pointShape && mids.map((point, i) => (
@@ -6627,22 +6667,14 @@ function CadHandles({
             }}
           >
             <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-            <Rect
-              x={-5}
-              y={-5}
-              width={10}
-              height={10}
-              fill="#c45c26"
-              stroke={appearance.handleOutline}
-              strokeWidth={2}
-              listening={false}
-            />
+            <EditPointGlyph />
           </Group>
         ))}
         {!pointShape && <Group
           ref={rotRef}
           x={sx(rotationPoint.x)}
           y={sy(rotationPoint.y)}
+          rotation={Math.atan2(shownFrame.uy, shownFrame.ux) * 180 / Math.PI}
           onMouseDown={(e) => {
             e.cancelBubble = true;
           }}
@@ -6726,7 +6758,7 @@ function CadHandles({
             }}
           >
             <Circle radius={22} fill="rgba(255,255,255,0.001)" />
-            <Circle radius={10} fill="#d56a2b" stroke={appearance.handleOutline} strokeWidth={1.5} listening={false} />
+            <EditPointGlyph radius={8} />
             <Text
               x={-9}
               y={-6}
@@ -6792,33 +6824,44 @@ function polyKindFill(kind: string) {
   return REGION_FILL[kind as keyof typeof REGION_FILL] ?? "#ddd";
 }
 
-function renderGeom(
-  poly: Geom,
-  sx: (n: number) => number,
-  sy: (n: number) => number,
-  px: number,
-  selectedPolyId: string | null,
-  selectedPolyIds: string[],
-  fillOf: (k: string) => string,
-  startHold: (id: string) => void,
-  endHold: () => void,
-  passThrough: boolean,
-  previewPoints: Pt[] | null = null,
-  appearance = canvasTheme("crystal"),
-  textureImages: Record<string, HTMLImageElement> = {},
-) {
-  if (poly.hidden) return null;
+function RenderedGeom({ poly, sx, sy, px, selectedPolyId, selectedPolyIds, fillOf, startHold, endHold, passThrough,
+  previewPoints = null, appearance = canvasTheme("crystal"), textureImages = {},
+}: {
+  poly: Geom; sx: (n: number) => number; sy: (n: number) => number; px: number;
+  selectedPolyId: string | null; selectedPolyIds: string[]; fillOf: (k: string) => string;
+  startHold: (id: string) => void; endHold: () => void; passThrough: boolean;
+  previewPoints?: Pt[] | null; appearance?: ReturnType<typeof canvasTheme>;
+  textureImages?: Record<string, HTMLImageElement>;
+}) {
+  const nodeRef = useRef<Konva.Shape | null>(null);
   const selected = poly.id === selectedPolyId || selectedPolyIds.includes(poly.id);
-  const fill = poly.fill ?? fillOf(poly.cadType ?? poly.kind);
+  const editing = useProject(s => Boolean(s.cadEditId && layerFaceIds(drawingOrMigrate(s.project), s.cadEditId).includes(poly.id)));
+  const outline = editing ? EDIT_OUTLINE_COLOR : SELECTION_OUTLINE_COLOR;
+  const segment = useProject(s => Boolean(drawingOrMigrate(s.project).faces[poly.id]?.segment));
+  const themeId = useProject(s=>s.themeId);
+  const themeFill = poly.fill === "theme";
+  const fill = themeFill ? themeFigureFill(themeId) : poly.fill ?? fillOf(poly.cadType ?? poly.kind);
   const texture = textureImages[fill];
+  const shapeKind = poly.ellipse ? "ellipse" : poly.type;
+  const reference = validTextureSize(poly.textureSize) ? poly.textureSize : textureFrame(poly);
+  useLayoutEffect(() => {
+    if (!texture || !nodeRef.current) return;
+    return bindMaterialPattern(nodeRef.current, fill, reference, px, poly.textureRotation ?? 0);
+  }, [texture, fill, reference.width, reference.height, shapeKind, poly.hidden, px, poly.textureRotation]);
+  if (poly.hidden) return null;
   const solidFill = fill.startsWith("texture:") ? "#d8d4cc" : fill;
+  const frame = textureFrame({ ...poly,
+    points: (previewPoints ?? poly.points).map((point) => ({ x: sx(point.x), y: sy(point.y) })),
+    radius: poly.radius == null ? undefined : poly.radius * px,
+    ellipse: poly.ellipse ? { ...poly.ellipse, rx: poly.ellipse.rx * px, ry: poly.ellipse.ry * px } : undefined });
   const pattern = texture ? {
     fill: undefined,
+    fillPriority: "pattern",
     fillPatternImage: texture,
     fillPatternRepeat: "repeat" as const,
-    fillPatternScaleX: 0.24,
-    fillPatternScaleY: 0.24,
-  } : { fill: solidFill };
+    ...texturePatternAttrs(fill, frame, reference, px, poly.textureRotation ?? 0),
+  } : { fill: solidFill, fillPriority: "color" };
+  const shapeRef = (node: Konva.Shape | null) => { nodeRef.current = node; };
   const hold = passThrough
     ? { listening: false as const }
     : {
@@ -6855,13 +6898,14 @@ function renderGeom(
     return (
       <Circle
         key={poly.id}
+        ref={shapeRef}
         id={`face-${poly.id}`}
         x={sx(poly.points[0].x)}
         y={sy(poly.points[0].y)}
         radius={poly.radius * px}
         {...pattern}
-        opacity={0.72}
-        stroke={selected ? appearance.accent : appearance.ink}
+        opacity={themeFill || fill.startsWith("texture:") ? 1 : 0.72}
+        stroke={selected ? outline : appearance.ink}
         strokeWidth={selected ? 2.5 : 1.5}
         {...hold}
       />
@@ -6872,6 +6916,7 @@ function renderGeom(
     return (
       <Ellipse
         key={poly.id}
+        ref={shapeRef}
         id={`face-${poly.id}`}
         x={sx(e.cx)}
         y={sy(e.cy)}
@@ -6879,25 +6924,36 @@ function renderGeom(
         radiusY={e.ry * px}
         rotation={e.rot ?? 0}
         {...pattern}
-        opacity={0.72}
-        stroke={selected ? appearance.accent : appearance.ink}
+        opacity={themeFill || fill.startsWith("texture:") ? 1 : 0.72}
+        stroke={selected ? outline : appearance.ink}
         strokeWidth={selected ? 2.5 : 1.5}
         {...hold}
       />
     );
   }
   const shownPoints = previewPoints ?? poly.points;
+  if(poly.holes?.length) return <Shape ref={shapeRef} id={`face-${poly.id}`} {...pattern}
+    fillRule="evenodd" opacity={themeFill || texture ? 1 : 0.72} stroke={selected ? outline : appearance.ink} strokeWidth={selected ? 2.5 : 2} {...hold}
+    sceneFunc={(ctx,shape)=>{
+      ctx.beginPath();
+      for(const ring of [shownPoints,...poly.holes!]) {
+        ring.forEach((p,i)=>i===0 ? ctx.moveTo(sx(p.x),sy(p.y)) : ctx.lineTo(sx(p.x),sy(p.y)));
+        ctx.closePath();
+      }
+      ctx.fillStrokeShape(shape);
+    }}/>;
   return (
     <Line
       key={poly.id}
-      id={`face-${poly.id}`}
+      ref={shapeRef}
+        id={`face-${poly.id}`}
       x={0}
       y={0}
       points={shownPoints.flatMap((p) => [sx(p.x), sy(p.y)])}
       closed={poly.closed}
       {...(poly.closed ? pattern : { fill: undefined })}
-      opacity={poly.closed ? 0.72 : poly.type === "line" ? 0.9 : 0.5}
-      stroke={selected ? appearance.accent : poly.type === "line" ? appearance.accent : appearance.ink}
+      opacity={segment || themeFill ? 1 : fill.startsWith("texture:") ? 1 : poly.closed ? 0.72 : poly.type === "line" ? 0.9 : 0.5}
+      stroke={selected ? outline : segment ? appearance.segmentStroke : poly.type === "line" ? appearance.accent : appearance.ink}
       strokeWidth={selected ? 2.5 : 2}
       lineCap={poly.type === "line" ? "round" : "butt"}
       lineJoin={poly.type === "line" ? "round" : "miter"}
@@ -6905,6 +6961,51 @@ function renderGeom(
       {...hold}
     />
   );
+}
+
+function ConstructionStartMark({color}:{color:string}) {
+  return <Group listening={false}>
+    <Line points={[-7,0,7,0]} stroke={color} strokeWidth={1.25}/>
+    <Line points={[0,-7,0,7]} stroke={color} strokeWidth={1.25}/>
+  </Group>;
+}
+
+function ConstructionOrigin({color,closing=false}:{color:string;closing?:boolean}) {
+  return <Group listening={false}><Circle radius={6} fill={color}/><Circle radius={11} stroke={closing ? color : "#ff2538"} strokeWidth={1} dash={[2,3]} lineCap="round"/></Group>;
+}
+
+function CanvasNote({note,x,y,px,ink,enabled,selected,onBegin,onSelect,onResize}:{
+  note:CadText;x:number;y:number;px:number;ink:string;enabled:boolean;selected:boolean;
+  onBegin:(e:Konva.KonvaEventObject<PointerEvent|TouchEvent>)=>void;onSelect:()=>void;
+  onResize:(corner:number,bounds:{width:number;height:number},e:Konva.KonvaEventObject<PointerEvent|TouchEvent>)=>void;
+}) {
+  const ref=useRef<Konva.Text>(null);
+  const [bounds,setBounds]=useState({width:1,height:1});
+  const font=note.fontFamily ?? "IBM Plex Sans";
+  const fontSize=Math.max(1,note.size*px);
+  const fontStyle=[note.bold?"bold":"",note.italic?"italic":""].filter(Boolean).join(" ") || "normal";
+  useLayoutEffect(()=>{
+    let alive=true;
+    const measure=()=>{if(alive && ref.current) setBounds({width:Math.max(1,ref.current.width()),height:Math.max(1,ref.current.height())});};
+    measure();
+    document.fonts?.load(`${fontStyle} ${fontSize}px "${font}"`,note.text).then(()=>{
+      if(!alive || !ref.current) return;
+      // Refresh Konva's cached text metrics after the web font becomes available.
+      ref.current.fontFamily("sans-serif");ref.current.fontFamily(font);measure();ref.current.getLayer()?.batchDraw();
+    }).catch(()=>{});
+    return ()=>{alive=false;};
+  },[font,fontSize,fontStyle,note.text]);
+  const select=(e:Konva.KonvaEventObject<MouseEvent|TouchEvent>)=>{e.cancelBubble=true;onSelect();};
+  return <Group x={x} y={y} name="drawing-annotation" listening={enabled}
+    onPointerDown={onBegin} onTouchStart={onBegin} onClick={select} onTap={select} onDblClick={select} onDblTap={select}>
+    <Rect name="drawing-annotation" x={-5} y={-5} width={bounds.width+10} height={bounds.height+10}
+      fill="rgba(0,0,0,0.001)" stroke={selected?EDIT_HANDLE_COLOR:undefined} strokeWidth={1.2} dash={[5,4]} />
+    <Text ref={ref} name="drawing-annotation" text={note.text} fontSize={fontSize} fontFamily={font}
+      fontStyle={fontStyle} textDecoration={note.underline?"underline":""} fill={note.color ?? ink} listening={false}/>
+    {selected && [[-5,-5],[bounds.width+5,-5],[bounds.width+5,bounds.height+5],[-5,bounds.height+5]].map(([hx,hy],i)=><Rect
+      key={i} x={hx!-4} y={hy!-4} width={8} height={8} cornerRadius={1} fill="#fff" stroke={EDIT_HANDLE_COLOR} strokeWidth={1.5} hitStrokeWidth={22}
+      onPointerDown={e=>onResize(i,bounds,e)} onTouchStart={e=>onResize(i,bounds,e)}/>)}
+  </Group>;
 }
 
 function stripLocal(

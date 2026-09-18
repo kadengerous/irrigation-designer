@@ -341,3 +341,30 @@ auth/db: OFF by default — sign-in, @/lib/db or migrations ONLY on an accounts 
 never:   build an app for a greeting/number/question; invent imagine_* calls;
          ask the user to run commands; delete or abandon /workspace/startup.sh
 ```
+
+
+## User requirement: phone and tablet parity
+
+Apply every feature, design, button, language, palette and layer change to both
+phone and tablet workspaces. Preserve the tablet's existing toolbar and sidebar
+positions; do not replace them with the phone layout or widen PHONE_QUERY to
+force that layout onto tablets. Prefer shared components, action handlers,
+translations and store logic so future changes reach both versions together.
+When checking a change, account for both workspace branches and touch input.
+
+## User requirement: selection and merged layers
+
+Multiple selection is off until the cursor button is pressed, and leaves that
+mode when editing or drawing begins. It has no fixed count limit; tapping an
+already selected figure removes it from the selection. The adjacent Layers2
+action merges selected layers, including disconnected figures, using CadFace
+layerId membership. Preserve component contours and materials; do not replace
+this action with a geometric union. A merged layer has one list row, shared
+selection and property actions on phone and tablet. Merged-layer editing exposes
+rotation around its persistent layerPivot and translation, with no scale handles.
+A highlighted split action appears only on merged layers and restores components
+as separate layers, retaining their current geometry and materials.
+
+Merged layers hide the color/material picker. Each merge retains previous layer
+membership in layerParent; split undoes only that merge, exposing earlier groups
+for subsequent splitting. Preserve this hierarchy and its pivots on save/rotate.

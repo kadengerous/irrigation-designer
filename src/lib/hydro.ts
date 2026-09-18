@@ -17,24 +17,39 @@ export function defaultMaxZoneLpm(availableLpm: number | null | undefined): numb
 /** Group key: precipitation class + pressure band so mixed MP/spray/rotor never share a zone. */
 export function hydroKey(h: Head): string {
   const item = itemById(h.catalogId);
+  if (headFlow(h).lpm == null) return `unknown|${h.id}`;
   const precip = item?.precipClass ?? "unknown";
-  const p = item ? workingPressureBar(item, h.bodyId, h.nozzleId) : 2.8;
+  const p = headWorkingBar(h);
   const band = p >= 3.2 ? "p35" : p >= 2.45 ? "p28" : "p21";
   return `${precip}|${band}`;
 }
 
 export function headWorkingBar(h: Head): number {
   const item = itemById(h.catalogId);
-  return item ? workingPressureBar(item, h.bodyId, h.nozzleId) : 2.8;
+  return h.designPressure ?? (item ? workingPressureBar(item, h.bodyId, h.nozzleId) : 2.8);
 }
 
-function zoneFlow(heads: Head[], zoneId: number): number {
+export function zoneFlow(heads: Head[], zoneId: number): number | null {
   let q = 0;
   for (const h of heads) {
     if (h.zone !== zoneId) continue;
-    q += headFlow(h).lpm ?? 8;
+    const value = headFlow(h).lpm;
+    if (value == null) return null;
+    q += value;
   }
   return q;
+}
+
+/** Required pressure at the sprinklers; pipe losses are accounted for separately. */
+export function zonePressure(heads: Head[], zoneId: number): number | null {
+  let bar = 0;
+  for (const h of heads) {
+    if (h.zone !== zoneId) continue;
+    const pressure = headWorkingBar(h);
+    if (!itemById(h.catalogId) || !Number.isFinite(pressure) || pressure <= 0) return null;
+    bar = Math.max(bar, pressure);
+  }
+  return bar;
 }
 
 export function distributeZones(heads: Head[], maxLpm: number): { heads: Head[]; zones: Zone[] } {
@@ -51,11 +66,11 @@ export function distributeZones(heads: Head[], maxLpm: number): { heads: Head[];
   const out: Head[] = [];
   const zones: Zone[] = [];
   for (const [, arr] of groups) {
-    const packed = [...arr].sort((a, b) => (headFlow(b).lpm ?? 8) - (headFlow(a).lpm ?? 8));
+    const packed = [...arr].sort((a, b) => (headFlow(b).lpm ?? Infinity) - (headFlow(a).lpm ?? Infinity));
     let acc = 0;
     let local = zid;
     for (const h of packed) {
-      const q = headFlow(h).lpm ?? 8;
+      const q = headFlow(h).lpm ?? Infinity;
       if (acc + q > limit && acc > 0) {
         local += 1;
         acc = 0;
@@ -81,7 +96,7 @@ export function assignZoneForNewHead(
 ): { zoneId: number; zones: Zone[] } {
   const limit = Math.max(5, maxLpm);
   const key = hydroKey(head);
-  const q = headFlow(head).lpm ?? 8;
+  const q = headFlow(head).lpm;
   const zones = project.zones.length ? project.zones : defaultZones();
   return pickZone(project, limit, key, q, zones, activeZoneId);
 }
@@ -90,14 +105,17 @@ function pickZone(
   project: Project,
   limit: number,
   key: string,
-  q: number,
+  q: number | null,
   zones: Zone[],
   activeId?: number,
 ): { zoneId: number; zones: Zone[] } {
   const fits = (id: number) => {
     const members = project.heads.filter((h) => h.zone === id);
+    if (!members.length) return true;
+    if (q == null) return false;
     if (members.length && hydroKey(members[0]!) !== key) return false;
-    return zoneFlow(project.heads, id) + q <= limit + 0.05;
+    const existingQ = zoneFlow(project.heads, id);
+    return existingQ != null && existingQ + q <= limit + 0.05;
   };
   if (activeId != null && fits(activeId)) return { zoneId: activeId, zones };
   const existing = zones.find((z) => fits(z.id));
@@ -119,6 +137,7 @@ export type PumpRec = {
   stations: number;
   zoneId: number;
   zoneName: string;
+  pressureZoneName: string;
 };
 
 export function recommendPump(project: Project): PumpRec | null {
@@ -132,14 +151,11 @@ export function recommendPump(project: Project): PumpRec | null {
   let zoneMaxLpm = 0;
   let workingBar = 0;
   let zoneId = project.zones[0]?.id ?? 1;
+  let pressureZoneId = zoneId;
   for (const [id, hs] of byZone) {
-    let q = 0;
-    let p = 0;
-    for (const h of hs) {
-      q += headFlow(h).lpm ?? 8;
-      p = Math.max(p, headWorkingBar(h));
-    }
-    workingBar = Math.max(workingBar, p);
+    const q = zoneFlow(hs, id), p = zonePressure(hs, id);
+    if (q == null || p == null) return null;
+    if (p > workingBar) { workingBar = p; pressureZoneId = id; }
     if (q > zoneMaxLpm) {
       zoneMaxLpm = q;
       zoneId = id;
@@ -162,5 +178,6 @@ export function recommendPump(project: Project): PumpRec | null {
     stations: byZone.size,
     zoneId,
     zoneName,
+    pressureZoneName: project.zones.find(z => z.id === pressureZoneId)?.name ?? `Зона ${pressureZoneId}`,
   };
 }

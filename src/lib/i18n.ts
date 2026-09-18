@@ -1,3 +1,6 @@
+import { PALETTE_TRANSLATIONS } from "./palette-i18n";
+import { WORKSPACE_TRANSLATIONS } from "./workspace-i18n";
+
 export const LOCALES = [
   { id: "ru", native: "Русский" },
   { id: "en", native: "English" },
@@ -97,7 +100,7 @@ const en: Dict = {
   colNo: "No.",
   colName: "Item",
   colQty: "Qty",
-  ruler: "Ruler",
+  ruler: "Tape measure",
   projects: "Projects",
   guidesRemoved: "Guides removed.",
   scaleHint: "Two points of a known size, then the actual length.",
@@ -126,7 +129,7 @@ const en: Dict = {
   drawLine: "Line",
   drawPolyline: "Path",
   drawPolygon: "Area",
-  drawRect: "Rect",
+  drawRect: "Rectangle",
   drawCircle: "Circle",
   drawTriangle: "Triangle",
   drawHexagon: "Hexagon",
@@ -136,7 +139,7 @@ const en: Dict = {
   drawUndoPoint: "Back",
   drawFinish: "Done",
   drawCancel: "Cancel",
-  drawRotRect: "Rotated rect",
+  drawRotRect: "Rotated rectangle",
   drawOffset: "Offset",
   drawFillet: "Fillet",
   drawFill: "Create area",
@@ -273,9 +276,12 @@ const en: Dict = {
   faceNamePh: "Lawn, driveway…",
   layerN: "Layer {n}",
   hydroNone: "No irrigation",
-  hydroSun: "Sun",
+  hydroSun: "Sunny zone",
+  layerPurpose: "Layer purpose",
+  layerDetails: "Details",
+  layerDetailsClose: "Close details",
   hydroNormal: "Normal",
-  hydroShade: "Shade (more water)",
+  hydroShade: "Shaded zone",
   area: "Area",
   perimeter: "Perimeter",
   toPath: "Convert to path",
@@ -310,9 +316,18 @@ const en: Dict = {
   addZone: "Add zone",
   autoZone: "Auto-assign zones",
   autoZoneHint: "Splits by precipitation, pressure and max zone flow",
-  pumpRec: "Pump",
+  pumpRec: "Recommended pump",
+  recommendedPressure: "Recommended pressure",
+  deleteSprinkler: "Delete sprinkler",
+  selectedSprinklers: "Selected sprinklers: {n}",
+  assignSprinklers: "Add to one zone",
+  chooseZone: "Choose a zone",
+  zonePressure: "Required pressure at sprinklers",
   pumpNote: "One zone at a time. Sized for the busiest zone",
-  pumpOneZone: "Recommendation for one zone",
+  pumpOneZone: "Highest-flow zone",
+  pumpBasis: "Calculation basis",
+  pumpEstimate: "Preliminary estimate: 10% flow reserve; assumed equipment and pipe losses {loss}; elevation allowance {elevation}. Check actual pipe lengths, diameters and the pump curve before selecting a model.",
+  designGuide: "Design guide",
   pumpNeed: "Source pressure is below working pressure — a pump/booster is needed",
   waterSource: "Water source",
   sourceFlow: "Available flow",
@@ -474,6 +489,8 @@ const en: Dict = {
   runTime: "Time to depth",
   source: "Source",
   charTable: "Performance table",
+  jetAngle: "Jet angle",
+  automaticNozzle: "Automatic selection",
   series: "Series",
   color: "Color",
   thread: "Thread",
@@ -522,9 +539,9 @@ const en: Dict = {
   catInfo_fixed: "Hunter Pro Fixed Nozzles. Sizes 5, 8, 10, 12, 15, 17 ft (1.5–5.2 m). Sold arcs: Q 90°, T 120°, H 180°, F 360° (5 has no T; 17 is Q and H only). Color by radius. PRS30. Do not mix with MP Rotators.",
   catInfo_short: "Hunter Short-Radius Micro Spray Nozzles. 0.6–1.8 m for tight pockets and small beds. PRS30.",
   catInfo_stream: "Hunter Stream Spray Nozzles (S-8A, S-16A). Directed streams for shrubs and beds, not a fan spray. PRS30.",
-  catInfo_rotor: "Gear-driven rotors (PGP, PGP Ultra, I-20…). Longer throw. Red nozzles #1–12 set radius and flow from Hunter tables. Run on their own zones. Stainless-riser (SS) models are the same hydraulics with a metal stem.",
+  catInfo_rotor: "Gear-driven rotors (PGP, PGP Ultra, I-20…). Radius, flow, pressure and nozzle colors depend on the model and selected nozzle. Consult its Hunter performance table. Design separate zones from MP Rotators and sprays.",
   catInfo_golf: "Hunter Golf B-series (G-70-B, G-75-B, G-80-B, G-85-B). Flanged block body, 1¼″ ACME inlet, 50–100 PSI. Not landscape I-series — keep on their own zones.",
-  catInfo_st: "Hunter ST System for stadiums and synthetic turf: ST-90, STG-900 (up to 37 m) and ST-1600 (up to 50 m). High pressure 100–120 PSI. Never mix with lawn rotors.",
+  catInfo_st: "Hunter ST System for stadiums and synthetic turf: ST-90, STG-900 and ST-1600. Each model has its own pressure, radius and flow range; see the selected nozzle performance table. Use separate zones from landscape rotors.",
   catInfo_bubbler: "Bubblers for trees and shrubs. Hunter line: MSBN multi-stream, MSBN-V for root zones, PCN nozzles, PCB flood ½″, PCB-R reclaimed, AFB adjustable, 5-CST-B dual stream. 22 models, 0.25–2.0 GPM. One zone, not mixed with sprays or MP.",
   unit_mm: "mm",
   unit_cm: "cm",
@@ -591,7 +608,7 @@ const ru: Dict = {
   colNo: "№",
   colName: "Наименование",
   colQty: "Количество",
-  ruler: "Линейка",
+  ruler: "Рулетка",
   projects: "Проекты",
   guidesRemoved: "Направляющие удалены.",
   scaleHint: "Две точки известного размера, затем фактическая длина.",
@@ -620,7 +637,7 @@ const ru: Dict = {
   drawLine: "Отрезок",
   drawPolyline: "Линия",
   drawPolygon: "Контур",
-  drawRect: "Прямоуг.",
+  drawRect: "Прямоугольник",
   drawCircle: "Круг",
   drawTriangle: "Треугольник",
   drawHexagon: "Шестигранник",
@@ -630,7 +647,7 @@ const ru: Dict = {
   drawUndoPoint: "Назад",
   drawFinish: "Готово",
   drawCancel: "Отмена",
-  drawRotRect: "Поверн. прямоуг.",
+  drawRotRect: "Повёрнутый прямоугольник",
   drawOffset: "Смещение",
   drawFillet: "Скругление",
   drawFill: "Создать область",
@@ -767,9 +784,12 @@ const ru: Dict = {
   faceNamePh: "Газон, двор…",
   layerN: "слой {n}",
   hydroNone: "Без полива",
-  hydroSun: "Солнце",
+  hydroSun: "Солнечная зона",
+  layerPurpose: "Назначение слоя",
+  layerDetails: "Подробности",
+  layerDetailsClose: "Закрыть подробности",
   hydroNormal: "Норма",
-  hydroShade: "Тень (больше вылив)",
+  hydroShade: "Теневая зона",
   area: "Площадь",
   perimeter: "Периметр",
   toPath: "Преобразовать в контур",
@@ -804,9 +824,18 @@ const ru: Dict = {
   addZone: "Добавить зону",
   autoZone: "Автораспределение зон",
   autoZoneHint: "По интенсивности, давлению и максимальному расходу зоны",
-  pumpRec: "Насос",
+  pumpRec: "Рекомендуемый насос",
+  recommendedPressure: "Рекомендуемое давление",
+  deleteSprinkler: "Удалить дождеватель",
+  selectedSprinklers: "Выбрано дождевателей: {n}",
+  assignSprinklers: "Добавить в одну зону",
+  chooseZone: "Выберите зону",
+  zonePressure: "Требуемое давление у дождевателей",
   pumpNote: "Одновременно одна зона. Насос по самой нагруженной",
-  pumpOneZone: "Рекомендация на одну зону",
+  pumpOneZone: "Самая нагруженная зона по расходу",
+  pumpBasis: "Как рассчитано",
+  pumpEstimate: "Предварительный расчёт: запас расхода 10%; условные потери в оборудовании и трубах — {loss}; перепад высот — {elevation}. Для выбора модели нужны длины, диаметры труб и рабочая кривая насоса.",
+  designGuide: "Руководство по проектированию",
   pumpNeed: "Давление источника ниже рабочего — нужен насос или станция",
   waterSource: "Источник воды",
   sourceFlow: "Доступный расход",
@@ -968,6 +997,8 @@ const ru: Dict = {
   runTime: "Время на норму",
   source: "Источник",
   charTable: "Таблица характеристик",
+  jetAngle: "Угол струи",
+  automaticNozzle: "Автоподбор",
   series: "Серия",
   color: "Цвет",
   thread: "Резьба",
@@ -1016,9 +1047,9 @@ const ru: Dict = {
   catInfo_fixed: "Hunter Pro Fixed Nozzles. Размеры 5, 8, 10, 12, 15, 17 ft (1,5–5,2 м). В продаже: Q 90°, T 120°, H 180°, F 360° (у 5 нет T; у 17 только Q и H). Цвет по радиусу. PRS30. Не смешивать с MP Rotator.",
   catInfo_short: "Hunter Short-Radius Micro Spray Nozzles. 0,6–1,8 м для узких карманов и маленьких цветников. PRS30.",
   catInfo_stream: "Hunter Stream Spray Nozzles (S-8A, S-16A). Направленные струи для кустов и посадок, не веер. PRS30.",
-  catInfo_rotor: "Роторы с шестернёй (PGP, PGP Ultra, I-20…). Дальний радиус. Красные сопла №1–12 задают радиус и расход по таблице Hunter. Свои зоны, отдельно от MP. Модели SS — тот же гидравлический ряд, шток нержавейка.",
+  catInfo_rotor: "Роторы с шестернёй (PGP, PGP Ultra, I-20…). Радиус, расход, давление и цвет сопла зависят от модели и выбранного сопла. Точные значения — в его таблице Hunter. Отдельные зоны от MP Rotator и спреев.",
   catInfo_golf: "Гольф-роторы Hunter B-серии: G-70-B, G-75-B, G-80-B, G-85-B. Фланцевый блок, вход 1¼″ ACME, 3,4–6,9 бар. Не ландшафтные I-series — отдельная зона.",
-  catInfo_st: "Hunter ST System для стадионов и искусственного газона: ST-90, STG-900 (до 37 м) и ST-1600 (до 50 м). Давление 6,9–8,3 бар. Не смешивать с обычными роторами.",
+  catInfo_st: "Hunter ST System для стадионов и искусственного газона: ST-90, STG-900 и ST-1600. У каждой модели свои пределы давления, радиуса и расхода — см. таблицу выбранного сопла. Отдельные зоны от ландшафтных роторов.",
   catInfo_bubbler: "Баблеры для деревьев и кустов. Линейка Hunter: MSBN многоструйные, MSBN-V на корневую зону, сопла PCN, PCB flood ½″, PCB-R для reclaim, AFB регулируемый, 5-CST-B двухструйный. 22 модели, 0,25–2,0 GPM. Своя зона, не со спреями и MP.",
   unit_mm: "мм",
   unit_cm: "см",
@@ -1078,7 +1109,8 @@ const es: Dict = {
   draw: "Dibujar",
   sprinklers: "Aspersores",
   autoPlace: "Colocar auto",
-  ruler: "Regla",
+  ruler: "Cinta métrica",
+  drawDim: "Cota",
   projects: "Proyectos",
   guidesRemoved: "Guías eliminadas.",
   scaleHint: "Dos puntos de un tamaño conocido y luego la longitud real.",
@@ -1253,7 +1285,8 @@ const de: Dict = {
   draw: "Zeichnen",
   sprinklers: "Regner",
   autoPlace: "Auto platzieren",
-  ruler: "Lineal",
+  ruler: "Maßband",
+  drawDim: "Maß",
   projects: "Projekte",
   guidesRemoved: "Hilfslinien gelöscht.",
   scaleHint: "Zwei Punkte bekannter Größe, dann die tatsächliche Länge.",
@@ -1421,7 +1454,8 @@ const fr: Dict = {
   draw: "Dessiner",
   sprinklers: "Arroseurs",
   autoPlace: "Placement auto",
-  ruler: "Règle",
+  ruler: "Mètre ruban",
+  drawDim: "Cote",
   projects: "Projets",
   guidesRemoved: "Guides supprimés.",
   scaleHint: "Deux points d’une taille connue, puis la longueur réelle.",
@@ -1589,7 +1623,8 @@ const pt: Dict = {
   draw: "Desenhar",
   sprinklers: "Aspersores",
   autoPlace: "Posicionar auto",
-  ruler: "Régua",
+  ruler: "Fita métrica",
+  drawDim: "Cota",
   projects: "Projetos",
   guidesRemoved: "Guias removidas.",
   scaleHint: "Dois pontos de tamanho conhecido e depois o comprimento real.",
@@ -1757,7 +1792,8 @@ const it: Dict = {
   draw: "Disegna",
   sprinklers: "Irrigatori",
   autoPlace: "Posiziona auto",
-  ruler: "Righello",
+  ruler: "Metro a nastro",
+  drawDim: "Quota",
   projects: "Progetti",
   guidesRemoved: "Guide rimosse.",
   scaleHint: "Due punti di una misura nota, poi la lunghezza reale.",
@@ -1925,7 +1961,8 @@ const zh: Dict = {
   draw: "绘制",
   sprinklers: "喷头",
   autoPlace: "自动布置",
-  ruler: "直尺",
+  ruler: "卷尺",
+  drawDim: "尺寸",
   projects: "项目",
   guidesRemoved: "辅助线已删除。",
   scaleHint: "已知尺寸的两点，然后输入实际长度。",
@@ -2093,7 +2130,8 @@ const ja: Dict = {
   draw: "作図",
   sprinklers: "スプリンクラー",
   autoPlace: "自動配置",
-  ruler: "定規",
+  ruler: "巻尺",
+  drawDim: "寸法",
   projects: "プロジェクト",
   guidesRemoved: "ガイドを削除しました。",
   scaleHint: "既知サイズの2点、続けて実寸を入力。",
@@ -2261,7 +2299,8 @@ const pl: Dict = {
   draw: "Rysuj",
   sprinklers: "Zraszacze",
   autoPlace: "Rozmieść auto",
-  ruler: "Linijka",
+  ruler: "Taśma miernicza",
+  drawDim: "Wymiar",
   projects: "Projekty",
   guidesRemoved: "Linie pomocnicze usunięte.",
   scaleHint: "Dwa punkty znanego wymiaru, potem długość rzeczywista.",
@@ -2429,7 +2468,8 @@ const trDict: Dict = {
   draw: "Çiz",
   sprinklers: "Sprinklerler",
   autoPlace: "Otomatik yerleştir",
-  ruler: "Cetvel",
+  ruler: "Şerit metre",
+  drawDim: "Ölçü",
   projects: "Projeler",
   guidesRemoved: "Kılavuzlar silindi.",
   scaleHint: "Bilinen boyutta iki nokta, sonra gerçek uzunluk.",
@@ -2581,6 +2621,109 @@ const trDict: Dict = {
 };
 
 const DICTS: Record<Locale, Dict> = { ru, en, es, de, fr, pt, it, zh, ja, pl, tr: trDict };
+for (const { id } of LOCALES) Object.assign(DICTS[id], PALETTE_TRANSLATIONS[id], WORKSPACE_TRANSLATIONS[id]);
+
+const SEGMENT_TEXT: Record<Locale, [string,string,string]> = {
+  ru:["Общая длина","Создать фигуру","Контур замкнут. Создать фигуру?"],
+  en:["Total length","Create shape","Closed contour. Create a shape?"],
+  de:["Gesamtlänge","Figur erstellen","Geschlossene Kontur. Figur erstellen?"],
+  es:["Longitud total","Crear figura","Contorno cerrado. ¿Crear figura?"],
+  fr:["Longueur totale","Créer une figure","Contour fermé. Créer une figure ?"],
+  pt:["Comprimento total","Criar figura","Contorno fechado. Criar figura?"],
+  it:["Lunghezza totale","Crea figura","Contorno chiuso. Creare una figura?"],
+  zh:["总长度","创建图形","轮廓已闭合。创建图形？"],
+  ja:["全長","図形を作成","輪郭が閉じました。図形を作成しますか？"],
+  pl:["Łączna długość","Utwórz figurę","Kontur zamknięty. Utworzyć figurę?"],
+  tr:["Toplam uzunluk","Şekil oluştur","Kontur kapandı. Şekil oluşturulsun mu?"],
+};
+for (const {id} of LOCALES) {
+  const [totalSegmentLength,createSegmentFigure,closedSegmentFigure]=SEGMENT_TEXT[id];
+  Object.assign(DICTS[id],{totalSegmentLength,createSegmentFigure,closedSegmentFigure});
+}
+
+const SEGMENT_LENGTH_NAMES: Record<Locale,string> = {ru:"Длина отрезка",en:"Segment length",de:"Streckenlänge",es:"Longitud del segmento",fr:"Longueur du segment",pt:"Comprimento do segmento",it:"Lunghezza del segmento",zh:"线段长度",ja:"線分の長さ",pl:"Długość odcinka",tr:"Doğru parçası uzunluğu"};
+for(const {id} of LOCALES) Object.assign(DICTS[id],{segmentLength:SEGMENT_LENGTH_NAMES[id]});
+
+const CURSOR_NAMES: Record<Locale,string> = {ru:"Курсор — выбор объекта",en:"Cursor — select an object",es:"Cursor — seleccionar un objeto",de:"Cursor — Objekt auswählen",fr:"Curseur — sélectionner un objet",pt:"Cursor — selecionar um objeto",it:"Cursore — seleziona un oggetto",zh:"光标 — 选择对象",ja:"カーソル — オブジェクトを選択",pl:"Kursor — wybierz obiekt",tr:"İmleç — nesne seç"};
+for (const {id} of LOCALES) Object.assign(DICTS[id],{selectionCursor:CURSOR_NAMES[id]});
+
+const LAYER_MANAGER_TEXT: Record<Locale,[string,string,string]> = {
+  ru:["Менеджер слоёв","Перемещение слоя наверх","Перемещение слоя вниз"],
+  en:["Layer manager","Bring layer to front","Send layer to back"],
+  de:["Ebenenverwaltung","Ebene ganz nach vorne","Ebene ganz nach hinten"],
+  es:["Gestor de capas","Traer capa al frente","Enviar capa al fondo"],
+  fr:["Gestionnaire de calques","Calque au premier plan","Calque à l’arrière-plan"],
+  pt:["Gestor de camadas","Trazer camada para frente","Enviar camada para trás"],
+  it:["Gestione livelli","Livello in primo piano","Livello sullo sfondo"],
+  zh:["图层管理器","图层置顶","图层置底"],
+  ja:["レイヤー管理","レイヤーを最前面へ","レイヤーを最背面へ"],
+  pl:["Menedżer warstw","Warstwa na sam wierzch","Warstwa na sam spód"],
+  tr:["Katman yöneticisi","Katmanı en öne getir","Katmanı en arkaya gönder"],
+};
+for(const {id} of LOCALES) {
+  const [layerManager,layerToFront,layerToBack]=LAYER_MANAGER_TEXT[id];
+  Object.assign(DICTS[id],{layerManager,layerToFront,layerToBack});
+}
+
+const GROUP_ORDER_TEXT: Record<Locale,[string,string]> = {
+  ru:["Перемещение группы наверх","Перемещение группы вниз"],
+  en:["Bring group to front","Send group to back"],
+  de:["Gruppe ganz nach vorne","Gruppe ganz nach hinten"],
+  es:["Traer grupo al frente","Enviar grupo al fondo"],
+  fr:["Groupe au premier plan","Groupe à l’arrière-plan"],
+  pt:["Trazer grupo para frente","Enviar grupo para trás"],
+  it:["Gruppo in primo piano","Gruppo sullo sfondo"],
+  zh:["组置顶","组置底"],
+  ja:["グループを最前面へ","グループを最背面へ"],
+  pl:["Grupa na sam wierzch","Grupa na sam spód"],
+  tr:["Grubu en öne getir","Grubu en arkaya gönder"],
+};
+for(const {id} of LOCALES) {
+  const [groupToFront,groupToBack]=GROUP_ORDER_TEXT[id];
+  Object.assign(DICTS[id],{groupToFront,groupToBack});
+}
+
+const FUSE_FIGURES_TEXT: Record<Locale,string> = {
+  ru:"Слить фигуры", en:"Fuse shapes", de:"Formen verschmelzen", es:"Fusionar figuras", fr:"Fusionner les formes",
+  pt:"Fundir formas", it:"Fondere figure", zh:"融合形状", ja:"図形を融合", pl:"Scal figury", tr:"Şekilleri kaynaştır",
+};
+for(const {id} of LOCALES) DICTS[id].fuseFigures=FUSE_FIGURES_TEXT[id];
+
+const TEXT_EDITOR_LABELS: Record<Locale,[string,string,string]> = {
+  ru:["Шрифт","Размер","Цвет"], en:["Font","Size","Color"], de:["Schriftart","Größe","Farbe"],
+  es:["Fuente","Tamaño","Color"], fr:["Police","Taille","Couleur"], pt:["Fonte","Tamanho","Cor"],
+  it:["Carattere","Dimensione","Colore"], zh:["字体","字号","颜色"], ja:["フォント","サイズ","色"],
+  pl:["Czcionka","Rozmiar","Kolor"], tr:["Yazı tipi","Boyut","Renk"],
+};
+for(const {id} of LOCALES) {
+  const [textFont,textSize,textColor]=TEXT_EDITOR_LABELS[id];
+  Object.assign(DICTS[id],{textFont,textSize,textColor});
+}
+
+const TEXT_FORMAT_LABELS: Record<Locale,[string,string,string]> = {
+  ru:["Жирный","Курсив","Подчёркнутый"],en:["Bold","Italic","Underline"],de:["Fett","Kursiv","Unterstrichen"],
+  es:["Negrita","Cursiva","Subrayado"],fr:["Gras","Italique","Souligné"],pt:["Negrito","Itálico","Sublinhado"],
+  it:["Grassetto","Corsivo","Sottolineato"],zh:["粗体","斜体","下划线"],ja:["太字","斜体","下線"],
+  pl:["Pogrubienie","Kursywa","Podkreślenie"],tr:["Kalın","İtalik","Altı çizili"],
+};
+for(const {id} of LOCALES) {
+  const [textBold,textItalic,textUnderline]=TEXT_FORMAT_LABELS[id];
+  Object.assign(DICTS[id],{textBold,textItalic,textUnderline});
+}
+
+const TEXT_VISIBILITY_LABELS: Record<Locale,[string,string]> = {
+  ru:["Скрыть надписи","Показать надписи"], en:["Hide text","Show text"],
+  de:["Texte ausblenden","Texte einblenden"], es:["Ocultar textos","Mostrar textos"],
+  fr:["Masquer les textes","Afficher les textes"], pt:["Ocultar textos","Mostrar textos"],
+  it:["Nascondi testi","Mostra testi"], zh:["隐藏文字","显示文字"], ja:["テキストを非表示","テキストを表示"],
+  pl:["Ukryj napisy","Pokaż napisy"], tr:["Yazıları gizle","Yazıları göster"],
+};
+Object.assign(DICTS.en,{hideDimensions:"Hide dimensions",showDimensions:"Show dimensions",refreshApplication:"Refresh application"});
+Object.assign(DICTS.ru,{hideDimensions:"Скрыть размеры",showDimensions:"Показать размеры",refreshApplication:"Обновить приложение"});
+for(const {id} of LOCALES) {
+  const [hideTextNotes,showTextNotes]=TEXT_VISIBILITY_LABELS[id];
+  Object.assign(DICTS[id],{hideTextNotes,showTextNotes});
+}
 
 export function tr(locale: Locale, key: string, vars?: Record<string, string | number>): string {
   const raw = DICTS[locale]?.[key] ?? DICTS.en[key] ?? key;

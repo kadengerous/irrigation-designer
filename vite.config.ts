@@ -148,6 +148,8 @@ function authPopupPlugin(): Plugin {
 // The dev server starts once `src/router.tsx` and `src/routes/` exist — see
 // AGENTS.md § "First scaffold".
 export default defineConfig(({ command, isPreview }) => ({
+  // New namespace bypasses the cached module 404 from the interrupted rollout.
+  build: { assetsDir: "assets/app" },
   server: {
     host: "0.0.0.0",
     port: 8080,

@@ -1,0 +1,638 @@
+[
+  {
+    "id": "plant-betula-pendula",
+    "russianName": "Берёза повислая",
+    "latinName": "Betula pendula",
+    "cultivar": null,
+    "aliases": [],
+    "category": "tree",
+    "photos": [
+      {
+        "url": "/landscape/betula-pendula.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Betula_pendula_001.jpg",
+        "author": "Willow",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    ],
+    "matureHeightM": {
+      "min": 9.14,
+      "max": 15.24,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/betula-pendula/"
+    },
+    "matureWidthM": {
+      "min": 3.05,
+      "max": 9.14,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/betula-pendula/"
+    },
+    "light": "Солнце; Полутень",
+    "soil": "Глинистая; Суглинок; Песчаная; Каменистая",
+    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное подсыхание",
+    "hardiness": "USDA 2a, 2b, 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b",
+    "description": "Листопадное дерево с белой корой и поникающими ветвями. Лучше развивается в прохладном климате.",
+    "water": {
+      "need": null,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/betula-pendula/",
+      "context": null,
+      "quantity": null,
+      "method": "Сочащийся шланг",
+      "wettingZone": "Корневая зона",
+      "recommendations": "Поддерживать равномерную влажность; мульчировать корневую зону, чтобы она оставалась прохладной."
+    },
+    "symbol": "deciduous",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/betula-pendula/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-pinus-sylvestris",
+    "russianName": "Сосна обыкновенная",
+    "latinName": "Pinus sylvestris",
+    "cultivar": null,
+    "aliases": [],
+    "category": "tree",
+    "photos": [
+      {
+        "url": "/landscape/pinus-sylvestris.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Skuleskogen_pine.jpg",
+        "author": "Mickaël Delcey (Silverkey)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    ],
+    "matureHeightM": {
+      "min": 9.14,
+      "max": 18.29,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/pinus-sylvestris/"
+    },
+    "matureWidthM": {
+      "min": 9.14,
+      "max": 12.19,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/pinus-sylvestris/"
+    },
+    "light": "Солнце",
+    "soil": "Глинистая; Суглинок; Песчаная",
+    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное подсыхание",
+    "hardiness": "USDA 2a, 2b, 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b",
+    "description": "Вечнозелёное хвойное дерево. С возрастом крона становится более открытой и округлой.",
+    "water": {
+      "need": null,
+      "sourceUrl": null,
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": null
+    },
+    "symbol": "conifer",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/pinus-sylvestris/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-acer-platanoides",
+    "russianName": "Клён остролистный",
+    "latinName": "Acer platanoides",
+    "cultivar": null,
+    "aliases": [],
+    "category": "tree",
+    "photos": [
+      {
+        "url": "/landscape/acer-platanoides.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Spitz-Ahorn%28mbo%29.jpg",
+        "author": "Martin Bobka (Martin120)",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+      }
+    ],
+    "matureHeightM": {
+      "min": 12.19,
+      "max": 15.24,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/acer-platanoides/"
+    },
+    "matureWidthM": {
+      "min": 9.14,
+      "max": 15.24,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/acer-platanoides/"
+    },
+    "light": "Солнце; Полутень",
+    "soil": "Глинистая; Суглинок; Каменистая",
+    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное подсыхание",
+    "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b",
+    "description": "Листопадное дерево с широкой округлой кроной и поверхностной корневой системой.",
+    "water": {
+      "need": null,
+      "sourceUrl": null,
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": null
+    },
+    "symbol": "deciduous",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/acer-platanoides/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-syringa-vulgaris",
+    "russianName": "Сирень обыкновенная",
+    "latinName": "Syringa vulgaris",
+    "cultivar": null,
+    "aliases": [],
+    "category": "shrub",
+    "photos": [
+      {
+        "url": "/landscape/syringa-vulgaris.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Lilac_Flower&Leaves%2C_SC%2C_Vic%2C_13.10.2007.jpg",
+        "author": "Jjron",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
+    "matureHeightM": {
+      "min": 2.44,
+      "max": 4.88,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/syringa-vulgaris/"
+    },
+    "matureWidthM": {
+      "min": 1.83,
+      "max": 3.66,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/syringa-vulgaris/"
+    },
+    "light": "Солнце; Полутень",
+    "soil": "Глинистая; Суглинок; Богатая органикой",
+    "moisture": "Хороший дренаж; Влажная почва",
+    "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a",
+    "description": "Листопадный кустарник с ароматными весенними соцветиями. Для цветения важен продолжительный холодный период.",
+    "water": {
+      "need": null,
+      "sourceUrl": null,
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": null
+    },
+    "symbol": "shrub",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/syringa-vulgaris/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-hydrangea-paniculata",
+    "russianName": "Гортензия метельчатая",
+    "latinName": "Hydrangea paniculata",
+    "cultivar": null,
+    "aliases": [],
+    "category": "shrub",
+    "photos": [
+      {
+        "url": "/landscape/hydrangea-paniculata.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Hydrangea_paniculata_IMG_6629.JPG",
+        "author": "Hedwig Storch",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    ],
+    "matureHeightM": {
+      "min": 2.44,
+      "max": 7.62,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/hydrangea-paniculata/"
+    },
+    "matureWidthM": {
+      "min": 1.83,
+      "max": 7.62,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/hydrangea-paniculata/"
+    },
+    "light": "Солнце; Полутень",
+    "soil": "Глинистая; Суглинок; Песчаная; Богатая органикой",
+    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное переувлажнение",
+    "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b",
+    "description": "Листопадный кустарник с крупными метёлками соцветий. Цветёт на побегах текущего года.",
+    "water": {
+      "need": "moderate",
+      "sourceUrl": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/plants-for-privacy-screening",
+      "context": "Категория Water: Medium в справочнике Missouri Botanical Garden; данные для садового выращивания.",
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": "Поверхностная корневая система. Мульча помогает сохранять условия в корневой зоне."
+    },
+    "symbol": "shrub",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/hydrangea-paniculata/",
+        "accessedAt": "2026-09-15"
+      },
+      {
+        "title": "Missouri Botanical Garden · потребность в воде",
+        "url": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/plants-for-privacy-screening",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-juniperus-communis",
+    "russianName": "Можжевельник обыкновенный",
+    "latinName": "Juniperus communis",
+    "cultivar": null,
+    "aliases": [],
+    "category": "shrub",
+    "photos": [
+      {
+        "url": "/landscape/juniperus-communis.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Jeneverbes.jpg",
+        "author": "Rasbak at Dutch Wikipedia",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
+    "matureHeightM": {
+      "min": 4,
+      "max": 8,
+      "sourceUrl": "https://www.rhs.org.uk/plants/9557/juniperus-communis/details"
+    },
+    "matureWidthM": {
+      "min": 2.5,
+      "max": 4,
+      "sourceUrl": "https://www.rhs.org.uk/plants/9557/juniperus-communis/details"
+    },
+    "light": "Солнце; полутень",
+    "soil": "Меловая; суглинок; песчаная",
+    "moisture": null,
+    "hardiness": null,
+    "description": "Вечнозелёный хвойный кустарник; форма кроны варьируется от раскидистой до колонновидной.",
+    "water": {
+      "need": null,
+      "sourceUrl": null,
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": null
+    },
+    "symbol": "conifer",
+    "sources": [
+      {
+        "title": "RHS · характеристики",
+        "url": "https://www.rhs.org.uk/plants/9557/juniperus-communis/details",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-lavandula-angustifolia",
+    "russianName": "Лаванда узколистная",
+    "latinName": "Lavandula angustifolia",
+    "cultivar": null,
+    "aliases": [],
+    "category": "shrub",
+    "photos": [
+      {
+        "url": "/landscape/lavandula-angustifolia.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Lavande_off_FR_2012.jpg",
+        "author": "JLPC",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    ],
+    "matureHeightM": {
+      "min": 0.3,
+      "max": 0.61,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/"
+    },
+    "matureWidthM": {
+      "min": 0.61,
+      "max": 0.91,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/"
+    },
+    "light": "Солнце; Полутень",
+    "soil": "Суглинок; Песчаная; Каменистая",
+    "moisture": "Хороший дренаж",
+    "hardiness": "USDA 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b, 9a, 9b",
+    "description": "Невысокий ароматный полукустарник с летним цветением. Чувствителен к застою воды.",
+    "water": {
+      "need": null,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": "Предпочтительна почва с хорошим дренажем, ближе к сухой. Переувлажнение способствует корневой гнили."
+    },
+    "symbol": "shrub",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-iris-sibirica",
+    "russianName": "Ирис сибирский",
+    "latinName": "Iris sibirica",
+    "cultivar": null,
+    "aliases": [],
+    "category": "flower",
+    "photos": [
+      {
+        "url": "/landscape/iris-sibirica.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Sibirische_Schwertlilie%2C_Iris_sibirica_06.JPG",
+        "author": "Böhringer Friedrich",
+        "license": "CC BY-SA 3.0 at",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en"
+      }
+    ],
+    "matureHeightM": {
+      "min": 0.61,
+      "max": 1.22,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/iris-sibirica/"
+    },
+    "matureWidthM": {
+      "min": 0.76,
+      "max": 0.91,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/iris-sibirica/"
+    },
+    "light": "Солнце; Полутень",
+    "soil": "Глинистая; Суглинок; Песчаная; Богатая органикой",
+    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное переувлажнение",
+    "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b",
+    "description": "Травянистый многолетник с узкими листьями и сине-фиолетовыми цветками. Предпочитает равномерно влажную почву.",
+    "water": {
+      "need": null,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/iris-sibirica/",
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": "Поддерживать равномерно влажную почву. Укоренившиеся растения переносят некоторую засуху."
+    },
+    "symbol": "flower",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/iris-sibirica/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-paeonia-lactiflora",
+    "russianName": "Пион молочноцветковый",
+    "latinName": "Paeonia lactiflora",
+    "cultivar": null,
+    "aliases": [],
+    "category": "flower",
+    "photos": [
+      {
+        "url": "/landscape/paeonia-lactiflora.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Lactiflora1b.UME.jpg",
+        "author": "Ulf Eliasson",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
+    "matureHeightM": null,
+    "matureWidthM": null,
+    "light": null,
+    "soil": null,
+    "moisture": null,
+    "hardiness": null,
+    "description": null,
+    "water": {
+      "need": null,
+      "sourceUrl": null,
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": null
+    },
+    "symbol": "flower",
+    "sources": [
+      {
+        "title": "Wikimedia Commons · определение вида",
+        "url": "https://commons.wikimedia.org/wiki/File:Lactiflora1b.UME.jpg",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-hemerocallis-fulva",
+    "russianName": "Лилейник буро-жёлтый",
+    "latinName": "Hemerocallis fulva",
+    "cultivar": null,
+    "aliases": [],
+    "category": "flower",
+    "photos": [
+      {
+        "url": "/landscape/hemerocallis-fulva.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:H%C3%A9m%C3%A9rocalle_fauve_%28Hemerocallis_fulva%29_en_juin.jpg",
+        "author": "JackyM59",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    ],
+    "matureHeightM": {
+      "min": 0.91,
+      "max": 1.83,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/hemerocallis-fulva/"
+    },
+    "matureWidthM": {
+      "min": 0.61,
+      "max": 0.76,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/hemerocallis-fulva/"
+    },
+    "light": "Солнце; Полутень",
+    "soil": "Суглинок; Богатая органикой",
+    "moisture": "Хороший дренаж",
+    "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b",
+    "description": "Корневищный многолетник с оранжевыми цветками. Быстро образует плотные разрастающиеся куртины.",
+    "water": {
+      "need": "moderate",
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/hemerocallis-fulva/",
+      "context": "Умеренная потребность по NC State Extension. Не является нормой в литрах.",
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": null
+    },
+    "symbol": "flower",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/hemerocallis-fulva/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-echinacea-purpurea",
+    "russianName": "Эхинацея пурпурная",
+    "latinName": "Echinacea purpurea",
+    "cultivar": null,
+    "aliases": [],
+    "category": "flower",
+    "photos": [
+      {
+        "url": "/landscape/echinacea-purpurea.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Echinacea_purpurea_Grandview_Prairie.jpg",
+        "author": "Eric Hunt",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    ],
+    "matureHeightM": {
+      "min": 0.91,
+      "max": 1.22,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/"
+    },
+    "matureWidthM": {
+      "min": 0.3,
+      "max": 0.61,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/"
+    },
+    "light": "Солнце; Полутень",
+    "soil": "Глинистая; Суглинок; Песчаная; Богатая органикой; Каменистая",
+    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное подсыхание",
+    "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b",
+    "description": "Травянистый многолетник с розово-пурпурными соцветиями. После укоренения переносит засуху.",
+    "water": {
+      "need": null,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": "Предпочитает влажный, хорошо дренированный суглинок; после укоренения переносит засуху."
+    },
+    "symbol": "flower",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-hosta-plantaginea",
+    "russianName": "Хоста подорожниковая",
+    "latinName": "Hosta plantaginea",
+    "cultivar": null,
+    "aliases": [],
+    "category": "flower",
+    "photos": [
+      {
+        "url": "/landscape/hosta-plantaginea.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Hosta_plantaginea_Funkia_babkowata_01.jpg",
+        "author": "Agnieszka Kwiecień (Nova)",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    ],
+    "matureHeightM": {
+      "min": 0.3,
+      "max": 0.61,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/hosta-plantaginea/"
+    },
+    "matureWidthM": {
+      "min": 0.91,
+      "max": 1.22,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/hosta-plantaginea/"
+    },
+    "light": "Солнце; Полутень; Рассеянный свет; Тень",
+    "soil": "Суглинок; Богатая органикой",
+    "moisture": "Хороший дренаж; Влажная почва",
+    "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b, 9a, 9b",
+    "description": "Многолетник с широкими зелёными листьями и крупными ароматными белыми цветками.",
+    "water": {
+      "need": null,
+      "sourceUrl": "https://plants.ces.ncsu.edu/plants/hosta-plantaginea/",
+      "context": null,
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": "Поддерживать влажную, хорошо дренированную почву. На солнце особенно важно сохранять достаточную влажность."
+    },
+    "symbol": "flower",
+    "sources": [
+      {
+        "title": "NC State Extension · характеристики",
+        "url": "https://plants.ces.ncsu.edu/plants/hosta-plantaginea/",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  },
+  {
+    "id": "plant-hydrangea-paniculata-limelight",
+    "russianName": "Гортензия метельчатая",
+    "latinName": "Hydrangea paniculata",
+    "cultivar": "Limelight",
+    "aliases": [
+      "Лаймлайт"
+    ],
+    "category": "shrub",
+    "photos": [
+      {
+        "url": "/landscape/hydrangea-paniculata-limelight.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Hydrangea_paniculata_Limelight_5zz.jpg",
+        "author": "David J. Stang",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    ],
+    "matureHeightM": {
+      "min": 1.83,
+      "max": 2.44,
+      "sourceUrl": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/hydrangeas-for-the-midwest"
+    },
+    "matureWidthM": {
+      "min": 1.83,
+      "max": 2.44,
+      "sourceUrl": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/hydrangeas-for-the-midwest"
+    },
+    "light": "Солнце; Полутень",
+    "soil": null,
+    "moisture": null,
+    "hardiness": null,
+    "description": null,
+    "water": {
+      "need": "moderate",
+      "sourceUrl": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/hydrangeas-for-the-midwest",
+      "context": "Water: Medium. Справочник для садов Среднего Запада США.",
+      "quantity": null,
+      "method": null,
+      "wettingZone": null,
+      "recommendations": null
+    },
+    "symbol": "shrub",
+    "sources": [
+      {
+        "title": "Missouri Botanical Garden · сорт Limelight",
+        "url": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/hydrangeas-for-the-midwest",
+        "accessedAt": "2026-09-15"
+      }
+    ]
+  }
+]

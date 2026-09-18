@@ -1,5 +1,5 @@
 import { faceHoles, facePoints } from "@/lib/cad/engine";
-import { isExclusion, isIrrigationTarget, type CadDrawing, type CadFace } from "@/lib/cad/types";
+import { irrigationRegionType, isExclusion, isIrrigationTarget, type CadDrawing, type CadFace } from "@/lib/cad/types";
 import { pointInPoly, type Pt } from "@/lib/geometry";
 
 export type IrrigPatch = {
@@ -13,9 +13,10 @@ const SPRAY_METHODS = new Set(["spray", "mp", "rotor"]);
 
 function wantsSprinklers(f: CadFace): boolean {
   if (f.hidden) return false;
+  if (f.hydro?.purpose === "none") return false;
   if (f.hydro?.method === "none" || f.hydro?.method === "drip" || f.hydro?.method === "bubbler") return false;
   if (f.hydro && SPRAY_METHODS.has(f.hydro.method)) return true;
-  return isIrrigationTarget(f.type);
+  return isIrrigationTarget(irrigationRegionType(f));
 }
 
 export function siteLoop(d: CadDrawing): Pt[] | null {
@@ -30,7 +31,8 @@ export function exclusionLoops(d: CadDrawing): Pt[][] {
   const out: Pt[][] = [];
   for (const f of Object.values(d.faces)) {
     if (f.hidden) continue;
-    if (isExclusion(f.type) || f.type === "water") {
+    const type = irrigationRegionType(f);
+    if (isExclusion(type) || type === "water") {
       const pts = facePoints(d, f.id);
       if (pts.length >= 3) out.push(pts);
     }

@@ -60,7 +60,10 @@ test("seven themes: exact palettes, contrast, legacy migration and isolated pers
     for (const [id, bg, surface, accent] of expected) {
       const palette = themePreview(id), vars = themeVars(id);
       assert.deepEqual([palette.bg, palette.surface, palette.btn], [bg, surface, accent]);
+      assert.match(vars["--mobile-panel-glass"], /\/(?: 58| 66)%\)$/);
       assert.equal(canvasTheme(id).bg, bg);
+      assert.equal(canvasTheme(id).accent, vars["--color-btn"]);
+      assert.equal(canvasTheme(id).guideAligned, vars["--color-btn"], id + " construction follows theme");
       for (const [fg, background] of [
         ["--color-ink", "--color-surface"], ["--color-muted", "--color-surface"],
         ["--color-tool-fg", "--color-tool"], ["--color-btn-fg", "--color-btn"],

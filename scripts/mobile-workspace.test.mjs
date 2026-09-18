@@ -5,6 +5,19 @@ import { createServer } from "vite";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
+test("layer manager keeps a vertical reorder list and exposes front/back actions", async () => {
+  const app=await readFile(new URL("../src/components/designer/designer-app.tsx",import.meta.url),"utf8");
+  const layers=await readFile(new URL("../src/components/designer/mobile-workspace.tsx",import.meta.url),"utf8");
+  const css=await readFile(new URL("../src/styles.css",import.meta.url),"utf8");
+  assert.match(app,/layerManagerOpen && <section className="mobile-layer-manager"/);
+  assert.match(app,/<MobileLayers manager selectedFirst=\{false\} onEdit=\{id=>/);
+  assert.match(app,/aria-pressed=\{layerManagerOpen\}/);
+  assert.match(layers,/const next=front \? \[key,\.\.\.rest\] : \[\.\.\.rest,key\]/);
+  assert.match(layers,/if\(member\) st.reorderGroupMembers\(next\); else st.reorderLayers\(next\)/);
+  assert.match(css,/mobile-layer-manager > \.mobile-layers-list \{ overflow-y:auto/);
+  assert.match(css,/layer-purpose-options \{ display:grid; grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+});
+
 test("phone grid taps, hold suppression, preview gestures and desktop guards", async () => {
   const app = await readFile(new URL("../src/components/designer/designer-app.tsx", import.meta.url), "utf8");
   const button = await readFile(new URL("../src/components/designer/mobile-grid-button.tsx", import.meta.url), "utf8");
@@ -29,9 +42,10 @@ test("phone grid taps, hold suppression, preview gestures and desktop guards", a
   assert.match(header, /aria-label=\{t\("library"\)\}/);
   assert.doesNotMatch(header, /<Layers \/>|<Crosshair size=\{22\} \/>|aria-label="Предпросмотр"/);
   assert.match(footer, /<Layers \/>/);
-  assert.match(footer, /<Crosshair size=\{22\} \/>/);
-  assert.match(footer, /aria-label="Предпросмотр"/);
-  assert.match(app, /isPhone && mobilePreview && <MobilePreview/);
+  assert.match(footer, /\{viewControls\}/);
+  assert.match(app, /<Crosshair size=\{22\} \/>/);
+  assert.match(app, /aria-label=\{t\("preview"\)\}/);
+  assert.match(app, /\{projectPreview && <MobilePreview/);
   assert.match(canvas, /listening=\{!readOnly\}/);
   assert.match(canvas, /if \(readOnly\) return \(\) => ro.disconnect\(\)/);
   assert.match(canvas, /if \(readOnly\) return;\s*if \(size.w/);
@@ -220,12 +234,14 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.match(app, /<Popover\.Root modal=\{!isPhone\} open=\{gridOpen\}/);
   assert.match(app, /<Popover\.Trigger asChild><Button[\s\S]*?aria-label=\{`\$\{t\("gridStep"\)/);
   assert.match(app, /<Popover\.Portal>\s*<Popover\.Content side=\{isPhone \? "bottom" : "top"\}/);
-  const topControls = app.slice(app.indexOf('<nav className="mobile-canvas-controls"'), app.indexOf("</nav>", app.indexOf('<nav className="mobile-canvas-controls"')));
+  const topControls = app.slice(app.indexOf('<nav className="mobile-canvas-controls"'), app.indexOf("</nav>", app.indexOf('<nav className="mobile-canvas-controls"')))
+    .replace("{selectionControls}", app.slice(app.indexOf("const selectionControls ="), app.indexOf("const viewControls =")))
+    .replace("{viewControls}", app.slice(app.indexOf("const viewControls ="), app.indexOf("const contextControls =")));
   assert.ok(app.indexOf('<nav className="mobile-canvas-controls"') > app.indexOf("<footer"), "canvas controls belong in the phone footer");
-  assert.ok(topControls.indexOf('aria-label="Выбрать несколько фигур"') < topControls.indexOf('aria-label="Объединить выбранные фигуры"'));
-  assert.ok(topControls.indexOf('aria-label="Объединить выбранные фигуры"') < topControls.indexOf('aria-label={t("drawDim")}'));
+  assert.ok(topControls.indexOf('aria-label={t("selectMultiple")}') < topControls.indexOf('aria-label={t("mergeSelectedLayers")}'));
+  assert.ok(topControls.indexOf('aria-label={t("mergeSelectedLayers")}') < topControls.indexOf('aria-label={t("drawDim")}'));
   assert.ok(topControls.indexOf('aria-label={t("drawDim")}') < topControls.indexOf('aria-label={t("ruler")}'));
-  assert.ok(topControls.indexOf('aria-label="Предпросмотр"') < topControls.indexOf('aria-label={t("layers")}'));
+  assert.ok(topControls.indexOf('aria-label={t("preview")}') < topControls.indexOf('aria-label={t("layers")}'));
   assert.ok(topControls.indexOf('aria-label={t("layers")}') < topControls.indexOf('{gridControls}'));
   assert.match(css, /\.app-header \.scroll-touch \{ overflow-x: auto/);
   assert.match(topControls, /\{gridControls\}/);
@@ -245,7 +261,7 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.match(css, /\.layer-details-compact \{ width: var\(--radix-popover-trigger-width\)/);
   assert.match(css, /\.layer-details-compact \.layer-dialog-body \{ display: flex/);
   assert.doesNotMatch(helper, /layer-delete-button/);
-  assert.match(helper, /!deleting && face && <dl className="layer-detail-stats">/);
+  assert.match(helper, /!confirming && face && <dl className="layer-detail-stats">/);
   assert.doesNotMatch(app, /mobile-context-chip/);
   assert.match(app, /compact=\{mobilePanel === "properties" && !selected\}/);
   assert.match(css, /\.mobile-layer \{ --layer-radius: 10px/);
@@ -263,7 +279,7 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.match(app, /className="mobile-top-layers"/);
   assert.doesNotMatch(app, /className="mobile-mode-switch"/);
   assert.match(helper, /<LayerColorPicker title=\{title\}/);
-  assert.match(css, /\.mobile-layer :is\(\.layer-visibility, \.layer-lock\)\[aria-pressed="true"\] \{ color: #ff172c/);
+  assert.match(css, /\.mobile-layer \.layer-lock\[aria-pressed="true"\] \{ color: #ff172c/);
   assert.match(css, /\.layer-eye\[data-hidden="true"\]::after/);
   assert.match(app, /mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet/);
   assert.match(app, /isPhone && !catalogGhost && \(mobilePanel === "tools" \|\| mobileWorkspaceMode === "irrigation" \|\| mobileLayersVisible\) && <div className="mobile-top-overlays">/);
@@ -279,9 +295,9 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.match(helper, /className="mobile-icon-button layer-duplicate"[^>]*aria-label=\{`Дублировать:/);
   assert.match(helper, /className="mobile-icon-button layer-edit"[^>]*aria-label=\{`Редактировать:/);
   assert.match(helper, /className="mobile-icon-button layer-delete-direct text-danger"[^>]*aria-label=\{`Удалить:/);
-  assert.match(app, /aria-label="Выбрать несколько фигур"[^>]*aria-pressed=\{mobileMultiSelect\}/);
-  assert.match(app, /aria-label="Объединить выбранные фигуры"/);
-  assert.match(app, /multiSelect=\{isPhone && mobileMultiSelect\}/);
+  assert.match(app, /aria-label=\{t\("selectMultiple"\)\}[^>]*aria-pressed=\{workspaceMultiSelect[^}]*\}/);
+  assert.match(app, /aria-label=\{t\("mergeSelectedLayers"\)\}/);
+  assert.match(app, /multiSelect=\{workspaceMultiSelect[^}]*\}/);
   assert.match(app, /mobile=\{isPhone\}/);
   assert.match(canvas, /if \(!st\.tool \|\| st\.tool === "move" \|\| multiSelect\)/);
   assert.match(canvas, /if \(!mobile && cands\.length > 1\)/);
@@ -289,7 +305,8 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.match(app, /className="mobile-tool-stack"/);
   assert.match(css, /\.mobile-top-overlays \{ position: absolute; top: 4px;[^}]*display: grid/);
   assert.match(css, /\.mobile-tool-stack \{ position: relative;[^}]*display: grid/);
-  assert.match(css, /\.mobile-tool-stack \.mobile-parameter-bar \{ position: relative; inset: auto; width: 100%; \}/);
+  assert.doesNotMatch(css, /\.mobile-tool-stack \.mobile-parameter-bar \{ position: relative/);
+  assert.ok(app.indexOf('className="mobile-parameter-bar mobile-tool-parameter-bar"') > app.indexOf('<footer className="app-footer'), "dimensions render below the drawing and above the dock");
   assert.match(css, /\.mobile-tool-strip \{[^}]*display: grid; grid-auto-flow: column[^}]*overflow: hidden/);
   assert.match(css, /\.mobile-tool-strip button \{[^}]*max-width: 44px[^}]*aspect-ratio: 1/);
   assert.match(app, /aria-label="Инструменты" aria-pressed=\{mobilePanel === "tools"\}/);
@@ -297,15 +314,17 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.match(css, /\.app-footer button \{ width: 38px; min-width: 38px; height: 38px/);
   assert.match(css, /\.app-footer \.mobile-canvas-controls button \{ width: 38px; min-width: 38px; height: 38px/);
   assert.match(css, /@media \(max-width: 400px\) \{\s*\.app-shell\[data-mobile="true"\] \.app-footer \.mobile-canvas-controls button \{ width: 34px/);
-  assert.match(topControls, /aria-label="Выбрать несколько фигур"/);
-  assert.match(topControls, /aria-label="Объединить выбранные фигуры"/);
+  assert.match(topControls, /aria-label=\{t\("selectMultiple"\)\}/);
+  assert.match(topControls, /aria-label=\{t\("mergeSelectedLayers"\)\}/);
   assert.match(topControls, /aria-label=\{t\("drawDim"\)\}/);
   assert.match(topControls, /aria-label=\{t\("ruler"\)\}/);
   assert.match(css, /\.layer-delete-direct \{ color: #ff172c !important; \}/);
   assert.match(css, /\.layer-delete-direct svg \{ width: 20px; height: 20px; stroke-width: 1\.8; \}/);
-  assert.match(helper, /align=\{deleting \? "end" : "start"\} sideOffset=\{2\}/);
+  assert.match(helper, /align=\{confirming \? "end" : "start"\} sideOffset=\{2\}/);
+  assert.match(helper, /if \(!open\) \{ setDeleting\(false\); setSplitting\(false\); \}/);
+  assert.match(helper, /onInteractOutside=\{\(e\) => \{ if \(confirming\) e\.preventDefault\(\); \}\}/);
   assert.match(css, /\.layer-details-compact\[data-confirming="true"\] \{ width: var\(--radix-popover-trigger-width\)/);
-  assert.match(css, /\.mobile-layer-confirm button \{ width: 96px;[^}]*height: 30px/);
+  assert.match(css, /\.layer-details-compact\[data-confirming="true"\] \.mobile-layer-confirm button \{ width: 100%;[^}]*min-height: 28px/);
   assert.match(css, /\.mobile-layer-confirm button\.text-danger \{ color: #ff172c/);
   assert.match(css, /\.mobile-top-layers \.mobile-layer \{ flex: 0 0 100%/);
   assert.match(css, /\.mobile-top-layers \{ position: relative/);
@@ -323,14 +342,21 @@ test("layer details and grid-step controls are portalled outside clipped panels 
   assert.doesNotMatch(details, /<h2|<header|Переименовать|setPalette|onEdit\(id\)|lockSelected/);
   assert.doesNotMatch(details, /layer-delete-button/);
   assert.match(details, /\{deleting && <div className="mobile-layer-menu">/);
-  assert.match(details, /faceArea\(d, id\)/);
-  assert.match(details, /facePerimeter\(d, id\)/);
+  assert.match(details, /layerArea\(d, id\)/);
+  assert.match(details, /layerPerimeter\(d, id\)/);
+  assert.match(app, /mobileFaceDimensions\.push\(\{ label: t\("area"\), value: faceArea\(mobileDrawing, mobileFace\.id\), kind: "area" \}\)/);
+  assert.match(app, /mobileFace\.rect && rectMetaMatchesFace[\s\S]*mobileFaceDimensions\.push\(\{ label: t\("drawWidth"\)[\s\S]*\{ label: t\("drawHeight"\)/);
+  assert.match(app, /dimension\.kind === "area" \? formatAreaU\(dimension\.value, units\.area\) : formatLenU/);
   assert.match(css, /\.mobile-layer-heading \{[^}]*height: 44px/);
   assert.match(css, /\.mobile-layer-select > span:last-child \{[^}]*text-overflow: ellipsis; white-space: nowrap/);
   assert.match(css, /\.grid-step-pop \{[^}]*--radix-popover-content-available-height/);
-  assert.match(css, /\.app-shell\[data-mobile="true"\] :is\(\.project-menu, \.mobile-sheet, \.mobile-tool-strip-panel, \[role="dialog"\]\)/);
-  assert.match(css, /\.grid-step-pop\[data-mobile="true"\],[\s\S]*\.layer-color-popover,[\s\S]*\.layer-details-dialog/);
-  assert.match(css, /backdrop-filter: blur\(16px\) saturate\(115%\)/);
+  assert.match(css, /\.app-shell\[data-mobile="true"\] :is\([\s\S]*\.app-header,[\s\S]*\.app-footer,[\s\S]*\.mobile-top-layers \.mobile-layer,[\s\S]*\.mobile-parameter-bar,[\s\S]*\[role="dialog"\][\s\S]*\)/);
+  assert.match(css, /\.grid-step-pop,[\s\S]*\.layer-color-popover,[\s\S]*\.layer-details-dialog/);
+  assert.match(css, /\.layer-color-popover \.mobile-palette \{[^}]*grid-template-rows: repeat\(3, auto\)[^}]*align-items: start/);
+  assert.match(css, /\.layer-color-popover \.mobile-palette > :is\(button, \.custom-color-swatch\) \{[^}]*min-width: 0; min-height: 0;[^}]*aspect-ratio: 1 \/ 1/);
+  assert.match(css, /background: var\(--mobile-panel-glass\)/);
+  assert.match(css, /backdrop-filter: blur\(10px\) saturate\(112%\)/);
+  assert.match(css, /button:not\(\[aria-pressed="true"\]\):not\(\.bg-btn\):not\(\.bg-danger\) \{\s*background-color: transparent/);
   assert.doesNotMatch(css, /\.app-shell\[data-mobile="true"\] \.grid-step-pop/);
 });
 
@@ -359,17 +385,25 @@ test("compact layer palette offers persistent material textures", async () => {
   const types = await readFile(new URL("../src/lib/cad/types.ts", import.meta.url), "utf8");
   const css = await readFile(new URL("../src/styles.css", import.meta.url), "utf8");
   const assets = (await readdir(new URL("../public/materials/", import.meta.url))).filter((name) => name.endsWith(".png"));
-  assert.equal(assets.length, 12);
-  assert.equal((types.match(/id: "texture:/g) ?? []).length, 12);
-  assert.match(helper, /<h3>Цвета<\/h3>/);
-  assert.match(helper, /<h3>Материалы<\/h3>/);
+  assert.equal(assets.length, 20);
+  const texturePaths = [...types.matchAll(/src: "\/materials\/([^\"]+)"/g)].map((match) => match[1]);
+  assert.equal(texturePaths.length, 20);
+  assert.deepEqual(new Set(texturePaths), new Set(assets), "every material references a shipped texture");
+  for (const name of texturePaths) {
+    const image = await readFile(new URL(`../public/materials/${name}`, import.meta.url));
+    assert.equal(image.subarray(1, 4).toString(), "PNG", `${name} is a PNG image`);
+  }
+  const fills = types.match(/export const FACE_FILLS = \[([\s\S]*?)\] as const/)[1].match(/"(?:transparent|#[a-f0-9]+)"/g);
+  assert.equal(fills.length + 1, 27, "preset colors and custom picker fill all three nine-column rows");
+  assert.match(helper, /<h3>\{t\("paletteColors"\)\}<\/h3>/);
+  assert.match(helper, /<h3>\{t\("paletteMaterials"\)\}<\/h3>/);
   assert.match(helper, /FACE_TEXTURES\.map/);
-  assert.match(css, /\.layer-color-popover \{[^}]*box-sizing: border-box[^}]*width: calc\(100vw - 8px\)/);
+  assert.match(css, /\.layer-color-popover \{[^}]*box-sizing: border-box[^}]*width: min\(560px, calc\(100vw - 8px\)\)/);
   assert.match(helper, /align="center" sideOffset=\{4\} collisionPadding=\{4\}/);
   assert.match(css, /\.layer-color-popover \.mobile-palette \{ grid-template-columns: repeat\(9, minmax\(0, 1fr\)\); grid-template-rows: repeat\(3, auto\)/);
-  assert.match(css, /\.material-palette \{[^}]*grid-template-rows: repeat\(2, 58px\)/);
-  assert.match(css, /grid-auto-columns: 58px/);
-  assert.match(helper, /type="color" aria-label="Свой цвет"/);
+  assert.match(css, /\.material-palette \{[^}]*grid-template-columns: repeat\(6, minmax\(0, 1fr\)\); grid-template-rows: repeat\(3, auto\)/);
+  assert.match(css, /\.layer-color-popover \.material-palette > button\[type="button"\] \{[^}]*min-width: 0;[^}]*min-height: 0; aspect-ratio: 1 \/ 1/);
+  assert.match(helper, /type="color" aria-label=\{t\("paletteCustomColor"\)\}/);
   assert.match(helper, /data-transparent=\{swatch === "transparent"\}/);
   assert.match(css, /button\[data-transparent="true"\]::after/);
   assert.match(canvas, /fillPatternImage: texture/);

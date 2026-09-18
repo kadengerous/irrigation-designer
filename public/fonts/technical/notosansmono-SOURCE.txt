@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmono/NotoSansMono%5Bwdth%2Cwght%5D.ttf
+https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmono/OFL.txt

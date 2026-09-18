@@ -1,5 +1,6 @@
 import type { MeasureUnit, Pt } from "@/lib/geometry";
 import type { CadDrawing, RegionType } from "@/lib/cad/types";
+import type { TextureSize } from "@/lib/cad/texture-mapping";
 
 export type { MeasureUnit, Pt };
 export type { CadDrawing, RegionType };
@@ -72,6 +73,7 @@ export type Geom = {
   kind: PolyKind;
   points: Pt[];
   closed: boolean;
+  holes?: Pt[][];
   locked: boolean;
   hidden: boolean;
   /** Circle radius in metres; ignored otherwise. */
@@ -79,6 +81,8 @@ export type Geom = {
   ellipse?: { cx: number; cy: number; rx: number; ry: number; rot?: number };
   cadType?: RegionType;
   fill?: string;
+  textureRotation?: 0 | 90;
+  textureSize?: TextureSize;
   name?: string;
 };
 
@@ -128,6 +132,8 @@ export type WaterSource = {
 };
 
 export type ProjectMeta = {
+  climateZone?: string | null;
+  season?: string | null;
   address: string;
   client: string;
   person: string;

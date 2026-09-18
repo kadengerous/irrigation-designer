@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/google/fonts/main/ofl/robotomono/RobotoMono%5Bwght%5D.ttf
+https://raw.githubusercontent.com/google/fonts/main/ofl/robotomono/OFL.txt

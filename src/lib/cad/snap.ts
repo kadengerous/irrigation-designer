@@ -22,6 +22,7 @@ export function cadSnap(
     angleFrom?: Pt | null;
     closeTo?: Pt | null;
     heads?: Pt[];
+    excludePlant?: string;
   },
 ): SnapHit {
   const pxTol =
@@ -53,8 +54,23 @@ export function cadSnap(
   }
 
   if (opts.snapOn) {
+    if (d.layers?.plants?.visible !== false) for (const plant of Object.values(d.plants ?? {})) {
+      if (plant.id === opts.excludePlant) continue;
+      consider({ x: plant.x, y: plant.y }, "center");
+      const dx = p.x - plant.x, dy = p.y - plant.y, length = Math.hypot(dx, dy);
+      if (length > 1e-6) consider({ x: plant.x + dx / length * plant.r, y: plant.y + dy / length * plant.r }, "tangent");
+    }
     for (const v of nearbyVerts(d, p, cell)) consider(vertPt(v), "end", { vertexId: v.id });
     for (const f of Object.values(d.faces)) {
+      if (f.segment && !f.hidden && f.spline) {
+        for (const point of f.spline.pts) consider(point, "end", { faceId: f.id });
+        const [a,b]=f.spline.pts;
+        if(a && b) {
+          const dx=b.x-a.x,dy=b.y-a.y;
+          const t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/(dx*dx+dy*dy || 1)));
+          consider({x:a.x+t*dx,y:a.y+t*dy},"edge",{faceId:f.id});
+        }
+      }
       if (f.circle) {
         consider({ x: f.circle.cx, y: f.circle.cy }, "center", { faceId: f.id });
         const r = f.circle.r;
@@ -79,7 +95,7 @@ export function cadSnap(
       const aby = b.y - a.y;
       const t = ((p.x - a.x) * abx + (p.y - a.y) * aby) / (abx * abx + aby * aby || 1);
       const tc = Math.max(0, Math.min(1, t));
-      consider({ x: a.x + abx * tc, y: a.y + aby * tc }, t > 0.02 && t < 0.98 ? "edge" : "end", { edgeId: ed.id });
+      consider({ x: a.x + abx * tc, y: a.y + aby * tc }, "edge", { edgeId: ed.id });
     }
     const max = Math.min(nearby.length, 40);
     for (let i = 0; i < max; i++) {

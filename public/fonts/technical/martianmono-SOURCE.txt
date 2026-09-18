@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/google/fonts/main/ofl/martianmono/MartianMono%5Bwdth%2Cwght%5D.ttf
+https://raw.githubusercontent.com/google/fonts/main/ofl/martianmono/OFL.txt

@@ -1,9 +1,19 @@
 "use client";
 
+import { FloatingToolbar, AdaptiveTooltip, WorkspacePanelBounds, WorkspaceTooltips } from "./floating-workspace";
+import { TapeMeasureIcon } from "./tape-measure-icon";
+import { SprinklerIcon } from "./sprinkler-icon";
+import { MeasurementResult } from "./measurement-result";
+import { CatalogSeriesInfo, CatalogThumb, CatalogReference } from "./catalog-details";
+import { sliderRange } from "@/lib/slider-range";
+import { headParameterRanges } from "@/lib/head-adjustment";
+import { LandscapeLibrary, PlantInspector, PlantPlacementHint } from "./landscape-library";
+
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import * as Popover from "@radix-ui/react-popover";
 import {
+  Trees,
   ChevronLeft,
   ChevronRight,
   Circle,
@@ -23,20 +33,18 @@ import {
   ImageDown,
   LayoutGrid,
   Layers,
-  Combine,
+  Layers2,
   Magnet,
   Maximize2,
+  MonitorPlay,
   Menu,
   Minus,
   MoreHorizontal,
   MousePointer2,
   MoveHorizontal,
-  PaintBucket,
   Pencil,
-  Play,
   Plus,
   Redo2,
-  Ruler,
   Save,
   Scissors,
   Settings,
@@ -51,32 +59,33 @@ import {
   X,
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
-import { setActiveLocale, setNumberPrefs, tr } from "@/lib/i18n";
+import { formatNumber, setActiveLocale, setNumberPrefs, tr } from "@/lib/i18n";
 import { applyTheme } from "@/lib/theme";
-import { formatAreaU, formatFlowU, formatGridStep, formatLenU, formatPressureU, fromM2, fromMeters, lenLabel, areaLabel, LENGTH_OPTS, toM2, toMetersLen } from "@/lib/units";
+import { flowLabel, fromLpm, formatAreaU, formatFlowU, formatGridStep, formatLenU, formatPressureU, fromM2, fromMeters, lenLabel, areaLabel, LENGTH_OPTS, toM2, toMetersLen } from "@/lib/units";
 import { SettingsPanel } from "@/components/designer/settings-panel";
 import { layoutOnDrawing, layoutOnPolygon } from "@/lib/auto-layout";
 import { checkProject } from "@/lib/check-project";
 import { coverageStats, exclusionPolygons, lawnPolygon } from "@/lib/coverage";
-import { CATEGORIES, bodiesFor, bomLineName, catalogPhoto, categoryPhoto, defaultBodyFor, itemById, nozzleRange, placeableCatalog, popUpHeights, workingPressureBar, type CatalogItem } from "@/lib/hunter-catalog";
-import { docsForFamily } from "@/lib/hunter-docs";
+import { CATEGORIES, bodiesFor, bomLineName, catalogPhoto, defaultBodyFor, defaultNozzle, itemById, nozzleRange, placeableCatalog, stripAtPressure, workingPressureBar, type CatalogItem } from "@/lib/hunter-catalog";
 import { exportDxf, exportEstimateExcel, exportEstimatePdf, exportEstimateWord, exportPdf, exportPdfFromProject, exportPng, exportPngFromProject, exportProjectJson, exportSvg } from "@/lib/export-plan";
 import { downloadProjectFile, fileStem, parseProjectFile, toProjectFile } from "@/lib/project-file";
-import { downloadSourceZip } from "@/lib/download-source";
-import { headFlow, runTimeMin, totalAreaPrecip } from "@/lib/flow";
+import { catalogHeadDefaults, computeFlow, pressureRange, headFlow, runTimeMin, totalAreaPrecip } from "@/lib/flow";
 import { closedPathSideStarts, dist, fmt1, fmtM, headingDeg, parseMeasureUnit, pointInPoly, polygonArea, toMeters, uid, type Pt } from "@/lib/geometry";
 import { parseCadInput } from "@/lib/cad/parse";
-import { arcLength, drawingOrMigrate, faceArea, faceCentroid, faceEdges, faceLayerNumber, facePerimeter, facePoints, headInsideFace, isDrawnCurveFace, isInternalEdge, isTriangleFace, rectMetaMatchesFace, rectWorldCorners, setFaceSideLength, triangleMetrics, unionFaces } from "@/lib/cad/engine";
-import { CAD_LAYERS, FACE_FILLS, FACE_TEXTURES, REGION_FILL, layerForType } from "@/lib/cad/types";
-import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, recommendPump } from "@/lib/hydro";
+import { arcLength, catmullRom, faceArea, faceCentroid, faceEdges, faceLayerNumber, facePerimeter, facePoints, headInsideFace, isDrawnCurveFace, isInternalEdge, isTriangleFace, rectMetaMatchesFace, rectWorldCorners, setFaceSideLength, triangleMetrics, mergeLayers, layerFaceIds, layerRepresentatives, layerArea, layerBounds } from "@/lib/cad/engine";
+import { segmentFigures, createSegmentFigure } from "@/lib/cad/segment-figures";
+import { fusionCandidates, fuseFigures } from "@/lib/cad/fuse-figures";
+import { CAD_LAYERS, REGION_FILL, layerForType } from "@/lib/cad/types";
+import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, recommendPump, zoneFlow, zonePressure } from "@/lib/hydro";
+import { HeadSelectionActions } from "./head-selection-actions";
 import { type Head, type Project, zoneColor } from "@/lib/project-types";
-import { isNamed, useProject } from "@/lib/project-store";
+import { isNamed, useProject, drawingForEditing as drawingOrMigrate } from "@/lib/project-store";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CanvasHost } from "@/components/designer/canvas-host";
 import { MobilePreview } from "@/components/designer/mobile-preview";
 import { MobileGridButton } from "@/components/designer/mobile-grid-button";
-import { MobileLayers, MobileSheet, selectedObjectKey, usePhoneWorkspace, useWorkspaceViewport, type MobilePanel } from "@/components/designer/mobile-workspace";
+import { changeMaterialOrientation, layerTitle, LayerColorPicker, MobileLayers, MobileSheet, selectedObjectKey, usePhoneWorkspace, useWorkspaceViewport, type MobilePanel } from "@/components/designer/mobile-workspace";
 
 const MEASURE_SUBS: { id: "measure" | "guide"; key: string }[] = [
   { id: "measure", key: "measure" },
@@ -85,12 +94,15 @@ const MEASURE_SUBS: { id: "measure" | "guide"; key: string }[] = [
 
 function IconDim() {
   return (
-    <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 4v16M19 4v16" />
-      <path d="M5 12h14" />
-      <path d="M8 9 5 12l3 3M16 9l3 3-3 3" />
+    <svg viewBox="0 0 24 24" className="size-5 dimension-tool-icon" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 3v11M21 3v11M4 8h16M7 5 4 8l3 3M17 5l3 3-3 3" />
+      <rect x="2" y="17" width="20" height="4" rx=".6" />
+      <path d="M6 17v1.5M9 17v1.5M12 17v2.5M15 17v1.5M18 17v1.5" />
     </svg>
   );
+}
+function VisibilitySlash() {
+  return <svg className="visibility-slash" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M13 87 87 13" stroke="currentColor" strokeWidth="1.8" vectorEffect="non-scaling-stroke" strokeLinecap="round" /></svg>;
 }
 function IconArc() {
   return (
@@ -102,7 +114,10 @@ function IconArc() {
 function IconCurve() {
   return (
     <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
-      <path d="M3 17c3.5-11 5.5 9 9 0 3.5-9 5.5 11 9 0" />
+      <path d="M3 18C5 18 6 5 12 6S17 18 21 10" />
+      <circle cx="3" cy="18" r="2" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="6" r="2" fill="currentColor" stroke="none" />
+      <circle cx="21" cy="10" r="2" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -130,19 +145,19 @@ function IconPointShape() {
 const DRAW_SUBS: { id: import("@/lib/project-types").DrawSub; key: string; icon: ReactNode }[] = [
   { id: "line", key: "drawLine", icon: <Minus className="size-5" strokeWidth={1.4} /> },
   { id: "polygon", key: "drawPointShape", icon: <IconPointShape /> },
+  { id: "spline", key: "drawSpline", icon: <IconCurve /> },
   { id: "rect", key: "drawRect", icon: <Square className="size-5" strokeWidth={1.4} /> },
   { id: "circle", key: "drawCircle", icon: <Circle className="size-5" strokeWidth={1.4} /> },
   { id: "triangle", key: "drawTriangle", icon: <Triangle className="size-5" strokeWidth={1.4} /> },
   { id: "hexagon", key: "drawHexagon", icon: <Hexagon className="size-5" strokeWidth={1.4} /> },
   { id: "ellipse", key: "drawEllipse", icon: <Circle className="size-5 scale-x-125" strokeWidth={1.4} /> },
   { id: "arc", key: "drawArc", icon: <IconArc /> },
-  { id: "spline", key: "drawSpline", icon: <IconCurve /> },
   { id: "freehand", key: "drawFreehand", icon: <Pencil className="size-5" strokeWidth={1.4} /> },
   { id: "dim", key: "drawDim", icon: <IconDim /> },
   { id: "text", key: "drawText", icon: <Type className="size-5" strokeWidth={1.4} /> },
 ];
 
-const DRAW_PRIMARY = DRAW_SUBS;
+const DRAW_PRIMARY = DRAW_SUBS.filter(item => !["text", "arc", "dim"].includes(item.id));
 const MOBILE_EXTRA_DRAW: { id: import("@/lib/project-types").DrawSub; key: string }[] = [
   { id: "polyline", key: "drawPolyline" }, { id: "rotrect", key: "drawRotRect" },
   { id: "offset", key: "drawOffset" }, { id: "fillet", key: "drawFillet" },
@@ -190,9 +205,10 @@ export function DesignerApp() {
   const isPhone = usePhoneWorkspace();
   useWorkspaceViewport();
   const [mobilePanel, setMobilePanel] = useState<MobilePanel>(null);
-  const [mobileMultiSelect, setMobileMultiSelect] = useState(false);
-  const [mobilePreview, setMobilePreview] = useState(false);
+  const [workspaceMultiSelect, setWorkspaceMultiSelect] = useState(false);
+  const [projectPreview, setProjectPreview] = useState(false);
   const [mobileLayersVisible, setMobileLayersVisible] = useState(false);
+  const [layerManagerOpen, setLayerManagerOpen] = useState(false);
   useEffect(() => useProject.subscribe((state, previous) => {
     // Selection actions create a new selection array even when the same face is tapped.
     // Geometry/viewport updates must not undo a manual visibility toggle.
@@ -206,6 +222,7 @@ export function DesignerApp() {
   const exportFn = useRef<(() => string | null) | null>(null);
   const [scalePair, setScalePair] = useState<{ a: { x: number; y: number }; b: { x: number; y: number } } | null>(null);
   const [scaleValue, setScaleValue] = useState("5.00");
+  const [measurementResult, setMeasurementResult] = useState<number | null>(null);
   const [hover, setHover] = useState<{ x: number; y: number } | null>(null);
   const [cadTick, setCadTick] = useState(0);
   useEffect(() => {
@@ -215,31 +232,20 @@ export function DesignerApp() {
   const [exportDrawOpen, setExportDrawOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [sourceOpen, setSourceOpen] = useState(false);
-  const [sourcePct, setSourcePct] = useState<number | null>(null);
-  const [sourcePacks, setSourcePacks] = useState<{ file: string; label: string }[]>([
-    { file: "irrigation-designer-source.zip", label: "Irrigation Designer" },
-  ]);
-  useEffect(() => {
-    if (!sourceOpen) return;
-    void fetch("/downloads/manifest.json")
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data) => {
-        if (Array.isArray(data) && data[0]?.file) setSourcePacks(data);
-      })
-      .catch(() => {});
-  }, [sourceOpen]);
+  const projectMenuAnchor = useRef<HTMLButtonElement>(null);
   const [issuesOpen, setIssuesOpen] = useState(false);
   const [gridOpen, setGridOpen] = useState(false);
   const [customGridOpen, setCustomGridOpen] = useState(false);
   const [customGridDraft, setCustomGridDraft] = useState("");
   const [nameAsk, setNameAsk] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
+  const [bulkDeleteConfirm, setBulkDeleteConfirm] = useState(false);
+  const [dismissedFusion, setDismissedFusion] = useState("");
   const [deleteAsk, setDeleteAsk] = useState<{ id: string; name: string } | null>(null);
   const [catalogGhost, setCatalogGhost] = useState<{ id: string; x: number; y: number } | null>(null);
   const [libInfo, setLibInfo] = useState<string | null>(null);
+  const catalogClickSuppressedUntil = useRef(0);
   const [catInfo, setCatInfo] = useState<(typeof CATEGORIES)[number]["id"] | null>(null);
-  const [docsOpen, setDocsOpen] = useState(false);
   const catalogDrag = useRef<{
     id: string;
     pointerId: number;
@@ -264,14 +270,18 @@ export function DesignerApp() {
   const selectedId = useProject((s) => s.selectedId);
   const selectedPolyId = useProject((s) => s.selectedPolyId);
   const selectedPolyIds = useProject((s) => s.selectedPolyIds);
+  useEffect(() => { setBulkDeleteConfirm(false); }, [selectedPolyIds]);
   const cadEditId = useProject((s) => s.cadEditId);
   const cadLiveRot = useProject((s) => s.cadLiveRot);
   const selectedIds = useProject((s) => s.selectedIds);
   const familyFilter = useProject((s) => s.familyFilter);
   const showGrid = useProject((s) => s.showGrid);
+  const textHidden = useProject((s) => s.textHidden);
+  const dimensionsHidden = useProject(s=>s.project.drawing?.layers?.dims?.visible===false);
   const showCoverage = useProject((s) => s.showCoverage);
   const showLabels = useProject((s) => s.showLabels);
   const catalogOpen = useProject((s) => s.catalogOpen);
+  const landscapeOpen = useProject(s => s.landscapeOpen);
   const catalogVisible = useProject((s) => s.catalogVisible);
   const rightOpen = useProject((s) => s.rightOpen);
   const rightMode = useProject((s) => s.rightMode);
@@ -299,34 +309,9 @@ export function DesignerApp() {
     applyTheme(themeId, buttonStyle, accent, themeAccent, themeGradient, themeAccent2);
     document.documentElement.dataset.uiSize = uiSize;
   }, [themeId, buttonStyle, accent, themeAccent, themeAccent2, themeGradient, uiSize]);
-  useEffect(() => {
-    if (isPhone) return;
-    if (!libInfo && !catInfo) return;
-    let armed = false;
-    const arm = window.setTimeout(() => {
-      armed = true;
-    }, 80);
-    const close = (e: PointerEvent) => {
-      if (!armed) return;
-      const node = e.target;
-      if (node instanceof Element && (node.closest("[data-cat-bar] button") || node.closest("[data-cat-docs]"))) {
-        setLibInfo(null);
-        return;
-      }
-      setLibInfo(null);
-      setCatInfo(null);
-      setDocsOpen(false);
-    };
-    window.addEventListener("pointerdown", close, true);
-    return () => {
-      window.clearTimeout(arm);
-      window.removeEventListener("pointerdown", close, true);
-    };
-  }, [libInfo, catInfo, isPhone]);
+  useEffect(() => { setLibInfo(null); setCatInfo(null); }, [selectedId, selectedIds]);
   const activeZoneId = useProject((s) => s.activeZoneId);
-  const saveState = useProject((s) => s.saveState);
   const past = useProject((s) => s.past);
-  const lastOp = useProject((s) => s.lastOp);
   const [drawMoreOpen, setDrawMoreOpen] = useState(false);
   const [kindsOpen, setKindsOpen] = useState(false);
   const future = useProject((s) => s.future);
@@ -342,6 +327,9 @@ export function DesignerApp() {
     setCleanSig(`${project.id}:${project.updatedAt}:${project.name}`);
   }, [project.id]);
   const draft = useProject((s) => s.draft);
+  useEffect(() => { setMeasurementResult(null); }, [tool, measureSub, project.id]);
+  useEffect(() => { if (draft.measureA) setMeasurementResult(null); }, [draft.measureA]);
+  const pointHistoryActive = tool === "draw" && (drawSub === "polygon" || drawSub === "spline");
   useEffect(() => {
     if (!isPhone) return;
     const selectionKey = selectedObjectKey({ selectedPolyId, selectedId, selectedEdgeId, cadEditId });
@@ -354,7 +342,7 @@ export function DesignerApp() {
       // The drawing palette is persistent and is closed only by its dock button.
       if (current === "tools") return current;
       // Only interface state changes here; selecting never enters geometry editing.
-      if (editing || constructing || selectedId) return "properties";
+      if (editing || constructing || selectedId || (selectedPolyId && drawingOrMigrate(useProject.getState().project).faces[selectedPolyId]?.segment)) return "properties";
       return current === "properties" ? null : current;
     });
   }, [isPhone, cadEditId, selectedPolyId, selectedId, selectedEdgeId, tool, drawSub]);
@@ -379,22 +367,7 @@ export function DesignerApp() {
     return coverageStats(lawn, project.heads, project.heads.length > 36 ? 1.2 : 0.55, exclusionPolygons(project.polygons));
   }, [project.polygons, project.heads]);
 
-  const zoneFlows = useMemo(() => {
-    const map = new Map<number, number>();
-    let all = 0;
-    let known = true;
-    for (const h of project.heads) {
-      const q = headFlow(h).lpm;
-      if (q == null) {
-        known = false;
-        continue;
-      }
-      all += q;
-      map.set(h.zone, (map.get(h.zone) ?? 0) + q);
-    }
-    const maxZ = Math.max(0, ...map.values());
-    return { all, maxZ, map, known };
-  }, [project.heads]);
+  const zoneFlows = useMemo(() => new Map(project.zones.map(z => [z.id, zoneFlow(project.heads, z.id)])), [project.heads, project.zones]);
 
   const issues = useMemo(() => checkProject(project), [project]);
 
@@ -436,6 +409,7 @@ export function DesignerApp() {
         useProject.getState().setSpaceDown(true);
       }
       const st0 = useProject.getState();
+      if (e.key === "Escape" && st0.pendingCatalogPlant) { useProject.setState({pendingCatalogPlant:null}); return; }
       if (!typing && st0.tool === "draw") {
         if (/^[0-9.,x×;mсм]$/i.test(e.key) || e.key === "Backspace" && cadBuf.current) {
           if (e.key === "Backspace") cadBuf.current = cadBuf.current.slice(0, -1);
@@ -806,8 +780,10 @@ export function DesignerApp() {
     if (!(el instanceof HTMLElement)) return;
     const rect = el.getBoundingClientRect();
     if (rect.width < 8 || rect.height < 8) return;
-    const x = Math.min(rect.right - 2, Math.max(rect.left + 2, clientX));
-    const y = Math.min(rect.bottom - 2, Math.max(rect.top + 2, clientY));
+    if (clientX < rect.left || clientX > rect.right || clientY < rect.top || clientY > rect.bottom) return;
+    const target = document.elementFromPoint(clientX, clientY);
+    if (!target || !el.contains(target) || target.closest("button,input,aside,[role=dialog],[data-mobile-sheet],.info-panel,.library-panel,.floating-toolbar,.workspace-tool-strip")) return;
+    const x = clientX, y = clientY;
     const st = useProject.getState();
     st.setPlaceId(catalogId);
     st.placeHead(
@@ -822,7 +798,10 @@ export function DesignerApp() {
   const startCatalogDrag = (e: ReactPointerEvent<HTMLButtonElement>, catalogId: string) => {
     if (e.button !== 0) return;
     const pointerId = e.pointerId;
+    useProject.getState().setTool("place");
     useProject.getState().setPlaceId(catalogId);
+    useProject.getState().setRightMode("irrigation");
+    useProject.getState().setRightOpen(true);
     setLibInfo(catalogId);
     setCatInfo(null);
     catalogDrag.current = {
@@ -866,12 +845,17 @@ export function DesignerApp() {
       if (!d || d.pointerId !== ev.pointerId) return;
       trackFrom(ev.clientX, ev.clientY);
       if (!d.hold) {
-        if (Math.hypot(d.lastX - d.startX, d.lastY - d.startY) > 8) {
-          window.clearTimeout(holdTimer);
+        if (Math.hypot(d.lastX - d.startX, d.lastY - d.startY) <= 8) return;
+        window.clearTimeout(holdTimer);
+        if (e.pointerType === "touch") {
+          // A finger may scroll the library; a deliberate hold starts the drag.
           catalogDrag.current = null;
-          setLibInfo(null);
+          return;
         }
-        return;
+        d.hold = true;
+        d.dragging = true;
+        setLibInfo(null);
+        setCatalogGhost({ id: d.id, x: d.lastX, y: d.lastY });
       }
       ev.preventDefault();
     };
@@ -900,9 +884,11 @@ export function DesignerApp() {
       catalogDrag.current = null;
       setCatalogGhost(null);
       if (!d?.hold || cancelled) return;
-      setLibInfo(null);
+      catalogClickSuppressedUntil.current = Date.now() + 500;
       const x = clientX ?? d.lastX;
       const y = clientY ?? d.lastY;
+      if (Math.hypot(x - d.startX, y - d.startY) < 8) return;
+      setLibInfo(null);
       const canvas = document.querySelector("[data-design-canvas]")?.getBoundingClientRect();
       if (canvas && x >= canvas.left && x <= canvas.right && y >= canvas.top && y <= canvas.bottom) {
         dropCatalogAt(x, y, d.id);
@@ -1011,16 +997,24 @@ export function DesignerApp() {
           ? `R ${formatLenU(liveArc.r, units.length)}`
           : formatLenU(liveLen, units.length);
 
+  useEffect(() => {
+    if (cadEditId || (tool && !(tool === "draw" && drawSub === "none"))) setWorkspaceMultiSelect(false);
+  }, [cadEditId, tool, drawSub]);
+
   const context = catalogOpen || tool === "measure" || tool === "scale" || tool === "draw";
-  const activeQ = zoneFlows.map.get(activeZoneId);
-  const libraryFamily = CATEGORIES.find((category) => category.id === familyFilter)?.id ?? "all";
+  const activeQ = zoneFlows.get(activeZoneId);
   const mobileFaceId = selected ? null : cadEditId ?? selectedPolyId;
   const mobileDrawing = drawingOrMigrate(project);
+  const groupedLayer = mobileFaceId && mobileDrawing.faces[mobileFaceId]?.layerId ? mobileFaceId : null;
   const mobileFace = mobileFaceId ? mobileDrawing.faces[mobileFaceId] : null;
-  const contextTitle = mobileFace ? (mobileFace.name?.trim() || t("layerN", { n: Object.keys(mobileDrawing.faces).indexOf(mobileFace.id) + 1 }))
+  const contextTitle = mobileFace ? layerTitle(mobileDrawing, mobileFace.id, locale)
     : selected ? selected.catalogId : tool === "draw" ? t([...DRAW_SUBS, ...MOBILE_EXTRA_DRAW].find((s) => s.id === drawSub)?.key ?? "draw") : tool === "scale" ? t("calibrateScale") : t("measure");
-  const mobileFaceDimensions: { label: string; value: number }[] = [];
-  if (mobileFace) {
+  const selectedSegment = !cadEditId && selectedPolyIds.length === 1 && mobileFace?.segment && !groupedLayer ? mobileFace : null;
+  const drawingDimensionsVisible = !(tool === "draw" && drawSub === "text") && Boolean(selectedSegment || cadEditId || selectedEdgeId || (tool === "draw" && drawSub !== "none"));
+  const mobileFaceDimensions: { label: string; value: number; kind?: "area" }[] = [];
+  if (mobileFace && !groupedLayer) {
+    const curveGeometry = mobileFace.spline ?? mobileFace.freehand;
+    if (!curveGeometry || curveGeometry.closed) mobileFaceDimensions.push({ label: t("area"), value: faceArea(mobileDrawing, mobileFace.id), kind: "area" });
     if (mobileFace.circle) mobileFaceDimensions.push({ label: "R", value: mobileFace.circle.r }, { label: "Ø", value: mobileFace.circle.r * 2 });
     else if (mobileFace.ellipse) mobileFaceDimensions.push({ label: t("axisA"), value: mobileFace.ellipse.rx * 2 }, { label: t("axisB"), value: mobileFace.ellipse.ry * 2 });
     else if (mobileFace.rect && rectMetaMatchesFace(mobileDrawing, mobileFace.id)) mobileFaceDimensions.push({ label: t("drawWidth"), value: mobileFace.rect.w }, { label: t("drawHeight"), value: mobileFace.rect.h });
@@ -1033,35 +1027,96 @@ export function DesignerApp() {
     }
   }
   const chooseMobileTool = (choose: () => void) => { choose(); };
-  const mergeMobileSelection = () => {
+  const mergeSelectedLayers = () => {
     const st = useProject.getState();
-    const ids = st.selectedPolyIds.length ? st.selectedPolyIds : st.selectedPolyId ? [st.selectedPolyId] : [];
-    if (ids.length < 2) return;
-    let drawing = drawingOrMigrate(st.project);
-    let baseId = ids[0]!;
-    let merged = 0;
-    for (const targetId of ids.slice(1)) {
-      if (!drawing.faces[baseId] || !drawing.faces[targetId]) continue;
-      const beforeIds = new Set(Object.keys(drawing.faces));
-      const next = unionFaces(drawing, baseId, targetId);
-      const nextBase = Object.keys(next.faces).find((id) => !beforeIds.has(id));
-      if (!nextBase) continue;
-      drawing = next;
-      baseId = nextBase;
-      merged += 1;
-    }
-    if (!merged) {
-      toast("Для объединения фигуры должны иметь общую границу");
-      return;
-    }
-    st.commitDrawing(drawing, baseId, true);
+    const ids = st.selectedPolyIds;
+    const drawing = drawingOrMigrate(st.project);
+    const next = mergeLayers(drawing, ids);
+    if (next === drawing) return;
+    st.commitDrawing(next, ids[0], true);
+    st.selectPoly(ids[0]!);
   };
-  const contextControls = <div className={isPhone ? "mobile-context-content" : "contents"}>
-          {!isPhone && cadEditId && !catalogOpen && !draft.points.length && <CadEditBar faceId={cadEditId} />}
-          {cadEditId && editingFreeformFace && (!catalogOpen || isPhone) && !draft.points.length && (
+  const selectedLayersCount = new Set(selectedPolyIds.filter(id => mobileDrawing.faces[id]).map(id => mobileDrawing.faces[id]!.layerId ?? id)).size;
+  const bulkSelection = selectedLayersCount > 1 && !cadEditId;
+  const headSelectionActions = (selectedIds.length > 1 || (workspaceMultiSelect && selectedIds.length > 0)) && <HeadSelectionActions />;
+  const fusionIds = useMemo(() => draft.points.length ? [] : fusionCandidates(mobileDrawing, selectedPolyIds), [project.drawing, selectedPolyIds, draft.points.length]);
+  const fusionKey = fusionIds.length ? JSON.stringify(fusionIds.map(id => [id, facePoints(mobileDrawing,id)])) : "";
+  const fusionActions = fusionKey && fusionKey !== dismissedFusion && <section className="figure-fusion-actions" role="region" aria-label={t("fuseFigures")}
+    onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onWheel={e=>e.stopPropagation()}>
+    <button type="button" onClick={()=>{
+      const st=useProject.getState(), drawing=drawingOrMigrate(st.project);
+      const next=fuseFigures(drawing,fusionIds);
+      if(next===drawing) return;
+      st.setCadEdit(null);
+      st.commitDrawing(next,fusionIds[0],true);
+      st.setCadMode("select");
+      setWorkspaceMultiSelect(false);
+      st.selectPoly(fusionIds[0]!);
+      setDismissedFusion(fusionKey);
+    }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true"><path d="M3 3h12v6h6v12H9v-6H3Z"/><path d="M9 9h6v6H9Z" strokeDasharray="2 2" opacity=".45"/></svg>{t("fuseFigures")}</button>
+    <button type="button" className="action-cancel" aria-label={t("cancel")} title={t("cancel")} onClick={()=>setDismissedFusion(fusionKey)}><X size={18}/></button>
+  </section>;
+  const bulkLocked = selectedPolyIds.some(id => mobileDrawing.faces[id]?.locked);
+  const bulkActions = bulkSelection && <section className="bulk-selection-actions" data-confirming={bulkDeleteConfirm} role="region" aria-label={t("selectedLayersActions")}
+    onPointerDown={e => e.stopPropagation()} onTouchStart={e => e.stopPropagation()} onWheel={e => e.stopPropagation()}>
+    {bulkDeleteConfirm ? <>
+      <p role="alert">{t("deleteSelectedLayersConfirm", { n: selectedLayersCount })}</p>
+      <button type="button" onClick={() => setBulkDeleteConfirm(false)}>{t("cancel")}</button>
+      <button type="button" className="bulk-delete" onClick={() => { useProject.getState().deleteSelected(); setBulkDeleteConfirm(false); }}><Trash2 size={18}/>{t("delete")}</button>
+    </> : <>
+      <button type="button" className="bulk-merge" disabled={bulkLocked} aria-label={t("mergeSelectedLayers")} onClick={mergeSelectedLayers}><Layers2 size={20}/>{t("mergeSelectedLayers")}</button>
+      <button type="button" className="bulk-delete" disabled={bulkLocked} aria-label={t("deleteSelectedLayers")} title={t("deleteSelectedLayers")} onClick={() => setBulkDeleteConfirm(true)}><Trash2 size={20}/></button>
+    </>}
+  </section>;
+  const selectionModeAvailable = !cadEditId && !selectedEdgeId && (!tool || (tool === "draw" && drawSub === "none"));
+  const activateSelection = (multiple: boolean) => {
+    const st = useProject.getState();
+    st.setCadEdit(null);
+    st.setCadMode("select");
+    if (st.selectedEdgeId) st.selectEdge(null);
+    else if (!multiple && st.selectedPolyId) useProject.getState().selectPoly(st.selectedPolyId);
+    setWorkspaceMultiSelect(multiple);
+  };
+  const previousConstruction = useRef({ tool, drawSub, project });
+  useEffect(() => {
+    const previous = previousConstruction.current;
+    previousConstruction.current = { tool, drawSub, project };
+    if (!isPhone && previous.tool === "draw" && previous.drawSub !== "none" &&
+        tool === "draw" && drawSub === "none" && previous.project !== project && cadEditId) {
+      useProject.getState().setCadEdit(null);
+    }
+  }, [isPhone, tool, drawSub, project, cadEditId]);
+  const cursorControl = <button type="button" className="mobile-icon-button" aria-label={t("selectionCursor")} title={t("selectionCursor")}
+    aria-pressed={!cadEditId && !workspaceMultiSelect && (!tool || (tool === "draw" && drawSub === "none"))}
+    onClick={() => activateSelection(false)}><MousePointer2 /></button>;
+  const selectionControls = <>
+          <button type="button" className="mobile-icon-button select-multiple-control" aria-label={t("selectMultiple")} title={t("selectMultiple")} aria-pressed={selectionModeAvailable && workspaceMultiSelect} onClick={() => activateSelection(!(selectionModeAvailable && workspaceMultiSelect))}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M8 3H4a1 1 0 0 0-1 1v4m9-5h4m4 0a1 1 0 0 1 1 1v4M3 12v4m0 4a1 1 0 0 0 1 1h4" strokeWidth="1"/><path d="m10 9 3 12 3-4 5-1Z" fill="var(--color-surface)"/></svg>
+          </button>
+  </>;
+  const viewControls = <>
+          <button type="button" className="mobile-icon-button" aria-label={t("centerView")} title={t("centerView")} onClick={() => {
+            const bounds = document.querySelector("[data-design-canvas]")?.getBoundingClientRect();
+            if (bounds) useProject.getState().setPan(bounds.width / 2, bounds.height / 2);
+          }}><Crosshair size={22} /></button>
+  </>;
+  const previewControl = <button type="button" className="mobile-icon-button workspace-header-action" aria-label={t("preview")} title={t("preview")} onClick={() => { setGridOpen(false); setFileMenuOpen(false); setProjectPreview(true); }}><MonitorPlay />{!isPhone && <span>{t("preview")}</span>}</button>;
+  const textVisibilityControl = <button type="button" className="mobile-icon-button visibility-toggle text-visibility-toggle" aria-label={t(textHidden ? "showTextNotes" : "hideTextNotes")} title={t(textHidden ? "showTextNotes" : "hideTextNotes")} aria-pressed={textHidden} onClick={() => useProject.setState({textHidden: !textHidden})}>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 7V4h14v3M12 4v16M8 20h8" /></svg>
+    <VisibilitySlash />
+  </button>;
+  const textControl = <button type="button" className="mobile-icon-button" aria-label={t("drawText")} title={t("drawText")} aria-pressed={tool === "draw" && drawSub === "text"} onClick={()=>useProject.getState().setDrawSub("text")}><Type /></button>;
+  const dimensionVisibilityControl = <AdaptiveTooltip label={t(dimensionsHidden ? "showDimensions":"hideDimensions")}>
+    <button type="button" className="mobile-icon-button visibility-toggle dimension-visibility-toggle" aria-label={t(dimensionsHidden ? "showDimensions":"hideDimensions")}
+      aria-pressed={dimensionsHidden} onClick={()=>useProject.getState().setCadLayer("dims",{visible:dimensionsHidden})}><IconDim/><VisibilitySlash/></button>
+  </AdaptiveTooltip>;
+  const contextControls = tool === "draw" && drawSub === "text" ? null : <div className={isPhone ? "mobile-context-content" : "contents"}>
+          {tool === "draw" && drawSub === "polygon" && <PolygonDraftDimensions hover={hover}/>}
+          {selectedSegment?.spline && <div className="selected-segment-length" style={!isPhone ? { position:"absolute", bottom:12, left:12 } : undefined} aria-label={t("segmentLength")}><strong>L</strong><output>{formatLenU(dist(selectedSegment.spline.pts[0]!, selectedSegment.spline.pts[1]!), units.length)}</output></div>}
+          {!groupedLayer && cadEditId && editingFreeformFace && !draft.points.length && (
             <FreeformSidesPad faceId={cadEditId} />
           )}
-          {(!catalogOpen || isPhone) &&
+          {!groupedLayer &&
             ((tool === "draw" && drawSub === "spline") ||
               (cadEditId && editingDrawnCurve && !draft.points.length)) && (
               <SplineLengthsPad
@@ -1069,8 +1124,9 @@ export function DesignerApp() {
                 faceId={cadEditId && editingDrawnCurve && !draft.points.length ? cadEditId : null}
               />
             )}
-          {((tool === "draw" && drawSub !== "none") || cadEditId || selectedEdgeId) &&
+          {!selectedSegment && !groupedLayer && ((tool === "draw" && drawSub !== "none") || cadEditId || selectedEdgeId) &&
             !(tool === "draw" && drawSub === "spline") &&
+            !(tool === "draw" && drawSub === "polygon") &&
             !editingFreeformFace &&
             !editingDrawnCurve &&
             !editingNodeContour && (
@@ -1253,9 +1309,61 @@ export function DesignerApp() {
         </Popover.Root>
   </>;
 
+  const openCatalogFamily = (family: (typeof CATEGORIES)[number]["id"]) => {
+    const st = useProject.getState();
+    st.setFamily(family);
+    st.setCatalogVisible(true);
+    setLibInfo(null);
+    setCatInfo(family === "all" ? null : family);
+    if (family !== "all") {
+      st.setRightMode("irrigation");
+      st.setRightOpen(true);
+      if (isPhone) setMobilePanel(null);
+    }
+  };
+
+  const WorkspaceStrip = catalogOpen ? "div" : FloatingToolbar;
+  const workspaceToolStrip = !isPhone && context && (
+        <div className={catalogOpen ? "library-category-bar relative z-30 shrink-0" : "tablet-tool-overlay"} data-right-open={rightOpen} data-cat-bar>
+        <WorkspaceStrip className="workspace-tool-strip" role="toolbar" aria-label={t(catalogOpen ? "irrigation" : "draw")}>
+          {catalogOpen &&
+            CATEGORIES.map((f) => (
+              <Button
+                key={f.id}
+                size="xs"
+                variant={familyFilter === f.id ? "pale-on" : "pale"}
+                aria-pressed={familyFilter === f.id}
+                onClick={() => openCatalogFamily(f.id)}
+              >
+                {t(`cat_${f.id}`)}
+              </Button>
+            ))}
+          {showHints && tool === "scale" && <p className="px-2 text-xs text-ink-soft">{t("scaleHint")}</p>}
+          {!catalogOpen && (tool === "draw" || tool === "measure") && (
+            <>
+              {DRAW_PRIMARY.map((s) => (
+                <AdaptiveTooltip key={s.id} label={t(s.key)}><Button
+                  size="icon"
+                  variant={tool === "draw" && drawSub === s.id ? "pale-on" : "pale"}
+                  className="size-9 text-ink [&_svg]:size-5"
+                  aria-label={t(s.key)}
+                  aria-pressed={tool === "draw" && drawSub === s.id}
+                  onClick={() => useProject.getState().setDrawSub(s.id)}
+                >
+                  {s.icon}
+                </Button></AdaptiveTooltip>
+              ))}
+            </>
+          )}
+        </WorkspaceStrip>
+        </div>
+      );
+
   return (
-    <div className="app-shell bg-bg text-ink" data-mobile={isPhone} data-preview={isPhone && mobilePreview}>
-      {isPhone && mobilePreview && <MobilePreview onBack={() => setMobilePreview(false)} />}
+    <div className="app-shell bg-bg text-ink" data-mobile={isPhone} data-preview={projectPreview}>
+      <WorkspaceTooltips />
+      {!isPhone && <WorkspacePanelBounds />}
+      {projectPreview && <MobilePreview onBack={() => setProjectPreview(false)} />}
       <Toaster position="bottom-center" />
       {fileMenuOpen && (
         <div
@@ -1273,7 +1381,9 @@ export function DesignerApp() {
           <Button
             size="icon"
             variant={fileMenuOpen ? "bar-on" : "bar"}
-            className="max-sm:size-10"
+            ref={projectMenuAnchor}
+            className="project-menu-trigger max-sm:size-10"
+            aria-pressed={fileMenuOpen}
             aria-label={t("file")}
             onClick={() => {
               if (isPhone) setMobilePanel(null);
@@ -1284,8 +1394,12 @@ export function DesignerApp() {
           >
             <Menu />
           </Button>
-          {fileMenuOpen && (
-            <div className="project-menu absolute left-0 top-full z-50 mt-1 w-64 rounded-md bg-surface p-1 text-ink shadow-border">
+          {fileMenuOpen && createPortal(
+            <div className="project-menu fixed z-[150] w-64 rounded-md text-ink shadow-border" style={{
+              left: Math.max(8,Math.min(projectMenuAnchor.current?.getBoundingClientRect().left ?? 8,window.innerWidth-272)),
+              top:(projectMenuAnchor.current?.getBoundingClientRect().bottom ?? 56)+8,
+              maxHeight:`calc(100dvh - ${(projectMenuAnchor.current?.getBoundingClientRect().bottom ?? 56)+16}px)`,overflowY:"auto",
+            }}>
               <div className="px-2 py-2">
                 <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("currentProject")}</p>
                 <p className="mt-0.5 truncate text-sm font-medium">{project.name === "Без названия" ? t("untitled") : project.name}</p>
@@ -1328,41 +1442,41 @@ export function DesignerApp() {
                 icon={<Settings className="size-3.5" />}
                 label={t("appSettings")}
               />
-              <MenuBtn
-                onClick={() => {
-                  setFileMenuOpen(false);
-                  setSourceOpen(true);
-                }}
-                icon={<FileDown className="size-3.5" />}
-                label={t("downloadSource")}
-              />
-            </div>
+
+            </div>, document.querySelector(".app-shell") ?? document.body
           )}
         </div>
-        <div className="mr-2 hidden shrink-0 border-r border-white/20 pr-3 md:block">
-          <p className="font-display text-sm font-semibold tracking-[0.12em] leading-none">IRRIGATION DESIGNER</p>
-          <p className="mt-0.5 text-[10px] text-tool-fg/75">{t("hunterTagline")}</p>
-        </div>
+        <button type="button" className="app-brand-refresh mr-2 hidden shrink-0 pr-3 text-left md:block"
+          aria-label={t("refreshApplication")} title={t("refreshApplication")} onClick={()=>{
+            const url=new URL(window.location.href);
+            url.searchParams.set("__refresh",String(Date.now()));
+            window.location.replace(url.toString());
+          }}>
+          <span className="block font-display text-sm font-semibold tracking-[0.12em] leading-none">IRRIGATION DESIGNER</span>
+          <span className="mt-0.5 block text-[10px] text-tool-fg/75">{t("hunterTagline")}</span>
+        </button>
         <div className="scroll-touch flex min-w-0 flex-1 items-center gap-1">
-        <Button size="icon" variant="bar" className="max-sm:size-10" disabled={!past.length} onClick={() => useProject.getState().undo()} aria-label={t("undo")}>
+        <Button size="icon" variant="bar" className="max-sm:size-10" disabled={pointHistoryActive ? !draft.points.length : !past.length} onClick={() => useProject.getState().undo()} aria-label={t("undo")}>
           <Undo2 />
         </Button>
-        <Button size="icon" variant="bar" className="max-sm:size-10" disabled={!future.length} onClick={() => useProject.getState().redo()} aria-label={t("redo")}>
+        <Button size="icon" variant="bar" className="max-sm:size-10" disabled={pointHistoryActive ? !(draft.redoPoints?.length || draft.redoClosure) : !future.length} onClick={() => useProject.getState().redo()} aria-label={t("redo")}>
           <Redo2 />
         </Button>
         {isPhone && <>
-          <button type="button" className="mobile-dock-button" title="Инструменты" aria-label="Инструменты" aria-pressed={mobilePanel === "tools"} onClick={() => { const closing = mobilePanel === "tools"; setMobilePanel(closing ? null : "tools"); if (closing) setMobileMultiSelect(false); setGridOpen(false); setFileMenuOpen(false); }}><Pencil size={22} /></button>
-          <button type="button" className="mobile-dock-button" title={t("library")} aria-label={t("library")} aria-pressed={mobilePanel === "library" || tool === "place"} onClick={() => { setMobilePanel(mobilePanel === "library" ? null : "library"); setGridOpen(false); setFileMenuOpen(false); }}><Droplets size={22} /></button>
+          <button type="button" className="mobile-dock-button" data-no-tooltip aria-label="Инструменты" aria-pressed={mobilePanel === "tools"} onClick={() => { const closing = mobilePanel === "tools"; setMobilePanel(closing ? null : "tools"); if (closing) { useProject.getState().deactivateDrawing(); setWorkspaceMultiSelect(false); } setGridOpen(false); setFileMenuOpen(false); }}><Pencil size={22} /></button>
+          <button type="button" className="mobile-dock-button" data-no-tooltip aria-label="Ландшафт" aria-pressed={landscapeOpen} onClick={() => { useProject.getState().setLandscapeOpen(!landscapeOpen); setMobilePanel(null); setLayerManagerOpen(false); }}><Trees size={22} /></button>
+          <button type="button" className="mobile-dock-button" data-no-tooltip aria-label={t("library")} aria-pressed={mobilePanel === "library" || catalogOpen} onClick={() => { const closing = mobilePanel === "library"; if (!closing && !catalogOpen) useProject.getState().setCatalogOpen(true); setMobilePanel(closing ? null : "library"); setGridOpen(false); setFileMenuOpen(false); }}><SprinklerIcon width={22} height={22} /></button>
         </>}
         {!isPhone && <BarTool
           id="draw"
           label={t("draw")}
-          active={tool === "draw"}
+          active={!catalogOpen && tool === "draw"}
           onClick={() => {
             const st = useProject.getState();
-            st.setTool(st.tool === "draw" ? null : "draw");
+            if (st.tool === "draw" && !st.catalogOpen) { st.deactivateDrawing(); setWorkspaceMultiSelect(false); } else st.setTool("draw");
           }}
         />}
+        {!isPhone && <Button size="sm" data-no-tooltip variant={landscapeOpen || rightMode === "landscape" && rightOpen ? "bar-on" : "bar"} aria-pressed={landscapeOpen} onClick={() => { useProject.getState().setLandscapeOpen(!landscapeOpen); setWorkspaceMultiSelect(false); }}><Trees /><span>Ландшафт</span></Button>}
         {!isPhone && <BarTool
           id="place"
           label={t("sprinklers")}
@@ -1384,7 +1498,13 @@ export function DesignerApp() {
         )}
         </div>
         <div className="flex shrink-0 items-center gap-1 pl-1">
-          {isPhone && <button type="button" className="mobile-icon-button" aria-label={t("estimate")} aria-pressed={mobilePanel === "estimate"} onClick={() => { setMobilePanel(mobilePanel === "estimate" ? null : "estimate"); setGridOpen(false); setFileMenuOpen(false); }}><FileText /></button>}
+          {previewControl}
+          <button type="button" className="mobile-icon-button workspace-header-action" aria-label={t("estimate")} aria-pressed={isPhone ? mobilePanel === "estimate" : rightOpen && rightMode === "estimate"} onClick={() => {
+            if (isPhone) setMobilePanel(mobilePanel === "estimate" ? null : "estimate");
+            else if (rightOpen && rightMode === "estimate") useProject.getState().setRightOpen(false);
+            else useProject.getState().setRightMode("estimate");
+            setGridOpen(false); setFileMenuOpen(false);
+          }}><FileText />{!isPhone && <span>{t("estimate")}</span>}</button>
           <Button size="xs" variant="bar" className="max-sm:size-10 max-sm:px-0" aria-label={t("projects")} onClick={() => {
             setMobilePanel(null);
             setFileMenuOpen(false);
@@ -1418,80 +1538,31 @@ export function DesignerApp() {
         </div>
       )}
 
-      {!isPhone && context && (
-        <div className="relative z-30 shrink-0 overflow-visible" data-cat-bar>
-        <div className="flex h-[42px] items-center gap-1 overflow-visible border-b border-line bg-tool-2/90 px-2">
-          {catalogOpen &&
-            CATEGORIES.map((f) => (
-              <Button
-                key={f.id}
-                size="xs"
-                variant={familyFilter === f.id ? "pale-on" : "pale"}
-                onClick={() => {
-                  useProject.getState().setFamily(f.id);
-                  useProject.getState().setCatalogVisible(true);
-                  setLibInfo(null);
-                  setDocsOpen(false);
-                  if (f.id === "all") {
-                    setCatInfo(null);
-                    return;
-                  }
-                  setCatInfo(catInfo === f.id ? null : f.id);
-                }}
-              >
-                {t(`cat_${f.id}`)}
-              </Button>
-            ))}
-          {showHints && tool === "scale" && <p className="px-2 text-xs text-ink-soft">{t("scaleHint")}</p>}
-          {(tool === "draw" || tool === "measure") && (
-            <>
-              {DRAW_PRIMARY.map((s) => (
-                <Button
-                  key={s.id}
-                  size="icon"
-                  variant={tool === "draw" && drawSub === s.id ? "pale-on" : "pale"}
-                  className="size-9 text-ink [&_svg]:size-5"
-                  aria-label={t(s.key)}
-                  onClick={() => useProject.getState().setDrawSub(s.id)}
-                >
-                  {s.icon}
-                </Button>
-              ))}
-              <Button
-                size="icon"
-                variant={tool === "measure" ? "pale-on" : "pale"}
-                className="size-9 text-ink [&_svg]:size-5"
-                aria-label={t("ruler")}
-                onClick={() => useProject.getState().setTool("measure")}
-              >
-                <Ruler className="size-5" strokeWidth={2.2} />
-              </Button>
-            </>
-          )}
-        </div>
-        </div>
-      )}
-
+      {catalogOpen && workspaceToolStrip}
       <div className="designer-workspace relative flex min-h-0 flex-1">
+        {!catalogOpen && workspaceToolStrip}
+        {landscapeOpen && <LandscapeLibrary mobile={isPhone} />}
+        <PlantPlacementHint />
+
         {!isPhone && catalogOpen && catalogVisible && (
           <aside
             className={cn(
-              "absolute inset-y-0 left-0 z-20 flex w-56 flex-col border-r border-line bg-surface shadow-border lg:static lg:h-auto lg:w-56",
+              "library-panel absolute inset-y-0 left-0 z-20 flex w-56 flex-col border-r border-line",
               catalogGhost && "opacity-50",
             )}
             data-catalog
           >
-            <div className="flex items-center justify-between gap-1 px-1.5 pt-2">
-              <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("library")}</p>
+            <div className="workspace-panel-heading flex shrink-0 items-center gap-2 border-b border-line px-2 py-2">
               <Button
                 size="xs"
                 variant="solid"
-                className="shrink-0 border-line bg-surface text-ink hover:bg-btn-soft"
+                className="workspace-panel-hide shrink-0 border-line bg-surface text-ink hover:bg-btn-soft"
                 onClick={() => useProject.getState().setCatalogVisible(false)}
               >
                 <ChevronLeft className="size-3.5" />
                 {t("hide")}
               </Button>
+              <p className="ml-auto text-xs font-semibold text-muted">{t("library")}</p>
             </div>
             {showHints && <p className="px-1.5 pt-0.5 text-[10px] leading-snug text-muted">{t("dragHint")}</p>}
             <div className="mt-1.5 flex min-h-0 flex-1">
@@ -1503,24 +1574,26 @@ export function DesignerApp() {
                 <li key={c.id}>
                   <button
                     type="button"
+                    aria-pressed={placeId === c.id}
                     onPointerDown={(e) => startCatalogDrag(e, c.id)}
+                    onClick={(e) => { if (e.detail === 0) { useProject.getState().setTool("place"); useProject.getState().setPlaceId(c.id); useProject.getState().setRightMode("irrigation"); useProject.getState().setRightOpen(true); setLibInfo(c.id); setCatInfo(null); } }}
                     className={cn(
-                      "mb-1 flex w-full touch-pan-y select-none items-center gap-1 rounded-md border px-1 text-left text-xs",
+                      "irrigation-catalog-card mb-1 flex w-full touch-pan-y select-none items-center gap-1 rounded-md border px-1 text-left text-xs",
                       familyFilter === "all" ? "py-1.5" : "py-1",
-                      placeId === c.id ? "border-catalog bg-catalog text-catalog-fg" : "border-line bg-transparent hover:bg-catalog-soft",
+                      placeId === c.id ? "border-catalog bg-catalog text-catalog-fg" : "border-line bg-surface hover:bg-catalog-soft",
                     )}
                   >
                     <CatalogPic item={c} className="h-12 w-12" />
                     <span className="min-w-0 flex-1">
                       <span className="block truncate font-medium leading-tight">{c.id}</span>
                       <span className={cn("block text-[10px] leading-tight", placeId === c.id ? "text-catalog-fg/80" : "text-muted")}>
-                        {formatLenU(c.rMin, units.length)}–{formatLenU(c.rMax, units.length)}
+                        {c.coverageKind==="point"?"Баблер · без радиуса":c.strip?`${formatLenU(c.strip.w,units.length)} × ${formatLenU(c.strip.l,units.length)}`:`${formatLenU(c.rMin, units.length)}–${formatLenU(c.rMax, units.length)}`}
                       </span>
                       <span className={cn("block text-[10px] leading-tight", placeId === c.id ? "text-catalog-fg/80" : "text-muted")}>
                         {c.arcMin === c.arcMax ? `${c.arcMax}°` : `${c.arcMin}–${c.arcMax}°`}
                       </span>
                     </span>
-                    <CatalogThumb color={c.color} arc={c.arcMax} />
+                    <CatalogThumb color={c.color} arc={c.arcMax} strip={c.strip} />
                   </button>
                 </li>
               ))}
@@ -1532,138 +1605,73 @@ export function DesignerApp() {
         {!isPhone && catalogOpen && !catalogVisible && (
           <button
             type="button"
-            className="absolute left-0 top-1/2 z-20 flex h-16 w-7 -translate-y-1/2 items-center justify-center rounded-r-md border border-l-0 border-line bg-surface text-ink shadow-border"
+            className="tablet-panel-handle"
+            data-side="left"
             onClick={() => useProject.getState().setCatalogVisible(true)}
             aria-label={t("library")}
           >
-            <ChevronRight className="size-4" />
+            <ChevronRight className="size-5" />
           </button>
         )}
 
-        {!isPhone && catalogOpen && (libInfo || catInfo) && (
-          <div className="pointer-events-none absolute left-[14.25rem] top-2 z-30 w-[22rem] max-w-[min(22rem,calc(100vw-15rem))] rounded-lg bg-surface/80 p-3 text-ink shadow-border backdrop-blur-[2px]">
-            {libInfo &&
-              (() => {
-                const item = itemById(libInfo);
-                if (!item) return null;
-                return (
-                  <>
-                    <CatalogPic item={item} className="mx-auto h-32 w-32" />
-                    <p className="mt-2 text-center text-sm font-semibold leading-tight text-ink">{item.id}</p>
-                    <p className="mt-0.5 text-center text-[11px] text-muted">{item.series}</p>
-                    <p className="mt-2 text-xs leading-relaxed text-ink-soft">{item.use}</p>
-                    <p className="mt-2 text-xs leading-relaxed text-ink">
-                      {formatLenU(item.rMin, units.length)}–{formatLenU(item.rMax, units.length)}
-                      {" · "}
-                      {item.arcMin === item.arcMax ? `${item.arcMax}°` : `${item.arcMin}–${item.arcMax}°`}
-                      {item.thread ? ` · ${item.thread}` : ""}
-                    </p>
-                  </>
-                );
-              })()}
-            {!libInfo && catInfo && (
-              <>
-                {categoryPhoto(catInfo) && (
-                  <img src={categoryPhoto(catInfo)!} alt="" className="mx-auto w-full max-h-56 object-contain" />
-                )}
-                <p className="mt-2 text-center text-sm font-semibold leading-tight">{t(`cat_${catInfo}`)}</p>
-                <p className="mt-2 text-xs leading-relaxed text-ink-soft">{t(`catInfo_${catInfo}`)}</p>
-                {catInfo !== "all" && (
-                  <div data-cat-docs className="pointer-events-auto mt-3">
-                    <Button
-                      type="button"
-                      variant="solid"
-                      size="sm"
-                      className="w-full"
-                      onPointerDown={(e) => e.stopPropagation()}
-                      onClick={() => setDocsOpen((v) => !v)}
-                    >
-                      <FileText />
-                      {t("docs")}
-                    </Button>
-                    {docsOpen && (
-                      <ul className="mt-2 max-h-56 space-y-1 overflow-y-auto rounded-md bg-panel/80 p-1.5">
-                        {docsForFamily(catInfo, locale, units).map((d) => (
-                          <li key={d.url + (d.label ?? "")}>
-                            <a
-                              href={d.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center justify-between gap-2 rounded px-2 py-1.5 text-xs text-ink hover:bg-surface"
-                              onPointerDown={(e) => e.stopPropagation()}
-                            >
-                              <span className="min-w-0 truncate">
-                                {d.kind === "video" ? (d.label ?? t("docsVideo")) : d.label ? `${d.label} · ${t(d.titleKey)}` : t(d.titleKey)}
-                                <span className="ml-1 text-[10px] uppercase text-muted">{d.kind === "video" ? t("docsVideo") : d.kind}</span>
-                              </span>
-                              <span className="shrink-0 text-accent">{d.kind === "video" ? <Play className="inline size-3.5" /> : t("docsOpen")}</span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                )}
-              </>
-            )}
-          </div>
-        )}
-
         <section className="mobile-canvas-stage relative min-w-0 flex-1 overflow-visible">
-          {isPhone && !catalogGhost && (mobilePanel === "tools" || mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <div className="mobile-top-overlays">
+          {isPhone && !catalogGhost && (fusionActions || layerManagerOpen || mobilePanel === "tools" || mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <div className="mobile-top-overlays" data-magnifier-top-panel>
             {mobilePanel === "tools" && <div className="mobile-tool-stack">
-              {mobileFace && <section data-mobile-sheet="tool-properties" className="mobile-parameter-bar mobile-tool-parameter-bar" role="region" aria-label={contextTitle}
-                onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()}>
-                <div className="mobile-parameter-scroll">
-                  {(!cadEditId || editingNodeContour) && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{formatLenU(dimension.value, units.length)}</output></span>)}</div>}
-                  {cadEditId ? contextControls : null}
-                </div>
-              </section>}
               <div className="mobile-tool-strip-panel" role="toolbar" aria-label="Инструменты">
                 <div className="mobile-tool-strip scroll-touch">
-                  {DRAW_SUBS.filter((item) => item.id !== "arc" && item.id !== "dim").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}</button>)}
+                  {DRAW_SUBS.filter((item) => item.id !== "arc" && item.id !== "dim" && item.id !== "text").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}</button>)}
                   {project.heads.length > 0 && <button type="button" aria-label={t("sectors")} title={t("sectors")} aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={20} /></button>}
                 </div>
               </div>
             </div>}
-            {(mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <section className="mobile-top-layers" data-workspace-mode={mobileWorkspaceMode} aria-label={mobileWorkspaceMode === "drawing" ? t("layers") : t("irrigation")}
+            {layerManagerOpen && <section className="mobile-layer-manager" role="region" aria-label={t("layerManager")}
+              onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onWheel={e=>e.stopPropagation()} onKeyDown={e=>{e.stopPropagation();if(e.key==="Escape")setLayerManagerOpen(false);}}>
+              <header><strong>{t("layerManager")}</strong><button type="button" aria-label={t("close")} onClick={()=>setLayerManagerOpen(false)}><X size={18}/></button></header>
+              <MobileLayers manager selectedFirst={false} onEdit={id=>{useProject.getState().setCadEdit(id);setLayerManagerOpen(false);setMobilePanel("properties");}} />
+            </section>}
+            {!layerManagerOpen && !bulkSelection && (mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <section className="mobile-top-layers" data-workspace-mode={mobileWorkspaceMode} aria-label={mobileWorkspaceMode === "drawing" ? t("layers") : t("irrigation")}
               onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
               {mobileWorkspaceMode === "drawing" ? <MobileLayers onEdit={(id) => { useProject.getState().setCadEdit(id); setMobilePanel("properties"); }} onInspect={() => { mobileInspectTarget.current = selectedObjectKey(useProject.getState()); setMobilePanel("properties"); }} /> : <div className="mobile-zone-strip">
                 {project.zones.map((zone) => <button type="button" key={zone.id} aria-pressed={zone.id === activeZoneId} onClick={() => useProject.getState().setActiveZone(zone.id)}><span style={{ background: zoneColor(zone.id) }} />{zone.name}</button>)}
                 <Popover.Root modal><Popover.Trigger asChild><button type="button" aria-label="Подробнее о зонах полива">Подробнее <ChevronRight size={16} /></button></Popover.Trigger><Popover.Portal><Popover.Content side="bottom" align="end" sideOffset={4} collisionPadding={8} aria-label="Зоны полива" className="layer-details-dialog" onPointerDown={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}><div className="layer-dialog-body"><ZoneList /><PumpBox /><Popover.Close asChild><Button className="w-full">Закрыть</Button></Popover.Close></div></Popover.Content></Popover.Portal></Popover.Root>
               </div>}
             </section>}
+            {!layerManagerOpen && fusionActions}
           </div>}
           <CanvasHost
             mobile={isPhone}
-            multiSelect={isPhone && mobileMultiSelect}
+            multiSelect={workspaceMultiSelect && selectionModeAvailable}
             onScalePair={(a, b) => setScalePair({ a, b })}
-            onMeasure={(m) => toast(formatLenU(m, useProject.getState().units.length))}
+            onMeasure={setMeasurementResult}
             onHover={setHover}
             onExportReady={(fn) => {
               exportFn.current = fn;
             }}
           />
+          {tool === "measure" && measurementResult != null && <MeasurementResult meters={measurementResult} onClose={() => setMeasurementResult(null)} />}
           {isPhone && gridOpen && <div className="mobile-grid-dismiss" aria-hidden
             onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()}
             onClick={(e) => { e.preventDefault(); e.stopPropagation(); setGridOpen(false); }} />}
-          {!isPhone && tool === "draw" && drawSub !== "none" && (
-            <div className="pointer-events-none absolute bottom-12 left-1/2 z-30 max-w-[min(92%,22rem)] -translate-x-1/2 rounded-md bg-ink/80 px-2.5 py-1 text-center text-[11px] leading-snug text-white shadow-border">
-              {t(DRAW_PRIMARY.find((s) => s.id === drawSub)?.key ?? "draw")}
-              {t(`hint_${drawSub}`) ? ` · ${t(`hint_${drawSub}`)}` : ""}
-            </div>
-          )}
-          {!isPhone && contextControls}
+          {isPhone && bulkActions}
+          {!isPhone && !bulkSelection && !fusionActions && contextControls}
         </section>
 
+        {isPhone && rightOpen && rightMode === "landscape" && <aside className="info-panel landscape-phone-inspector" aria-label="Карточка растения">
+          <div className="workspace-panel-heading"><strong>Растение</strong><Button onClick={() => useProject.getState().setRightOpen(false)} aria-label="Скрыть карточку растения"><X />Скрыть</Button></div>
+          <PlantInspector mobile />
+        </aside>}
+        {isPhone && rightOpen && (catInfo || libInfo) && rightMode === "irrigation" && <aside className="info-panel landscape-phone-inspector" aria-label="Информация о поливе">
+          <div className="workspace-panel-heading"><strong>{catInfo ? t(`cat_${catInfo}`) : "Дождеватель"}</strong><Button onClick={() => { setLibInfo(null); setCatInfo(null); useProject.getState().setRightOpen(false); }} aria-label="Скрыть карточку дождевателя"><X />Скрыть</Button></div>
+          {catInfo ? <CatalogSeriesInfo key={catInfo} family={catInfo} /> : libInfo && <CatalogInfo catalogId={libInfo} />}
+        </aside>}
         {!isPhone && (rightOpen ? (
-          <aside className="info-panel absolute inset-x-0 top-0 z-40 flex max-h-[45vh] flex-col overflow-y-auto border-b border-line bg-surface shadow-border sm:inset-x-auto sm:inset-y-0 sm:right-0 sm:max-h-none sm:w-[min(100%,22rem)] sm:border-b-0 sm:border-l lg:static lg:h-auto lg:w-[320px] lg:shrink-0">
-            <div className="hidden shrink-0 items-center gap-2 border-b border-line px-2 py-2 sm:flex">
+          <aside className="info-panel absolute inset-x-0 top-0 z-40 flex max-h-[45vh] flex-col overflow-y-auto border-b border-line bg-surface shadow-border sm:inset-x-auto sm:inset-y-0 sm:right-0 sm:max-h-none sm:w-[min(100%,22rem)] lg:w-[320px]">
+            <div className="workspace-panel-heading hidden shrink-0 items-center gap-2 border-b border-line px-2 py-2 sm:flex">
               <Button
                 type="button"
                 size="xs"
                 variant="solid"
-                className="shrink-0 border-line bg-surface text-ink hover:bg-btn-soft"
+                className="workspace-panel-hide shrink-0 border-line bg-surface text-ink hover:bg-btn-soft"
                 onPointerUp={(e) => {
                   e.preventDefault();
                   useProject.getState().setRightOpen(false);
@@ -1672,7 +1680,7 @@ export function DesignerApp() {
                 {t("hide")}
                 <ChevronRight className="size-3.5 -rotate-90 sm:rotate-0" />
               </Button>
-              <div className="ml-auto flex min-w-0 flex-row overflow-x-auto">
+              <div className="info-panel-tabs ml-auto flex min-w-0 flex-row overflow-x-auto">
                 {(
                   [
                     ["drawing", t("drawing")],
@@ -1690,10 +1698,13 @@ export function DesignerApp() {
                     <button
                       key={id}
                       type="button"
+                      aria-pressed={on}
                       className={cn("h-7 shrink-0 rounded-sm px-2 text-[11px] font-semibold sm:h-8", on ? "bg-btn text-btn-fg" : "text-muted hover:bg-bg-2")}
-                      onClick={() =>
-                        useProject.getState().setRightMode(id === "drawing" ? "drawing" : id === "estimate" ? "estimate" : "zone")
-                      }
+                      onClick={() => {
+                        setLibInfo(null);
+                        setCatInfo(null);
+                        useProject.getState().setRightMode(id === "drawing" ? "drawing" : id === "estimate" ? "estimate" : "zone");
+                      }}
                     >
                       {label}
                     </button>
@@ -1701,17 +1712,16 @@ export function DesignerApp() {
                 })}
               </div>
             </div>
-            {rightMode === "estimate" ? (
+            {rightMode === "landscape" ? <PlantInspector /> : rightMode === "estimate" ? (
               <EstimateCard onCheck={() => setIssuesOpen(true)} />
             ) : rightMode === "zone" || rightMode === "object" || rightMode === "irrigation" ? (
-              selected && selectedItem ? (
+              <>{catInfo ? <CatalogSeriesInfo key={catInfo} family={catInfo} /> : libInfo ? <CatalogInfo catalogId={libInfo} /> : selected && selectedItem && selectedIds.length <= 1 ? (
                 <HeadCard head={selected} />
               ) : (
                 <div className="p-1.5 sm:p-3">
                   <ZoneList />
-                  <PumpBox />
                 </div>
-              )
+              )}<div className="px-1.5 pb-3 sm:px-3"><PumpBox /></div></>
             ) : (
               <DrawingCard />
             )}
@@ -1719,30 +1729,43 @@ export function DesignerApp() {
         ) : (
           <button
             type="button"
-            className="absolute left-1/2 top-0 z-20 flex h-7 w-16 -translate-x-1/2 items-center justify-center rounded-b-md border border-t-0 border-line bg-surface text-ink shadow-border sm:left-auto sm:right-0 sm:top-1/2 sm:h-16 sm:w-7 sm:translate-x-0 sm:-translate-y-1/2 sm:rounded-b-none sm:rounded-l-md sm:border-r-0 sm:border-t"
+            className="tablet-panel-handle"
             onClick={() => useProject.getState().setRightOpen(true)}
             aria-label={t("showPanel")}
           >
-            <ChevronLeft className="size-4 -rotate-90 sm:rotate-0" />
+            <ChevronLeft className="size-5" />
           </button>
         ))}
       </div>
 
       <footer className="app-footer relative z-30 flex min-h-11 shrink-0 items-center gap-2 scroll-touch border-t border-line bg-surface px-2 py-1 text-xs">
         {isPhone && <nav className="mobile-canvas-controls" aria-label="Сетка и навигация чертежа">
-          <button type="button" className="mobile-icon-button" aria-label="Выбрать несколько фигур" title="Выбрать несколько фигур" aria-pressed={mobileMultiSelect} onClick={() => { const next = !mobileMultiSelect; setMobileMultiSelect(next); if (next) useProject.getState().setCadMode("select"); }}><MousePointer2 /></button>
-          <button type="button" className="mobile-icon-button" disabled={selectedPolyIds.length < 2} aria-label="Объединить выбранные фигуры" title="Объединить выбранные фигуры" onClick={mergeMobileSelection}><Combine /></button>
+          {cursorControl}
+          {selectionControls}
+          {textControl}
           <button type="button" className="mobile-icon-button" aria-label={t("drawDim")} title={t("drawDim")} aria-pressed={tool === "draw" && drawSub === "dim"} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub("dim"))}><IconDim /></button>
-          <button type="button" className="mobile-icon-button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><Ruler /></button>
-          <button type="button" className="mobile-icon-button" aria-label="Вернуться к центру" title="Вернуться к центру" onClick={() => {
-            const bounds = document.querySelector("[data-design-canvas]")?.getBoundingClientRect();
-            if (bounds) useProject.getState().setPan(bounds.width / 2, bounds.height / 2);
-          }}><Crosshair size={22} /></button>
-          <button type="button" className="mobile-icon-button" aria-label="Предпросмотр" onClick={() => { setGridOpen(false); setFileMenuOpen(false); setMobilePreview(true); }}><Eye /></button>
-          <button type="button" className="mobile-icon-button" aria-label={t("layers")} aria-pressed={mobileWorkspaceMode === "drawing" && mobileLayersVisible} onClick={() => { setMobileLayersVisible(mobileWorkspaceMode !== "drawing" || !mobileLayersVisible); setMobileWorkspaceMode("drawing"); setMobilePanel(null); setGridOpen(false); }}><Layers /></button>
+          <button type="button" className="mobile-icon-button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><TapeMeasureIcon /></button>
+          {viewControls}
+          <button type="button" className="mobile-icon-button" aria-label={t("layerManager")} aria-pressed={layerManagerOpen} onClick={() => { setLayerManagerOpen(open=>!open); setMobileWorkspaceMode("drawing"); setMobilePanel(null); setGridOpen(false); }}><Layers /></button>
           {gridControls}
+          {textVisibilityControl}
+          {dimensionVisibilityControl}
         </nav>}
-        {!isPhone && gridControls}
+        {!isPhone && <nav className="workspace-canvas-controls tablet-canvas-controls" aria-label={t("canvasControls")}>
+          {cursorControl}
+          {selectionControls}
+          {textControl}
+          <button type="button" className="mobile-icon-button" aria-label={t("drawDim")} title={t("drawDim")} aria-pressed={tool === "draw" && drawSub === "dim"} onClick={() => useProject.getState().setDrawSub("dim")}><IconDim /></button>
+          <button type="button" className="mobile-icon-button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure"} onClick={() => useProject.getState().setMeasureSub("measure")}><TapeMeasureIcon /></button>
+          {viewControls}
+          <button type="button" className="mobile-icon-button" aria-label={t("layerManager")} title={t("layerManager")} aria-pressed={rightOpen && (rightMode === "drawing" || rightMode === "project")} onClick={() => {
+            if (rightOpen && (rightMode === "drawing" || rightMode === "project")) useProject.getState().setRightOpen(false);
+            else useProject.getState().setRightMode("drawing");
+          }}><Layers /></button>
+          <div className="tablet-grid-controls">{gridControls}</div>
+          {textVisibilityControl}
+          {dimensionVisibilityControl}
+        </nav>}
         {!isPhone && project.heads.length > 0 && (
           <div className="flex items-stretch overflow-hidden rounded-md border border-tool">
             <Button
@@ -1770,39 +1793,57 @@ export function DesignerApp() {
           {catalogOpen ? (
             <>
               ● {activeZone?.name ?? t("zoneN", { n: 1 })}
-              {activeQ != null ? ` · ${formatFlowU(activeQ, units.flow)}` : ""}
+              {activeQ != null ? ` · ${formatFlowU(activeQ, units.flow)}` : " · Нет данных о расходе"}
             </>
           ) : null}
         </span>
-        <span className="ml-auto hidden shrink-0 tabular text-muted sm:inline">
-          {lastOp ? lastOp : ""} {saveState === "saved" ? t("savedOk") : saveState === "saving" ? t("saving") : ""}
-        </span>
       </footer>
+      {isPhone ? <><SegmentFigureConfirmation deletingSelection={bulkDeleteConfirm}
+        onDeleteSelected={bulkSelection ? () => setBulkDeleteConfirm(true) : undefined} />
+        {headSelectionActions && <div className="desktop-bottom-actions"><div className="figure-actions-surface">{headSelectionActions}</div></div>}
+        </> : (
+        <div className="desktop-bottom-actions">
+          <div className="figure-actions-surface">
+            {headSelectionActions}
+            {bulkActions}
+            {fusionActions}
+            <SegmentFigureConfirmation deletingSelection={bulkDeleteConfirm}
+              onDeleteSelected={bulkSelection ? () => setBulkDeleteConfirm(true) : undefined} />
+          </div>
+        </div>
+      )}
 
-      {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} · коснитесь чертежа</span><button type="button" aria-label="Закончить размещение" onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
-      {isPhone && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("irrigation") : mobilePanel === "estimate" ? t("estimate") : contextTitle} onClose={() => setMobilePanel(null)}
+      {isPhone && !bulkSelection && mobilePanel === "tools" && !catalogGhost && drawingDimensionsVisible && !groupedLayer && <section data-mobile-sheet="tool-properties" className="mobile-parameter-bar mobile-tool-parameter-bar" role="region" aria-label={contextTitle}
+        onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()}>
+        <div className="mobile-parameter-scroll">
+          {cadEditId && editingNodeContour && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{dimension.kind === "area" ? formatAreaU(dimension.value, units.area) : formatLenU(dimension.value, units.length)}</output></span>)}</div>}
+          {contextControls}
+        </div>
+      </section>}
+
+      {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} · перетащите из библиотеки</span><button type="button" aria-label="Закончить размещение" onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
+      {isPhone && !((bulkSelection || headSelectionActions || groupedLayer || (!selected && !drawingDimensionsVisible && tool !== "measure" && tool !== "scale")) && mobilePanel === "properties") && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("irrigation") : mobilePanel === "estimate" ? t("estimate") : contextTitle} onClose={() => setMobilePanel(null)}
         footer={mobilePanel === "properties" && selected ? <div className="mobile-context-footer">
           <Button className="ml-auto" aria-label="Готово" title="Готово" onPointerDown={(e) => e.preventDefault()} onClick={() => { (document.activeElement as HTMLElement)?.blur?.(); if (selected) setMobilePanel(null); }}><Check /></Button>
         </div> : undefined}>
         {mobilePanel === "library" && <div className="mobile-catalog" data-catalog>
-          <div className="mobile-categories" data-cat-bar>{CATEGORIES.map((category) => <button type="button" key={category.id} aria-pressed={familyFilter === category.id} onClick={() => { useProject.getState().setFamily(category.id); setLibInfo(null); }}>{t(`cat_${category.id}`)}</button>)}</div>
-          <div className="mobile-library-actions"><Button aria-label={t("autoPlace")} onClick={() => { autoPlace(); setMobilePanel(null); }}><LayoutGrid />Авторасстановка</Button><span>Выбрать — касание. Перенести — удерживать ⊕.</span></div>
-          {libraryFamily !== "all" && <details className="mobile-series-info"><summary>{t("docs")} · {t(`cat_${libraryFamily}`)}</summary><p>{t(`catInfo_${libraryFamily}`)}</p>{categoryPhoto(libraryFamily) && <img src={categoryPhoto(libraryFamily)!} alt={t(`cat_${libraryFamily}`)} />}{docsForFamily(libraryFamily, locale, units).map((doc) => <a key={doc.url + doc.label} href={doc.url} target="_blank" rel="noopener noreferrer">{doc.label ?? t(doc.titleKey)}</a>)}</details>}
+          <div className="mobile-categories" data-cat-bar>{CATEGORIES.map((category) => <button type="button" key={category.id} aria-pressed={familyFilter === category.id} onClick={() => openCatalogFamily(category.id)}>{t(`cat_${category.id}`)}</button>)}</div>
+          <div className="mobile-library-actions"><Button aria-label={t("autoPlace")} onClick={() => { autoPlace(); setMobilePanel(null); }}><LayoutGrid />Авторасстановка</Button><span>Справка — касание. Добавить — удерживать и перетащить.</span></div>
           <ul className="mobile-catalog-list">{catalog.map((item) => <li key={item.id} className="mobile-catalog-card" data-selected={placeId === item.id}>
-            <button type="button" className="mobile-catalog-select" aria-label={`Разместить ${item.id}`} onClick={() => { const st = useProject.getState(); st.setTool("place"); st.setPlaceId(item.id); st.setCatalogVisible(false); setMobilePanel(null); }}>
+            <button type="button" className="mobile-catalog-select" aria-label={`Характеристики ${item.id}`} onPointerDown={e => startCatalogDrag(e, item.id)} onClick={() => { if (Date.now() < catalogClickSuppressedUntil.current) return; const st = useProject.getState(); st.setTool("place"); st.setPlaceId(item.id); st.setCatalogVisible(false); st.setRightMode("irrigation"); st.setRightOpen(true); setLibInfo(item.id); setCatInfo(null); setMobilePanel(null); }}>
               <CatalogPic item={item} className="h-16 w-16 shrink-0" />
-              <span><strong>{item.id}</strong><span>{formatLenU(item.rMin, units.length)}–{formatLenU(item.rMax, units.length)}</span><span>{item.arcMin === item.arcMax ? `${item.arcMax}°` : `${item.arcMin}–${item.arcMax}°`}</span></span>
-              <CatalogThumb color={item.color} arc={item.arcMax} />
+              <span><strong>{item.id}</strong><span>{item.coverageKind === "point" ? "Баблер · без радиуса" : item.strip ? `${formatLenU(item.strip.w, units.length)} × ${formatLenU(item.strip.l, units.length)}` : `${formatLenU(item.rMin, units.length)}–${formatLenU(item.rMax, units.length)}`}</span><span>{item.arcMin === item.arcMax ? `${item.arcMax}°` : `${item.arcMin}–${item.arcMax}°`}</span></span>
+              <CatalogThumb color={item.color} arc={item.arcMax} strip={item.strip} />
             </button>
-            <div className="mobile-catalog-card-actions"><button type="button" className="mobile-icon-button mobile-drag-handle" aria-label={`Перенести ${item.id}`} onPointerDown={(e) => { e.preventDefault(); useProject.getState().setTool("place"); startCatalogDrag(e, item.id); }}><Crosshair size={22} /></button><button type="button" className="mobile-icon-button" aria-label={`Подробнее о ${item.id}`} aria-expanded={libInfo === item.id} onClick={() => setLibInfo(libInfo === item.id ? null : item.id)}><MoreHorizontal size={22} /></button></div>
-            {libInfo === item.id && <p className="mobile-catalog-description">{item.series} · {item.use}{item.thread ? ` · ${item.thread}` : ""}</p>}
+            <div className="mobile-catalog-card-actions"><button type="button" className="mobile-icon-button mobile-drag-handle" aria-label={`Перенести ${item.id}`} onPointerDown={(e) => { e.preventDefault(); useProject.getState().setTool("place"); startCatalogDrag(e, item.id); }}><Crosshair size={22} /></button><button type="button" className="mobile-icon-button" aria-label={`Подробнее о ${item.id}`} aria-expanded={libInfo === item.id} onClick={() => { setLibInfo(item.id); setCatInfo(null); useProject.getState().setRightMode("irrigation"); useProject.getState().setRightOpen(true); setMobilePanel(null); }}><MoreHorizontal size={22} /></button></div>
+
           </li>)}</ul>
         </div>}
         {mobilePanel === "properties" && <>
-          {mobileFace && (!cadEditId || editingNodeContour) && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{formatLenU(dimension.value, units.length)}</output></span>)}</div>}
-          {selected ? <HeadCard head={selected} /> : (!mobileFace || cadEditId) ? contextControls : null}
-          {tool === "scale" && <p className="mobile-context-hint">{t("scaleHint")}</p>}
-          {tool === "measure" && <p className="mobile-context-hint">Коснитесь двух точек на чертеже.</p>}
+          {!groupedLayer && mobileFace && cadEditId && editingNodeContour && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{dimension.kind === "area" ? formatAreaU(dimension.value, units.area) : formatLenU(dimension.value, units.length)}</output></span>)}</div>}
+          {selected ? <>{selectedIds.length > 1 ? <ZoneList /> : <HeadCard head={selected} />}<PumpBox /></> : drawingDimensionsVisible ? contextControls : null}
+          {showHints && tool === "scale" && <p className="mobile-context-hint">{t("scaleHint")}</p>}
+          {showHints && tool === "measure" && <p className="mobile-context-hint">Коснитесь двух точек на чертеже.</p>}
         </>}
         {mobilePanel === "estimate" && <EstimateCard onCheck={() => setIssuesOpen(true)} />}
       </MobileSheet>}
@@ -2020,46 +2061,7 @@ export function DesignerApp() {
           <span className="text-xs font-medium">{catalogGhost.id}</span>
         </div>
       )}
-      {sourceOpen && (
-        <div className="fixed inset-0 z-[80] grid place-items-end bg-ink/40 p-3 sm:place-items-center" onPointerUp={() => setSourceOpen(false)}>
-          <div className="max-h-[80vh] w-full max-w-md overflow-y-auto rounded-lg bg-surface p-4 text-ink shadow-border" onPointerUp={(e) => e.stopPropagation()}>
-            <p className="font-display text-lg">{t("downloadSource")}</p>
-            <p className="mt-2 text-sm text-ink-soft">{t("downloadSourceHint")}</p>
-            <p className="mt-1 text-xs text-ink-soft">Файл ~95 МБ, остаёшься в приложении — не уходим на другую страницу.</p>
-            <button
-              type="button"
-              disabled={sourcePct !== null}
-              onClick={() => {
-                setSourcePct(0);
-                void downloadSourceZip(setSourcePct)
-                  .then(() => {
-                    toast("Архив скачан");
-                    setSourcePct(null);
-                  })
-                  .catch(() => {
-                    toast("Не удалось скачать архив. Попробуй ещё раз.");
-                    setSourcePct(null);
-                  });
-              }}
-              className="mt-3 flex w-full items-center justify-between rounded-md border border-line px-3 py-2 text-left text-sm hover:bg-panel disabled:opacity-60"
-            >
-              <span>{sourcePacks[0]?.label ?? "Irrigation Designer (95 МБ)"}</span>
-              <FileDown className="size-4 text-btn" />
-            </button>
-            {sourcePct !== null && (
-              <div className="mt-2">
-                <div className="h-1.5 overflow-hidden rounded-full bg-line">
-                  <div className="h-full bg-btn" style={{ width: `${sourcePct}%` }} />
-                </div>
-                <p className="mt-1 text-xs text-ink-soft">Скачивание {sourcePct}%</p>
-              </div>
-            )}
-            <Button className="mt-3 w-full" size="sm" onClick={() => setSourceOpen(false)}>
-              {t("close")}
-            </Button>
-          </div>
-        </div>
-      )}
+
     </div>
   );
 }
@@ -2081,6 +2083,7 @@ function BarTool({
       variant={active ? "bar-on" : "bar"}
       className="shrink-0 max-sm:size-10 max-sm:px-0"
       aria-label={label}
+      data-no-tooltip={id === "draw" || id === "place" ? true : undefined}
       onClick={
         onClick ??
         (() => {
@@ -2090,7 +2093,7 @@ function BarTool({
       }
     >
       {id === "draw" && <Pencil />}
-      {id === "place" && <Crosshair />}
+      {id === "place" && <SprinklerIcon />}
       {id === "measure" && <MoveHorizontal />}
       <span className="hidden sm:inline">{label}</span>
     </Button>
@@ -2161,27 +2164,6 @@ function CatalogScroller({ listRef, dep }: { listRef: RefObject<HTMLUListElement
         onPointerDown={onThumbDown}
       />
     </div>
-  );
-}
-
-function CatalogThumb({ color, arc }: { color: string; arc: number }) {
-  const sweep = Math.min(360, Math.max(40, arc));
-  const r = 10;
-  const cx = 14;
-  const cy = 14;
-  const a0 = -sweep / 2;
-  const a1 = sweep / 2;
-  const rad = (d: number) => (d * Math.PI) / 180;
-  const large = sweep > 180 ? 1 : 0;
-  const d =
-    sweep >= 359
-      ? `M ${cx} ${cy} m -${r} 0 a ${r} ${r} 0 1 0 ${r * 2} 0 a ${r} ${r} 0 1 0 -${r * 2} 0`
-      : `M ${cx} ${cy} L ${cx + r * Math.cos(rad(a0))} ${cy + r * Math.sin(rad(a0))} A ${r} ${r} 0 ${large} 1 ${cx + r * Math.cos(rad(a1))} ${cy + r * Math.sin(rad(a1))} Z`;
-  return (
-    <svg width="28" height="28" viewBox="0 0 28 28" className="mt-0.5 shrink-0" aria-hidden>
-      <circle cx="14" cy="14" r="13" fill="transparent" stroke="currentColor" opacity="0.12" />
-      <path d={d} fill={color} opacity="0.9" />
-    </svg>
   );
 }
 
@@ -2333,6 +2315,7 @@ function ColorSlider({
   step,
   color,
   display,
+  endLabels,
   onChange,
 }: {
   label: string;
@@ -2342,8 +2325,10 @@ function ColorSlider({
   step: number;
   color: string;
   display: string;
+  endLabels?: [string, string];
   onChange: (n: number) => void;
 }) {
+  const range = sliderRange(min, max, step, value);
   const span = Math.max(0.0001, max - min);
   const pct = Math.max(0, Math.min(100, ((value - min) / span) * 100));
   return (
@@ -2354,28 +2339,38 @@ function ColorSlider({
       </span>
       <input
         type="range"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
+        min={0}
+        max={range.ticks}
+        step={1}
+        value={range.tick}
         aria-label={label}
+        aria-valuemin={min}
+        aria-valuemax={max}
+        aria-valuenow={value}
+        aria-valuetext={display}
+        disabled={min === max}
         className="head-slider mt-0.5 w-full"
         style={{
           color,
           background: `linear-gradient(90deg, ${color} ${pct}%, color-mix(in srgb, ${color} 22%, transparent) ${pct}%)`,
         }}
         onPointerDown={() => useProject.getState().beginHeadEdit()}
-        onChange={(e) => onChange(Number(e.target.value))}
+        onChange={(e) => onChange(range.fromTick(Number(e.target.value)))}
+        onKeyDown={(e) => { if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End", "PageUp", "PageDown"].includes(e.key)) useProject.getState().beginHeadEdit(); }}
+        onKeyUp={() => useProject.getState().endHeadEdit()}
+        onBlur={() => useProject.getState().endHeadEdit()}
         onPointerUp={() => useProject.getState().endHeadEdit()}
         onPointerCancel={() => useProject.getState().endHeadEdit()}
         onLostPointerCapture={() => useProject.getState().endHeadEdit()}
       />
+      {endLabels && <span className="mt-0.5 flex justify-between gap-2 text-[10px] text-muted tabular"><span>{endLabels[0]}</span><span>{endLabels[1]}</span></span>}
     </label>
   );
 }
 
 function CadEditBar({ faceId }: { faceId: string }) {
   const t = useT();
+  const memberScope = useProject(s => s.groupMemberId);
   const project = useProject((s) => s.project);
   const themeId = useProject((s) => s.themeId);
   const dark = themeId === "graphite";
@@ -2384,8 +2379,6 @@ function CadEditBar({ faceId }: { faceId: string }) {
   const [tip, setTip] = useState<string | null>(null);
   const hideTip = useRef(0);
   const wrapRef = useRef<HTMLDivElement>(null);
-  const paletteRef = useRef<HTMLDivElement>(null);
-  const fillTriggerRef = useRef<HTMLButtonElement>(null);
   const d = drawingOrMigrate(project);
   const face = d.faces[faceId];
   useEffect(() => {
@@ -2397,19 +2390,14 @@ function CadEditBar({ faceId }: { faceId: string }) {
   useEffect(() => {
     const onDown = (e: PointerEvent) => {
       const node = e.target as Node | null;
-      if (fillOpen) {
-        if (paletteRef.current?.contains(node) || fillTriggerRef.current?.contains(node)) return;
-        setFillOpen(false);
-      }
       if (wrapRef.current?.contains(node)) return;
       setAskDel(false);
       setTip(null);
     };
     document.addEventListener("pointerdown", onDown, true);
     return () => document.removeEventListener("pointerdown", onDown, true);
-  }, [faceId, fillOpen]);
+  }, [faceId]);
   if (!face || face.locked) return null;
-  const selectedTexture = FACE_TEXTURES.find((texture) => texture.id === face.fill);
   const showTip = (msg: string) => {
     window.clearTimeout(hideTip.current);
     setTip(msg);
@@ -2418,18 +2406,15 @@ function CadEditBar({ faceId }: { faceId: string }) {
   const Btn = ({
     label,
     danger,
-    buttonRef,
     onPress,
     children,
   }: {
     label: string;
     danger?: boolean;
-    buttonRef?: RefObject<HTMLButtonElement | null>;
     onPress: () => void;
     children: ReactNode;
   }) => (
     <button
-      ref={buttonRef}
       type="button"
       aria-label={label}
       className={cn(
@@ -2459,23 +2444,19 @@ function CadEditBar({ faceId }: { faceId: string }) {
         )}
       >
         <div className="flex flex-col items-center">
-          <Btn
-            label={t("fillShapeHint")}
-            buttonRef={fillTriggerRef}
-            onPress={() => {
-              setAskDel(false);
-              setFillOpen((v) => !v);
-            }}
-          >
-            <span className="relative">
-              <PaintBucket className="size-4" />
-              <span
-                className="absolute -right-0.5 -bottom-0.5 size-2 rounded-full border border-white"
-                style={selectedTexture ? { backgroundImage: `url(${selectedTexture.src})`, backgroundSize: "cover" } : { background: face.fill ?? REGION_FILL[face.type] ?? "#c8e6b0" }}
-              />
-            </span>
-          </Btn>
-          <Btn
+          {!face.layerId && <LayerColorPicker
+            key={faceId}
+            orientation={face.textureRotation ?? 0}
+            onOrientationChange={rotation => changeMaterialOrientation(faceId, rotation)}
+            title={face.name || t("layerN", { n: faceLayerNumber(d, faceId) })}
+            color={face.fill ?? REGION_FILL[face.type] ?? "#c8e6b0"}
+            side="right"
+            className="cad-fill-trigger"
+            open={fillOpen}
+            onOpenChange={(open) => { setAskDel(false); setTip(null); setFillOpen(open); }}
+            onChange={(color) => useProject.getState().setFaceFill(color)}
+          />}
+          {!face.layerId && !memberScope && <Btn
             label={t("duplicateHint")}
             onPress={() => {
               setAskDel(false);
@@ -2484,7 +2465,7 @@ function CadEditBar({ faceId }: { faceId: string }) {
             }}
           >
             <Copy className="size-4" />
-          </Btn>
+          </Btn>}
           <Btn
             label={t("deleteShapeHint")}
             danger
@@ -2502,58 +2483,11 @@ function CadEditBar({ faceId }: { faceId: string }) {
           </span>
         )}
       </div>
-      {fillOpen && (
-        <div
-          ref={paletteRef}
-          data-cad-palette
-          className={cn(
-            "pointer-events-auto absolute left-[3.25rem] top-1/2 z-50 grid w-[12rem] -translate-y-1/2 grid-cols-6 gap-1 rounded-md p-1.5 shadow-border",
-            dark ? "border border-line bg-surface backdrop-blur-md" : "border border-line bg-surface",
-          )}
-        >
-          {FACE_FILLS.map((c) => (
-            <button
-              key={c}
-              type="button"
-              aria-label={c}
-              className={cn(
-                "size-6 rounded-sm border",
-                (face.fill ?? "") === c ? "border-tool ring-1 ring-tool" : "border-line",
-              )}
-              style={c === "transparent" ? { background: "linear-gradient(135deg, transparent 45%, #d45b5b 46%, #d45b5b 54%, transparent 55%), #fff" } : { background: c }}
-              onPointerDown={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                useProject.getState().setFaceFill(c);
-              }}
-            />
-          ))}
-          <p className="col-span-6 mt-1 border-t border-line pt-1 text-[10px] text-muted">Материалы</p>
-          {FACE_TEXTURES.map((texture) => (
-            <button
-              key={texture.id}
-              type="button"
-              aria-label={texture.label}
-              title={texture.label}
-              className={cn(
-                "size-6 rounded-sm border bg-cover bg-center",
-                (face.fill ?? "") === texture.id ? "border-tool ring-1 ring-tool" : "border-line",
-              )}
-              style={{ backgroundImage: `url(${texture.src})` }}
-              onPointerDown={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                useProject.getState().setFaceFill(texture.id);
-              }}
-            />
-          ))}
-        </div>
-      )}
       {askDel && (
         <div
           data-cad-delete
           className={cn(
-            "pointer-events-auto absolute left-[3.25rem] top-1/2 z-50 w-[11.5rem] -translate-y-1/2 rounded-md p-2 shadow-border",
+            "pointer-events-auto absolute left-[3.25rem] top-1/2 z-50 w-[18rem] max-w-[calc(100%-3.75rem)] -translate-y-1/2 rounded-md p-1 shadow-border",
             dark ? "border border-line bg-surface text-ink backdrop-blur-md" : "border border-line bg-surface",
           )}
         >
@@ -2613,7 +2547,74 @@ function sideLetter(index: number) {
   return label;
 }
 
+function PolygonDraftDimensions({hover}: {hover: Pt | null}) {
+  const points=useProject(s=>s.draft.points);
+  const units=useProject(s=>s.units);
+  const kbLift=useKbLift();
+  const boundary=points;
+  const live=hover && boundary.length && dist(hover,boundary[boundary.length-1]!)>1e-7 ? [...boundary,hover] : boundary;
+  return <div className="dimension-pad pointer-events-auto fixed inset-x-2 z-[90] overflow-x-auto overscroll-x-contain rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border" style={{bottom:`calc(3.55rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)`}} onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()}>
+    <div className="flex h-10 w-max min-w-full items-center gap-1.5">
+      {live.length>=3 && polygonArea(live)>1e-8 && <DimensionArea area={polygonArea(live)}/>}
+      {boundary.slice(1).map((p,i)=><label key={i} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5"><strong>{sideLetter(i)}</strong><input key={`${p.x}:${p.y}:${boundary[i]!.x}:${boundary[i]!.y}`} className="w-20" inputMode="decimal" aria-label={sideLetter(i)} defaultValue={String(Number(fromMeters(dist(boundary[i]!,p),units.length).toFixed(2)))} onBlur={e=>{
+        const value=Number(e.currentTarget.value.replace(',','.'));
+        const st=useProject.getState(),next=st.draft.points.map(p=>({...p})),a=next[i],b=next[i+1];
+        if(!a||!b||!Number.isFinite(value)||value<=0)return;
+        const length=dist(a,b);if(length<1e-7)return;
+        const scale=toMetersLen(value,units.length)/length;
+        next[i+1]={x:a.x+(b.x-a.x)*scale,y:a.y+(b.y-a.y)*scale};st.setDraftPoints(next);
+      }} onKeyDown={e=>{e.stopPropagation();if(e.key==='Enter')e.currentTarget.blur();}}/><span>{lenLabel(units.length)}</span></label>)}
+      <label className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5"><strong>L</strong><input className="w-20" inputMode="decimal" placeholder={hover && points.length ? fromMeters(dist(points[points.length-1]!,hover),units.length).toFixed(2) : "0"} aria-label="L" onKeyDown={e=>{
+        e.stopPropagation();if(e.key!=='Enter')return;const value=Number(e.currentTarget.value.replace(',','.'));if(value>0){useProject.getState().applyCadLength(toMetersLen(value,units.length),hover);e.currentTarget.value='';}
+      }}/><span>{lenLabel(units.length)}</span></label>
+    </div>
+  </div>;
+}
+
+function DimensionArea({ area }: { area: number }) {
+  const t = useT();
+  const units = useProject((s) => s.units);
+  return <div className="dimension-total flex h-9 shrink-0 items-center gap-1 rounded-sm bg-tool/10 px-1.5">
+    <span className="min-w-5 text-center text-xs font-bold text-ink">S</span>
+    <output aria-label={t("area")} className="text-sm font-semibold tabular-nums text-ink">{formatAreaU(area, units.area)}</output>
+  </div>;
+}
+
+function SegmentFigureConfirmation({ deletingSelection, onDeleteSelected }: {
+  deletingSelection: boolean; onDeleteSelected?: () => void;
+}) {
+  const t=useT();
+  const project=useProject(s=>s.project);
+  const selectedPolyIds=useProject(s=>s.selectedPolyIds);
+  const [dismissed,setDismissed]=useState<string[]>([]);
+  const candidates=useMemo(()=>segmentFigures(drawingOrMigrate(project)),[project.drawing]);
+  const drawing=drawingOrMigrate(project);
+  const multipleSegments=selectedPolyIds.length>1 && selectedPolyIds.every(id=>drawing.faces[id]?.segment);
+  const candidate=candidates.find(c=>!dismissed.includes(c.key) &&
+    (selectedPolyIds.length<2 || c.parts.every(part=>selectedPolyIds.includes(part.id))));
+  const showDelete=multipleSegments && !!onDeleteSelected;
+  // Let the existing bulk-delete confirmation take this same panel position.
+  if(!candidate || deletingSelection) return null;
+  return <section className="bulk-selection-actions segment-figure-confirm" data-confirming="true" data-selection-delete={showDelete} role="region" aria-label={t("createSegmentFigure")}
+    onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()} onWheel={e=>e.stopPropagation()}>
+    <p role="status">{t("closedSegmentFigure")}</p>
+    <button type="button" className="bulk-create" onClick={()=>{
+      const st=useProject.getState();
+      const result=createSegmentFigure(drawingOrMigrate(st.project),candidate.key);
+      if(!result) return;
+      st.commitDrawing(result.drawing,result.faceId);
+      st.setCadEdit(result.faceId);
+    }}>{t("createSegmentFigure")}</button>
+    <button type="button" className="action-cancel" aria-label={t("cancel")} title={t("cancel")} onClick={()=>setDismissed(ids=>[...ids,candidate.key])}><X size={18}/></button>
+    {showDelete && <button type="button" className="bulk-delete"
+      disabled={selectedPolyIds.some(id=>drawing.faces[id]?.locked)}
+      aria-label={t("deleteSelectedLayers")} title={t("deleteSelectedLayers")}
+      onClick={onDeleteSelected}><Trash2 size={18}/></button>}
+  </section>;
+}
+
 function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; compact?: boolean }) {
+  const t=useT();
   const project = useProject((s) => s.project);
   const draft = useProject((s) => s.draft);
   const splinePreview = useProject((s) => s.splinePreview);
@@ -2625,6 +2626,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
     faceId && splinePreview?.faceId === faceId
       ? splinePreview.points
       : spline?.pts ?? draft.points;
+  const segment = Boolean(faceId && drawing.faces[faceId]?.segment);
   const closed = Boolean(spline?.closed);
   const segmentCount = closed ? points.length : Math.max(0, points.length - 1);
   const lengths = Array.from({ length: segmentCount }, (_, index) =>
@@ -2723,7 +2725,8 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
       onPointerDown={(event) => event.stopPropagation()}
     >
       <div className="flex h-10 w-max min-w-full items-center gap-1.5">
-        <div
+        {closed && <DimensionArea area={polygonArea(catmullRom(points, 8, true))} />}
+        {!segment && <div
           className="dimension-total flex h-9 shrink-0 items-center gap-1 rounded-sm bg-tool/10 px-1.5"
           title="Общая длина кривой"
         >
@@ -2735,10 +2738,10 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
             {formatLength(totalLength)}
           </output>
           <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
-        </div>
+        </div>}
         {lengths.map((length, index) => (
           <label key={`${faceId ?? "draft"}-${index}`} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
-            <span className="min-w-5 text-center text-xs font-bold text-ink">{sideLetter(index)}</span>
+            <span className="min-w-5 text-center text-xs font-bold text-ink">{segment ? "L" : sideLetter(index)}</span>
             <input
               aria-label={`Отрезок ${sideLetter(index)}`}
               inputMode="decimal"
@@ -2851,6 +2854,7 @@ function FreeformSidesPad({ faceId }: { faceId: string }) {
       onPointerDown={(event) => event.stopPropagation()}
     >
       <div className="flex h-10 w-max min-w-full items-center gap-1.5">
+        <DimensionArea area={faceArea(drawing, faceId)} />
         {sides.map((side, index) => (
           <label key={side.id} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
             <span className="min-w-5 text-center text-xs font-bold text-ink">{sideLetter(index)}</span>
@@ -2916,6 +2920,7 @@ function DrawMeasurePad({
 }) {
   type InputKey = "r" | "d" | "s" | "w" | "l" | "b" | "c" | "k" | "rot";
   const t = useT();
+  const pendingLineLength=useProject(s=>s.draft.lineLength);
   const kbLift = useKbLift();
   const units = useProject((s) => s.units);
   const [text, setText] = useState("");
@@ -2933,7 +2938,7 @@ function DrawMeasurePad({
     drawSub === "circle" ? t("drawRadius") :
     drawSub === "rect" || drawSub === "ellipse" || drawSub === "triangle" || drawSub === "hexagon" ? t("drawSize") :
     drawSub === "arc" ? t("drawRadius") :
-    t("drawLength");
+    drawSub === "line" ? t("segmentLength") : t("drawLength");
   const lenDec = units.length === "mm" ? 0 : units.length === "cm" ? 1 : 2;
   const areaDec = units.area === "acre" || units.area === "ha" ? 3 : 1;
   const fmtN = (n: number, d: number) => n.toFixed(d).replace(/\.?0+$/, (x) => (x.startsWith(".") ? x.replace(/0+$/, "").replace(/\.$/, "") : ""));
@@ -2990,7 +2995,8 @@ function DrawMeasurePad({
     syncCircle(r);
   };
   const apply = (raw: string) => {
-    const parsed = parseCadInput(raw, true);
+    const normalized=raw.trim();
+    const parsed = parseCadInput(drawSub === "line" && /^[0-9]+([.,][0-9]+)?$/.test(normalized) ? `${normalized}${units.length}` : normalized, true);
     if (!parsed.ok) return;
     const st = useProject.getState();
     if (drawSub === "circle") {
@@ -3089,34 +3095,6 @@ function DrawMeasurePad({
     else st.applyCadSize(w, h, hover);
     dirty.current = null;
   };
-  const field = (label: string, unit: string, value: string, which: InputKey, set: (v: string) => void) => (
-    <label className="flex items-center gap-1 sm:gap-2">
-      <span className={cn("shrink-0 whitespace-nowrap text-[11px] font-semibold text-ink sm:text-sm", drawSub === "triangle" ? "w-[7rem] sm:w-32" : "w-[4.85rem] sm:w-24")}>{label}</span>
-      <input
-        inputMode="decimal"
-        className="h-7 min-w-0 flex-1 rounded-sm bg-bg-2 px-1.5 text-[11px] tabular shadow-border sm:h-10 sm:px-2 sm:text-sm"
-        value={value}
-        onChange={(e) => {
-          dirty.current = which;
-          set(e.target.value);
-        }}
-        onFocus={(e) => {
-          dirty.current = which;
-          e.currentTarget.select();
-        }}
-        onKeyDown={(e) => {
-          e.stopPropagation();
-          if (e.key === "Enter") {
-            if (drawSub === "triangle" && (which === "w" || which === "b" || which === "c")) applyTriangleSides();
-            else if (which === "w" || which === "l" || which === "k" || which === "rot" || (which === "s" && (drawSub === "rect" || drawSub === "ellipse" || drawSub === "triangle" || drawSub === "hexagon"))) applyRectFrom(which === "s" ? "s" : which === "k" ? "k" : which === "rot" ? "rot" : which);
-            else if (which === "r" || which === "d" || which === "s") applyCircleFrom(which);
-            (e.target as HTMLInputElement).blur();
-          }
-        }}
-      />
-      <span className="w-6 shrink-0 text-[10px] text-muted sm:w-8 sm:text-[11px]">{unit}</span>
-    </label>
-  );
   const applyCompactField = (which: InputKey) => {
     if (drawSub === "circle" && (which === "r" || which === "d" || which === "s")) {
       applyCircleFrom(which);
@@ -3161,7 +3139,7 @@ function DrawMeasurePad({
       <span className="pr-0.5 text-[11px] text-muted">{unit}</span>
     </label>
   );
-  if ((editFaceId || compact) && ["circle", "rect", "ellipse", "triangle", ...(compact ? ["hexagon"] : [])].includes(drawSub)) {
+  if (["circle", "rect", "ellipse", "triangle", "hexagon"].includes(drawSub)) {
     const lengthUnit = lenLabel(units.length);
     const areaUnit = areaLabel(units.area);
     return (
@@ -3171,18 +3149,17 @@ function DrawMeasurePad({
         onPointerDown={(event) => event.stopPropagation()}
       >
         <div className="flex h-10 w-max min-w-full items-center gap-1.5">
+          {compactField("S", areaUnit, sIn, "s", setSIn)}
           {drawSub === "circle" && (
             <>
               {compactField("R", lengthUnit, rIn, "r", setRIn)}
               {compactField("Ø", lengthUnit, dIn, "d", setDIn)}
-              {compactField("S", areaUnit, sIn, "s", setSIn)}
             </>
           )}
           {(drawSub === "rect" || drawSub === "hexagon") && (
             <>
               {compactField("A", lengthUnit, wIn, "w", setWIn)}
               {compactField("B", lengthUnit, lIn, "l", setLIn)}
-              {compactField("S", areaUnit, sIn, "s", setSIn)}
             </>
           )}
           {drawSub === "ellipse" && (
@@ -3190,7 +3167,6 @@ function DrawMeasurePad({
               {compactField("A", lengthUnit, wIn, "w", setWIn)}
               {compactField("B", lengthUnit, lIn, "l", setLIn)}
               {compactField("°", "°", rotIn, "rot", setRotIn)}
-              {compactField("S", areaUnit, sIn, "s", setSIn)}
             </>
           )}
           {drawSub === "triangle" && (
@@ -3198,128 +3174,29 @@ function DrawMeasurePad({
               {compactField("A", lengthUnit, wIn, "w", setWIn)}
               {compactField("B", lengthUnit, bIn, "b", setBIn)}
               {compactField("C", lengthUnit, cIn, "c", setCIn)}
-              {compactField("S", areaUnit, sIn, "s", setSIn)}
             </>
           )}
         </div>
       </div>
     );
   }
-  if (compact) return <div className="dimension-pad"><label>
-    <span>A</span><input aria-label={param} inputMode="decimal" value={text} placeholder={hasPoint ? String(fromMeters(liveLen, units.length).toFixed(lenDec)) : "0"}
-      onChange={(e) => setText(e.target.value)} onFocus={(e) => e.currentTarget.select()}
-      onBlur={() => { if (text.trim()) { apply(text); setText(""); } }}
-      onKeyDown={(e) => { e.stopPropagation(); if (e.key === "Enter") e.currentTarget.blur(); }} /><span>{lenLabel(units.length)}</span>
-  </label></div>;
-  return (
-    <div
-      className={cn("dimension-pad pointer-events-auto fixed left-2 z-[90] rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border sm:px-2.5 sm:py-2", drawSub === "triangle" ? "w-[17rem] sm:w-[22rem]" : "w-[13.5rem] sm:w-[18rem]")}
-      style={{ bottom: `calc(3.4rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)` }}
-    >
-      {drawSub === "circle" ? (
-        <div className="space-y-1 sm:space-y-1.5">
-          {field("R", lenLabel(units.length), rIn, "r", setRIn)}
-          {field("Ø", lenLabel(units.length), dIn, "d", setDIn)}
-          {field(t("drawArea"), areaLabel(units.area), sIn, "s", setSIn)}
-          <Button
-            size="xs"
-            variant="pale-on"
-            className="h-7 w-full bg-btn-soft text-[11px] text-ink sm:h-10 sm:text-sm"
-            disabled={!rIn.trim() && !dIn.trim() && !sIn.trim()}
-            onClick={() => {
-              const d = dirty.current;
-              applyCircleFrom(d === "d" || d === "s" ? d : "r");
-            }}
-          >
-            {t("applySize")}
-          </Button>
-        </div>
-      ) : drawSub === "ellipse" ? (
-        <div className="space-y-1 sm:space-y-1.5">
-          {field(t("axisA"), lenLabel(units.length), wIn, "w", setWIn)}
-          {field(t("axisB"), lenLabel(units.length), lIn, "l", setLIn)}
-          {field(t("rotation"), "°", rotIn, "rot", setRotIn)}
-          {field(t("drawArea"), areaLabel(units.area), sIn, "s", setSIn)}
-          <Button
-            size="xs"
-            variant="pale-on"
-            className="h-7 w-full bg-btn-soft text-[11px] text-ink sm:h-10 sm:text-sm"
-            disabled={!wIn.trim() && !lIn.trim() && !sIn.trim() && !rotIn.trim()}
-            onClick={() => applyRectFrom(dirty.current === "s" ? "s" : dirty.current === "rot" ? "rot" : dirty.current === "l" ? "l" : "w")}
-          >
-            {t("applySize")}
-          </Button>
-        </div>
-      ) : drawSub === "triangle" ? (
-        <div className="space-y-1 sm:space-y-1.5">
-          {field(t("triangleBase"), lenLabel(units.length), wIn, "w", setWIn)}
-          {field(t("triangleLeft"), lenLabel(units.length), bIn, "b", setBIn)}
-          {field(t("triangleRight"), lenLabel(units.length), cIn, "c", setCIn)}
-          {field(t("drawArea"), areaLabel(units.area), sIn, "s", setSIn)}
-          <Button
-            size="xs"
-            variant="pale-on"
-            className="h-7 w-full bg-btn-soft text-[11px] text-ink sm:h-10 sm:text-sm"
-            disabled={!wIn.trim() && !bIn.trim() && !cIn.trim() && !sIn.trim()}
-            onClick={() => dirty.current === "s" ? applyRectFrom("s") : applyTriangleSides()}
-          >
-            {t("applySize")}
-          </Button>
-        </div>
-      ) : drawSub === "rect" || drawSub === "hexagon" ? (
-        <div className="space-y-1 sm:space-y-1.5">
-          {field(t("drawWidth"), lenLabel(units.length), wIn, "w", setWIn)}
-          {field(t("drawHeight"), lenLabel(units.length), lIn, "l", setLIn)}
-          {field(t("drawArea"), areaLabel(units.area), sIn, "s", setSIn)}
-          <Button
-            size="xs"
-            variant="pale-on"
-            className="h-7 w-full bg-btn-soft text-[11px] text-ink sm:h-10 sm:text-sm"
-            disabled={!wIn.trim() && !lIn.trim() && !sIn.trim()}
-            onClick={() => applyRectFrom(dirty.current === "s" ? "s" : dirty.current === "l" ? "l" : "w")}
-          >
-            {t("applySize")}
-          </Button>
-        </div>
-      ) : (
-        <>
-          <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{param}</p>
-          <p className="truncate text-xs tabular font-medium text-ink">{cadBuf || (hasPoint ? measureText : "—")}</p>
-          {areaM2 != null && <p className="text-[10px] tabular text-muted">{formatAreaU(areaM2, units.area)}</p>}
-          <div className="mt-1 flex items-center gap-1">
-            <input
-              inputMode="decimal"
-              placeholder={drawSub === "rect" || drawSub === "ellipse" || drawSub === "triangle" || drawSub === "hexagon" ? "10x6" : "5"}
-              className="h-10 min-w-0 flex-1 rounded-sm bg-bg-2 px-2 text-sm tabular shadow-border"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              onFocus={(e) => e.currentTarget.select()}
-              onKeyDown={(e) => {
-                e.stopPropagation();
-                if (e.key === "Enter") {
-                  apply(text);
-                  setText("");
-                  (e.target as HTMLInputElement).blur();
-                }
-              }}
-            />
-            <Button
-              size="sm"
-              variant="pale-on"
-              className="h-10"
-              disabled={!text.trim()}
-              onClick={() => {
-                apply(text);
-                setText("");
-              }}
-            >
-              {t("applySize")}
-            </Button>
-          </div>
-        </>
-      )}
+  return <div
+    className={compact ? "dimension-pad" : "dimension-pad pointer-events-auto fixed inset-x-2 z-[90] overflow-x-auto overscroll-x-contain rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border"}
+    style={compact ? undefined : { bottom: `calc(3.55rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)` }}
+    onPointerDown={event => event.stopPropagation()}>
+    <div className="flex h-10 w-max min-w-full items-center gap-1.5">
+      <label className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
+        <span className="min-w-5 text-center text-xs font-bold text-ink">{drawSub === "line" ? "L" : "A"}</span>
+        <input aria-label={param} inputMode="decimal" value={text}
+          className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none focus:border-tool"
+          placeholder={pendingLineLength ? String(fromMeters(pendingLineLength,units.length)) : hasPoint ? String(fromMeters(liveLen, units.length).toFixed(lenDec)) : "0"}
+          onChange={e => setText(e.target.value)} onFocus={e => e.currentTarget.select()}
+          onBlur={() => { if (text.trim()) { apply(text); setText(""); } }}
+          onKeyDown={e => { e.stopPropagation(); if (e.key === "Enter") e.currentTarget.blur(); }}/>
+        <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+      </label>
     </div>
-  );
+  </div>;
 }
 
 function AngleInput({ from, to }: { from: Pt; to: Pt }) {
@@ -3705,6 +3582,7 @@ function ProjectFormBar() {
 }
 
 function LayerIrrigCard() {
+  const locale = useProject((s) => s.locale);
   const t = useT();
   const project = useProject((s) => s.project);
   const selectedPolyId = useProject((s) => s.selectedPolyId);
@@ -3718,7 +3596,7 @@ function LayerIrrigCard() {
     );
   }
   const n = faceLayerNumber(d, face.id);
-  const label = face.name?.trim() || t("layerN", { n });
+  const label = layerTitle(d, face.id, locale);
   return (
     <div className="border-b border-line px-2 py-2">
       <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("irrigation")}</p>
@@ -3767,7 +3645,7 @@ function DrawingCard({ onlyConstraints = false }: { onlyConstraints?: boolean })
           <h2 className="min-w-0 flex-1 break-words text-base font-semibold">{project.name === "Без названия" ? t("untitled") : project.name}</h2>
           <Button onClick={() => useProject.getState().setProjectFormOpen(true)}>{t("edit")}</Button>
         </div>
-        <MobileLayers onEdit={(id) => useProject.getState().setCadEdit(id)} onInspect={() => { const st = useProject.getState(); st.setRightMode(st.selectedId ? "object" : "drawing"); st.setRightOpen(true); }} />
+        <MobileLayers selectedFirst={false} onEdit={(id) => useProject.getState().setCadEdit(id)} onInspect={() => { const st = useProject.getState(); st.setRightMode(st.selectedId ? "object" : "drawing"); st.setRightOpen(true); }} />
       </>}
       {selectedEdgeId && (
         <div className="flex flex-wrap gap-1">
@@ -3828,29 +3706,74 @@ function DrawingCard({ onlyConstraints = false }: { onlyConstraints?: boolean })
   );
 }
 
-function formatPopUp(mm: number, u: ReturnType<typeof useProject.getState>["units"]["length"]): string {
-  if (u === "in" || u === "ft") return `${Math.round(mm / 25.4)} in`;
-  return `${Math.round(mm / 10)} cm`;
+function CatalogSource({ item }: { item: CatalogItem }) {
+  return <div className="mt-3 border-t border-line pt-2 text-[11px] leading-relaxed">
+    {item.dataNote && <p className="mb-2 text-muted">{item.dataNote}</p>}
+    <a className="text-accent underline underline-offset-2" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">Таблица производителя Hunter ↗</a>
+    {item.verifiedOn && <p className="mt-1 text-muted">Сверено: {item.verifiedOn.split("-").reverse().join(".")}</p>}
+  </div>;
+}
+function FlowStats({ lpm, m3h }: { lpm: number | null; m3h: number | null }) {
+  const flowUnit = useProject(s => s.units.flow);
+  const locale = useProject(s => s.locale);
+  const tx = useT();
+  // Keep custom/US units, with the equivalent hourly metric flow alongside.
+  const primary = flowUnit === "m3h" ? "lpm" : flowUnit;
+  const unitLabel = locale === "ru"
+    ? ({ lpm: "л/мин", lph: "л/ч", gpm: "GPM", gph: "GPH" }[primary])
+    : flowLabel(primary);
+  return <>
+    <Stat k={`${tx("flow")}, ${unitLabel}`} v={lpm == null ? tx("noData") : formatNumber(fromLpm(lpm, primary), 2)}/>
+    <Stat k={`${tx("flow")}, ${locale === "ru" ? "м³/ч" : flowLabel("m3h")}`} v={m3h == null ? tx("noData") : formatNumber(m3h, 3)}/>
+  </>;
+}
+
+function CatalogInfo({ catalogId }: { catalogId: string }) {
+  const units=useProject(s=>s.units),target=useProject(s=>s.project.meta.targetMm);
+  const item=itemById(catalogId);
+  if (!item) return null;
+  const defaults=catalogHeadDefaults(item),nozzle=item.nozzles.find(n=>n.id===defaults.nozzleId);
+  const strip=stripAtPressure(item,defaults.designPressure);
+  const pressure=pressureRange(item,defaults.nozzleId,defaults.arc);
+  const fl=computeFlow(item,{arc:defaults.arc,radius:defaults.r,pressureBar:defaults.designPressure,nozzleId:defaults.nozzleId});
+  const minutes=fl.precipMmHr!=null?runTimeMin(target,fl.precipMmHr):null;
+  return <div className="p-3" aria-label={`Характеристики ${item.id}`}>
+    <CatalogPic item={item} className="mx-auto h-28 w-full max-w-[11rem]" />
+    <h2 className="mt-2 text-sm font-semibold">Hunter {item.id}</h2>
+    <p className="mt-1 text-xs text-muted">{item.name}</p>
+    <p className="mt-2 text-xs leading-relaxed">{item.use}</p>
+    {item.type==="rotor" && <p className="mt-2 text-xs">По умолчанию: сопло {nozzle?.size??"—"} · {nozzle?.colorName??"Нет данных"}</p>}
+    <dl className="mt-3 grid grid-cols-2 gap-x-2 gap-y-2 text-[11px]">
+      <FlowStats lpm={fl.lpm} m3h={fl.m3h}/>
+      <Stat k={item.strip?"Полоса при выбранном давлении":"Радиус при выбранном давлении"} v={item.coverageKind==="point"?"Нет данных":item.strip?(strip?`${formatLenU(strip.w,units.length)} × ${formatLenU(strip.l,units.length)}`:"Нет данных"):formatLenU(defaults.r,units.length)}/>
+      <Stat k="Рабочее давление" v={formatPressureU(defaults.designPressure,units.pressure)}/>
+      <Stat k={item.precipBasis==="single"?"Осаждение без перекрытия":"Осаждение, квадратная схема"} v={fl.precipMmHr==null?"Нет данных":`${fmt1(fl.precipMmHr)} мм/ч`}/>
+      <Stat k="Осаждение, треугольная схема" v={fl.precipTriangleMmHr==null?"Нет данных":`${fmt1(fl.precipTriangleMmHr)} мм/ч`}/>
+      <Stat k={`Время на ${fmt1(target)} мм`} v={minutes==null?"Нет данных":`${fmt1(minutes)} мин`}/>
+      <Stat k="Сектор" v={item.arcMin===item.arcMax?`${item.arcMax}°`:`${item.arcMin}–${item.arcMax}°`}/>
+      <Stat k="Диапазон давления сопла" v={pressure ? `${formatPressureU(pressure.min,units.pressure)}–${formatPressureU(pressure.max,units.pressure)}` : "Нет данных"}/>
+    </dl>
+    <CatalogReference item={item} nozzle={nozzle}/>
+    <CatalogSource item={item}/>
+  </div>;
 }
 
 function HeadCard({ head }: { head: Head }) {
   const item = itemById(head.catalogId);
   const units = useProject((s) => s.units);
   const tx = useT();
-  if (!item) return <p className="p-1.5 text-[11px] text-warn sm:p-4 sm:text-sm">{tx("modelReview")}</p>;
-  const fl = headFlow(head);
   const zones = useProject((s) => s.project.zones);
   const target = useProject((s) => s.project.meta.targetMm);
+  if (!item) return <p className="p-1.5 text-[11px] text-warn sm:p-4 sm:text-sm">{tx("modelReview")}</p>;
+  const fl = headFlow(head);
   const t = fl.precipMmHr ? runTimeMin(target, fl.precipMmHr) : null;
   const upd = (patch: Partial<Head>) => useProject.getState().updateHead(head.id, patch);
   const live = (patch: Partial<Head>) => useProject.getState().patchHeadLive(head.id, patch);
-  const nozzle = item.nozzles.find((n) => n.id === head.nozzleId) ?? item.nozzles[0];
+  const nozzle = head.nozzleId ? item.nozzles.find((n) => n.id === head.nozzleId) : defaultNozzle(item);
+  const strip = stripAtPressure(item,head.designPressure);
   const bodies = bodiesFor(item);
   const bodyId = head.bodyId && bodies.some((b) => b.id === head.bodyId) ? head.bodyId : defaultBodyFor(item);
-  const nzSt = nozzle && nozzle.performance.length ? nozzleRange(nozzle) : null;
-  const rotorRack = item.type === "rotor" && item.nozzles.length > 1;
-  const rMin = rotorRack ? item.rMin : nzSt && nzSt.rMax > nzSt.rMin ? nzSt.rMin : item.rMin;
-  const rMax = rotorRack ? item.rMax : nzSt && nzSt.rMax > nzSt.rMin ? nzSt.rMax : item.rMax;
+  const { radius, pressure } = headParameterRanges(item, head);
   const pickNozzle = (id: string) => {
     const n = item.nozzles.find((x) => x.id === id);
     if (!n) {
@@ -3866,13 +3789,18 @@ function HeadCard({ head }: { head: Head }) {
   };
   return (
     <div className="p-1.5 sm:p-3">
-      <CatalogPic item={item} className="mx-auto h-28 w-full max-w-[11rem]" />
+      <div className="relative">
+        <CatalogPic item={item} className="mx-auto h-28 w-full max-w-[11rem]" />
+        <button type="button" className="head-card-delete" disabled={head.locked || zones.some(z => z.id === head.zone && z.locked)} aria-label={tx("deleteSprinkler")} title={tx("deleteSprinkler")}
+          onClick={() => useProject.getState().removeHead(head.id)}><Trash2 size={18}/></button>
+      </div>
       <p className="mt-1 text-[10px] font-semibold tracking-wide text-muted uppercase">{item.series}</p>
       <h2 className="font-display text-sm leading-tight">{item.id}</h2>
       <p className="text-[11px] text-ink-soft">{item.name}</p>
+      {head.needsReview && <p className="mt-2 text-xs text-warn">Проверьте сопло и давление: сохранённые настройки отсутствуют в актуальной таблице Hunter.</p>}
       {item.type === "rotor" && item.nozzles.length > 1 && (
         <div className="mt-2">
-          <p className="text-[10px] font-semibold text-muted">{tx("nozzleSize")}</p>
+          <p className="text-[10px] font-semibold text-muted">{tx("nozzleSize")} · {tx("automaticNozzle")}</p>
           <div className="mt-1 grid grid-cols-4 gap-1">
             {item.nozzles.map((n) => {
               const on = (head.nozzleId ?? nozzle?.id) === n.id;
@@ -3881,8 +3809,10 @@ function HeadCard({ head }: { head: Head }) {
                   key={n.id}
                   type="button"
                   onClick={() => pickNozzle(n.id)}
+                  aria-pressed={on}
+                  title={`${n.name} · ${n.colorName}`}
                   className={cn("h-8 rounded-sm text-[11px] font-semibold tabular", on ? "text-white" : "hover:opacity-90")}
-                  style={on ? { background: n.color } : { background: n.color, color: "#fff", opacity: 0.38 }}
+                  style={{ background: on ? n.color : "transparent", color: on && !["белый","светло-коричневый","жёлтый"].includes(n.colorName) ? "#fff" : "var(--color-ink)", border: `1px solid ${on ? n.color : "transparent"}` }}
                 >
                   {n.size ?? n.name}
                 </button>
@@ -3892,16 +3822,29 @@ function HeadCard({ head }: { head: Head }) {
         </div>
       )}
       <div className="mt-2">
-        <ColorSlider
+        <p className="mb-2 text-xs text-muted">{tx("recommendedPressure")} — {formatPressureU(workingPressureBar(item, bodyId, head.nozzleId), units.pressure)}</p>
+        {pressure && <ColorSlider
+          label={tx("workingPressure")}
+          color="#2563eb"
+          min={pressure.min}
+          max={pressure.max}
+          step={0.1}
+          value={Math.max(pressure.min, Math.min(pressure.max, head.designPressure))}
+          endLabels={[formatPressureU(pressure.min, units.pressure), formatPressureU(pressure.max, units.pressure)]}
+          display={formatPressureU(head.designPressure, units.pressure)}
+          onChange={designPressure => live({ designPressure })}
+        />}
+        {radius && radius.max > radius.min && <ColorSlider
           label={tx("radius")}
           color="#e67a2e"
-          min={rMin}
-          max={rMax}
+          min={radius.min}
+          max={radius.max}
           step={0.05}
-          value={Math.min(rMax, Math.max(rMin, head.r))}
+          value={Math.min(radius.max, Math.max(radius.min, head.r))}
+          endLabels={[formatLenU(radius.min, units.length), formatLenU(radius.max, units.length)]}
           display={formatLenU(head.r, units.length)}
           onChange={(r) => live({ r })}
-        />
+        />}
         {item.arcMin !== item.arcMax && (
           <ColorSlider
             label={tx("sector")}
@@ -3914,7 +3857,7 @@ function HeadCard({ head }: { head: Head }) {
             onChange={(arc) => live({ arc })}
           />
         )}
-        <ColorSlider
+        {(item.strip || (item.coverageKind !== "point" && head.arc < 360)) && <ColorSlider
           label={tx("rotation")}
           color="#7b3fd0"
           min={0}
@@ -3923,19 +3866,18 @@ function HeadCard({ head }: { head: Head }) {
           value={((head.start % 360) + 360) % 360}
           display={`${Math.round(head.start)}°`}
           onChange={(start) => live({ start })}
-        />
+        />}
       </div>
       <dl className="mt-2 grid grid-cols-2 gap-x-2 gap-y-1 text-[11px]">
-        <Stat k={tx("flow")} v={fl.lpm == null ? tx("noData") : formatFlowU(fl.lpm, units.flow)} />
-        <Stat k={tx("radius")} v={formatLenU(head.r, units.length)} />
-        <Stat k={tx("m3h")} v={fl.m3h == null ? "—" : fmt1(fl.m3h)} />
+        <FlowStats lpm={fl.lpm} m3h={fl.m3h}/>
+        <Stat k={item.strip?"Размер полосы":tx("radius")} v={item.coverageKind==="point"?tx("noData"):item.strip?(strip?`${formatLenU(strip.w,units.length)} × ${formatLenU(strip.l,units.length)}`:tx("noData")):formatLenU(head.r, units.length)} />
         <Stat k={tx("workingPressure")} v={formatPressureU(head.designPressure, units.pressure)} />
-        <Stat k={tx("precipSpeed")} v={fl.precipMmHr == null ? "—" : `${fmt1(fl.precipMmHr)} ${tx("mmhr")}`} />
-        <Stat k="Траектория" v={nozzle?.trajectoryDeg != null ? `${nozzle.trajectoryDeg}°` : "—"} />
-        <Stat k={tx("runTime")} v={t == null ? "—" : `${Math.round(t)} ${tx("min")}`} />
-        <Stat k={tx("popUp")} v={formatPopUp(head.popUpMm ?? item.popUpMm ?? 100, units.length)} />
+        <Stat k={item.precipBasis==="single"?"Осаждение без перекрытия":"Осаждение, квадратная схема"} v={fl.precipMmHr == null ? tx("noData") : `${fmt1(fl.precipMmHr)} ${tx("mmhr")}`} />
+        <Stat k="Осаждение, треугольная схема" v={fl.precipTriangleMmHr==null?tx("noData"):`${fmt1(fl.precipTriangleMmHr)} ${tx("mmhr")}`}/>
+        <Stat k={`${tx("runTime")} · ${fmt1(target)} мм`} v={t == null ? tx("noData") : `${fmt1(t)} ${tx("min")}`} />
       </dl>
-      {fl.note && <p className="mt-1 text-[10px] text-muted">{fl.note}</p>}
+      <CatalogSource item={item}/>
+
       {item.nozzles.length > 1 && item.type !== "rotor" && (
         <label className="mt-2 block text-[10px] text-muted">
           {tx("nozzle")}
@@ -3962,26 +3904,12 @@ function HeadCard({ head }: { head: Head }) {
             >
               {bodies.map((b) => (
                 <option key={b.id} value={b.id}>
-                  {b.name}
+                  {b.name.replace(/\s+\d+(?:[.,]\d+)?\s*см$/i, "")}
                 </option>
               ))}
             </select>
           </label>
         )}
-        <label className="block text-[10px] text-muted">
-          {tx("popUp")}
-          <select
-            value={head.popUpMm ?? item.popUpMm ?? 100}
-            onChange={(e) => upd({ popUpMm: Number(e.target.value) })}
-            className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[13px] text-ink shadow-border"
-          >
-            {popUpHeights(item).map((mm) => (
-              <option key={mm} value={mm}>
-                {formatPopUp(mm, units.length)}
-              </option>
-            ))}
-          </select>
-        </label>
         <label className="block text-[10px] text-muted">
           {tx("zone")}
           <select
@@ -4005,41 +3933,7 @@ function HeadCard({ head }: { head: Head }) {
           {tx("addZone")}
         </button>
       </div>
-      <Button className="mt-2 w-full" size="sm" onClick={() => useProject.getState().deleteSelected()}>
-        <Trash2 />
-        {tx("delete")}
-      </Button>
-      <section className="mt-2 border-t border-line pt-2">
-        <p className="text-[9px] font-semibold tracking-wide text-muted uppercase">{tx("charTable")}</p>
-        {nozzle && nozzle.performance.length > 0 && (
-          <div className="mt-1.5 overflow-x-auto">
-            <table className="w-full text-[10px]">
-              <thead>
-                <tr className="text-left text-muted">
-                  <th className="pr-1">{tx("sector")}</th>
-                  <th className="pr-1">{tx("bar")}</th>
-                  <th className="pr-1">{tx("unit_m")}</th>
-                  <th className="pr-1">{tx("lpm")}</th>
-                  <th className="pr-1">{tx("m3h")}</th>
-                  <th>{tx("mmhr")}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {nozzle.performance.map((r, i) => (
-                  <tr key={i} className="tabular">
-                    <td className="pr-1">{r.arcDeg}°</td>
-                    <td className="pr-1">{fmt1(r.pressureBar)}</td>
-                    <td className="pr-1">{fmt1(r.radiusM)}</td>
-                    <td className="pr-1">{fmt1(r.flowLMin)}</td>
-                    <td className="pr-1">{fmt1(r.flowM3H)}</td>
-                    <td>{fmt1(r.precipSquareMmH)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </section>
+      <CatalogReference item={item} nozzle={nozzle}/>
     </div>
   );
 }
@@ -4257,13 +4151,12 @@ function ZoneList({ compact }: { compact?: boolean }) {
             const n = heads.length;
             const current = zone.id === activeId;
             const open = openId === zone.id;
-            const q = heads.reduce((s, h) => s + (headFlow(h).lpm ?? 0), 0);
+            const q = zoneFlow(heads, zone.id);
+            const pressure = zonePressure(heads, zone.id);
             const faces = Object.values(d.faces).filter((f) => heads.some((h) => headInsideFace(d, f.id, h)));
-            const areaM2 = faces.length
+            const areaM2 = faces.length && faces.every(f => !project.heads.some(h => h.zone !== zone.id && headInsideFace(d, f.id, h)))
               ? faces.reduce((s, f) => s + faceArea(d, f.id), 0)
-              : lawnPolygon(project.polygons)
-                ? polygonArea(lawnPolygon(project.polygons)!) * (n / Math.max(1, project.heads.length))
-                : 0;
+              : 0;
             const footprint = faces[0] ? facePoints(d, faces[0].id) : lawnPolygon(project.polygons);
             const cov = footprint && footprint.length >= 3 ? coverageStats(footprint, heads, 0.7, holes) : null;
             const precip = areaM2 > 0 && q ? totalAreaPrecip(q, areaM2) : null;
@@ -4309,6 +4202,11 @@ function ZoneList({ compact }: { compact?: boolean }) {
                     {t("layerMore")}
                   </button>
                 </div>
+                <div className="zone-demand" aria-label={`${zone.name}: ${t("flow")}, ${t("zonePressure")}`}>
+                  <span>{q == null ? t("noData") : formatFlowU(q, units.flow)}</span>
+                  <span title={t("zonePressure")}>{pressure == null ? t("noData") : formatPressureU(pressure, units.pressure)}</span>
+                  <span>{t("heads")}: {n}</span>
+                </div>
                 {open && (
                   <div className={cn("border-t border-line p-2 text-[11px] tabular", compact && "p-1.5")}>
                     <input
@@ -4317,8 +4215,8 @@ function ZoneList({ compact }: { compact?: boolean }) {
                       className="h-7 w-full rounded-sm bg-bg-2 px-2 text-[11px] shadow-border"
                     />
                     <p className="mt-1.5">
-                      {t("precipRate")}: {formatFlowU(q, units.flow)}
-                      {precip != null ? ` · ${fmt1(precip)} ${t("mmhr")}` : ""}
+                      {t("flow")}: {q == null ? "Нет данных" : formatFlowU(q, units.flow)}
+                      {precip != null ? ` · ≈ ${fmt1(precip)} ${t("mmhr")} (оценка по площади)` : ""}
                     </p>
                     <p>
                       {t("heads")}: {n}
@@ -4396,7 +4294,7 @@ function PumpBox() {
   const project = useProject((s) => s.project);
   const units = useProject((s) => s.units);
   const rec = recommendPump(project);
-  if (!rec) return null;
+  if (!rec) return project.heads.length ? <p className="mt-2 text-xs text-muted">Расчёт насоса: нет данных о расходе одного или нескольких дождевателей. Проверьте сопла и давление.</p> : null;
   const us = units.flow === "gpm" || units.flow === "gph" || units.pressure === "psi" || units.length === "ft" || units.length === "in";
   const qMain = formatFlowU(rec.qLpm, us ? "gpm" : "lpm");
   const qAlt = formatFlowU(rec.qLpm, us ? "gph" : "m3h");
@@ -4404,7 +4302,7 @@ function PumpBox() {
   const hAlt = formatPressureU(rec.pBar, us ? "psi" : "bar");
   return (
     <div className="mt-1.5 rounded-sm bg-bg-2 px-1.5 py-1.5">
-      <p className="text-[9px] font-semibold tracking-wide text-muted uppercase">{t("pumpRec")}</p>
+      <p className="text-xs font-semibold text-ink">{t("pumpRec")}</p>
       <p className="mt-0.5 text-[11px] font-medium leading-snug">
         Q {qMain} · {qAlt}
       </p>
@@ -4414,7 +4312,13 @@ function PumpBox() {
       <p className="mt-0.5 text-[10px] leading-snug text-muted">
         {t("pumpOneZone")}: {rec.zoneName} ({formatFlowU(rec.zoneMaxLpm, us ? "gpm" : "lpm")})
       </p>
+      <p className="mt-1 text-xs text-muted">{t("zonePressure")}: {formatPressureU(rec.workingBar, units.pressure)} · {rec.pressureZoneName}</p>
       <p className="text-[10px] leading-snug text-muted">{t("pumpNote")}</p>
+      <details className="mt-2 text-xs text-muted">
+        <summary>{t("pumpBasis")}</summary>
+        <p className="mt-1">{t("pumpEstimate", { loss: formatPressureU(rec.lossBar, units.pressure), elevation: formatPressureU(rec.elevBar, units.pressure) })}</p>
+        <a className="underline" href="https://www.hunterirrigation.com/sites/default/files/dg_student_guide_dom.pdf" target="_blank" rel="noreferrer">Hunter · {t("designGuide")}</a>
+      </details>
     </div>
   );
 }
@@ -4425,21 +4329,18 @@ function ZoneCard({ zoneId }: { zoneId: number }) {
   const t = useT();
   const z = project.zones.find((x) => x.id === zoneId);
   const heads = project.heads.filter((h) => h.zone === zoneId);
-  const q = heads.reduce((s, h) => s + (headFlow(h).lpm ?? 0), 0);
-  const lawn = lawnPolygon(project.polygons);
-  const precip = lawn && q ? totalAreaPrecip(q, polygonArea(lawn) * (heads.length / Math.max(1, project.heads.length))) : null;
+  const q = zoneFlow(heads, zoneId);
   const avail = project.water.availableLpm;
   const limit = defaultMaxZoneLpm(avail);
   const [maxLpm, setMaxLpm] = useState(String(limit));
   const patchWater = (patch: Partial<typeof project.water>) =>
     useProject.getState().patchProject({ water: { ...project.water, ...patch } });
   if (!z) return null;
-  const over = q > limit + 0.05;
+  const over = q != null && q > limit + 0.05;
   return (
     <div className="p-1.5 sm:p-4">
       <p className={cn("text-[11px]", over ? "text-warn" : "text-muted")}>
-        {z.name}: {heads.length} · {formatFlowU(q, units.flow)}
-        {precip ? ` · ${fmt1(precip)} ${t("mmhr")}` : ""}
+        {z.name}: {heads.length} · {q == null ? "Нет данных о расходе" : formatFlowU(q, units.flow)}
         {over ? ` · > ${formatFlowU(limit, units.flow)}` : ""}
       </p>
       <p className="mt-2 text-[9px] font-semibold tracking-wide text-muted uppercase">{t("waterSource")}</p>

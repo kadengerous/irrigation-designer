@@ -1,9 +1,10 @@
-import { bomLineName, defaultBodyFor, itemById } from "@/lib/hunter-catalog";
-import { drawingOrMigrate, facePoints, resolveDim } from "@/lib/cad/engine";
+import { bomLineName, defaultBodyFor, defaultNozzle, itemById, stripAtPressure } from "@/lib/hunter-catalog";
+import { drawingOrMigrate, facePoints, faceHoles, resolveDim } from "@/lib/cad/engine";
 import { REGION_FILL } from "@/lib/cad/types";
-import { flowLpm } from "@/lib/flow";
+import { zoneFlow } from "@/lib/hydro";
 import { boundsOf, fmt1, polygonArea, sectorLocal, type Pt } from "@/lib/geometry";
 import type { Project } from "@/lib/project-types";
+import { plantOutline, plantSymbol, plantInk } from "./plant-symbol";
 
 export async function saveFile(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
@@ -48,6 +49,9 @@ function collectPts(project: Project): Pt[] {
     }
   }
   for (const poly of project.polygons) pts.push(...poly.points);
+  if (d.layers?.plants?.visible !== false) for (const plant of Object.values(d.plants ?? {})) {
+    pts.push({x:plant.x-plant.r,y:plant.y-plant.r},{x:plant.x+plant.r,y:plant.y+plant.r});
+  }
   for (const h of project.heads) {
     pts.push({ x: h.x - h.r, y: h.y - h.r }, { x: h.x + h.r, y: h.y + h.r });
   }
@@ -90,8 +94,10 @@ export function projectToSvg(project: Project): string {
 
   for (const f of Object.values(d.faces)) {
     if (f.hidden) continue;
-    const fill = f.fill ?? REGION_FILL[f.type] ?? "#d0ccc4";
-    const op = fill === "transparent" ? 0 : 0.72;
+    const themed = f.fill === "theme";
+    const accent = typeof document === "undefined" ? "#0A7C66" : getComputedStyle(document.documentElement).getPropertyValue("--color-accent").trim() || "#0A7C66";
+    const fill = themed ? accent : f.fill ?? REGION_FILL[f.type] ?? "#d0ccc4";
+    const op = fill === "transparent" ? 0 : themed ? 0.15 : 0.72;
     if (f.circle) {
       parts.push(
         `<circle cx="${f.circle.cx}" cy="${f.circle.cy}" r="${f.circle.r}" fill="${fill}" fill-opacity="${op}" stroke="#1c1b17" stroke-width="0.05"/>`,
@@ -100,16 +106,20 @@ export function projectToSvg(project: Project): string {
     }
     const pts = facePoints(d, f.id);
     if (pts.length < 2) continue;
-    const path = pts.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") + " Z";
-    parts.push(`<path d="${path}" fill="${fill}" fill-opacity="${op}" stroke="#1c1b17" stroke-width="0.05"/>`);
+    const path = [pts,...faceHoles(d,f.id)].map(ring=>ring.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") + " Z").join(" ");
+    parts.push(`<path d="${path}" fill="${fill}" fill-rule="evenodd" fill-opacity="${op}" stroke="#1c1b17" stroke-width="0.05"/>`);
   }
 
   const hidden = new Set(project.zones.filter((z) => z.hidden).map((z) => z.id));
   for (const head of project.heads) {
     if (hidden.has(head.zone)) continue;
     const item = itemById(head.catalogId);
-    const color = item?.color ?? "#e25b1a";
-    const local = sectorLocal(head.r, head.start, head.arc);
+    const nozzle = head.nozzleId ? item?.nozzles.find(n => n.id === head.nozzleId) : item && defaultNozzle(item);
+    const color = nozzle?.color ?? item?.color ?? "#6b7280";
+    const strip = item && stripAtPressure(item, head.designPressure);
+    const angle = head.start * Math.PI / 180;
+    const local = strip ? [[strip.ox, strip.oy], [strip.ox + strip.l, strip.oy], [strip.ox + strip.l, strip.oy + strip.w], [strip.ox, strip.oy + strip.w]].flatMap(([x,y]) => [x! * Math.cos(angle) - y! * Math.sin(angle), x! * Math.sin(angle) + y! * Math.cos(angle)])
+      : item?.strip || item?.coverageKind === "point" ? [] : sectorLocal(head.r, head.start, head.arc);
     const path = local
       .reduce((acc, n, i) => {
         if (i % 2 === 0) acc.push(`${i === 0 ? "M" : "L"} ${head.x + n}`);
@@ -117,24 +127,29 @@ export function projectToSvg(project: Project): string {
         return acc;
       }, [] as string[])
       .join(" ");
-    parts.push(`<path d="${path} Z" fill="${color}" fill-opacity="0.38" stroke="${color}" stroke-width="0.04"/>`);
+    if (local.length) parts.push(`<path d="${path} Z" fill="${color}" fill-opacity="0.38" stroke="${color}" stroke-width="0.04"/>`);
     parts.push(`<circle cx="${head.x}" cy="${head.y}" r="0.18" fill="#fffdf8" stroke="#1c1b17" stroke-width="0.04"/>`);
     parts.push(`<circle cx="${head.x}" cy="${head.y}" r="0.1" fill="${color}"/>`);
   }
 
-  if (d.dims) {
+  if (d.dims && d.layers?.dims?.visible !== false) {
     for (const dim of Object.values(d.dims)) {
       const { a, b } = resolveDim(d, dim);
       const len = Math.hypot(b.x - a.x, b.y - a.y);
       const mx = (a.x + b.x) / 2;
       const my = (a.y + b.y) / 2;
       parts.push(`<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="#2b6f9a" stroke-width="0.04"/>`);
-      parts.push(`<text x="${mx}" y="${my - 0.15}" font-size="0.35" fill="#2b6f9a" text-anchor="middle">${len.toFixed(2)} m</text>`);
+      parts.push(`<text x="${mx}" y="${my - 0.15}" font-size="0.35" fill="#2b6f9a" text-anchor="middle">${escapeXml(dim.label ?? `${len.toFixed(2)} m`)}</text>`);
     }
+  }
+  if (d.layers?.plants?.visible !== false) for (const plant of Object.values(d.plants ?? {})) {
+    const coords = plantOutline(plantSymbol(plant), plant.r);
+    const points = Array.from({length:coords.length/2},(_,i)=>`${plant.x+coords[i*2]!},${plant.y+coords[i*2+1]!}`).join(" ");
+    parts.push(`<g><title>${escapeXml(plant.catalog?.russianName ?? plant.catalog?.latinName ?? "Растение")}</title><polygon points="${points}" fill="${plantInk(plant.kind)}" fill-opacity="0.16" stroke="${plantInk(plant.kind)}" stroke-width="0.03"/><circle cx="${plant.x}" cy="${plant.y}" r="${Math.min(plant.r*0.08,0.08)}" fill="${plantInk(plant.kind)}"/></g>`);
   }
   if (d.texts) {
     for (const tx of Object.values(d.texts)) {
-      parts.push(`<text x="${tx.x}" y="${tx.y}" font-size="${tx.size}" fill="#1b1f24">${escapeXml(tx.text)}</text>`);
+      parts.push(`<text x="${tx.x}" y="${tx.y}" font-size="${tx.size}" font-family="${escapeXml(tx.fontFamily ?? "IBM Plex Sans")}" font-weight="${tx.bold ? "bold" : "normal"}" font-style="${tx.italic ? "italic" : "normal"}" text-decoration="${tx.underline ? "underline" : "none"}" fill="${escapeXml(tx.color ?? "#1b1f24")}">${escapeXml(tx.text)}</text>`);
     }
   }
 
@@ -215,14 +230,20 @@ export function projectToDxf(project: Project): string {
     s += dxfPair(0, "LWPOLYLINE") + dxfPair(8, f.type) + dxfPair(90, pts.length) + dxfPair(70, 1);
     for (const p of pts) s += dxfPair(10, p.x) + dxfPair(20, flip(p.y));
   }
-  for (const dim of Object.values(d.dims ?? {})) {
+  for (const dim of Object.values(d.layers?.dims?.visible === false ? {} : d.dims ?? {})) {
     const { a, b } = resolveDim(d, dim);
     s += dxfPair(0, "LINE") + dxfPair(8, "DIM");
     s += dxfPair(10, a.x) + dxfPair(20, flip(a.y)) + dxfPair(11, b.x) + dxfPair(21, flip(b.y));
+    if (dim.label) s += dxfPair(0,"TEXT") + dxfPair(8,"DIM") + dxfPair(10,(a.x+b.x)/2) + dxfPair(20,flip((a.y+b.y)/2-0.15)) + dxfPair(40,0.35) + dxfPair(1,dim.label.replace(/[\r\n]/g," "));
   }
   for (const tx of Object.values(d.texts ?? {})) {
     s += dxfPair(0, "TEXT") + dxfPair(8, "TEXT") + dxfPair(10, tx.x) + dxfPair(20, flip(tx.y));
     s += dxfPair(40, tx.size) + dxfPair(1, tx.text);
+  }
+  if (d.layers?.plants?.visible !== false) for (const plant of Object.values(d.plants ?? {})) {
+    s += dxfPair(0, "CIRCLE") + dxfPair(8, "PLANTS") + dxfPair(10, plant.x) + dxfPair(20, flip(plant.y)) + dxfPair(40, plant.r);
+    const label = [plant.catalog?.latinName, plant.catalog?.cultivar].filter(Boolean).join(" ") || "Plant";
+    s += dxfPair(0, "TEXT") + dxfPair(8, "PLANT_LABELS") + dxfPair(10, plant.x) + dxfPair(20, flip(plant.y + plant.r + 0.2)) + dxfPair(40, 0.2) + dxfPair(1, label);
   }
   for (const h of project.heads) {
     s += dxfPair(0, "CIRCLE") + dxfPair(8, "HEAD") + dxfPair(10, h.x) + dxfPair(20, flip(h.y)) + dxfPair(40, 0.15);
@@ -257,12 +278,8 @@ export async function exportPdf(pngDataUrl: string, project: Project, name: stri
   doc.setFontSize(9);
   for (const z of project.zones) {
     const heads = project.heads.filter((h) => h.zone === z.id);
-    let q = 0;
-    for (const h of heads) {
-      const it = itemById(h.catalogId);
-      q += it ? (flowLpm(it, h.arc) ?? 0) : 0;
-    }
-    doc.text(`${z.name}  ·  ${heads.length} шт  ·  ${fmt1(q)} л/мин`, 200, y);
+    const q = zoneFlow(heads, z.id);
+    doc.text(`${z.name}  ·  ${heads.length} шт  ·  ${q == null ? "Нет данных о расходе" : `${fmt1(q)} л/мин`}`, 200, y);
     y += 5;
     if (y > 195) break;
   }

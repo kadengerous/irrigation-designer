@@ -105,8 +105,16 @@ export const THEME_NAMES: Record<ThemeId, string> = {
 export function canvasTheme(id: ThemeId) {
   const t = THEMES[parseThemeId(id)];
   return { bg: t.bg, ink: t.ink, accent: t.btn, surface: t.surface,
+    segmentStroke: t.dark ? t.ink : "#000000",
+    guideError: t.dark ? "#FF8D9C" : "#D9364E",
+    guideAligned: t.btn,
     minor: mix(t.bg, t.ink, 0.09), major: mix(t.bg, t.ink, 0.18),
     axis: mix(t.bg, t.ink, 0.34), handleOutline: t.dark ? "#EFF8F5" : "#FFFFFF" };
+}
+
+/** Light blue glass for figures without a custom colour or material. */
+export function themeFigureFill(id: ThemeId) {
+  return "rgba(125,202,242,0.30)";
 }
 
 function buildVars(base: ThemeBase): Vars {
@@ -146,6 +154,7 @@ function buildVars(base: ThemeBase): Vars {
     "--header-bg": surface,
     "--header-to": surface,
     "--panel-glass": `rgb(${hexToRgb(surface).join(" ")} / 88%)`,
+    "--mobile-panel-glass": `rgb(${hexToRgb(surface).join(" ")} / ${dark ? 66 : 58}%)`,
     "--panel-shadow": dark ? "0 6px 24px #00000030" : "0 6px 24px #2035300c",
     "--color-warn": dark ? "#F3C27D" : "#82521D",
     "--color-danger": dark ? "#FFAAAA" : "#9B3A2F",
@@ -186,6 +195,7 @@ export function applyTheme(
   root.dataset.appearance = id;
   root.style.colorScheme = base.dark ? "dark" : "light";
   root.style.setProperty("--panel-glass", `rgb(${hexToRgb(base.surface).join(" ")} / ${id === "crystal" ? 76 : id === "matte" ? 98 : 92}%)`);
+  root.style.setProperty("--mobile-panel-glass", `rgb(${hexToRgb(base.surface).join(" ")} / ${base.dark ? 66 : 58}%)`);
 }
 
 export function resolveButton(themeId: ThemeId, _buttonStyle?: ButtonStyle, _accent?: string, _themeAccent?: string): string {

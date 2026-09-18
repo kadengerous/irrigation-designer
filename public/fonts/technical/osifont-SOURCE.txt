@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/hikikomori82/osifont/53d85f70f053abf099dc3b5b8c6444bb02044451/osifont.ttf
+https://raw.githubusercontent.com/hikikomori82/osifont/53d85f70f053abf099dc3b5b8c6444bb02044451/osifont.sfd

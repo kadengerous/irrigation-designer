@@ -1,7 +1,8 @@
 import { closedPathSideStarts, closestOnSegment, dist, pointInPoly, polygonArea, shoelace, type Pt } from "@/lib/geometry";
 import { applyConstraints, autoSegmentConstraints } from "@/lib/cad/constraints";
-import { defaultLayerState, emptyDrawing, layerForType, type CadDim, type CadDrawing, type CadEdge, type CadFace, type CadLayerId, type CadVertex, type RegionType } from "@/lib/cad/types";
+import { defaultLayerState, emptyDrawing, irrigationRegionType, layerForType, type CadDim, type CadDrawing, type CadEdge, type CadFace, type CadLayerId, type CadVertex, type RegionType } from "@/lib/cad/types";
 import type { Geom, Head, PolyKind } from "@/lib/project-types";
+import { textureFrame, validTextureSize, type TextureSize } from "./texture-mapping";
 
 const EPS = 1e-9;
 const ON_EDGE = 1e-7;
@@ -11,7 +12,21 @@ function nid(prefix: string) {
 }
 
 export function cloneDrawing(d: CadDrawing): CadDrawing {
-  return JSON.parse(JSON.stringify(d)) as CadDrawing;
+  const next = JSON.parse(JSON.stringify(d)) as CadDrawing;
+  // Older saved faces acquire a reference before their first move/resize.
+  for (const face of Object.values(next.faces)) {
+    if (face.fill?.startsWith("texture:") && !validTextureSize(face.textureSize)) {
+      face.textureSize = faceTextureSize(d, face.id);
+    }
+  }
+  return next;
+}
+
+function faceTextureSize(d: CadDrawing, id: string): TextureSize {
+  const face = d.faces[id]!;
+  const frame = textureFrame({ points: face.rect ? rectWorldCorners(face.rect) : facePoints(d, id),
+    type: face.circle ? "circle" : "poly", radius: face.circle?.r, ellipse: face.ellipse });
+  return { width: frame.width, height: frame.height };
 }
 
 function v(d: CadDrawing, id: string): CadVertex {
@@ -144,6 +159,77 @@ function addRawEdge(d: CadDrawing, a: string, b: string, bulge = 0): string | nu
 }
 
 /** Insert polyline, splitting existing edges and intersections. */
+/** Give standalone straight segments the same layer identity and actions as figures. */
+export function segmentLayers(d0: CadDrawing, preferredId?: string): CadDrawing {
+  const owned = new Set(Object.values(d0.faces).flatMap(f => [...f.outer, ...f.holes.flat()].map(h => h.e)));
+  const edges = Object.values(d0.edges).filter(e => !owned.has(e.id) && Math.abs(e.bulge) < 1e-6);
+  if (!edges.length && !Object.values(d0.faces).some(f => f.segment)) return d0;
+  const d = cloneDrawing(d0), removed = new Set<string>();
+  for (const edge of edges) {
+    const a=d.vertices[edge.a], b=d.vertices[edge.b];
+    if (!a || !b) continue;
+    d.faces[edge.id] = { id:edge.id, type:"lawn", outer:[], holes:[], hidden:false, locked:false,
+      segment:true, spline:{pts:[{x:a.x,y:a.y},{x:b.x,y:b.y}],closed:false} };
+    delete d.edges[edge.id]; removed.add(edge.id);
+  }
+  const used = new Set(Object.values(d.edges).flatMap(e=>[e.a,e.b]));
+  for(const edge of edges) for(const id of [edge.a,edge.b]) if(!used.has(id)) { delete d.vertices[id]; removed.add(id); }
+  for(const c of Object.values(d.constraints ?? {})) {
+    if(removed.has(c.a) || (c.b && removed.has(c.b))) delete d.constraints![c.id];
+  }
+  // Collinear overlapping or touching intervals become one complete segment.
+  // Keep grouped, hidden and locked members independent.
+  const segments = Object.values(d.faces).filter(f => f.segment && f.spline?.pts.length === 2 && !f.layerId && !f.hidden && !f.locked);
+  segments.sort((a,b) => Number(b.id === preferredId) - Number(a.id === preferredId));
+  for (const a of segments) {
+    if (!d.faces[a.id]) continue;
+    let joined = true;
+    while (joined) {
+      joined = false;
+      for (const b of segments) {
+        if (a.id === b.id || !d.faces[b.id]) continue;
+        const [p,q]=a.spline!.pts, [r,t]=b.spline!.pts;
+        const dx=q!.x-p!.x, dy=q!.y-p!.y, length=Math.hypot(dx,dy);
+        if (length < 1e-9) continue;
+        const ux=dx/length, uy=dy/length;
+        // Compare supporting lines first, then union overlapping/touching intervals.
+        // This also removes contained segments and reversed duplicates.
+        const tolerance=1e-6;
+        const off=(v: Pt) => Math.abs((v.x-p!.x)*uy-(v.y-p!.y)*ux);
+        if (off(r!) > tolerance || off(t!) > tolerance) continue;
+        const project=(v: Pt) => (v.x-p!.x)*ux+(v.y-p!.y)*uy;
+        const rb=project(r!), tb=project(t!);
+        const low=Math.min(rb,tb), high=Math.max(rb,tb);
+        if (low > length+tolerance || high < -tolerance) continue;
+        const endpoints=[p!,q!,r!,t!].sort((v,w)=>project(v)-project(w));
+        a.spline!.pts=[{...endpoints[0]!},{...endpoints[3]!}];
+        delete d.faces[b.id]; joined=true;
+        if (joined) break;
+      }
+    }
+  }
+  return d;
+}
+
+/** Join loose endpoints only. Geometric crossings are not graph junctions. */
+export function addDrawingLines(d0: CadDrawing, points: Pt[], type: RegionType): CadDrawing {
+  const d = cloneDrawing(d0), loose = emptyDrawing();
+  const owned = new Set(Object.values(d.faces).flatMap(f => [...f.outer, ...f.holes.flat()].map(h => h.e)));
+  for (const edge of Object.values(d.edges)) {
+    if (owned.has(edge.id)) continue;
+    loose.edges[edge.id] = { ...edge };
+    loose.vertices[edge.a] = { ...d.vertices[edge.a]! };
+    loose.vertices[edge.b] = { ...d.vertices[edge.b]! };
+  }
+  const ids = points.map(p => ensureVertex(loose, p));
+  for (let i = 1; i < ids.length; i++) addRawEdge(loose, ids[i-1]!, ids[i]!);
+  // Keep lines as segments until the user confirms creation of a figure.
+  Object.assign(d.vertices, loose.vertices);
+  Object.assign(d.edges, loose.edges);
+  Object.assign(d.faces, loose.faces);
+  return d;
+}
+
 export function addChain(
   d0: CadDrawing,
   pts: Pt[],
@@ -621,6 +707,12 @@ export function rebuildFaces(d: CadDrawing, defaultType: RegionType) {
       hydro: old?.hydro,
       name: old?.name,
       fill: old?.fill,
+      textureRotation: old?.textureRotation,
+      textureSize: old?.textureSize,
+      layerId: old?.layerId,
+      layerPivot: old?.layerPivot,
+      layerAngle: old?.layerAngle,
+      layerParent: old?.layerParent,
     });
     d.faces[id] = faces[faces.length - 1]!;
   }
@@ -919,6 +1011,7 @@ export function deleteLooseEdge(d0: CadDrawing, edgeId: string): CadDrawing {
 }
 
 export function deleteFace(d0: CadDrawing, faceId: string): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return applyToLayer(d0, faceId, deleteFace);
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f) return d;
@@ -938,6 +1031,7 @@ export function deleteFace(d0: CadDrawing, faceId: string): CadDrawing {
 }
 
 export function setFaceType(d0: CadDrawing, faceId: string, type: RegionType): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return applyToLayer(d0, faceId, (d, id) => setFaceType(d, id, type));
   const d = cloneDrawing(d0);
   if (d.faces[faceId]) d.faces[faceId] = { ...d.faces[faceId]!, type };
   return d;
@@ -952,6 +1046,32 @@ export function moveVertex(d0: CadDrawing, vertexId: string, p: Pt): CadDrawing 
 }
 
 /** Move one merged-contour node without reapplying primitive CAD constraints. */
+export function prepareFusionControls(d0: CadDrawing, faceId: string): CadDrawing {
+  const face=d0.faces[faceId];
+  if(!face?.pointShape || face.nodeEdit || face.outer.length<8) return d0;
+  const vertices=faceVertices(d0,faceId), n=vertices.length;
+  const gentle=vertices.map((p,i)=>{
+    const a=vertices[(i+n-1)%n]!,b=vertices[(i+1)%n]!;
+    const ax=p.x-a.x,ay=p.y-a.y,bx=b.x-p.x,by=b.y-p.y;
+    const turn=Math.atan2(ax*by-ay*bx,ax*bx+ay*by);
+    return Math.abs(turn)>.002 && Math.abs(turn)<.3 ? Math.sign(turn) : 0;
+  });
+  const start=gentle.findIndex((v,i)=>!v || v!==gentle[(i+n-1)%n]);
+  if(start<0) return d0;
+  const runs:string[][]=[];
+  let current:number[]=[];
+  const flush=()=>{if(current.length>=4) runs.push([vertices[(current[0]!+n-1)%n]!.id,...current.map(i=>vertices[i]!.id),vertices[(current.at(-1)!+1)%n]!.id]);current=[];};
+  for(let k=0;k<=n;k++) {
+    const i=(start+k)%n;
+    if(k===n || !gentle[i] || (current.length && gentle[i]!==gentle[current.at(-1)!])) flush();
+    if(k<n && gentle[i]) current.push(i);
+  }
+  if(!runs.length) return d0;
+  const d=cloneDrawing(d0);
+  d.faces[faceId]!.nodeEdit={curvedVertexIds:runs.flatMap(run=>run.slice(1,-1)),curveRuns:runs};
+  return d;
+}
+
 export function moveNodeEditVertex(d0: CadDrawing, faceId: string, vertexId: string, p: Pt): CadDrawing {
   const d = cloneDrawing(d0);
   const face = d.faces[faceId];
@@ -962,6 +1082,18 @@ export function moveNodeEditVertex(d0: CadDrawing, faceId: string, vertexId: str
   if (index < 0) return d;
   const dx = p.x - vertex.x;
   const dy = p.y - vertex.y;
+  const run=face.nodeEdit.curveRuns?.find(ids=>ids[Math.floor(ids.length/2)]===vertexId);
+  if(run) {
+    // Stretch the entire rounded span, keeping its junctions fixed.
+    const middle=Math.floor(run.length/2), peak=Math.sin(Math.PI*middle/(run.length-1));
+    run.slice(1,-1).forEach((id,i)=>{
+      const q=d.vertices[id]; if(!q) return;
+      const weight=Math.sin(Math.PI*(i+1)/(run.length-1))/peak;
+      d.vertices[id]={...q,x:q.x+dx*weight,y:q.y+dy*weight};
+    });
+    clearFaceGeometryConstraints(d,face);
+    return d;
+  }
   const curved = new Set(face.nodeEdit.curvedVertexIds);
   const moveBy = (id: string, weight: number) => {
     const current = d.vertices[id];
@@ -1000,7 +1132,14 @@ function clearFaceGeometryConstraints(d: CadDrawing, face: CadFace) {
   }
 }
 
-/** Mark a numbered-point contour as freely editable, without CAD auto-locks. */
+/** Create a numbered-point contour with its own independent boundary. */
+export function addPointShape(d: CadDrawing, points: Pt[], type: RegionType): CadDrawing {
+  // A figure is a separate layer, not a set of cuts through the existing graph.
+  // Keep its vertices private even when snapping onto another figure's boundary.
+  return addIsolatedLoop(d, points, type, { pointShape: true });
+}
+
+/** Mark an existing numbered-point contour as freely editable, without CAD auto-locks. */
 export function markPointShape(d0: CadDrawing, faceId: string): CadDrawing {
   const d = cloneDrawing(d0);
   const face = d.faces[faceId];
@@ -1026,7 +1165,7 @@ export function setPointShapeVertices(
     const point = points[index];
     if (vertex && point) d.vertices[vertexId] = { ...vertex, x: point.x, y: point.y };
   });
-  for (const item of Object.values(d.faces)) item.rect = undefined;
+  face.rect = undefined;
   clearFaceGeometryConstraints(d, face);
   return d;
 }
@@ -1239,6 +1378,7 @@ export function faceCentroid(d: CadDrawing, faceId: string): Pt {
 }
 
 export function moveFace(d0: CadDrawing, faceId: string, dx: number, dy: number): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return transformLayer(d0, faceId, { dx, dy });
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f) return d;
@@ -1255,6 +1395,7 @@ export function moveFace(d0: CadDrawing, faceId: string, dx: number, dy: number)
 }
 
 export function rotateFace(d0: CadDrawing, faceId: string, deg: number, origin?: Pt): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return transformLayer(d0, faceId, { angle: deg }, origin);
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f) return d;
@@ -1304,6 +1445,16 @@ export function flattenEdge(d0: CadDrawing, edgeId: string): CadDrawing {
 }
 
 export function duplicateFace(d0: CadDrawing, faceId: string, dx = 0.8, dy = 0.8): { drawing: CadDrawing; id: string } {
+  const members = layerFaceIds(d0, faceId);
+  if (members.length > 1) {
+    let drawing = cloneDrawing(d0); const copied: string[] = [];
+    const oldLayer = drawing.faces[faceId]!.layerId;
+    for (const member of members) delete drawing.faces[member]!.layerId;
+    for (const member of members) { const copy = duplicateFace(drawing, member, dx, dy); drawing = copy.drawing; copied.push(copy.id); }
+    for (const member of members) drawing.faces[member]!.layerId = oldLayer;
+    return { drawing: mergeLayers(drawing, copied), id: copied[0]! };
+  }
+
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f) return { drawing: d, id: faceId };
@@ -1355,12 +1506,17 @@ export function duplicateFace(d0: CadDrawing, faceId: string, dx = 0.8, dy = 0.8
       : undefined,
     pointShape: f.pointShape,
     nodeEdit: f.nodeEdit
-      ? { curvedVertexIds: f.nodeEdit.curvedVertexIds.map((id) => vmap.get(id)).filter((id): id is string => Boolean(id)) }
+      ? { curvedVertexIds: f.nodeEdit.curvedVertexIds.map((id) => vmap.get(id)).filter((id): id is string => Boolean(id)),
+          curveRuns: f.nodeEdit.curveRuns?.map(run=>run.map(id=>vmap.get(id)).filter((id):id is string=>Boolean(id))) }
       : undefined,
     hydro: f.hydro,
     name: f.name,
     fill: f.fill,
+    textureRotation: f.textureRotation,
+    textureSize: f.textureSize,
   };
+  assignLoopFaces(d, d.faces[id]!.outer, id);
+  for (const hole of d.faces[id]!.holes) assignLoopFaces(d, hole, id);
   return { drawing: d, id };
 }
 
@@ -1401,27 +1557,13 @@ export function catmullRom(pts: Pt[], samples = 8, closed = false): Pt[] {
 }
 
 export function addSpline(d: CadDrawing, pts: Pt[], close: boolean, type: RegionType): CadDrawing {
-  if (pts.length < 2) return d;
-  if (!close) {
-    const next = cloneDrawing(d);
-    const id = nid("f");
-    next.faces[id] = {
-      id,
-      type,
-      outer: [],
-      holes: [],
-      locked: false,
-      hidden: false,
-      spline: { pts: pts.map((point) => ({ ...point })), closed: false },
-    };
-    return next;
-  }
-  const before = new Set(Object.values(d.faces).map(faceBoundaryKey));
-  const next = addChain(d, catmullRom(pts, 8, true), true, type, false);
-  const face = Object.values(next.faces)
-    .filter((candidate) => !before.has(faceBoundaryKey(candidate)))
-    .sort((a, b) => faceArea(next, b.id) - faceArea(next, a.id))[0];
-  if (face) face.spline = { pts: pts.map((point) => ({ ...point })), closed: true };
+  if (pts.length < (close ? 3 : 2)) return d;
+  const next = cloneDrawing(d);
+  const id = nid("f");
+  next.faces[id] = {
+    id, type, outer: [], holes: [], locked: false, hidden: false,
+    spline: { pts: pts.map(point => ({ ...point })), closed: close },
+  };
   return next;
 }
 
@@ -1431,41 +1573,40 @@ export function updateSpline(
   pts: Pt[],
   closedOverride?: boolean,
 ): CadDrawing {
-  const f = d0.faces[faceId];
-  if (!f?.spline) return d0;
-  const closed = closedOverride ?? f.spline.closed;
-  if (!closed) {
-    const d = cloneDrawing(d0);
-    d.faces[faceId] = {
-      ...d.faces[faceId]!,
-      spline: { pts: pts.map((point) => ({ ...point })), closed: false },
-    };
-    return d;
+  const source = d0.faces[faceId];
+  if (!source?.spline || source.locked) return d0;
+  const closed = closedOverride ?? source.spline.closed;
+  if (pts.length < (closed ? 3 : 2)) return d0;
+  const d = cloneDrawing(d0);
+  // Older curves stored sampled boundary edges. Detach only their own edges;
+  // shared boundaries of other faces must survive unchanged.
+  const protectedEdges = new Set(Object.values(d.faces)
+    .filter(face => face.id !== faceId)
+    .flatMap(face => [...face.outer, ...face.holes.flat()].map(half => half.e)));
+  const removedVertices = new Set<string>();
+  const removedEdges = new Set<string>();
+  for (const half of [...source.outer, ...source.holes.flat()]) {
+    const edge = d.edges[half.e];
+    if (!edge) continue;
+    if (!protectedEdges.has(edge.id)) {
+      removedVertices.add(edge.a); removedVertices.add(edge.b); removedEdges.add(edge.id);
+      delete d.edges[edge.id];
+    } else {
+      if (edge.faceL === faceId) edge.faceL = null;
+      if (edge.faceR === faceId) edge.faceR = null;
+    }
   }
-  const type = f.type;
-  const d = deleteFace(d0, faceId);
-  const remainingIds = new Set(Object.keys(d.faces));
-  const next = addSpline(d, pts, true, type);
-  const created = Object.values(next.faces).find(
-    (candidate) => candidate.spline && !remainingIds.has(candidate.id),
-  );
-  if (!created) return d0;
-  const createdId = created.id;
-  delete next.faces[createdId];
-  next.faces[faceId] = {
-    ...created,
-    id: faceId,
-    locked: f.locked,
-    hidden: f.hidden,
-    hydro: f.hydro,
-    name: f.name,
-    fill: f.fill,
+  const usedVertices = new Set(Object.values(d.edges).flatMap(edge => [edge.a, edge.b]));
+  for (const id of removedVertices) if (!usedVertices.has(id)) delete d.vertices[id];
+  for (const constraint of Object.values(d.constraints ?? {})) {
+    const removed = (id: string) => removedEdges.has(id) || (removedVertices.has(id) && !usedVertices.has(id));
+    if (removed(constraint.a) || (constraint.b && removed(constraint.b))) delete d.constraints![constraint.id];
+  }
+  d.faces[faceId] = {
+    ...d.faces[faceId]!, outer: [], holes: [], circle: undefined, ellipse: undefined, rect: undefined,
+    spline: { pts: pts.map(point => ({ ...point })), closed },
   };
-  for (const edge of Object.values(next.edges)) {
-    if (edge.faceL === createdId) edge.faceL = faceId;
-    if (edge.faceR === createdId) edge.faceR = faceId;
-  }
-  return next;
+  return d;
 }
 
 export function cleanupDrawing(d0: CadDrawing): CadDrawing {
@@ -1798,6 +1939,7 @@ export function scaleEllipse(d0: CadDrawing, faceId: string, k: number): CadDraw
 }
 
 export function scaleFaceAbout(d0: CadDrawing, faceId: string, k: number, origin?: Pt): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return transformLayer(d0, faceId, { scale: k }, origin);
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f || !(k > 0) || !Number.isFinite(k)) return d;
@@ -2068,6 +2210,42 @@ export function resolveDim(d: CadDrawing, dim: CadDim): { a: Pt; b: Pt } {
   return { a, b };
 }
 
+export function setDimensionLabel(d0: CadDrawing, id: string, label: string): CadDrawing {
+  if (!d0.dims?.[id] || d0.dims[id]!.label === label.trim()) return d0;
+  const d = cloneDrawing(d0);
+  d.dims![id]!.label = label.trim() || undefined;
+  return d;
+}
+
+export function outsideDimensionOffset(d: CadDrawing, a: Pt, b: Pt, distance: number): number {
+  const length = dist(a,b) || 1, nx = -(b.y-a.y)/length, ny = (b.x-a.x)/length;
+  const mid = {x:(a.x+b.x)/2,y:(a.y+b.y)/2};
+  const probe = Math.min(0.02,length*0.01);
+  return pickFaceAt(d,{x:mid.x+nx*probe,y:mid.y+ny*probe}) ? -Math.abs(distance) : Math.abs(distance);
+}
+
+/** Edit the measured geometry, never substitute a false label. */
+export function setDimensionLength(d: CadDrawing, id: string, length: number): CadDrawing {
+  const dim = d.dims?.[id];
+  if (!dim || !Number.isFinite(length) || length <= 0) return d;
+  const {a,b} = resolveDim(d,dim);
+  const current = dist(a,b);
+  if (current < 1e-9) return d;
+  const attached = Object.values(d.faces).filter(f => f.outer.some(h => {
+    const edge = d.edges[h.e];
+    return edge && [edge.a,edge.b].some(v => v === dim.aId || v === dim.bId);
+  }));
+  if (attached.some(f => f.locked || d.layers?.[layerForType(f.type)]?.locked)) return d;
+  const edge = Object.values(d.edges).find(e =>
+    (e.a === dim.aId && e.b === dim.bId) || (e.a === dim.bId && e.b === dim.aId));
+  const face = edge && attached.find(f => f.outer.some(h => h.e === edge.id));
+  if (edge && face) return setFaceEdgeLength(d,face.id,edge.id,length);
+  const target = {x:a.x+(b.x-a.x)*length/current,y:a.y+(b.y-a.y)*length/current};
+  const next = dim.bId && d.vertices[dim.bId] ? moveVertex(d,dim.bId,target) : cloneDrawing(d);
+  next.dims = {...next.dims,[id]:{...dim,b:target}};
+  return next;
+}
+
 export function alignEdge(d0: CadDrawing, edgeId: string, targetDeg: number, faceId?: string | null): CadDrawing {
   const ed = d0.edges[edgeId];
   if (!ed) return d0;
@@ -2092,6 +2270,7 @@ export function deleteDim(d0: CadDrawing, id: string): CadDrawing {
 }
 
 export function setFaceHidden(d0: CadDrawing, faceId: string, hidden: boolean): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return applyToLayer(d0, faceId, (d, id) => setFaceHidden(d, id, hidden));
   const d = cloneDrawing(d0);
   if (d.faces[faceId]) d.faces[faceId] = { ...d.faces[faceId]!, hidden };
   return d;
@@ -2136,12 +2315,14 @@ export function headsOnFaces(heads: Head[], d: CadDrawing, faceIds: string[]): S
 }
 
 export function setFaceLocked(d0: CadDrawing, faceId: string, locked: boolean): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return applyToLayer(d0, faceId, (d, id) => setFaceLocked(d, id, locked));
   const d = cloneDrawing(d0);
   if (d.faces[faceId]) d.faces[faceId] = { ...d.faces[faceId]!, locked };
   return d;
 }
 
 export function scaleFace(d0: CadDrawing, faceId: string, factor: number, origin?: Pt): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return transformLayer(d0, faceId, { scale: factor }, origin);
   return scaleFaceAxis(d0, faceId, factor, factor, origin);
 }
 
@@ -2315,6 +2496,13 @@ export function setDimOffset(d0: CadDrawing, id: string, offset: number): CadDra
   return d;
 }
 
+export function deleteDimension(d0:CadDrawing,id:string):CadDrawing {
+  if(!d0.dims?.[id]) return d0;
+  const d=cloneDrawing(d0);
+  delete d.dims![id];
+  return d;
+}
+
 export function moveText(d0: CadDrawing, id: string, p: Pt): CadDrawing {
   const d = cloneDrawing(d0);
   if (d.texts?.[id]) d.texts[id] = { ...d.texts[id]!, x: p.x, y: p.y };
@@ -2411,7 +2599,7 @@ export function nearestOpenSplineEndpoint(
 ): OpenSplineEndpointHit | null {
   let best: OpenSplineEndpointHit | null = null;
   for (const face of Object.values(drawing.faces)) {
-    if (face.hidden || face.locked || !face.spline || face.spline.closed) continue;
+    if (face.hidden || face.locked || face.segment || !face.spline || face.spline.closed) continue;
     const layer = drawing.layers?.[layerForType(face.type)];
     if (layer?.visible === false || layer?.locked) continue;
     const points = face.spline.pts;
@@ -2905,6 +3093,8 @@ function mergeFreehandCells(
       hydro: source.hydro,
       name: source.name,
       fill: source.fill,
+      textureRotation: source.textureRotation,
+      textureSize: source.textureSize,
       circle: undefined,
       ellipse: undefined,
       rect: undefined,
@@ -2998,125 +3188,24 @@ function attachOpenDrawnPath(
     : null;
 }
 
-/**
- * Finish a freehand gesture. A near-start endpoint creates a filled figure.
- * A stroke whose two ends land on the same figure grows that figure and
- * removes the shared internal boundary.
- */
+/** Finish one independent stroke; crossing geometry never joins or subdivides it. */
 export function addFreehandStroke(
-  d0: CadDrawing,
-  raw: Pt[],
-  type: RegionType,
-  options: {
-    closeTolerance?: number;
-    attachTolerance?: number;
-    smoothTolerance?: number;
-  } = {},
+  d0: CadDrawing, raw: Pt[], type: RegionType,
+  options: { closeTolerance?: number; attachTolerance?: number; smoothTolerance?: number } = {},
 ): FreehandStrokeResult {
-  if (raw.length < 2) {
-    return { drawing: cloneDrawing(d0), faceId: null, closed: false, attached: false };
-  }
-  const closeTolerance = Math.max(1e-4, options.closeTolerance ?? 0.2);
-  const attachTolerance = Math.max(1e-4, options.attachTolerance ?? closeTolerance);
-  const smoothTolerance = Math.max(1e-4, options.smoothTolerance ?? closeTolerance * 0.12);
-  const connected = collectConnectedFreehandStroke(d0, raw, attachTolerance);
-  const baseDrawing = connected.drawing;
-  let sourcePoints = connected.points;
-  const closed =
-    sourcePoints.length >= 3 &&
-    dist(sourcePoints[0]!, sourcePoints[sourcePoints.length - 1]!) <= closeTolerance;
-  const startHit = nearestClosedFaceBoundary(baseDrawing, sourcePoints[0]!, attachTolerance);
-  const endHit = nearestClosedFaceBoundary(
-    baseDrawing,
-    sourcePoints[sourcePoints.length - 1]!,
-    attachTolerance,
-  );
-  const hitFace = startHit ? baseDrawing.faces[startHit.faceId] : null;
-  const hitFaceClosed = Boolean(hitFace && isClosedBoundaryFace(hitFace));
-  const attachedTarget =
-    startHit && endHit && startHit.faceId === endHit.faceId && hitFaceClosed ? startHit.faceId : null;
-  const attachment = closed ? null : findFreehandAttachment(baseDrawing, sourcePoints, attachTolerance);
-  if (attachment) sourcePoints = attachment.points;
-  let points = smoothFreehandPoints(sourcePoints, smoothTolerance, closed);
-  if (points.length < 2 || (closed && points.length < 3)) {
-    return { drawing: cloneDrawing(d0), faceId: null, closed, attached: false };
-  }
-
-  if (closed) {
-    const contactHit = nearestFreehandContact(baseDrawing, sourcePoints, attachTolerance);
-    if (contactHit) {
-      points = insertClosedContact(points, contactHit.pt, Math.max(1e-5, smoothTolerance));
-    }
-    const targetId = attachedTarget ?? contactHit?.faceId ?? null;
-    if (!targetId) {
-      const before = new Set(Object.values(baseDrawing.faces).map(faceBoundaryKey));
-      const drawing = addChain(baseDrawing, points, true, type, false);
-      const faceId =
-        Object.values(drawing.faces)
-          .filter((face) => !before.has(faceBoundaryKey(face)))
-          .filter((face) => pointInPoly(faceInteriorSample(drawing, face.id), points))
-          .sort((a, b) => faceArea(drawing, b.id) - faceArea(drawing, a.id))[0]?.id ?? null;
-      if (faceId && drawing.faces[faceId]) {
-        drawing.faces[faceId]!.freehand = {
-          pts: points.map((point) => ({ ...point })),
-          closed: true,
-        };
-      }
-      return { drawing, faceId, closed: true, attached: false };
-    }
-    const source = structuredClone(baseDrawing.faces[targetId]!) as CadFace;
-    const targetPolygon = facePoints(baseDrawing, targetId);
-    const seed = faceInteriorSample(baseDrawing, targetId);
-    const base = materializeFreehandTarget(baseDrawing, targetId);
-    const divided = addChain(base, points, true, type, false);
-    const included = new Set(
-      Object.values(divided.faces)
-        .filter((face) => {
-          const sample = faceInteriorSample(divided, face.id);
-          return pointInPoly(sample, targetPolygon) || pointInPoly(sample, points);
-        })
-        .map((face) => face.id),
-    );
-    const merged = mergeFreehandCells(
-      divided,
-      included,
-      type,
-      seed,
-      source,
-      [...points, points[0]!],
-      Math.max(1e-5, smoothTolerance * 0.5),
-    );
-    if (merged.merged) {
-      return { drawing: merged.drawing, faceId: merged.faceId, closed: true, attached: true };
-    }
-    const fallbackId = pickFaceAt(divided, seed) ?? null;
-    return { drawing: divided, faceId: fallbackId, closed: true, attached: false };
-  }
-
-  const mergedOpen = attachOpenDrawnPath(
-    baseDrawing,
-    points,
-    type,
-    attachTolerance,
-    Math.max(1e-5, smoothTolerance * 0.15),
-  );
-  if (mergedOpen) return mergedOpen;
-
-  const drawing = cloneDrawing(baseDrawing);
-  const faceId = nid("f");
-  drawing.faces[faceId] = {
-    id: faceId,
-    type,
-    outer: [],
-    holes: [],
-    locked: false,
-    hidden: false,
-    freehand: { pts: points.map((point) => ({ ...point })), closed: false },
-  };
-  return { drawing, faceId, closed: false, attached: false };
+  if (raw.length < 2) return { drawing: cloneDrawing(d0), faceId: null, closed: false, attached: false };
+  const tolerance = Math.max(1e-4, options.closeTolerance ?? 0.2);
+  const connected = collectConnectedFreehandStroke(d0, raw, options.attachTolerance ?? tolerance);
+  const closed = connected.points.length >= 3 && dist(connected.points[0]!, connected.points.at(-1)!) <= tolerance;
+  const points = smoothFreehandPoints(connected.points, options.smoothTolerance ?? tolerance * 0.12, closed);
+  if (points.length < (closed ? 3 : 2)) return { drawing: cloneDrawing(d0), faceId: null, closed, attached: false };
+  const drawing = cloneDrawing(connected.drawing), faceId = nid("f");
+  drawing.faces[faceId] = { id: faceId, type, outer: [], holes: [], locked: false, hidden: false,
+    freehand: { pts: points.map(p => ({...p})), closed } };
+  return { drawing, faceId, closed, attached: false };
 }
 
-/** Finish an open spline and union its outside excursion with a touched figure. */
+/** Finish a separate curve; only an explicit endpoint continuation joins another open curve. */
 export function addSplineStroke(
   d0: CadDrawing,
   controls: Pt[],
@@ -3150,9 +3239,6 @@ export function addSplineStroke(
       };
     }
   }
-  const curve = catmullRom(controls, Math.max(4, options.samples ?? 8), false);
-  const merged = attachOpenDrawnPath(d0, curve, type, attachTolerance, Math.max(1e-5, attachTolerance * 0.01));
-  if (merged) return merged;
   const before = new Set(Object.keys(d0.faces));
   const drawing = addSpline(d0, controls, false, type);
   const faceId = Object.keys(drawing.faces).find((id) => !before.has(id)) ?? null;
@@ -3168,26 +3254,56 @@ export function addPlant(d0: CadDrawing, kind: "tree" | "shrub", p: Pt, r = kind
 }
 
 export function setFaceHydro(d0: CadDrawing, faceId: string, hydro: CadFace["hydro"]): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return applyToLayer(d0, faceId, (d, id) => setFaceHydro(d, id, hydro));
   const d = cloneDrawing(d0);
   if (d.faces[faceId]) d.faces[faceId] = { ...d.faces[faceId]!, hydro };
   return d;
 }
 
 export function faceLayerNumber(d: CadDrawing, faceId: string): number {
-  const ids = Object.keys(d.faces);
-  const i = ids.indexOf(faceId);
-  return (i >= 0 ? i : ids.length) + 1;
+  const face = d.faces[faceId];
+  if (!face?.layerId) return Object.keys(d.faces).indexOf(faceId) + 1;
+  const groups = layerRepresentatives(d).filter(f => !!f.layerId);
+  return groups.findIndex(f => f.layerId === face.layerId) + 1;
 }
 
 export function setFaceName(d0: CadDrawing, faceId: string, name: string): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return applyToLayer(d0, faceId, (d, id) => setFaceName(d, id, name));
   const d = cloneDrawing(d0);
   if (d.faces[faceId]) d.faces[faceId] = { ...d.faces[faceId]!, name: name.trim() || undefined };
   return d;
 }
 
-export function setFaceFill(d0: CadDrawing, faceId: string, fill: string): CadDrawing {
+export function setFaceTextureRotation(d0: CadDrawing, faceId: string, rotation: 0 | 90): CadDrawing {
   const d = cloneDrawing(d0);
-  if (d.faces[faceId]) d.faces[faceId] = { ...d.faces[faceId]!, fill };
+  for (const id of layerFaceIds(d, faceId)) if (d.faces[id] && !d.faces[id]!.locked) d.faces[id]!.textureRotation = rotation;
+  return d;
+}
+
+export function setFaceFill(d0: CadDrawing, faceId: string, fill: string): CadDrawing {
+  if (layerFaceIds(d0, faceId).length > 1) return applyToLayer(d0, faceId, (d, id) => setFaceFill(d, id, fill));
+  const d = cloneDrawing(d0);
+  const face = d.faces[faceId];
+  if (face) d.faces[faceId] = { ...face, fill, textureSize: fill.startsWith("texture:")
+    ? face.fill === fill && validTextureSize(face.textureSize) ? face.textureSize : faceTextureSize(d, faceId)
+    : undefined };
+  return d;
+}
+
+/** Update one leaf's appearance without applying the change to its group. */
+export function setGroupMemberAppearance(d0: CadDrawing, id: string, patch: {fill?: string; textureRotation?: 0 | 90; purpose?: NonNullable<CadFace["hydro"]>["purpose"]}): CadDrawing {
+  const original=d0.faces[id];
+  if(!original || original.locked) return d0;
+  let d=cloneDrawing(d0);
+  delete d.faces[id]!.layerId;
+  if(patch.fill !== undefined) d=setFaceFill(d,id,patch.fill);
+  if(patch.textureRotation !== undefined) d.faces[id]!.textureRotation=patch.textureRotation;
+  const purpose=patch.purpose ?? (patch.fill?.startsWith("texture:") ? "none" : undefined);
+  if(purpose !== undefined) {
+    const hydro=original.hydro;
+    d.faces[id]!.hydro={...hydro,need:hydro?.need ?? "medium",method:purpose!=="none" && hydro?.method==="none" ? "mp" : hydro?.method ?? "mp",purpose};
+  }
+  d.faces[id]!.layerId=original.layerId;
   return d;
 }
 
@@ -3213,6 +3329,22 @@ export function pickEdgeAt(d: CadDrawing, p: Pt, tol: number): string | null {
   return best;
 }
 
+/** Pick open geometry by its visible path, not an imaginary enclosed area. */
+export function pickOpenPathAt(d: CadDrawing, p: Pt, tol: number): string | null {
+  let best: string | null = null;
+  let distance = tol;
+  for (const f of Object.values(d.faces)) {
+    const curve = f.spline ?? f.freehand;
+    if (!curve || curve.closed || f.hidden || d.layers?.[layerForType(f.type)]?.visible === false) continue;
+    const points = facePoints(d, f.id);
+    for (let i = 1; i < points.length; i++) {
+      const delta = projectT(p, points[i - 1]!, points[i]!).d;
+      if (delta <= distance) { distance = delta; best = f.id; }
+    }
+  }
+  return best;
+}
+
 export function pickFaceAt(d: CadDrawing, p: Pt): string | null {
   let best: string | null = null;
   let bestA = Infinity;
@@ -3221,7 +3353,7 @@ export function pickFaceAt(d: CadDrawing, p: Pt): string | null {
     if ((f.spline && !f.spline.closed) || (f.freehand && !f.freehand.closed)) continue;
     const ls = d.layers?.[layerForType(f.type)];
     if (ls && ls.visible === false) continue;
-    if (pointInPoly(p, facePoints(d, f.id))) {
+    if (pointInPoly(p, facePoints(d, f.id)) && !faceHoles(d,f.id).some(hole=>pointInPoly(p,hole))) {
       const a = faceArea(d, f.id);
       if (a < bestA) {
         bestA = a;
@@ -3244,7 +3376,7 @@ export function pickCandidates(
     if ((f.spline && !f.spline.closed) || (f.freehand && !f.freehand.closed)) continue;
     const ls = d.layers?.[layerForType(f.type)];
     if (ls && ls.visible === false) continue;
-    if (pointInPoly(p, facePoints(d, f.id))) faces.push({ kind: "face", id: f.id, d: Math.sqrt(Math.max(0, faceArea(d, f.id))) });
+    if (pointInPoly(p, facePoints(d, f.id)) && !faceHoles(d,f.id).some(hole=>pointInPoly(p,hole))) faces.push({ kind: "face", id: f.id, d: Math.sqrt(Math.max(0, faceArea(d, f.id))) });
   }
   faces.sort((a, b) => a.d - b.d);
   const rest: { kind: "face" | "edge" | "head"; id: string; d: number }[] = faces.slice(0, 4);
@@ -3450,16 +3582,23 @@ export function fromPolygons(geoms: Geom[]): CadDrawing {
   return d;
 }
 
+/** Back-to-front paint order, independent of stable layer identity and numbering. */
+export function orderedFaces(d: CadDrawing): CadFace[] {
+  const ids = [...new Set([...(d.faceOrder ?? []), ...Object.keys(d.faces)])];
+  return ids.flatMap(id => d.faces[id] ? [d.faces[id]!] : []);
+}
+
 export function toPolygons(d: CadDrawing): Geom[] {
   const geoms: Geom[] = [];
   const usedEdges = new Set<string>();
-  for (const f of Object.values(d.faces)) {
+  for (const f of orderedFaces(d)) {
     for (const h of f.outer) usedEdges.add(h.e);
     for (const hole of f.holes) for (const h of hole) usedEdges.add(h.e);
     if (f.hidden) continue;
     const ls = d.layers?.[layerForType(f.type)];
     if (ls && ls.visible === false) continue;
-    const kind = (["lawn", "bed", "path", "hardscape"].includes(f.type) ? f.type : f.type === "building" || f.type === "no_irrigation" ? "hardscape" : f.type === "pool" || f.type === "water" ? "path" : "bed") as PolyKind;
+    const type = irrigationRegionType(f);
+    const kind = (["lawn", "bed", "path", "hardscape"].includes(type) ? type : type === "building" || type === "no_irrigation" ? "hardscape" : type === "pool" || type === "water" ? "path" : "bed") as PolyKind;
     if (f.spline || f.freehand) {
       const points = facePoints(d, f.id);
       const closed = f.spline?.closed ?? f.freehand?.closed ?? false;
@@ -3468,12 +3607,14 @@ export function toPolygons(d: CadDrawing): Geom[] {
           id: f.id,
           type: closed ? "poly" : "line",
           kind,
-          cadType: f.type,
+          cadType: type,
           points,
           closed,
           locked: f.locked,
           hidden: f.hidden,
           fill: f.fill,
+          textureRotation: f.textureRotation,
+          textureSize: f.textureSize,
           name: f.name,
         });
       }
@@ -3484,13 +3625,15 @@ export function toPolygons(d: CadDrawing): Geom[] {
         id: f.id,
         type: "circle",
         kind,
-        cadType: f.type,
+        cadType: type,
         points: [{ x: f.circle.cx, y: f.circle.cy }],
         radius: f.circle.r,
         closed: true,
         locked: f.locked,
         hidden: f.hidden,
         fill: f.fill,
+        textureRotation: f.textureRotation,
+        textureSize: f.textureSize,
         name: f.name,
       });
       continue;
@@ -3500,13 +3643,15 @@ export function toPolygons(d: CadDrawing): Geom[] {
         id: f.id,
         type: "poly",
         kind,
-        cadType: f.type,
+        cadType: type,
         points: ellipseWorldPts(f.ellipse.cx, f.ellipse.cy, f.ellipse.rx, f.ellipse.ry, f.ellipse.rot ?? 0, 96),
         ellipse: { ...f.ellipse },
         closed: true,
         locked: f.locked,
         hidden: f.hidden,
         fill: f.fill,
+        textureRotation: f.textureRotation,
+        textureSize: f.textureSize,
         name: f.name,
       });
       continue;
@@ -3516,12 +3661,14 @@ export function toPolygons(d: CadDrawing): Geom[] {
         id: f.id,
         type: "rect",
         kind,
-        cadType: f.type,
+        cadType: type,
         points: rectWorldCorners(f.rect),
         closed: true,
         locked: f.locked,
         hidden: f.hidden,
         fill: f.fill,
+        textureRotation: f.textureRotation,
+        textureSize: f.textureSize,
         name: f.name,
       });
       continue;
@@ -3532,12 +3679,15 @@ export function toPolygons(d: CadDrawing): Geom[] {
       id: f.id,
       type: f.rect ? "rect" : "poly",
       kind,
-      cadType: f.type,
+      cadType: type,
       points: pts,
       closed: true,
+      holes: faceHoles(d, f.id),
       locked: f.locked,
       hidden: f.hidden,
       fill: f.fill,
+      textureRotation: f.textureRotation,
+      textureSize: f.textureSize,
       name: f.name,
     });
   }
@@ -3563,7 +3713,7 @@ export function toPolygons(d: CadDrawing): Geom[] {
 }
 
 export function drawingOrMigrate(project: { polygons: Geom[]; drawing?: CadDrawing | null }): CadDrawing {
-  if (project.drawing && project.drawing.version && Object.keys(project.drawing.vertices ?? {}).length + Object.keys(project.drawing.faces ?? {}).length) {
+  if (project.drawing && project.drawing.version && (Object.keys(project.drawing.vertices ?? {}).length + Object.keys(project.drawing.faces ?? {}).length + Object.keys(project.drawing.texts ?? {}).length + Object.keys(project.drawing.dims ?? {}).length || !project.polygons.length)) {
     const d = project.drawing.dims ? project.drawing : { ...project.drawing, dims: {} };
     return d.texts ? d : { ...d, texts: {} };
   }
@@ -3572,4 +3722,121 @@ export function drawingOrMigrate(project: { polygons: Geom[]; drawing?: CadDrawi
 
 export function ensureDrawing(project: { polygons: Geom[]; drawing?: CadDrawing | null }): CadDrawing {
   return drawingOrMigrate(project);
+}
+
+/** Layer membership preserves each component's topology and material. */
+export function layerFaceIds(d: CadDrawing, faceId: string): string[] {
+  const f = d.faces[faceId];
+  if (!f) return [];
+  return f.layerId ? Object.values(d.faces).filter(x => x.layerId === f.layerId).map(x => x.id) : [faceId];
+}
+export function layerRepresentatives(d: CadDrawing): CadFace[] {
+  const seen = new Set<string>();
+  return Object.values(d.faces).filter(f => { const key = f.layerId ?? f.id; if (seen.has(key)) return false; seen.add(key); return true; });
+}
+/** Segment numbering is independent of filled layers and their paint order. */
+export function segmentNumber(d: CadDrawing, faceId: string): number {
+  return Object.values(d.faces).filter(f => f.segment).findIndex(f => f.id === faceId) + 1;
+}
+
+/** Original leaf labels, including segments inside nested groups. */
+export function groupMembers(d: CadDrawing, faceId: string) {
+  const allIds = Object.keys(d.faces);
+  const members = new Set(layerFaceIds(d,faceId));
+  return orderedFaces(d).filter(f => members.has(f.id)).map(({id}) => {
+    const face = d.faces[id]!;
+    let original = face.layerParent;
+    while (original?.parent) original = original.parent;
+    return { id, segment: Boolean(face.segment),
+      number: face.segment ? segmentNumber(d, id) : original?.number ?? allIds.indexOf(id) + 1,
+      name: original?.name?.trim() };
+  });
+}
+export function mergeLayers(d0: CadDrawing, ids: string[]): CadDrawing {
+  const members = [...new Set(ids.flatMap(id => layerFaceIds(d0, id)))];
+  if (members.length < 2 || members.some(id => d0.faces[id]?.locked)) return d0;
+  const d = cloneDrawing(d0), layerId = nid("layer"), name = undefined;
+  for (const id of members) {
+    const f = d.faces[id]!;
+    const parent = { number: Object.keys(d0.faces).indexOf(id) + 1, layerId: f.layerId, layerPivot: f.layerId ? layerCenter(d0, id) : undefined, layerAngle: f.layerAngle, name: f.name, parent: f.layerParent };
+    d.faces[id] = { ...f, layerParent: parent, layerId, name, layerPivot: undefined, layerAngle: 0 };
+  }
+  const pivot = layerCenter(d, members[0]!);
+  for (const id of members) d.faces[id]!.layerPivot = { ...pivot };
+  return d;
+}
+export function layerBounds(d: CadDrawing, id: string) {
+  const points = layerFaceIds(d, id).flatMap(member => facePoints(d, member));
+  const xs = points.map(p => p.x), ys = points.map(p => p.y);
+  return { minX: Math.min(...xs), minY: Math.min(...ys), maxX: Math.max(...xs), maxY: Math.max(...ys) };
+}
+export function layerCenter(d: CadDrawing, id: string): Pt {
+  const saved = d.faces[id]?.layerPivot;
+  if (saved && Number.isFinite(saved.x) && Number.isFinite(saved.y)) return { ...saved };
+  const b = layerBounds(d, id);
+  return { x: (b.minX+b.maxX)/2, y: (b.minY+b.maxY)/2 };
+}
+export function splitLayer(d0: CadDrawing, id: string): CadDrawing {
+  const ids = layerFaceIds(d0, id);
+  if (!d0.faces[id]?.layerId) return d0;
+  const d = cloneDrawing(d0);
+  for (const member of ids) {
+    const f = d.faces[member]!, previous = f.layerParent;
+    delete f.layerId; delete f.layerPivot; delete f.layerAngle; delete f.layerParent;
+    if (previous) {
+      f.layerId = previous.layerId; f.layerPivot = previous.layerPivot;
+      f.layerAngle = previous.layerAngle; f.name = previous.name; f.layerParent = previous.parent;
+    }
+  }
+  return d;
+}
+export function layerArea(d: CadDrawing, id: string) { return layerFaceIds(d, id).reduce((a, member) => a + faceArea(d, member), 0); }
+/** An oriented frame follows the group's own axes after every committed rotation. */
+export function layerFrame(d: CadDrawing, id: string): Pt[] {
+  const center = layerCenter(d, id), angle = d.faces[id]?.layerAngle ?? 0;
+  const normalized = angle ? transformLayer(d, id, { angle: -angle }, center) : d;
+  const b = layerBounds(normalized, id), rad = angle * Math.PI / 180;
+  const c = Math.cos(rad), s = Math.sin(rad);
+  return [{ x:b.minX,y:b.minY },{ x:b.maxX,y:b.minY },{ x:b.maxX,y:b.maxY },{ x:b.minX,y:b.maxY }].map(p => ({
+    x:center.x+(p.x-center.x)*c-(p.y-center.y)*s,
+    y:center.y+(p.x-center.x)*s+(p.y-center.y)*c,
+  }));
+}
+export function layerPerimeter(d: CadDrawing, id: string) { return layerFaceIds(d, id).reduce((a, member) => a + facePerimeter(d, member), 0); }
+export function transformLayer(d0: CadDrawing, id: string, change: { dx?: number; dy?: number; scale?: number; angle?: number }, origin?: Pt): CadDrawing {
+  const ids = layerFaceIds(d0, id);
+  if (!ids.length || ids.some(id => d0.faces[id]?.locked)) return d0;
+  const k = change.scale ?? 1, angle = change.angle ?? 0, dx = change.dx ?? 0, dy = change.dy ?? 0;
+  if (!(k > 0) || ![k, angle, dx, dy].every(Number.isFinite)) return d0;
+  const d = cloneDrawing(d0), b = layerBounds(d0, id);
+  const o = origin ?? layerCenter(d0, id);
+  const rad = angle * Math.PI / 180, c = Math.cos(rad), s = Math.sin(rad);
+  const point = (p: Pt) => ({ x: o.x + ((p.x-o.x)*c-(p.y-o.y)*s)*k+dx, y: o.y + ((p.x-o.x)*s+(p.y-o.y)*c)*k+dy });
+  // Shared vertices are transformed once, including adjacent members of a layer.
+  const vertices = new Set(ids.flatMap(id => faceVertexIds(d0, id)));
+  for (const v of vertices) if (d.vertices[v]) d.vertices[v] = { ...d.vertices[v]!, ...point(d.vertices[v]!) };
+  const pivot = point(layerCenter(d0, id));
+  for (const id of ids) {
+    const f = d.faces[id]!;
+    f.layerPivot = { ...pivot }; f.layerAngle = (f.layerAngle ?? 0)+angle;
+    for (let previous = f.layerParent; previous; previous = previous.parent) {
+      if (previous.layerPivot) previous.layerPivot = point(previous.layerPivot);
+      if (previous.layerId) previous.layerAngle = (previous.layerAngle ?? 0)+angle;
+    }
+    if (f.circle) { const p = point({ x: f.circle.cx, y: f.circle.cy }); f.circle = { cx: p.x, cy: p.y, r: f.circle.r*k }; }
+    if (f.ellipse) { const p = point({ x: f.ellipse.cx, y: f.ellipse.cy }); f.ellipse = { ...f.ellipse, cx: p.x, cy: p.y, rx: f.ellipse.rx*k, ry: f.ellipse.ry*k, rot: (f.ellipse.rot ?? 0)+angle }; }
+    if (f.rect) { const p = point({ x: f.rect.x+f.rect.w/2, y: f.rect.y+f.rect.h/2 }); f.rect = { x: p.x-f.rect.w*k/2, y: p.y-f.rect.h*k/2, w: f.rect.w*k, h: f.rect.h*k, rot: f.rect.rot+angle }; }
+    if (f.spline) f.spline = { ...f.spline, pts: f.spline.pts.map(point) };
+    if (f.freehand) f.freehand = { ...f.freehand, pts: f.freehand.pts.map(point) };
+  }
+  return d;
+}
+
+function applyToLayer(d0: CadDrawing, id: string, operation: (d: CadDrawing, id: string) => CadDrawing): CadDrawing {
+  const ids = layerFaceIds(d0, id), layerId = d0.faces[id]?.layerId;
+  let d = cloneDrawing(d0);
+  for (const member of ids) delete d.faces[member]!.layerId;
+  for (const member of ids) d = operation(d, member);
+  for (const member of ids) if (d.faces[member]) d.faces[member]!.layerId = layerId;
+  return d;
 }

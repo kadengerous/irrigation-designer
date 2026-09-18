@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/google/fonts/main/ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf
+https://raw.githubusercontent.com/google/fonts/main/ofl/jetbrainsmono/OFL.txt

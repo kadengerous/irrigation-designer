@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {createServer} from 'vite';
+const server=await createServer({server:{middlewareMode:true,hmr:false}});
+const {useProject,drawingForEditing,migrateProject}=await server.ssrLoadModule('/src/lib/project-store.ts');
+const {emptyProject}=await server.ssrLoadModule('/src/lib/project-types.ts');
+await server.close();
+test('text formatting survives movement, project reload, editing and undo',()=>{
+ const project=emptyProject();
+ useProject.setState({project,past:[],future:[],pastOps:[],futureOps:[],cadEditId:null,groupMemberId:null,draft:{points:[],scaleA:null,scaleB:null,measureA:null}});
+ const note={id:'test-note',x:1,y:2,text:'Подпись',size:0.7,fontFamily:'Georgia',color:'#e54040',bold:true,italic:true,underline:true};
+ useProject.getState().commitDrawing({...drawingForEditing(project),texts:{[note.id]:note}},null,true);
+ useProject.getState().setDrawSub('text');
+ useProject.getState().deactivateDrawing();
+ assert.equal(useProject.getState().tool,null);
+ assert.equal(useProject.getState().drawSub,'none');
+ assert.deepEqual(useProject.getState().project.drawing.texts[note.id],note);
+ useProject.getState().moveNote(note.id,{x:4,y:6});
+ const moved=useProject.getState().project;
+ assert.deepEqual(moved.drawing.texts[note.id],{...note,x:4,y:6});
+ assert.deepEqual(drawingForEditing(migrateProject(JSON.parse(JSON.stringify(moved)))).texts[note.id],{...note,x:4,y:6});
+ useProject.getState().commitDrawing({...moved.drawing,texts:{[note.id]:{...note,x:4,y:6,text:'Изменено',fontFamily:'Arial'}}},null,true);
+ useProject.getState().undo();assert.deepEqual(useProject.getState().project.drawing.texts[note.id],{...note,x:4,y:6});
+});

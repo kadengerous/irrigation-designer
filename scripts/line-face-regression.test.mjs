@@ -177,7 +177,7 @@ test("deleting a rectangle keeps an unrelated exact circle", async () => {
   }
 });
 
-test("freehand closes into a smooth figure and grows a touched figure", async () => {
+test("freehand closes independently and never grows a touched figure", async () => {
   const server = await createServer({ server: { middlewareMode: true } });
   try {
     const { addCircle, addFreehandStroke, addRect, faceArea, facePoints } = await server.ssrLoadModule(
@@ -222,11 +222,11 @@ test("freehand closes into a smooth figure and grows a touched figure", async ()
       smoothTolerance: 0.02,
     });
     assert.equal(attached.closed, false);
-    assert.equal(attached.attached, true);
+    assert.equal(attached.attached, false);
     assert.ok(attached.faceId);
-    assert.equal(Object.keys(attached.drawing.faces).length, 1);
-    assert.ok(faceArea(attached.drawing, attached.faceId) > originalArea);
-    assert.ok(attached.drawing.faces[attached.faceId].nodeEdit, "a pencil union switches to contour-node editing");
+    assert.equal(Object.keys(attached.drawing.faces).length, 2);
+    assert.equal(faceArea(attached.drawing, originalId), originalArea);
+    assert.ok(attached.drawing.faces[attached.faceId].freehand);
 
     drawing = addCircle(emptyDrawing(), { x: 0, y: 0 }, 2, "lawn");
     const circleId = Object.keys(drawing.faces)[0];
@@ -243,87 +243,43 @@ test("freehand closes into a smooth figure and grows a touched figure", async ()
       "lawn",
       { closeTolerance: 0.1, attachTolerance: 0.18, smoothTolerance: 0.02 },
     );
-    assert.equal(circleGrowth.attached, true);
+    assert.equal(circleGrowth.attached, false);
     assert.ok(circleGrowth.faceId);
-    assert.equal(Object.keys(circleGrowth.drawing.faces).length, 1);
-    assert.ok(faceArea(circleGrowth.drawing, circleGrowth.faceId) > circleArea);
+    assert.equal(Object.keys(circleGrowth.drawing.faces).length, 2);
+    assert.equal(faceArea(circleGrowth.drawing, circleId), circleArea);
   } finally {
     await server.close();
   }
 });
 
-test("an open curve grows a touched figure and the merged contour edits only by nodes", async () => {
+test("an open curve stays independent of a touched figure", async () => {
   const server = await createServer({ server: { middlewareMode: true } });
   try {
-    const { addCircle, addRect, addSplineStroke, faceArea, faceVertices, moveNodeEditVertex } = await server.ssrLoadModule(
-      "/src/lib/cad/engine.ts",
-    );
+    const { addCircle, addRect, addSplineStroke, updateSpline } = await server.ssrLoadModule("/src/lib/cad/engine.ts");
     const { emptyDrawing } = await server.ssrLoadModule("/src/lib/cad/types.ts");
-    const base = addRect(emptyDrawing(), { x: 0, y: 0 }, { x: 6, y: 4 }, "lawn");
-    const baseId = Object.keys(base.faces)[0];
-    const baseArea = faceArea(base, baseId);
     const controls = [
-      { x: 1, y: 0.02 },
-      { x: 1.25, y: -1.25 },
-      { x: 3, y: -2 },
-      { x: 4.75, y: -1.2 },
-      { x: 5, y: 0.02 },
+      { x: 1, y: 0.02 }, { x: 1.25, y: -1.25 }, { x: 3, y: -2 },
+      { x: 4.75, y: -1.2 }, { x: 5, y: 0.02 },
     ];
-    const result = addSplineStroke(base, controls, "lawn", { attachTolerance: 0.16 });
-    assert.equal(result.attached, true);
-    assert.ok(result.faceId);
-    assert.equal(Object.keys(result.drawing.faces).length, 1);
-    assert.ok(faceArea(result.drawing, result.faceId) > baseArea);
-    const merged = result.drawing.faces[result.faceId];
-    assert.ok(merged.nodeEdit, "the merged figure has dedicated node-edit metadata");
-    assert.equal(merged.rect, undefined, "primitive rectangle handles are removed");
-    assert.equal(merged.spline, undefined, "the spline is part of the outer contour");
-    assert.ok(merged.nodeEdit.curvedVertexIds.length >= 3);
-    assert.deepEqual(
-      Object.keys(result.drawing.edges).sort(),
-      merged.outer.map((half) => half.e).sort(),
-      "the union leaves only the new outside boundary",
-    );
-
-    const vertices = faceVertices(result.drawing, result.faceId);
-    const curved = new Set(merged.nodeEdit.curvedVertexIds);
-    const control = vertices.find((vertex) => curved.has(vertex.id));
-    const straight = vertices.find((vertex) => !curved.has(vertex.id));
-    assert.ok(control);
-    assert.ok(straight);
-    const straightBefore = { x: straight.x, y: straight.y };
-    const target = { x: control.x + 0.45, y: control.y - 0.3 };
-    const edited = moveNodeEditVertex(result.drawing, result.faceId, control.id, target);
-    assert.deepEqual({ x: edited.vertices[control.id].x, y: edited.vertices[control.id].y }, target);
-    assert.deepEqual(
-      { x: edited.vertices[straight.id].x, y: edited.vertices[straight.id].y },
-      straightBefore,
-      "an unrelated straight section does not jump",
-    );
-
-    const standalone = addSplineStroke(emptyDrawing(), controls, "lawn", { attachTolerance: 0.16 });
-    assert.equal(standalone.attached, false);
-    assert.ok(standalone.faceId);
-    assert.equal(standalone.drawing.faces[standalone.faceId].spline.closed, false);
-
-    const circle = addCircle(emptyDrawing(), { x: 0, y: 0 }, 2, "lawn");
-    const circleId = Object.keys(circle.faces)[0];
-    const circleCurve = addSplineStroke(
-      circle,
-      [
-        { x: -1, y: -1.73 },
-        { x: -1.4, y: -2.45 },
-        { x: 0, y: -3.1 },
-        { x: 1.4, y: -2.45 },
-        { x: 1, y: -1.73 },
-      ],
-      "lawn",
-      { attachTolerance: 0.18 },
-    );
-    assert.equal(circleCurve.attached, true);
-    assert.ok(circleCurve.faceId);
-    assert.ok(faceArea(circleCurve.drawing, circleCurve.faceId) > faceArea(circle, circleId));
-    assert.ok(circleCurve.drawing.faces[circleCurve.faceId].nodeEdit);
+    for (const base of [
+      addRect(emptyDrawing(), { x: 0, y: 0 }, { x: 6, y: 4 }, "lawn"),
+      addCircle(emptyDrawing(), { x: 3, y: 0 }, 2, "lawn"),
+    ]) {
+      const baseId = Object.keys(base.faces)[0];
+      const result = addSplineStroke(base, controls, "lawn", { attachTolerance: 0.16 });
+      assert.equal(result.attached, false);
+      assert.ok(result.faceId);
+      assert.equal(Object.keys(result.drawing.faces).length, 2);
+      assert.deepEqual(result.drawing.faces[baseId], base.faces[baseId]);
+      assert.deepEqual(result.drawing.edges, base.edges);
+      assert.deepEqual(result.drawing.vertices, base.vertices);
+      assert.deepEqual(result.drawing.faces[result.faceId].spline.pts, controls);
+      const edited = updateSpline(result.drawing, result.faceId,
+        controls.map((p, i) => i === 2 ? { x: 3, y: 1 } : p));
+      assert.equal(Object.keys(edited.faces).length, 2);
+      assert.deepEqual(edited.faces[baseId], base.faces[baseId]);
+      assert.deepEqual(edited.edges, base.edges);
+    }
   } finally {
     await server.close();
   }
@@ -432,7 +388,7 @@ test("separate pencil strokes join at their endpoints and close as one figure", 
   }
 });
 
-test("pencil started inside a figure uses only its outside excursion for the union", async () => {
+test("pencil started inside a figure stays independent", async () => {
   const server = await createServer({ server: { middlewareMode: true } });
   try {
     const { addFreehandStroke, addRect, faceArea } = await server.ssrLoadModule(
@@ -457,10 +413,10 @@ test("pencil started inside a figure uses only its outside excursion for the uni
       { closeTolerance: 0.12, attachTolerance: 0.15, smoothTolerance: 0.01 },
     );
 
-    assert.equal(grown.attached, true);
+    assert.equal(grown.attached, false);
     assert.ok(grown.faceId);
-    assert.equal(Object.keys(grown.drawing.faces).length, 1);
-    assert.ok(faceArea(grown.drawing, grown.faceId) > originalArea);
+    assert.equal(Object.keys(grown.drawing.faces).length, 2);
+    assert.equal(faceArea(grown.drawing, originalId), originalArea);
   } finally {
     await server.close();
   }

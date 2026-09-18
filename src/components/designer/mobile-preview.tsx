@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { ChevronLeft } from "lucide-react";
 import { CanvasHost } from "./canvas-host";
 import { useProject } from "@/lib/project-store";
+import { tr } from "@/lib/i18n";
 
 type Point = { x: number; y: number };
 type View = { px: number; panX: number; panY: number };
@@ -17,9 +18,10 @@ export function previewGesture(view: View, before: Point[], after: Point[]): Vie
 }
 
 export function MobilePreview({ onBack }: { onBack: () => void }) {
+  const locale = useProject((s) => s.locale);
   const [view, setView] = useState(() => { const s = useProject.getState(); return { px: s.pxPerMeter, panX: s.panX, panY: s.panY }; });
   const pointers = useRef(new Map<number, Point>());
-  return <section className="mobile-project-preview" aria-label="Предпросмотр проекта" onKeyDown={(e) => { e.stopPropagation(); if (e.key === "Escape") onBack(); }} onKeyUp={(e) => e.stopPropagation()}>
+  return <section className="mobile-project-preview" aria-label={tr(locale, "projectPreview")} onKeyDown={(e) => { e.stopPropagation(); if (e.key === "Escape") onBack(); }} onKeyUp={(e) => e.stopPropagation()}>
     <div className="mobile-preview-gestures"
       onPointerDown={(e) => { e.preventDefault(); e.currentTarget.setPointerCapture(e.pointerId); pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY }); }}
       onPointerMove={(e) => { if (!pointers.current.has(e.pointerId)) return; const before = [...pointers.current.values()]; pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY }); const after = [...pointers.current.values()]; setView(v => previewGesture(v, before, after)); }}
@@ -27,6 +29,6 @@ export function MobilePreview({ onBack }: { onBack: () => void }) {
       onContextMenu={(e) => e.preventDefault()}>
       <div className="mobile-preview-render"><CanvasHost previewView={view} onScalePair={() => {}} onMeasure={() => {}} /></div>
     </div>
-    <button autoFocus type="button" className="mobile-preview-back" onClick={onBack}><ChevronLeft size={20} />Назад</button>
+    <button autoFocus type="button" className="mobile-preview-back" onClick={onBack}><ChevronLeft size={20} />{tr(locale, "backToEditor")}</button>
   </section>;
 }

@@ -1,19 +1,18 @@
+import { catalogHeadDefaults, performanceAt, pressureRange, radiusRange } from "@/lib/flow";
+import { fitAutomaticNozzle, usesAutomaticNozzle, radiusAtChangedPressure } from "@/lib/head-adjustment";
+import { orderedFaces, layerFaceIds, layerArea, transformLayer } from "./cad/engine";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import type { PlantRecord, PlantCategory } from "./landscape-types";
+import type { CadPlant } from "./cad/types";
+import { cadSnap } from "./cad/snap";
 import { assignZoneForNewHead, defaultMaxZoneLpm, distributeZones } from "@/lib/hydro";
-import { clampHeadThrow } from "@/lib/hunter-rules";
-import { exclusionLoops, siteLoop } from "@/lib/cad/irrigation-geom";
 import {
   CATALOG,
   clampArc,
   clampRadius,
   defaultBodyFor,
-  defaultNozzle,
   itemById,
-  nozzleRange,
-  pickNozzleForRadius,
-  pickSeriesForRadius,
-  pickSkuForArc,
   workingPressureBar,
 } from "@/lib/hunter-catalog";
 import {
@@ -74,6 +73,10 @@ import {
   alignEdgeHorizontal,
   addArc3,
   addChain,
+  addDrawingLines,
+  segmentLayers,
+  addPointShape,
+  markPointShape,
   addCircle,
   addFreehandStroke,
   addText,
@@ -81,6 +84,7 @@ import {
   addTriangle,
   addHexagon,
   addDim,
+  outsideDimensionOffset,
   addEllipse,
   addPlant,
   addSplineStroke,
@@ -97,7 +101,7 @@ import {
   deleteDim,
   deleteFace,
   divideEdge,
-  drawingOrMigrate,
+  drawingOrMigrate as rawDrawingOrMigrate,
   duplicateFace,
   extendEdge,
   faceArea,
@@ -130,7 +134,6 @@ import {
   moveFace,
   moveText as moveCadText,
   moveVertex,
-  markPointShape,
   offsetChain,
   pathFromCenterline,
   pickEdgeAt,
@@ -151,20 +154,50 @@ import {
   trimEdge,
   toPolygons,
 } from "@/lib/cad/engine";
-import { SHAPE_FILL_CYCLE, type CadDrawing, type RegionType, type SnapKind } from "@/lib/cad/types";
+import { SHAPE_FILL_CYCLE, type CadDrawing, type LayerPurpose, type RegionType, type SnapKind } from "@/lib/cad/types";
+import { prepareFusionControls } from "@/lib/cad/engine";
 
 export type { Head, Geom, PolyKind, Project, Tool, Underlay, Zone };
+import { memberDrawing, restoreMember } from "./cad/member-editing";
+const drawingOrMigrate = rawDrawingOrMigrate;
+export function drawingForEditing(project: Project): CadDrawing {
+  return memberDrawing(rawDrawingOrMigrate(project), useProject.getState().groupMemberId);
+}
 
 export type Draft = {
+  lineLength?: number;
   points: Pt[];
+  redoPoints?: Pt[];
+  redoClosure?: boolean;
   scaleA: Pt | null;
   scaleB: Pt | null;
   measureA: Pt | null;
 };
 
-export type RightMode = "project" | "drawing" | "object" | "zone" | "irrigation" | "estimate";
+export type RightMode = "project" | "drawing" | "object" | "zone" | "irrigation" | "estimate" | "landscape";
 
 type State = {
+  landscapeOpen: boolean;
+  inspectedPlant: PlantRecord | null;
+  selectedPlantId: string | null;
+  pendingCatalogPlant: { record: PlantRecord; kind: PlantCategory; diameterM: number } | null;
+  setLandscapeOpen: (open: boolean) => void;
+  inspectPlant: (plant: PlantRecord) => void;
+  selectPlant: (id: string | null) => void;
+  preparePlant: (plant: PlantRecord, kind: PlantCategory, diameterM: number) => void;
+  placeCatalogPlant: (point: Pt) => void;
+  updatePlant: (id: string, patch: Partial<Pick<CadPlant, "x" | "y" | "r" | "locked" | "irrigation">>) => void;
+  duplicatePlant: (id: string) => void;
+  removePlant: (id: string) => void;
+  groupMemberId: string | null;
+  groupMemberGroupId: string | null;
+  selectGroupMember: (id: string, edit?: boolean) => void;
+  finishGroupMember: () => void;
+  setGroupMemberFlag: (id: string, patch: { hidden?: boolean; locked?: boolean }) => void;
+  renameGroupMember: (id: string, name: string) => void;
+  reorderGroupMembers: (ids: string[]) => void;
+  reorderLayers: (ids: string[]) => void;
+  deleteGroupMember: (id: string) => void;
   project: Project;
   projects: Project[];
   tool: Tool;
@@ -181,10 +214,13 @@ type State = {
   showRadii: boolean;
   showLabels: boolean;
   showGrid: boolean;
+  textHidden: boolean;
   snapOn: boolean;
   snapGridOn: boolean;
   orthoOn: boolean;
   gridStep: number;
+  dimensionOffset: number;
+  dimensionOffsetCustomized: boolean;
   catalogOpen: boolean;
   catalogVisible: boolean;
   rightOpen: boolean;
@@ -232,6 +268,7 @@ type State = {
   cadLiveRot: number | null;
 
   setTool: (t: Tool) => void;
+  deactivateDrawing: () => void;
   setCadMode: (m: CadMode) => void;
   setDrawSub: (s: DrawSub) => void;
   setMeasureSub: (s: MeasureSub) => void;
@@ -253,6 +290,7 @@ type State = {
   setCatalogOpen: (v: boolean) => void;
   setCatalogVisible: (v: boolean) => void;
   setCadEdit: (id: string | null) => void;
+  finishSegmentEdit: () => boolean;
   setCadLiveRot: (deg: number | null) => void;
   setRightOpen: (v: boolean) => void;
   setRightMode: (m: RightMode) => void;
@@ -342,6 +380,7 @@ type State = {
   addAngleGuides: (p: Pt) => void;
   addPlantAt: (p: Pt, kind: "tree" | "shrub") => void;
   setHydro: (need: "low" | "medium" | "high", method: "spray" | "mp" | "rotor" | "drip" | "bubbler" | "none") => void;
+  setLayerPurpose: (faceId: string, purpose: LayerPurpose) => void;
   setCadLayer: (id: import("@/lib/cad/types").CadLayerId, patch: { visible?: boolean; locked?: boolean }) => void;
   setPendingPlant: (k: "tree" | "shrub" | null) => void;
   addNote: (p: Pt, text: string) => void;
@@ -421,7 +460,7 @@ function migrateHead(h: Partial<Head> & { catalogId?: string; x: number; y: numb
     bodyId: h.bodyId ?? (item ? defaultBodyFor(item) : "PRS40"),
     popUpMm: h.popUpMm ?? item?.popUpMm ?? 100,
     locked: h.locked ?? false,
-    needsReview: h.needsReview ?? !item,
+    needsReview: !!h.needsReview || !item || !!h.nozzleId && !item?.nozzles.some(n => n.id === h.nozzleId),
   };
 }
 
@@ -437,15 +476,27 @@ function migrateGeom(g: Record<string, unknown>): Geom {
     hidden: Boolean(g.hidden),
     radius: typeof g.radius === "number" ? g.radius : undefined,
     cadType: (g.cadType as Geom["cadType"]) ?? undefined,
+    fill: typeof g.fill === "string" ? g.fill : undefined,
+    name: typeof g.name === "string" ? g.name : undefined,
+    ellipse: g.ellipse as Geom["ellipse"],
+    textureRotation: g.textureRotation as Geom["textureRotation"],
+    textureSize: g.textureSize as Geom["textureSize"],
   };
 }
 
-function migrateProject(raw: Record<string, unknown>): Project {
+export function migrateProject(raw: Record<string, unknown>): Project {
   const base = emptyProject(typeof raw.name === "string" ? raw.name : "Без названия");
   const heads = Array.isArray(raw.heads) ? (raw.heads as Parameters<typeof migrateHead>[0][]).map(migrateHead) : [];
-  const polygons = Array.isArray(raw.polygons)
+  const legacyPolygons = Array.isArray(raw.polygons)
     ? (raw.polygons as Record<string, unknown>[]).map(migrateGeom)
     : [];
+  let drawing = (raw.drawing as Project["drawing"]) ?? undefined;
+  if (drawing?.faces && drawing.edges && drawing.vertices) drawing = segmentLayers(drawing);
+  // CAD faces are authoritative. Older loads could have stripped appearance
+  // from the derived polygons while leaving the original faces intact.
+  const hasDrawing = drawing?.version && drawing.faces && drawing.vertices && drawing.edges &&
+    Object.keys(drawing.faces).length + Object.keys(drawing.vertices).length > 0;
+  const polygons = hasDrawing ? toPolygons(drawing!) : legacyPolygons;
   const zones = (
     Array.isArray(raw.zones) && (raw.zones as Zone[]).length
       ? (raw.zones as Zone[])
@@ -474,7 +525,7 @@ function migrateProject(raw: Record<string, unknown>): Project {
         }
       : null,
     polygons,
-    drawing: (raw.drawing as Project["drawing"]) ?? undefined,
+    drawing,
     heads,
     zones,
     scaleCalibrated: raw.scaleCalibrated !== false && !underlay ? true : Boolean(raw.scaleCalibrated),
@@ -482,27 +533,31 @@ function migrateProject(raw: Record<string, unknown>): Project {
   };
 }
 
-function fitHeadToRadius(next: Head, patch: Partial<Head>): Head {
-  if (patch.r == null || patch.nozzleId != null || patch.catalogId != null) return next;
-  const item = itemById(next.catalogId);
+function fitHeadToRadius(next: Head, patch: Partial<Head>, reference: Head): Head {
+  const item=itemById(next.catalogId);
   if (!item) return next;
-  if (item.nozzles.some((n) => n.performance.length > 1)) {
-    const n = pickNozzleForRadius(item, next.r);
-    if (n) {
-      next.nozzleId = n.id;
-      if (n.recommendedBar) next.designPressure = n.recommendedBar;
-    }
-    return next;
+  next.arc=clampArc(item,next.arc);
+  if (usesAutomaticNozzle(item) && patch.nozzleId === undefined &&
+      (patch.r != null || patch.arc != null || patch.designPressure != null)) {
+    if (patch.designPressure != null && patch.r == null)
+      next.r = radiusAtChangedPressure(item, reference, next.designPressure);
+    return fitAutomaticNozzle(item, next, reference);
   }
-  if (item.family === "mp" || item.family === "mp800") {
-    const series = pickSeriesForRadius(next.r, item.family);
-    const sku = pickSkuForArc(series, next.arc);
-    if (sku.id !== item.id) {
-      next.catalogId = sku.id;
-      next.nozzleId = sku.nozzles[0]?.id ?? null;
-      next.arc = clampArc(sku, next.arc);
-      next.r = clampRadius(sku, next.r);
+  const pressure = pressureRange(item,next.nozzleId,next.arc);
+  if (pressure && (patch.designPressure != null || patch.nozzleId != null || patch.bodyId != null || patch.arc != null)) {
+    const requested = Number.isFinite(next.designPressure) ? next.designPressure : item.recommendedPressureBar;
+    next.designPressure=Math.max(pressure.min,Math.min(requested,pressure.max));
+  }
+  const row=performanceAt(item,next.nozzleId,next.designPressure,next.arc)?.row;
+  if (row) {
+    const min=radiusRange(item,next.nozzleId,next.designPressure,next.arc)?.min ?? row.radiusM;
+    if (patch.r == null) {
+      if (patch.nozzleId != null && patch.nozzleId !== reference.nozzleId) next.r = row.radiusM;
+      else if (patch.designPressure != null || patch.bodyId != null)
+        next.r = radiusAtChangedPressure(item, reference, next.designPressure);
     }
+    next.r = Math.max(min, Math.min(next.r, row.radiusM));
+    next.needsReview=false;
   }
   return next;
 }
@@ -512,11 +567,32 @@ let headEditBase: Project | null = null;
 export const useProject = create<State>()(
   persist(
     (set, get) => {
-      const touch = (project: Project): Project => ({ ...project, updatedAt: new Date().toISOString() });
+      const drawingOrMigrate = (project: Project) => memberDrawing(rawDrawingOrMigrate(project), get().groupMemberId);
+      const touch = (project: Project): Project => preserveConstruction(project, { ...project, updatedAt: new Date().toISOString() });
+
+      // Construction history belongs to in-memory undo snapshots, never project exports.
+      const closedConstructions = new WeakMap<Project, { points: Pt[]; faceId: string }>();
+      // Saving/renaming is not an undoable geometry operation. Preserve the
+      // construction transition when these operations replace the project shell.
+      const preserveConstruction = (source: Project, replacement: Project): Project => {
+        const construction = closedConstructions.get(source);
+        if (construction) closedConstructions.set(replacement, construction);
+        return replacement;
+      };
+      const historySnapshot = (project: Project) => {
+        const snapshot = cloneProject(project);
+        const construction = closedConstructions.get(project);
+        if (construction) closedConstructions.set(snapshot, construction);
+        return snapshot;
+      };
 
       const withCommit = (next: Project, op = "edit") => {
+        if (next.drawing) {
+          const drawing = segmentLayers(restoreMember(next.drawing, rawDrawingOrMigrate(get().project), get().groupMemberId), get().cadEditId ?? get().selectedPolyId ?? undefined);
+          next = { ...next, drawing, polygons: toPolygons(drawing) };
+        }
         const { project, past, pastOps, projects } = get();
-        const past2 = [...past, cloneProject(project)].slice(-200);
+        const past2 = [...past, historySnapshot(project)].slice(-200);
         const ops2 = [...pastOps, get().lastOp].slice(-200);
         const item = touch(next);
         const listed = projects.some((x) => x.id === item.id);
@@ -533,7 +609,132 @@ export const useProject = create<State>()(
       };
 
       return {
+        groupMemberId: null,
+        groupMemberGroupId: null,
+        selectGroupMember: (id, edit = false) => {
+          const face = rawDrawingOrMigrate(get().project).faces[id];
+          if (!face?.layerId) return;
+          set({ groupMemberId: id, groupMemberGroupId: face.layerId, selectedPolyId: id,
+            selectedPolyIds: [id], selectedEdgeId: null, selectedId: null, selectedIds: [],
+            cadEditId: null, tool: "draw", drawSub: "none", draft: emptyDraft(),
+            rightMode: "drawing", rightOpen: true, catalogOpen: false, splinePreview: null, pendingConstraint: null, mergePrompt: null });
+          if (edit) get().setCadEdit(id);
+        },
+        finishGroupMember: () => {
+          const d = rawDrawingOrMigrate(get().project);
+          const members = Object.values(d.faces).filter(f => f.layerId === get().groupMemberGroupId);
+          set({ groupMemberId: null, groupMemberGroupId: null, cadEditId: null, cadLiveRot: null,
+            selectedPolyId: members[0]?.id ?? null, selectedPolyIds: members.map(f => f.id),
+            selectedEdgeId: null, splinePreview: null, tool: "draw", drawSub: "none", draft: emptyDraft() });
+        },
+        setGroupMemberFlag: (id, patch) => {
+          const d = rawDrawingOrMigrate(get().project), face = d.faces[id];
+          if (!face?.layerId) return;
+          const next = { ...d, faces: { ...d.faces, [id]: { ...face, ...patch } } };
+          withCommit({ ...get().project, drawing: next }, "member-property");
+          if (get().groupMemberId === id && (patch.hidden || patch.locked)) set({ cadEditId: null, splinePreview: null });
+        },
+        reorderGroupMembers: (ids) => {
+          const d = rawDrawingOrMigrate(get().project), group = d.faces[ids[0] ?? ""]?.layerId;
+          if (!group) return;
+          const members = Object.values(d.faces).filter(f => f.layerId === group);
+          if (ids.length !== members.length || new Set(ids).size !== ids.length || ids.some(id => d.faces[id]?.layerId !== group)) return;
+          // UI lists foreground first; the renderer paints foreground last.
+          const paintOrder = [...ids].reverse();
+          if (orderedFaces(d).filter(f=>f.layerId===group).every((f,i) => f.id === paintOrder[i])) return;
+          let index = 0;
+          const faceOrder = orderedFaces(d).map(f => f.layerId === group ? paintOrder[index++]! : f.id);
+          withCommit({ ...get().project, drawing: { ...d, faceOrder } }, "member-order");
+        },
+        reorderLayers: (ids) => {
+          const d = rawDrawingOrMigrate(get().project), faces = orderedFaces(d);
+          const key = (f: typeof faces[number]) => f.layerId ?? f.id;
+          const keys = [...new Set(faces.map(key))];
+          if (ids.length !== keys.length || new Set(ids).size !== ids.length || ids.some(id=>!keys.includes(id))) return;
+          const faceOrder = [...ids].reverse().flatMap(id=>faces.filter(f=>key(f)===id).map(f=>f.id));
+          if(faceOrder.every((id,i)=>faces[i]?.id===id)) return;
+          withCommit({ ...get().project, drawing: { ...d, faceOrder } }, "layer-order");
+        },
+        renameGroupMember: (id, name) => {
+          const raw = rawDrawingOrMigrate(get().project);
+          if (!raw.faces[id]?.layerId || raw.faces[id]?.locked) return;
+          const view = memberDrawing(raw, id);
+          const next = restoreMember(setCadFaceName(view, id, name), raw, id);
+          withCommit({ ...get().project, drawing: next }, "member-name");
+        },
+        deleteGroupMember: (id) => {
+          const raw = rawDrawingOrMigrate(get().project), face = raw.faces[id];
+          if (!face?.layerId || face.locked) return;
+          const next = deleteFace(memberDrawing(raw, id), id);
+          withCommit({ ...get().project, drawing: next }, "member-delete");
+          if (get().groupMemberId === id) get().finishGroupMember();
+        },
         project: emptyProject(),
+        landscapeOpen: false,
+        inspectedPlant: null,
+        selectedPlantId: null,
+        pendingCatalogPlant: null,
+        setLandscapeOpen: (open) => {
+          if (get().groupMemberId) get().finishGroupMember();
+          set({ landscapeOpen: open, catalogOpen: false, tool: null, drawSub: "none",
+            draft: emptyDraft(), cadEditId: null, selectedPolyId: null, selectedPolyIds: [],
+            selectedEdgeId: null, selectedId: null, selectedIds: [], pendingCatalogPlant: null,
+            rightOpen: false, rightMode: "landscape", inspectedPlant: null, selectedPlantId: null });
+        },
+        inspectPlant: (inspectedPlant) => set({ inspectedPlant, selectedPlantId: null, rightOpen: true, rightMode: "landscape" }),
+        selectPlant: (id) => {
+          if (id && !get().project.drawing?.plants?.[id]) return;
+          if (get().groupMemberId) get().finishGroupMember();
+          set({ selectedPlantId: id, inspectedPlant: null, selectedId: null, selectedIds: [],
+            selectedPolyId: null, selectedPolyIds: [], selectedEdgeId: null, cadEditId: null,
+            tool: null, drawSub: "none", draft: emptyDraft(), pendingCatalogPlant: null,
+            ...(id ? { rightOpen: true, rightMode: "landscape" as const } : {}) });
+        },
+        preparePlant: (record, kind, diameterM) => {
+          if (!Number.isFinite(diameterM) || diameterM < 0.05 || diameterM > 100) return;
+          set({ pendingCatalogPlant: { record, kind, diameterM }, selectedPlantId: null,
+            tool: null, drawSub: "none", catalogOpen: false, cadEditId: null,
+            selectedPolyId: null, selectedPolyIds: [], selectedEdgeId: null, selectedId: null, selectedIds: [], draft: emptyDraft() });
+        },
+        placeCatalogPlant: (point) => {
+          const st = get(), pending = st.pendingCatalogPlant;
+          if (!pending || (st.project.underlay && !st.project.scaleCalibrated)) return;
+          const drawing = drawingOrMigrate(st.project);
+          if (drawing.layers?.plants?.locked) return;
+          const pt = cadSnap(point, drawing, { pxPerMeter: st.pxPerMeter, snapOn: st.snapOn,
+            snapGridOn: st.snapOn && st.snapGridOn, gridStep: st.gridStep, heads: st.project.heads }).pt;
+          const id = uid("plant");
+          const plant: CadPlant = { id, kind: pending.kind, ...pt, r: pending.diameterM / 2,
+            catalogId: pending.record.id, catalog: pending.record,
+            irrigation: { plantId: pending.record.id, diameterM: pending.diameterM, climateZone: null,
+              season: null, exposure: null, soil: st.project.meta.soil || null, method: null, zoneId: null } };
+          withCommit({ ...st.project, drawing: { ...drawing, plants: { ...drawing.plants, [id]: plant },
+            ...(drawing.layers ? { layers: { ...drawing.layers, plants: { ...drawing.layers.plants, visible: true } } } : {}) } }, "plant-add");
+          get().selectPlant(id);
+        },
+        updatePlant: (id, patch) => {
+          const project = get().project, drawing = drawingOrMigrate(project), plant = drawing.plants?.[id];
+          if (!plant || drawing.layers?.plants?.locked || (plant.locked && patch.locked !== false)) return;
+          if ([patch.x, patch.y, patch.r].some(v => v !== undefined && !Number.isFinite(v))) return;
+          if (patch.r !== undefined && (patch.r < 0.025 || patch.r > 50)) return;
+          const next = { ...plant, ...patch };
+          if (patch.r !== undefined) next.irrigation = { ...next.irrigation, diameterM: patch.r * 2 };
+          withCommit({ ...project, drawing: { ...drawing, plants: { ...drawing.plants, [id]: next } } }, "plant-edit");
+        },
+        duplicatePlant: (id) => {
+          const project = get().project, drawing = drawingOrMigrate(project), plant = drawing.plants?.[id];
+          if (!plant || drawing.layers?.plants?.locked) return;
+          const copyId = uid("plant"), copy = { ...plant, id: copyId, x: plant.x + plant.r * 2 + 0.5, locked: false };
+          withCommit({ ...project, drawing: { ...drawing, plants: { ...drawing.plants, [copyId]: copy } } }, "plant-copy");
+          get().selectPlant(copyId);
+        },
+        removePlant: (id) => {
+          const project = get().project, drawing = drawingOrMigrate(project), plant = drawing.plants?.[id];
+          if (!plant || plant.locked || drawing.layers?.plants?.locked) return;
+          const plants = { ...drawing.plants }; delete plants[id];
+          withCommit({ ...project, drawing: { ...drawing, plants } }, "plant-delete");
+          set({ selectedPlantId: null });
+        },
         projects: [],
         tool: null,
         drawSub: "none",
@@ -548,11 +749,14 @@ export const useProject = create<State>()(
         showCoverage: true,
         showRadii: true,
         showLabels: true,
-        showGrid: false,
+        showGrid: true,
+        textHidden: false,
         snapOn: true,
         orthoOn: false,
         snapGridOn: true,
         gridStep: 0.5,
+        dimensionOffset: 1,
+        dimensionOffsetCustomized: false,
         catalogOpen: false,
         catalogVisible: true,
         rightOpen: false,
@@ -599,29 +803,44 @@ export const useProject = create<State>()(
         splinePreview: null,
         cadLiveRot: null,
 
-        setTool: (tool) =>
+        deactivateDrawing: () => {
+          if (get().groupMemberId) get().finishGroupMember();
+          set({tool:null,drawSub:"none",draft:emptyDraft(),cadEditId:null,
+            selectedPolyId:null,selectedPolyIds:[],selectedEdgeId:null,
+            splinePreview:null,cadLiveRot:null,inferenceLock:null,pendingConstraint:null,
+            mergePrompt:null,rightOpen:false});
+        },
+        setTool: (tool) => {
+          set({ landscapeOpen: false, pendingCatalogPlant: null, inspectedPlant: null, selectedPlantId: null });
+          if (get().groupMemberId) get().finishGroupMember();
           set({
             tool,
             draft: emptyDraft(),
             catalogOpen: tool === "place",
             catalogVisible: tool === "place" ? false : get().catalogVisible,
-            drawSub: tool === "draw" ? "none" : get().drawSub,
-            cadEditId: tool === "draw" ? null : get().cadEditId,
+            drawSub: tool === "draw" || tool === "measure" || tool === "place" ? "none" : get().drawSub,
+            cadEditId: tool === "draw" || tool === "measure" || tool === "place" ? null : get().cadEditId,
             rightMode: tool === "draw" ? "drawing" : tool === "place" ? "zone" : get().rightMode,
             rightOpen: tool === "draw" || tool === "place" ? false : get().rightOpen,
-          }),
+          });
+        },
         setCadMode: (mode) => {
-          const mapped = fromCadMode(mode);
+          set({ landscapeOpen: false, pendingCatalogPlant: null, inspectedPlant: null, selectedPlantId: null });
+          if (get().groupMemberId) get().finishGroupMember();
+          const mapped = fromCadMode(mode, get().tool);
           set({
             tool: mapped.tool,
             draft: emptyDraft(),
+            cadEditId: mode === "select" || mapped.tool === "measure" ? null : get().cadEditId,
             ...(mapped.drawSub ? { drawSub: mapped.drawSub } : {}),
             ...(mapped.measureSub ? { measureSub: mapped.measureSub } : {}),
-            catalogOpen: mapped.tool === "place",
+            catalogOpen: mapped.tool === "place" || get().catalogOpen,
             rightMode: mapped.tool === "scale" || mapped.tool === "draw" ? "drawing" : get().rightMode,
           });
         },
         setDrawSub: (drawSub) => {
+          set({ landscapeOpen: false, pendingCatalogPlant: null, inspectedPlant: null, selectedPlantId: null });
+          if (get().groupMemberId) get().finishGroupMember();
           if (get().drawSub === drawSub && get().tool === "draw") {
             set({
               drawSub: "none",
@@ -634,11 +853,13 @@ export const useProject = create<State>()(
             });
             return;
           }
+          if (drawSub === "dim" && drawingOrMigrate(get().project).layers?.dims?.visible === false)
+            get().setCadLayer("dims", { visible: true });
           set({
             drawSub,
             tool: "draw",
             draft: emptyDraft(),
-            catalogOpen: false,
+            catalogOpen: get().catalogOpen && (drawSub === "text" || drawSub === "dim" || drawSub === "none"),
             cadEditId: null,
             selectedPolyId: null,
             selectedPolyIds: [],
@@ -649,27 +870,40 @@ export const useProject = create<State>()(
             rightOpen: false,
           });
         },
-        setMeasureSub: (measureSub) => set({ measureSub, tool: "measure", draft: emptyDraft() }),
+        setMeasureSub: (measureSub) => {
+          if (get().groupMemberId) get().finishGroupMember();
+          set({ measureSub, tool: "measure", drawSub: "none", cadEditId: null, draft: emptyDraft(),
+            landscapeOpen: false, pendingCatalogPlant: null, inspectedPlant: null, selectedPlantId: null });
+        },
         setPlaceId: (placeId) => set({ placeId, catalogOpen: true, catalogVisible: true }),
         selectHead: (selectedId) =>
           set({
+            selectedPlantId: null, inspectedPlant: null,
             selectedId,
             selectedIds: selectedId ? [selectedId] : [],
             selectedPolyId: null,
+            selectedPolyIds: [],
+            cadEditId: null,
             selectedEdgeId: null,
             rightMode: selectedId ? "zone" : get().rightMode === "object" ? "zone" : get().rightMode,
             rightOpen: selectedId ? true : get().rightOpen,
           }),
         selectHeads: (selectedIds) =>
           set({
+            selectedPlantId: null, inspectedPlant: null,
             selectedIds,
             selectedId: selectedIds[0] ?? null,
             selectedPolyId: null,
+            selectedPolyIds: [],
+            cadEditId: null,
             selectedEdgeId: null,
             rightMode: selectedIds.length ? "zone" : get().rightMode,
             rightOpen: selectedIds.length ? true : get().rightOpen,
           }),
         selectPoly: (selectedPolyId, add) => {
+          set({ selectedPlantId: null, inspectedPlant: null });
+          if (get().groupMemberId && selectedPolyId !== get().groupMemberId) return;
+          if (get().groupMemberId) add = false;
           if (!selectedPolyId) {
             set({ selectedPolyId: null, selectedPolyIds: [], selectedEdgeId: null, selectedId: null, selectedIds: [] });
             return;
@@ -682,11 +916,12 @@ export const useProject = create<State>()(
           const cur = get().selectedPolyIds;
           const one = get().selectedPolyId;
           const base = cur.length ? cur : one ? [one] : [];
+          const members = layerFaceIds(drawingOrMigrate(get().project), selectedPolyId);
+          const targets = members.length ? members : [selectedPolyId];
           const selectedPolyIds = add
-            ? base.includes(selectedPolyId)
-              ? base.filter((x) => x !== selectedPolyId)
-              : [...base, selectedPolyId]
-            : [selectedPolyId];
+            ? targets.every(id => base.includes(id)) ? base.filter(id => !targets.includes(id)) : [...new Set([...base, ...targets])]
+            : targets;
+          selectedPolyId = selectedPolyIds.includes(selectedPolyId) ? targets[0]! : selectedPolyIds[selectedPolyIds.length - 1] ?? null;
           set({
             selectedPolyId,
             selectedPolyIds,
@@ -694,15 +929,24 @@ export const useProject = create<State>()(
             selectedId: null,
             selectedIds: [],
             rightMode: "drawing",
-            cadEditId: selectedPolyId === get().cadEditId ? get().cadEditId : add ? get().cadEditId : null,
+            cadEditId: add ? null : selectedPolyId === get().cadEditId ? get().cadEditId : null,
             tool: "draw",
-            catalogOpen: false,
             drawSub: "none",
             draft: emptyDraft(),
             rightOpen: true,
           });
         },
         selectEdge: (selectedEdgeId) => {
+          set({selectedPlantId:null,inspectedPlant:null});
+          if (get().groupMemberId) return;
+          if (selectedEdgeId) {
+            const d = segmentLayers(drawingOrMigrate(get().project));
+            if (d.faces[selectedEdgeId]?.segment) {
+              set({project:{...get().project,drawing:d,polygons:toPolygons(d)}});
+              get().selectPoly(selectedEdgeId, get().tool === "move");
+              return;
+            }
+          }
           const pending = get().pendingConstraint;
           if (pending && selectedEdgeId && pending.a !== selectedEdgeId) {
             get().addCadConstraint(pending.kind, pending.a, selectedEdgeId);
@@ -728,6 +972,7 @@ export const useProject = create<State>()(
         setGridStep: (gridStep) => set({ gridStep }),
         setCatalogOpen: (catalogOpen) =>
           set({
+            landscapeOpen: false, pendingCatalogPlant: null, selectedPlantId: null, inspectedPlant: null,
             catalogOpen,
             catalogVisible: catalogOpen ? false : get().catalogVisible,
             tool: catalogOpen ? "place" : get().tool === "place" ? null : get().tool,
@@ -738,32 +983,47 @@ export const useProject = create<State>()(
           }),
         setCatalogVisible: (catalogVisible) => set({ catalogVisible }),
         setCadEdit: (cadEditId) => {
+          if (get().groupMemberId && !cadEditId) { get().finishGroupMember(); return; }
+          if (get().groupMemberId && cadEditId !== get().groupMemberId) return;
           if (cadEditId) {
-            const locked = drawingOrMigrate(get().project).faces[cadEditId]?.locked;
-            if (locked) return;
+            const face = drawingOrMigrate(get().project).faces[cadEditId];
+            if (!face) return;
+            const members = layerFaceIds(drawingOrMigrate(get().project), cadEditId).map(id => drawingOrMigrate(get().project).faces[id]!);
+            if (members.some(f => f.locked) || members.every(f => f.hidden)) return;
             // Parametric shape metadata is assigned when that shape is created.
             // Never infer it while selecting a segment-built contour: doing so can
             // replace its real vertices with calculated rectangle/ellipse handles.
             const pr = get().project;
             const d0 = drawingOrMigrate(pr);
-            const sanitized = clearInvalidRectMeta(d0, cadEditId);
+            const sanitized = prepareFusionControls(clearInvalidRectMeta(d0, cadEditId),cadEditId);
             if (sanitized !== d0) {
-              set({ project: { ...pr, drawing: sanitized, polygons: toPolygons(sanitized) } });
+              const drawing = restoreMember(sanitized, rawDrawingOrMigrate(pr), get().groupMemberId);
+              set({ project: preserveConstruction(pr, { ...pr, drawing, polygons: toPolygons(drawing) }) });
             }
           }
           set({
             cadEditId,
             splinePreview: null,
             selectedPolyId: cadEditId ?? get().selectedPolyId,
-            selectedPolyIds: cadEditId ? [cadEditId] : get().selectedPolyIds,
+            selectedPolyIds: cadEditId ? layerFaceIds(drawingOrMigrate(get().project), cadEditId) : get().selectedPolyIds,
             tool: cadEditId ? "draw" : get().tool,
-            catalogOpen: cadEditId ? false : get().catalogOpen,
             drawSub: cadEditId ? "none" : get().drawSub,
             draft: cadEditId ? emptyDraft() : get().draft,
             rightMode: cadEditId ? "drawing" : get().rightMode,
             rightOpen: cadEditId ? true : get().rightOpen,
             cadLiveRot: cadEditId ? get().cadLiveRot : null,
           });
+        },
+        finishSegmentEdit: () => {
+          const st = get();
+          const face = st.cadEditId ? drawingOrMigrate(st.project).faces[st.cadEditId] : null;
+          // A group represented by a segment still uses whole-group editing.
+          if (!face?.segment || face.layerId) return false;
+          // Consume this action without starting another segment or changing
+          // geometry/history. An active line tool stays active for the NEXT tap.
+          st.setCadEdit(null);
+          set({ draft: emptyDraft(), selectedEdgeId: null, pendingConstraint: null });
+          return true;
         },
         setCadLiveRot: (cadLiveRot) => set({ cadLiveRot }),
         setRightOpen: (rightOpen) => set({ rightOpen }),
@@ -833,6 +1093,8 @@ export const useProject = create<State>()(
         setAnalysis: (analysis) => set({ analysis, showCoverage: analysis !== "normal" ? true : get().showCoverage }),
         setSpaceDown: (spaceDown) => set({ spaceDown }),
         newProject: () => {
+          set({landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
+          if (get().groupMemberId) get().finishGroupMember();
           const { project, projects } = get();
           if (isNamed(project) || projects.some((x) => x.id === project.id)) {
             get().saveCurrentToLibrary();
@@ -868,26 +1130,31 @@ export const useProject = create<State>()(
           if (!u) return;
           withCommit({ ...get().project, underlay: { ...u, ...patch } });
         },
-        addDraftPoint: (p) => set({ draft: { ...get().draft, points: [...get().draft.points, p] } }),
-        setDraftPoints: (points) => set({ draft: { ...get().draft, points } }),
+        addDraftPoint: (p) => set({ draft: { ...get().draft, redoPoints: [], redoClosure: false, points: [...get().draft.points, p] } }),
+        setDraftPoints: (points) => set({ draft: { ...get().draft, redoClosure:false, points } }),
         popDraftPoint: () => {
-          const pts = get().draft.points;
+          const { draft, tool, drawSub } = get();
+          const pts = draft.points;
           if (!pts.length) return;
-          set({ draft: { ...get().draft, points: pts.slice(0, -1) } });
+          const pointHistory = tool === "draw" && (drawSub === "polygon" || drawSub === "spline");
+          set({ draft: { ...draft, points: pts.slice(0, -1),
+            redoPoints: pointHistory ? [pts[pts.length - 1]!, ...(draft.redoPoints ?? [])] : [] } });
         },
         commitDrawing: (d, selectedId, keepTool) => {
+          if (get().groupMemberId && selectedId && selectedId !== get().groupMemberId) return;
+          d = restoreMember(d, rawDrawingOrMigrate(get().project), get().groupMemberId);
+          d = segmentLayers(d, selectedId ?? undefined);
           const pr = get().project;
           const previousFaces = Object.values(drawingOrMigrate(pr).faces);
           const previousFaceKeys = new Set(previousFaces.map(faceBoundaryKey));
           const addedIds = Object.values(d.faces)
             .filter((face) => !previousFaceKeys.has(faceBoundaryKey(face)))
             .map((face) => face.id);
-          if (!keepTool && addedIds.length) {
-            const start = previousFaces.length % SHAPE_FILL_CYCLE.length;
+          if (addedIds.length) {
             d = { ...d, faces: { ...d.faces } };
-            addedIds.forEach((id, i) => {
+            addedIds.forEach((id) => {
               const face = d.faces[id];
-              if (face) d.faces[id] = { ...face, fill: SHAPE_FILL_CYCLE[(start + i) % SHAPE_FILL_CYCLE.length] };
+              if (face && !face.fill) d.faces[id] = { ...face, fill: "theme" };
             });
           }
           const added = addedIds[0] ?? null;
@@ -898,7 +1165,7 @@ export const useProject = create<State>()(
             tool: keepTool ? get().tool : "draw",
             drawSub: keepTool ? get().drawSub : "none",
             selectedPolyId: pick ?? get().selectedPolyId,
-            selectedPolyIds: pick ? [pick] : get().selectedPolyIds,
+            selectedPolyIds: get().groupMemberId ? [get().groupMemberId!] : pick ? layerFaceIds(d, pick) : get().selectedPolyIds,
             selectedEdgeId: null,
             cadEditId: keepTool ? get().cadEditId : null,
             rightMode: "drawing",
@@ -906,21 +1173,23 @@ export const useProject = create<State>()(
         },
         closePolygon: () => {
           const pts = get().draft.points;
-          if (pts.length < 4) return;
-          const boundaryPoints = pts.slice(1);
+          if (pts.length < 3) return;
+          const boundaryPoints = pts;
           const d0 = drawingOrMigrate(get().project);
           const previousFaces = Object.values(d0.faces);
           const previousFaceKeys = new Set(previousFaces.map(faceBoundaryKey));
-          let d = addChain(d0, boundaryPoints, true, get().regionType);
+          const independent = get().drawSub === "polygon";
+          let d = independent
+            ? addPointShape(d0, boundaryPoints, get().regionType)
+            : addChain(d0, boundaryPoints, true, get().regionType);
           const nextFaces = Object.values(d.faces);
           const faceId = nextFaces.length > previousFaces.length
             ? nextFaces.find((face) => !previousFaceKeys.has(faceBoundaryKey(face)))?.id ?? null
             : null;
-          if (faceId && d.faces[faceId]) {
-            d = markPointShape(d, faceId);
-          }
+          if (faceId && !independent) d = markPointShape(d, faceId);
           get().commitDrawing(d, faceId);
           if (faceId) {
+            if (independent) closedConstructions.set(get().project, { points:pts.map(p=>({...p})), faceId });
             set({
               cadEditId: faceId,
               selectedPolyId: faceId,
@@ -975,7 +1244,7 @@ export const useProject = create<State>()(
           const d =
             sub === "path"
               ? pathFromCenterline(d0, pts, 1.2, "path")
-              : addChain(d0, pts, false, get().regionType);
+              : addDrawingLines(d0, pts, get().regionType);
           get().commitDrawing(d);
         },
         commitGeom: (g) => {
@@ -991,7 +1260,7 @@ export const useProject = create<State>()(
           get().commitDrawing(d, added);
         },
         applyCadLength: (meters, hover) => {
-          if (meters <= 0) return;
+          if (!Number.isFinite(meters) || meters <= 0) return;
           const sub = get().drawSub;
           if (!get().draft.points.length && get().selectedEdgeId) {
             const edgeId = get().selectedEdgeId!;
@@ -1026,6 +1295,10 @@ export const useProject = create<State>()(
             return;
           }
           const pts = get().draft.points;
+          if (!pts.length && sub === "line") {
+            set({draft:{...get().draft,lineLength:meters}});
+            return;
+          }
           if (!pts.length) return;
           if (sub === "polygon" || sub === "spline") {
             const last = pts[pts.length - 1]!;
@@ -1041,7 +1314,7 @@ export const useProject = create<State>()(
               x: last.x + ((guide.x - last.x) / guideLength) * meters,
               y: last.y + ((guide.y - last.y) / guideLength) * meters,
             };
-            set({ draft: { ...get().draft, points: [...pts, end] }, tool: "draw" });
+            set({ draft: { ...get().draft, redoPoints: [], redoClosure:false, points: [...pts, end] }, tool: "draw" });
             return;
           }
           const a = pts[pts.length - 1]!;
@@ -1057,36 +1330,19 @@ export const useProject = create<State>()(
             return;
           }
           if (sub === "line") {
-            if (pts.length >= 2) {
-              const start = pts[pts.length - 2]!;
-              const current = pts[pts.length - 1]!;
-              const currentLength = dist(start, current) || 1;
-              const end = {
-                x: start.x + ((current.x - start.x) / currentLength) * meters,
-                y: start.y + ((current.y - start.y) / currentLength) * meters,
-              };
-              const pr = get().project;
-              const d0 = drawingOrMigrate(pr);
-              const endpoint = Object.values(d0.vertices).find((v) => dist(v, current) < 1e-7);
-              if (!endpoint) return;
-              const d = moveVertex(d0, endpoint.id, end);
-              withCommit({ ...pr, drawing: d, polygons: toPolygons(d) }, "line-resize");
-              set({ draft: { ...get().draft, points: [...pts.slice(0, -1), end] }, tool: "draw" });
-              return;
-            }
             const pr = get().project;
-            const d = addChain(drawingOrMigrate(pr), [a, end], false, get().regionType);
+            const d = addDrawingLines(drawingOrMigrate(pr), [a, end], get().regionType);
             withCommit({ ...pr, drawing: d, polygons: toPolygons(d) }, "line");
-            set({ draft: { ...get().draft, points: [...pts, end] }, tool: "draw" });
+            set({ draft: { ...emptyDraft(), points: [end] }, tool: "draw" });
             return;
           }
           if (sub === "polyline") {
-            const d = addChain(drawingOrMigrate(get().project), [a, end], false, get().regionType);
+            const d = addDrawingLines(drawingOrMigrate(get().project), [a, end], get().regionType);
             withCommit({ ...get().project, drawing: d, polygons: toPolygons(d) });
-            set({ draft: { ...get().draft, points: [...pts, end] }, tool: "draw" });
+            set({ draft: { ...get().draft, redoPoints: [], redoClosure:false, points: [...pts, end] }, tool: "draw" });
             return;
           }
-          set({ draft: { ...get().draft, points: [...pts, end] } });
+          set({ draft: { ...get().draft, redoPoints: [], redoClosure:false, points: [...pts, end] } });
         },
         applyCadSize: (w, h, hover) => {
           const pts = get().draft.points;
@@ -1215,7 +1471,10 @@ export const useProject = create<State>()(
           get().commitDrawing(chamferVertex(d0, vid, distM), get().selectedPolyId, true);
         },
         addDimension: (a, b, offset) => {
-          get().commitDrawing(addDim(drawingOrMigrate(get().project), a, b, offset ?? 0.45), get().selectedPolyId, true);
+          if (![a.x, a.y, b.x, b.y].every(Number.isFinite) || dist(a, b) < 1e-9) return;
+          const d = drawingOrMigrate(get().project);
+          const distance=get().dimensionOffsetCustomized ? get().dimensionOffset : get().gridStep*2;
+          get().commitDrawing(addDim(d, a, b, offset ?? outsideDimensionOffset(d,a,b,distance)), get().selectedPolyId, true);
         },
         mirrorSelected: (axis) => {
           const id = get().selectedPolyId;
@@ -1225,7 +1484,11 @@ export const useProject = create<State>()(
         hideSelected: (hidden) => {
           const id = get().selectedPolyId;
           if (!id) return;
-          get().commitDrawing(setFaceHidden(drawingOrMigrate(get().project), id, hidden), id, true);
+          const d = drawingOrMigrate(get().project);
+          const editing = get().cadEditId;
+          const endsEditing = hidden && (editing === null || layerFaceIds(d, id).includes(editing));
+          get().commitDrawing(setFaceHidden(d, id, hidden), id, true);
+          if (endsEditing) get().setCadEdit(null);
         },
         lockSelected: (locked) => {
           const id = get().selectedPolyId;
@@ -1281,6 +1544,7 @@ export const useProject = create<State>()(
           get().commitDrawing(moveFace(d0, id, -c.x, -c.y), id, true);
         },
         setDimOffset: (id, offset) => {
+          if (Number.isFinite(offset)) set({dimensionOffset:Math.abs(offset),dimensionOffsetCustomized:true});
           get().commitDrawing(setCadDimOffset(drawingOrMigrate(get().project), id, offset), get().selectedPolyId, true);
         },
         moveNote: (id, p) => {
@@ -1376,7 +1640,7 @@ export const useProject = create<State>()(
           if (!id || !(k > 0) || !Number.isFinite(k)) return;
           const d0 = drawingOrMigrate(get().project);
           const f = d0.faces[id];
-          const next = f?.ellipse ? scaleEllipse(d0, id, k) : scaleFaceAbout(d0, id, k);
+          const next = layerFaceIds(d0, id).length > 1 ? transformLayer(d0, id, { scale: k }) : f?.ellipse ? scaleEllipse(d0, id, k) : scaleFaceAbout(d0, id, k);
           get().commitDrawing(next, id, true);
         },
         setFaceVertex: (vertexId, p) => {
@@ -1388,7 +1652,7 @@ export const useProject = create<State>()(
           const id = get().cadEditId ?? get().selectedPolyId;
           if (!id || m2 <= 0) return;
           const d0 = drawingOrMigrate(get().project);
-          const cur = faceArea(d0, id);
+          const cur = layerArea(d0, id);
           if (cur <= 1e-9) return;
           get().commitDrawing(scaleFaceAbout(d0, id, Math.sqrt(m2 / cur)), id, true);
         },
@@ -1419,7 +1683,21 @@ export const useProject = create<State>()(
         setHydro: (need, method) => {
           const id = get().selectedPolyId;
           if (!id) return;
-          get().commitDrawing(setFaceHydro(drawingOrMigrate(get().project), id, { need, method }), id, true);
+          const drawing = drawingOrMigrate(get().project);
+          const hydro = drawing.faces[id]?.hydro;
+          const purpose = method === "none" ? "none" : hydro?.purpose === "none" ? "irrigation" : hydro?.purpose;
+          get().commitDrawing(setFaceHydro(drawing, id, { ...hydro, need, method, purpose }), id, true);
+        },
+        setLayerPurpose: (faceId, purpose) => {
+          const drawing = drawingOrMigrate(get().project);
+          const face = drawing.faces[faceId];
+          if (!face || face.locked || face.hydro?.purpose === purpose) return;
+          const method = face.hydro?.method ?? "mp";
+          get().commitDrawing(setFaceHydro(drawing, faceId, {
+            need: face.hydro?.need ?? "medium",
+            method: purpose !== "none" && method === "none" ? "mp" : method,
+            purpose,
+          }), faceId, true);
         },
         setFaceName: (name) => {
           const id = get().cadEditId ?? get().selectedPolyId;
@@ -1429,7 +1707,18 @@ export const useProject = create<State>()(
         setFaceFill: (color) => {
           const id = get().cadEditId ?? get().selectedPolyId;
           if (!id) return;
-          get().commitDrawing(setCadFaceFill(drawingOrMigrate(get().project), id, color), id, true);
+          const drawing = drawingOrMigrate(get().project);
+          const face = drawing.faces[id];
+          if (!face || face.locked) return;
+          let updated = setCadFaceFill(drawing, id, color);
+          if (color.startsWith("texture:")) {
+            updated = setFaceHydro(updated, id, {
+              need: face.hydro?.need ?? "medium",
+              method: face.hydro?.method ?? "mp",
+              purpose: "none",
+            });
+          }
+          get().commitDrawing(updated, id, true);
         },
         setCadLayer: (id, patch) => {
           get().commitDrawing(setLayerFlag(drawingOrMigrate(get().project), id, patch), get().selectedPolyId, true);
@@ -1517,6 +1806,7 @@ export const useProject = create<State>()(
           if (!id || !Number.isFinite(deg) || Math.abs(deg) < 1e-9) return;
           const d0 = drawingOrMigrate(get().project);
           if (d0.faces[id]?.locked) return;
+          if (layerFaceIds(d0, id).length > 1) { get().commitDrawing(transformLayer(d0, id, { angle: deg }), id, true); return; }
           let next = rotateFace(d0, id, deg);
           const face = next.faces[id];
           if (face?.rect) {
@@ -1549,6 +1839,8 @@ export const useProject = create<State>()(
         },
         cancelDraft: () => set({ draft: emptyDraft() }),
         deleteSelected: () => {
+          if (get().selectedPlantId) { get().removePlant(get().selectedPlantId!); return; }
+          if (get().groupMemberId) { get().deleteGroupMember(get().groupMemberId!); return; }
           const { selectedIds, selectedPolyId, selectedEdgeId, selectedPolyIds, project } = get();
           if (selectedIds.length) {
             withCommit({ ...project, heads: project.heads.filter((h) => !selectedIds.includes(h.id)) });
@@ -1617,14 +1909,17 @@ export const useProject = create<State>()(
           });
         },
         duplicateSelected: () => {
+          if (get().selectedPlantId) { get().duplicatePlant(get().selectedPlantId!); return; }
           const { selectedIds, selectedPolyId, cadEditId, project } = get();
           const faceId = cadEditId ?? selectedPolyId;
           if (faceId) {
             const src = drawingOrMigrate(project).faces[faceId];
             const gap = Math.max(0.5, get().gridStep * 2);
             const dx = src?.rect ? src.rect.w + gap : src?.circle ? src.circle.r * 2 + gap : gap;
-            const { drawing } = duplicateFace(drawingOrMigrate(project), faceId, dx, 0);
-            get().commitDrawing(drawing, faceId, true);
+            const { drawing, id } = duplicateFace(drawingOrMigrate(project), faceId, dx, 0);
+            get().commitDrawing(drawing, id, true);
+            get().setCadEdit(null);
+            get().selectPoly(id);
             return;
           }
           if (!selectedIds.length) return;
@@ -1639,7 +1934,7 @@ export const useProject = create<State>()(
         },
         placeHead: (p, catalogId) => {
           const id = catalogId ?? get().placeId;
-          let item = id ? itemById(id) : CATALOG[0];
+          const item = id ? itemById(id) : CATALOG[0];
           if (!item || item.family === "body") return;
           const pr = get().project;
           if (pr.underlay && !pr.scaleCalibrated) return;
@@ -1651,7 +1946,7 @@ export const useProject = create<State>()(
             pxPerMeter: get().pxPerMeter,
           }).pt;
           let start = 0;
-          let arc = item.arcMin === 360 ? 360 : Math.min(180, item.arcMax);
+          let arc = item.arcMin === 360 ? 360 : clampArc(item, 180);
           for (const poly of polys) {
             if (poly.kind !== "lawn") continue;
             const pts = poly.points;
@@ -1661,8 +1956,6 @@ export const useProject = create<State>()(
               const prev = pts[(i - 1 + pts.length) % pts.length]!;
               const next = pts[(i + 1) % pts.length]!;
               const ca = cornerArc(prev, pts[i]!, next);
-              const series = CATALOG.filter((c) => c.series === item!.series);
-              if (series.length) item = pickSkuForArc(series, ca.arc);
               start = ca.start;
               arc = clampArc(item, ca.arc);
               done = true;
@@ -1675,33 +1968,31 @@ export const useProject = create<State>()(
               const q = closestOnSegment(snapped, a, b);
               if (dist(snapped, q) > 0.08) continue;
               start = inwardStart(a, b, pts);
-              const series = CATALOG.filter((c) => c.series === item!.series);
-              if (series.length) item = pickSkuForArc(series, 180);
               arc = clampArc(item, 180);
               break;
             }
           }
-          const nz = defaultNozzle(item);
-          const nzR = nz ? nozzleRange(nz).recR : item.rNom;
+          const defaults = catalogHeadDefaults(item);
+          const nominal = performanceAt(item,defaults.nozzleId,defaults.designPressure,arc)?.row.radiusM ?? defaults.r;
           const draftHead: Head = {
             id: uid("h"),
             catalogId: item.id,
-            nozzleId: nz?.id ?? null,
+            nozzleId: defaults.nozzleId,
             x: snapped.x,
             y: snapped.y,
             arc,
             start,
-            r: nzR || item.rNom,
+            r: nominal,
             zone: get().activeZoneId,
-            designPressure: workingPressureBar(item, defaultBodyFor(item), nz?.id),
+            designPressure: defaults.designPressure,
             bodyId: defaultBodyFor(item),
             popUpMm: item.popUpMm ?? 100,
             locked: false,
             needsReview: false,
           };
           const maxLpm = defaultMaxZoneLpm(pr.water.availableLpm);
-          const d = drawingOrMigrate(pr);
-          const fitted = clampHeadThrow(draftHead, siteLoop(d), exclusionLoops(d));
+          // Manual placement preserves the explicitly selected model and its throw.
+          const fitted = draftHead;
           const picked = assignZoneForNewHead(pr, fitted, get().activeZoneId, maxLpm);
           const head = { ...fitted, zone: picked.zoneId };
           withCommit({ ...pr, heads: [...pr.heads, head], zones: picked.zones });
@@ -1721,7 +2012,7 @@ export const useProject = create<State>()(
             if (h.id !== id) return h;
             let next = { ...h, ...patch };
             if (next.start != null) next.start = ((next.start % 360) + 360) % 360;
-            next = fitHeadToRadius(next, patch);
+            next = fitHeadToRadius(next, patch, h);
             const item = itemById(next.catalogId);
             if (item) {
               next.r = clampRadius(item, next.r);
@@ -1741,7 +2032,7 @@ export const useProject = create<State>()(
             if (h.id !== id) return h;
             let next = { ...h, ...patch };
             if (next.start != null) next.start = ((next.start % 360) + 360) % 360;
-            next = fitHeadToRadius(next, patch);
+            next = fitHeadToRadius(next, patch, headEditBase?.heads.find(base => base.id === h.id) ?? h);
             const item = itemById(next.catalogId);
             if (item) {
               next.r = clampRadius(item, next.r);
@@ -1823,6 +2114,8 @@ export const useProject = create<State>()(
           const pts: Pt[] = [];
           for (const poly of pr.polygons) pts.push(...poly.points);
           for (const h of pr.heads) pts.push({ x: h.x, y: h.y });
+          if (pr.drawing?.layers?.plants?.visible !== false) for (const plant of Object.values(pr.drawing?.plants ?? {}))
+            pts.push({x:plant.x-plant.r,y:plant.y-plant.r},{x:plant.x+plant.r,y:plant.y+plant.r});
           if (pr.underlay) {
             pts.push({ x: pr.underlay.x, y: pr.underlay.y });
             pts.push({ x: pr.underlay.x + pr.underlay.width, y: pr.underlay.y + pr.underlay.height });
@@ -1866,7 +2159,9 @@ export const useProject = create<State>()(
           const firstId = [...pr.zones].sort((a, b) => a.id - b.id)[0]?.id;
           if (id === 1 || id === firstId) return;
           const { zones, heads, idMap } = compactAfterRemoveZone(pr.zones, pr.heads, id);
-          withCommit({ ...pr, zones, heads });
+          const drawing = pr.drawing ? { ...pr.drawing, plants: Object.fromEntries(Object.entries(pr.drawing.plants ?? {}).map(([key, plant]) => [key,
+            plant.irrigation?.zoneId ? {...plant,irrigation:{...plant.irrigation,zoneId:idMap.get(plant.irrigation.zoneId) ?? null}} : plant])) } : undefined;
+          withCommit({ ...pr, zones, heads, ...(drawing ? {drawing} : {}) });
           const active = get().activeZoneId;
           const keep = active === id ? 1 : active;
           set({ activeZoneId: idMap.get(keep) ?? 1 });
@@ -1886,25 +2181,26 @@ export const useProject = create<State>()(
           });
         },
         assignSelectedToZone: (id) => {
-          const ids = get().selectedIds;
-          if (!ids.length) return;
+          const { selectedIds: ids, project } = get();
+          const destination = project.zones.find(z => z.id === id);
+          if (!ids.length || !destination || destination.locked) return;
+          const selected = project.heads.filter(h => ids.includes(h.id));
+          if (selected.some(h => h.locked || project.zones.some(z => z.id === h.zone && z.locked))) return;
+          if (selected.every(h => h.zone === id)) { set({ activeZoneId: id }); return; }
           withCommit({
-            ...get().project,
-            heads: get().project.heads.map((h) => (ids.includes(h.id) ? { ...h, zone: id } : h)),
+            ...project,
+            heads: project.heads.map((h) => (ids.includes(h.id) ? { ...h, zone: id } : h)),
           });
           set({ activeZoneId: id });
         },
         finishMoveHead: (id, p) => {
           const st = get();
           const pr = st.project;
-          const d = drawingOrMigrate(pr);
-          const keep = siteLoop(d);
-          const cuts = exclusionLoops(d);
           withCommit({
             ...pr,
             heads: pr.heads.map((h) => {
               if (h.id !== id || h.locked) return h;
-              return clampHeadThrow({ ...h, x: p.x, y: p.y }, keep, cuts);
+              return { ...h, x: p.x, y: p.y };
             }),
           });
         },
@@ -1938,9 +2234,11 @@ export const useProject = create<State>()(
           if (d < 1e-6) return;
           const k = meters / d;
           const next = { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k };
-          set({ draft: { ...get().draft, points: [...pts.slice(0, -1), next] } });
+          set({ draft: { ...get().draft, redoPoints: [], redoClosure:false, points: [...pts.slice(0, -1), next] } });
         },
         openLibrary: (id) => {
+          set({landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
+          if (get().groupMemberId) get().finishGroupMember();
           const found = get().projects.find((x) => x.id === id);
           if (!found) return;
           const full = "heads" in found && Array.isArray((found as Project).heads) ? migrateProject(found as unknown as Record<string, unknown>) : null;
@@ -1964,6 +2262,7 @@ export const useProject = create<State>()(
           });
         },
         removeLibrary: (id) => {
+          if (get().groupMemberId && get().project.id === id) get().finishGroupMember();
           const { project, projects } = get();
           const rest = projects.filter((x) => x.id !== id);
           if (project.id !== id) {
@@ -2027,7 +2326,7 @@ export const useProject = create<State>()(
           const n = name.trim();
           if (!n) return;
           const next = get().projects.map((p) => (p.id === id ? { ...p, name: n, updatedAt: new Date().toISOString() } : p));
-          const cur = get().project.id === id ? { ...get().project, name: n } : get().project;
+          const cur = get().project.id === id ? preserveConstruction(get().project, { ...get().project, name: n }) : get().project;
           set({ projects: next, project: cur });
         },
         saveCurrentToLibrary: () => {
@@ -2038,6 +2337,8 @@ export const useProject = create<State>()(
           set({ project: next, projects: upsertList(projects, next), saveState: "saved" });
         },
         importPacked: (raw, extras) => {
+          set({landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
+          if (get().groupMemberId) get().finishGroupMember();
           const project = migrateProject(raw as unknown as Record<string, unknown>);
           set({
             project,
@@ -2066,28 +2367,52 @@ export const useProject = create<State>()(
           });
         },
         undo: () => {
+          const state = get();
+          if (state.tool === "draw" && (state.drawSub === "polygon" || state.drawSub === "spline")) {
+            state.popDraftPoint();
+            return;
+          }
           const { past, project, future, pastOps, futureOps, lastOp, tool, drawSub } = get();
           const prev = past[past.length - 1];
           if (!prev) return;
+          const construction = closedConstructions.get(project);
           set({
             project: prev,
+            ...(get().groupMemberId && prev.drawing?.faces[get().groupMemberId!]?.layerId !== get().groupMemberGroupId
+              ? { groupMemberId: null, groupMemberGroupId: null, cadEditId: null, selectedPolyId: null, selectedPolyIds: [] }
+              : get().groupMemberId && (prev.drawing?.faces[get().groupMemberId!]?.locked || prev.drawing?.faces[get().groupMemberId!]?.hidden) ? { cadEditId: null } : {}),
             past: past.slice(0, -1),
             pastOps: pastOps.slice(0, -1),
-            future: [cloneProject(project), ...future].slice(0, 200),
+            future: [historySnapshot(project), ...future].slice(0, 200),
             futureOps: [lastOp, ...futureOps].slice(0, 200),
             lastOp: pastOps[pastOps.length - 1] ?? "",
             selectedId: null,
             selectedIds: [],
             draft: tool === "draw" && drawSub === "line" ? emptyDraft() : get().draft,
+            ...(construction ? {tool:"draw" as const,drawSub:"polygon" as const,
+              draft:{...emptyDraft(),points:construction.points.map(p=>({...p})),redoClosure:true},
+              cadEditId:null,selectedPolyId:null,selectedPolyIds:[],selectedEdgeId:null,
+              splinePreview:null,rightMode:"drawing" as const,rightOpen:false} : {}),
           });
         },
         redo: () => {
+          const state = get();
+          if (state.tool === "draw" && (state.drawSub === "polygon" || state.drawSub === "spline")) {
+            const [point, ...rest] = state.draft.redoPoints ?? [];
+            if (point) { set({ draft: { ...state.draft, points: [...state.draft.points, point], redoPoints: rest } }); return; }
+            const closure = state.future[0] && closedConstructions.get(state.future[0]);
+            if (!state.draft.redoClosure || !closure || JSON.stringify(state.draft.points)!==JSON.stringify(closure.points)) return;
+          }
           const { past, project, future, pastOps, futureOps, lastOp, tool, drawSub } = get();
           const next = future[0];
           if (!next) return;
+          const construction = closedConstructions.get(next);
           set({
             project: next,
-            past: [...past, cloneProject(project)].slice(-200),
+            ...(get().groupMemberId && next.drawing?.faces[get().groupMemberId!]?.layerId !== get().groupMemberGroupId
+              ? { groupMemberId: null, groupMemberGroupId: null, cadEditId: null, selectedPolyId: null, selectedPolyIds: [] }
+              : get().groupMemberId && (next.drawing?.faces[get().groupMemberId!]?.locked || next.drawing?.faces[get().groupMemberId!]?.hidden) ? { cadEditId: null } : {}),
+            past: [...past, historySnapshot(project)].slice(-200),
             pastOps: [...pastOps, lastOp].slice(-200),
             future: future.slice(1),
             futureOps: futureOps.slice(1),
@@ -2095,6 +2420,9 @@ export const useProject = create<State>()(
             selectedId: null,
             draft: tool === "draw" && drawSub === "line" ? emptyDraft() : get().draft,
             selectedIds: [],
+            ...(construction ? {tool:"draw" as const,drawSub:"none" as const,draft:emptyDraft(),
+              cadEditId:construction.faceId,selectedPolyId:construction.faceId,selectedPolyIds:[construction.faceId],
+              selectedEdgeId:null,rightMode:"drawing" as const,rightOpen:true} : {}),
           });
         },
         commit: () => withCommit(get().project),
@@ -2113,6 +2441,8 @@ export const useProject = create<State>()(
         orthoOn: s.orthoOn,
         snapGridOn: s.snapGridOn,
         gridStep: s.gridStep,
+        dimensionOffset: s.dimensionOffset,
+        dimensionOffsetCustomized: s.dimensionOffsetCustomized,
         measureUnit: s.measureUnit,
         locale: s.locale,
         themeId: s.themeId,
@@ -2157,6 +2487,8 @@ export const useProject = create<State>()(
         return {
           ...current,
           ...p,
+          showGrid: true,
+          dimensionOffsetCustomized:p.dimensionOffsetCustomized ?? (typeof p.dimensionOffset==="number" && Math.abs(p.dimensionOffset-0.8)>1e-6),
           project,
           projects,
           autoHeadsWiped: true,
@@ -2185,6 +2517,12 @@ export const useProject = create<State>()(
           past: [],
           future: [],
           tool: null,
+          selectedPolyId: null,
+          selectedPolyIds: [],
+          selectedEdgeId: null,
+          cadEditId: null,
+          groupMemberId: null,
+          draft: {points:[],scaleA:null,scaleB:null,measureA:null},
           catalogOpen: false,
           rightOpen: false,
           projectFormOpen: false,

@@ -1,12 +1,14 @@
 import { dist, headingDeg, pointInPoly, polygonArea, type Pt } from "@/lib/geometry";
-import { itemById } from "@/lib/hunter-catalog";
+import { itemById, stripAtPressure } from "@/lib/hunter-catalog";
 import type { Geom, Head } from "@/lib/project-types";
 import { polyPoints } from "@/lib/project-types";
 
 export function headCovers(h: Head, p: Pt, slack = 1.02): boolean {
   const item = itemById(h.catalogId);
+  if (!item || item.coverageKind === "point") return false;
   if (item?.strip) {
-    return pointInStrip(h, p, item.strip);
+    const strip = stripAtPressure(item, h.designPressure);
+    return !!strip && pointInStrip(h, p, strip);
   }
   if (dist(h, p) > h.r * slack) return false;
   if (h.arc >= 359) return true;

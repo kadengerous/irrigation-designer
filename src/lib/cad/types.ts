@@ -1,6 +1,10 @@
 import type { Pt } from "@/lib/geometry";
+import type { TextureSize } from "./texture-mapping";
+import type { PlantCategory, PlantRecord, PlantIrrigationContext } from "../landscape-types";
 
 export const DRAWING_VERSION = 1;
+
+export type LayerPurpose = "irrigation" | "none" | "sun" | "shade";
 
 export type RegionType =
   | "lawn"
@@ -32,7 +36,22 @@ export type CadEdge = {
   faceR: string | null;
 };
 
+export type LayerGrouping = {
+  number?: number;
+  layerId?: string;
+  layerPivot?: Pt;
+  layerAngle?: number;
+  name?: string;
+  parent?: LayerGrouping;
+};
+
 export type CadFace = {
+  segment?: boolean;
+  layerParent?: LayerGrouping;
+  /** Components with the same id are one selectable/editable layer. */
+  layerId?: string;
+  layerPivot?: Pt;
+  layerAngle?: number;
   id: string;
   type: RegionType;
   /** CCW outer loop of edge ids with direction +1 a→b, -1 b→a */
@@ -50,10 +69,13 @@ export type CadFace = {
   /** Free-form contour created with the numbered point tool. */
   pointShape?: boolean;
   /** Joined pencil/spline contour edited only through boundary nodes. */
-  nodeEdit?: { curvedVertexIds: string[] };
-  hydro?: { need: "low" | "medium" | "high"; method: "spray" | "mp" | "rotor" | "drip" | "bubbler" | "none" };
+  nodeEdit?: { curvedVertexIds: string[]; curveRuns?: string[][] };
+  hydro?: { need: "low" | "medium" | "high"; method: "spray" | "mp" | "rotor" | "drip" | "bubbler" | "none"; purpose?: LayerPurpose };
   name?: string;
   fill?: string;
+  /** Local dimensions in metres when the material was applied. */
+  textureRotation?: 0 | 90;
+  textureSize?: TextureSize;
 };
 
 export type ConstraintKind =
@@ -78,6 +100,7 @@ export type CadConstraint = {
 
 export type CadDim = {
   id: string;
+  label?: string;
   a: Pt;
   b: Pt;
   offset: number;
@@ -87,10 +110,15 @@ export type CadDim = {
 
 export type CadPlant = {
   id: string;
-  kind: "tree" | "shrub";
+  kind: PlantCategory;
   x: number;
   y: number;
   r: number;
+  /** Snapshot keeps identification and source references available in saved projects. */
+  catalogId?: string;
+  catalog?: PlantRecord;
+  locked?: boolean;
+  irrigation?: Partial<PlantIrrigationContext> & { zoneId?: number | null };
 };
 
 export type CadLayerId =
@@ -139,9 +167,15 @@ export type CadText = {
   y: number;
   text: string;
   size: number;
+  fontFamily?: string;
+  color?: string;
+  bold?: boolean;
+  italic?: boolean;
+  underline?: boolean;
 };
 
 export type CadDrawing = {
+  faceOrder?: string[];
   version: number;
   vertices: Record<string, CadVertex>;
   edges: Record<string, CadEdge>;
@@ -221,6 +255,16 @@ export function isExclusion(t: RegionType) {
   return t === "building" || t === "pool" || t === "path" || t === "hardscape" || t === "parking" || t === "terrace" || t === "no_irrigation";
 }
 
+export function layerPurpose(face: CadFace): LayerPurpose {
+  return face.hydro?.purpose ?? (face.hydro?.method === "none" || isExclusion(face.type) || face.type === "water" ? "none" : "irrigation");
+}
+
+/** The layer's watering assignment is independent of its landscape material. */
+export function irrigationRegionType(face: CadFace): RegionType {
+  if (face.hydro?.purpose) return face.hydro.purpose === "none" ? "no_irrigation" : "lawn";
+  return face.type;
+}
+
 export const REGION_FILL: Record<RegionType, string> = {
   lawn: "#c5d4b0",
   bed: "#c4b7a8",
@@ -266,22 +310,47 @@ export const FACE_FILLS = [
   "#5c5c5a",
   "#3a3a38",
   "#1a1a18",
+  "#ffffff",
 ] as const;
 
-export const FACE_TEXTURES = [
+export type FaceTexture = { id: `texture:${string}`; label: string; src: string; patternScale?: number; baseRotation?: 0 | 90 };
+
+/** Row order in the six-column material palette. */
+export const FACE_TEXTURES: readonly FaceTexture[] = [
   { id: "texture:pavers-gray", label: "Серая плитка", src: "/materials/pavers-gray.png" },
-  { id: "texture:pavers-beige", label: "Бежевая плитка", src: "/materials/pavers-beige.png" },
   { id: "texture:pavers-brick", label: "Клинкерная плитка", src: "/materials/pavers-brick.png" },
-  { id: "texture:asphalt", label: "Асфальт", src: "/materials/asphalt.png" },
   { id: "texture:decking", label: "Террасная доска", src: "/materials/decking.png" },
-  { id: "texture:concrete", label: "Бетон", src: "/materials/concrete.png" },
   { id: "texture:roof-shingle", label: "Мягкая кровля", src: "/materials/roof-shingle.png" },
-  { id: "texture:roof-tile", label: "Черепица", src: "/materials/roof-tile.png" },
-  { id: "texture:roof-metal", label: "Фальцевая кровля", src: "/materials/roof-metal.png" },
+  { id: "texture:roof-metal", label: "Фальцевая кровля", src: "/materials/roof-metal.png", baseRotation: 90 },
+  { id: "texture:flagstone", label: "Плитняк", src: "/materials/flagstone.png", patternScale: 0.06 },
+  { id: "texture:pavers-beige", label: "Бежевая плитка", src: "/materials/pavers-beige.png" },
+  { id: "texture:asphalt", label: "Асфальт", src: "/materials/asphalt.png" },
+  { id: "texture:concrete", label: "Бетон", src: "/materials/concrete.png" },
+  { id: "texture:roof-tile", label: "Черепица", src: "/materials/roof-tile.png", baseRotation: 90 },
   { id: "texture:pool-water", label: "Вода в бассейне", src: "/materials/pool-water.png" },
-  { id: "texture:lawn", label: "Газон", src: "/materials/lawn.png" },
   { id: "texture:gravel", label: "Гравий", src: "/materials/gravel.png" },
+  { id: "texture:greenhouse", label: "Теплица", src: "/materials/greenhouse.png", baseRotation: 90 },
+  { id: "texture:mulch", label: "Мульча", src: "/materials/mulch.png", patternScale: 0.06 },
+  { id: "texture:soil", label: "Грунт", src: "/materials/soil.png" },
+  { id: "texture:sand", label: "Песок", src: "/materials/sand.png" },
+  { id: "texture:pebbles", label: "Галька", src: "/materials/pebbles.png", patternScale: 0.06 },
+  { id: "texture:rubber-surface", label: "Резиновое покрытие", src: "/materials/rubber-surface.png", patternScale: 0.06 },
 ] as const;
+
+/** Retired choices remain renderable in saved projects. */
+export const ALL_FACE_TEXTURES: readonly FaceTexture[] = [
+  ...FACE_TEXTURES,
+  { id: "texture:lawn", label: "Газон", src: "/materials/lawn.png" },
+  { id: "texture:vegetable-beds", label: "Грядки", src: "/materials/vegetable-beds.png", patternScale: 0.06 },
+];
+
+export function faceTexture(fill: string | undefined): FaceTexture | undefined {
+  return ALL_FACE_TEXTURES.find((texture) => texture.id === fill);
+}
+
+export function texturePatternScale(fill: string): number {
+  return faceTexture(fill)?.patternScale ?? 0.24;
+}
 
 /** Automatic fill order for newly drawn shapes (transparent is a manual choice). */
 export const SHAPE_FILL_CYCLE = ["#c8e6b0", "#c5ddf2", "#f3d4b8", "#dcccec", "#facc15", "#b8e0d2", "#f0c9c9", "#8b5cf6"] as const;
