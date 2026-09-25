@@ -1,17 +1,26 @@
-import { catalogHeadDefaults, performanceAt, pressureRange, radiusRange } from "@/lib/flow";
-import { fitAutomaticNozzle, usesAutomaticNozzle, radiusAtChangedPressure } from "@/lib/head-adjustment";
+import { catalogHeadDefaults, nearestPressure, performanceAt, pressureSteps, radiusRange } from "@/lib/flow";
+import { isHeadLocked, isHeadVisible, visibleProjectHeads } from "./head-visibility";
+import { fitAutomaticNozzle, usesAutomaticNozzle } from "@/lib/head-adjustment";
 import { orderedFaces, layerFaceIds, layerArea, transformLayer } from "./cad/engine";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { projectStorage, retainedTrash, type TrashedProject } from "./workspace-storage";
 import type { PlantRecord, PlantCategory } from "./landscape-types";
 import type { CadPlant } from "./cad/types";
 import { cadSnap } from "./cad/snap";
-import { assignZoneForNewHead, defaultMaxZoneLpm, distributeZones } from "@/lib/hydro";
+import { assignZoneForNewHead, defaultMaxZoneLpm, distributeZones, projectZoneLimit, redistributeZonesAfterRemoval } from "@/lib/hydro";
+import { snapSprinklerPoint } from './head-snapping';
+import { figureAtPoint, irrigationFigures } from './irrigation-figures';
 import {
   CATALOG,
   clampArc,
   clampRadius,
   defaultBodyFor,
+  defaultPopUpMm,
+  bodyForHead,
+  bodySelectionPatch,
+  mountingKind,
+  popUpHeights,
   itemById,
   workingPressureBar,
 } from "@/lib/hunter-catalog";
@@ -32,7 +41,7 @@ import {
   type MeasureUnit,
   type Pt,
 } from "@/lib/geometry";
-import { parseLocale, parseNumberFormat, parseDecimals, type Locale, type NumberFormat } from "@/lib/i18n";
+import { tr, parseLocale, parseNumberFormat, parseDecimals, setActiveLocale, setNumberPrefs, type Locale, type NumberFormat } from "@/lib/i18n";
 import { parseAccent, parseButtonStyle, parseThemeId, parseUiSize, type ButtonStyle, type ThemeId, type UiSize } from "@/lib/theme";
 import {
   bootstrapLocaleAndUnits,
@@ -44,6 +53,7 @@ import {
   recommendedUnitSystem,
   regionFromBcp47,
   unitsFromPreset,
+  setActiveUnits,
   type UnitPrefs,
   type UnitPreset,
 } from "@/lib/units";
@@ -52,6 +62,7 @@ import { fromCadMode, type CadMode } from "@/lib/cad/mode";
 import { parseDxf } from "@/lib/cad/dxf";
 import {
   compactAfterRemoveZone,
+  renumberProjectZones,
   defaultZones,
   emptyProject,
   MAX_ZONES,
@@ -159,6 +170,7 @@ import { prepareFusionControls } from "@/lib/cad/engine";
 
 export type { Head, Geom, PolyKind, Project, Tool, Underlay, Zone };
 import { memberDrawing, restoreMember } from "./cad/member-editing";
+import { calibratedReference, patchReference, referenceCorners } from "./reference-geometry";
 const drawingOrMigrate = rawDrawingOrMigrate;
 export function drawingForEditing(project: Project): CadDrawing {
   return memberDrawing(rawDrawingOrMigrate(project), useProject.getState().groupMemberId);
@@ -174,7 +186,12 @@ export type Draft = {
   measureA: Pt | null;
 };
 
-export type RightMode = "project" | "drawing" | "object" | "zone" | "irrigation" | "estimate" | "landscape";
+export type RightMode = "project" | "drawing" | "object" | "zone" | "irrigation" | "landscape";
+
+/** A head inspector is temporary; leaving it returns to the active workspace. */
+function headPanelMode(section: "plan" | "landscape" | "irrigation", count: number): RightMode {
+  return count === 1 ? "object" : count > 1 || section === "irrigation" ? "zone" : "drawing";
+}
 
 type State = {
   landscapeOpen: boolean;
@@ -200,16 +217,24 @@ type State = {
   deleteGroupMember: (id: string) => void;
   project: Project;
   projects: Project[];
+  trash: TrashedProject[];
   tool: Tool;
   drawSub: DrawSub;
   measureSub: MeasureSub;
   placeId: string | null;
   selectedId: string | null;
+  sectorEditId: string | null;
+  setSectorEdit: (id: string | null) => void;
   selectedIds: string[];
   selectedPolyId: string | null;
   selectedPolyIds: string[];
   selectedEdgeId: string | null;
   activeZoneId: number;
+  zoneFocus: { projectId: string; zoneId: number; headId: string | null } | null;
+  simulationProjectId: string | null;
+  toggleSimulation: () => void;
+  focusZone: (zoneId: number, headId?: string | null) => void;
+  transferHeadToZone: (headId: string, zoneId: number) => void;
   showCoverage: boolean;
   showRadii: boolean;
   showLabels: boolean;
@@ -244,6 +269,8 @@ type State = {
   units: UnitPrefs;
   unitPreset: UnitPreset;
   localeBootstrapped: boolean;
+  localizationVersion: number;
+  workspaceSection: "plan" | "landscape" | "irrigation";
   pxPerMeter: number;
   panX: number;
   panY: number;
@@ -295,6 +322,8 @@ type State = {
   setRightOpen: (v: boolean) => void;
   setRightMode: (m: RightMode) => void;
   setProjectFormOpen: (v: boolean) => void;
+  referenceOpen: boolean;
+  setReferenceOpen: (open: boolean) => void;
   setMeasureUnit: (u: MeasureUnit) => void;
   setLocale: (l: Locale) => void;
   setThemeId: (id: ThemeId) => void;
@@ -402,9 +431,11 @@ type State = {
   placeHead: (p: Pt, catalogId?: string) => void;
   moveHead: (id: string, p: Pt) => void;
   updateHead: (id: string, patch: Partial<Head>) => void;
+  setHeadFlag: (id: string, patch: Partial<Pick<Head, "hidden" | "locked">>) => void;
   patchHeadLive: (id: string, patch: Partial<Head>) => void;
   beginHeadEdit: () => void;
   endHeadEdit: () => void;
+  cancelHeadEdit: () => void;
   movePolyPoint: (id: string, index: number, p: Pt) => void;
   applyScale: (a: Pt, b: Pt, meters: number) => void;
   autoZone: (maxLpm: number) => void;
@@ -414,7 +445,7 @@ type State = {
   setActiveZone: (id: number) => void;
   addZone: (assignHeadId?: string) => void;
   renameZone: (id: number, name: string) => void;
-  removeZone: (id: number) => void;
+  removeZone: (id: number, transferTo?: number) => void;
   toggleZoneHidden: (id: number) => void;
   toggleZoneLocked: (id: number) => void;
   assignSelectedToZone: (id: number) => void;
@@ -423,6 +454,8 @@ type State = {
   setLastSegmentLength: (meters: number) => void;
   openLibrary: (id: string) => void;
   removeLibrary: (id: string) => void;
+  restoreLibrary: (id: string) => void;
+  purgeLibrary: (id: string) => void;
   duplicateLibrary: (id: string) => void;
   renameLibrary: (id: string, name: string) => void;
   saveCurrentToLibrary: () => void;
@@ -435,8 +468,6 @@ type State = {
 const emptyDraft = (): Draft => ({ points: [], scaleA: null, scaleB: null, measureA: null });
 
 function slimUnderlay(u: Underlay | null): Underlay | null {
-  if (!u) return null;
-  if (u.src.startsWith("data:") && u.src.length > 1_400_000) return { ...u, src: "" };
   return u;
 }
 
@@ -446,6 +477,11 @@ function cloneProject(p: Project): Project {
 
 function migrateHead(h: Partial<Head> & { catalogId?: string; x: number; y: number }): Head {
   const item = h.catalogId ? itemById(h.catalogId) : undefined;
+  const body = item ? bodyForHead(item, h.bodyId, h.popUpMm) : undefined;
+  const mount = item ? mountingKind(item) : undefined;
+  const height = body?.popUpMm ?? h.popUpMm ?? (item ? defaultPopUpMm(item) : 100);
+  const badBody = item && mount === "spray" && !body;
+  const badHeight = item?.type === "rotor" && !!item.popUpOptions?.length && height != null && !popUpHeights(item).includes(height);
   return {
     id: h.id ?? uid("h"),
     catalogId: h.catalogId ?? "MP2000-90",
@@ -456,11 +492,16 @@ function migrateHead(h: Partial<Head> & { catalogId?: string; x: number; y: numb
     arc: h.arc ?? 180,
     r: h.r ?? item?.rNom ?? 5,
     zone: h.zone ?? 1,
+    ...(h.figureId ? {figureId:h.figureId} : {}),
+    ...(h.zoneAssignment === 'manual' ? {zoneAssignment:'manual' as const} : {}),
     designPressure: h.designPressure ?? item?.recommendedPressureBar ?? 2.8,
-    bodyId: h.bodyId ?? (item ? defaultBodyFor(item) : "PRS40"),
-    popUpMm: h.popUpMm ?? item?.popUpMm ?? 100,
+    bodyId: mount === "riser" || mount === "integrated" ? item!.id : body?.id ?? h.bodyId ?? (item ? defaultBodyFor(item) : "PRS40"),
+    popUpMm: mount === "riser" ? 0 : height,
     locked: h.locked ?? false,
-    needsReview: !!h.needsReview || !item || !!h.nozzleId && !item?.nozzles.some(n => n.id === h.nozzleId),
+    ...(typeof h.hidden === "boolean" ? { hidden: h.hidden } : {}),
+    needsReview: !!h.needsReview || !!badBody || !!badHeight || !item || !!h.nozzleId && !item?.nozzles.some(n => n.id === h.nozzleId) ||
+      !!item && h.designPressure != null && item.nozzles.some(n => n.performance.length) &&
+      !pressureSteps(item,h.nozzleId,h.arc ?? 180).includes(h.designPressure),
   };
 }
 
@@ -485,7 +526,7 @@ function migrateGeom(g: Record<string, unknown>): Geom {
 }
 
 export function migrateProject(raw: Record<string, unknown>): Project {
-  const base = emptyProject(typeof raw.name === "string" ? raw.name : "Без названия");
+  const base = emptyProject(typeof raw.name === "string" ? raw.name : "");
   const heads = Array.isArray(raw.heads) ? (raw.heads as Parameters<typeof migrateHead>[0][]).map(migrateHead) : [];
   const legacyPolygons = Array.isArray(raw.polygons)
     ? (raw.polygons as Record<string, unknown>[]).map(migrateGeom)
@@ -503,12 +544,14 @@ export function migrateProject(raw: Record<string, unknown>): Project {
       : zonesFromHeads(heads)
   ).map((z) => ({
     id: z.id,
-    name: z.name || `Зона ${z.id}`,
+    ...(typeof z.figureId === 'string' ? {figureId:z.figureId} : {}),
+    name: z.name ?? "",
+    ...(z.nameKind === "custom" || z.nameKind === "generated" ? { nameKind: z.nameKind } : {}),
     hidden: Boolean(z.hidden),
     locked: Boolean(z.locked),
   }));
   const underlay = (raw.underlay as Underlay | null) ?? null;
-  return {
+  return renumberProjectZones({
     ...base,
     ...raw,
     id: typeof raw.id === "string" ? raw.id : base.id,
@@ -521,7 +564,7 @@ export function migrateProject(raw: Record<string, unknown>): Project {
           rotation: underlay.rotation ?? 0,
           visible: underlay.visible ?? true,
           locked: underlay.locked ?? false,
-          name: underlay.name ?? "Чертёж",
+          name: underlay.name ?? "Reference",
         }
       : null,
     polygons,
@@ -530,31 +573,36 @@ export function migrateProject(raw: Record<string, unknown>): Project {
     zones,
     scaleCalibrated: raw.scaleCalibrated !== false && !underlay ? true : Boolean(raw.scaleCalibrated),
     updatedAt: typeof raw.updatedAt === "string" ? raw.updatedAt : new Date().toISOString(),
-  };
+  });
 }
 
 function fitHeadToRadius(next: Head, patch: Partial<Head>, reference: Head): Head {
   const item=itemById(next.catalogId);
   if (!item) return next;
-  next.arc=clampArc(item,next.arc);
-  if (usesAutomaticNozzle(item) && patch.nozzleId === undefined &&
-      (patch.r != null || patch.arc != null || patch.designPressure != null)) {
-    if (patch.designPressure != null && patch.r == null)
-      next.r = radiusAtChangedPressure(item, reference, next.designPressure);
-    return fitAutomaticNozzle(item, next, reference);
+  if (patch.bodyId != null) {
+    const choice = bodySelectionPatch(item, patch.bodyId, reference);
+    next.bodyId = choice?.bodyId ?? reference.bodyId;
+    next.popUpMm = choice?.popUpMm ?? reference.popUpMm;
+    if (choice && patch.designPressure == null) next.designPressure = choice.designPressure;
   }
-  const pressure = pressureRange(item,next.nozzleId,next.arc);
-  if (pressure && (patch.designPressure != null || patch.nozzleId != null || patch.bodyId != null || patch.arc != null)) {
+  if (patch.popUpMm != null && item.type === "rotor" && !popUpHeights(item).includes(patch.popUpMm)) next.popUpMm = reference.popUpMm;
+  next.arc=clampArc(item,next.arc);
+  const steps = pressureSteps(item,next.nozzleId,next.arc);
+  if (steps.length && (patch.designPressure != null || patch.nozzleId != null || patch.arc != null || patch.bodyId != null || patch.r != null)) {
     const requested = Number.isFinite(next.designPressure) ? next.designPressure : item.recommendedPressureBar;
-    next.designPressure=Math.max(pressure.min,Math.min(requested,pressure.max));
+    next.designPressure = nearestPressure(steps,requested)!;
+  }
+  if (usesAutomaticNozzle(item) && patch.nozzleId === undefined &&
+      (patch.r != null || patch.arc != null)) {
+    return fitAutomaticNozzle(item, next, reference);
   }
   const row=performanceAt(item,next.nozzleId,next.designPressure,next.arc)?.row;
   if (row) {
     const min=radiusRange(item,next.nozzleId,next.designPressure,next.arc)?.min ?? row.radiusM;
     if (patch.r == null) {
       if (patch.nozzleId != null && patch.nozzleId !== reference.nozzleId) next.r = row.radiusM;
-      else if (patch.designPressure != null || patch.bodyId != null)
-        next.r = radiusAtChangedPressure(item, reference, next.designPressure);
+      else if (patch.designPressure != null || patch.bodyId != null && next.designPressure !== reference.designPressure)
+        next.r = row.radiusM;
     }
     next.r = Math.max(min, Math.min(next.r, row.radiusM));
     next.needsReview=false;
@@ -562,7 +610,28 @@ function fitHeadToRadius(next: Head, patch: Partial<Head>, reference: Head): Hea
   return next;
 }
 
+/** Shared by inspector and estimate; body-height changes retain the designed radius. */
+export function updateHeadSettings(head: Head, patch: Partial<Head>): Head {
+  const next = fitHeadToRadius({ ...head, ...patch }, patch, head);
+  const item = itemById(next.catalogId);
+  if (item) {
+    next.r = clampRadius(item, next.r); next.arc = clampArc(item, next.arc);
+    const badBody = mountingKind(item) === "spray" && !bodyForHead(item, next.bodyId, next.popUpMm);
+    const badHeight = item.type === "rotor" && !!item.popUpOptions?.length && next.popUpMm != null && !popUpHeights(item).includes(next.popUpMm);
+    next.needsReview = !!next.needsReview || badBody || badHeight;
+  }
+  if (next.start != null) next.start = ((next.start % 360) + 360) % 360;
+  return next;
+}
+
 let headEditBase: Project | null = null;
+const viewSnapshots = new WeakMap<Project,{key:string;project:Project}>();
+export function projectWithView(s: State): Project {
+  const view:NonNullable<Project["view"]>={showCoverage:s.showCoverage,showLabels:s.showLabels,showGrid:s.showGrid,snapOn:s.snapOn,snapGridOn:s.snapGridOn,gridStep:s.gridStep,measureUnit:s.measureUnit,activeZoneId:s.activeZoneId,pxPerMeter:s.pxPerMeter,panX:s.panX,panY:s.panY};
+  const key=JSON.stringify(view), cached=viewSnapshots.get(s.project);
+  if(cached?.key===key) return cached.project;
+  const project={...s.project,view};viewSnapshots.set(s.project,{key,project});return project;
+}
 
 export const useProject = create<State>()(
   persist(
@@ -592,19 +661,25 @@ export const useProject = create<State>()(
           next = { ...next, drawing, polygons: toPolygons(drawing) };
         }
         const { project, past, pastOps, projects } = get();
+        const remainingHeadIds = new Set(next.heads.map(h => h.id));
+        if (project.heads.some(h => !remainingHeadIds.has(h.id))) {
+          next = redistributeZonesAfterRemoval(next);
+          set({ zoneFocus: null });
+        }
         const past2 = [...past, historySnapshot(project)].slice(-200);
         const ops2 = [...pastOps, get().lastOp].slice(-200);
         const item = touch(next);
         const listed = projects.some((x) => x.id === item.id);
         set({
           project: item,
+          activeZoneId: item.zones.some(z => z.id === get().activeZoneId) ? get().activeZoneId : item.zones[0]?.id ?? 1,
           past: past2,
           pastOps: ops2,
           future: [],
           futureOps: [],
           lastOp: op,
-          saveState: listed || isNamed(item) ? "saved" : "idle",
-          projects: listed || isNamed(item) ? upsertList(projects, item) : projects,
+          saveState: listed || isNamed(item) || projectHasContent(item) ? "saved" : "idle",
+          projects: listed || isNamed(item) || projectHasContent(item) ? upsertList(projects, item) : projects,
         });
       };
 
@@ -676,7 +751,7 @@ export const useProject = create<State>()(
         pendingCatalogPlant: null,
         setLandscapeOpen: (open) => {
           if (get().groupMemberId) get().finishGroupMember();
-          set({ landscapeOpen: open, catalogOpen: false, tool: null, drawSub: "none",
+          set({ workspaceSection: open ? "landscape" : get().workspaceSection, landscapeOpen: open, catalogOpen: false, tool: null, drawSub: "none",
             draft: emptyDraft(), cadEditId: null, selectedPolyId: null, selectedPolyIds: [],
             selectedEdgeId: null, selectedId: null, selectedIds: [], pendingCatalogPlant: null,
             rightOpen: false, rightMode: "landscape", inspectedPlant: null, selectedPlantId: null });
@@ -698,11 +773,11 @@ export const useProject = create<State>()(
         },
         placeCatalogPlant: (point) => {
           const st = get(), pending = st.pendingCatalogPlant;
-          if (!pending || (st.project.underlay && !st.project.scaleCalibrated)) return;
+          if (!pending) return;
           const drawing = drawingOrMigrate(st.project);
           if (drawing.layers?.plants?.locked) return;
           const pt = cadSnap(point, drawing, { pxPerMeter: st.pxPerMeter, snapOn: st.snapOn,
-            snapGridOn: st.snapOn && st.snapGridOn, gridStep: st.gridStep, heads: st.project.heads }).pt;
+            snapGridOn: st.snapOn && st.snapGridOn, gridStep: st.gridStep, heads: visibleProjectHeads(st.project) }).pt;
           const id = uid("plant");
           const plant: CadPlant = { id, kind: pending.kind, ...pt, r: pending.diameterM / 2,
             catalogId: pending.record.id, catalog: pending.record,
@@ -736,16 +811,43 @@ export const useProject = create<State>()(
           set({ selectedPlantId: null });
         },
         projects: [],
+        trash: [],
         tool: null,
         drawSub: "none",
         measureSub: "measure",
         placeId: "MP2000-90",
         selectedId: null,
+        sectorEditId: null,
         selectedIds: [],
         selectedPolyId: null,
         selectedPolyIds: [],
         selectedEdgeId: null,
         activeZoneId: 1,
+        zoneFocus: null,
+        simulationProjectId: null,
+        toggleSimulation: () => {
+          if (get().workspaceSection !== "irrigation") return;
+          get().endHeadEdit();
+          set({ simulationProjectId: get().simulationProjectId === get().project.id ? null : get().project.id,
+            zoneFocus: null, sectorEditId: null, catalogOpen: true });
+        },
+        focusZone: (zoneId, headId = null) => {
+          const { project } = get();
+          if (!project.zones.some(z => z.id === zoneId) || headId && !project.heads.some(h => h.id === headId && h.zone === zoneId)) return;
+          get().endHeadEdit();
+          set({ simulationProjectId: null, activeZoneId: zoneId, zoneFocus: { projectId: project.id, zoneId, headId },
+            selectedId: null, selectedIds: [], selectedPolyId: null, selectedPolyIds: [], selectedEdgeId: null,
+            sectorEditId: null, cadEditId: null, selectedPlantId: null, inspectedPlant: null, rightMode: "zone", rightOpen: true });
+        },
+        transferHeadToZone: (headId, zoneId) => {
+          get().endHeadEdit();
+          const { project } = get();
+          const head = project.heads.find(h => h.id === headId);
+          const destination = project.zones.find(z => z.id === zoneId);
+          if (!head || !destination || destination.locked || head.zone === zoneId || isHeadLocked(head, project.zones)) return;
+          withCommit({ ...project, heads: project.heads.map(h => h.id === headId ? { ...h, zone: zoneId, zoneAssignment:'manual' as const } : h) });
+          get().focusZone(zoneId, headId);
+        },
         showCoverage: true,
         showRadii: true,
         showLabels: true,
@@ -761,7 +863,7 @@ export const useProject = create<State>()(
         catalogVisible: true,
         rightOpen: false,
         rightMode: "drawing",
-        projectFormOpen: true,
+        projectFormOpen: false,
         familyFilter: "mp",
         polyKind: "lawn",
         regionType: "lawn",
@@ -780,6 +882,8 @@ export const useProject = create<State>()(
         units: { ...METRIC_UNITS },
         unitPreset: "metric",
         localeBootstrapped: false,
+        localizationVersion: 1,
+        workspaceSection: "plan",
         pxPerMeter: 36,
         panX: 48,
         panY: 36,
@@ -811,6 +915,9 @@ export const useProject = create<State>()(
             mergePrompt:null,rightOpen:false});
         },
         setTool: (tool) => {
+          if (tool === "draw" || tool === "measure") set({ workspaceSection: "plan", referenceOpen: false });
+          if (tool === "place") set({ workspaceSection: "irrigation", referenceOpen: false });
+          set({ sectorEditId: null });
           set({ landscapeOpen: false, pendingCatalogPlant: null, inspectedPlant: null, selectedPlantId: null });
           if (get().groupMemberId) get().finishGroupMember();
           set({
@@ -825,6 +932,7 @@ export const useProject = create<State>()(
           });
         },
         setCadMode: (mode) => {
+          set({ sectorEditId: null });
           set({ landscapeOpen: false, pendingCatalogPlant: null, inspectedPlant: null, selectedPlantId: null });
           if (get().groupMemberId) get().finishGroupMember();
           const mapped = fromCadMode(mode, get().tool);
@@ -839,6 +947,7 @@ export const useProject = create<State>()(
           });
         },
         setDrawSub: (drawSub) => {
+          set({ sectorEditId: null });
           set({ landscapeOpen: false, pendingCatalogPlant: null, inspectedPlant: null, selectedPlantId: null });
           if (get().groupMemberId) get().finishGroupMember();
           if (get().drawSub === drawSub && get().tool === "draw") {
@@ -878,6 +987,8 @@ export const useProject = create<State>()(
         setPlaceId: (placeId) => set({ placeId, catalogOpen: true, catalogVisible: true }),
         selectHead: (selectedId) =>
           set({
+            zoneFocus: null,
+            sectorEditId: selectedId === get().sectorEditId ? selectedId : null,
             selectedPlantId: null, inspectedPlant: null,
             selectedId,
             selectedIds: selectedId ? [selectedId] : [],
@@ -885,11 +996,14 @@ export const useProject = create<State>()(
             selectedPolyIds: [],
             cadEditId: null,
             selectedEdgeId: null,
-            rightMode: selectedId ? "zone" : get().rightMode === "object" ? "zone" : get().rightMode,
+            rightMode: selectedId || get().selectedId || get().rightMode === "object"
+              ? headPanelMode(get().workspaceSection, selectedId ? 1 : 0) : get().rightMode,
             rightOpen: selectedId ? true : get().rightOpen,
           }),
         selectHeads: (selectedIds) =>
           set({
+            zoneFocus: null,
+            sectorEditId: selectedIds.length === 1 && selectedIds[0] === get().sectorEditId ? selectedIds[0] : null,
             selectedPlantId: null, inspectedPlant: null,
             selectedIds,
             selectedId: selectedIds[0] ?? null,
@@ -897,15 +1011,18 @@ export const useProject = create<State>()(
             selectedPolyIds: [],
             cadEditId: null,
             selectedEdgeId: null,
-            rightMode: selectedIds.length ? "zone" : get().rightMode,
+            rightMode: selectedIds.length || get().selectedIds.length || get().rightMode === "object"
+              ? headPanelMode(get().workspaceSection, selectedIds.length) : get().rightMode,
             rightOpen: selectedIds.length ? true : get().rightOpen,
           }),
         selectPoly: (selectedPolyId, add) => {
+          set({ sectorEditId: null, zoneFocus: null });
           set({ selectedPlantId: null, inspectedPlant: null });
           if (get().groupMemberId && selectedPolyId !== get().groupMemberId) return;
           if (get().groupMemberId) add = false;
           if (!selectedPolyId) {
-            set({ selectedPolyId: null, selectedPolyIds: [], selectedEdgeId: null, selectedId: null, selectedIds: [] });
+            set({ selectedPolyId: null, selectedPolyIds: [], selectedEdgeId: null, selectedId: null, selectedIds: [],
+              ...(get().selectedId || get().rightMode === "object" ? { rightMode: headPanelMode(get().workspaceSection, 0) } : {}) });
             return;
           }
           const pending = get().pendingConstraint;
@@ -974,6 +1091,7 @@ export const useProject = create<State>()(
           set({
             landscapeOpen: false, pendingCatalogPlant: null, selectedPlantId: null, inspectedPlant: null,
             catalogOpen,
+            ...(catalogOpen ? { workspaceSection: "irrigation" as const, referenceOpen: false } : {}),
             catalogVisible: catalogOpen ? false : get().catalogVisible,
             tool: catalogOpen ? "place" : get().tool === "place" ? null : get().tool,
             draft: catalogOpen ? emptyDraft() : get().draft,
@@ -1029,6 +1147,14 @@ export const useProject = create<State>()(
         setRightOpen: (rightOpen) => set({ rightOpen }),
         setRightMode: (rightMode) => set({ rightMode, rightOpen: true }),
         setProjectFormOpen: (projectFormOpen) => set({ projectFormOpen }),
+        referenceOpen: false,
+        setReferenceOpen: (referenceOpen) => {
+          if (referenceOpen && get().groupMemberId) get().finishGroupMember();
+          set({ referenceOpen,
+            ...(referenceOpen ? { catalogOpen: false, landscapeOpen: false, tool: null, cadEditId: null,
+              pendingCatalogPlant: null, inspectedPlant: null, selectedPlantId: null, sectorEditId: null, rightOpen: false,
+              selectedId: null, selectedIds: [], selectedPolyId: null, selectedPolyIds: [], selectedEdgeId: null, draft: emptyDraft() } : {}) });
+        },
         setMeasureUnit: (measureUnit) =>
           set((s) => {
             const length = measureUnit === "yd" ? "ft" : measureUnit;
@@ -1038,15 +1164,8 @@ export const useProject = create<State>()(
         setLocale: (locale) => {
           const loc = parseLocale(locale);
           if (loc === get().locale) return;
-          const region = loc === "en" ? regionFromBcp47(deviceBcp47()) : null;
-          const preset = recommendedUnitSystem(loc, region);
-          const units = unitsFromPreset(preset);
           set({
             locale: loc,
-            unitPreset: preset,
-            units,
-            measureUnit: units.length,
-            numberFormat: numberFormatForUnits(preset),
             localeBootstrapped: true,
           });
         },
@@ -1070,7 +1189,6 @@ export const useProject = create<State>()(
             unitPreset: preset,
             units,
             measureUnit: units.length,
-            numberFormat: numberFormatForUnits(preset),
           });
         },
         patchUnits: (patch) =>
@@ -1081,7 +1199,6 @@ export const useProject = create<State>()(
               units,
               unitPreset,
               measureUnit: units.length,
-              numberFormat: unitPreset === "custom" ? s.numberFormat : numberFormatForUnits(unitPreset),
             };
           }),
         setZoom: (pxPerMeter) => set({ pxPerMeter: clampPxPerMeter(pxPerMeter) }),
@@ -1093,10 +1210,10 @@ export const useProject = create<State>()(
         setAnalysis: (analysis) => set({ analysis, showCoverage: analysis !== "normal" ? true : get().showCoverage }),
         setSpaceDown: (spaceDown) => set({ spaceDown }),
         newProject: () => {
-          set({landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
+          set({referenceOpen:false,landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
           if (get().groupMemberId) get().finishGroupMember();
           const { project, projects } = get();
-          if (isNamed(project) || projects.some((x) => x.id === project.id)) {
+          if (projectHasContent(project) || isNamed(project) || projects.some((x) => x.id === project.id)) {
             get().saveCurrentToLibrary();
           }
           const p = emptyProject();
@@ -1112,7 +1229,8 @@ export const useProject = create<State>()(
             catalogOpen: false,
             rightMode: "project",
             rightOpen: false,
-            projectFormOpen: true,
+            projectFormOpen: false,
+            workspaceSection: "plan",
             past: [],
             future: [],
             fitNonce: get().fitNonce + 1,
@@ -1128,7 +1246,10 @@ export const useProject = create<State>()(
         patchUnderlay: (patch) => {
           const u = get().project.underlay;
           if (!u) return;
-          withCommit({ ...get().project, underlay: { ...u, ...patch } });
+          const next = patchReference(u, patch);
+          const resized = next.width !== u.width || next.height !== u.height;
+          withCommit({ ...get().project, underlay: next,
+            scaleCalibrated: resized ? false : get().project.scaleCalibrated });
         },
         addDraftPoint: (p) => set({ draft: { ...get().draft, redoPoints: [], redoClosure: false, points: [...get().draft.points, p] } }),
         setDraftPoints: (points) => set({ draft: { ...get().draft, redoClosure:false, points } }),
@@ -1843,8 +1964,10 @@ export const useProject = create<State>()(
           if (get().groupMemberId) { get().deleteGroupMember(get().groupMemberId!); return; }
           const { selectedIds, selectedPolyId, selectedEdgeId, selectedPolyIds, project } = get();
           if (selectedIds.length) {
-            withCommit({ ...project, heads: project.heads.filter((h) => !selectedIds.includes(h.id)) });
-            set({ selectedId: null, selectedIds: [] });
+            const heads = project.heads.filter(h => !selectedIds.includes(h.id) || h.locked || project.zones.some(z => z.id === h.zone && z.locked));
+            if (heads.length === project.heads.length) return;
+            withCommit({ ...project, heads });
+            set({ selectedId: null, selectedIds: [], rightMode: headPanelMode(get().workspaceSection, 0) });
             return;
           }
           if (selectedEdgeId) {
@@ -1901,11 +2024,14 @@ export const useProject = create<State>()(
         },
         removeHead: (id) => {
           const { project, selectedIds, selectedId } = get();
+          const head = project.heads.find(h => h.id === id);
+          if (!head || head.locked || project.zones.some(z => z.id === head.zone && z.locked)) return;
           withCommit({ ...project, heads: project.heads.filter((h) => h.id !== id) });
           const next = selectedIds.filter((x) => x !== id);
           set({
             selectedIds: next,
             selectedId: selectedId === id ? (next[0] ?? null) : selectedId,
+            ...(selectedIds.includes(id) ? { rightMode: headPanelMode(get().workspaceSection, next.length) } : {}),
           });
         },
         duplicateSelected: () => {
@@ -1937,13 +2063,13 @@ export const useProject = create<State>()(
           const item = id ? itemById(id) : CATALOG[0];
           if (!item || item.family === "body") return;
           const pr = get().project;
-          if (pr.underlay && !pr.scaleCalibrated) return;
           const polys = pr.polygons.filter((g) => g.closed);
-          const snapped = snapInProject(p, pr, {
+          const snapped = snapSprinklerPoint(p, drawingOrMigrate(pr), {
             snapOn: get().snapOn,
             snapGridOn: get().snapGridOn,
             gridStep: get().gridStep,
             pxPerMeter: get().pxPerMeter,
+            heads: visibleProjectHeads(pr),
           }).pt;
           let start = 0;
           let arc = item.arcMin === 360 ? 360 : clampArc(item, 180);
@@ -1976,6 +2102,7 @@ export const useProject = create<State>()(
           const nominal = performanceAt(item,defaults.nozzleId,defaults.designPressure,arc)?.row.radiusM ?? defaults.r;
           const draftHead: Head = {
             id: uid("h"),
+            figureId: figureAtPoint(snapped, irrigationFigures(drawingOrMigrate(pr)))?.id,
             catalogId: item.id,
             nozzleId: defaults.nozzleId,
             x: snapped.x,
@@ -1986,11 +2113,11 @@ export const useProject = create<State>()(
             zone: get().activeZoneId,
             designPressure: defaults.designPressure,
             bodyId: defaultBodyFor(item),
-            popUpMm: item.popUpMm ?? 100,
+            popUpMm: defaultPopUpMm(item),
             locked: false,
             needsReview: false,
           };
-          const maxLpm = defaultMaxZoneLpm(pr.water.availableLpm);
+          const maxLpm = projectZoneLimit(pr);
           // Manual placement preserves the explicitly selected model and its throw.
           const fitted = draftHead;
           const picked = assignZoneForNewHead(pr, fitted, get().activeZoneId, maxLpm);
@@ -1999,6 +2126,9 @@ export const useProject = create<State>()(
           set({ selectedId: head.id, selectedIds: [head.id], rightMode: "object", rightOpen: true, activeZoneId: picked.zoneId });
         },
         moveHead: (id, p) => {
+          const pr = get().project;
+          const head = pr.heads.find(h => h.id === id);
+          if (!head || isHeadLocked(head, pr.zones) || !isHeadVisible(head, pr.zones)) return;
           set({
             project: {
               ...get().project,
@@ -2008,24 +2138,47 @@ export const useProject = create<State>()(
         },
         updateHead: (id, patch) => {
           const pr = get().project;
+          const head = pr.heads.find(h => h.id === id);
+          if (!head || pr.zones.some(z => z.id === head.zone && z.locked) ||
+            head.locked && Object.keys(patch).some(key => key !== "locked" && key !== "hidden")) return;
           const heads = pr.heads.map((h) => {
             if (h.id !== id) return h;
-            let next = { ...h, ...patch };
-            if (next.start != null) next.start = ((next.start % 360) + 360) % 360;
-            next = fitHeadToRadius(next, patch, h);
-            const item = itemById(next.catalogId);
-            if (item) {
-              next.r = clampRadius(item, next.r);
-              next.arc = clampArc(item, next.arc);
-            }
-            return next;
+            return updateHeadSettings(h, patch);
           });
           withCommit({ ...pr, heads });
+        },
+        setHeadFlag: (id, patch) => {
+          // End an interrupted sector gesture before recording a separate layer action.
+          get().endHeadEdit();
+          const pr = get().project;
+          const head = pr.heads.find(h => h.id === id);
+          if (!head) return;
+          const flags: Partial<Pick<Head, "hidden" | "locked">> = {};
+          if (typeof patch.hidden === "boolean" && patch.hidden !== Boolean(head.hidden)) flags.hidden = patch.hidden;
+          if (typeof patch.locked === "boolean" && patch.locked !== head.locked &&
+            !pr.zones.some(z => z.id === head.zone && z.locked)) flags.locked = patch.locked;
+          if (!Object.keys(flags).length) return;
+          withCommit({ ...pr, heads: pr.heads.map(h => h.id === id ? { ...h, ...flags } : h) });
+          if (flags.hidden && get().selectedIds.includes(id)) get().selectHeads(get().selectedIds.filter(value => value !== id));
+          if ((flags.hidden || flags.locked) && get().sectorEditId === id) set({ sectorEditId: null });
+        },
+        setSectorEdit: (id) => {
+          if (!id) { set({ sectorEditId: null }); return; }
+          const head = get().project.heads.find(h => h.id === id);
+          const zone = head && get().project.zones.find(z => z.id === head.zone);
+          const item = head && itemById(head.catalogId);
+          if (!head || head.hidden || head.locked || zone?.locked || zone?.hidden || !item || item.coverageKind === "point") return;
+          get().selectHead(id);
+          set({ sectorEditId: id, tool: "place", drawSub: "none", draft: emptyDraft(),
+            pendingCatalogPlant: null, landscapeOpen: false, catalogOpen: true, showCoverage: true });
         },
         beginHeadEdit: () => {
           if (!headEditBase) headEditBase = cloneProject(get().project);
         },
         patchHeadLive: (id, patch) => {
+          const current = get().project;
+          const head = current.heads.find(h => h.id === id);
+          if (!head || isHeadLocked(head, current.zones) || !isHeadVisible(head, current.zones)) return;
           if (!headEditBase) headEditBase = cloneProject(get().project);
           const pr = get().project;
           const heads = pr.heads.map((h) => {
@@ -2044,16 +2197,30 @@ export const useProject = create<State>()(
         },
         endHeadEdit: () => {
           if (!headEditBase) return;
-          const { past, project, projects } = get();
+          const { past, project, projects, pastOps, lastOp } = get();
+          if (JSON.stringify(project.heads) === JSON.stringify(headEditBase.heads)) { headEditBase = null; return; }
           const item = touch(project);
           const listed = projects.some((x) => x.id === item.id);
           set({
             project: item,
             past: [...past, headEditBase].slice(-200),
+            pastOps: [...pastOps, lastOp].slice(-200),
+            lastOp: "head-edit",
             future: [],
-            saveState: listed || isNamed(item) ? "saved" : "idle",
-            projects: listed || isNamed(item) ? upsertList(projects, item) : projects,
+            futureOps: [],
+            saveState: listed || isNamed(item) || projectHasContent(item) ? "saved" : "idle",
+            projects: listed || isNamed(item) || projectHasContent(item) ? upsertList(projects, item) : projects,
           });
+          headEditBase = null;
+        },
+        cancelHeadEdit: () => {
+          if (!headEditBase) return;
+          // Do not resurrect a head deleted while a pointer gesture was interrupted.
+          const originals = new Map(headEditBase.heads.map(h => [h.id, h]));
+          set({ project: { ...get().project, heads: get().project.heads.map(h => {
+            const original = originals.get(h.id);
+            return original ? { ...original, zone: h.zone, locked: h.locked, ...(h.hidden !== undefined ? { hidden: h.hidden } : {}) } : h;
+          }) } });
           headEditBase = null;
         },
         movePolyPoint: (id, index, p) => {
@@ -2069,39 +2236,18 @@ export const useProject = create<State>()(
           });
         },
         applyScale: (a, b, meters) => {
-          const d = dist(a, b);
-          if (d < 0.01 || meters <= 0) return;
-          const k = meters / d;
-          const scalePt = (p: Pt): Pt => ({ x: p.x * k, y: p.y * k });
           const pr = get().project;
-          const underlay = pr.underlay
-            ? {
-                ...pr.underlay,
-                x: pr.underlay.x * k,
-                y: pr.underlay.y * k,
-                width: pr.underlay.width * k,
-                height: pr.underlay.height * k,
-                locked: true,
-              }
-            : null;
-          withCommit({
-            ...pr,
-            underlay,
-            polygons: pr.polygons.map((poly) => ({
-              ...poly,
-              points: poly.points.map(scalePt),
-              radius: poly.radius ? poly.radius * k : undefined,
-            })),
-            heads: pr.heads.map((h) => ({ ...h, x: h.x * k, y: h.y * k })),
-            scaleCalibrated: true,
-          });
-          set({ draft: emptyDraft(), tool: null, fitNonce: get().fitNonce + 1 });
+          if (!pr.underlay) return;
+          const underlay = calibratedReference(pr.underlay, a, b, meters);
+          if (!underlay) return;
+          withCommit({ ...pr, underlay, scaleCalibrated: true });
+          set({ draft: emptyDraft(), tool: null, referenceOpen: true, fitNonce: get().fitNonce + 1 });
         },
         autoZone: (maxLpm) => {
           const pr = get().project;
           const limit = maxLpm > 0 ? maxLpm : defaultMaxZoneLpm(pr.water.availableLpm);
           const { heads, zones } = distributeZones(pr.heads, limit);
-          withCommit({ ...pr, heads, zones });
+          withCommit({ ...pr, heads, zones, zoneFlowLimitLpm: limit });
           set({ activeZoneId: zones[0]?.id ?? 1 });
         },
         setHeads: (heads) => {
@@ -2117,8 +2263,7 @@ export const useProject = create<State>()(
           if (pr.drawing?.layers?.plants?.visible !== false) for (const plant of Object.values(pr.drawing?.plants ?? {}))
             pts.push({x:plant.x-plant.r,y:plant.y-plant.r},{x:plant.x+plant.r,y:plant.y+plant.r});
           if (pr.underlay) {
-            pts.push({ x: pr.underlay.x, y: pr.underlay.y });
-            pts.push({ x: pr.underlay.x + pr.underlay.width, y: pr.underlay.y + pr.underlay.height });
+            pts.push(...referenceCorners(pr.underlay));
           }
           const box = boundsOf(pts, 1.5);
           if (!box) {
@@ -2138,10 +2283,14 @@ export const useProject = create<State>()(
         addZone: (assignHeadId) => {
           const pr = get().project;
           if (pr.zones.length >= MAX_ZONES) return;
+          if (assignHeadId) {
+            const head = pr.heads.find(h => h.id === assignHeadId);
+            if (!head || head.locked || pr.zones.some(z => z.id === head.zone && z.locked)) return;
+          }
           const id = Math.max(0, ...pr.zones.map((z) => z.id)) + 1;
-          const zone: Zone = { id, name: `Зона ${id}`, hidden: false, locked: false };
+          const zone: Zone = { id, name: "", nameKind: "generated", hidden: false, locked: false };
           const heads = assignHeadId
-            ? pr.heads.map((h) => (h.id === assignHeadId ? { ...h, zone: id } : h))
+            ? pr.heads.map((h) => (h.id === assignHeadId ? { ...h, zone: id, zoneAssignment:'manual' as const } : h))
             : pr.heads;
           withCommit({ ...pr, zones: [...pr.zones, zone], heads });
           set({ activeZoneId: id });
@@ -2150,35 +2299,48 @@ export const useProject = create<State>()(
           const pr = get().project;
           withCommit({
             ...pr,
-            zones: pr.zones.map((z) => (z.id === id ? { ...z, name: name.trim() || z.name } : z)),
+            zones: pr.zones.map((z) => (z.id === id ? { ...z, name: name.trim(), nameKind: name.trim() ? "custom" : "generated" } : z)),
           });
         },
-        removeZone: (id) => {
+        removeZone: (id, transferTo) => {
           const pr = get().project;
           if (pr.zones.length <= 1) return;
-          const firstId = [...pr.zones].sort((a, b) => a.id - b.id)[0]?.id;
-          if (id === 1 || id === firstId) return;
-          const { zones, heads, idMap } = compactAfterRemoveZone(pr.zones, pr.heads, id);
-          const drawing = pr.drawing ? { ...pr.drawing, plants: Object.fromEntries(Object.entries(pr.drawing.plants ?? {}).map(([key, plant]) => [key,
-            plant.irrigation?.zoneId ? {...plant,irrigation:{...plant.irrigation,zoneId:idMap.get(plant.irrigation.zoneId) ?? null}} : plant])) } : undefined;
-          withCommit({ ...pr, zones, heads, ...(drawing ? {drawing} : {}) });
+          const source = pr.zones.find(z => z.id === id);
+          const hasHeads = pr.heads.some(h => h.zone === id);
+          const target = transferTo == null ? pr.zones.find(z => z.id !== id && (!hasHeads || !z.locked))
+            : pr.zones.find(z => z.id === transferTo && z.id !== id && !z.locked);
+          if (!source || source.locked || !target || pr.heads.some(h => h.zone === id && h.locked)) return;
           const active = get().activeZoneId;
-          const keep = active === id ? 1 : active;
-          set({ activeZoneId: idMap.get(keep) ?? 1 });
+          const { zones, heads, idMap } = compactAfterRemoveZone(pr.zones, pr.heads, id, target.id);
+          const drawing = pr.drawing ? { ...pr.drawing, plants: Object.fromEntries(Object.entries(pr.drawing.plants ?? {}).map(([key, plant]) => [key,
+            plant.irrigation?.zoneId ? {...plant,irrigation:{...plant.irrigation,zoneId:idMap.get(plant.irrigation.zoneId === id ? target.id : plant.irrigation.zoneId) ?? null}} : plant])) } : undefined;
+          withCommit({ ...pr, zones, heads, ...(drawing ? {drawing} : {}) });
+          set({ activeZoneId: idMap.get(active === id ? target.id : active) ?? zones[0]?.id ?? 1, zoneFocus: null });
         },
         toggleZoneHidden: (id) => {
+          get().endHeadEdit();
           const pr = get().project;
+          const zone = pr.zones.find(z => z.id === id);
+          if (!zone) return;
           withCommit({
             ...pr,
             zones: pr.zones.map((z) => (z.id === id ? { ...z, hidden: !z.hidden } : z)),
           });
+          if (!zone.hidden) {
+            const selected = get().selectedIds.filter(headId => pr.heads.some(h => h.id === headId && h.zone !== id));
+            if (selected.length !== get().selectedIds.length) get().selectHeads(selected);
+          }
         },
         toggleZoneLocked: (id) => {
+          get().endHeadEdit();
           const pr = get().project;
+          const zone = pr.zones.find(z => z.id === id);
+          if (!zone) return;
           withCommit({
             ...pr,
             zones: pr.zones.map((z) => (z.id === id ? { ...z, locked: !z.locked } : z)),
           });
+          if (!zone.locked && pr.heads.some(h => h.id === get().sectorEditId && h.zone === id)) set({ sectorEditId: null });
         },
         assignSelectedToZone: (id) => {
           const { selectedIds: ids, project } = get();
@@ -2189,13 +2351,15 @@ export const useProject = create<State>()(
           if (selected.every(h => h.zone === id)) { set({ activeZoneId: id }); return; }
           withCommit({
             ...project,
-            heads: project.heads.map((h) => (ids.includes(h.id) ? { ...h, zone: id } : h)),
+            heads: project.heads.map((h) => (ids.includes(h.id) ? { ...h, zone: id, zoneAssignment: 'manual' as const } : h)),
           });
           set({ activeZoneId: id });
         },
         finishMoveHead: (id, p) => {
           const st = get();
           const pr = st.project;
+          const head = pr.heads.find(h => h.id === id);
+          if (!head || isHeadLocked(head, pr.zones) || !isHeadVisible(head, pr.zones)) return;
           withCommit({
             ...pr,
             heads: pr.heads.map((h) => {
@@ -2237,19 +2401,21 @@ export const useProject = create<State>()(
           set({ draft: { ...get().draft, redoPoints: [], redoClosure:false, points: [...pts.slice(0, -1), next] } });
         },
         openLibrary: (id) => {
-          set({landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
+          set({referenceOpen:false,landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
           if (get().groupMemberId) get().finishGroupMember();
           const found = get().projects.find((x) => x.id === id);
           if (!found) return;
           const full = "heads" in found && Array.isArray((found as Project).heads) ? migrateProject(found as unknown as Record<string, unknown>) : null;
           if (!full) return;
           set({
+            ...full.view,
+            measureUnit: parseMeasureUnit(full.view?.measureUnit ?? get().measureUnit),
             project: cloneProject(full),
             selectedId: null,
             selectedIds: [],
             selectedPolyId: null,
             selectedEdgeId: null,
-            activeZoneId: full.zones[0]?.id ?? 1,
+            activeZoneId: full.view?.activeZoneId ?? full.zones[0]?.id ?? 1,
             draft: emptyDraft(),
             tool: null,
             catalogOpen: false,
@@ -2264,6 +2430,9 @@ export const useProject = create<State>()(
         removeLibrary: (id) => {
           if (get().groupMemberId && get().project.id === id) get().finishGroupMember();
           const { project, projects } = get();
+          const removed = project.id === id ? projectWithView(get()) : projects.find(p => p.id === id);
+          if (!removed) return;
+          set({ trash: [...retainedTrash(get().trash).filter(t => t.project.id !== id), {project:removed,deletedAt:new Date().toISOString()}] });
           const rest = projects.filter((x) => x.id !== id);
           if (project.id !== id) {
             set({ projects: rest });
@@ -2306,19 +2475,26 @@ export const useProject = create<State>()(
             catalogOpen: false,
             rightMode: "project",
             rightOpen: false,
-            projectFormOpen: true,
+            projectFormOpen: false,
+            workspaceSection: "plan",
             past: [],
             future: [],
             fitNonce: get().fitNonce + 1,
             saveState: "idle",
           });
         },
+        restoreLibrary: (id) => {
+          const found = retainedTrash(get().trash).find(t => t.project.id === id);
+          if (!found) return;
+          set({projects:upsertList(get().projects,found.project),trash:get().trash.filter(t=>t.project.id!==id)});
+        },
+        purgeLibrary: (id) => set({trash:get().trash.filter(t=>t.project.id!==id)}),
         duplicateLibrary: (id) => {
           const found = get().projects.find((x) => x.id === id);
           if (!found) return;
           const copy = cloneProject(found);
           copy.id = uid("p");
-          copy.name = `${copy.name} копия`;
+          copy.name = tr(get().locale, "copyProjectName", { name: copy.name || tr(get().locale, "untitled") });
           copy.updatedAt = new Date().toISOString();
           set({ projects: upsertList(get().projects, copy) });
         },
@@ -2330,16 +2506,15 @@ export const useProject = create<State>()(
           set({ projects: next, project: cur });
         },
         saveCurrentToLibrary: () => {
-          const { project, projects } = get();
-          const listed = projects.some((x) => x.id === project.id);
-          if (!listed && !isNamed(project)) return;
-          const next = touch(project);
-          set({ project: next, projects: upsertList(projects, next), saveState: "saved" });
+          const { projects } = get(), project=projectWithView(get());
+          if (!get().trash.some(t=>t.project.id===project.id)) set({projects:upsertList(projects,project)});
         },
         importPacked: (raw, extras) => {
-          set({landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
+          set({referenceOpen:false,landscapeOpen:false,inspectedPlant:null,selectedPlantId:null,pendingCatalogPlant:null});
           if (get().groupMemberId) get().finishGroupMember();
           const project = migrateProject(raw as unknown as Record<string, unknown>);
+          project.id = uid("p");
+          extras = { ...project.view, ...extras, measureUnit:parseMeasureUnit(extras?.measureUnit ?? project.view?.measureUnit ?? get().measureUnit) };
           set({
             project,
             selectedId: null,
@@ -2430,9 +2605,11 @@ export const useProject = create<State>()(
     },
     {
       name: "irrigation-designer-v3",
+      storage: projectStorage,
       partialize: (s) => ({
-        project: { ...s.project, underlay: slimUnderlay(s.project.underlay) },
+        project: projectWithView(s),
         projects: s.projects,
+        trash: s.trash,
         showCoverage: s.showCoverage,
         showGrid: s.showGrid,
         showRadii: s.showRadii,
@@ -2454,6 +2631,7 @@ export const useProject = create<State>()(
         uiSize: s.uiSize,
         showHints: s.showHints,
         numberFormat: s.numberFormat,
+        localizationVersion: 1,
         decimals: s.decimals,
         units: s.units,
         unitPreset: s.unitPreset,
@@ -2471,29 +2649,24 @@ export const useProject = create<State>()(
           return { ...current, ...boot, localeBootstrapped: true };
         }
         const project0 = p.project ? migrateProject(p.project as unknown as Record<string, unknown>) : current.project;
-        let projects = Array.isArray(p.projects)
+        const projects = Array.isArray(p.projects)
           ? p.projects.map((item) => migrateProject(item as unknown as Record<string, unknown>))
           : current.projects;
-        const wipeHeads = p.autoHeadsWiped !== true;
-        const project = wipeHeads
-          ? { ...project0, heads: [], zones: defaultZones(), updatedAt: new Date().toISOString() }
-          : project0;
-        if (wipeHeads) {
-          projects = projects.map((item) => ({ ...item, heads: [], zones: defaultZones() }));
-        }
+        const project = project0;
         const units = parseUnitPrefs(p.units, parseMeasureUnit(p.measureUnit ?? current.measureUnit));
         const unitPreset = p.unitPreset === "us" || p.unitPreset === "metric" || p.unitPreset === "custom" ? p.unitPreset : detectPreset(units);
         const old = persisted as Partial<State> & { paletteId?: string };
         return {
           ...current,
           ...p,
-          showGrid: true,
+          showGrid: p.showGrid ?? true,
           dimensionOffsetCustomized:p.dimensionOffsetCustomized ?? (typeof p.dimensionOffset==="number" && Math.abs(p.dimensionOffset-0.8)>1e-6),
           project,
           projects,
+          trash: retainedTrash(Array.isArray(p.trash) ? p.trash.filter(t=>t?.project && typeof t.deletedAt==="string").map(t=>({...t,project:migrateProject(t.project as unknown as Record<string,unknown>)})) : []),
           autoHeadsWiped: true,
-          selectedId: wipeHeads ? null : current.selectedId,
-          selectedIds: wipeHeads ? [] : current.selectedIds,
+          selectedId: current.selectedId,
+          selectedIds: current.selectedIds,
           themeId: parseThemeId(p.themeId ?? old.paletteId),
           buttonStyle: parseButtonStyle(p.buttonStyle),
           accent: parseAccent(p.accent),
@@ -2502,10 +2675,8 @@ export const useProject = create<State>()(
           themeGradient: false,
           uiSize: parseUiSize(p.uiSize),
           showHints: p.showHints !== false,
-          numberFormat:
-            p.numberFormat && p.numberFormat !== "auto"
-              ? parseNumberFormat(p.numberFormat)
-              : numberFormatForUnits(unitPreset),
+          numberFormat: p.localizationVersion === 1 ? parseNumberFormat(p.numberFormat) : "auto",
+          localizationVersion: 1,
           decimals: parseDecimals(p.decimals),
           units,
           unitPreset,
@@ -2513,7 +2684,7 @@ export const useProject = create<State>()(
           locale: parseLocale(p.locale ?? current.locale),
           localeBootstrapped: true,
           familyFilter: p.familyFilter === "corner" || p.familyFilter === "stream" ? "mp" : (p.familyFilter ?? current.familyFilter),
-          activeZoneId: wipeHeads ? 1 : (p.activeZoneId ?? project.zones[0]?.id ?? 1),
+          activeZoneId: p.activeZoneId ?? project.zones[0]?.id ?? 1,
           past: [],
           future: [],
           tool: null,
@@ -2525,6 +2696,7 @@ export const useProject = create<State>()(
           draft: {points:[],scaleA:null,scaleB:null,measureA:null},
           catalogOpen: false,
           rightOpen: false,
+          rightMode: "drawing",
           projectFormOpen: false,
         };
       },
@@ -2540,13 +2712,35 @@ export const useProject = create<State>()(
   ),
 );
 
+// Update shared formatting before React paints any dependent labels or canvas text.
+useProject.subscribe(state => {
+  setActiveLocale(state.locale);
+  setNumberPrefs(state.numberFormat, state.decimals);
+  setActiveUnits(state.units);
+});
+
+export function projectHasContent(p: Project): boolean {
+  return Boolean(p.underlay || p.heads.length || p.polygons.length || Object.keys(p.drawing?.faces ?? {}).length || Object.keys(p.drawing?.edges ?? {}).length || Object.keys(p.drawing?.plants ?? {}).length || Object.keys(p.drawing?.texts ?? {}).length);
+}
+
 export function isNamed(p: Project): boolean {
   const n = p.name.trim();
   return n.length > 0 && n !== "Без названия";
 }
 
 function upsertList(list: Project[], p: Project): Project[] {
-  const item = { ...cloneProject(p), underlay: slimUnderlay(p.underlay) };
+  if (list.find(x=>x.id===p.id) === p) return list;
+  const item = p;
   const rest = list.filter((x) => x.id !== p.id);
   return [item, ...rest];
 }
+
+// Every project mutation (including live edits, undo/redo and future modules) reaches
+// the same autosave boundary. Selection/hover do not clone or serialize the project.
+useProject.subscribe((state,previous) => {
+  if (!useProject.persist.hasHydrated()) return;
+  if(state.project !== previous.project && !state.trash.some(t=>t.project.id===state.project.id)) {
+    const projects=upsertList(state.projects,state.project);
+    if(projects!==state.projects) useProject.setState({projects});
+  }
+});

@@ -49,9 +49,9 @@ const arc = Array.from({ length: 37 }, (_, i) => {
   return [8 * Math.cos(a), 8 * Math.sin(a)];
 }).flat();
 
-export function RotationHandleGlyph({ stem = true }: { stem?: boolean }) {
+export function RotationHandleGlyph({ stem = true, color: customColor }: { stem?: boolean; color?: string }) {
   const handle=useActiveHandle();
-  const color=handle.active ? "#cf2f2f" : EDIT_HANDLE_COLOR;
+  const color=customColor ?? (handle.active ? "#cf2f2f" : EDIT_HANDLE_COLOR);
   return <Group ref={handle.ref} listening={false}>
     {stem && <Line points={[0, 12, 0, ROTATION_STEM_PX]} stroke={color} strokeWidth={1.1} lineCap="round" listening={false} />}
     <Line points={arc} stroke={color} strokeWidth={1.3} lineCap="round" listening={false} />

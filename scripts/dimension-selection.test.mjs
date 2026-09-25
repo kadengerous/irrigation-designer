@@ -1,0 +1,60 @@
+import assert from 'node:assert/strict';
+import test,{before,after} from 'node:test';
+import {createServer} from 'vite';
+let server,e,t,selection;
+before(async()=>{server=await createServer({server:{middlewareMode:true,hmr:false}});e=await server.ssrLoadModule('/src/lib/cad/engine.ts');t=await server.ssrLoadModule('/src/lib/cad/types.ts');selection=await server.ssrLoadModule('/src/lib/cad/dimension-selection.ts');});
+after(async()=>{await server.close();});
+test('sprinklers win overlapping dimension gestures; isolated dimensions remain selectable',()=>{
+ let d=e.addRect(t.emptyDrawing(),{x:0,y:0},{x:10,y:6},'lawn');
+ d=e.addDim(d,{x:0,y:0},{x:10,y:0},-1);
+ const heads=[{id:'left',x:0,y:0},{id:'right',x:10,y:0}];
+ for(const px of [9,36,120]){
+  const a={x:-1,y:-2},b={x:11,y:1};
+  const dimensions=selection.dimensionsInBox(d,a,b,px,'irrigation',String);
+  assert.equal(dimensions.length,1);
+  assert.deepEqual(selection.irrigationSelectionTarget(heads,dimensions,a,b,px,false),{kind:'heads',ids:['left','right']});
+  const endpoint={x:0,y:0};
+  const atHead=selection.dimensionsInBox(d,endpoint,endpoint,px,'irrigation',String,true);
+  assert.deepEqual(selection.irrigationSelectionTarget(heads,atHead,endpoint,endpoint,px,true),{kind:'heads',ids:['left']});
+  const line={x:5,y:-1};
+  const atLine=selection.dimensionsInBox(d,line,line,px,'irrigation',String,true);
+  assert.deepEqual(selection.irrigationSelectionTarget(heads,atLine,line,line,px,true),{kind:'dimensions',ids:Object.keys(d.dims)});
+ }
+ const first=selection.updateDimensionSelection([],['left'],true,true);
+ const both=selection.updateDimensionSelection(first,['right'],true,true);
+ assert.deepEqual(both,['left','right']);
+ assert.deepEqual(selection.updateDimensionSelection(both,['left'],true,true),['right']);
+});
+test('mouse and touch selection hits painted offsets, supports additive/toggle, respects hidden and locked dimensions',()=>{
+ let d=e.addRect(t.emptyDrawing(),{x:0,y:0},{x:10,y:6},'lawn');
+ d=e.addDim(d,{x:0,y:0},{x:10,y:0},-1);d=e.addDim(d,{x:0,y:6},{x:10,y:6},1);
+ const ids=Object.keys(d.dims),label=String;
+ assert.deepEqual(selection.dimensionsInBox(d,{x:4,y:-1},{x:4,y:-1},36,'plan',label,true),[ids[0]]);
+ assert.deepEqual(selection.dimensionsInBox(d,{x:3,y:-2},{x:7,y:8},36,'plan',label),ids);
+ assert.deepEqual(selection.dimensionsInBox(d,{x:3,y:2},{x:7,y:4},36,'plan',label),[],'interior of measured face is not the dimension');
+ let selected=selection.updateDimensionSelection([], [ids[0]],true,true);
+ selected=selection.updateDimensionSelection(selected,[ids[1]],true,true);assert.deepEqual(selected,ids);
+ assert.deepEqual(selection.updateDimensionSelection(selected,[ids[0]],true,true),[ids[1]]);
+ assert.deepEqual(selection.updateDimensionSelection(selected,ids,true),ids);
+ for(const flags of [{visible:false},{locked:true}])assert.deepEqual(selection.dimensionsInBox({...d,layers:{...d.layers,dims:flags}},{x:-1,y:-2},{x:11,y:8},36,'plan',label),[]);
+});
+test('bulk deletion is one undo step, leaves heads and figures intact, suppresses auto dimensions until explicit regeneration',async()=>{
+ const {automaticDimensions}=await server.ssrLoadModule('/src/lib/cad/auto-dimensions.ts');
+ const {emptyProject}=await server.ssrLoadModule('/src/lib/project-types.ts');
+ const {useProject}=await server.ssrLoadModule('/src/lib/project-store.ts');
+ const heads=[{id:'a',x:0,y:0},{id:'b',x:5,y:0},{id:'c',x:10,y:0}];
+ let p={...emptyProject(),heads,drawing:e.addRect(t.emptyDrawing(),{x:0,y:0},{x:10,y:6},'lawn')};
+ p.drawing=automaticDimensions(p,'irrigation');
+ p.drawing=e.addDim(p.drawing,{x:2,y:2},{x:5,y:4},.5);
+ const ids=Object.keys(p.drawing.dims),chosen=ids.slice(0,2);
+ const next=e.deleteDimensions(p.drawing,chosen);
+ assert.equal(Object.keys(next.dims).length,1);assert.equal(Object.keys(p.drawing.dims).length,3);
+ assert.deepEqual(next.faces,p.drawing.faces);assert.deepEqual(next.vertices,p.drawing.vertices);
+ assert.equal(Object.keys(e.drawingOrMigrate({...p,drawing:next}).dims).length,1);
+ assert.equal(Object.keys(automaticDimensions({...p,drawing:next},'irrigation').dims).length,3);
+ useProject.setState({project:p,history:[],future:[],selectedPolyId:null,selectedPolyIds:[],groupMemberId:null});
+ useProject.getState().commitDrawing(next,null,true);
+ assert.deepEqual(useProject.getState().project.heads,heads);
+ useProject.getState().undo();assert.deepEqual(useProject.getState().project.drawing.dims,JSON.parse(JSON.stringify(p.drawing.dims)));
+ useProject.getState().redo();assert.deepEqual(useProject.getState().project.drawing.dims,JSON.parse(JSON.stringify(next.dims)));
+});

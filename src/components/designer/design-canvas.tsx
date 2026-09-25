@@ -1,9 +1,20 @@
-import { wheelCanvasView } from "@/lib/canvas-navigation";
+import { headPaintOrder, isHeadVisible, visibleProjectHeads } from "@/lib/head-visibility";
+import { ZoneHighlights, WateringHead, FocusedHead } from "./zone-highlights";
+import { DiagnosticOverlay } from "./diagnostic-overlay";
+import { focusedIssue, useDiagnosticFocus } from "@/lib/diagnostic-focus";
+import { text as uiText } from "@/lib/i18n";
+import { ReferenceCanvas } from "./reference-canvas";
+import { installCanvasZoom } from './canvas-zoom-events';
 import { headAtPointer, HEAD_MOUSE_HIT_RADIUS } from "@/lib/head-hit-target";
+import { snapSprinklerPoint } from "@/lib/head-snapping";
+import { catalogName, nozzleName } from '@/lib/catalog-localization';
+import { SprinklerGuides } from './sprinkler-placement-guides';
 import { TapeMeasureIcon, TAPE_MEASURE_TIP } from "./tape-measure-icon";
 import {createPortal} from "react-dom";
 import {snapDimensionOffset} from "@/lib/cad/dimension-offset-snap";
 import { DimensionLine } from "./dimension-line";
+import { layoutHeadLabels,equipmentLabel, headSymbolScale } from '@/lib/head-presentation';
+import { displayedDimensions } from '@/lib/cad/sprinkler-dimensions';
 import { seamlessPattern } from "@/lib/cad/seamless-pattern";
 import { TextEditor } from "./text-editor";
 import { PlantGlyph } from "./plant-glyph";
@@ -11,7 +22,7 @@ import type { CadPlant } from "@/lib/cad/types";
 import type { CadText } from "@/lib/cad/types";
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   Circle,
   Ellipse,
@@ -33,6 +44,8 @@ import { segmentAlignmentAnchors, snapSegmentAlignment } from "@/lib/cad/segment
 import { SegmentAlignmentGuides } from "./segment-alignment-guides";
 import { DrawingGuidance, ClosureGuide } from "./drawing-guidance";
 import { CanvasMagnifier } from "./canvas-magnifier";
+import { HeadSectorHandles } from "./head-sector-handles";
+import { startSprinklerHold } from "./sprinkler-hold";
 import { rotationHandleLayout } from "@/lib/cad/edit-handle-layout";
 import { installSingleFingerPan } from "./single-finger-pan";
 import { bindMaterialPattern } from "./material-pattern";
@@ -67,6 +80,8 @@ import { canvasTheme, themeFigureFill } from "@/lib/theme";
 import { useProject, drawingForEditing as drawingOrMigrate } from "@/lib/project-store";
 import type { DesignCanvasProps } from "@/components/designer/canvas-types";
 import { cadSnap } from "@/lib/cad/snap";
+import {layoutDimensions} from "@/lib/cad/dimension-layout";
+import {dimensionsInBox,updateDimensionSelection,irrigationSelectionTarget} from "@/lib/cad/dimension-selection";
 import { pathTouchesBox } from "@/lib/cad/workspace-selection";
 import { isDimensionGeometrySnap, snapDimension } from "@/lib/cad/dimension-snap";
 import {
@@ -108,7 +123,7 @@ import {
   resolveDim,
   setDimensionLabel,
   outsideDimensionOffset,
-  deleteDimension,
+  deleteDimensions,
   selfIntersects,
   triangleFromBounds,
   hexagonFromBounds,
@@ -390,6 +405,7 @@ const PREVIEW_EMPTY_DRAFT = { points: [], scaleA: null, scaleB: null, measureA: 
 export function DesignCanvas({
   previewView,
   multiSelect = false,
+  onSelectionClear,
   mobile = false,
   onScalePair,
   onMeasure,
@@ -407,6 +423,7 @@ export function DesignCanvas({
     items: { kind: "face" | "edge" | "head"; id: string }[];
   } | null>(null);
   const stageRef = useRef<Konva.Stage>(null);
+  const wateringTime = useRef(1);
   const [size, setSize] = useState({ w: 640, h: 480 });
   const [textEditor, setTextEditor] = useState<CadText | null>(null);
   const [selectedNote, setSelectedNote] = useState<string | null>(null);
@@ -416,7 +433,10 @@ export function DesignCanvas({
   const [mousePanning, setMousePanning] = useState(false);
   const [hoveredHead, setHoveredHead] = useState<string | null>(null);
   const [draggingHead, setDraggingHead] = useState(false);
+  const [headMovePreview, setHeadMovePreview] = useState<(Pt & { id: string }) | null>(null);
   const [pressedHead, setPressedHead] = useState<string | null>(null);
+  const headHold = useRef<(() => void) | null>(null);
+  useEffect(() => () => headHold.current?.(), []);
   const box = useRef<{ x: number; y: number } | null>(null);
   const [boxNow, setBoxNow] = useState<Pt | null>(null);
   const marqueePointer = useRef<number | null>(null);
@@ -438,7 +458,9 @@ export function DesignCanvas({
   const midDown = useRef(false);
   const [hoverPt, setHoverPt] = useState<Pt | null>(null);
   const [snapHit, setSnapHit] = useState<{ kind: string; pt: Pt } | null>(null);
-  const [selectedDimension, setSelectedDimension] = useState<string | null>(null);
+  const [selectedDimensions, setSelectedDimensions] = useState<string[]>([]);
+  const selectedDimension=selectedDimensions[0]??null;
+  const setSelectedDimension=(id:string|null)=>setSelectedDimensions(id?[id]:[]);
   const dimensionInteraction = useRef(false);
   const [dimensionPreview, setDimensionPreview] = useState<{id:string;offset:number}|null>(null);
   const [dimensionEditor, setDimensionEditor] = useState<{id:string;value:string}|null>(null);
@@ -460,6 +482,23 @@ export function DesignCanvas({
   const lastClient = useRef({ x: 0, y: 0 });
   const headDragStart = useRef({ x: 0, y: 0 });
   const overCatalog = useRef(false);
+  const trashPreview = useRef<HTMLDivElement>(null);
+  const draggedHeadNode = useRef<Konva.Node | null>(null);
+  useEffect(() => {
+    const clearDrop = () => {
+      setHeadMovePreview(null);
+      overCatalog.current = false;
+      document.querySelectorAll("[data-head-drop]").forEach(el => el.removeAttribute("data-head-drop"));
+      if (trashPreview.current) trashPreview.current.style.display = "none";
+      draggedHeadNode.current?.opacity(1);
+    };
+    window.addEventListener("pointercancel", clearDrop, true);
+    return () => {
+      clearDrop(); window.removeEventListener("pointercancel", clearDrop, true);
+      if (headDragMove.current) window.removeEventListener("pointermove", headDragMove.current, true);
+      document.documentElement.removeAttribute("data-head-drag");
+    };
+  }, []);
   const editDrag = useRef(false);
   const headDragMove = useRef<((e: PointerEvent) => void) | null>(null);
   const [liveCadPath, setLiveCadPath] = useState<{ faceId: string; points: Pt[] } | null>(null);
@@ -521,6 +560,14 @@ export function DesignCanvas({
   };
 
   const project = useProject((s) => s.project);
+  const workspaceSection = useProject(s => s.workspaceSection);
+  const diagnosticProject = useMemo(() => headMovePreview ? { ...project,
+    heads: project.heads.map(head => head.id === headMovePreview.id ? { ...head, x: headMovePreview.x, y: headMovePreview.y } : head),
+  } : project, [project, headMovePreview]);
+  const diagnosticFocus = useDiagnosticFocus(s => s.focus);
+  const diagnosticIssue = readOnly ? null : focusedIssue(diagnosticFocus, project);
+  const diagnosticHeads = diagnosticIssue ? project.heads.filter(h => diagnosticIssue.headIds.includes(h.id) && !h.hidden && !h.locked &&
+    !project.zones.some(z => z.id === h.zone && (z.hidden || z.locked)) && itemById(h.catalogId) && itemById(h.catalogId)?.coverageKind !== "point") : [];
   const tool = useProject((s) => readOnly ? null : s.tool);
   const drawSub = useProject((s) => readOnly || s.tool !== "draw" ? "none" : s.drawSub);
   const measureSub = useProject((s) => s.measureSub);
@@ -528,10 +575,13 @@ export function DesignCanvas({
   const panX = useProject((s) => previewView?.panX ?? s.panX);
   const panY = useProject((s) => previewView?.panY ?? s.panY);
   const showCoverage = useProject((s) => s.showCoverage);
+  const simulationActive = useProject(s => !readOnly && s.workspaceSection === "irrigation" && s.simulationProjectId === s.project.id);
   const showGrid = useProject((s) => !readOnly && s.showGrid);
   const textHidden = useProject((s) => s.textHidden);
   const showLabels = useProject((s) => s.showLabels);
   const selectedId = useProject((s) => readOnly ? null : s.selectedId);
+  const zoneFocus = useProject(s => !readOnly && s.workspaceSection === "irrigation" && s.rightMode === "zone" ? s.zoneFocus : null);
+  const sectorEditId = useProject(s => readOnly ? null : s.sectorEditId);
   const selectedIds = useProject((s) => readOnly ? PREVIEW_EMPTY_IDS : s.selectedIds);
   const selectedPolyId = useProject((s) => readOnly ? null : s.selectedPolyId);
   const selectedPlantId = useProject(s => readOnly ? null : s.selectedPlantId);
@@ -545,6 +595,7 @@ export function DesignCanvas({
   const fitNonce = useProject((s) => s.fitNonce);
   const measureUnit = useProject((s) => s.measureUnit);
   const areaUnit = useProject((s) => s.units.area);
+  const dimensionFormat = useProject(s => `${s.units.length}|${s.numberFormat}|${s.decimals}`);
   const spaceDown = useProject((s) => s.spaceDown);
   const gridStep = useProject((s) => s.gridStep);
   const analysis = useProject((s) => !readOnly && s.analysis);
@@ -552,6 +603,21 @@ export function DesignCanvas({
   const snapGridOn = useProject((s) => s.snapGridOn);
   const locale = useProject((s) => s.locale);
   const cadDrawing = drawingOrMigrate(project);
+  const selectedHead = !readOnly && !multiSelect && catalogOpen && selectedIds.length === 1 && tool !== "measure" && tool !== "scale" && drawSub === "none"
+    ? project.heads.find(h => h.id === selectedId && !h.hidden && !h.locked && !project.zones.some(z => z.id === h.zone && (z.locked || z.hidden))) : undefined;
+  const sectorHead = selectedHead?.id === sectorEditId ? selectedHead : undefined;
+  useEffect(() => {
+    headHold.current?.();
+    if (sectorEditId && !sectorHead) useProject.getState().setSectorEdit(null);
+  }, [sectorEditId, sectorHead?.id, tool, drawSub, multiSelect]);
+  useEffect(() => {
+    if (!sectorEditId) return;
+    const escape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && !editDrag.current) useProject.getState().setSectorEdit(null);
+    };
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
+  }, [sectorEditId]);
   const dimensionsVisible = cadDrawing.layers?.dims?.visible !== false;
   useEffect(()=>{
     if(!dimensionsVisible) {
@@ -630,7 +696,7 @@ export function DesignCanvas({
       setPan: (x, y) => useProject.getState().setPan(x, y),
       begin: () => { skipClick.current = false; pinchSuppressClickUntil.current = 0; },
       suppressTap: () => { skipClick.current = true; pinchSuppressClickUntil.current = Date.now() + 650; },
-      cancelHold: () => { endCadHold(); },
+      cancelHold: () => { endCadHold(); headHold.current?.(); },
     });
   }, [readOnly, multiSelect]);
 
@@ -830,7 +896,7 @@ export function DesignCanvas({
       gridStep: st.gridStep,
       angleFrom: extra?.angleFrom,
       closeTo,
-      heads: st.project.heads.map((h) => ({ x: h.x, y: h.y })),
+      heads: visibleProjectHeads(st.project).map((h) => ({ x: h.x, y: h.y })),
     });
     if (st.tool === "draw" && st.drawSub === "spline" && st.snapOn && snapped.kind !== "close") {
       const endpoint = nearestOpenSplineEndpoint(
@@ -866,7 +932,7 @@ export function DesignCanvas({
       gridStep: st.gridStep,
       angleFrom: pointIndex > 0 ? st.draft.points[pointIndex - 1] ?? null : null,
       closeTo: pointIndex === st.draft.points.length - 1 && pointIndex >= 3 ? st.draft.points[0]! : null,
-      heads: st.project.heads.map((h) => ({ x: h.x, y: h.y })),
+      heads: visibleProjectHeads(st.project).map((h) => ({ x: h.x, y: h.y })),
     });
   };
 
@@ -898,19 +964,13 @@ export function DesignCanvas({
     return snapped;
   };
 
-  const onWheel = (e: Konva.KonvaEventObject<WheelEvent>) => {
-    e.evt.preventDefault();
-    if (editDrag.current) return;
-    endCadHold();
-    const stage = e.target.getStage();
-    const rect = stage?.container().getBoundingClientRect();
-    const pointer = rect ? { x: e.evt.clientX - rect.left, y: e.evt.clientY - rect.top } : null;
-    if (!pointer) return;
-    const st = useProject.getState();
-    if (e.evt.deltaY) useProject.setState(wheelCanvasView(st, pointer.x, pointer.y, e.evt.deltaY, e.evt.deltaMode, size.h, e.evt.ctrlKey || e.evt.metaKey));
-    const next = useProject.getState();
-    trackPointer({ x: (pointer.x - next.panX) / next.pxPerMeter, y: (pointer.y - next.panY) / next.pxPerMeter });
-  };
+  useEffect(() => {
+    const element=wrapRef.current;
+    if(!element || readOnly) return;
+    return installCanvasZoom(element, useProject.getState, view => {
+      endCadHold(); useProject.setState(view);
+    }, () => editDrag.current || pinchGestureActive.current);
+  }, [readOnly]);
 
   const startFreehand = (point: Pt) => {
     const st = useProject.getState();
@@ -1138,9 +1198,12 @@ export function DesignCanvas({
       : st.tool === "draw" && st.draft.points.length
         ? st.draft.points[st.draft.points.length - 1]!
         : null;
-    const p = applySnap(raw, { angleFrom, free: stretching }).pt;
+    const p = st.tool === "scale" ? raw : applySnap(raw, { angleFrom, free: stretching }).pt;
     if (st.pendingCatalogPlant) { st.placeCatalogPlant(raw); return; }
-    if (st.tool === "place") return; // Library objects are added only by a completed drag.
+    if (st.tool === "place") {
+      if (e.target.name() === "bg") { st.selectHead(null); st.selectPoly(null); }
+      return; // Library objects are added only by a completed drag.
+    }
 
     if (st.tool === "scale") {
       if (!st.draft.scaleA)
@@ -1557,7 +1620,7 @@ export function DesignCanvas({
         d,
         p,
         eTol,
-        st.project.heads.map((h) => ({ id: h.id, x: h.x, y: h.y })),
+        visibleProjectHeads(st.project).map((h) => ({ id: h.id, x: h.x, y: h.y })),
       );
       if (!mobile && cands.length > 1) {
         const faces = cands.filter((c) => c.kind === "face");
@@ -1634,7 +1697,6 @@ export function DesignCanvas({
     st.setPan(st.panX + dx, st.panY + dy);
   };
 
-  const hiddenZones = new Set((project.zones ?? []).filter((z) => z.hidden).map((z) => z.id));
   const lockedZones = new Set((project.zones ?? []).filter((z) => z.locked).map((z) => z.id));
   const u = project.underlay;
   const x0 = Math.floor(-panX / px) - 1;
@@ -1648,13 +1710,47 @@ export function DesignCanvas({
   const selecting = !tool || tool === "move" ||
     (tool === "draw" && (!drawSub || drawSub === "none" || !!cadEditId ||
       (drawSub === "line" && (selectedDraftSegment != null || !!selectedEdgeId))));
+  const dimensionInteractive = !readOnly && !pendingCatalogPlant && !spaceDown && cadDrawing.layers?.dims?.locked !== true &&
+    (multiSelect || selecting || tool === "place" || (tool === "draw" && drawSub === "dim"));
+  const selectDimension = (id: string, additive=false) => {
+    const st = useProject.getState();
+    if (st.selectedId || st.selectedPolyId || st.selectedPlantId) st.selectHead(null);
+    setSelectedNote(null);
+    dimensionInteraction.current = true;
+    setSelectedDimensions(previous=>updateDimensionSelection(previous,[id],additive,additive));
+  };
+  useEffect(() => {
+    if (!dimensionInteractive || selectedId || selectedPlantId || selectedPolyId) {
+      setSelectedDimension(null); setDimensionEditor(null); setDimensionPreview(null);
+      dimensionInteraction.current = false;
+    }
+  }, [dimensionInteractive, selectedId, selectedPlantId, selectedPolyId]);
+  useEffect(()=>{setSelectedDimension(null);dimensionInteraction.current=false;},[project.id,workspaceSection]);
+  useEffect(()=>{dimensionInteraction.current=selectedDimensions.length>0;},[selectedDimensions]);
+  const deleteSelectedDimensions=()=>{
+    const st=useProject.getState(),d=drawingOrMigrate(st.project);
+    const next=deleteDimensions(d,selectedDimensions);
+    if(next!==d)st.commitDrawing(next,null,true);
+    setSelectedDimension(null);setDimensionEditor(null);setDimensionPreview(null);dimensionInteraction.current=false;
+  };
+  useEffect(()=>{
+    if(!selectedDimensions.length||!dimensionInteractive||!dimensionsVisible)return;
+    const key=(event:KeyboardEvent)=>{
+      if((event.target as HTMLElement)?.closest?.("input,textarea,select,[contenteditable=true],[role=dialog]"))return;
+      if(event.key=== "Escape"){setSelectedDimension(null);dimensionInteraction.current=false;return;}
+      if(event.key!=="Delete"&&event.key!=="Backspace")return;
+      event.preventDefault();event.stopImmediatePropagation();deleteSelectedDimensions();
+    };
+    window.addEventListener("keydown",key,true);
+    return ()=>window.removeEventListener("keydown",key,true);
+  },[selectedDimensions,dimensionInteractive,dimensionsVisible]);
   const showLinePointer = !readOnly && tool === "draw" && (drawSub === "line" || drawSub === "dim") &&
     !selecting && !spaceDown && !pinching && !!hoverPt;
   const showFirstPoint = !readOnly && tool === "draw" && (drawSub === "polygon" || drawSub === "spline") &&
     !draft.points.length && !selecting && !spaceDown && !pinching && !!hoverPt;
   const showTapePointer = !readOnly && tool === "measure" && measureSub === "measure" &&
     !spaceDown && !pinching && !!hoverPt;
-  const cursor = readOnly ? "default" : mousePanning || draggingHead || pressedHead ? "grabbing" : spaceDown ? "grab"
+  const cursor = readOnly ? "default" : draggingHead ? "none" : mousePanning || pressedHead ? "grabbing" : spaceDown ? "grab"
     : pendingCatalogPlant ? "crosshair"
     : hoveredHead && !multiSelect && (selecting || tool === "place") ? "pointer"
     : selecting || tool === "place" ? "default"
@@ -1662,7 +1758,23 @@ export function DesignCanvas({
     : tool === "draw" && drawSub === "text" ? "text" : "crosshair";
   const lawn = lawnPolygon(project.polygons);
   const holes = exclusionPolygons(project.polygons);
-  const visibleHeads = project.heads.filter((h) => !hiddenZones.has(h.zone));
+  const visibleHeads = useMemo(()=>visibleProjectHeads(project),[project.heads,project.zones]);
+  const labelScale=px/36;
+  const renderedDimensions=useMemo(()=>layoutDimensions(drawingOrMigrate(diagnosticProject),px,
+    readOnly?undefined:workspaceSection==='irrigation'?'irrigation':'plan',length=>formatLenU(length,useProject.getState().units.length),dimensionPreview),
+    [diagnosticProject,px,workspaceSection,readOnly,dimensionPreview,locale,dimensionFormat]);
+  const labelsInside=dimensionsVisible&&renderedDimensions.size>0;
+  const headLabels=useMemo(()=>new Map(visibleHeads.map(h=>{
+    const item=itemById(h.catalogId),nz=h.nozzleId?item?.nozzles.find(n=>n.id===h.nozzleId):item&&defaultNozzle(item);
+    const model=item?catalogName(item):h.catalogId;
+    const text=item?.type==='rotor'&&nz?`${model} (${nozzleName(nz)})`:model;
+    return [h.id,equipmentLabel(text,labelScale,labelsInside)];
+  })),[visibleHeads,labelScale,labelsInside]);
+  const labelPositions=useMemo(()=>showLabels?layoutHeadLabels(visibleHeads.map(h=>({
+    ...h,...(headMovePreview?.id===h.id?headMovePreview:{}),width:headLabels.get(h.id)!.width,height:headLabels.get(h.id)!.height,
+    radius:13*labelScale,priority:h.id===selectedId||selectedIds.includes(h.id),
+  })),cadDrawing,px,dimensionsVisible?{boxes:[...renderedDimensions.values()].map(o=>o.box),segments:[...renderedDimensions.values()].flatMap(o=>o.segments)}:{boxes:[],segments:[]},labelsInside):new Map<string,Pt>(),
+    [showLabels,visibleHeads,headMovePreview,headLabels,labelScale,selectedId,selectedIds,cadDrawing,px,dimensionsVisible,renderedDimensions,labelsInside]);
   const heat =
     analysis === "cover" || analysis === "overlap"
       ? lawn && visibleHeads.length <= 48
@@ -1885,7 +1997,7 @@ export function DesignCanvas({
       const state = useProject.getState();
       const hit = cadSnap({x:plant.x+dx/px,y:plant.y+dy/px}, drawingOrMigrate(state.project), {
         pxPerMeter: px, snapOn: state.snapOn, snapGridOn: state.snapOn && state.snapGridOn,
-        gridStep: state.gridStep, heads: state.project.heads, excludePlant: plant.id,
+        gridStep: state.gridStep, heads: visibleProjectHeads(state.project), excludePlant: plant.id,
       });
       if (commit) { setPlantPreview(null); setSnapHit(null); state.updatePlant(plant.id, hit.pt); }
       else { setPlantPreview(dx || dy ? {...plant,...hit.pt} : null); setSnapHit(dx || dy ? hit : null); }
@@ -1967,21 +2079,36 @@ export function DesignCanvas({
         box.current = null; setBoxNow(null); marqueePointer.current = null;
         if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
         skipClick.current = true;
-        if (Math.hypot(b.x-a.x,b.y-a.y)*st.pxPerMeter < 5) {
-          const head = st.catalogOpen ? st.project.heads.filter(h => !hiddenZones.has(h.zone) && dist(h,b) * st.pxPerMeter < 18).sort((a,c) => dist(a,b)-dist(c,b))[0] : null;
-          if (head) {
-            st.selectHeads(st.selectedIds.includes(head.id) ? st.selectedIds.filter(id => id !== head.id) : [...st.selectedIds,head.id]);
-            return;
-          }
-          const hit = pickOpenPathAt(d,b,14/st.pxPerMeter) ?? pickFaceAt(d,b);
-          if (hit) st.selectPoly(hit,true);
+        const tap=Math.hypot(b.x-a.x,b.y-a.y)*st.pxPerMeter < 5;
+        const dimensionIds=dimensionsVisible ? dimensionsInBox(d,a,b,st.pxPerMeter,st.workspaceSection==='irrigation'?'irrigation':'plan',length=>formatLenU(length,st.units.length),tap) : [];
+        const target=irrigationSelectionTarget(st.workspaceSection==='irrigation'
+          ? st.project.heads.filter(h=>isHeadVisible(h,st.project.zones)) : [],dimensionIds,a,b,st.pxPerMeter,tap);
+        if(target?.kind==='heads'){
+          setSelectedDimension(null);setDimensionEditor(null);setDimensionPreview(null);dimensionInteraction.current=false;
+          const additive=tap||event.shiftKey||event.metaKey||event.ctrlKey;
+          st.selectHeads(updateDimensionSelection(st.selectedIds,target.ids,additive,tap));
           return;
         }
-        const inside = (p:Pt) => p.x >= Math.min(a.x,b.x) && p.x <= Math.max(a.x,b.x) && p.y >= Math.min(a.y,b.y) && p.y <= Math.max(a.y,b.y);
-        const headIds = st.project.heads.filter(h => !hiddenZones.has(h.zone) && inside(h)).map(h => h.id);
-        if (st.catalogOpen && headIds.length) {
-          const previous = event.shiftKey || event.metaKey || event.ctrlKey ? st.selectedIds : [];
-          st.selectHeads([...new Set([...previous,...headIds])]);
+        if(target?.kind==='dimensions'){
+          st.selectHead(null);setSelectedNote(null);setDimensionEditor(null);dimensionInteraction.current=true;
+          setSelectedDimensions(previous=>updateDimensionSelection(previous,dimensionIds,tap||event.shiftKey||event.metaKey||event.ctrlKey,tap));
+          return;
+        }
+        setSelectedDimension(null);dimensionInteraction.current=false;
+        if (tap) {
+          const hit = pickOpenPathAt(d,b,14/st.pxPerMeter) ?? pickFaceAt(d,b);
+          if (hit) st.selectPoly(hit,true);
+          else {
+            // Clear only a tap on empty drawing space, never a pan, a box drag or an overlay.
+            const node = stageRef.current?.getIntersection({x: b.x * st.pxPerMeter + st.panX, y: b.y * st.pxPerMeter + st.panY});
+            if (!node || node.name() === "bg") {
+              st.selectHead(null);
+              st.selectPoly(null);
+              st.setCadMode("select");
+              setSelectedNote(null); setSelectedDimension(null); setPickList(null);
+              onSelectionClear?.();
+            }
+          }
           return;
         }
         const ids = Object.values(d.faces).filter(face => {
@@ -1993,7 +2120,7 @@ export function DesignCanvas({
         }).map(face => face.id);
         if (!event.shiftKey && !event.metaKey && !event.ctrlKey) st.selectPoly(null);
         for (const id of ids) if (!useProject.getState().selectedPolyIds.includes(id)) st.selectPoly(id,true);
-        if (!ids.length && !event.shiftKey && !event.metaKey && !event.ctrlKey) st.selectHeads(headIds);
+        if (!ids.length && !event.shiftKey && !event.metaKey && !event.ctrlKey) st.selectHeads([]);
       }}
       onPointerCancelCapture={event => {
         setPressedHead(null);
@@ -2024,13 +2151,13 @@ export function DesignCanvas({
             delete texts[selectedText.id];st.commitDrawing({...d,texts},null,true);setSelectedNote(null);
           }}><Trash2 size={16}/>{tr(locale,"delete")}</button>
         </div>}
+      {draggingHead && createPortal(<div ref={trashPreview} className="head-return-trash" aria-hidden="true"><Trash2 size={30} strokeWidth={1.25}/></div>, document.body)}
       <Stage
         ref={stageRef}
         listening={!readOnly}
         width={size.w}
         height={size.h}
         style={{ position: "absolute", top: 0, left: 0, width: size.w, height: size.h, cursor }}
-        onWheel={onWheel}
         onClick={e=>{if(e.evt.button !== 0) return;setSelectedDimension(null);setDimensionEditor(null);dimensionInteraction.current=false;handleClick(e);}}
         onTap={e=>{setSelectedDimension(null);setDimensionEditor(null);dimensionInteraction.current=false;handleClick(e);}}
         onDblClick={finishOpenDrawFromDoubleTap}
@@ -2069,7 +2196,7 @@ export function DesignCanvas({
             const minY = Math.min(a.y, b.y);
             const maxY = Math.max(a.y, b.y);
             if (maxX - minX > 0.3 && maxY - minY > 0.3) {
-              const ids = project.heads
+              const ids = visibleHeads
                 .filter((h) => h.x >= minX && h.x <= maxX && h.y >= minY && h.y <= maxY)
                 .map((h) => h.id);
               useProject.getState().selectHeads(ids);
@@ -2192,15 +2319,7 @@ export function DesignCanvas({
             <CadGrid x0={x0} x1={x1} y0={y0} y1={y1} step={visualGrid} sx={sx} sy={sy} />
           )}
           {u && img && u.visible !== false && (
-            <KImage
-              image={img}
-              x={sx(u.x)}
-              y={sy(u.y)}
-              width={u.width * px}
-              height={u.height * px}
-              opacity={u.opacity}
-              listening={false}
-            />
+            <ReferenceCanvas underlay={u} image={img} px={px} panX={panX} panY={panY} readOnly={readOnly} />
           )}
           {!readOnly && <Line
             points={[sx(-2), sy(0), sx(2), sy(0)]}
@@ -2275,19 +2394,20 @@ export function DesignCanvas({
               />
             ),
           )}
-          {Object.values(drawingOrMigrate(project).dims ?? {}).map((dim) => {
+          {displayedDimensions(drawingOrMigrate(diagnosticProject), readOnly ? undefined : workspaceSection === 'irrigation' ? 'irrigation' : 'plan').map((dim) => {
             if (!dimensionsVisible) return null;
-            const { a, b } = resolveDim(drawingOrMigrate(project), dim);
+            const dimensionDrawing = drawingOrMigrate(diagnosticProject);
+            const { a, b } = resolveDim(dimensionDrawing, dimensionDrawing.dims?.[dim.id] ?? dim);
             const dx = b.x - a.x;
             const dy = b.y - a.y;
             const len = Math.hypot(dx, dy) || 1;
             const nx = -dy / len;
             const ny = dx / len;
             const o = dimensionPreview?.id === dim.id ? dimensionPreview.offset : dim.offset;
-            const active = selectedDimension === dim.id;
+            const active = selectedDimensions.includes(dim.id);
+            const textPlacement=renderedDimensions.get(dim.id)?.text;
             const dimensionColor = active ? "#1689e8" : "#7b8490";
-            const interactive = !readOnly && !pendingCatalogPlant && !multiSelect && !spaceDown &&
-              (selecting || (tool === "draw" && drawSub === "dim"));
+            const interactive = dimensionInteractive;
             const a2 = { x: a.x + nx * o, y: a.y + ny * o };
             const b2 = { x: b.x + nx * o, y: b.y + ny * o };
             const mx = (a2.x + b2.x) / 2;
@@ -2296,18 +2416,18 @@ export function DesignCanvas({
               <Group
                 key={dim.id}
                 listening={interactive}
-                draggable={interactive}
-                onMouseDown={e=>{e.cancelBubble=true;dimensionInteraction.current=true;setSelectedDimension(dim.id);}}
-                onTouchStart={e=>{e.cancelBubble=true;dimensionInteraction.current=true;setSelectedDimension(dim.id);}}
-                onClick={e=>{e.cancelBubble=true;setSelectedDimension(dim.id);}}
-                onTap={e=>{e.cancelBubble=true;setSelectedDimension(dim.id);}}
+                draggable={interactive && !multiSelect && selectedDimensions.length<=1}
+                onMouseDown={e=>{e.cancelBubble=true;selectDimension(dim.id,e.evt.shiftKey||e.evt.ctrlKey||e.evt.metaKey);}}
+                onTouchStart={e=>{e.cancelBubble=true;selectDimension(dim.id);}}
+                onClick={e=>{e.cancelBubble=true;}}
+                onTap={e=>{e.cancelBubble=true;}}
                 dragBoundFunc={pos=>{
                   const mid={x:(a.x+b.x)/2,y:(a.y+b.y)/2};
                   const raw=((pos.x-panX)/px-mid.x)*nx+((pos.y-panY)/px-mid.y)*ny;
                   const offset=snapDimensionOffset(drawingOrMigrate(useProject.getState().project),dim.id,raw,px);
                   return {x:sx(mid.x+offset*nx),y:sy(mid.y+offset*ny)};
                 }}
-                onDragStart={e=>{e.cancelBubble=true;setDimensionEditor(null);setSelectedDimension(dim.id);editDrag.current=true;}}
+                onDragStart={e=>{e.cancelBubble=true;setDimensionEditor(null);selectDimension(dim.id);editDrag.current=true;}}
                 onDragMove={e=>{
                   const delta=((e.target.x()-panX)/px-(a.x+b.x)/2)*nx+((e.target.y()-panY)/px-(a.y+b.y)/2)*ny;
                   setDimensionPreview({id:dim.id,offset:delta});
@@ -2347,40 +2467,27 @@ export function DesignCanvas({
                 <DimensionLine a={{x:sx(a2.x)-sx(mx),y:sy(a2.y)-sy(my)}}
                   b={{x:sx(b2.x)-sx(mx),y:sy(b2.y)-sy(my)}}
                   label={dim.label ?? formatLenU(len,useProject.getState().units.length)} color={dimensionColor} selected={active}
-                  offset={o} hideLabel={dimensionEditor?.id===dim.id}
-                  onEdit={interactive ? ()=>{
-                    setSelectedDimension(dim.id);dimensionInteraction.current=true;
+                  visualScale={px/36} offset={o} textPlacement={textPlacement?{...textPlacement,x:textPlacement.x-mx*px,y:textPlacement.y-my*px}:undefined} hideLabel={dimensionEditor?.id===dim.id}
+                  onEdit={interactive && !multiSelect ? event=>{
+                    if(event.shiftKey||event.ctrlKey||event.metaKey)return;
+                    selectDimension(dim.id);
                     setDimensionEditor({id:dim.id,value:dim.label ?? formatLenU(len,useProject.getState().units.length)});
                   }:undefined}/>
               </Group>
             );
           })}
-          {(readOnly || catalogOpen) &&
-            project.heads
-              .slice()
-              .sort((a, b) => {
-                const as = a.id === selectedId || selectedIds.includes(a.id) ? 1 : 0;
-                const bs = b.id === selectedId || selectedIds.includes(b.id) ? 1 : 0;
-                if (as !== bs) return as - bs;
-                return b.r - a.r;
-              })
+          {(readOnly || workspaceSection === 'irrigation' || simulationActive) &&
+            headPaintOrder(visibleHeads, [...selectedIds,...(selectedId?[selectedId]:[]),...(diagnosticIssue?.headIds??[])],
+              !simulationActive && zoneFocus?.projectId === project.id ? zoneFocus.headId : null)
               .map((h) => {
-                if (hiddenZones.has(h.zone)) return null;
                 const item = itemById(h.catalogId);
                 const selected = h.id === selectedId || selectedIds.includes(h.id);
+                const symbolScale = headSymbolScale(px);
+                const symbolRadius = (selected ? 13 : 11) * symbolScale;
                 const rPx = h.r * px;
                 const strip = item && stripAtPressure(item, h.designPressure);
                 const nz = h.nozzleId ? item?.nozzles.find((n) => n.id === h.nozzleId) : item && defaultNozzle(item);
                 const rotorColor = nz?.color ?? item?.color ?? "#6b7280";
-                const size = nz?.size ?? nz?.name;
-                const model = item?.id ?? item?.name ?? "";
-                const nozzleWord = tr(locale, "nozzle").toLowerCase();
-                const label =
-                  item?.type === "rotor"
-                    ? size
-                      ? `${item.id} (${nozzleWord} ${size})`
-                      : item.id
-                    : model;
                 const grabR =
                   item?.type === "rotor" || item?.family === "st" || item?.family === "golf"
                     ? 48
@@ -2398,7 +2505,7 @@ export function DesignCanvas({
                     listening={!pendingCatalogPlant && !multiSelect}
                     x={sx(h.x)}
                     y={sy(h.y)}
-                    draggable={canDrag}
+                    draggable={canDrag && sectorEditId !== h.id && !diagnosticHeads.some(head => head.id === h.id)}
                     dragDistance={12}
                     hitFunc={(ctx: Konva.Context, shape: Konva.Shape) => {
                       ctx.beginPath();
@@ -2411,14 +2518,26 @@ export function DesignCanvas({
                       if ((tool === "draw" && drawSub !== "none") || tool === "measure" || tool === "scale") return;
                       ev.cancelBubble = true;
                       pointerType.current = (ev.evt as PointerEvent).pointerType || "mouse";
-                      if (canDrag) setPressedHead(h.id);
+                      if (canDrag) {
+                        setPressedHead(h.id);
+                        headHold.current?.();
+                        headHold.current = startSprinklerHold(ev.evt as PointerEvent, () => {
+                          if (pinchGestureActive.current) return;
+                          skipClick.current = true;
+                          window.setTimeout(() => { skipClick.current = false; }, 600);
+                          setPressedHead(null);
+                          useProject.getState().setSectorEdit(h.id);
+                        });
+                      }
                     }}
                     onPointerUp={() => setPressedHead(null)}
                     onPointerCancel={() => setPressedHead(null)}
                     onDragStart={(ev) => {
+                      headHold.current?.();
                       setDraggingHead(true);
                       ev.cancelBubble = true;
                       overCatalog.current = false;
+                      draggedHeadNode.current = ev.target;
                       const native = ev.evt as MouseEvent & { touches?: TouchList };
                       const t = native.touches?.[0];
                       const sx0 = t?.clientX ?? native.clientX ?? 0;
@@ -2434,22 +2553,39 @@ export function DesignCanvas({
                       };
                       const move = (e: PointerEvent) => {
                         lastClient.current = { x: e.clientX, y: e.clientY };
-                        if (inLib(e.clientX, e.clientY)) overCatalog.current = true;
+                        const inside = inLib(e.clientX, e.clientY);
+                        overCatalog.current = inside;
+                        const lib = document.querySelector("[data-catalog]");
+                        if (inside) lib?.setAttribute("data-head-drop", "true");
+                        else lib?.removeAttribute("data-head-drop");
+                        ev.target.opacity(inside ? 0 : 1);
+                        if (trashPreview.current) {
+                          trashPreview.current.style.display = inside ? "grid" : "none";
+                          trashPreview.current.style.left = `${e.clientX}px`;
+                          trashPreview.current.style.top = `${e.clientY}px`;
+                        }
                       };
                       headDragMove.current = move;
                       window.addEventListener("pointermove", move, true);
                     }}
                     onDragMove={(ev) => {
-                      if (!snapOn) return;
                       const world = {
                         x: (ev.target.x() - panX) / px,
                         y: (ev.target.y() - panY) / px,
                       };
-                      const g = useProject.getState().gridStep;
-                      const pt = snapGrid(world, g);
+                      const st = useProject.getState();
+                      const pt = snapSprinklerPoint(world, drawingOrMigrate(st.project), {
+                        snapOn: st.snapOn, pxPerMeter: px, pointerType: pointerType.current,
+                        snapGridOn:st.snapGridOn,gridStep:st.gridStep,heads:visibleProjectHeads(st.project),excludeHead:h.id,
+                      }).pt;
                       ev.target.position({ x: sx(pt.x), y: sy(pt.y) });
+                      setHeadMovePreview({ id: h.id, ...pt });
                     }}
                     onDragEnd={(ev) => {
+                      setHeadMovePreview(null);
+                      ev.target.opacity(1); draggedHeadNode.current = null;
+                      document.querySelectorAll("[data-head-drop]").forEach(el => el.removeAttribute("data-head-drop"));
+                      if (trashPreview.current) trashPreview.current.style.display = "none";
                       setDraggingHead(false); setPressedHead(null); setHoveredHead(h.id);
                       if (headDragMove.current) {
                         window.removeEventListener("pointermove", headDragMove.current, true);
@@ -2472,11 +2608,15 @@ export function DesignCanvas({
                           return;
                         }
                       }
-                      let world = {
+                      const raw = {
                         x: (ev.target.x() - panX) / px,
                         y: (ev.target.y() - panY) / px,
                       };
-                      if (snapOn) world = snapGrid(world, useProject.getState().gridStep);
+                      const st = useProject.getState();
+                      const world = snapSprinklerPoint(raw, drawingOrMigrate(st.project), {
+                        snapOn: st.snapOn, pxPerMeter: px, pointerType: pointerType.current,
+                        snapGridOn:st.snapGridOn,gridStep:st.gridStep,heads:visibleProjectHeads(st.project),excludeHead:h.id,
+                      }).pt;
                       ev.target.position({ x: sx(world.x), y: sy(world.y) });
                       useProject.getState().finishMoveHead(h.id, world);
                     }}
@@ -2494,7 +2634,7 @@ export function DesignCanvas({
                       useProject.getState().selectHead(h.id);
                     }}
                   >
-                    {showCoverage && (!item?.strip || strip) && item?.coverageKind !== "point" && (
+                    {showCoverage && !simulationActive && (!item?.strip || strip) && item?.coverageKind !== "point" && (
                       <Line
                         points={strip ? stripLocal(strip, h.start, px) : sectorLocal(rPx, h.start, h.arc)}
                         closed
@@ -2506,29 +2646,26 @@ export function DesignCanvas({
                         listening={false}
                       />
                     )}
+                    {simulationActive && <WateringHead head={h} elapsed={wateringTime} px={px}/>}
                     <Circle radius={pointerType.current === "mouse" ? HEAD_MOUSE_HIT_RADIUS : grabR} fill="transparent" />
                     <Circle
-                      radius={selected ? 13 : 11}
+                      radius={symbolRadius}
                       fill="#fff"
                       stroke={zoneColor(h.zone)}
-                      strokeWidth={selected ? 3.2 : 2.6}
+                      strokeWidth={(selected ? 3.2 : 2.6) * symbolScale}
                       listening={false}
                     />
-                    <Circle radius={4} fill={rotorColor} listening={false} />
-                    {showLabels && label && (
-                      <Text
-                        x={12}
-                        y={-10}
-                        text={label}
-                        fontSize={11}
-                        fontFamily="IBM Plex Sans, sans-serif"
-                        fill={appearance.ink} stroke={appearance.bg} strokeWidth={2} fillAfterStrokeEnabled
-                        listening={false}
-                      />
-                    )}
+                    <Circle radius={4 * symbolScale} fill={rotorColor} listening={false} />
+                    {!simulationActive && zoneFocus?.projectId === project.id && zoneFocus.zoneId === h.zone &&
+                      (zoneFocus.headId == null || zoneFocus.headId === h.id) &&
+                      <FocusedHead symbolScale={symbolScale} elapsed={wateringTime} points={item?.coverageKind === "point" ? [] : strip ? stripLocal(strip, h.start, px) : sectorLocal(rPx, h.start, h.arc)}/>}
                   </Group>
                 );
               })}
+          {(simulationActive || workspaceSection === 'irrigation' && zoneFocus?.projectId === project.id) && <ZoneHighlights elapsed={wateringTime}/>}
+          {sectorHead && !diagnosticHeads.some(h => h.id === sectorHead.id) && <HeadSectorHandles key={sectorHead.id} head={sectorHead} px={px} panX={panX} panY={panY}
+            editDrag={editDrag} gestureBlocked={pinchGestureActive} skipClick={skipClick}
+            onCenterDragChange={active => setPressedHead(active ? sectorHead.id : null)}/>}
           {cadEditId && drawingOrMigrate(project).faces[cadEditId]?.layerId && <LayerHandles faceId={cadEditId} px={px} panX={panX} panY={panY} editDrag={editDrag} skipClick={skipClick} gestureBlocked={pinchGestureActive} />}
           {cadEditId && !drawingOrMigrate(project).faces[cadEditId]?.layerId && (
             <>
@@ -3107,27 +3244,39 @@ export function DesignCanvas({
               listening={false}
             />
           )}
+          {!readOnly && <DiagnosticOverlay project={diagnosticProject} px={px} panX={panX} panY={panY} size={size} canvas={wrapRef}/>}
+          {headMovePreview && <SprinklerGuides point={headMovePreview} px={px} panX={panX} panY={panY} excludeHead={headMovePreview.id}/>}
+          {diagnosticHeads.map(head => <HeadSectorHandles key={`diagnostic-${head.id}`} diagnostic head={head} px={px} panX={panX} panY={panY}
+            editDrag={editDrag} gestureBlocked={pinchGestureActive} skipClick={skipClick}
+            onCenterDragChange={active => setPressedHead(active ? head.id : null)}/>)}
+        </Layer>
+        <Layer listening={false} name="equipment-labels">
+          {showLabels && (readOnly || workspaceSection==='irrigation' || simulationActive) && visibleHeads.map(head=>{
+            const label=headLabels.get(head.id),position=labelPositions.get(head.id);
+            if(!label||!position)return null;
+            const point=headMovePreview?.id===head.id?headMovePreview:head;
+            return <Text key={head.id} x={sx(point.x)+position.x} y={sy(point.y)+position.y}
+              width={label.width} text={label.text} lineHeight={12/11} fontSize={11*labelScale}
+              fontFamily="IBM Plex Sans, sans-serif" fill="#18232d" stroke="#fff"
+              strokeWidth={2.5*labelScale} fillAfterStrokeEnabled listening={false}/>;
+          })}
         </Layer>
       </Stage>
-      {dimensionsVisible && selectedDimension && !readOnly && !multiSelect &&
-        (selecting || (tool==="draw" && drawSub==="dim")) && cadDrawing.dims?.[selectedDimension] && createPortal(
+      {dimensionsVisible && selectedDimension && dimensionInteractive && cadDrawing.dims?.[selectedDimension] && createPortal(
         <div className="dimension-delete-action" onPointerDown={e=>e.stopPropagation()}>
-          <button type="button" className="bulk-delete" aria-label="Удалить размер" onClick={()=>{
-            const st=useProject.getState(),d=drawingOrMigrate(st.project);
-            st.commitDrawing(deleteDimension(d,selectedDimension),st.selectedPolyId,true);
-            setSelectedDimension(null);setDimensionEditor(null);setDimensionPreview(null);dimensionInteraction.current=false;
-          }}><Trash2 size={18}/>Удалить размер</button>
+          <button type="button" className="bulk-delete" onClick={deleteSelectedDimensions}><Trash2 size={18}/>{selectedDimensions.length===1?uiText("deleteDimension"):`${uiText("delete")} (${selectedDimensions.length})`}</button>
         </div>,document.querySelector('.figure-actions-surface') ?? wrapRef.current!)}
       {dimensionsVisible && dimensionEditor && !readOnly && (()=>{
         const d=drawingOrMigrate(project), dim=d.dims?.[dimensionEditor.id];
         if(!dim) return null;
         const {a,b}=resolveDim(d,dim),length=dist(a,b)||1;
         const nx=-(b.y-a.y)/length,ny=(b.x-a.x)/length;
-        const placement=dimensionLabelLayout({x:sx(a.x+nx*dim.offset),y:sy(a.y+ny*dim.offset)},
+        const arranged=renderedDimensions.get(dim.id)?.text;
+        const placement=arranged?{...arranged,x:arranged.x+panX,y:arranged.y+panY}:dimensionLabelLayout({x:sx(a.x+nx*dim.offset),y:sy(a.y+ny*dim.offset)},
           {x:sx(b.x+nx*dim.offset),y:sy(b.y+ny*dim.offset)},dim.offset);
         return <form className="dimension-value-editor" style={{left:placement.x,top:placement.y,transform:`translate(-50%,-50%) rotate(${placement.angle}deg)`}}
           onPointerDown={e=>e.stopPropagation()} onSubmit={e=>{e.preventDefault();applyDimensionLabel();}}>
-          <input autoFocus aria-label="Надпись размера" value={dimensionEditor.value}
+          <input autoFocus aria-label={uiText("dimensionLabel")} value={dimensionEditor.value}
             onBlur={applyDimensionLabel} onFocus={e=>e.target.select()}
             onChange={e=>setDimensionEditor({...dimensionEditor,value:e.target.value})}
             onKeyDown={e=>{e.stopPropagation();if(e.key==="Escape"){e.preventDefault();setDimensionEditor(null);}}}/>
@@ -3157,7 +3306,7 @@ export function DesignCanvas({
                 setPickList(null);
               }}
             >
-              {it.kind === "face" ? "область" : it.kind === "edge" ? "ребро" : "дождеватель"}{" "}
+              {it.kind === "face" ? uiText("regionObject") : it.kind === "edge" ? uiText("edgeObject") : uiText("headObject")}{" "}
               {it.id.slice(-4)}
             </button>
           ))}

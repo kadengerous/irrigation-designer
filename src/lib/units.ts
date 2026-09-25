@@ -1,4 +1,4 @@
-import { formatNumber, parseLocale, type Locale, type NumberFormat } from "@/lib/i18n";
+import { formatNumber, parseLocale, text, type Locale, type NumberFormat } from "@/lib/i18n";
 import type { MeasureUnit } from "@/lib/geometry";
 
 /** Official Hunter US → SI factors. 40 PSI is labelled 2.8 bar / 280 kPa on Hunter cutsheets. */
@@ -57,6 +57,9 @@ export type UnitPrefs = {
 
 export const METRIC_UNITS: UnitPrefs = { length: "m", area: "m2", flow: "lpm", pressure: "bar", pipe: "mm" };
 export const US_UNITS: UnitPrefs = { length: "ft", area: "ft2", flow: "gpm", pressure: "psi", pipe: "in" };
+let activeUnits: UnitPrefs = { ...METRIC_UNITS };
+export function setActiveUnits(units: UnitPrefs) { activeUnits = { ...units }; }
+export function currentUnits(): UnitPrefs { return activeUnits; }
 
 export const LENGTH_OPTS: LengthUnit[] = ["mm", "cm", "m", "in", "ft"];
 export const AREA_OPTS: AreaUnit[] = ["m2", "are", "ha", "ft2", "acre"];
@@ -151,6 +154,15 @@ export function fromBar(bar: number, u: PressureUnit): number {
   if (u === "psi") return bar * 14.5037738;
   return bar;
 }
+export function toLpm(value: number, u: FlowUnit): number { return value / fromLpm(1, u); }
+export function toBar(value: number, u: PressureUnit): number { return value / fromBar(1, u); }
+export function precipitationUnit(units: UnitPrefs = activeUnits): "mm" | "in" { return units.length === "ft" || units.length === "in" ? "in" : "mm"; }
+export function formatDepth(mm: number, units: UnitPrefs = activeUnits): string {
+  const u = precipitationUnit(units); return `${formatNumber(u === "in" ? mm / 25.4 : mm, 2)} ${lenLabel(u)}`;
+}
+export function formatPrecipitation(mmPerHour: number, units: UnitPrefs = activeUnits): string {
+  return `${formatDepth(mmPerHour, units)}/${text("unitHourShort")}`;
+}
 
 export function fromMmPipe(mm: number, u: PipeUnit): number {
   return u === "in" ? mm / 25.4 : mm;
@@ -180,16 +192,16 @@ export function formatPressureU(bar: number, u: PressureUnit): string {
 }
 
 export function lenLabel(u: LengthUnit): string {
-  return { mm: "mm", cm: "cm", m: "m", in: "in", ft: "ft" }[u];
+  return text(`unit_${u}`);
 }
 export function areaLabel(u: AreaUnit): string {
-  return { m2: "m²", are: "a", ha: "ha", ft2: "ft²", acre: "ac" }[u];
+  return text(`area_${u}`);
 }
 export function flowLabel(u: FlowUnit): string {
-  return { lpm: "L/min", lph: "L/h", m3h: "m³/h", gpm: "GPM", gph: "GPH" }[u];
+  return text(`flow_${u}`);
 }
 export function pressureLabel(u: PressureUnit): string {
-  return { bar: "bar", kpa: "kPa", psi: "PSI" }[u];
+  return text(`press_${u}`);
 }
 
 const EN_METRIC_REGIONS = new Set(["GB", "AU", "NZ", "CA", "IE", "IN", "ZA", "SG"]);
@@ -200,8 +212,7 @@ export function regionFromBcp47(tag: string): string | null {
 }
 
 export function localeFromBcp47(tag: string): Locale {
-  const lang = tag.trim().toLowerCase().split(/[-_]/)[0] ?? "en";
-  return parseLocale(lang);
+  return parseLocale(tag);
 }
 
 export function deviceBcp47(): string {
@@ -242,9 +253,9 @@ export function bootstrapLocaleAndUnits(tag = deviceBcp47()): {
     unitPreset,
     units,
     measureUnit: units.length,
-    numberFormat: numberFormatForUnits(unitPreset),
+    numberFormat: "auto",
   };
 }
 export function pipeLabel(u: PipeUnit): string {
-  return u === "in" ? "in" : "mm";
+  return lenLabel(u);
 }

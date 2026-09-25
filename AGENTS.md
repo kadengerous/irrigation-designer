@@ -368,3 +368,7 @@ as separate layers, retaining their current geometry and materials.
 Merged layers hide the color/material picker. Each merge retains previous layer
 membership in layerParent; split undoes only that merge, exposing earlier groups
 for subsequent splitting. Preserve this hierarchy and its pivots on save/rotate.
+
+## Irrigation Designer project requirements
+
+Read [AGENTS.project.md](AGENTS.project.md) before any application change. It records the user's mandatory localization, independent engineering units and optional reference-drawing workflow. Run `node --test scripts/reference-localization.test.mjs` for changes to those flows.

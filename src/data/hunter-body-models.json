@@ -1,0 +1,346 @@
+{
+  "verifiedOn": "2026-09-19",
+  "series": [
+    {
+      "id": "PS-ULTRA",
+      "name": "PS Ultra",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/ps-ultra",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1.4,
+      "operatingPressureMax": 4.8,
+      "models": [
+        {
+          "sku": "PSU-02",
+          "popUpMm": 50
+        },
+        {
+          "sku": "PSU-04",
+          "popUpMm": 100
+        },
+        {
+          "sku": "PSU-06",
+          "popUpMm": 150,
+          "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/ps-ultra/psu-06"
+        }
+      ]
+    },
+    {
+      "id": "PRO-SPRAY",
+      "name": "Pro-Spray",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "models": [
+        {
+          "sku": "PROS-00",
+          "popUpMm": 0
+        },
+        {
+          "sku": "PROS-00-R",
+          "popUpMm": 0,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-02",
+          "popUpMm": 50
+        },
+        {
+          "sku": "PROS-03",
+          "popUpMm": 75,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-04",
+          "popUpMm": 100
+        },
+        {
+          "sku": "PROS-04-CV-R",
+          "popUpMm": 100,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-06",
+          "popUpMm": 150
+        },
+        {
+          "sku": "PROS-06-CV",
+          "popUpMm": 150,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-06-CV-R",
+          "popUpMm": 150,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-06-SI",
+          "popUpMm": 150,
+          "sideInlet": true
+        },
+        {
+          "sku": "PROS-12",
+          "popUpMm": 300
+        },
+        {
+          "sku": "PROS-12-CV",
+          "popUpMm": 300,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-12-CV-R",
+          "popUpMm": 300,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-12-SI",
+          "popUpMm": 300,
+          "sideInlet": true
+        },
+        {
+          "sku": "PROS-04-CV",
+          "popUpMm": 100,
+          "checkValve": true,
+          "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/pro-spraytm/pros-04-cv"
+        }
+      ]
+    },
+    {
+      "id": "PRS30",
+      "name": "Pro-Spray PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "models": [
+        {
+          "sku": "PROS-00-PRS30",
+          "popUpMm": 0
+        },
+        {
+          "sku": "PROS-00-PRS30-R",
+          "popUpMm": 0,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-03-PRS30",
+          "popUpMm": 75
+        },
+        {
+          "sku": "PROS-04-PRS30",
+          "popUpMm": 100
+        },
+        {
+          "sku": "PROS-04-PRS30-CV",
+          "popUpMm": 100,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-04-PRS30-CV-F",
+          "popUpMm": 100,
+          "checkValve": true,
+          "floGuard": true
+        },
+        {
+          "sku": "PROS-04-PRS30-CV-R",
+          "popUpMm": 100,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-04-PRS30-CV-F-R",
+          "popUpMm": 100,
+          "checkValve": true,
+          "floGuard": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-06-PRS30",
+          "popUpMm": 150
+        },
+        {
+          "sku": "PROS-06-PRS30-CV",
+          "popUpMm": 150,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-06-PRS30-CV-R",
+          "popUpMm": 150,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-06-PRS30-CV-F",
+          "popUpMm": 150,
+          "checkValve": true,
+          "floGuard": true
+        },
+        {
+          "sku": "PROS-06-PRS30-CV-F-R",
+          "popUpMm": 150,
+          "checkValve": true,
+          "floGuard": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-06-SI-PRS30",
+          "popUpMm": 150,
+          "sideInlet": true
+        },
+        {
+          "sku": "PROS-12-PRS30",
+          "popUpMm": 300
+        },
+        {
+          "sku": "PROS-12-PRS30-CV",
+          "popUpMm": 300,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-12-PRS30-CV-R",
+          "popUpMm": 300,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-12-PRS30-CV-F",
+          "popUpMm": 300,
+          "checkValve": true,
+          "floGuard": true
+        },
+        {
+          "sku": "PROS-12-PRS30-CV-F-R",
+          "popUpMm": 300,
+          "checkValve": true,
+          "floGuard": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-12-SI-PRS30",
+          "popUpMm": 300,
+          "sideInlet": true
+        }
+      ]
+    },
+    {
+      "id": "PRS40",
+      "name": "Pro-Spray PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "models": [
+        {
+          "sku": "PROS-00-PRS40",
+          "popUpMm": 0
+        },
+        {
+          "sku": "PROS-00-PRS40-R",
+          "popUpMm": 0,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-03-PRS40",
+          "popUpMm": 75
+        },
+        {
+          "sku": "PROS-04-PRS40",
+          "popUpMm": 100
+        },
+        {
+          "sku": "PROS-04-PRS40-CV",
+          "popUpMm": 100,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-04-PRS40-CV-R",
+          "popUpMm": 100,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-04-PRS40-CV-F",
+          "popUpMm": 100,
+          "checkValve": true,
+          "floGuard": true
+        },
+        {
+          "sku": "PROS-04-PRS40-CV-F-R",
+          "popUpMm": 100,
+          "checkValve": true,
+          "floGuard": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-06-PRS40",
+          "popUpMm": 150
+        },
+        {
+          "sku": "PROS-06-PRS40-CV",
+          "popUpMm": 150,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-06-PRS40-CV-R",
+          "popUpMm": 150,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-06-PRS40-CV-F",
+          "popUpMm": 150,
+          "checkValve": true,
+          "floGuard": true
+        },
+        {
+          "sku": "PROS-06-PRS40-CV-F-R",
+          "popUpMm": 150,
+          "checkValve": true,
+          "floGuard": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-06-SI-PRS40",
+          "popUpMm": 150,
+          "sideInlet": true
+        },
+        {
+          "sku": "PROS-12-PRS40",
+          "popUpMm": 300
+        },
+        {
+          "sku": "PROS-12-PRS40-CV",
+          "popUpMm": 300,
+          "checkValve": true
+        },
+        {
+          "sku": "PROS-12-PRS40-CV-R",
+          "popUpMm": 300,
+          "checkValve": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-12-PRS40-CV-F",
+          "popUpMm": 300,
+          "checkValve": true,
+          "floGuard": true
+        },
+        {
+          "sku": "PROS-12-PRS40-CV-F-R",
+          "popUpMm": 300,
+          "checkValve": true,
+          "floGuard": true,
+          "reclaimed": true
+        },
+        {
+          "sku": "PROS-12-SI-PRS40",
+          "popUpMm": 300,
+          "sideInlet": true
+        }
+      ]
+    }
+  ]
+}

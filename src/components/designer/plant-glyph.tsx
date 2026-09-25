@@ -1,3 +1,5 @@
+import { plantName } from "@/lib/catalog-localization";
+import { text as uiText } from "@/lib/i18n";
 import { Circle, Group, Line, Text } from "react-konva";
 import type Konva from "konva";
 import type { CadPlant } from "@/lib/cad/types";
@@ -19,7 +21,7 @@ export function PlantGlyph({ plant, x, y, px, selected, interactive, onBegin, on
       })}
       <Circle radius={Math.min(4, Math.max(2, r * 0.08))} fill={ink} listening={false} />
       {selected && <Circle radius={r + 4} stroke="#54b4ef" strokeWidth={1.5} dash={[5, 4]} listening={false} />}
-      {showLabel && r >= 16 && <Text y={r + 10} x={-110} width={220} align="center" text={plant.catalog?.russianName ?? plant.catalog?.latinName ?? "Растение"} fontSize={12} fill={ink} stroke="white" strokeWidth={2} fillAfterStrokeEnabled listening={false} />}
+      {showLabel && r >= 16 && <Text y={r + 10} x={-110} width={220} align="center" text={plant.catalog ? plantName(plant.catalog) : uiText("plant")} fontSize={12} fill={ink} stroke="white" strokeWidth={2} fillAfterStrokeEnabled listening={false} />}
     </Group>
     {selected && !plant.locked && <Circle x={r} radius={6} hitStrokeWidth={18} fill="white" stroke="#54b4ef" strokeWidth={2} onPointerDown={onResize} onTouchStart={onResize} />}
   </Group>;

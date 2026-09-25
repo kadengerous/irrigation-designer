@@ -1,3 +1,4 @@
+import { text } from "./i18n";
 import type { MeasureUnit, Pt } from "@/lib/geometry";
 import type { CadDrawing, RegionType } from "@/lib/cad/types";
 import type { TextureSize } from "@/lib/cad/texture-mapping";
@@ -97,31 +98,43 @@ export type Head = {
   arc: number;
   r: number;
   zone: number;
+  figureId?: string;
+  zoneAssignment?: 'manual';
   designPressure: number;
   bodyId: string | null;
   popUpMm: number | null;
   locked: boolean;
+  /** Optional for projects saved before individual equipment visibility was introduced. */
+  hidden?: boolean;
   needsReview: boolean;
 };
 
 export type Zone = {
   id: number;
+  figureId?: string;
   name: string;
+  nameKind?: "generated" | "custom";
   hidden: boolean;
   locked: boolean;
 };
 
 export type Underlay = {
+  source?: { name: string; mime: string; data: string };
   src: string;
   x: number;
   y: number;
   width: number;
   height: number;
   opacity: number;
-  rotation: 0 | 90 | 180 | 270;
+  rotation: number;
   visible: boolean;
   locked: boolean;
   name: string;
+  pixelWidth?: number;
+  pixelHeight?: number;
+  pageNumber?: number;
+  pageCount?: number;
+  calibration?: { distanceM: number; metersPerPixel: number | null };
 };
 
 export type WaterSource = {
@@ -145,9 +158,12 @@ export type ProjectMeta = {
   targetMm: number;
   soil: string;
   slopePct: number | null;
+  /** Measured/design soil intake at this site's slope, in canonical mm/h. No assumed soil defaults. */
+  infiltrationMmHr?: number | null;
 };
 
 export type Project = {
+  view?: { showCoverage:boolean;showLabels:boolean;showGrid:boolean;snapOn:boolean;snapGridOn:boolean;gridStep:number;measureUnit:string;activeZoneId:number;pxPerMeter?:number;panX?:number;panY?:number };
   id: string;
   name: string;
   meta: ProjectMeta;
@@ -157,6 +173,8 @@ export type Project = {
   drawing?: CadDrawing;
   heads: Head[];
   zones: Zone[];
+  /** Last explicit automatic-zoning flow limit, in L/min. */
+  zoneFlowLimitLpm?: number;
   /** Takeoff body counts; if omitted, follow the number of heads on that body. */
   bomBodyQty?: Record<string, number>;
   scaleCalibrated: boolean;
@@ -177,14 +195,14 @@ export type ProjectListItem = {
 export const MAX_ZONES = 100;
 
 export const ZONE_PALETTE = [
-  "#c45c26",
-  "#2f6f9a",
-  "#4d7a3e",
-  "#6b4f7a",
-  "#a85a2a",
-  "#3d7c8c",
-  "#7a5a2b",
-  "#3d6b5c",
+  "#86c99a",
+  "#68b884",
+  "#9ed1a3",
+  "#73bda5",
+  "#a4ce8c",
+  "#67b68d",
+  "#96c6ac",
+  "#7fc6b2",
 ];
 
 export function zoneColor(id: number) {
@@ -193,7 +211,7 @@ export function zoneColor(id: number) {
 }
 
 export function defaultZones(): Zone[] {
-  return [{ id: 1, name: "Зона 1", hidden: false, locked: false }];
+  return [{ id: 1, name: "", nameKind: "generated", hidden: false, locked: false }];
 }
 
 export function isStockZoneName(name: string, id: number) {
@@ -202,16 +220,33 @@ export function isStockZoneName(name: string, id: number) {
   return /^(Зона|Zone|Zona)\s+\d+$/i.test(n);
 }
 
-export function compactAfterRemoveZone(zones: Zone[], heads: Head[], removeId: number) {
+export function zoneLabel(zone: Pick<Zone, "id" | "name" | "nameKind">): string {
+  if (zone.nameKind === "custom") return zone.name;
+  return zone.nameKind === "generated" || !zone.name.trim() || isStockZoneName(zone.name, zone.id) ? text("zoneN", { n: zone.id }) : zone.name;
+}
+
+export function compactAfterRemoveZone(zones: Zone[], heads: Head[], removeId?: number, transferTo?: number) {
   const remaining = zones.filter((z) => z.id !== removeId).sort((a, b) => a.id - b.id);
   const idMap = new Map<number, number>();
   const nextZones = remaining.map((z, i) => {
     const nid = i + 1;
     idMap.set(z.id, nid);
-    return { ...z, id: nid, name: isStockZoneName(z.name, z.id) ? `Зона ${nid}` : z.name };
+    return { ...z, id: nid, name: z.nameKind !== "custom" && isStockZoneName(z.name, z.id) ? "" : z.name };
   });
-  const nextHeads = heads.map((h) => ({ ...h, zone: idMap.get(h.zone) ?? 1 }));
+  const replacement = idMap.get(transferTo ?? remaining[0]?.id ?? 1) ?? 1;
+  const nextHeads = heads.map((h) => ({ ...h, zone: h.zone===0 ? 0 : idMap.get(h.zone) ?? replacement }));
   return { zones: nextZones, heads: nextHeads, idMap };
+}
+
+/** Compact display numbers together with every engineering reference. */
+export function renumberProjectZones(project: Project): Project {
+  const { zones, heads, idMap } = compactAfterRemoveZone(project.zones, project.heads);
+  if (project.zones.every(z => idMap.get(z.id) === z.id)) return project;
+  const drawing = project.drawing ? { ...project.drawing, plants: Object.fromEntries(
+    Object.entries(project.drawing.plants ?? {}).map(([id, plant]) => [id, plant.irrigation?.zoneId
+      ? { ...plant, irrigation: { ...plant.irrigation, zoneId: idMap.get(plant.irrigation.zoneId) ?? null } } : plant])
+  ) } : undefined;
+  return { ...project, zones, heads, ...(drawing ? { drawing } : {}) };
 }
 
 export function emptyMeta(): ProjectMeta {
@@ -234,7 +269,7 @@ export function emptyWater(): WaterSource {
   return { staticBar: null, dynamicBar: 2.8, availableLpm: null, elevationM: null };
 }
 
-export function emptyProject(name = "Без названия"): Project {
+export function emptyProject(name = ""): Project {
   return {
     id: `p-${Date.now().toString(36)}`,
     name,
@@ -252,7 +287,7 @@ export function emptyProject(name = "Без названия"): Project {
 export function zonesFromHeads(heads: Head[]): Zone[] {
   const ids = [...new Set(heads.map((h) => h.zone))].sort((a, b) => a - b);
   if (!ids.length) return defaultZones();
-  return ids.map((id) => ({ id, name: `Зона ${id}`, hidden: false, locked: false }));
+  return ids.map((id) => ({ id, name: "", nameKind: "generated" as const, hidden: false, locked: false }));
 }
 
 export function polyPoints(g: Geom): Pt[] {

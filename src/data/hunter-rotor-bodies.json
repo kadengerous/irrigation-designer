@@ -1,0 +1,329 @@
+{
+  "verifiedOn": "2026-09-19",
+  "models": [
+    {
+      "ids": [
+        "PGJ"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 0,
+          "sku": "PGJ-00"
+        },
+        {
+          "mm": 100,
+          "sku": "PGJ-04"
+        },
+        {
+          "mm": 150,
+          "sku": "PGJ-06"
+        },
+        {
+          "mm": 300,
+          "sku": "PGJ-12"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/pgj"
+    },
+    {
+      "ids": [
+        "SRM"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "SRM-04"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/srm"
+    },
+    {
+      "ids": [
+        "PGP-ADJ"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "PGP-ADJ"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/pgp-adj"
+    },
+    {
+      "ids": [
+        "PGP-ULTRA"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 0,
+          "sku": "PGP-00"
+        },
+        {
+          "mm": 100,
+          "sku": "PGP-04"
+        },
+        {
+          "mm": 150,
+          "sku": "PGP-06"
+        },
+        {
+          "mm": 300,
+          "sku": "PGP-12-CV"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/pgpr-ultra"
+    },
+    {
+      "ids": [
+        "I-20"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 0,
+          "sku": "I-20-00"
+        },
+        {
+          "mm": 100,
+          "sku": "I-20-04"
+        },
+        {
+          "mm": 150,
+          "sku": "I-20-06"
+        },
+        {
+          "mm": 300,
+          "sku": "I-20-12"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-20"
+    },
+    {
+      "ids": [
+        "I-20-SS"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-20-04-SS"
+        },
+        {
+          "mm": 150,
+          "sku": "I-20-06-SS"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-20"
+    },
+    {
+      "ids": [
+        "I-25"
+      ],
+      "defaultMm": 150,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-25-04"
+        },
+        {
+          "mm": 150,
+          "sku": "I-25-06"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-25"
+    },
+    {
+      "ids": [
+        "I-25-SS"
+      ],
+      "defaultMm": 150,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-25-04-SS"
+        },
+        {
+          "mm": 150,
+          "sku": "I-25-06-SS"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-25"
+    },
+    {
+      "ids": [
+        "I-40",
+        "I-40-SS"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-40-04-SS"
+        },
+        {
+          "mm": 150,
+          "sku": "I-40-06-SS"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-40"
+    },
+    {
+      "ids": [
+        "I-40-ON"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-40-04-SS-ON"
+        },
+        {
+          "mm": 150,
+          "sku": "I-40-06-SS-ON"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-40"
+    },
+    {
+      "ids": [
+        "I-80",
+        "I-80-SS"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-80-04-SS-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-80"
+    },
+    {
+      "ids": [
+        "I-80-ON"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-80-04-SS-ON-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-80"
+    },
+    {
+      "ids": [
+        "I-90"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "I-90-ADV-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-90"
+    },
+    {
+      "ids": [
+        "I-90-36V"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "I-90-36V-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-90"
+    },
+    {
+      "ids": [
+        "G-70-B"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "G-70-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-70-b"
+    },
+    {
+      "ids": [
+        "G-75-B"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "G-75-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-75-b"
+    },
+    {
+      "ids": [
+        "G-80-B"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "G-80-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-80-b"
+    },
+    {
+      "ids": [
+        "G-85-B"
+      ],
+      "defaultMm": 95,
+      "options": [
+        {
+          "mm": 95,
+          "sku": "G-85-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-85-b"
+    },
+    {
+      "ids": [
+        "ST-90"
+      ],
+      "defaultMm": 76.2,
+      "options": [
+        {
+          "mm": 76.2,
+          "sku": "ST-90"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90"
+    },
+    {
+      "ids": ["STG-900"],
+      "defaultMm": 76.2,
+      "options": [{ "mm": 76.2, "sku": "STG-900" }],
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/stg-900"
+    },
+    {
+      "ids": [
+        "ST-1600"
+      ],
+      "defaultMm": 130,
+      "options": [
+        {
+          "mm": 130,
+          "sku": "ST-1600B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/st-1600"
+    }
+  ]
+}

@@ -7,3 +7,9 @@ export function sliderRange(min: number, max: number, step: number, value: numbe
     : Math.max(0, Math.min(ticks, Math.round((value - min) / step)));
   return { ticks, tick, fromTick };
 }
+
+/** A native 20px thumb moves across width minus its own diameter, not the whole track. */
+export function sliderFillPosition(tick: number, ticks: number) {
+  const fraction = Math.max(0, Math.min(1, tick / Math.max(1, ticks)));
+  return `calc(${fraction * 100}% + ${10 - 20 * fraction}px)`;
+}

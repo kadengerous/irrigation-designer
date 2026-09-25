@@ -1,21 +1,21 @@
+import { HeadLayerRow } from "./irrigation-layer-row";
+import { text as uiText } from "@/lib/i18n";
 import { useLayerReorder } from "./use-layer-reorder";
 import { orderedFaces, setGroupMemberAppearance, setFaceTextureRotation, groupMembers, segmentNumber, faceLayerNumber, splitLayer, layerFaceIds, layerRepresentatives, layerArea, layerPerimeter } from "@/lib/cad/engine";
 import { Fragment, useEffect, useId, useRef, useState, type ComponentProps, type CSSProperties, type ReactNode } from "react";
 import * as Popover from "@radix-ui/react-popover";
 import * as RadioGroup from "@radix-ui/react-radio-group";
-import { Group, ArrowUp, ArrowDown, ChevronDown, Eye, Lock, Unlock, Trash2, Check, Copy, Droplets, Minus, SquarePen, Ungroup, X } from "lucide-react";
+import { Group, ArrowUp, ArrowDown, ChevronDown, Eye, Lock, Unlock, Trash2, Check, Copy, Minus, SquarePen, Ungroup, X } from "lucide-react";
 import { useProject, drawingForEditing } from "@/lib/project-store";
 import { arcLength, drawingOrMigrate, faceArea, facePerimeter } from "@/lib/cad/engine";
 import { FACE_FILLS, FACE_TEXTURES, REGION_FILL, faceTexture, layerPurpose, type LayerPurpose, type CadDrawing } from "@/lib/cad/types";
-import { formatAreaU, formatFlowU, formatLenU, type UnitPrefs } from "@/lib/units";
+import { formatAreaU, formatLenU, type UnitPrefs } from "@/lib/units";
 import { tr, type Locale } from "@/lib/i18n";
-import { itemById } from "@/lib/hunter-catalog";
-import { headFlow } from "@/lib/flow";
 import type { Project } from "@/lib/project-types";
 
 // Also keep the phone workspace when the phone is turned sideways.
 export const PHONE_QUERY = "(max-width: 767px), (max-width: 1023px) and (max-height: 600px) and (pointer: coarse)";
-export type MobilePanel = "tools" | "layers" | "library" | "properties" | "irrigation" | "estimate" | null;
+export type MobilePanel = "tools" | "layers" | "library" | "properties" | "irrigation" | null;
 
 const LAYER_PURPOSES: { value: LayerPurpose; key: string }[] = [
   { value: "irrigation", key: "irrigation" },
@@ -113,7 +113,7 @@ export function MobileSheet({ title, children, onClose, panelKey, footer, compac
       }}>
       <header className="mobile-sheet-header">
         <div className="mobile-sheet-heading">
-        <button type="button" className="mobile-sheet-handle" aria-label={expanded ? "Уменьшить панель" : "Развернуть панель"} aria-expanded={expanded}
+        <button type="button" className="mobile-sheet-handle" aria-label={expanded ? uiText("minimizePanel") : uiText("expandPanel")} aria-expanded={expanded}
           onPointerDown={(e) => { start.current = e.clientY; dragged.current = false; e.currentTarget.setPointerCapture(e.pointerId); }}
           onPointerUp={(e) => {
             if (start.current === null) return;
@@ -128,7 +128,7 @@ export function MobileSheet({ title, children, onClose, panelKey, footer, compac
           <span aria-hidden />
         </button>
           <h2 id={titleId}>{title}</h2>
-          <button type="button" className="mobile-icon-button" aria-label="Свернуть панель" onClick={onClose}><ChevronDown size={22} /></button>
+          <button type="button" className="mobile-icon-button" aria-label={uiText("collapsePanel")} onClick={onClose}><ChevronDown size={22} /></button>
         </div>
       </header>
       <div className="mobile-sheet-body">{children}</div>
@@ -154,13 +154,8 @@ export function selectedObjectKey(selection: LayerSelection): string | null {
 export function layerTitle(d: CadDrawing, id: string, locale: Locale): string {
   const face = d.faces[id]!;
   const name = face.name?.trim();
-  const number = name?.match(/\d+/)?.[0];
-  const locales: Locale[] = ["ru", "en", "es", "de", "fr", "pt", "it", "zh", "ja", "pl", "tr"];
-  const normalize = (value: string) => value.replace(/\s/g, "").toLowerCase();
-  const oldLayerLabel = face.layerId && name && number && locales.some(lang =>
-    normalize(name) === normalize(tr(lang, "layerN", { n: Number(number) })));
   if (face.segment && !face.layerId) return name || `${tr(locale, "drawLine")} ${segmentNumber(d, id)}`;
-  return (oldLayerLabel ? undefined : name) || tr(locale, face.layerId ? "groupN" : "layerN", { n: faceLayerNumber(d, id) });
+  return name || tr(locale, face.layerId ? "groupN" : "layerN", { n: faceLayerNumber(d, id) });
 }
 
 // Sort the presentation only. Never change face order (drawing order) or saved numbering.
@@ -339,7 +334,7 @@ function LayerOrderActions({id,locale,member=false}:{id:string;locale:Locale;mem
   </div>;
 }
 
-export function LayerList({ project, selection, units, locale, onEdit, selectedFirst = true, manager = false }: {
+export function LayerList({ project, selection, units, locale, onEdit, onInspect, selectedFirst = true, manager = false }: {
   project: Project; selection: LayerSelection; units: UnitPrefs; locale: Locale; selectedFirst?: boolean; manager?: boolean;
   onEdit: (id: string) => void; onInspect?: () => void;
 }) {
@@ -353,7 +348,7 @@ export function LayerList({ project, selection, units, locale, onEdit, selectedF
   const selectedRow = useRef<HTMLElement | null>(null);
   const d = drawingOrMigrate(project);
   const heads = new Map(project.heads.map((head) => [head.id, head]));
-  const baseRows = layerRows(project, selection, locale, selectedFirst).filter((row) => row.kind !== "head");
+  const baseRows = layerRows(project, selection, locale, selectedFirst).filter(row => row.kind !== "head");
   const paintKeys=[...new Set(orderedFaces(d).map(f=>f.layerId ?? f.id))].reverse();
   const drag=useLayerReorder(paintKeys,ids=>useProject.getState().reorderLayers(ids));
   const rank=drag.renderIds;
@@ -376,13 +371,15 @@ export function LayerList({ project, selection, units, locale, onEdit, selectedF
   if (!rows.length) return <p className="mobile-empty">{t("noLayers")}</p>;
   return <div {...(!selectedFirst ? drag.listProps : {})} className="mobile-layers-list">{rows.map((row) => {
     const { title, id } = row;
+    if (row.kind === "head") {
+      const head = heads.get(id)!;
+      return <HeadLayerRow key={row.key} head={head} number={project.heads.indexOf(head) + 1}
+        zone={project.zones.find(zone => zone.id === head.zone)} selected={row.selected} units={units} locale={locale} onInspect={onInspect} floating={selectedFirst && !manager}/>;
+    }
     const face = row.kind === "face" ? d.faces[id] : undefined;
-    const head = row.kind === "head" ? heads.get(id) : undefined;
     const edge = row.kind === "edge" ? d.edges[id] : undefined;
-    const item = head ? itemById(head.catalogId) : undefined;
-    const zone = head ? project.zones.find((z) => z.id === head.zone) : undefined;
     const memberFaces = face ? layerFaceIds(d,id).map(memberId => d.faces[memberId]!) : [];
-    const locked = face ? memberFaces.some(member => member.locked) : head?.locked ?? false;
+    const locked = face ? memberFaces.some(member => member.locked) : false;
     const hidden = face ? memberFaces.every(member => member.hidden) : false;
     const detailsOpen = menu === row.key && !confirming;
     const activeMember = face?.layerId === scopeGroup ? groupMembers(d,id).find(m => m.id === scopeId) : undefined;
@@ -390,7 +387,6 @@ export function LayerList({ project, selection, units, locale, onEdit, selectedF
       const st = useProject.getState();
       if(st.groupMemberId) st.finishGroupMember();
       if (row.kind === "face") st.selectPoly(id);
-      else if (row.kind === "head") st.selectHead(id);
       else st.selectEdge(id);
     };
     const close = () => { setMenu(null); setDeleting(false); setSplitting(false); };
@@ -425,11 +421,11 @@ export function LayerList({ project, selection, units, locale, onEdit, selectedF
           {face.layerId && <button type="button" className="mobile-icon-button layer-split" aria-pressed={true} aria-label={t("splitLayer")} title={t("splitLayer")} onClick={() => {
             select(); setDeleting(false); setSplitting(true); setMenu(row.key);
           }}><Ungroup size={17} /></button>}
-          {!face.layerId && <button type="button" className="mobile-icon-button layer-duplicate" aria-label={`Дублировать: ${title}`} title="Дублировать" disabled={locked || face.hidden} onClick={() => { select(); useProject.getState().duplicateSelected(); }}><Copy size={17} /></button>}
-          <button type="button" className="mobile-icon-button layer-edit" aria-pressed={selection.cadEditId === id} aria-label={`Редактировать: ${title}`} title="Редактировать" disabled={locked || hidden} onClick={() => { select(); onEdit(id); }}><SquarePen size={17} /></button>
-          <button type="button" className="mobile-icon-button layer-delete-direct text-danger" aria-label={`Удалить: ${title}`} title="Удалить" onClick={() => { select(); setSplitting(false); setDeleting(true); setMenu(row.key); }}><Trash2 size={17} /></button>
+          {!face.layerId && <button type="button" className="mobile-icon-button layer-duplicate" aria-label={uiText("duplicateNamed", { name: title })} title={uiText("duplicate")} disabled={locked || face.hidden} onClick={() => { select(); useProject.getState().duplicateSelected(); }}><Copy size={17} /></button>}
+          <button type="button" className="mobile-icon-button layer-edit" aria-pressed={selection.cadEditId === id} aria-label={uiText("editNamed", { name: title })} title={uiText("edit")} disabled={locked || hidden} onClick={() => { select(); onEdit(id); }}><SquarePen size={17} /></button>
+          <button type="button" className="mobile-icon-button layer-delete-direct text-danger" aria-label={uiText("deleteNamed", { name: title })} title={uiText("delete")} onClick={() => { select(); setSplitting(false); setDeleting(true); setMenu(row.key); }}><Trash2 size={17} /></button>
         </> : <button type="button" className="mobile-layer-select" aria-pressed={row.selected} title={title} onClick={select}>
-          {head ? <Droplets size={18} className="shrink-0" /> : <Minus size={18} className="shrink-0" />}<span>{title}</span>
+          <Minus size={18} className="shrink-0" /><span>{title}</span>
         </button>}
         </>}
         <DetailsTrigger {...(tablet ? {} : {asChild:true})}><button type="button" className="mobile-icon-button layer-details-toggle"
@@ -437,7 +433,7 @@ export function LayerList({ project, selection, units, locale, onEdit, selectedF
           aria-expanded={detailsOpen}
           aria-label={`${t(detailsOpen ? "layerDetailsClose" : "layerDetails")}: ${title}`}
           onClick={(event) => { if (tablet) { setMenu(detailsOpen ? null : row.key); } else if (menu === row.key && confirming) event.preventDefault(); setDeleting(false); setSplitting(false); }}
-        >{tablet && <span>{locale === "ru" ? "Подробнее" : t("layerDetails")}</span>}<ChevronDown size={tablet ? 14 : 19} /></button></DetailsTrigger>
+        >{tablet && <span>{locale === "ru" ? uiText("details") : t("layerDetails")}</span>}<ChevronDown size={tablet ? 14 : 19} /></button></DetailsTrigger>
       </div>
     </article></Popover.Anchor>
       {(tablet || menu === row.key) && <DetailsWrapper {...(tablet ? {className:"tablet-details-reveal", "data-open":expanded, inert:!expanded} : {})}><DetailsInner {...(tablet ? {className:"tablet-details-inner"} : {})}><LayerDetailsSurface inline={manager || tablet} side="bottom" align={confirming ? "end" : "start"} sideOffset={2} collisionPadding={4} aria-label={title} className="layer-details-dialog layer-details-compact" data-confirming={confirming} onOpenAutoFocus={(event) => event.preventDefault()} onCloseAutoFocus={(event) => event.preventDefault()} onInteractOutside={(e) => { if (confirming) e.preventDefault(); }} onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onTouchMove={(e) => e.stopPropagation()} onTouchEnd={(e) => e.stopPropagation()} onClick={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
@@ -470,13 +466,7 @@ export function LayerList({ project, selection, units, locale, onEdit, selectedF
                 </RadioGroup.Item>)}
               </RadioGroup.Root>
             </fieldset>}
-            {!confirming && head && <><p className="layer-model-name">{item?.name ?? head.catalogId}</p><dl className="layer-detail-stats">
-              <div><dt>{t("radius")}</dt><dd>{formatLenU(head.r, units.length)}</dd></div>
-              <div><dt>{t("sector")}</dt><dd>{Math.round(head.arc)}°</dd></div>
-              <div><dt>{t("zone")}</dt><dd>{zone?.name ?? head.zone}</dd></div>
-              <div><dt>{t("flow")}</dt><dd>{headFlow(head).lpm == null ? t("noData") : formatFlowU(headFlow(head).lpm!, units.flow)}</dd></div>
-            </dl></>}
-            {!confirming && edge && d.vertices[edge.a] && d.vertices[edge.b] && <dl className="layer-detail-stats"><div><dt>Длина</dt><dd>{formatLenU(arcLength(d.vertices[edge.a]!, d.vertices[edge.b]!, edge.bulge), units.length)}</dd></div></dl>}
+            {!confirming && edge && d.vertices[edge.a] && d.vertices[edge.b] && <dl className="layer-detail-stats"><div><dt>{uiText("drawLength")}</dt><dd>{formatLenU(arcLength(d.vertices[edge.a]!, d.vertices[edge.b]!, edge.bulge), units.length)}</dd></div></dl>}
             {splitting && <div className="mobile-layer-menu">
               <div className="mobile-layer-confirm" role="alert">
                 <p>{tr(locale, "splitGroupConfirm", { name: title })}</p>
@@ -492,7 +482,7 @@ export function LayerList({ project, selection, units, locale, onEdit, selectedF
               <div className="mobile-layer-confirm" role="alert">
                 <p>{tr(locale, "deleteConfirm", { name: title })}</p>
                 <button type="button" onClick={close}>{t("cancel")}</button>
-                <button type="button" className="text-danger" onClick={() => { if (head) useProject.getState().removeHead(id); else { select(); useProject.getState().deleteSelected(); } close(); }}>{t("delete")}</button>
+                <button type="button" className="text-danger" onClick={() => { select(); useProject.getState().deleteSelected(); close(); }}>{t("delete")}</button>
               </div>
             </div>}
           </div>

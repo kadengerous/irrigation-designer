@@ -1,5 +1,5 @@
 import type { Family } from "@/lib/hunter-catalog";
-import type { Locale } from "@/lib/i18n";
+import { tr, type Locale } from "@/lib/i18n";
 import type { UnitPrefs } from "@/lib/units";
 
 export type HunterDoc = {
@@ -18,11 +18,11 @@ function hunterLang(locale: Locale, imperial: boolean): Lang {
   if (locale === "de") return "DE";
   if (locale === "fr") return "FR";
   if (locale === "it") return "IT";
-  if (locale === "pt") return "PT";
+  if (locale === "pt-BR") return "PT";
   if (locale === "ru") return "RU";
   if (locale === "pl") return "PL";
   if (locale === "tr") return "TR";
-  if (locale === "zh") return "CN";
+  if (locale === "zh-CN") return "CN";
   return imperial ? "US" : "EM";
 }
 
@@ -60,7 +60,7 @@ type FamilyPack = {
   parts?: string;
   written?: string;
   series?: { label: string; path: string }[];
-  videos?: { label: string; path: string; media?: string }[];
+  videos?: { labelKey: string; path: string; media?: string }[];
 };
 
 const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
@@ -84,8 +84,8 @@ const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
     parts: "2025-11/21-1494-RevS-IR-ReplacementPartsList2025-MPRotator.pdf",
     written: "2024-10/RC-219-MP820-IR-MP-Rotator-Nozzle-Written-Specifications-FINAL-100924.pdf",
     videos: [
-      { label: "Matched Precipitation", path: "/videos/mp-rotator-matched-precipitation", media: "https://hunterindustries.widen.net/content/gk5iqas0bk/original/MP-KP-02-matched-precip.mov?u=u9m5zw" },
-      { label: "Water Savings", path: "/videos/mp-rotator-water-savings", media: "https://hunterindustries.widen.net/content/wznis3o4wn/original/MP-KP-01-water-savings.mov?u=u9m5zw" },
+      { labelKey: "videoMatchedPrecip", path: "/videos/mp-rotator-matched-precipitation", media: "https://hunterindustries.widen.net/content/gk5iqas0bk/original/MP-KP-02-matched-precip.mov?u=u9m5zw" },
+      { labelKey: "videoWaterSavings", path: "/videos/mp-rotator-water-savings", media: "https://hunterindustries.widen.net/content/wznis3o4wn/original/MP-KP-01-water-savings.mov?u=u9m5zw" },
     ],
   },
   mp800: {
@@ -109,8 +109,8 @@ const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
       { label: "MP815", path: "/node/434666" },
     ],
     videos: [
-      { label: "Matched Precipitation", path: "/videos/mp-rotator-matched-precipitation", media: "https://hunterindustries.widen.net/content/gk5iqas0bk/original/MP-KP-02-matched-precip.mov?u=u9m5zw" },
-      { label: "Water Savings", path: "/videos/mp-rotator-water-savings", media: "https://hunterindustries.widen.net/content/wznis3o4wn/original/MP-KP-01-water-savings.mov?u=u9m5zw" },
+      { labelKey: "videoMatchedPrecip", path: "/videos/mp-rotator-matched-precipitation", media: "https://hunterindustries.widen.net/content/gk5iqas0bk/original/MP-KP-02-matched-precip.mov?u=u9m5zw" },
+      { labelKey: "videoWaterSavings", path: "/videos/mp-rotator-water-savings", media: "https://hunterindustries.widen.net/content/wznis3o4wn/original/MP-KP-01-water-savings.mov?u=u9m5zw" },
     ],
   },
   strip: {
@@ -130,7 +130,7 @@ const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
       CN: "2026-07/LIT-461-RevK-DG-MPR-CN-web.pdf",
     },
     videos: [
-      { label: "Matched Precipitation", path: "/videos/mp-rotator-matched-precipitation", media: "https://hunterindustries.widen.net/content/gk5iqas0bk/original/MP-KP-02-matched-precip.mov?u=u9m5zw" },
+      { labelKey: "videoMatchedPrecip", path: "/videos/mp-rotator-matched-precipitation", media: "https://hunterindustries.widen.net/content/gk5iqas0bk/original/MP-KP-02-matched-precip.mov?u=u9m5zw" },
     ],
   },
   he: {
@@ -147,8 +147,8 @@ const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
       RU: "2024-11/Sprays_RU_Vol40-PHE.pdf",
     },
     videos: [
-      { label: "Spray Adjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
-      { label: "Pro-Spray Product Guide", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
+      { labelKey: "videoSprayAdjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
+      { labelKey: "videoProSpray", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
     ],
   },
   spray: {
@@ -158,37 +158,37 @@ const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
       EM: "2026-05/RC-244-SS-Nozzles-ProAdj-US.pdf",
     },
     videos: [
-      { label: "Pro Adjustable Nozzles", path: "/videos/hunter-pro-adjustable-spray-nozzles-more-durable-and-long-lasting-competition", media: "https://hunterindustries.widen.net/content/dxmemo5z5q/original/SprayNozzles_BT.mov?u=u9m5zw" },
-      { label: "Spray Adjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
-      { label: "Pro-Spray Product Guide", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
+      { labelKey: "videoProAdjustable", path: "/videos/hunter-pro-adjustable-spray-nozzles-more-durable-and-long-lasting-competition", media: "https://hunterindustries.widen.net/content/dxmemo5z5q/original/SprayNozzles_BT.mov?u=u9m5zw" },
+      { labelKey: "videoSprayAdjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
+      { labelKey: "videoProSpray", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
     ],
   },
   fixed: {
     page: "/irrigation-product/nozzles/pro-fixed-nozzles",
     specName: "Pro-Spray-Fixed-Arc-Nozzles",
     videos: [
-      { label: "Spray Adjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
-      { label: "Pro-Spray Product Guide", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
+      { labelKey: "videoSprayAdjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
+      { labelKey: "videoProSpray", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
     ],
   },
   prostrip: {
     page: "/irrigation-product/nozzles/strip-pattern-nozzles",
     videos: [
-      { label: "Spray Adjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
-      { label: "Pro-Spray Product Guide", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
+      { labelKey: "videoSprayAdjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
+      { labelKey: "videoProSpray", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
     ],
   },
   short: {
     page: "/irrigation-product/nozzles/short-radius-micro-spray-nozzles",
     videos: [
-      { label: "Spray Adjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
-      { label: "Pro-Spray Product Guide", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
+      { labelKey: "videoSprayAdjustments", path: "/videos/hunter-spray-adjustments-and-maintenance", media: "https://hunterindustries.widen.net/content/4z6mj6c81o/original/FK_Spray_Adj_Maintenance.mov?u=u9m5zw" },
+      { labelKey: "videoProSpray", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
     ],
   },
   bubbler: {
     page: "/irrigation-product/nozzles/bubblers-bubbler-nozzles",
     videos: [
-      { label: "Pro-Spray Product Guide", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
+      { labelKey: "videoProSpray", path: "/videos/pro-spray-product-guide", media: "https://hunterindustries.widen.net/content/novnwn8c9g/original/Pro-Spray_PG.mov?u=u9m5zw" },
     ],
   },
   rotor: {
@@ -205,9 +205,9 @@ const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
       { label: "I-90", path: "/irrigation-product/rotors/i-90" },
     ],
     videos: [
-      { label: "PGP, PGP Ultra and I-20", path: "/videos/hunter-rotors-pgp-pgp-ultra-and-i-20-industrys-most-reliable-sprinkler", media: "https://hunterindustries.widen.net/content/vtyvpcqw51/original/Rotors_BOI_PGP_PGP-Ultra_I-20.mp4?u=u9m5zw" },
-      { label: "PGP Ultra and I-20 Nozzles", path: "/videos/hunter-pgp-ultra-and-i-20-rotor-nozzles-product-guide", media: "https://hunterindustries.widen.net/content/maejwiqaaz/original/RotorNozzles_PG.mov?u=u9m5zw" },
-      { label: "I-Series Rotors Product Guide", path: "/videos/hunter-i-series-rotors-product-guide", media: "https://hunterindustries.widen.net/content/yhbxdakdkw/original/Hunter-I-Series-Rotors-Product-Guide.mov?u=u9m5zw" },
+      { labelKey: "videoPgpModels", path: "/videos/hunter-rotors-pgp-pgp-ultra-and-i-20-industrys-most-reliable-sprinkler", media: "https://hunterindustries.widen.net/content/vtyvpcqw51/original/Rotors_BOI_PGP_PGP-Ultra_I-20.mp4?u=u9m5zw" },
+      { labelKey: "videoPgpNozzles", path: "/videos/hunter-pgp-ultra-and-i-20-rotor-nozzles-product-guide", media: "https://hunterindustries.widen.net/content/maejwiqaaz/original/RotorNozzles_PG.mov?u=u9m5zw" },
+      { labelKey: "videoISeries", path: "/videos/hunter-i-series-rotors-product-guide", media: "https://hunterindustries.widen.net/content/yhbxdakdkw/original/Hunter-I-Series-Rotors-Product-Guide.mov?u=u9m5zw" },
     ],
   },
   golf: {
@@ -219,7 +219,7 @@ const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
       { label: "G-85-B", path: "/irrigation-product/golf-rotors/g-85-b" },
     ],
     videos: [
-      { label: "PGP, PGP Ultra and I-20", path: "/videos/hunter-rotors-pgp-pgp-ultra-and-i-20-industrys-most-reliable-sprinkler", media: "https://hunterindustries.widen.net/content/vtyvpcqw51/original/Rotors_BOI_PGP_PGP-Ultra_I-20.mp4?u=u9m5zw" },
+      { labelKey: "videoPgpModels", path: "/videos/hunter-rotors-pgp-pgp-ultra-and-i-20-industrys-most-reliable-sprinkler", media: "https://hunterindustries.widen.net/content/vtyvpcqw51/original/Rotors_BOI_PGP_PGP-Ultra_I-20.mp4?u=u9m5zw" },
     ],
   },
   st: {
@@ -230,7 +230,7 @@ const PACKS: Partial<Record<Family | "all", FamilyPack>> = {
       { label: "ST-1600", path: "/irrigation-product/st-1600" },
     ],
     videos: [
-      { label: "PGP, PGP Ultra and I-20", path: "/videos/hunter-rotors-pgp-pgp-ultra-and-i-20-industrys-most-reliable-sprinkler", media: "https://hunterindustries.widen.net/content/vtyvpcqw51/original/Rotors_BOI_PGP_PGP-Ultra_I-20.mp4?u=u9m5zw" },
+      { labelKey: "videoPgpModels", path: "/videos/hunter-rotors-pgp-pgp-ultra-and-i-20-industrys-most-reliable-sprinkler", media: "https://hunterindustries.widen.net/content/vtyvpcqw51/original/Rotors_BOI_PGP_PGP-Ultra_I-20.mp4?u=u9m5zw" },
     ],
   },
 };
@@ -268,7 +268,7 @@ export function docsForFamily(
     out.push({ kind: "page", titleKey: "docsPage", label: s.label, url: pageUrl(s.path, imperial) });
   }
   for (const v of pack.videos ?? []) {
-    out.push({ kind: "video", titleKey: "docsVideo", label: v.label, url: videoUrl(v.path), media: v.media });
+    out.push({ kind: "video", titleKey: "docsVideo", label: tr(locale, v.labelKey), url: videoUrl(v.path), media: v.media });
   }
   return out;
 }

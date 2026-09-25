@@ -25,24 +25,24 @@
       "max": 9.14,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/betula-pendula/"
     },
-    "light": "Солнце; Полутень",
-    "soil": "Глинистая; Суглинок; Песчаная; Каменистая",
-    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное подсыхание",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_clay; fact_loam; fact_sand; fact_rocky",
+    "moisture": "fact_drained; fact_moist; fact_drySometimes",
     "hardiness": "USDA 2a, 2b, 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b",
-    "description": "Листопадное дерево с белой корой и поникающими ветвями. Лучше развивается в прохладном климате.",
+    "description": "descBirch",
     "water": {
       "need": null,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/betula-pendula/",
       "context": null,
       "quantity": null,
-      "method": "Сочащийся шланг",
-      "wettingZone": "Корневая зона",
+      "method": "fact_soaker",
+      "wettingZone": "fact_roots",
       "recommendations": "Поддерживать равномерную влажность; мульчировать корневую зону, чтобы она оставалась прохладной."
     },
     "symbol": "deciduous",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/betula-pendula/",
         "accessedAt": "2026-09-15"
       }
@@ -74,11 +74,11 @@
       "max": 12.19,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/pinus-sylvestris/"
     },
-    "light": "Солнце",
-    "soil": "Глинистая; Суглинок; Песчаная",
-    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное подсыхание",
+    "light": "fact_sun",
+    "soil": "fact_clay; fact_loam; fact_sand",
+    "moisture": "fact_drained; fact_moist; fact_drySometimes",
     "hardiness": "USDA 2a, 2b, 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b",
-    "description": "Вечнозелёное хвойное дерево. С возрастом крона становится более открытой и округлой.",
+    "description": "descPine",
     "water": {
       "need": null,
       "sourceUrl": null,
@@ -91,7 +91,7 @@
     "symbol": "conifer",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/pinus-sylvestris/",
         "accessedAt": "2026-09-15"
       }
@@ -123,11 +123,11 @@
       "max": 15.24,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/acer-platanoides/"
     },
-    "light": "Солнце; Полутень",
-    "soil": "Глинистая; Суглинок; Каменистая",
-    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное подсыхание",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_clay; fact_loam; fact_rocky",
+    "moisture": "fact_drained; fact_moist; fact_drySometimes",
     "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b",
-    "description": "Листопадное дерево с широкой округлой кроной и поверхностной корневой системой.",
+    "description": "descMaple",
     "water": {
       "need": null,
       "sourceUrl": null,
@@ -140,7 +140,7 @@
     "symbol": "deciduous",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/acer-platanoides/",
         "accessedAt": "2026-09-15"
       }
@@ -172,11 +172,11 @@
       "max": 3.66,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/syringa-vulgaris/"
     },
-    "light": "Солнце; Полутень",
-    "soil": "Глинистая; Суглинок; Богатая органикой",
-    "moisture": "Хороший дренаж; Влажная почва",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_clay; fact_loam; fact_organic",
+    "moisture": "fact_drained; fact_moist",
     "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a",
-    "description": "Листопадный кустарник с ароматными весенними соцветиями. Для цветения важен продолжительный холодный период.",
+    "description": "descLilac",
     "water": {
       "need": null,
       "sourceUrl": null,
@@ -189,7 +189,7 @@
     "symbol": "shrub",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/syringa-vulgaris/",
         "accessedAt": "2026-09-15"
       }
@@ -221,11 +221,11 @@
       "max": 7.62,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/hydrangea-paniculata/"
     },
-    "light": "Солнце; Полутень",
-    "soil": "Глинистая; Суглинок; Песчаная; Богатая органикой",
-    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное переувлажнение",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_clay; fact_loam; fact_sand; fact_organic",
+    "moisture": "fact_drained; fact_moist; fact_wetSometimes",
     "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b",
-    "description": "Листопадный кустарник с крупными метёлками соцветий. Цветёт на побегах текущего года.",
+    "description": "descHydrangea",
     "water": {
       "need": "moderate",
       "sourceUrl": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/plants-for-privacy-screening",
@@ -233,12 +233,12 @@
       "quantity": null,
       "method": null,
       "wettingZone": null,
-      "recommendations": "Поверхностная корневая система. Мульча помогает сохранять условия в корневой зоне."
+      "recommendations": "recShallowRoots"
     },
     "symbol": "shrub",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/hydrangea-paniculata/",
         "accessedAt": "2026-09-15"
       },
@@ -275,8 +275,8 @@
       "max": 4,
       "sourceUrl": "https://www.rhs.org.uk/plants/9557/juniperus-communis/details"
     },
-    "light": "Солнце; полутень",
-    "soil": "Меловая; суглинок; песчаная",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_chalk; fact_loam; fact_sand",
     "moisture": null,
     "hardiness": null,
     "description": "Вечнозелёный хвойный кустарник; форма кроны варьируется от раскидистой до колонновидной.",
@@ -324,11 +324,11 @@
       "max": 0.91,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/"
     },
-    "light": "Солнце; Полутень",
-    "soil": "Суглинок; Песчаная; Каменистая",
-    "moisture": "Хороший дренаж",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_loam; fact_sand; fact_rocky",
+    "moisture": "fact_drained",
     "hardiness": "USDA 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b, 9a, 9b",
-    "description": "Невысокий ароматный полукустарник с летним цветением. Чувствителен к застою воды.",
+    "description": "descLavender",
     "water": {
       "need": null,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
@@ -336,12 +336,12 @@
       "quantity": null,
       "method": null,
       "wettingZone": null,
-      "recommendations": "Предпочтительна почва с хорошим дренажем, ближе к сухой. Переувлажнение способствует корневой гнили."
+      "recommendations": "recDryDrainage"
     },
     "symbol": "shrub",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
         "accessedAt": "2026-09-15"
       }
@@ -373,11 +373,11 @@
       "max": 0.91,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/iris-sibirica/"
     },
-    "light": "Солнце; Полутень",
-    "soil": "Глинистая; Суглинок; Песчаная; Богатая органикой",
-    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное переувлажнение",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_clay; fact_loam; fact_sand; fact_organic",
+    "moisture": "fact_drained; fact_moist; fact_wetSometimes",
     "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b",
-    "description": "Травянистый многолетник с узкими листьями и сине-фиолетовыми цветками. Предпочитает равномерно влажную почву.",
+    "description": "descIris",
     "water": {
       "need": null,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/iris-sibirica/",
@@ -385,12 +385,12 @@
       "quantity": null,
       "method": null,
       "wettingZone": null,
-      "recommendations": "Поддерживать равномерно влажную почву. Укоренившиеся растения переносят некоторую засуху."
+      "recommendations": "recMoistEstablished"
     },
     "symbol": "flower",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/iris-sibirica/",
         "accessedAt": "2026-09-15"
       }
@@ -463,15 +463,15 @@
       "max": 0.76,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/hemerocallis-fulva/"
     },
-    "light": "Солнце; Полутень",
-    "soil": "Суглинок; Богатая органикой",
-    "moisture": "Хороший дренаж",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_loam; fact_organic",
+    "moisture": "fact_drained",
     "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b",
-    "description": "Корневищный многолетник с оранжевыми цветками. Быстро образует плотные разрастающиеся куртины.",
+    "description": "descDaylily",
     "water": {
       "need": "moderate",
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/hemerocallis-fulva/",
-      "context": "Умеренная потребность по NC State Extension. Не является нормой в литрах.",
+      "context": "waterNcContext",
       "quantity": null,
       "method": null,
       "wettingZone": null,
@@ -480,7 +480,7 @@
     "symbol": "flower",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/hemerocallis-fulva/",
         "accessedAt": "2026-09-15"
       }
@@ -512,11 +512,11 @@
       "max": 0.61,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/"
     },
-    "light": "Солнце; Полутень",
-    "soil": "Глинистая; Суглинок; Песчаная; Богатая органикой; Каменистая",
-    "moisture": "Хороший дренаж; Влажная почва; Допустимо временное подсыхание",
+    "light": "fact_sun; fact_partial",
+    "soil": "fact_clay; fact_loam; fact_sand; fact_organic; fact_rocky",
+    "moisture": "fact_drained; fact_moist; fact_drySometimes",
     "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b",
-    "description": "Травянистый многолетник с розово-пурпурными соцветиями. После укоренения переносит засуху.",
+    "description": "descEchinacea",
     "water": {
       "need": null,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
@@ -529,7 +529,7 @@
     "symbol": "flower",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
         "accessedAt": "2026-09-15"
       }
@@ -561,11 +561,11 @@
       "max": 1.22,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/hosta-plantaginea/"
     },
-    "light": "Солнце; Полутень; Рассеянный свет; Тень",
-    "soil": "Суглинок; Богатая органикой",
-    "moisture": "Хороший дренаж; Влажная почва",
+    "light": "fact_sun; fact_partial; fact_dappled; fact_shade",
+    "soil": "fact_loam; fact_organic",
+    "moisture": "fact_drained; fact_moist",
     "hardiness": "USDA 3a, 3b, 4a, 4b, 5a, 5b, 6a, 6b, 7a, 7b, 8a, 8b, 9a, 9b",
-    "description": "Многолетник с широкими зелёными листьями и крупными ароматными белыми цветками.",
+    "description": "descHosta",
     "water": {
       "need": null,
       "sourceUrl": "https://plants.ces.ncsu.edu/plants/hosta-plantaginea/",
@@ -573,12 +573,12 @@
       "quantity": null,
       "method": null,
       "wettingZone": null,
-      "recommendations": "Поддерживать влажную, хорошо дренированную почву. На солнце особенно важно сохранять достаточную влажность."
+      "recommendations": "recMoistSun"
     },
     "symbol": "flower",
     "sources": [
       {
-        "title": "NC State Extension · характеристики",
+        "title": "sourceNc",
         "url": "https://plants.ces.ncsu.edu/plants/hosta-plantaginea/",
         "accessedAt": "2026-09-15"
       }
@@ -612,7 +612,7 @@
       "max": 2.44,
       "sourceUrl": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/hydrangeas-for-the-midwest"
     },
-    "light": "Солнце; Полутень",
+    "light": "fact_sun; fact_partial",
     "soil": null,
     "moisture": null,
     "hardiness": null,
@@ -620,7 +620,7 @@
     "water": {
       "need": "moderate",
       "sourceUrl": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/visual-guides/hydrangeas-for-the-midwest",
-      "context": "Water: Medium. Справочник для садов Среднего Запада США.",
+      "context": "waterMidwest",
       "quantity": null,
       "method": null,
       "wettingZone": null,

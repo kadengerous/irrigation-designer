@@ -2,6 +2,7 @@ import {
   clampArc,
   clampRadius,
   defaultBodyFor,
+  defaultPopUpMm,
   itemById,
   pickNozzleForRadius,
   pickSeriesForRadius,
@@ -34,7 +35,7 @@ function makeHead(partial: Pick<Head, "catalogId" | "x" | "y" | "arc" | "start" 
     zone: 1,
     designPressure: item?.recommendedPressureBar ?? 2.8,
     bodyId: item ? defaultBodyFor(item) : "PRS40",
-    popUpMm: item?.popUpMm ?? 100,
+    popUpMm: item ? defaultPopUpMm(item) : 100,
     locked: false,
     needsReview: false,
   };
@@ -57,6 +58,7 @@ function fitHead(h: Head, family: Family, keep: Pt[] | null, cuts: Pt[][]): Head
     r,
     arc: clampArc(sku, h.arc),
     bodyId: defaultBodyFor(sku),
+    popUpMm: defaultPopUpMm(sku),
     designPressure: sku.recommendedPressureBar,
     needsReview: cap + 0.02 < sku.rMin,
   };

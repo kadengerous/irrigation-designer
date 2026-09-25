@@ -1,6 +1,8 @@
+import { text } from "./i18n";
+import { catalogName, popUpHeight } from "./catalog-localization";
 import { bundledPhoto } from "@/lib/catalog-photos";
 
-export type FlowKind = "table" | "interpolated" | "matched-precip" | "none";
+export type FlowKind = "table" | "pressure-compensated" | "interpolated" | "matched-precip" | "none";
 export type Family =
   | "mp"
   | "mp800"
@@ -30,7 +32,9 @@ export type PerfRow = {
   flowAtMinRadiusLMin?: number;
 };
 
+import { modelCoveragePolicy, type CoverageRule } from './coverage-rules';
 export type CatalogNozzle = {
+  coverageRule?: CoverageRule;
   id: string;
   name: string;
   color: string;
@@ -44,6 +48,9 @@ export type CatalogNozzle = {
 };
 
 export type CatalogItem = {
+  coverageRule?: CoverageRule;
+  coverageRuleId?: string;
+  coverageRuleSource?: string;
   id: string;
   sku: string;
   name: string;
@@ -79,12 +86,62 @@ export type CatalogItem = {
   coverageKind?: "sector" | "strip" | "point";
   precipBasis?: "square" | "single" | "strip" | "none";
   pressureCompensating?: boolean;
+  bodyFamilyId?: string;
+  bodyFeatures?: string[];
+  regulatedPressureBar?: number | null;
+  bodyVerifiedOn?: string;
+  mountingSourceUrl?: string;
+  popUpOptions?: { mm: number; sku: string }[];
   stripPerformance?: { pressureBar: number; w: number; l: number }[];
 };
 
 // Verified Hunter tables, with explicit provenance and nullable missing values.
 import catalogData from "@/data/hunter-catalog.json";
-export const CATALOG = catalogData as CatalogItem[];
+import bodyData from "@/data/hunter-body-models.json";
+import rotorBodyData from "@/data/hunter-rotor-bodies.json";
+
+const originalCatalog = catalogData as CatalogItem[];
+const legacyBodySkus: Record<string, string> = {
+  "PSU-04": "PS-ULTRA", "PROS-04": "PRO-SPRAY",
+  "PROS-04-PRS30": "PRS30", "PROS-04-PRS40": "PRS40",
+};
+const bodyModels: CatalogItem[] = bodyData.series.flatMap(series => {
+  const base = originalCatalog.find(item => item.id === series.id)!;
+  return series.models.map(model => {
+    const features = [
+      "checkValve" in model && model.checkValve ? "CV" : "",
+      "sideInlet" in model && model.sideInlet ? "SI" : "",
+      "floGuard" in model && model.floGuard ? "FloGuard" : "",
+      "reclaimed" in model && model.reclaimed ? "R" : "",
+    ].filter(Boolean);
+    return {
+      ...base,
+      id: legacyBodySkus[model.sku] ?? model.sku,
+      sku: model.sku,
+      name: model.sku,
+      series: series.name,
+      body: series.name,
+      bodyFamilyId: series.id,
+      bodyFeatures: features,
+      regulatedPressureBar: series.regulatedPressureBar,
+      recommendedPressureMin: series.operatingPressureMin,
+      recommendedPressureMax: series.operatingPressureMax,
+      popUpMm: model.popUpMm,
+      sourceUrl: ("sourceUrl" in model ? model.sourceUrl : undefined) ?? series.sourceUrl,
+      sourceDocument: "Hunter spray body model specifications",
+      verifiedOn: bodyData.verifiedOn,
+      bodyVerifiedOn: bodyData.verifiedOn,
+    };
+  });
+});
+export const CATALOG: CatalogItem[] = [
+  ...originalCatalog.filter(item => item.type !== "body").map(item => {
+    const body = rotorBodyData.models.find(model => model.ids.includes(item.id));
+    return body ? { ...item, popUpMm: body.defaultMm, popUpOptions: body.options,
+      mountingSourceUrl: body.sourceUrl, bodyVerifiedOn: rotorBodyData.verifiedOn } : item;
+  }),
+  ...bodyModels,
+].map(item=>({...item,...modelCoveragePolicy(item)}));
 
 export const CATEGORIES: { id: Family | "all"; label: string }[] = [
   { id: "all", label: "All" },
@@ -94,8 +151,8 @@ export const CATEGORIES: { id: Family | "all"; label: string }[] = [
   { id: "he", label: "Pro High-Efficiency" },
   { id: "spray", label: "Pro Adjustable" },
   { id: "fixed", label: "Pro Fixed" },
-  { id: "prostrip", label: "Strip Pattern" },
-  { id: "short", label: "Short-Radius" },
+  { id: "prostrip", label: "Strip Nozzles" },
+  { id: "short", label: "Short Radius" },
   { id: "bubbler", label: "Bubblers" },
   { id: "rotor", label: "Rotors" },
   { id: "golf", label: "Golf Rotors" },
@@ -104,7 +161,7 @@ export const CATEGORIES: { id: Family | "all"; label: string }[] = [
 export const FAMILIES = CATEGORIES;
 
 export function itemById(id: string): CatalogItem | undefined {
-  return CATALOG.find((c) => c.id === id);
+  return CATALOG.find((c) => c.id === id || c.type === "body" && c.sku === id);
 }
 export function placeableCatalog(): CatalogItem[] {
   return CATALOG.filter((c) => c.family !== "body" && !c.discontinued)
@@ -122,42 +179,82 @@ export function clampArc(item: CatalogItem, a: number) {
   return Math.min(item.arcMax, Math.max(item.arcMin, Math.round(a)));
 }
 export function defaultBodyFor(item: CatalogItem) {
+  if (mountingKind(item) !== "spray") return item.id;
   if (item.family === "mp" || item.family === "mp800" || item.family === "strip") return "PRS40";
-  if (item.type === "rotor") return item.id;
+  if (item.type === "bubbler" && item.pressureCompensating) return "PRO-SPRAY";
   return "PRS30";
 }
 
+/** Nozzle threads are different from the body's 1/2-inch pipe inlet. */
+export function mountingKind(item: CatalogItem): "spray" | "integrated" | "riser" {
+  if (item.type === "rotor") return "integrated";
+  if (/^PCB-/.test(item.id) || item.id === "AFB") return "riser";
+  return "spray";
+}
+
+export function isMp(item: CatalogItem): boolean {
+  return ["mp", "mp800", "strip"].includes(item.family);
+}
+
 /** Official takeoff name: nozzle / rotator / rotor / body. */
-export function bomLineName(item: CatalogItem): string {
-  if (item.type === "body") return `Корпус Hunter ${item.name}`;
-  if (item.type === "rotor" || item.family === "golf" || item.family === "st") return `Ротор Hunter ${item.id}`;
-  if (item.family === "mp" || item.family === "mp800" || item.family === "strip") {
-    return `Ротор Hunter MP Rotator ${item.id}`;
+export function bomLineName(item: CatalogItem, popUpMm?: number | null): string {
+  if (item.type === "body") return catalogName(item);
+  if (item.type === "rotor" || item.family === "golf" || item.family === "st") {
+    const variant = item.popUpOptions?.find(option => option.mm === (popUpMm ?? item.popUpMm));
+    return variant?.sku ?? catalogName(item);
   }
-  if (item.type === "bubbler") return `Баблер Hunter ${item.id}`;
-  return `Сопло Hunter ${item.id}`;
+  return catalogName(item);
 }
 export function bodiesFor(item: CatalogItem): CatalogItem[] {
-  if (item.type === "rotor") return [];
-  const bodies = CATALOG.filter((c) => c.type === "body");
-  if (item.family === "mp" || item.family === "mp800" || item.family === "strip") {
-    return bodies.filter((b) => b.id === "PRS40" || b.id === "PRO-SPRAY" || b.id === "PS-ULTRA");
-  }
-  return bodies.filter((b) => b.id === "PRS30" || b.id === "PRO-SPRAY" || b.id === "PS-ULTRA");
+  if (mountingKind(item) !== "spray" || item.type === "body" || /-HT(?:-|$)/.test(item.id)) return [];
+  const preferred = defaultBodyFor(item);
+  return bodyModels.slice().sort((a, b) =>
+    Number(b.bodyFamilyId === preferred) - Number(a.bodyFamilyId === preferred) ||
+    (a.bodyFamilyId ?? "").localeCompare(b.bodyFamilyId ?? "") ||
+    (a.popUpMm ?? 0) - (b.popUpMm ?? 0) ||
+    (a.bodyFeatures?.length ?? 0) - (b.bodyFeatures?.length ?? 0) || a.sku.localeCompare(b.sku));
 }
 
-export const POP_UP_MM = [100, 150, 200, 300, 400] as const;
+export function recommendedBodyFor(item: CatalogItem, popUpMm?: number | null): CatalogItem | undefined {
+  const family = defaultBodyFor(item);
+  return bodiesFor(item).find(body => body.bodyFamilyId === family && body.popUpMm === popUpMm) ?? itemById(family);
+}
 
 export function popUpHeights(item: CatalogItem): number[] {
-  if (item.family === "st" || item.family === "golf") {
-    const mm = item.popUpMm ?? 100;
-    return POP_UP_MM.includes(mm as (typeof POP_UP_MM)[number]) ? [...POP_UP_MM] : [mm, ...POP_UP_MM];
+  if (item.type === "body") return item.popUpMm == null ? [] : [item.popUpMm];
+  if (mountingKind(item) === "riser") return [0];
+  if (item.type === "rotor") return item.popUpOptions?.map(option => option.mm) ?? [];
+  return [...new Set(bodiesFor(item).map(body => body.popUpMm!).filter(mm => mm != null))].sort((a, b) => a - b);
+}
+
+/** Resolve older family IDs + separately saved riser heights without losing the chosen height. */
+export function bodyForHead(item: CatalogItem, bodyId?: string | null, popUpMm?: number | null): CatalogItem | undefined {
+  if (mountingKind(item) !== "spray") return undefined;
+  const body = itemById(bodyId ?? defaultBodyFor(item));
+  if (body?.type !== "body") return undefined;
+  if (body.id === body.bodyFamilyId && popUpMm != null && popUpMm !== body.popUpMm) {
+    return bodyModels.find(option => option.bodyFamilyId === body.bodyFamilyId && option.popUpMm === popUpMm &&
+      !option.sku.endsWith("-R") && !option.sku.includes("-CV") && !option.sku.includes("-SI"));
   }
-  return [...POP_UP_MM];
+  return body;
+}
+
+export function defaultPopUpMm(item: CatalogItem, bodyId = defaultBodyFor(item)): number | null {
+  if (mountingKind(item) === "riser") return 0;
+  return item.type === "rotor" ? item.popUpMm : itemById(bodyId)?.popUpMm ?? null;
+}
+export function bodySelectionPatch(item: CatalogItem, bodyId: string, current: {
+  bodyId?: string | null; designPressure?: number;
+}): { bodyId: string; popUpMm: number | null; designPressure: number } | null {
+  const body = bodiesFor(item).find(option => option.id === bodyId || option.sku === bodyId);
+  if (!body) return null;
+  const sameFamily = current.bodyId && itemById(current.bodyId)?.bodyFamilyId === body.bodyFamilyId;
+  return { bodyId: body.id, popUpMm: body.popUpMm,
+    designPressure: sameFamily && current.designPressure != null ? current.designPressure : workingPressureBar(item, body.id) };
 }
 export function workingPressureBar(item: CatalogItem, bodyId?: string | null, _nozzleId?: string | null) {
-  if (bodyId === "PRS40") return 2.8;
-  if (bodyId === "PRS30") return 2.1;
+  const body = bodyId ? itemById(bodyId) : undefined;
+  if (mountingKind(item) === "spray" && body?.regulatedPressureBar != null) return body.regulatedPressureBar;
   return item.nozzles.find(n => n.id === _nozzleId)?.recommendedBar ?? item.recommendedPressureBar;
 }
 
@@ -168,10 +265,9 @@ export function stripAtPressure(item: CatalogItem, pressureBar = item.recommende
   const rows = [...(item.stripPerformance ?? [])].sort((a, b) => a.pressureBar - b.pressureBar);
   if (!rows.length) return base;
   if (pressureBar < rows[0]!.pressureBar - .001 || pressureBar > rows.at(-1)!.pressureBar + .001) return undefined;
-  const lo = [...rows].reverse().find(r => r.pressureBar <= pressureBar + .001) ?? rows[0]!;
-  const hi = rows.find(r => r.pressureBar >= pressureBar - .001) ?? rows.at(-1)!;
-  const t = hi.pressureBar === lo.pressureBar ? 0 : (pressureBar - lo.pressureBar) / (hi.pressureBar - lo.pressureBar);
-  const w = lo.w + (hi.w - lo.w) * t, l = lo.l + (hi.l - lo.l) * t;
+  const row = rows.find(r => Math.abs(r.pressureBar - pressureBar) < 1e-7);
+  if (!row) return undefined;
+  const { w, l } = row;
   return { w, l, ox: base.ox * l / base.l, oy: base.oy * w / base.w };
 }
 export function nozzleRange(n: CatalogNozzle) {
@@ -246,7 +342,7 @@ export function categoryPhoto(id: Family | "all"): string | null {
 
 export function catalogPhoto(item: CatalogItem): string {
   return (
-    bundledPhoto(item.id, item.sku, item.series.replace(/\s+/g, ""), item.series.replace(/\s+/g, "-")) ??
+    bundledPhoto(item.id, item.sku, item.bodyFamilyId ?? "", item.series.replace(/\s+/g, ""), item.series.replace(/\s+/g, "-")) ??
     `/catalog/${item.id}.png?v=9`
   );
 }

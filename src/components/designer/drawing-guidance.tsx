@@ -32,8 +32,8 @@ export function DrawingGuidance({wrapRef,hover}:{wrapRef:RefObject<HTMLDivElemen
  if(!enabled||catalog)return null;
  const row=copy[locale];
  const pointTool=["polygon","spline","line","polyline"].includes(sub);
- const text=editing?row[4]:closureTarget(points,sub,hover,px)?row[3]:tool==="draw"&&sub!=="none"?(pointTool?(points.length?row[2]:row[1]):(locale === "ru" || locale === "en" ? tr(locale,`hint_${sub}`) : row[6])):tool?row[6]:row[5];
- // Existing tool translations are retained; untranslated tools use the localized general instruction.
+ const text=editing?row[4]:closureTarget(points,sub,hover,px)?row[3]:tool==="draw"&&sub!=="none"?(pointTool?(points.length?row[2]:row[1]):tr(locale,`hint_${sub}`)):tool?row[6]:row[5];
+ // Every supported language has tool-specific copy; unknown tools retain general guidance.
  const translated=text.startsWith("hint_")?row[6]:text;
  return <div ref={hintRef} className="drawing-guidance" data-floating-priority="10" style={{left:(box?.x??0)-(wrap?.left??0),top:(box?.y??0)-(wrap?.top??0),maxWidth:box?.width,maxHeight:box?.height,visibility:box?"visible":"hidden"}} role="status" tabIndex={0} onPointerDown={event=>event.stopPropagation()} onTouchStart={event=>event.stopPropagation()} onWheel={event=>event.stopPropagation()}>{translated}</div>;
 }

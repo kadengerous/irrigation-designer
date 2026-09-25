@@ -8,7 +8,7 @@ test("rotor rack selection, live controls and canvas tools in the irrigation wor
   const server = await createServer({ server: { middlewareMode: true, hmr: false } });
   try {
     const { placeableCatalog, itemById } = await server.ssrLoadModule("/src/lib/hunter-catalog.ts");
-    const { catalogHeadDefaults, headFlow, performanceAt, pressureRange, radiusRange } = await server.ssrLoadModule("/src/lib/flow.ts");
+    const { catalogHeadDefaults, headFlow, performanceAt, pressureRange, pressureSteps, nearestPressure, radiusRange } = await server.ssrLoadModule("/src/lib/flow.ts");
     const { headParameterRanges, usesAutomaticNozzle } = await server.ssrLoadModule("/src/lib/head-adjustment.ts");
     globalThis.window = { localStorage: globalThis.localStorage };
     const { useProject } = await server.ssrLoadModule("/src/lib/project-store.ts");
@@ -30,52 +30,25 @@ test("rotor rack selection, live controls and canvas tools in the irrigation wor
       assert.ok(headFlow(h).lpm > 0, `${item.id} actual flow remains available`);
       assert.deepEqual([h.x,h.y,h.start,h.zone],[4,5,30,1], "control changes preserve position/orientation/zone");
     };
-    // Reproduce the user's MP3500-90 radius jump with the real pressure table.
+    // Discrete pressure chooses the manufacturer's complete row; manual radius is a separate edit.
     const mp = itemById("MP3500-90");
     reset(mp);
     useProject.getState().updateHead("test-head", {r:10});
     const reduced = current();
-    assert.equal(reduced.designPressure, 2.8);
-    assert.equal(reduced.r, 10);
+    assert.equal(reduced.r,10);
     useProject.setState({past:[],future:[]});
-    useProject.getState().beginHeadEdit();
-    useProject.getState().patchHeadLive(reduced.id, {designPressure:2.6});
-    assert.ok(Math.abs(current().r - 9.857142857142858) < 1e-8, "pressure follows the curve without resetting to 10.5156 m");
-    assert.ok(current().r < radiusRange(mp,current().nozzleId,2.6,current().arc).max);
-    for (const pressure of [2.1,2.4,3.8,2.8,3.1]) {
-      useProject.getState().patchHeadLive(reduced.id, {designPressure:pressure});
-      const nominal = performanceAt(mp,current().nozzleId,pressure,current().arc).row.radiusM;
-      assert.ok(Math.abs(current().r/nominal - 10/10.668) < 1e-8, "one slider gesture keeps the original reduction setting");
-    }
-    assert.equal(current().r,10,"flat sections of the manufacturer curve do not invent a radius change");
-    useProject.getState().endHeadEdit();
+    useProject.getState().updateHead(reduced.id,{designPressure:2.4});
+    assert.equal(current().designPressure,2.4);
+    assert.equal(current().r,performanceAt(mp,current().nozzleId,2.4,current().arc).row.radiusM);
     assert.equal(useProject.getState().past.length,1);
     useProject.getState().undo();
-    assert.deepEqual(current(),reduced);
-
-    // All fixed-nozzle circular models preserve a reduced radius within their own limits.
-    const fixed = placeableCatalog().filter(item => !usesAutomaticNozzle(item) && !item.strip && item.coverageKind !== "point");
-    for (const item of fixed) {
-      reset(item);
-      const range = radiusRange(item,current().nozzleId,current().designPressure,current().arc);
-      if (!range) continue;
-      useProject.getState().updateHead("test-head", {r:(range.min+range.max)/2});
-      const before = current(), p = pressureRange(item,before.nozzleId,before.arc);
-      const nominal = performanceAt(item,before.nozzleId,before.designPressure,before.arc).row.radiusM;
-      useProject.getState().beginHeadEdit();
-      for (const bar of [p.min,(p.min+p.max)/2,p.max,before.designPressure]) {
-        useProject.getState().patchHeadLive(before.id,{designPressure:bar});
-        valid(item,current());
-        const after = radiusRange(item,current().nozzleId,bar,current().arc);
-        const expected = Math.max(after.min,Math.min(after.max,after.max*before.r/nominal));
-        assert.ok(Math.abs(current().r-expected)<1e-8, `${item.id} retains radius reduction`);
-      }
-      assert.ok(Math.abs(current().r-before.r)<1e-8, `${item.id} returns without accumulated drift`);
-      useProject.getState().endHeadEdit();
-    }
+    assert.deepEqual(current(),reduced,"undo restores the previous manual radius and pressure");
+    useProject.getState().redo();
+    assert.equal(current().designPressure,2.4);
     reset(mp);
     useProject.getState().updateHead("test-head",{r:9.5,designPressure:2.6});
-    assert.equal(current().r,9.5,"an explicitly supplied radius wins over the pressure-derived radius");
+    assert.equal(current().designPressure,2.4,"API changes cannot retain intermediate pressure");
+    assert.equal(current().r,9.5,"an explicitly supplied radius remains a separate manual adjustment");
 
     const rotors = placeableCatalog().filter(usesAutomaticNozzle);
     assert.ok(rotors.some(item => item.family === "golf"));
@@ -85,7 +58,7 @@ test("rotor rack selection, live controls and canvas tools in the irrigation wor
       const pressure = headParameterRanges(item,current()).pressure;
       for (const bar of [pressure.min,(pressure.min+pressure.max)/2,pressure.max]) {
         useProject.getState().updateHead("test-head",{designPressure:bar});
-        assert.ok(Math.abs(current().designPressure-bar)<1e-8);
+        assert.equal(current().designPressure,nearestPressure(pressureSteps(item,current().nozzleId,current().arc),bar));
         valid(item,current());
         const radius = headParameterRanges(item,current()).radius;
         for (const r of [radius.min,radius.max]) {

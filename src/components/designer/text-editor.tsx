@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import type { CadText } from "@/lib/cad/types";
-import { tr } from "@/lib/i18n";
+import { tr, formatNumber, parseLocalizedNumber } from "@/lib/i18n";
 import { useProject } from "@/lib/project-store";
 
 const FONTS = ["osifont", "Roboto Mono", "PT Mono", "Fira Mono", "JetBrains Mono", "Noto Sans Mono", "Martian Mono", "Cousine", "Anonymous Pro", "Victor Mono",
@@ -14,7 +14,7 @@ export function TextEditor({note,onSave,onClose}: {note:CadText;onSave:(note:Cad
   const [text,setText]=useState(note.text);
   const [font,setFont]=useState(note.fontFamily ?? FONTS[0]!);
   // A stable 40 px/m reference keeps the entered font size independent of zoom.
-  const [size,setSize]=useState(String(Math.round(note.size*40*100)/100));
+  const [size,setSize]=useState(formatNumber(note.size*40, 2));
   const [color,setColor]=useState(note.color ?? "#1b1f24");
   const [bold,setBold]=useState(Boolean(note.bold));
   const [italic,setItalic]=useState(Boolean(note.italic));
@@ -26,7 +26,7 @@ export function TextEditor({note,onSave,onClose}: {note:CadText;onSave:(note:Cad
     update(); vv?.addEventListener("resize",update);vv?.addEventListener("scroll",update);window.addEventListener("resize",update);
     return ()=>{vv?.removeEventListener("resize",update);vv?.removeEventListener("scroll",update);window.removeEventListener("resize",update);};
   },[]);
-  const value=Number(size.replace(",","."));
+  const value=parseLocalizedNumber(size);
   const valid=text.trim().length>0 && Number.isFinite(value) && value>=4 && value<=400;
   return <Dialog.Root open onOpenChange={open=>{if(!open) onClose();}}>
     <Dialog.Portal>

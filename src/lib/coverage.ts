@@ -3,19 +3,19 @@ import { itemById, stripAtPressure } from "@/lib/hunter-catalog";
 import type { Geom, Head } from "@/lib/project-types";
 import { polyPoints } from "@/lib/project-types";
 
-export function headCovers(h: Head, p: Pt, slack = 1.02): boolean {
+export function headCovers(h: Head, p: Pt, toleranceM = 0): boolean {
   const item = itemById(h.catalogId);
-  if (!item || item.coverageKind === "point") return false;
+  if (!item || item.coverageKind === "point" || ![h.x,h.y,h.r,h.arc,h.start,p.x,p.y].every(Number.isFinite) || h.r<=0 || h.arc<=0 || h.arc>360) return false;
   if (item?.strip) {
     const strip = stripAtPressure(item, h.designPressure);
     return !!strip && pointInStrip(h, p, strip);
   }
-  if (dist(h, p) > h.r * slack) return false;
-  if (h.arc >= 359) return true;
+  if (dist(h, p) > h.r + toleranceM) return false;
+  if (h.arc >= 360) return true;
   const ang = headingDeg(h, p);
   let d = ang - h.start;
   while (d < 0) d += 360;
-  return d % 360 <= h.arc + 3;
+  return d % 360 <= h.arc + 1e-9 || 360-d%360 <= 1e-9;
 }
 
 function pointInStrip(h: Head, p: Pt, s: { w: number; l: number; ox: number; oy: number }): boolean {

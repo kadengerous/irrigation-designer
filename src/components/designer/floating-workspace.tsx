@@ -1,3 +1,4 @@
+import { text as uiText } from "@/lib/i18n";
 import {
   useLayoutEffect,
   useEffect,
@@ -312,7 +313,7 @@ export function FloatingToolbar({
       ref={ref}
       className="workspace-tool-strip adaptive-toolbar"
       role="toolbar"
-      aria-label="Инструменты черчения"
+      aria-label={uiText("drawingTools")}
       aria-orientation={vertical ? "vertical" : "horizontal"}
       data-orientation={vertical ? "vertical" : "horizontal"}
       data-floating-priority="60"
@@ -328,7 +329,7 @@ export function FloatingToolbar({
       <button
         type="button"
         className="floating-grip"
-        aria-label="Переместить панель инструментов"
+        aria-label={uiText("moveToolPanel")}
         aria-pressed={dragging}
         onPointerDown={(e) => {
           if (e.button !== 0) return;

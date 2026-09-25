@@ -38,8 +38,9 @@ test("phone grid taps, hold suppression, preview gestures and desktop guards", a
   assert.match(app, /\{!isPhone && <Popover.Trigger/);
   const header = app.slice(app.indexOf("<header"), app.indexOf("</header>"));
   const footer = app.slice(app.indexOf("<footer"), app.indexOf("</footer>"));
-  assert.match(header, /aria-label="Инструменты"/);
-  assert.match(header, /aria-label=\{t\("library"\)\}/);
+  assert.match(header, /aria-label=\{t\("mainSections"\)\}/);
+  for (const section of ["reference", "plan", "landscape", "irrigation"]) assert.ok(header.includes(`t("${section}")`));
+  assert.match(header, /workspace-section-divider/);
   assert.doesNotMatch(header, /<Layers \/>|<Crosshair size=\{22\} \/>|aria-label="Предпросмотр"/);
   assert.match(footer, /<Layers \/>/);
   assert.match(footer, /\{viewControls\}/);
@@ -93,6 +94,9 @@ test("sheet gestures only expand, compact or close the interface", async () => {
     assert.match(PHONE_QUERY, /max-width: 767px/);
     assert.match(PHONE_QUERY, /max-height: 600px/);
     const { useProject } = await server.ssrLoadModule("/src/lib/project-store.ts");
+    if (!useProject.persist.hasHydrated()) await new Promise(resolve => { const off = useProject.persist.onFinishHydration(() => { off(); resolve(); }); });
+    useProject.getState().setLocale("ru");
+    Object.assign(useProject.getInitialState(), useProject.getState());
     const before = useProject.getState();
     const snapshot = JSON.stringify(before.project);
     const compact = renderToStaticMarkup(createElement(MobileSheet, { title: "Параметры", panelKey: "properties", compact: true, onClose() {}, children: createElement("input", { "aria-label": "Ширина" }), footer: createElement("button", null, "Готово") }));
@@ -101,7 +105,7 @@ test("sheet gestures only expand, compact or close the interface", async () => {
     assert.match(compact, /class="mobile-parameter-actions"/);
     assert.doesNotMatch(compact, /mobile-sheet-header|mobile-sheet-handle|<h2/);
     assert.equal(JSON.stringify(useProject.getState().project), snapshot);
-    for (const panel of ["tools", "layers", "library", "properties", "irrigation", "estimate"]) {
+    for (const panel of ["tools", "layers", "library", "properties", "irrigation"]) {
       const markup = renderToStaticMarkup(createElement(MobileSheet, { title: panel, panelKey: panel, onClose() {}, children: createElement(MobileLayers, { onEdit() {} }) }));
       assert.equal((markup.match(/data-mobile-sheet=/g) ?? []).length, 1);
       assert.match(markup, /role="region"/);
@@ -125,15 +129,16 @@ test("mobile tool inventory retains every draw mode and reuses existing size edi
   for (const editor of ["DrawMeasurePad", "SplineLengthsPad", "FreeformSidesPad", "CadEditBar"])
     assert.match(app, new RegExp(`<${editor}\\b`));
   assert.match(app, /mobilePanel === "properties"/);
-  const properties = app.slice(app.indexOf('{mobilePanel === "properties" && <>'), app.indexOf('{mobilePanel === "estimate" && <EstimateCard'));
+  const properties = app.slice(app.indexOf('{mobilePanel === "properties" && <>'), app.indexOf('{mobilePanel === "irrigation" && <><ZoneList'));
   assert.doesNotMatch(properties, /mobile-object-metrics|mobile-region-select|DrawingCard|CadEditBar/);
   assert.match(app, /!isPhone && cadEditId && !catalogOpen && !draft.points.length && <CadEditBar/);
   assert.match(app, /footer=\{mobilePanel === "properties" && selected/);
   assert.match(app, /<DrawMeasurePad\s+compact=\{isPhone\}/);
   assert.match(app, /selected \? <HeadCard head=\{selected\} \/> : \(!mobileFace \|\| cadEditId\) \? contextControls/);
-  assert.match(app, /mobilePanel === "estimate" && <EstimateCard/);
+  assert.match(app, /<EstimateDialog mobile=\{isPhone\}/);
+  assert.doesNotMatch(app, /mobilePanel === "estimate"/);
   assert.match(app, /setMobileWorkspaceMode\("irrigation"\)/);
-  assert.match(app, /<ZoneList \/><PumpBox \/>/);
+  assert.match(app, /<ZoneList \/><ZoneReview/);
 });
 
 test("mobile navigation and catalog scroll do not call drawing mutations", async () => {

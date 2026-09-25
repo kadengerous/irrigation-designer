@@ -19,8 +19,11 @@ const PRECISE_DRAW_TOOLS = new Set(["line", "polyline", "polygon", "rect", "rotr
 export function canShowMagnifier(state: {
   blocked: boolean; catalogOpen: boolean; editDrag: boolean; tool: string | null;
   drawSub: string | null; cadEditId: string | null; selectedEdgeId: string | null; draftPointCount: number;
+  sectorEditId?: string | null;
 }) {
-  if (state.blocked || state.catalogOpen) return false;
+  if (state.blocked) return false;
+  if (state.sectorEditId && state.editDrag) return true;
+  if (state.catalogOpen) return false;
   if (state.editDrag) return true;
   return state.tool === "draw" && !state.cadEditId && !state.selectedEdgeId && state.draftPointCount > 0 &&
     PRECISE_DRAW_TOOLS.has(state.drawSub ?? "");

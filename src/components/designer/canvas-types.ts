@@ -3,6 +3,7 @@ import type { Pt } from "@/lib/geometry";
 export type DesignCanvasProps = {
   previewView?: { px: number; panX: number; panY: number };
   multiSelect?: boolean;
+  onSelectionClear?: () => void;
   mobile?: boolean;
   onScalePair: (a: Pt, b: Pt) => void;
   onMeasure: (meters: number) => void;

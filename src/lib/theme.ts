@@ -96,10 +96,6 @@ const THEMES: Record<ThemeId, ThemeBase> = {
   graphite: { dark: true, bg: "#172126", surface: "#202B2F", ink: "#EFF8F5", tool: "#62D6B1", btn: "#62D6B1" },
 };
 
-export const THEME_NAMES: Record<ThemeId, string> = {
-  crystal: "Кристалл", pearl: "Жемчуг", sage: "Шалфей", ice: "Лёд",
-  sand: "Песок", matte: "Матовый", graphite: "Графит",
-};
 
 /** Render-only values: never write these into project geometry or object colours. */
 export function canvasTheme(id: ThemeId) {

@@ -1,3 +1,4 @@
+import { PLANT_NAMES } from "../src/lib/data-i18n";
 import seed from "../data/landscape-plants.json";
 import { normalizePlantSearch, plantSearchText, type PlantCategory, type PlantRecord } from "../src/lib/landscape-types";
 import { enrichPlant, searchTaxa } from "./landscape-sources";
@@ -9,9 +10,12 @@ const insert = (db: LandscapeDB, p: PlantRecord, replace = false) => db.prepare(
 export async function initializeLandscape(db: LandscapeDB) {
   let hash = 2166136261;
   for (const char of JSON.stringify(seed)) hash = Math.imul(hash ^ char.charCodeAt(0), 16777619);
-  const marker = `catalog-seed-${hash >>> 0}`;
+  const marker = `catalog-seed-i18n-latin-search-v2-${hash >>> 0}`;
   if (await db.prepare("SELECT payload FROM landscape_search_cache WHERE query=?").bind(marker).first()) return;
-  await db.batch((seed as PlantRecord[]).map(p => insert(db, p, true)));
+  // Reindex cached records once when normalization changes; source facts and names stay intact.
+  const existing = await db.prepare("SELECT record FROM landscape_plants").all();
+  if (existing.results.length) await db.batch(existing.results.filter(row => row.record).map(row => insert(db, JSON.parse(row.record!) as PlantRecord, true)));
+  await db.batch((seed as PlantRecord[]).map(p => insert(db, { ...p, names: PLANT_NAMES[p.latinName] ? { en: PLANT_NAMES[p.latinName]![0], ja: PLANT_NAMES[p.latinName]![1], "zh-CN": PLANT_NAMES[p.latinName]![2] } : p.names }, true)));
   await db.prepare("INSERT INTO landscape_search_cache(query,payload,updated_at) VALUES(?,?,?) ON CONFLICT(query) DO NOTHING").bind(marker, "{}", Date.now()).run();
 }
 export async function getPlant(db: LandscapeDB, id: string) {
@@ -23,7 +27,7 @@ export async function getPlant(db: LandscapeDB, id: string) {
   if (enriched !== record) await insert(db, enriched, true).run();
   return enriched;
 }
-export async function searchPlants(db: LandscapeDB, query: string, category: PlantCategory, page: number) {
+export async function searchPlants(db: LandscapeDB, query: string, category: PlantCategory, page: number, locale = "ru") {
   const q = normalizePlantSearch(query);
   const terms = q.split(/\s+/).filter(Boolean).slice(0, 8);
   const where = terms.length ? terms.map(() => "search_text LIKE ? ESCAPE '\\'").join(" AND ") : "category=?";
@@ -37,11 +41,11 @@ export async function searchPlants(db: LandscapeDB, query: string, category: Pla
   let hasMore = result.results.length > 24;
   let warning: string | null = null;
   if (q.length >= 2) {
-    const cacheKey = `taxa:${q}:${page}`;
+    const cacheKey = `taxa:${locale}:${q}:${page}`;
     const cache = await db.prepare("SELECT payload,updated_at FROM landscape_search_cache WHERE query=?").bind(cacheKey).first();
     try {
       const external = cache?.payload && Date.now() - (cache.updated_at ?? 0) < 86400000 * 7
-        ? JSON.parse(cache.payload) as Awaited<ReturnType<typeof searchTaxa>> : await searchTaxa(query, page);
+        ? JSON.parse(cache.payload) as Awaited<ReturnType<typeof searchTaxa>> : await searchTaxa(query, page, locale);
       if (!cache?.payload || Date.now() - (cache.updated_at ?? 0) >= 86400000 * 7) {
         if (external.plants.length) await db.batch(external.plants.map(p => insert(db, p)));
         await db.prepare("INSERT INTO landscape_search_cache(query,payload,updated_at) VALUES(?,?,?) ON CONFLICT(query) DO UPDATE SET payload=excluded.payload,updated_at=excluded.updated_at")
@@ -53,7 +57,7 @@ export async function searchPlants(db: LandscapeDB, query: string, category: Pla
       hasMore ||= external.hasMore;
     } catch (error) {
       console.error("[landscape] External search unavailable", String(error));
-      warning = "Внешний каталог временно недоступен. Показаны растения из сохранённой базы.";
+      warning = "plantsExternalUnavailable";
     }
   }
   return { plants, hasMore, warning, page };

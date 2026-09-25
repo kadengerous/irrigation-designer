@@ -1,98 +1,33 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { build } from "esbuild";
+import { mkdir, rm } from "node:fs/promises";
+import { resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 
-const EN_METRIC_REGIONS = new Set(["GB", "AU", "NZ", "CA", "IE", "IN", "ZA", "SG"]);
+const directory = resolve("node_modules/.cache/locale-units-tests");
+await mkdir(directory, { recursive: true });
+const bundle = resolve(directory, `${process.pid}.mjs`);
+await build({ stdin: { contents: `export * from './src/lib/units'; export {setActiveLocale,setNumberPrefs} from './src/lib/i18n';`, resolveDir: process.cwd() }, outfile: bundle, bundle: true, platform: "node", format: "esm", packages: "external", logLevel: "silent" });
+const units = await import(pathToFileURL(bundle).href);
+await rm(bundle);
 
-function recommendedUnitSystem(locale, region) {
-  if (locale !== "en") return "metric";
-  const r = (region ?? "").toUpperCase();
-  if (!r) return "us";
-  if (r === "US") return "us";
-  if (EN_METRIC_REGIONS.has(r)) return "metric";
-  return "us";
-}
-
-function numberFormatForUnits(preset) {
-  return preset === "us" ? "comma-dot" : "space-comma";
-}
-
-function localeFromBcp47(tag) {
-  return (tag.trim().toLowerCase().split(/[-_]/)[0] || "en");
-}
-
-function regionFromBcp47(tag) {
-  const p = tag.trim().split(/[-_]/);
-  return p[1] ? p[1].toUpperCase() : null;
-}
-
-function bootstrap(tag) {
-  const locale = localeFromBcp47(tag);
-  const known = new Set(["ru", "en", "es", "de", "fr", "pt", "it", "zh", "ja", "pl", "tr"]);
-  const loc = known.has(locale) ? locale : "en";
-  const unitPreset = recommendedUnitSystem(loc, regionFromBcp47(tag));
-  return { locale: loc, unitPreset, numberFormat: numberFormatForUnits(unitPreset) };
-}
-
-test("TEST 1 first launch ru-RU → Russian + Metric", () => {
-  const b = bootstrap("ru-RU");
-  assert.equal(b.locale, "ru");
-  assert.equal(b.unitPreset, "metric");
-  assert.equal(b.numberFormat, "space-comma");
-});
-
-test("TEST 2 English without region → US", () => {
-  assert.equal(recommendedUnitSystem("en", null), "us");
-  assert.equal(recommendedUnitSystem("en", ""), "us");
-});
-
-test("TEST 3 English then manual Metric keeps language", () => {
-  const lang = "en";
-  let units = "us";
-  units = "metric";
-  assert.equal(lang, "en");
-  assert.equal(units, "metric");
-});
-
-test("TEST 4 Metric → US without language change", () => {
-  const lang = "ru";
-  let units = "metric";
-  units = "us";
-  assert.equal(lang, "ru");
-  assert.equal(units, "us");
-});
-
-test("TEST 6 Russian+US then Français → Metric", () => {
-  assert.equal(recommendedUnitSystem("fr", "FR"), "metric");
-});
-
-test("TEST 7 English+Metric then Russian → Metric", () => {
-  assert.equal(recommendedUnitSystem("ru", "US"), "metric");
-});
-
-test("TEST 8 English region GB Metric, US stays US", () => {
-  assert.equal(recommendedUnitSystem("en", "GB"), "metric");
-  assert.equal(recommendedUnitSystem("en", "AU"), "metric");
-  assert.equal(recommendedUnitSystem("en", "NZ"), "metric");
-  assert.equal(recommendedUnitSystem("en", "CA"), "metric");
-  assert.equal(recommendedUnitSystem("en", "US"), "us");
-  const gb = bootstrap("en-GB");
-  assert.equal(gb.locale, "en");
-  assert.equal(gb.unitPreset, "metric");
-  const us = bootstrap("en-US");
-  assert.equal(us.locale, "en");
-  assert.equal(us.unitPreset, "us");
-  assert.equal(us.numberFormat, "comma-dot");
-});
-
-test("non-English languages recommend Metric", () => {
-  for (const loc of ["ru", "es", "de", "fr", "pt", "it", "zh", "ja", "pl", "tr"]) {
-    assert.equal(recommendedUnitSystem(loc, null), "metric", loc);
+test("first-launch regional defaults use production settings without tying number formats to units", () => {
+  for (const [tag, locale, preset] of [["ru-RU","ru","metric"],["en-US","en","us"],["en-GB","en","metric"],["en-AU","en","metric"],["ja-JP","ja","metric"],["zh-CN","zh-CN","metric"],["es-ES","es","metric"],["de-DE","de","metric"],["fr-FR","fr","metric"],["pt-BR","pt-BR","metric"],["it-IT","it","metric"],["pl-PL","pl","metric"],["tr-TR","tr","metric"],["ar-SA","ar","metric"],["nl-NL","nl","metric"],["cs-CZ","cs","metric"],["el-GR","el","metric"],["hu-HU","hu","metric"],["ro-RO","ro","metric"],["sk-SK","sk","metric"],["he-IL","he","metric"],["uk-UA","uk","metric"],["pt","pt-BR","metric"],["zh","zh-CN","metric"],["iw-IL","he","metric"]]) {
+    const actual = units.bootstrapLocaleAndUnits(tag);
+    assert.equal(actual.locale, locale);
+    assert.equal(actual.unitPreset, preset);
+    assert.equal(actual.numberFormat, "auto");
+    assert.deepEqual(actual.units, preset === "us" ? units.US_UNITS : units.METRIC_UNITS);
   }
 });
-
-test("geometry stays canonical metres (10 m → 32.81 ft display only)", () => {
-  const metres = 10;
-  const ft = metres / 0.3048;
-  assert.ok(Math.abs(ft - 32.8084) < 0.001);
-  assert.equal(metres, 10);
+test("engineering display converts canonical quantities with the selected language's number format", () => {
+  units.setNumberPrefs("auto", 2);
+  units.setActiveLocale("ru");
+  assert.equal(units.formatLenU(3.048, "ft"), "10,00 фут");
+  units.setActiveLocale("en");
+  assert.equal(units.formatLenU(3.048, "ft"), "10.00 ft");
+  assert.equal(units.formatLenU(3.048, "m"), "3.05 m");
+  for (const unit of units.LENGTH_OPTS) assert.ok(Math.abs(units.toMetersLen(units.fromMeters(12.5, unit), unit) - 12.5) < 1e-9);
+  for (const unit of units.AREA_OPTS) assert.ok(Math.abs(units.toM2(units.fromM2(350, unit), unit) - 350) < 1e-9);
 });

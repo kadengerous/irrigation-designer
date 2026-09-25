@@ -9,7 +9,7 @@ import { resolve } from "node:path";
 const dir = resolve("node_modules/.cache/landscape-tests");
 await mkdir(dir, {recursive:true});
 const bundle = resolve(dir, `test-${process.pid}.mjs`);
-await build({stdin:{contents:`export {useProject,migrateProject} from './src/lib/project-store';
+await build({stdin:{contents:`export {LOCALES} from './src/lib/locale-config'; export {useProject,migrateProject} from './src/lib/project-store';
 export {emptyDrawing} from './src/lib/cad/types'; export {cadSnap} from './src/lib/cad/snap';
 export {parseProjectFile,toProjectFile} from './src/lib/project-file';
 export {projectToSvg,projectToDxf} from './src/lib/export-plan';
@@ -20,6 +20,7 @@ const memory = new Map();
 globalThis.localStorage = {getItem:k=>memory.get(k) ?? null,setItem:(k,v)=>memory.set(k,v),removeItem:k=>memory.delete(k)};
 globalThis.window = { localStorage: globalThis.localStorage };
 const app = await import(pathToFileURL(bundle).href);
+if (!app.useProject.persist.hasHydrated()) await new Promise(resolve => { const off = app.useProject.persist.onFinishHydration(() => { off(); resolve(); }); });
 await rm(bundle);
 const seed = JSON.parse(await readFile(new URL("../data/landscape-plants.json",import.meta.url),"utf8"));
 const originalFetch = globalThis.fetch;
@@ -78,11 +79,13 @@ test("external taxonomy does not invent traits or water, rejects non-plants and 
   assert.equal(app.taxonRecord({...basic,iconic_taxon_id:1}),null);assert.equal(app.taxonRecord({...basic,rank_level:20}),null);
   const html='<h1>Salvia officinalis</h1>Dimensions: Height: 1 ft. 0 in. - 2 ft. 0 in. Width: 1 ft. 6 in. - 3 ft. 0 in. Whole Plant Traits: Plant Type: Shrub Cultural Conditions: Light: Full sun Soil Texture: Loam Soil pH: Neutral Soil Drainage: Good Drainage Moist USDA Plant Hardiness Zone: 5a, 5b';
   const sourced=app.parseToolboxFacts(html,p,"https://plants.ces.ncsu.edu/plants/salvia-officinalis/");
-  assert.deepEqual([sourced.matureWidthM.min,sourced.matureWidthM.max],[0.46,0.91]);assert.equal(sourced.category,"shrub");assert.equal(sourced.water.need,null);
+  assert.deepEqual([sourced.matureWidthM.min,sourced.matureWidthM.max],[0.46,0.91]);assert.equal(sourced.category,"shrub");assert.equal(sourced.light,"fact_sun");assert.equal(sourced.soil,"fact_loam");assert.equal(sourced.water.need,null);
   assert.equal(app.parseToolboxFacts(html.replace('Salvia officinalis','Salvia splendens'),p,"https://example.test"),p);
 });
-test("plants edit, duplicate, undo, export and reopen independently without changing drawing scale",()=>{
+test("plants edit, duplicate, undo, export and reopen independently without changing drawing scale",async()=>{
   const store=app.useProject;
+  store.getState().setLocale("ru");
+  store.getState().setUnitPreset("metric");
   store.getState().newProject();
   const view={panX:store.getState().panX,panY:store.getState().panY,pxPerMeter:store.getState().pxPerMeter};
   store.getState().preparePlant(seed[0],"tree",6);store.getState().placeCatalogPlant({x:8,y:9});
@@ -97,7 +100,8 @@ test("plants edit, duplicate, undo, export and reopen independently without chan
   const project=store.getState().project;
   const reopened=app.migrateProject(app.parseProjectFile(JSON.stringify({type:"irrigationproject",schemaVersion:1,project})).project);
   assert.deepEqual(reopened.drawing.plants,project.drawing.plants);
-  assert.deepEqual(JSON.parse(memory.get("irrigation-designer-v3")).state.project.drawing.plants,project.drawing.plants);
+  const persisted = await store.persist.getOptions().storage.getItem("irrigation-designer-v3");
+  assert.deepEqual(persisted.state.project.drawing.plants,project.drawing.plants);
   assert.match(app.projectToSvg(project),/Берёза повислая/);assert.match(app.projectToDxf(project),/PLANTS/);
   assert.deepEqual({panX:store.getState().panX,panY:store.getState().panY,pxPerMeter:store.getState().pxPerMeter},view);
   store.getState().selectPlant(id);store.getState().updatePlant(id,{locked:true});store.getState().deleteSelected();
@@ -124,4 +128,22 @@ test("snapping a new plant to an existing center preserves two independent objec
 });
 test("seed records have local photographs, provenance, and no unsourced quantitative water value",async()=>{
   for(const p of seed){assert.ok(p.id);assert.ok(p.photos[0].author);await readFile(resolve("public",p.photos[0].url.slice(1)));assert.ok(p.sources.length);if(p.water.need)assert.ok(p.water.sourceUrl);if(p.water.quantity){assert.ok(p.water.quantity.conditions);assert.ok(p.water.quantity.sourceUrl);}}
+});
+
+test("plant search forwards all twenty locales and preserves localized taxonomy names",async()=>{
+  const locales=app.LOCALES.map(locale=>locale.id);
+  const requested=[];
+  globalThis.fetch=async url=>{
+    const locale=new URL(url).searchParams.get("locale");requested.push(locale);
+    return Response.json({results:[{id:991122,name:"Testus locales",rank_level:10,iconic_taxon_id:47126,preferred_common_name:`common-${locale}`,names:locales.map(locale=>({locale,name:`name-${locale}`}))}],total_results:1});
+  };
+  try {
+    for(const locale of locales){
+      const result=await(await request(`?q=locale-probe&locale=${locale}`)).json();
+      const plant=result.plants.find(p=>p.id==="inat-991122");
+      assert.ok(plant,locale);assert.equal(plant.names[locale],`name-${locale}`);
+      for(const other of locales) assert.equal(plant.names[other],`name-${other}`);
+    }
+    assert.deepEqual(requested,locales);
+  }finally{globalThis.fetch=originalFetch;}
 });

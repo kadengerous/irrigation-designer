@@ -11,6 +11,9 @@ test("large palette renders five modes, large color families, shades and save co
     );
     const Popover = await import("@radix-ui/react-popover");
     const { useProject } = await server.ssrLoadModule("/src/lib/project-store.ts");
+    if (!useProject.persist.hasHydrated()) await new Promise(resolve => { const off = useProject.persist.onFinishHydration(() => { off(); resolve(); }); });
+    useProject.getState().setLocale("ru");
+    Object.assign(useProject.getInitialState(), useProject.getState());
     const before = useProject.getState();
     const markup = renderToStaticMarkup(
       createElement(

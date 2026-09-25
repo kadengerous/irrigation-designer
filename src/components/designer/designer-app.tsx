@@ -1,17 +1,29 @@
 "use client";
+import { projectHasContent } from "@/lib/project-store";
+import { frameUpdate } from "@/lib/frame-update";
+import { zoneLabel } from "@/lib/project-types";
+import { nozzleName, catalogName, catalogUse, catalogNote, catalogColor, plantName } from "@/lib/catalog-localization";
+import { LocalizedNumberInput } from "./localized-number-input";
+import { text as uiText } from "@/lib/i18n";
 
 import { FloatingToolbar, AdaptiveTooltip, WorkspacePanelBounds, WorkspaceTooltips } from "./floating-workspace";
 import { TapeMeasureIcon } from "./tape-measure-icon";
 import { SprinklerIcon } from "./sprinkler-icon";
 import { MeasurementResult } from "./measurement-result";
 import { CatalogSeriesInfo, CatalogThumb, CatalogReference } from "./catalog-details";
-import { sliderRange } from "@/lib/slider-range";
-import { headParameterRanges } from "@/lib/head-adjustment";
+import { sliderRange, sliderFillPosition } from "@/lib/slider-range";
+import { headRadiusScale } from "@/lib/head-adjustment";
+import { HEAD_CONTROL_COLORS } from "@/lib/head-sector-edit";
 import { LandscapeLibrary, PlantInspector, PlantPlacementHint } from "./landscape-library";
+import { ReferencePanel, useReferenceImport } from "./reference-panel";
+import { REFERENCE_ACCEPT, referenceFileKind } from "@/lib/reference-file";
 
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import * as Popover from "@radix-ui/react-popover";
+import * as Dialog from "@radix-ui/react-dialog";
+import { DirectionProvider } from "@radix-ui/react-direction";
+import { localeDirection } from "@/lib/locale-config";
 import {
   Trees,
   ChevronLeft,
@@ -22,7 +34,9 @@ import {
   Crosshair,
   Droplets,
   FileDown,
+  FileImage,
   FileText,
+  FilePlus2,
   FolderOpen,
   Eye,
   EyeOff,
@@ -59,27 +73,38 @@ import {
   X,
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
-import { formatNumber, setActiveLocale, setNumberPrefs, tr } from "@/lib/i18n";
+import { activeNumberLocale, formatDate, formatNumber, parseLocalizedNumber, setActiveLocale, setNumberPrefs, tr } from "@/lib/i18n";
 import { applyTheme } from "@/lib/theme";
-import { flowLabel, fromLpm, formatAreaU, formatFlowU, formatGridStep, formatLenU, formatPressureU, fromM2, fromMeters, lenLabel, areaLabel, LENGTH_OPTS, toM2, toMetersLen } from "@/lib/units";
+import { fromBar, toBar, toLpm, pressureLabel, formatDepth, formatPrecipitation, setActiveUnits, flowLabel, fromLpm, formatAreaU, formatFlowU, formatGridStep, formatLenU, formatPressureU, fromM2, fromMeters, lenLabel, areaLabel, LENGTH_OPTS, toM2, toMetersLen } from "@/lib/units";
 import { SettingsPanel } from "@/components/designer/settings-panel";
 import { layoutOnDrawing, layoutOnPolygon } from "@/lib/auto-layout";
-import { checkProject } from "@/lib/check-project";
+import { IrrigationCheck, IrrigationCheckButton } from "./irrigation-check";
+import { AutomaticPlanControls } from "./automatic-plan-controls";
+import { CatalogPlacementPreview } from './sprinkler-placement-guides';
+import { FileSaveDialog } from './file-save-dialog';
+import { ProjectExportDialog, ProjectTrashDialog } from "./project-files-dialogs";
+import { attachStorageLifecycle, flushProjectStorage } from "@/lib/workspace-storage";
 import { coverageStats, exclusionPolygons, lawnPolygon } from "@/lib/coverage";
-import { CATEGORIES, bodiesFor, bomLineName, catalogPhoto, defaultBodyFor, defaultNozzle, itemById, nozzleRange, placeableCatalog, stripAtPressure, workingPressureBar, type CatalogItem } from "@/lib/hunter-catalog";
+import { CATEGORIES, bodiesFor, bodyForHead, bomLineName, catalogPhoto, defaultBodyFor, defaultNozzle, itemById, nozzleRange, placeableCatalog, recommendedBodyFor, stripAtPressure, workingPressureBar, type CatalogItem } from "@/lib/hunter-catalog";
 import { exportDxf, exportEstimateExcel, exportEstimatePdf, exportEstimateWord, exportPdf, exportPdfFromProject, exportPng, exportPngFromProject, exportProjectJson, exportSvg } from "@/lib/export-plan";
 import { downloadProjectFile, fileStem, parseProjectFile, toProjectFile } from "@/lib/project-file";
-import { catalogHeadDefaults, computeFlow, pressureRange, headFlow, runTimeMin, totalAreaPrecip } from "@/lib/flow";
+import { catalogHeadDefaults, computeFlow, pressureRange, pressureSteps, headFlow, runTimeMin } from "@/lib/flow";
 import { closedPathSideStarts, dist, fmt1, fmtM, headingDeg, parseMeasureUnit, pointInPoly, polygonArea, toMeters, uid, type Pt } from "@/lib/geometry";
 import { parseCadInput } from "@/lib/cad/parse";
-import { arcLength, catmullRom, faceArea, faceCentroid, faceEdges, faceLayerNumber, facePerimeter, facePoints, headInsideFace, isDrawnCurveFace, isInternalEdge, isTriangleFace, rectMetaMatchesFace, rectWorldCorners, setFaceSideLength, triangleMetrics, mergeLayers, layerFaceIds, layerRepresentatives, layerArea, layerBounds } from "@/lib/cad/engine";
+import { arcLength, catmullRom, faceArea, faceCentroid, faceEdges, faceLayerNumber, facePerimeter, facePoints, isDrawnCurveFace, isInternalEdge, isTriangleFace, rectMetaMatchesFace, rectWorldCorners, setFaceSideLength, triangleMetrics, mergeLayers, layerFaceIds, layerRepresentatives, layerArea, layerBounds } from "@/lib/cad/engine";
 import { segmentFigures, createSegmentFigure } from "@/lib/cad/segment-figures";
 import { fusionCandidates, fuseFigures } from "@/lib/cad/fuse-figures";
 import { CAD_LAYERS, REGION_FILL, layerForType } from "@/lib/cad/types";
-import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, recommendPump, zoneFlow, zonePressure } from "@/lib/hydro";
+import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, projectZoneLimit, recommendPump, zoneFlow } from "@/lib/hydro";
 import { HeadSelectionActions } from "./head-selection-actions";
+import { PressureSteps } from "./pressure-steps";
+import { HeadPlacementSettings } from "./head-placement-settings";
+import { BodyOptions } from "./body-options";
+import { useZoneDeletion } from "./zone-delete-dialog";
+import { ZoneList } from "./zone-list";
+import { SectorEditIcon } from "./head-sector-actions";
 import { type Head, type Project, zoneColor } from "@/lib/project-types";
-import { isNamed, useProject, drawingForEditing as drawingOrMigrate } from "@/lib/project-store";
+import { isNamed, useProject, projectWithView, updateHeadSettings, drawingForEditing as drawingOrMigrate } from "@/lib/project-store";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CanvasHost } from "@/components/designer/canvas-host";
@@ -188,12 +213,12 @@ const DRAW_KINDS: { id: import("@/lib/cad/types").RegionType; key: string }[] = 
 ];
 
 const GRID_STEPS = [
-  { id: 0.1, label: "0,10 м" },
-  { id: 0.25, label: "0,25 м" },
-  { id: 0.5, label: "0,50 м" },
-  { id: 1, label: "1,00 м" },
-  { id: 2, label: "2,00 м" },
-  { id: 5, label: "5,00 м" },
+  { id: 0.1 },
+  { id: 0.25 },
+  { id: 0.5 },
+  { id: 1 },
+  { id: 2 },
+  { id: 5 },
 ] as const;
 
 function useT() {
@@ -218,7 +243,11 @@ export function DesignerApp() {
   }), []);
   const [mobileWorkspaceMode, setMobileWorkspaceMode] = useState<"drawing" | "irrigation">("drawing");
   const mobileInspectTarget = useRef<string | null>(null);
+  const previousMobileHead = useRef<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+  const referenceFileRef = useRef<HTMLInputElement>(null);
+  const referenceOpen = useProject(s => s.referenceOpen);
+  const referenceImport = useReferenceImport();
   const exportFn = useRef<(() => string | null) | null>(null);
   const [scalePair, setScalePair] = useState<{ a: { x: number; y: number }; b: { x: number; y: number } } | null>(null);
   const [scaleValue, setScaleValue] = useState("5.00");
@@ -231,6 +260,8 @@ export function DesignerApp() {
   const [fileMenuOpen, setFileMenuOpen] = useState(false);
   const [exportDrawOpen, setExportDrawOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
+  const [trashOpen, setTrashOpen] = useState(false);
+  const [exportProject, setExportProject] = useState<Project|null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const projectMenuAnchor = useRef<HTMLButtonElement>(null);
   const [issuesOpen, setIssuesOpen] = useState(false);
@@ -259,6 +290,13 @@ export function DesignerApp() {
   const catalogListRef = useRef<HTMLUListElement>(null);
 
   const project = useProject((s) => s.project);
+  const workspaceSection = useProject(s => s.workspaceSection);
+  const simulationProjectId = useProject(s => s.simulationProjectId);
+  useEffect(() => {
+    if (workspaceSection !== "irrigation" || simulationProjectId !== project.id)
+      useProject.setState({ simulationProjectId: null });
+  }, [workspaceSection, project.id, simulationProjectId]);
+  const [startDismissed, setStartDismissed] = useState<string | null>(null);
   const tool = useProject((s) => s.tool);
   const drawSub = useProject((s) => s.drawSub);
   const polyKind = useProject((s) => s.regionType);
@@ -300,11 +338,20 @@ export function DesignerApp() {
   const decimals = useProject((s) => s.decimals);
   const units = useProject((s) => s.units);
   const t = useT();
+  setActiveLocale(locale); setNumberPrefs(numberFormat, decimals); setActiveUnits(units);
   useEffect(() => {
     setActiveLocale(locale);
     setNumberPrefs(numberFormat, decimals);
     document.documentElement.lang = locale;
+    document.documentElement.dir = localeDirection(locale);
+    document.title = tr(locale, "appTitle");
+    document.querySelector('meta[name="description"]')?.setAttribute("content", tr(locale, "appDescription"));
   }, [locale, numberFormat, decimals]);
+  useEffect(() => {
+    const onStorageError = () => toast.error(uiText("storageError"), { duration: 12000 });
+    window.addEventListener("project-storage-error", onStorageError);
+    return () => window.removeEventListener("project-storage-error", onStorageError);
+  }, []);
   useEffect(() => {
     applyTheme(themeId, buttonStyle, accent, themeAccent, themeGradient, themeAccent2);
     document.documentElement.dataset.uiSize = uiSize;
@@ -320,32 +367,29 @@ export function DesignerApp() {
   const mergePrompt = useProject((s) => s.mergePrompt);
   const snapGridOn = useProject((s) => s.snapGridOn);
   const gridStep = useProject((s) => s.gridStep);
-  const cleanKey = `${project.id}:${project.updatedAt}:${project.name}`;
-  const [cleanSig, setCleanSig] = useState(cleanKey);
-  const dirty = project.name === "Без названия" || cleanKey !== cleanSig;
-  useEffect(() => {
-    setCleanSig(`${project.id}:${project.updatedAt}:${project.name}`);
-  }, [project.id]);
   const draft = useProject((s) => s.draft);
   useEffect(() => { setMeasurementResult(null); }, [tool, measureSub, project.id]);
   useEffect(() => { if (draft.measureA) setMeasurementResult(null); }, [draft.measureA]);
   const pointHistoryActive = tool === "draw" && (drawSub === "polygon" || drawSub === "spline");
   useEffect(() => {
     if (!isPhone) return;
+    const deselectedHead = Boolean(previousMobileHead.current && !selectedId);
+    previousMobileHead.current = selectedId;
     const selectionKey = selectedObjectKey({ selectedPolyId, selectedId, selectedEdgeId, cadEditId });
     if (mobileInspectTarget.current !== selectionKey) mobileInspectTarget.current = null;
     const editing = (cadEditId && !selectedId) || (selectionKey && mobileInspectTarget.current === selectionKey);
     const constructing = (tool === "draw" && drawSub !== "none") || tool === "measure" || tool === "scale";
-    if (selectedId || tool === "place") setMobileWorkspaceMode("irrigation");
-    else if (selectedPolyId || selectedEdgeId || constructing) setMobileWorkspaceMode("drawing");
+    setMobileWorkspaceMode(workspaceSection === "irrigation" ? "irrigation" : "drawing");
     setMobilePanel((current) => {
+      if (selectedId && workspaceSection === "irrigation") return "properties";
+      if (deselectedHead && current === "properties") return workspaceSection === "irrigation" ? "irrigation" : null;
       // The drawing palette is persistent and is closed only by its dock button.
       if (current === "tools") return current;
       // Only interface state changes here; selecting never enters geometry editing.
-      if (editing || constructing || selectedId || (selectedPolyId && drawingOrMigrate(useProject.getState().project).faces[selectedPolyId]?.segment)) return "properties";
+      if (editing || constructing || (selectedPolyId && drawingOrMigrate(useProject.getState().project).faces[selectedPolyId]?.segment)) return "properties";
       return current === "properties" ? null : current;
     });
-  }, [isPhone, cadEditId, selectedPolyId, selectedId, selectedEdgeId, tool, drawSub]);
+  }, [isPhone, cadEditId, selectedPolyId, selectedId, selectedIds, selectedEdgeId, tool, drawSub, workspaceSection]);
   const library = useProject((s) => s.projects);
   const lastSeg =
     draft.points.length >= 2
@@ -356,6 +400,9 @@ export function DesignerApp() {
       : 0;
 
   const selected = project.heads.find((h) => h.id === selectedId) ?? null;
+  const panelMode = workspaceSection === "irrigation"
+    ? rightMode === "object" && selected ? "object" : rightMode === "irrigation" ? "irrigation" : "zone"
+    : workspaceSection === "landscape" && rightMode === "landscape" ? "landscape" : "drawing";
   const selectedItem = selected ? itemById(selected.catalogId) : null;
   const activeZone = project.zones.find((z) => z.id === activeZoneId) ?? project.zones[0] ?? null;
   const lawnPts = lawnPolygon(project.polygons);
@@ -369,25 +416,7 @@ export function DesignerApp() {
 
   const zoneFlows = useMemo(() => new Map(project.zones.map(z => [z.id, zoneFlow(project.heads, z.id)])), [project.heads, project.zones]);
 
-  const issues = useMemo(() => checkProject(project), [project]);
 
-  const bom = useMemo(() => {
-    const map = new Map<string, { name: string; n: number }>();
-    for (const h of project.heads) {
-      const item = itemById(h.catalogId);
-      if (!item) continue;
-      const cur = map.get(item.id) ?? { name: item.name, n: 0 };
-      cur.n += 1;
-      map.set(item.id, cur);
-      const bodyId = h.bodyId ?? item.body;
-      const body = itemById(bodyId);
-      const key = `body:${bodyId}`;
-      const b = map.get(key) ?? { name: body?.name ?? bodyId, n: 0 };
-      b.n += 1;
-      map.set(key, b);
-    }
-    return [...map.values()];
-  }, [project.heads]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -411,7 +440,7 @@ export function DesignerApp() {
       const st0 = useProject.getState();
       if (e.key === "Escape" && st0.pendingCatalogPlant) { useProject.setState({pendingCatalogPlant:null}); return; }
       if (!typing && st0.tool === "draw") {
-        if (/^[0-9.,x×;mсм]$/i.test(e.key) || e.key === "Backspace" && cadBuf.current) {
+        if (/^[0-9٠-٩۰-۹０-９.,٫٬x×;mсм]$/i.test(e.key) || e.key === "Backspace" && cadBuf.current) {
           if (e.key === "Backspace") cadBuf.current = cadBuf.current.slice(0, -1);
           else cadBuf.current += e.key;
           setCadTick((n) => n + 1);
@@ -561,24 +590,14 @@ export function DesignerApp() {
   }, []);
 
   useEffect(() => {
-    const save = () => useProject.getState().saveCurrentToLibrary();
-    const tick = window.setInterval(save, 12000);
-    const onHide = () => {
-      if (document.visibilityState === "hidden") save();
-    };
-    document.addEventListener("visibilitychange", onHide);
-    window.addEventListener("pagehide", save);
-    window.addEventListener("beforeunload", save);
-    return () => {
-      window.clearInterval(tick);
-      document.removeEventListener("visibilitychange", onHide);
-      window.removeEventListener("pagehide", save);
-      window.removeEventListener("beforeunload", save);
-    };
+    const ready=()=>{useProject.getState().saveCurrentToLibrary();void flushProjectStorage();};
+    if(useProject.persist.hasHydrated()) ready();
+    const off=useProject.persist.onFinishHydration(ready),detach=attachStorageLifecycle();
+    return ()=>{off();detach();};
   }, []);
 
   useEffect(() => {
-    const fit = () => useProject.getState().requestFit();
+    const fit = () => {if(!useProject.getState().project.view)useProject.getState().requestFit();};
     if (useProject.persist.hasHydrated()) {
       fit();
       return;
@@ -590,11 +609,6 @@ export function DesignerApp() {
 
   const onUploadFile = (file: File) => {
     const lower = file.name.toLowerCase();
-    const mime = file.type;
-    const isPdf = mime === "application/pdf" || lower.endsWith(".pdf");
-    const isImage =
-      mime.startsWith("image/") ||
-      /\.(png|jpe?g|webp|gif|heic|heif|bmp)$/i.test(lower);
     if (lower.endsWith(".dxf")) {
       void file.text().then((txt) => {
         useProject.getState().importDxf(txt);
@@ -603,31 +617,7 @@ export function DesignerApp() {
       });
       return;
     }
-    if (isPdf) {
-      toast(t("toastPdf"));
-      void (async () => {
-        try {
-          const { renderPdfFirstPage } = await import("@/lib/pdf-underlay");
-          const page = await renderPdfFirstPage(file);
-          applyRaster(page.src, file.name, page.width, page.height);
-        } catch {
-          toast(t("toastPdfFail"));
-        }
-      })();
-      return;
-    }
-    if (isImage) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const src = String(reader.result);
-        const im = new window.Image();
-        im.onload = () => applyRaster(src, file.name, im.width, im.height);
-        im.onerror = () => toast(t("toastImgFail"));
-        im.src = src;
-      };
-      reader.readAsDataURL(file);
-      return;
-    }
+    if (referenceFileKind(file)) { void referenceImport.importFile(file); return; }
     const reader = new FileReader();
     reader.onload = () => {
       const text = String(reader.result);
@@ -643,8 +633,7 @@ export function DesignerApp() {
           measureUnit: parseMeasureUnit(packed.measureUnit),
           activeZoneId: packed.activeZoneId,
         });
-        const p = useProject.getState().project;
-        setCleanSig(`${p.id}:${p.updatedAt}:${p.name}`);
+        void flushProjectStorage();
         toast(t("toastOpen"));
       } catch (err) {
         toast(err instanceof Error ? err.message : t("toastOpenFail"));
@@ -653,29 +642,9 @@ export function DesignerApp() {
     reader.readAsText(file);
   };
 
-  const applyRaster = (src: string, name: string, w: number, h: number) => {
-    const width = 20;
-    const height = (h / Math.max(1, w)) * width;
-    useProject.getState().setUnderlay({
-      src,
-      x: 0,
-      y: 0,
-      width,
-      height,
-      opacity: 0.45,
-      rotation: 0,
-      visible: true,
-      locked: true,
-      name,
-    });
-    toast(t("toastOnCanvas"));
-    useProject.getState().setTool("scale");
-    useProject.getState().setRightMode("drawing");
-  };
-
   const packedNow = (name = project.name) =>
     toProjectFile({
-      project: { ...project, name },
+      project: { ...projectWithView(useProject.getState()), name },
       showCoverage,
       showLabels,
       showGrid,
@@ -687,16 +656,8 @@ export function DesignerApp() {
     });
 
   const saveProjectAsFile = async (name = project.name) => {
-    const n = name.trim();
-    if (!n || n === "Без названия") {
-      setNameDraft(n);
-      setNameAsk(true);
-      return;
-    }
-    if (n !== project.name) useProject.getState().patchProject({ name: n });
-    await downloadProjectFile(packedNow(n));
-    setCleanSig(`${useProject.getState().project.id}:${useProject.getState().project.updatedAt}:${n}`);
-    toast(t("toastSaved"));
+    try { await downloadProjectFile(packedNow(name.trim())); }
+    catch { toast.error(t("toastExportFail")); }
   };
 
   const runExport = async (kind: "pdf" | "png" | "project") => {
@@ -713,11 +674,9 @@ export function DesignerApp() {
       }
       if (kind === "png") {
         await exportPng(uri, name);
-        toast(t("toastPng"));
         return;
       }
       await exportPdf(uri, project, name);
-      toast(t("toastPdfOut"));
     } catch {
       toast(t("toastExportFail"));
     }
@@ -729,28 +688,23 @@ export function DesignerApp() {
       if (kind === "pdf") {
         const snap = p.id === project.id ? exportFn.current?.() ?? undefined : undefined;
         await exportPdfFromProject(p, name, snap);
-        toast(t("toastPdfOut"));
         return;
       }
       if (kind === "dxf") {
         await exportDxf(p, name);
-        toast(t("toastDxf"));
         return;
       }
       if (kind === "png") {
         const snap = p.id === project.id ? exportFn.current?.() : undefined;
         if (snap) await exportPng(snap, name);
         else await exportPngFromProject(p, name);
-        toast(t("toastPng"));
         return;
       }
       if (kind === "svg") {
         await exportSvg(p, name);
-        toast("SVG");
         return;
       }
       await exportProjectJson(p, name);
-      toast(t("toastSaved"));
     } catch {
       toast(t("toastExportFail"));
     }
@@ -1038,7 +992,7 @@ export function DesignerApp() {
   };
   const selectedLayersCount = new Set(selectedPolyIds.filter(id => mobileDrawing.faces[id]).map(id => mobileDrawing.faces[id]!.layerId ?? id)).size;
   const bulkSelection = selectedLayersCount > 1 && !cadEditId;
-  const headSelectionActions = (selectedIds.length > 1 || (workspaceMultiSelect && selectedIds.length > 0)) && <HeadSelectionActions />;
+  const headSelectionActions = selectedIds.length > 1 && <HeadSelectionActions />;
   const fusionIds = useMemo(() => draft.points.length ? [] : fusionCandidates(mobileDrawing, selectedPolyIds), [project.drawing, selectedPolyIds, draft.points.length]);
   const fusionKey = fusionIds.length ? JSON.stringify(fusionIds.map(id => [id, facePoints(mobileDrawing,id)])) : "";
   const fusionActions = fusionKey && fusionKey !== dismissedFusion && <section className="figure-fusion-actions" role="region" aria-label={t("fuseFigures")}
@@ -1238,7 +1192,7 @@ export function DesignerApp() {
               onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
               <div className="grid-step-heading flex items-center justify-between gap-2">
                 <p className="px-1 text-sm font-semibold">{t("gridStep")}</p>
-                <Popover.Close asChild><button type="button" className="mobile-icon-button" aria-label="Закрыть шаг сетки"><X size={20} /></button></Popover.Close>
+                <Popover.Close asChild><button type="button" className="mobile-icon-button" aria-label={uiText("closeGridStep")}><X size={20} /></button></Popover.Close>
               </div>
               <div className="flex flex-col gap-0.5">
                 {GRID_STEPS.map((g) => (
@@ -1256,7 +1210,7 @@ export function DesignerApp() {
                     }}
                   >
                     <span className="inline-block w-4" aria-hidden>{gridStep === g.id ? "●" : ""}</span>
-                    {g.label}
+                    {formatGridStep(g.id, units.length)}
                   </button>
                 ))}
                 <button
@@ -1267,7 +1221,7 @@ export function DesignerApp() {
                     customGridOpen ? "bg-btn-soft text-ink" : "text-ink hover:bg-btn-soft",
                   )}
                   onClick={() => {
-                    setCustomGridDraft(String(Number(fromMeters(gridStep, units.length).toFixed(3))).replace(".", ","));
+                    setCustomGridDraft(formatNumber(fromMeters(gridStep, units.length), 3));
                     setCustomGridOpen((open) => !open);
                   }}
                 >
@@ -1279,7 +1233,7 @@ export function DesignerApp() {
                     className="mt-1 flex items-center gap-1 border-t border-line pt-2"
                     onSubmit={(event) => {
                       event.preventDefault();
-                      const value = Number(customGridDraft.trim().replace(",", "."));
+                      const value = parseLocalizedNumber(customGridDraft.trim());
                       const meters = toMetersLen(value, units.length);
                       if (!Number.isFinite(meters) || meters <= 0) return;
                       useProject.getState().setGridStep(meters);
@@ -1298,7 +1252,7 @@ export function DesignerApp() {
                       autoFocus
                     />
                     <span className="shrink-0 text-[10px] text-muted">{lenLabel(units.length)}</span>
-                    <button type="submit" aria-label="Применить шаг сетки" className="h-8 rounded-sm bg-btn px-2 text-[10px] font-semibold text-btn-fg">
+                    <button type="submit" aria-label={uiText("applyGridStep")} className="h-8 rounded-sm bg-btn px-2 text-[10px] font-semibold text-btn-fg">
                       ✓
                     </button>
                   </form>
@@ -1360,7 +1314,7 @@ export function DesignerApp() {
       );
 
   return (
-    <div className="app-shell bg-bg text-ink" data-mobile={isPhone} data-preview={projectPreview}>
+    <DirectionProvider dir={localeDirection(locale)}><div className="app-shell bg-bg text-ink" dir={localeDirection(locale)} lang={locale} data-locale={locale} data-mobile={isPhone} data-preview={projectPreview}>
       <WorkspaceTooltips />
       {!isPhone && <WorkspacePanelBounds />}
       {projectPreview && <MobilePreview onBack={() => setProjectPreview(false)} />}
@@ -1402,32 +1356,23 @@ export function DesignerApp() {
             }}>
               <div className="px-2 py-2">
                 <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("currentProject")}</p>
-                <p className="mt-0.5 truncate text-sm font-medium">{project.name === "Без названия" ? t("untitled") : project.name}</p>
-                {dirty ? (
-                  <p className="mt-0.5 text-[11px] text-warn">{t("unsaved")}</p>
-                ) : (
-                  <p className="mt-0.5 text-[11px] text-ok">{t("saved")}</p>
-                )}
+                <p className="mt-0.5 truncate text-sm font-medium">{!isNamed(project) ? t("untitled") : project.name}</p>
+                <p className="mt-1 text-xs text-muted">{t("projectAutosaveHint")}</p>
               </div>
               <div className="mx-1 my-1 h-px bg-line" />
-              <MenuBtn
-                onClick={() => {
-                  setFileMenuOpen(false);
-                  void saveProjectAsFile(project.name);
-                }}
-                icon={<Save className="size-3.5" />}
-                label={t("saveProject")}
-              />
-              <MenuBtn icon={<Plus className="size-4" />} label={t("newProject")} onClick={() => { useProject.getState().saveCurrentToLibrary(); useProject.getState().newProject(); setFileMenuOpen(false); setMobilePanel(null); }} />
+              <MenuBtn icon={<FilePlus2 className="size-4" />} label={t("newProject")} onClick={() => { useProject.getState().saveCurrentToLibrary(); useProject.getState().newProject(); setFileMenuOpen(false); setMobilePanel(null); }} />
+              <MenuBtn icon={<FolderOpen className="size-4" />} label={t("openEditableProject")} onClick={() => { if(fileRef.current)fileRef.current.accept=".ird,.irrigationproject,.json";fileRef.current?.click();setFileMenuOpen(false); }} />
+              <MenuBtn icon={<Save className="size-4" />} label={t("saveProjectCopy")} onClick={() => {setFileMenuOpen(false);void saveProjectAsFile();}} />
+              <MenuBtn icon={<Trash2 className="size-4" />} label={t("projectTrash")} onClick={() => {setFileMenuOpen(false);setTrashOpen(true);}} />
+              <div className="mx-1 my-1 h-px bg-line" />
+              <MenuBtn icon={<FileDown className="size-4" />} label={t("exportMaterials")} onClick={()=>{setFileMenuOpen(false);setExportProject(project);}} />
               <MenuBtn icon={<Pencil className="size-4" />} label={t("projectName")} onClick={() => { useProject.getState().setProjectFormOpen(true); setFileMenuOpen(false); }} />
-              <MenuBtn icon={<Upload className="size-4" />} label="Загрузить проект или чертёж" onClick={() => { fileRef.current?.click(); setFileMenuOpen(false); }} />
-              <MenuBtn icon={<FileDown className="size-4" />} label="PDF / PNG / SVG / JSON" onClick={() => setExportDrawOpen((v) => !v)} />
-              {exportDrawOpen && <div className="grid grid-cols-2 gap-1 p-1">{(["pdf", "png", "svg", "json"] as const).map((kind) => <Button key={kind} onClick={() => { void exportLibrary(project, kind); setFileMenuOpen(false); }}>{kind.toUpperCase()}</Button>)}</div>}
+              <MenuBtn icon={<Upload className="size-4" />} label={t("importDxfDrawing")} onClick={() => { if(fileRef.current)fileRef.current.accept=".dxf";fileRef.current?.click();setFileMenuOpen(false); }} />
               <MenuBtn
                 onClick={() => {
                   setFileMenuOpen(false);
                   void exportDxf(useProject.getState().project, fileStem(useProject.getState().project.name)).then(
-                    () => toast(t("toastDxf")),
+                    () => {},
                     () => toast(t("toastExportFail")),
                   );
                 }}
@@ -1462,49 +1407,40 @@ export function DesignerApp() {
         <Button size="icon" variant="bar" className="max-sm:size-10" disabled={pointHistoryActive ? !(draft.redoPoints?.length || draft.redoClosure) : !future.length} onClick={() => useProject.getState().redo()} aria-label={t("redo")}>
           <Redo2 />
         </Button>
-        {isPhone && <>
-          <button type="button" className="mobile-dock-button" data-no-tooltip aria-label="Инструменты" aria-pressed={mobilePanel === "tools"} onClick={() => { const closing = mobilePanel === "tools"; setMobilePanel(closing ? null : "tools"); if (closing) { useProject.getState().deactivateDrawing(); setWorkspaceMultiSelect(false); } setGridOpen(false); setFileMenuOpen(false); }}><Pencil size={22} /></button>
-          <button type="button" className="mobile-dock-button" data-no-tooltip aria-label="Ландшафт" aria-pressed={landscapeOpen} onClick={() => { useProject.getState().setLandscapeOpen(!landscapeOpen); setMobilePanel(null); setLayerManagerOpen(false); }}><Trees size={22} /></button>
-          <button type="button" className="mobile-dock-button" data-no-tooltip aria-label={t("library")} aria-pressed={mobilePanel === "library" || catalogOpen} onClick={() => { const closing = mobilePanel === "library"; if (!closing && !catalogOpen) useProject.getState().setCatalogOpen(true); setMobilePanel(closing ? null : "library"); setGridOpen(false); setFileMenuOpen(false); }}><SprinklerIcon width={22} height={22} /></button>
-        </>}
-        {!isPhone && <BarTool
-          id="draw"
-          label={t("draw")}
-          active={!catalogOpen && tool === "draw"}
-          onClick={() => {
-            const st = useProject.getState();
-            if (st.tool === "draw" && !st.catalogOpen) { st.deactivateDrawing(); setWorkspaceMultiSelect(false); } else st.setTool("draw");
-          }}
-        />}
-        {!isPhone && <Button size="sm" data-no-tooltip variant={landscapeOpen || rightMode === "landscape" && rightOpen ? "bar-on" : "bar"} aria-pressed={landscapeOpen} onClick={() => { useProject.getState().setLandscapeOpen(!landscapeOpen); setWorkspaceMultiSelect(false); }}><Trees /><span>Ландшафт</span></Button>}
-        {!isPhone && <BarTool
-          id="place"
-          label={t("sprinklers")}
-          active={catalogOpen}
-          onClick={() => {
-            const st = useProject.getState();
-            if (catalogOpen) {
-              st.setCatalogOpen(false);
-            } else {
-              st.setCatalogOpen(true);
-            }
-          }}
-        />}
-        {!isPhone && catalogOpen && (
-          <Button size="xs" variant="bar" className="shrink-0" onClick={autoPlace} aria-label={t("autoPlace")}>
-            <LayoutGrid />
-            <span className="hidden sm:inline">{t("autoPlace")}</span>
-          </Button>
-        )}
+        <nav className="workspace-sections" aria-label={t("mainSections")}>
+          <Button size="sm" variant={referenceOpen ? "bar-on" : "bar"} title={t("reference")} aria-pressed={referenceOpen} onClick={() => {
+            setStartDismissed(project.id);
+            useProject.getState().setReferenceOpen(!referenceOpen); setMobilePanel(null); setFileMenuOpen(false); setLayerManagerOpen(false);
+          }}><FileImage /><span>{t("reference")}</span></Button>
+          <span className="workspace-section-divider" aria-hidden="true" />
+          <Button size="sm" variant={!referenceOpen && workspaceSection === "plan" ? "bar-on" : "bar"} aria-pressed={!referenceOpen && workspaceSection === "plan"} title={t("plan")} onClick={() => {
+            setStartDismissed(project.id);
+            const st = useProject.getState(); st.setReferenceOpen(false); st.setLandscapeOpen(false); st.setCatalogOpen(false); st.setTool("draw"); st.setRightMode("drawing");
+            setLibInfo(null); setCatInfo(null);
+            setMobilePanel(isPhone ? "tools" : null); setWorkspaceMultiSelect(false);
+          }}><Pencil /><span>{t("plan")}</span></Button>
+          <Button size="sm" variant={!referenceOpen && workspaceSection === "landscape" ? "bar-on" : "bar"} aria-pressed={!referenceOpen && workspaceSection === "landscape"} title={t("landscape")} onClick={() => {
+            setStartDismissed(project.id);
+            const st = useProject.getState(); st.setReferenceOpen(false); st.setLandscapeOpen(!landscapeOpen);
+            setMobilePanel(null); setLayerManagerOpen(false); setWorkspaceMultiSelect(false);
+          }}><Trees /><span>{t("landscape")}</span></Button>
+          <Button size="sm" variant={!referenceOpen && workspaceSection === "irrigation" ? "bar-on" : "bar"} aria-pressed={!referenceOpen && workspaceSection === "irrigation"} title={t("irrigation")} onClick={() => {
+            setStartDismissed(project.id);
+            const st = useProject.getState(); st.setReferenceOpen(false); st.setLandscapeOpen(false); st.setCatalogOpen(true); st.setCatalogVisible(true); st.setRightMode("zone");
+            setLibInfo(null); setCatInfo(null);
+            setMobilePanel(isPhone ? "library" : null); setGridOpen(false); setFileMenuOpen(false);
+          }}><SprinklerIcon width={20} height={20} /><span>{t("irrigation")}</span></Button>
+        </nav>
         </div>
         <div className="flex shrink-0 items-center gap-1 pl-1">
           {previewControl}
-          <button type="button" className="mobile-icon-button workspace-header-action" aria-label={t("estimate")} aria-pressed={isPhone ? mobilePanel === "estimate" : rightOpen && rightMode === "estimate"} onClick={() => {
-            if (isPhone) setMobilePanel(mobilePanel === "estimate" ? null : "estimate");
-            else if (rightOpen && rightMode === "estimate") useProject.getState().setRightOpen(false);
-            else useProject.getState().setRightMode("estimate");
-            setGridOpen(false); setFileMenuOpen(false);
-          }}><FileText />{!isPhone && <span>{t("estimate")}</span>}</button>
+          {workspaceSection === "irrigation" && <button type="button" className="mobile-icon-button workspace-header-action simulation-control"
+            aria-pressed={simulationProjectId === project.id} aria-label={t("simulation")}
+            title={t(simulationProjectId === project.id ? "stopSimulation" : "simulation")}
+            onClick={() => useProject.getState().toggleSimulation()}><Droplets />{!isPhone && <span>{t("simulation")}</span>}</button>}
+          <EstimateDialog mobile={isPhone} onOpen={() => {
+            setMobilePanel(null); setGridOpen(false); setFileMenuOpen(false);
+          }} />
           <Button size="xs" variant="bar" className="max-sm:size-10 max-sm:px-0" aria-label={t("projects")} onClick={() => {
             setMobilePanel(null);
             setFileMenuOpen(false);
@@ -1517,7 +1453,7 @@ export function DesignerApp() {
         </div>
       </header>
 
-      {projectFormOpen || (!isNamed(project) && library.length === 0 && Object.keys(drawingOrMigrate(project).faces).length === 0 && project.heads.length === 0) ? (
+      {projectFormOpen ? (
         <ProjectFormBar />
       ) : null}
       {mergePrompt && (
@@ -1540,6 +1476,15 @@ export function DesignerApp() {
 
       {catalogOpen && workspaceToolStrip}
       <div className="designer-workspace relative flex min-h-0 flex-1">
+        {workspaceSection === 'irrigation' && simulationProjectId === project.id && <div className="simulation-note" role="status">{t('simulationApproximate')}</div>}
+        {!projectHasContent(project) && !projectFormOpen && !referenceOpen && !catalogOpen && !landscapeOpen && startDismissed !== project.id && <section className="project-start-choice" aria-label={t("startChoice")}>
+          <h2>{t("startChoice")}</h2>
+          <Button variant="solid" onClick={() => { setStartDismissed(project.id); useProject.getState().setReferenceOpen(true); referenceFileRef.current?.click(); }}><FileImage />{t("referenceUpload")}</Button>
+          <Button onClick={() => { setStartDismissed(project.id); useProject.getState().setTool("draw"); if (isPhone) setMobilePanel("tools"); }}><Pencil />{t("startBlank")}</Button>
+        </section>}
+        {referenceOpen && <ReferencePanel busy={referenceImport.busy} onUpload={() => referenceFileRef.current?.click()} />}
+        {tool === "scale" && <div className="reference-scale-banner" role="status"><span>{t("referenceCalibrateHint")}</span><Button size="xs" onClick={() => { useProject.getState().cancelDraft(); useProject.getState().setTool(null); useProject.getState().setReferenceOpen(true); }}>{t("cancel")}</Button></div>}
+
         {!catalogOpen && workspaceToolStrip}
         {landscapeOpen && <LandscapeLibrary mobile={isPhone} />}
         <PlantPlacementHint />
@@ -1587,7 +1532,7 @@ export function DesignerApp() {
                     <span className="min-w-0 flex-1">
                       <span className="block truncate font-medium leading-tight">{c.id}</span>
                       <span className={cn("block text-[10px] leading-tight", placeId === c.id ? "text-catalog-fg/80" : "text-muted")}>
-                        {c.coverageKind==="point"?"Баблер · без радиуса":c.strip?`${formatLenU(c.strip.w,units.length)} × ${formatLenU(c.strip.l,units.length)}`:`${formatLenU(c.rMin, units.length)}–${formatLenU(c.rMax, units.length)}`}
+                        {c.coverageKind==="point"?uiText("bubblerNoRadius"):c.strip?`${formatLenU(c.strip.w,units.length)} × ${formatLenU(c.strip.l,units.length)}`:`${formatLenU(c.rMin, units.length)}–${formatLenU(c.rMax, units.length)}`}
                       </span>
                       <span className={cn("block text-[10px] leading-tight", placeId === c.id ? "text-catalog-fg/80" : "text-muted")}>
                         {c.arcMin === c.arcMax ? `${c.arcMax}°` : `${c.arcMin}–${c.arcMax}°`}
@@ -1617,10 +1562,9 @@ export function DesignerApp() {
         <section className="mobile-canvas-stage relative min-w-0 flex-1 overflow-visible">
           {isPhone && !catalogGhost && (fusionActions || layerManagerOpen || mobilePanel === "tools" || mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <div className="mobile-top-overlays" data-magnifier-top-panel>
             {mobilePanel === "tools" && <div className="mobile-tool-stack">
-              <div className="mobile-tool-strip-panel" role="toolbar" aria-label="Инструменты">
+              <div className="mobile-tool-strip-panel" role="toolbar" aria-label={uiText("tools")}>
                 <div className="mobile-tool-strip scroll-touch">
                   {DRAW_SUBS.filter((item) => item.id !== "arc" && item.id !== "dim" && item.id !== "text").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}</button>)}
-                  {project.heads.length > 0 && <button type="button" aria-label={t("sectors")} title={t("sectors")} aria-pressed={showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}><Droplets size={20} /></button>}
                 </div>
               </div>
             </div>}
@@ -1632,8 +1576,8 @@ export function DesignerApp() {
             {!layerManagerOpen && !bulkSelection && (mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <section className="mobile-top-layers" data-workspace-mode={mobileWorkspaceMode} aria-label={mobileWorkspaceMode === "drawing" ? t("layers") : t("irrigation")}
               onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
               {mobileWorkspaceMode === "drawing" ? <MobileLayers onEdit={(id) => { useProject.getState().setCadEdit(id); setMobilePanel("properties"); }} onInspect={() => { mobileInspectTarget.current = selectedObjectKey(useProject.getState()); setMobilePanel("properties"); }} /> : <div className="mobile-zone-strip">
-                {project.zones.map((zone) => <button type="button" key={zone.id} aria-pressed={zone.id === activeZoneId} onClick={() => useProject.getState().setActiveZone(zone.id)}><span style={{ background: zoneColor(zone.id) }} />{zone.name}</button>)}
-                <Popover.Root modal><Popover.Trigger asChild><button type="button" aria-label="Подробнее о зонах полива">Подробнее <ChevronRight size={16} /></button></Popover.Trigger><Popover.Portal><Popover.Content side="bottom" align="end" sideOffset={4} collisionPadding={8} aria-label="Зоны полива" className="layer-details-dialog" onPointerDown={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}><div className="layer-dialog-body"><ZoneList /><PumpBox /><Popover.Close asChild><Button className="w-full">Закрыть</Button></Popover.Close></div></Popover.Content></Popover.Portal></Popover.Root>
+                {project.zones.map((zone) => <button type="button" key={zone.id} aria-pressed={zone.id === activeZoneId} onClick={() => useProject.getState().setActiveZone(zone.id)}><span style={{ background: zoneColor(zone.id) }} />{zoneLabel(zone)}</button>)}
+                <Popover.Root modal><Popover.Trigger asChild><button type="button" aria-label={uiText("zoneInfo")}>{uiText("details")}<ChevronRight size={16} /></button></Popover.Trigger><Popover.Portal><Popover.Content side="bottom" align="end" sideOffset={4} collisionPadding={8} aria-label={uiText("irrigationZones")} className="layer-details-dialog" onPointerDown={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}><div className="layer-dialog-body"><ZoneList /><ZoneReview /><Popover.Close asChild><Button className="w-full">{uiText("close")}</Button></Popover.Close></div></Popover.Content></Popover.Portal></Popover.Root>
               </div>}
             </section>}
             {!layerManagerOpen && fusionActions}
@@ -1641,7 +1585,8 @@ export function DesignerApp() {
           <CanvasHost
             mobile={isPhone}
             multiSelect={workspaceMultiSelect && selectionModeAvailable}
-            onScalePair={(a, b) => setScalePair({ a, b })}
+            onSelectionClear={() => setWorkspaceMultiSelect(false)}
+            onScalePair={(a, b) => { setScaleValue(formatNumber(fromMeters(5, units.length), 2)); setScalePair({ a, b }); }}
             onMeasure={setMeasurementResult}
             onHover={setHover}
             onExportReady={(fn) => {
@@ -1656,12 +1601,12 @@ export function DesignerApp() {
           {!isPhone && !bulkSelection && !fusionActions && contextControls}
         </section>
 
-        {isPhone && rightOpen && rightMode === "landscape" && <aside className="info-panel landscape-phone-inspector" aria-label="Карточка растения">
-          <div className="workspace-panel-heading"><strong>Растение</strong><Button onClick={() => useProject.getState().setRightOpen(false)} aria-label="Скрыть карточку растения"><X />Скрыть</Button></div>
+        {isPhone && rightOpen && rightMode === "landscape" && <aside className="info-panel landscape-phone-inspector" aria-label={uiText("plantCard")}>
+          <div className="workspace-panel-heading"><strong>{uiText("plant")}</strong><Button onClick={() => useProject.getState().setRightOpen(false)} aria-label={uiText("hidePlantCard")}><X />{uiText("hide")}</Button></div>
           <PlantInspector mobile />
         </aside>}
-        {isPhone && rightOpen && (catInfo || libInfo) && rightMode === "irrigation" && <aside className="info-panel landscape-phone-inspector" aria-label="Информация о поливе">
-          <div className="workspace-panel-heading"><strong>{catInfo ? t(`cat_${catInfo}`) : "Дождеватель"}</strong><Button onClick={() => { setLibInfo(null); setCatInfo(null); useProject.getState().setRightOpen(false); }} aria-label="Скрыть карточку дождевателя"><X />Скрыть</Button></div>
+        {isPhone && rightOpen && (catInfo || libInfo) && rightMode === "irrigation" && <aside className="info-panel landscape-phone-inspector" aria-label={uiText("irrigationInfo")}>
+          <div className="workspace-panel-heading"><strong>{catInfo ? t(`cat_${catInfo}`) : uiText("headTab")}</strong><Button onClick={() => { setLibInfo(null); setCatInfo(null); useProject.getState().setRightOpen(false); }} aria-label={uiText("hideHeadCard")}><X />{uiText("hide")}</Button></div>
           {catInfo ? <CatalogSeriesInfo key={catInfo} family={catInfo} /> : libInfo && <CatalogInfo catalogId={libInfo} />}
         </aside>}
         {!isPhone && (rightOpen ? (
@@ -1672,56 +1617,24 @@ export function DesignerApp() {
                 size="xs"
                 variant="solid"
                 className="workspace-panel-hide shrink-0 border-line bg-surface text-ink hover:bg-btn-soft"
-                onPointerUp={(e) => {
-                  e.preventDefault();
-                  useProject.getState().setRightOpen(false);
-                }}
+                onClick={() => useProject.getState().setRightOpen(false)}
               >
                 {t("hide")}
-                <ChevronRight className="size-3.5 -rotate-90 sm:rotate-0" />
+                <ChevronRight className="size-3.5" />
               </Button>
-              <div className="info-panel-tabs ml-auto flex min-w-0 flex-row overflow-x-auto">
-                {(
-                  [
-                    ["drawing", t("drawing")],
-                    ["irrigation", t("irrigation")],
-                    ["estimate", t("estimate")],
-                  ] as const
-                ).map(([id, label]) => {
-                  const on =
-                    id === "drawing"
-                      ? rightMode === "drawing" || rightMode === "project"
-                      : id === "estimate"
-                        ? rightMode === "estimate"
-                        : rightMode === "zone" || rightMode === "object" || rightMode === "irrigation";
-                  return (
-                    <button
-                      key={id}
-                      type="button"
-                      aria-pressed={on}
-                      className={cn("h-7 shrink-0 rounded-sm px-2 text-[11px] font-semibold sm:h-8", on ? "bg-btn text-btn-fg" : "text-muted hover:bg-bg-2")}
-                      onClick={() => {
-                        setLibInfo(null);
-                        setCatInfo(null);
-                        useProject.getState().setRightMode(id === "drawing" ? "drawing" : id === "estimate" ? "estimate" : "zone");
-                      }}
-                    >
-                      {label}
-                    </button>
-                  );
-                })}
-              </div>
+              {workspaceSection === "irrigation" ? <button type="button" className="zones-navigation ml-auto"
+                aria-pressed={panelMode === "zone"} onClick={() => {
+                  setLibInfo(null); setCatInfo(null); useProject.getState().endHeadEdit(); useProject.getState().setRightMode("zone");
+                }}>{t("zonesTitle")}</button> : <p className="ml-auto text-xs font-semibold text-muted">{t("layers")}</p>}
             </div>
-            {rightMode === "landscape" ? <PlantInspector /> : rightMode === "estimate" ? (
-              <EstimateCard onCheck={() => setIssuesOpen(true)} />
-            ) : rightMode === "zone" || rightMode === "object" || rightMode === "irrigation" ? (
-              <>{catInfo ? <CatalogSeriesInfo key={catInfo} family={catInfo} /> : libInfo ? <CatalogInfo catalogId={libInfo} /> : selected && selectedItem && selectedIds.length <= 1 ? (
+            {panelMode === "landscape" ? <PlantInspector /> : panelMode === "zone" || panelMode === "object" || panelMode === "irrigation" ? (
+              <>{panelMode === "irrigation" && catInfo ? <CatalogSeriesInfo key={catInfo} family={catInfo} /> : panelMode === "irrigation" && libInfo ? <CatalogInfo catalogId={libInfo} /> : panelMode === "object" && selected && selectedItem && selectedIds.length <= 1 ? (
                 <HeadCard head={selected} />
               ) : (
                 <div className="p-1.5 sm:p-3">
                   <ZoneList />
                 </div>
-              )}<div className="px-1.5 pb-3 sm:px-3"><PumpBox /></div></>
+              )}{panelMode === "zone" && <div className="px-1.5 pb-3 sm:px-3"><ZoneReview /></div>}</>
             ) : (
               <DrawingCard />
             )}
@@ -1738,8 +1651,9 @@ export function DesignerApp() {
         ))}
       </div>
 
-      <footer className="app-footer relative z-30 flex min-h-11 shrink-0 items-center gap-2 scroll-touch border-t border-line bg-surface px-2 py-1 text-xs">
-        {isPhone && <nav className="mobile-canvas-controls" aria-label="Сетка и навигация чертежа">
+      <footer className="app-footer relative z-30 flex min-h-11 shrink-0 items-center gap-2 border-t border-line bg-surface px-2 py-1 text-xs">
+        <div className="footer-tools-scroll scroll-touch">
+        {isPhone && <nav className="mobile-canvas-controls" aria-label={uiText("gridNavigation")}>
           {cursorControl}
           {selectionControls}
           {textControl}
@@ -1758,45 +1672,41 @@ export function DesignerApp() {
           <button type="button" className="mobile-icon-button" aria-label={t("drawDim")} title={t("drawDim")} aria-pressed={tool === "draw" && drawSub === "dim"} onClick={() => useProject.getState().setDrawSub("dim")}><IconDim /></button>
           <button type="button" className="mobile-icon-button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure"} onClick={() => useProject.getState().setMeasureSub("measure")}><TapeMeasureIcon /></button>
           {viewControls}
-          <button type="button" className="mobile-icon-button" aria-label={t("layerManager")} title={t("layerManager")} aria-pressed={rightOpen && (rightMode === "drawing" || rightMode === "project")} onClick={() => {
-            if (rightOpen && (rightMode === "drawing" || rightMode === "project")) useProject.getState().setRightOpen(false);
-            else useProject.getState().setRightMode("drawing");
+          <button type="button" className="mobile-icon-button" aria-label={t(workspaceSection === "irrigation" ? "zonesTitle" : "layerManager")} title={t(workspaceSection === "irrigation" ? "zonesTitle" : "layerManager")} aria-pressed={rightOpen} onClick={() => {
+            if (rightOpen) useProject.getState().setRightOpen(false);
+            else useProject.getState().setRightMode(workspaceSection === "irrigation" ? "zone" : "drawing");
           }}><Layers /></button>
           <div className="tablet-grid-controls">{gridControls}</div>
           {textVisibilityControl}
           {dimensionVisibilityControl}
         </nav>}
-        {!isPhone && project.heads.length > 0 && (
-          <div className="flex items-stretch overflow-hidden rounded-md border border-tool">
-            <Button
-              size="xs"
-              variant={showCoverage ? "pressed" : "ghost"}
-              className="rounded-none border-0"
-              onClick={() => useProject.getState().setCoverage(!showCoverage)}
-            >
-              <Droplets />
-              {t("sectors")}
-            </Button>
-            <span className="w-px self-stretch bg-tool/35" aria-hidden />
-            <Button
-              size="xs"
-              variant={showLabels ? "pressed" : "ghost"}
-              className="rounded-none border-0"
-              onClick={() => useProject.getState().setLabels(!showLabels)}
-            >
-              <Tag />
-              {t("labels")}
-            </Button>
+        {project.heads.length > 0 && (
+          <div className="workspace-canvas-controls irrigation-visibility-controls">
+            <AdaptiveTooltip label={t(showCoverage ? "hideSectors" : "showSectors")}>
+              <button type="button" className="mobile-icon-button visibility-toggle" aria-label={t(showCoverage ? "hideSectors" : "showSectors")}
+                aria-pressed={!showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M4 20V4a16 16 0 0 1 16 16Z"/><path d="M4 9a11 11 0 0 1 11 11" strokeDasharray="2 3"/>
+                </svg><VisibilitySlash/>
+              </button>
+            </AdaptiveTooltip>
+            <AdaptiveTooltip label={t(showLabels ? "hideHeadLabels" : "showHeadLabels")}>
+              <button type="button" className="mobile-icon-button visibility-toggle" aria-label={t(showLabels ? "hideHeadLabels" : "showHeadLabels")}
+                aria-pressed={!showLabels} onClick={() => useProject.getState().setLabels(!showLabels)}><Tag/><VisibilitySlash/></button>
+            </AdaptiveTooltip>
           </div>
         )}
         <span className="hidden shrink-0 text-ink-soft sm:inline">
           {catalogOpen ? (
             <>
-              ● {activeZone?.name ?? t("zoneN", { n: 1 })}
-              {activeQ != null ? ` · ${formatFlowU(activeQ, units.flow)}` : " · Нет данных о расходе"}
+              ● {activeZone ? zoneLabel(activeZone) : t("unassigned")}
+              {activeQ != null ? ` · ${formatFlowU(activeQ, units.flow)}` : uiText("missingFlowSuffix")}
             </>
           ) : null}
         </span>
+        <AutomaticPlanControls/>
+        </div>
+        <IrrigationCheckButton project={project} section={workspaceSection} locale={useProject.getState().locale} onClick={() => { setMobilePanel(null); setIssuesOpen(true); }} />
       </footer>
       {isPhone ? <><SegmentFigureConfirmation deletingSelection={bulkDeleteConfirm}
         onDeleteSelected={bulkSelection ? () => setBulkDeleteConfirm(true) : undefined} />
@@ -1821,33 +1731,39 @@ export function DesignerApp() {
         </div>
       </section>}
 
-      {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} · перетащите из библиотеки</span><button type="button" aria-label="Закончить размещение" onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
-      {isPhone && !((bulkSelection || headSelectionActions || groupedLayer || (!selected && !drawingDimensionsVisible && tool !== "measure" && tool !== "scale")) && mobilePanel === "properties") && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("irrigation") : mobilePanel === "estimate" ? t("estimate") : contextTitle} onClose={() => setMobilePanel(null)}
+      {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} {uiText("dragLibrary")}</span><button type="button" aria-label={uiText("finishPlacement")} onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
+      {isPhone && !((bulkSelection || headSelectionActions || groupedLayer || (!selected && !drawingDimensionsVisible && tool !== "measure" && tool !== "scale")) && mobilePanel === "properties") && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("zonesTitle") : contextTitle} onClose={() => setMobilePanel(null)}
         footer={mobilePanel === "properties" && selected ? <div className="mobile-context-footer">
-          <Button className="ml-auto" aria-label="Готово" title="Готово" onPointerDown={(e) => e.preventDefault()} onClick={() => { (document.activeElement as HTMLElement)?.blur?.(); if (selected) setMobilePanel(null); }}><Check /></Button>
+          <Button className="ml-auto" aria-label={uiText("drawFinish")} title={uiText("drawFinish")} onPointerDown={(e) => e.preventDefault()} onClick={() => { (document.activeElement as HTMLElement)?.blur?.(); if (selected) setMobilePanel(null); }}><Check /></Button>
         </div> : undefined}>
         {mobilePanel === "library" && <div className="mobile-catalog" data-catalog>
           <div className="mobile-categories" data-cat-bar>{CATEGORIES.map((category) => <button type="button" key={category.id} aria-pressed={familyFilter === category.id} onClick={() => openCatalogFamily(category.id)}>{t(`cat_${category.id}`)}</button>)}</div>
-          <div className="mobile-library-actions"><Button aria-label={t("autoPlace")} onClick={() => { autoPlace(); setMobilePanel(null); }}><LayoutGrid />Авторасстановка</Button><span>Справка — касание. Добавить — удерживать и перетащить.</span></div>
+          <div className="mobile-library-actions"><span>{uiText("catalogGestureHint")}</span></div>
           <ul className="mobile-catalog-list">{catalog.map((item) => <li key={item.id} className="mobile-catalog-card" data-selected={placeId === item.id}>
-            <button type="button" className="mobile-catalog-select" aria-label={`Характеристики ${item.id}`} onPointerDown={e => startCatalogDrag(e, item.id)} onClick={() => { if (Date.now() < catalogClickSuppressedUntil.current) return; const st = useProject.getState(); st.setTool("place"); st.setPlaceId(item.id); st.setCatalogVisible(false); st.setRightMode("irrigation"); st.setRightOpen(true); setLibInfo(item.id); setCatInfo(null); setMobilePanel(null); }}>
+            <button type="button" className="mobile-catalog-select" aria-label={uiText("itemProperties", { name: item.id })} onPointerDown={e => startCatalogDrag(e, item.id)} onClick={() => { if (Date.now() < catalogClickSuppressedUntil.current) return; const st = useProject.getState(); st.setTool("place"); st.setPlaceId(item.id); st.setCatalogVisible(false); st.setRightMode("irrigation"); st.setRightOpen(true); setLibInfo(item.id); setCatInfo(null); setMobilePanel(null); }}>
               <CatalogPic item={item} className="h-16 w-16 shrink-0" />
-              <span><strong>{item.id}</strong><span>{item.coverageKind === "point" ? "Баблер · без радиуса" : item.strip ? `${formatLenU(item.strip.w, units.length)} × ${formatLenU(item.strip.l, units.length)}` : `${formatLenU(item.rMin, units.length)}–${formatLenU(item.rMax, units.length)}`}</span><span>{item.arcMin === item.arcMax ? `${item.arcMax}°` : `${item.arcMin}–${item.arcMax}°`}</span></span>
+              <span><strong><bdi dir="ltr">{item.id}</bdi></strong><span>{item.coverageKind === "point" ? uiText("bubblerNoRadius") : item.strip ? `${formatLenU(item.strip.w, units.length)} × ${formatLenU(item.strip.l, units.length)}` : `${formatLenU(item.rMin, units.length)}–${formatLenU(item.rMax, units.length)}`}</span><span>{item.arcMin === item.arcMax ? `${formatNumber(item.arcMax,0)}°` : `${formatNumber(item.arcMin,0)}–${formatNumber(item.arcMax,0)}°`}</span></span>
               <CatalogThumb color={item.color} arc={item.arcMax} strip={item.strip} />
             </button>
-            <div className="mobile-catalog-card-actions"><button type="button" className="mobile-icon-button mobile-drag-handle" aria-label={`Перенести ${item.id}`} onPointerDown={(e) => { e.preventDefault(); useProject.getState().setTool("place"); startCatalogDrag(e, item.id); }}><Crosshair size={22} /></button><button type="button" className="mobile-icon-button" aria-label={`Подробнее о ${item.id}`} aria-expanded={libInfo === item.id} onClick={() => { setLibInfo(item.id); setCatInfo(null); useProject.getState().setRightMode("irrigation"); useProject.getState().setRightOpen(true); setMobilePanel(null); }}><MoreHorizontal size={22} /></button></div>
+            <div className="mobile-catalog-card-actions"><button type="button" className="mobile-icon-button mobile-drag-handle" aria-label={uiText("moveItem", { name: item.id })} onPointerDown={(e) => { e.preventDefault(); useProject.getState().setTool("place"); startCatalogDrag(e, item.id); }}><Crosshair size={22} /></button><button type="button" className="mobile-icon-button" aria-label={uiText("aboutItem", { name: item.id })} aria-expanded={libInfo === item.id} onClick={() => { setLibInfo(item.id); setCatInfo(null); useProject.getState().setRightMode("irrigation"); useProject.getState().setRightOpen(true); setMobilePanel(null); }}><MoreHorizontal size={22} /></button></div>
 
           </li>)}</ul>
         </div>}
         {mobilePanel === "properties" && <>
           {!groupedLayer && mobileFace && cadEditId && editingNodeContour && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{dimension.kind === "area" ? formatAreaU(dimension.value, units.area) : formatLenU(dimension.value, units.length)}</output></span>)}</div>}
-          {selected ? <>{selectedIds.length > 1 ? <ZoneList /> : <HeadCard head={selected} />}<PumpBox /></> : drawingDimensionsVisible ? contextControls : null}
+          {selected ? <>{selectedIds.length > 1 ? <ZoneList /> : <HeadCard head={selected} onZones={() => {
+            setLibInfo(null); setCatInfo(null); useProject.getState().endHeadEdit(); useProject.getState().setRightMode("zone"); setMobilePanel("irrigation");
+          }}/>}</> : drawingDimensionsVisible ? contextControls : null}
           {showHints && tool === "scale" && <p className="mobile-context-hint">{t("scaleHint")}</p>}
-          {showHints && tool === "measure" && <p className="mobile-context-hint">Коснитесь двух точек на чертеже.</p>}
+          {showHints && tool === "measure" && <p className="mobile-context-hint">{uiText("chooseTwoPoints")}</p>}
         </>}
-        {mobilePanel === "estimate" && <EstimateCard onCheck={() => setIssuesOpen(true)} />}
+        {mobilePanel === "irrigation" && <><ZoneList /><ZoneReview /></>}
       </MobileSheet>}
 
+      {referenceImport.picker}
+      <input ref={referenceFileRef} type="file" accept={REFERENCE_ACCEPT} hidden onChange={e => {
+        const file = e.target.files?.[0]; if (file) void referenceImport.importFile(file); e.target.value = "";
+      }} />
       <input
         ref={fileRef}
         type="file"
@@ -1869,12 +1785,13 @@ export function DesignerApp() {
             </p>
             <div className="mt-3 flex flex-wrap gap-1">
               {LENGTH_OPTS.map((u) => (
-                <Button key={u} size="xs" variant={u === units.length ? "pressed" : "outline"} onClick={() => useProject.getState().patchUnits({ length: u })}>
+                <Button key={u} size="xs" variant={u === units.length ? "pressed" : "outline"} onClick={() => { const n = parseLocalizedNumber(scaleValue); if (Number.isFinite(n)) setScaleValue(formatNumber(fromMeters(toMetersLen(n, units.length), u), 2)); useProject.getState().patchUnits({ length: u }); }}>
                   {t(`unit_${u}`)}
                 </Button>
               ))}
             </div>
             <input
+              aria-label={`${t("actualDistance")}, ${lenLabel(units.length)}`}
               value={scaleValue}
               onChange={(e) => setScaleValue(e.target.value)}
               className="mt-3 h-10 w-full rounded-md bg-bg-2 px-3 text-sm shadow-border"
@@ -1887,8 +1804,8 @@ export function DesignerApp() {
                 className="flex-1"
                 size="sm"
                 onClick={() => {
-                  const n = Number(scaleValue.replace(",", "."));
-                  if (!n) return;
+                  const n = parseLocalizedNumber(scaleValue);
+                  if (!Number.isFinite(n) || n <= 0 || dist(scalePair.a, scalePair.b) < 1e-6) { toast.error(t("referenceDistanceError")); return; }
                   useProject.getState().applyScale(scalePair.a, scalePair.b, toMeters(n, units.length));
                   setScalePair(null);
                   toast(t("scaleCalibrated"));
@@ -1902,6 +1819,8 @@ export function DesignerApp() {
                 onClick={() => {
                   setScalePair(null);
                   useProject.getState().cancelDraft();
+                  useProject.getState().setTool(null);
+                  useProject.getState().setReferenceOpen(true);
                 }}
               >
                 {t("cancel")}
@@ -1956,7 +1875,7 @@ export function DesignerApp() {
                 .map((p) => (
                   <LibraryRow
                     key={p.id}
-                    name={p.name}
+                    name={isNamed(p) ? p.name : t("untitled")}
                     updatedAt={p.updatedAt}
                     active={p.id === project.id}
                     onOpen={() => {
@@ -1964,8 +1883,9 @@ export function DesignerApp() {
                       useProject.getState().openLibrary(p.id);
                       setProjectsOpen(false);
                     }}
-                    onDelete={() => setDeleteAsk({ id: p.id, name: p.name })}
-                    onExport={(kind) => void exportLibrary(p, kind)}
+                    onDelete={() => useProject.getState().removeLibrary(p.id)}
+                    onCopy={() => {void downloadProjectFile(p.id===project.id?packedNow():toProjectFile({...packedNow(),...p.view,project:p})).catch(()=>toast.error(t("toastExportFail")));}}
+                    onExport={() => setExportProject(p)}
                   />
                 ))}
             </ul>
@@ -2019,50 +1939,13 @@ export function DesignerApp() {
         </div>
       )}
 
-      {issuesOpen && (
-        <div className="absolute inset-0 z-50 grid place-items-center bg-ink/30 p-4" onClick={() => setIssuesOpen(false)}>
-          <div className="w-full max-w-lg rounded-lg bg-surface p-5 shadow-border" onClick={(e) => e.stopPropagation()}>
-            <p className="font-display text-lg">{t("issuesTitle")}</p>
-            <ul className="mt-3 max-h-80 overflow-y-auto text-sm">
-              {issues.length === 0 && <li className="text-ok">{t("noIssues")}</li>}
-              {issues.map((i) => (
-                <li key={i.id} className="border-b border-line py-2">
-                  <button
-                    type="button"
-                    className="text-left"
-                    onClick={() => {
-                      if (i.headId) useProject.getState().selectHead(i.headId);
-                      setIssuesOpen(false);
-                    }}
-                  >
-                    <span className={i.level === "error" ? "text-danger" : "text-warn"}>{i.level === "error" ? t("error") : t("warning")}</span>
-                    {" — "}
-                    {i.message}
-                  </button>
-                </li>
-              ))}
-            </ul>
-            <Button className="mt-3" size="sm" onClick={() => setIssuesOpen(false)}>
-              {t("close")}
-            </Button>
-          </div>
-        </div>
-      )}
-      {catalogGhost && (
-        <div
-          className="pointer-events-none fixed z-50 flex items-center gap-2 rounded-md border border-catalog bg-catalog px-2 py-1.5 text-catalog-fg shadow-border"
-          style={{ left: catalogGhost.x, top: catalogGhost.y, transform: "translate(-50%, -120%)" }}
-        >
-            {itemById(catalogGhost.id) ? (
-              <CatalogPic item={itemById(catalogGhost.id)!} className="h-8 w-8" />
-            ) : (
-              <CatalogThumb color="#3d7fa3" arc={180} />
-            )}
-          <span className="text-xs font-medium">{catalogGhost.id}</span>
-        </div>
-      )}
+      <ProjectExportDialog project={exportProject} onClose={()=>setExportProject(null)}/>
+      <ProjectTrashDialog open={trashOpen} onClose={()=>setTrashOpen(false)}/>
+      <FileSaveDialog/>
+      <IrrigationCheck open={issuesOpen} onOpenChange={setIssuesOpen}/>
+      {catalogGhost && createPortal(<CatalogPlacementPreview ghost={catalogGhost}/>,document.body)}
 
-    </div>
+    </div></DirectionProvider>
   );
 }
 
@@ -2181,7 +2064,7 @@ function CatalogPic({ item, className }: { item: CatalogItem; className?: string
   return (
     <img
       src={catalogPhoto(item)}
-      alt={item.name}
+      alt={catalogName(item)}
       className={cn("shrink-0 object-contain", className)}
       onError={(e) => {
         const el = e.currentTarget;
@@ -2207,20 +2090,22 @@ function LibraryRow({
   onOpen,
   onDelete,
   onExport,
+  onCopy,
 }: {
   name: string;
   updatedAt?: string;
   active: boolean;
   onOpen: () => void;
   onDelete: () => void;
-  onExport: (kind: "pdf" | "dxf" | "png" | "svg" | "json") => void;
+  onExport: () => void;
+  onCopy: () => void;
 }) {
   const t = useT();
   const [dl, setDl] = useState(false);
   const hold = useRef<number | null>(null);
   const skip = useRef(false);
   const when = updatedAt
-    ? new Date(updatedAt).toLocaleString("ru-RU", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })
+    ? new Date(updatedAt).toLocaleString(activeNumberLocale(), { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })
     : "";
   const clear = () => {
     if (hold.current) {
@@ -2260,7 +2145,7 @@ function LibraryRow({
           onClick={() => setDl((v) => !v)}
         >
           <FileDown className="size-3.5" />
-          {t("download")}
+          {t("file")}
         </Button>
         <Button size="xs" variant="ghost" className="shrink-0 text-danger" aria-label={t("deleteProject")} onClick={onDelete}>
           <Trash2 />
@@ -2268,21 +2153,8 @@ function LibraryRow({
       </div>
       {dl && (
         <div className="mt-1.5 flex flex-wrap gap-1">
-          <Button size="xs" variant="outline" onClick={() => onExport("pdf")}>
-            PDF
-          </Button>
-          <Button size="xs" variant="outline" onClick={() => onExport("dxf")}>
-            {t("exportDxfCad")}
-          </Button>
-          <Button size="xs" variant="outline" onClick={() => onExport("png")}>
-            {t("exportPngFile")}
-          </Button>
-          <Button size="xs" variant="outline" onClick={() => onExport("svg")}>
-            {t("exportSvg")}
-          </Button>
-          <Button size="xs" variant="outline" onClick={() => onExport("json")}>
-            {t("exportJson")}
-          </Button>
+          <Button size="xs" variant="outline" onClick={onCopy}>{t("saveProjectCopy")}</Button>
+          <Button size="xs" variant="outline" onClick={onExport}>{t("exportMaterials")}</Button>
         </div>
       )}
     </li>
@@ -2328,12 +2200,16 @@ function ColorSlider({
   endLabels?: [string, string];
   onChange: (n: number) => void;
 }) {
-  const range = sliderRange(min, max, step, value);
-  const span = Math.max(0.0001, max - min);
-  const pct = Math.max(0, Math.min(100, ((value - min) / span) * 100));
+  const [draft, setDraft] = useState<number | null>(null);
+  const updates = useMemo(() => frameUpdate<() => void>(apply => apply(),
+    callback => requestAnimationFrame(callback), id => cancelAnimationFrame(id)), []);
+  useEffect(() => () => { updates.flush(); useProject.getState().endHeadEdit(); }, [updates]);
+  const finish = () => { updates.flush(); setDraft(null); useProject.getState().endHeadEdit(); };
+  const range = sliderRange(min, max, step, draft ?? value);
+  const fillEnd = sliderFillPosition(range.tick, range.ticks);
   return (
-    <label className="mt-1.5 block">
-      <span className="flex items-center justify-between gap-1 text-[10px] font-semibold" style={{ color }}>
+    <label className="head-slider-control">
+      <span className="head-slider-label flex items-center justify-between gap-1 font-semibold" style={{ color }}>
         <span>{label}</span>
         <span className="tabular">{display}</span>
       </span>
@@ -2352,18 +2228,22 @@ function ColorSlider({
         className="head-slider mt-0.5 w-full"
         style={{
           color,
-          background: `linear-gradient(90deg, ${color} ${pct}%, color-mix(in srgb, ${color} 22%, transparent) ${pct}%)`,
+          backgroundImage: `linear-gradient(90deg, ${color} 0, ${color} ${fillEnd}, color-mix(in srgb, ${color} 22%, transparent) ${fillEnd})`,
         }}
         onPointerDown={() => useProject.getState().beginHeadEdit()}
-        onChange={(e) => onChange(range.fromTick(Number(e.target.value)))}
+        onChange={(e) => {
+          const next = range.fromTick(Number(e.target.value));
+          setDraft(next);
+          updates.push(() => onChange(next));
+        }}
         onKeyDown={(e) => { if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End", "PageUp", "PageDown"].includes(e.key)) useProject.getState().beginHeadEdit(); }}
-        onKeyUp={() => useProject.getState().endHeadEdit()}
-        onBlur={() => useProject.getState().endHeadEdit()}
-        onPointerUp={() => useProject.getState().endHeadEdit()}
-        onPointerCancel={() => useProject.getState().endHeadEdit()}
-        onLostPointerCapture={() => useProject.getState().endHeadEdit()}
+        onKeyUp={finish}
+        onBlur={finish}
+        onPointerUp={finish}
+        onPointerCancel={finish}
+        onLostPointerCapture={finish}
       />
-      {endLabels && <span className="mt-0.5 flex justify-between gap-2 text-[10px] text-muted tabular"><span>{endLabels[0]}</span><span>{endLabels[1]}</span></span>}
+      {endLabels && <span className="head-slider-limits text-muted tabular"><span>{endLabels[0]}</span><span>{endLabels[1]}</span></span>}
     </label>
   );
 }
@@ -2556,16 +2436,16 @@ function PolygonDraftDimensions({hover}: {hover: Pt | null}) {
   return <div className="dimension-pad pointer-events-auto fixed inset-x-2 z-[90] overflow-x-auto overscroll-x-contain rounded-md border-2 border-tool bg-surface px-1.5 py-1 shadow-border" style={{bottom:`calc(3.55rem + env(safe-area-inset-bottom, 0px) + ${kbLift}px)`}} onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()}>
     <div className="flex h-10 w-max min-w-full items-center gap-1.5">
       {live.length>=3 && polygonArea(live)>1e-8 && <DimensionArea area={polygonArea(live)}/>}
-      {boundary.slice(1).map((p,i)=><label key={i} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5"><strong>{sideLetter(i)}</strong><input key={`${p.x}:${p.y}:${boundary[i]!.x}:${boundary[i]!.y}`} className="w-20" inputMode="decimal" aria-label={sideLetter(i)} defaultValue={String(Number(fromMeters(dist(boundary[i]!,p),units.length).toFixed(2)))} onBlur={e=>{
-        const value=Number(e.currentTarget.value.replace(',','.'));
+      {boundary.slice(1).map((p,i)=><label key={i} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5"><strong>{sideLetter(i)}</strong><input key={`${p.x}:${p.y}:${boundary[i]!.x}:${boundary[i]!.y}`} className="w-20" inputMode="decimal" aria-label={sideLetter(i)} defaultValue={formatNumber(fromMeters(dist(boundary[i]!,p),units.length),2)} onBlur={e=>{
+        const value=parseLocalizedNumber(e.currentTarget.value);
         const st=useProject.getState(),next=st.draft.points.map(p=>({...p})),a=next[i],b=next[i+1];
         if(!a||!b||!Number.isFinite(value)||value<=0)return;
         const length=dist(a,b);if(length<1e-7)return;
         const scale=toMetersLen(value,units.length)/length;
         next[i+1]={x:a.x+(b.x-a.x)*scale,y:a.y+(b.y-a.y)*scale};st.setDraftPoints(next);
       }} onKeyDown={e=>{e.stopPropagation();if(e.key==='Enter')e.currentTarget.blur();}}/><span>{lenLabel(units.length)}</span></label>)}
-      <label className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5"><strong>L</strong><input className="w-20" inputMode="decimal" placeholder={hover && points.length ? fromMeters(dist(points[points.length-1]!,hover),units.length).toFixed(2) : "0"} aria-label="L" onKeyDown={e=>{
-        e.stopPropagation();if(e.key!=='Enter')return;const value=Number(e.currentTarget.value.replace(',','.'));if(value>0){useProject.getState().applyCadLength(toMetersLen(value,units.length),hover);e.currentTarget.value='';}
+      <label className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5"><strong>L</strong><input className="w-20" inputMode="decimal" placeholder={hover && points.length ? formatNumber(fromMeters(dist(points[points.length-1]!,hover),units.length),2) : "0"} aria-label="L" onKeyDown={e=>{
+        e.stopPropagation();if(e.key!=='Enter')return;const value=parseLocalizedNumber(e.currentTarget.value);if(value>0){useProject.getState().applyCadLength(toMetersLen(value,units.length),hover);e.currentTarget.value='';}
       }}/><span>{lenLabel(units.length)}</span></label>
     </div>
   </div>;
@@ -2619,6 +2499,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
   const draft = useProject((s) => s.draft);
   const splinePreview = useProject((s) => s.splinePreview);
   const units = useProject((s) => s.units);
+  const displayLocale = useProject(s => `${s.locale}:${s.numberFormat}`);
   const kbLift = useKbLift();
   const drawing = drawingOrMigrate(project);
   const spline = faceId ? drawing.faces[faceId]?.spline : null;
@@ -2636,8 +2517,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
   const lengthsKey = lengths.map((length) => length.toFixed(8)).join("|");
   const digits = units.length === "mm" ? 0 : units.length === "cm" ? 1 : 2;
   const formatLength = (meters: number) => {
-    const fixed = fromMeters(meters, units.length).toFixed(digits);
-    return fixed.includes(".") ? fixed.replace(/\.?0+$/, "") : fixed;
+    return formatNumber(fromMeters(meters, units.length), digits);
   };
   const [values, setValues] = useState<string[]>(() => lengths.map(formatLength));
   const [nextValue, setNextValue] = useState("");
@@ -2647,7 +2527,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
     setValues(lengths.map(formatLength));
     // Geometry key keeps every field current when one control point changes two segments.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [faceId, lengthsKey, units.length]);
+  }, [faceId, lengthsKey, units.length, displayLocale]);
 
   useEffect(() => {
     setNextValue("");
@@ -2671,7 +2551,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
   };
 
   const applySegmentLength = (index: number) => {
-    const entered = Number((values[index] ?? "").trim().replace(",", "."));
+    const entered = parseLocalizedNumber((values[index] ?? "").trim());
     if (!Number.isFinite(entered) || entered <= 0) {
       resetValue(index);
       return;
@@ -2710,7 +2590,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
   };
 
   const addNextSegment = () => {
-    const entered = Number(nextValue.trim().replace(",", "."));
+    const entered = parseLocalizedNumber(nextValue.trim());
     if (!Number.isFinite(entered) || entered <= 0 || !points.length || faceId) return;
     const state = useProject.getState();
     if (state.tool !== "draw" || state.drawSub !== "spline") return;
@@ -2728,11 +2608,11 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
         {closed && <DimensionArea area={polygonArea(catmullRom(points, 8, true))} />}
         {!segment && <div
           className="dimension-total flex h-9 shrink-0 items-center gap-1 rounded-sm bg-tool/10 px-1.5"
-          title="Общая длина кривой"
+          title={uiText("curveLength")}
         >
           <span className="min-w-5 text-center text-xs font-bold text-ink">Σ</span>
           <output
-            aria-label="Общая длина кривой"
+            aria-label={uiText("curveLength")}
             className="min-w-[4.4rem] text-right text-sm font-semibold tabular-nums text-ink"
           >
             {formatLength(totalLength)}
@@ -2743,7 +2623,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
           <label key={`${faceId ?? "draft"}-${index}`} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
             <span className="min-w-5 text-center text-xs font-bold text-ink">{segment ? "L" : sideLetter(index)}</span>
             <input
-              aria-label={`Отрезок ${sideLetter(index)}`}
+              aria-label={uiText("segmentNamed", { name: sideLetter(index) })}
               inputMode="decimal"
               className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none focus:border-tool"
               value={values[index] ?? formatLength(length)}
@@ -2770,7 +2650,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
           <label className="flex h-9 shrink-0 items-center gap-1 rounded-sm border border-dashed border-tool/60 bg-bg-2 px-1.5">
             <span className="min-w-5 text-center text-xs font-bold text-tool">{sideLetter(segmentCount)}</span>
             <input
-              aria-label={`Новый отрезок ${sideLetter(segmentCount)}`}
+              aria-label={uiText("newSegmentNamed", { name: sideLetter(segmentCount) })}
               inputMode="decimal"
               placeholder="+"
               className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none placeholder:text-muted focus:border-tool"
@@ -2791,7 +2671,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
             <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
             {!compact && <button
               type="button"
-              aria-label={`Построить отрезок ${sideLetter(segmentCount)}`}
+              aria-label={uiText("drawSegmentNamed", { name: sideLetter(segmentCount) })}
               className="grid size-7 place-items-center rounded-sm bg-tool text-white disabled:opacity-40"
               disabled={!nextValue.trim()}
               onClick={addNextSegment}
@@ -2808,6 +2688,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
 function FreeformSidesPad({ faceId }: { faceId: string }) {
   const project = useProject((s) => s.project);
   const units = useProject((s) => s.units);
+  const displayLocale = useProject(s => `${s.locale}:${s.numberFormat}`);
   const kbLift = useKbLift();
   const drawing = drawingOrMigrate(project);
   const edges = faceEdges(drawing, faceId);
@@ -2820,8 +2701,7 @@ function FreeformSidesPad({ faceId }: { faceId: string }) {
   const lengthsKey = lengths.map((length) => length.toFixed(8)).join("|");
   const digits = units.length === "mm" ? 0 : units.length === "cm" ? 1 : 2;
   const formatLength = (meters: number) => {
-    const fixed = fromMeters(meters, units.length).toFixed(digits);
-    return fixed.includes(".") ? fixed.replace(/\.?0+$/, "") : fixed;
+    return formatNumber(fromMeters(meters, units.length), digits);
   };
   const [values, setValues] = useState<string[]>(() => lengths.map(formatLength));
 
@@ -2829,10 +2709,10 @@ function FreeformSidesPad({ faceId }: { faceId: string }) {
     setValues(lengths.map(formatLength));
     // Geometry key is intentionally used so inputs refresh after a handle or another side moves.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [faceId, lengthsKey, units.length]);
+  }, [faceId, lengthsKey, units.length, displayLocale]);
 
   const applySideLength = (index: number) => {
-    const entered = Number((values[index] ?? "").trim().replace(",", "."));
+    const entered = parseLocalizedNumber((values[index] ?? "").trim());
     if (!Number.isFinite(entered) || entered <= 0) {
       setValues(lengths.map(formatLength));
       return;
@@ -2859,7 +2739,7 @@ function FreeformSidesPad({ faceId }: { faceId: string }) {
           <label key={side.id} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
             <span className="min-w-5 text-center text-xs font-bold text-ink">{sideLetter(index)}</span>
             <input
-              aria-label={`Сторона ${sideLetter(index)}`}
+              aria-label={uiText("sideNamed", { name: sideLetter(index) })}
               inputMode="decimal"
               className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none focus:border-tool"
               value={values[index] ?? ""}
@@ -2923,6 +2803,7 @@ function DrawMeasurePad({
   const pendingLineLength=useProject(s=>s.draft.lineLength);
   const kbLift = useKbLift();
   const units = useProject((s) => s.units);
+  const displayLocale = useProject(s => `${s.locale}:${s.numberFormat}`);
   const [text, setText] = useState("");
   const [rIn, setRIn] = useState("");
   const [dIn, setDIn] = useState("");
@@ -2941,7 +2822,7 @@ function DrawMeasurePad({
     drawSub === "line" ? t("segmentLength") : t("drawLength");
   const lenDec = units.length === "mm" ? 0 : units.length === "cm" ? 1 : 2;
   const areaDec = units.area === "acre" || units.area === "ha" ? 3 : 1;
-  const fmtN = (n: number, d: number) => n.toFixed(d).replace(/\.?0+$/, (x) => (x.startsWith(".") ? x.replace(/0+$/, "").replace(/\.$/, "") : ""));
+  const fmtN = (n: number, d: number) => formatNumber(n, d);
   const syncCircle = (r: number) => {
     setRIn(fmtN(fromMeters(r, units.length), lenDec));
     setDIn(fmtN(fromMeters(r * 2, units.length), lenDec));
@@ -2950,26 +2831,26 @@ function DrawMeasurePad({
   useEffect(() => {
     if (liveR == null || dirty.current) return;
     syncCircle(liveR);
-  }, [liveR, units.length, units.area]);
+  }, [liveR, units.length, units.area, displayLocale]);
   useEffect(() => {
     if (!liveWH || dirty.current) return;
     setWIn(fmtN(fromMeters(liveWH.w, units.length), lenDec));
     setLIn(fmtN(fromMeters(liveWH.h, units.length), lenDec));
     const area = drawSub === "ellipse" ? Math.PI * (liveWH.w / 2) * (liveWH.h / 2) : drawSub === "triangle" ? (liveWH.w * liveWH.h) / 2 : drawSub === "hexagon" ? liveWH.w * liveWH.h * 0.75 : liveWH.w * liveWH.h;
     setSIn(fmtN(fromM2(area, units.area), areaDec));
-  }, [liveWH, units.length, units.area, drawSub]);
+  }, [liveWH, units.length, units.area, drawSub, displayLocale]);
   useEffect(() => {
     if (!liveTriangle || dirty.current) return;
     setBIn(fmtN(fromMeters(liveTriangle.left, units.length), lenDec));
     setCIn(fmtN(fromMeters(liveTriangle.right, units.length), lenDec));
-  }, [liveTriangle, units.length]);
+  }, [liveTriangle, units.length, displayLocale]);
   useEffect(() => {
     if (liveRot == null || dirty.current === "rot") return;
     const n = ((liveRot % 360) + 360) % 360;
-    setRotIn(n % 1 === 0 ? String(Math.round(n)) : n.toFixed(1));
-  }, [liveRot]);
+    setRotIn(formatNumber(n, n % 1 === 0 ? 0 : 1));
+  }, [liveRot, displayLocale]);
   const parseN = (raw: string) => {
-    const n = Number(raw.trim().replace(",", "."));
+    const n = parseLocalizedNumber(raw.trim());
     return Number.isFinite(n) && n > 0 ? n : null;
   };
   const applyCircleFrom = (which: "r" | "d" | "s") => {
@@ -3055,7 +2936,7 @@ function DrawMeasurePad({
     const curW = liveWH?.w ?? 1;
     const curH = liveWH?.h ?? 1;
     if (which === "rot") {
-      const n = Number(rotIn.trim().replace(",", "."));
+      const n = parseLocalizedNumber(rotIn.trim());
       if (!Number.isFinite(n)) return;
       st.setRectRotation(n);
       dirty.current = null;
@@ -3189,7 +3070,7 @@ function DrawMeasurePad({
         <span className="min-w-5 text-center text-xs font-bold text-ink">{drawSub === "line" ? "L" : "A"}</span>
         <input aria-label={param} inputMode="decimal" value={text}
           className="h-7 w-[5.2rem] rounded-sm border border-line bg-surface px-2 text-sm text-ink outline-none focus:border-tool"
-          placeholder={pendingLineLength ? String(fromMeters(pendingLineLength,units.length)) : hasPoint ? String(fromMeters(liveLen, units.length).toFixed(lenDec)) : "0"}
+          placeholder={pendingLineLength ? formatNumber(fromMeters(pendingLineLength,units.length),lenDec) : hasPoint ? formatNumber(fromMeters(liveLen, units.length),lenDec) : "0"}
           onChange={e => setText(e.target.value)} onFocus={e => e.currentTarget.select()}
           onBlur={() => { if (text.trim()) { apply(text); setText(""); } }}
           onKeyDown={e => { e.stopPropagation(); if (e.key === "Enter") e.currentTarget.blur(); }}/>
@@ -3209,7 +3090,7 @@ function AngleInput({ from, to }: { from: Pt; to: Pt }) {
         defaultValue={String(Math.round(deg))}
         key={Math.round(deg)}
         onBlur={(e) => {
-          const n = Number(e.target.value.replace(",", "."));
+          const n = parseLocalizedNumber(e.target.value);
           if (!Number.isFinite(n)) return;
           const st = useProject.getState();
           const pts = st.draft.points;
@@ -3292,7 +3173,7 @@ function ProjectCard() {
   return (
     <div className="p-1.5 sm:p-4">
       <p className="text-[9px] font-semibold tracking-wide text-muted uppercase sm:text-[10px]">{t("project")}</p>
-      <h2 className="mt-0.5 font-display text-sm sm:mt-1 sm:text-xl">{project.name === "Без названия" ? t("untitled") : project.name}</h2>
+      <h2 className="mt-0.5 font-display text-sm sm:mt-1 sm:text-xl">{!isNamed(project) ? t("untitled") : project.name}</h2>
       <Button className="mt-2 sm:mt-3" size="sm" onClick={() => useProject.getState().setProjectFormOpen(true)}>
         {t("edit")}
       </Button>
@@ -3401,7 +3282,7 @@ function ProjectFormBar() {
   const kbLift = useKbLift();
   const project = useProject((s) => s.project);
   const nameRef = useRef<HTMLInputElement>(null);
-  const [name, setName] = useState(project.name === "Без названия" ? "" : project.name);
+  const [name, setName] = useState(!isNamed(project) ? "" : project.name);
   const [nameError, setNameError] = useState(false);
   const [more, setMore] = useState(false);
   const [meta, setMeta] = useState({
@@ -3436,7 +3317,7 @@ function ProjectFormBar() {
   );
 
   const canSave = name.trim().length > 0;
-  const required = project.name.trim() === "" || project.name === "Без названия";
+  const required = !isNamed(project);
   const closeForm = () => {
     if (required) {
       setNameError(true);
@@ -3642,7 +3523,7 @@ function DrawingCard({ onlyConstraints = false }: { onlyConstraints?: boolean })
     <div className="space-y-1 p-1 sm:space-y-3 sm:p-3">
       {!onlyConstraints && <>
         <div className="flex items-center gap-2 px-2">
-          <h2 className="min-w-0 flex-1 break-words text-base font-semibold">{project.name === "Без названия" ? t("untitled") : project.name}</h2>
+          <h2 className="min-w-0 flex-1 break-words text-base font-semibold">{!isNamed(project) ? t("untitled") : project.name}</h2>
           <Button onClick={() => useProject.getState().setProjectFormOpen(true)}>{t("edit")}</Button>
         </div>
         <MobileLayers selectedFirst={false} onEdit={(id) => useProject.getState().setCadEdit(id)} onInspect={() => { const st = useProject.getState(); st.setRightMode(st.selectedId ? "object" : "drawing"); st.setRightOpen(true); }} />
@@ -3708,24 +3589,20 @@ function DrawingCard({ onlyConstraints = false }: { onlyConstraints?: boolean })
 
 function CatalogSource({ item }: { item: CatalogItem }) {
   return <div className="mt-3 border-t border-line pt-2 text-[11px] leading-relaxed">
-    {item.dataNote && <p className="mb-2 text-muted">{item.dataNote}</p>}
-    <a className="text-accent underline underline-offset-2" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">Таблица производителя Hunter ↗</a>
-    {item.verifiedOn && <p className="mt-1 text-muted">Сверено: {item.verifiedOn.split("-").reverse().join(".")}</p>}
+    {item.dataNote && <p className="mb-2 text-muted">{catalogNote(item)}</p>}
+    <a className="text-accent underline underline-offset-2" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{uiText("hunterTableLink")}</a>
+    {item.verifiedOn && <p className="mt-1 text-muted">{uiText("checkedOn")}{formatDate(item.verifiedOn)}</p>}
   </div>;
 }
-function FlowStats({ lpm, m3h }: { lpm: number | null; m3h: number | null }) {
+function FlowStats({ lpm }: { lpm: number | null; m3h: number | null }) {
   const flowUnit = useProject(s => s.units.flow);
-  const locale = useProject(s => s.locale);
   const tx = useT();
-  // Keep custom/US units, with the equivalent hourly metric flow alongside.
-  const primary = flowUnit === "m3h" ? "lpm" : flowUnit;
-  const unitLabel = locale === "ru"
-    ? ({ lpm: "л/мин", lph: "л/ч", gpm: "GPM", gph: "GPH" }[primary])
-    : flowLabel(primary);
-  return <>
-    <Stat k={`${tx("flow")}, ${unitLabel}`} v={lpm == null ? tx("noData") : formatNumber(fromLpm(lpm, primary), 2)}/>
-    <Stat k={`${tx("flow")}, ${locale === "ru" ? "м³/ч" : flowLabel("m3h")}`} v={m3h == null ? tx("noData") : formatNumber(m3h, 3)}/>
-  </>;
+  const secondary: import("@/lib/units").FlowUnit = flowUnit === "gpm" ? "gph" : flowUnit === "gph" ? "gpm" : flowUnit === "m3h" ? "lpm" : "m3h";
+  return <>{[flowUnit, secondary].map(unit => <Stat key={unit} k={`${tx("flow")}, ${flowLabel(unit)}`} v={lpm == null ? tx("noData") : formatNumber(fromLpm(lpm, unit), unit === "m3h" ? 3 : 2)} />)}</>;
+}
+function isLightColor(hex: string) {
+  const rgb = hex.replace("#", "");
+  return rgb.length === 6 && [0, 2, 4].reduce((sum, i, j) => sum + parseInt(rgb.slice(i, i + 2), 16) * [0.2126, 0.7152, 0.0722][j]!, 0) > 175;
 }
 
 function CatalogInfo({ catalogId }: { catalogId: string }) {
@@ -3737,33 +3614,34 @@ function CatalogInfo({ catalogId }: { catalogId: string }) {
   const pressure=pressureRange(item,defaults.nozzleId,defaults.arc);
   const fl=computeFlow(item,{arc:defaults.arc,radius:defaults.r,pressureBar:defaults.designPressure,nozzleId:defaults.nozzleId});
   const minutes=fl.precipMmHr!=null?runTimeMin(target,fl.precipMmHr):null;
-  return <div className="p-3" aria-label={`Характеристики ${item.id}`}>
+  return <div className="p-3" aria-label={uiText("itemProperties", { name: item.id })}>
     <CatalogPic item={item} className="mx-auto h-28 w-full max-w-[11rem]" />
-    <h2 className="mt-2 text-sm font-semibold">Hunter {item.id}</h2>
-    <p className="mt-1 text-xs text-muted">{item.name}</p>
-    <p className="mt-2 text-xs leading-relaxed">{item.use}</p>
-    {item.type==="rotor" && <p className="mt-2 text-xs">По умолчанию: сопло {nozzle?.size??"—"} · {nozzle?.colorName??"Нет данных"}</p>}
+    <h2 className="mt-2 text-sm font-semibold"><bdi dir="ltr">Hunter {item.id}</bdi></h2>
+    <p className="mt-1 text-xs text-muted">{catalogName(item)}</p>
+    <p className="mt-2 text-xs leading-relaxed">{catalogUse(item)}</p>
+    {item.type==="rotor" && <p className="mt-2 text-xs">{uiText("defaultNozzleLabel")}{nozzle?.size??"—"} · {nozzle ? catalogColor(nozzle.colorName) : uiText("noData")}</p>}
     <dl className="mt-3 grid grid-cols-2 gap-x-2 gap-y-2 text-[11px]">
       <FlowStats lpm={fl.lpm} m3h={fl.m3h}/>
-      <Stat k={item.strip?"Полоса при выбранном давлении":"Радиус при выбранном давлении"} v={item.coverageKind==="point"?"Нет данных":item.strip?(strip?`${formatLenU(strip.w,units.length)} × ${formatLenU(strip.l,units.length)}`:"Нет данных"):formatLenU(defaults.r,units.length)}/>
-      <Stat k="Рабочее давление" v={formatPressureU(defaults.designPressure,units.pressure)}/>
-      <Stat k={item.precipBasis==="single"?"Осаждение без перекрытия":"Осаждение, квадратная схема"} v={fl.precipMmHr==null?"Нет данных":`${fmt1(fl.precipMmHr)} мм/ч`}/>
-      <Stat k="Осаждение, треугольная схема" v={fl.precipTriangleMmHr==null?"Нет данных":`${fmt1(fl.precipTriangleMmHr)} мм/ч`}/>
-      <Stat k={`Время на ${fmt1(target)} мм`} v={minutes==null?"Нет данных":`${fmt1(minutes)} мин`}/>
-      <Stat k="Сектор" v={item.arcMin===item.arcMax?`${item.arcMax}°`:`${item.arcMin}–${item.arcMax}°`}/>
-      <Stat k="Диапазон давления сопла" v={pressure ? `${formatPressureU(pressure.min,units.pressure)}–${formatPressureU(pressure.max,units.pressure)}` : "Нет данных"}/>
+      <Stat k={item.strip?uiText("stripAtPressure"):uiText("radiusAtPressure")} v={item.coverageKind==="point"?uiText("noData"):item.strip?(strip?`${formatLenU(strip.w,units.length)} × ${formatLenU(strip.l,units.length)}`:uiText("noData")):formatLenU(defaults.r,units.length)}/>
+      <Stat k={uiText("workingPressure")} v={formatPressureU(defaults.designPressure,units.pressure)}/>
+      <Stat k={item.precipBasis==="single"?uiText("precipSingle"):uiText("precipSquare")} v={fl.precipMmHr==null?uiText("noData"):formatPrecipitation(fl.precipMmHr, units)}/>
+      <Stat k={uiText("precipTriangle")} v={fl.precipTriangleMmHr==null?uiText("noData"):formatPrecipitation(fl.precipTriangleMmHr, units)}/>
+      <Stat k={uiText("runTimeDepth", { depth: formatDepth(target, units) })} v={minutes==null?uiText("noData"):`${fmt1(minutes)} ${uiText("min")}`}/>
+      <Stat k={uiText("sector")} v={item.arcMin===item.arcMax?`${item.arcMax}°`:`${item.arcMin}–${item.arcMax}°`}/>
+      <Stat k={uiText("nozzlePressureRange")} v={pressure ? `${formatPressureU(pressure.min,units.pressure)}–${formatPressureU(pressure.max,units.pressure)}` : uiText("noData")}/>
     </dl>
     <CatalogReference item={item} nozzle={nozzle}/>
     <CatalogSource item={item}/>
   </div>;
 }
 
-function HeadCard({ head }: { head: Head }) {
+function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
   const item = itemById(head.catalogId);
   const units = useProject((s) => s.units);
   const tx = useT();
   const zones = useProject((s) => s.project.zones);
   const target = useProject((s) => s.project.meta.targetMm);
+  const editingSector = useProject(s => s.sectorEditId === head.id);
   if (!item) return <p className="p-1.5 text-[11px] text-warn sm:p-4 sm:text-sm">{tx("modelReview")}</p>;
   const fl = headFlow(head);
   const t = fl.precipMmHr ? runTimeMin(target, fl.precipMmHr) : null;
@@ -3773,7 +3651,8 @@ function HeadCard({ head }: { head: Head }) {
   const strip = stripAtPressure(item,head.designPressure);
   const bodies = bodiesFor(item);
   const bodyId = head.bodyId && bodies.some((b) => b.id === head.bodyId) ? head.bodyId : defaultBodyFor(item);
-  const { radius, pressure } = headParameterRanges(item, head);
+  const radius = headRadiusScale(item, head);
+  const pressures = pressureSteps(item, head.nozzleId, head.arc);
   const pickNozzle = (id: string) => {
     const n = item.nozzles.find((x) => x.id === id);
     if (!n) {
@@ -3789,15 +3668,24 @@ function HeadCard({ head }: { head: Head }) {
   };
   return (
     <div className="p-1.5 sm:p-3">
+      {onZones && <button type="button" className="zones-navigation" onClick={onZones}>{tx("zonesTitle")}</button>}
+      <HeadPlacementSettings key={`${head.id}:${head.zone}`} head={head} item={item}/>
       <div className="relative">
         <CatalogPic item={item} className="mx-auto h-28 w-full max-w-[11rem]" />
-        <button type="button" className="head-card-delete" disabled={head.locked || zones.some(z => z.id === head.zone && z.locked)} aria-label={tx("deleteSprinkler")} title={tx("deleteSprinkler")}
+        <div className="head-card-actions">
+        {item.coverageKind !== "point" && <button type="button" className="head-card-edit" aria-pressed={editingSector} disabled={head.locked || zones.some(z => z.id === head.zone && z.locked)}
+          aria-label={tx(editingSector ? "finishSectorEdit" : "editSector")} title={tx(editingSector ? "finishSectorEdit" : "editSector")}
+          onClick={() => useProject.getState().setSectorEdit(editingSector ? null : head.id)}><SectorEditIcon/></button>}
+        <button type="button" disabled={head.locked || zones.some(z => z.id === head.zone && z.locked)} aria-label={tx("duplicate")} title={tx("duplicate")}
+          onClick={() => { const st = useProject.getState(); st.endHeadEdit(); st.selectHead(head.id); st.duplicateSelected(); }}><Copy size={18}/></button>
+        <button type="button" className="irrigation-delete-action" disabled={head.locked || zones.some(z => z.id === head.zone && z.locked)} aria-label={tx("deleteSprinkler")} title={tx("deleteSprinkler")}
           onClick={() => useProject.getState().removeHead(head.id)}><Trash2 size={18}/></button>
+        </div>
       </div>
       <p className="mt-1 text-[10px] font-semibold tracking-wide text-muted uppercase">{item.series}</p>
-      <h2 className="font-display text-sm leading-tight">{item.id}</h2>
-      <p className="text-[11px] text-ink-soft">{item.name}</p>
-      {head.needsReview && <p className="mt-2 text-xs text-warn">Проверьте сопло и давление: сохранённые настройки отсутствуют в актуальной таблице Hunter.</p>}
+      <h2 className="font-display text-sm leading-tight"><bdi dir="ltr">{item.id}</bdi></h2>
+      <p className="text-[11px] text-ink-soft">{catalogName(item)}</p>
+      {head.needsReview && <p className="mt-2 text-xs text-warn">{uiText("headVerifyHint")}</p>}
       {item.type === "rotor" && item.nozzles.length > 1 && (
         <div className="mt-2">
           <p className="text-[10px] font-semibold text-muted">{tx("nozzleSize")} · {tx("automaticNozzle")}</p>
@@ -3810,11 +3698,11 @@ function HeadCard({ head }: { head: Head }) {
                   type="button"
                   onClick={() => pickNozzle(n.id)}
                   aria-pressed={on}
-                  title={`${n.name} · ${n.colorName}`}
+                  title={`${nozzleName(n)} · ${catalogColor(n.colorName)}`}
                   className={cn("h-8 rounded-sm text-[11px] font-semibold tabular", on ? "text-white" : "hover:opacity-90")}
-                  style={{ background: on ? n.color : "transparent", color: on && !["белый","светло-коричневый","жёлтый"].includes(n.colorName) ? "#fff" : "var(--color-ink)", border: `1px solid ${on ? n.color : "transparent"}` }}
+                  style={{ background: on ? n.color : "transparent", color: on && !isLightColor(n.color) ? "#fff" : "var(--color-ink)", border: `1px solid ${on ? n.color : "transparent"}` }}
                 >
-                  {n.size ?? n.name}
+                  {n.size ?? nozzleName(n)}
                 </button>
               );
             })}
@@ -3822,21 +3710,13 @@ function HeadCard({ head }: { head: Head }) {
         </div>
       )}
       <div className="mt-2">
-        <p className="mb-2 text-xs text-muted">{tx("recommendedPressure")} — {formatPressureU(workingPressureBar(item, bodyId, head.nozzleId), units.pressure)}</p>
-        {pressure && <ColorSlider
-          label={tx("workingPressure")}
-          color="#2563eb"
-          min={pressure.min}
-          max={pressure.max}
-          step={0.1}
-          value={Math.max(pressure.min, Math.min(pressure.max, head.designPressure))}
-          endLabels={[formatPressureU(pressure.min, units.pressure), formatPressureU(pressure.max, units.pressure)]}
-          display={formatPressureU(head.designPressure, units.pressure)}
-          onChange={designPressure => live({ designPressure })}
-        />}
+        <p className="mb-1 text-xs text-muted">{tx("recommendedPressure")} — {formatPressureU(workingPressureBar(item, bodyId, head.nozzleId), units.pressure)}</p>
+        <PressureSteps values={pressures} value={head.designPressure}
+          recommended={workingPressureBar(item, bodyId, head.nozzleId)}
+          onChange={designPressure => upd({ designPressure })}/>
         {radius && radius.max > radius.min && <ColorSlider
           label={tx("radius")}
-          color="#e67a2e"
+          color={HEAD_CONTROL_COLORS.radius}
           min={radius.min}
           max={radius.max}
           step={0.05}
@@ -3848,18 +3728,19 @@ function HeadCard({ head }: { head: Head }) {
         {item.arcMin !== item.arcMax && (
           <ColorSlider
             label={tx("sector")}
-            color="#2a9d5c"
+            color={HEAD_CONTROL_COLORS.sector}
             min={item.arcMin}
             max={item.arcMax}
             step={1}
             value={Math.min(item.arcMax, Math.max(item.arcMin, head.arc))}
             display={`${Math.round(head.arc)}°`}
+            endLabels={[`${item.arcMin}°`, `${item.arcMax}°`]}
             onChange={(arc) => live({ arc })}
           />
         )}
         {(item.strip || (item.coverageKind !== "point" && head.arc < 360)) && <ColorSlider
           label={tx("rotation")}
-          color="#7b3fd0"
+          color={HEAD_CONTROL_COLORS.rotation}
           min={0}
           max={359}
           step={1}
@@ -3870,11 +3751,11 @@ function HeadCard({ head }: { head: Head }) {
       </div>
       <dl className="mt-2 grid grid-cols-2 gap-x-2 gap-y-1 text-[11px]">
         <FlowStats lpm={fl.lpm} m3h={fl.m3h}/>
-        <Stat k={item.strip?"Размер полосы":tx("radius")} v={item.coverageKind==="point"?tx("noData"):item.strip?(strip?`${formatLenU(strip.w,units.length)} × ${formatLenU(strip.l,units.length)}`:tx("noData")):formatLenU(head.r, units.length)} />
+        <Stat k={item.strip?uiText("stripSize"):tx("radius")} v={item.coverageKind==="point"?tx("noData"):item.strip?(strip?`${formatLenU(strip.w,units.length)} × ${formatLenU(strip.l,units.length)}`:tx("noData")):formatLenU(head.r, units.length)} />
         <Stat k={tx("workingPressure")} v={formatPressureU(head.designPressure, units.pressure)} />
-        <Stat k={item.precipBasis==="single"?"Осаждение без перекрытия":"Осаждение, квадратная схема"} v={fl.precipMmHr == null ? tx("noData") : `${fmt1(fl.precipMmHr)} ${tx("mmhr")}`} />
-        <Stat k="Осаждение, треугольная схема" v={fl.precipTriangleMmHr==null?tx("noData"):`${fmt1(fl.precipTriangleMmHr)} ${tx("mmhr")}`}/>
-        <Stat k={`${tx("runTime")} · ${fmt1(target)} мм`} v={t == null ? tx("noData") : `${fmt1(t)} ${tx("min")}`} />
+        <Stat k={item.precipBasis==="single"?uiText("precipSingle"):uiText("precipSquare")} v={fl.precipMmHr == null ? tx("noData") : formatPrecipitation(fl.precipMmHr, units)} />
+        <Stat k={uiText("precipTriangle")} v={fl.precipTriangleMmHr==null?tx("noData"):formatPrecipitation(fl.precipTriangleMmHr, units)}/>
+        <Stat k={uiText("runTimeDepth", { depth: formatDepth(target, units) })} v={t == null ? tx("noData") : `${fmt1(t)} ${tx("min")}`} />
       </dl>
       <CatalogSource item={item}/>
 
@@ -3884,88 +3765,73 @@ function HeadCard({ head }: { head: Head }) {
           <select value={head.nozzleId ?? ""} onChange={(e) => pickNozzle(e.target.value)} className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[13px] shadow-border">
             {item.nozzles.map((n) => (
               <option key={n.id} value={n.id}>
-                {n.size ? `${n.size} · ${n.name}` : n.name}
+                {n.size ? `${n.size} · ${nozzleName(n)}` : nozzleName(n)}
               </option>
             ))}
           </select>
         </label>
       )}
-      <div className="mt-2 grid grid-cols-1 gap-1.5">
-        {item.type !== "rotor" && bodies.length > 0 && (
-          <label className="block text-[10px] text-muted">
-            {tx("body")}
-            <select
-              value={bodyId}
-              onChange={(e) => {
-                const next = e.target.value;
-                upd({ bodyId: next, designPressure: workingPressureBar(item, next) });
-              }}
-              className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[13px] text-ink shadow-border"
-            >
-              {bodies.map((b) => (
-                <option key={b.id} value={b.id}>
-                  {b.name.replace(/\s+\d+(?:[.,]\d+)?\s*см$/i, "")}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
-        <label className="block text-[10px] text-muted">
-          {tx("zone")}
-          <select
-            value={head.zone}
-            onChange={(e) => upd({ zone: Number(e.target.value) })}
-            className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[13px] text-ink shadow-border"
-          >
-            {zones.map((z) => (
-              <option key={z.id} value={z.id}>
-                {z.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button
-          type="button"
-          className="inline-flex h-7 items-center justify-center gap-1 rounded-sm bg-[#e67a2e] px-1.5 text-[10px] font-semibold text-white"
-          onClick={() => useProject.getState().addZone(head.id)}
-        >
-          <Plus className="size-3.5" />
-          {tx("addZone")}
-        </button>
-      </div>
       <CatalogReference item={item} nozzle={nozzle}/>
     </div>
   );
 }
 
-function EstimateCard({ onCheck }: { onCheck: () => void }) {
+/** Shared centered estimate window; it does not change sidebar mode or selection. */
+function EstimateDialog({ mobile, onOpen }: { mobile: boolean; onOpen: () => void }) {
   const t = useT();
+  const [open, setOpen] = useState(false);
+  return <Dialog.Root open={open} onOpenChange={next => { setOpen(next); if (next) onOpen(); }}>
+    <Dialog.Trigger asChild>
+      <button type="button" className="mobile-icon-button workspace-header-action" aria-label={t("estimate")} aria-pressed={open}>
+        <FileText />{!mobile && <span>{t("estimate")}</span>}
+      </button>
+    </Dialog.Trigger>
+    <Dialog.Portal container={typeof document === "undefined" ? undefined : document.querySelector(".app-shell")}>
+      <Dialog.Overlay className="estimate-dialog-overlay" />
+      <Dialog.Content className="estimate-dialog" aria-describedby={undefined}
+        onPointerDown={event => event.stopPropagation()} onKeyDown={event => event.stopPropagation()}>
+        <header className="estimate-dialog-heading">
+          <Dialog.Title>{t("estimate")}</Dialog.Title>
+          <Dialog.Close asChild><Button size="icon" variant="ghost" aria-label={t("close")}><X /></Button></Dialog.Close>
+        </header>
+        <div className="estimate-dialog-scroll"><EstimateCard /></div>
+      </Dialog.Content>
+    </Dialog.Portal>
+  </Dialog.Root>;
+}
+
+function EstimateCard() {
+  const t = useT();
+  const locale = useProject(s => s.locale);
+  const numberFormat = useProject(s => s.numberFormat);
+  const units = useProject(s => s.units);
   const project = useProject((s) => s.project);
   const heads = project.heads;
   const bomBodyQty = project.bomBodyQty ?? {};
   const [saveAsk, setSaveAsk] = useState(false);
   const [saving, setSaving] = useState(false);
+  const saveButtonRef = useRef<HTMLButtonElement>(null);
   const { sprinklers, bodies } = useMemo(() => {
-    const spr = new Map<string, { item: CatalogItem; ids: string[] }>();
+    const spr = new Map<string, { key: string; item: CatalogItem; name: string; ids: string[] }>();
     const bod = new Map<string, { body: CatalogItem; ids: string[]; recIds: string[] }>();
     for (const h of heads) {
       const item = itemById(h.catalogId);
       if (!item) continue;
-      const s = spr.get(item.id) ?? { item, ids: [] };
+      const key = item.type === "rotor" ? `${item.id}:${h.popUpMm ?? item.popUpMm}` : item.id;
+      const s = spr.get(key) ?? { key, item, name: bomLineName(item, h.popUpMm), ids: [] };
       s.ids.push(h.id);
-      spr.set(item.id, s);
+      spr.set(key, s);
       if (item.type === "rotor") continue;
-      const bodyId = h.bodyId ?? defaultBodyFor(item);
-      const body = itemById(bodyId);
+      const body = bodyForHead(item, h.bodyId, h.popUpMm);
       if (!body) continue;
       const b = bod.get(body.id) ?? { body, ids: [], recIds: [] };
       b.ids.push(h.id);
-      const rec = defaultBodyFor(item);
+      const rec = recommendedBodyFor(item, body.popUpMm)?.id ?? defaultBodyFor(item);
       if (!b.recIds.includes(rec)) b.recIds.push(rec);
       bod.set(body.id, b);
     }
     return { sprinklers: [...spr.values()], bodies: [...bod.values()] };
-  }, [heads]);
+  }, [heads, locale, units, numberFormat]);
   const setBodyQty = (bodyId: string, n: number) => {
     const st = useProject.getState();
     st.patchProject({
@@ -3981,23 +3847,25 @@ function EstimateCard({ onCheck }: { onCheck: () => void }) {
       delete qty[fromId];
     }
     st.patchProject({
-      heads: st.project.heads.map((h) => (ids.includes(h.id) ? { ...h, bodyId: toId } : h)),
+      heads: st.project.heads.map((h) => (ids.includes(h.id) && !h.locked && !st.project.zones.some(z => z.id === h.zone && z.locked)
+        ? updateHeadSettings(h, { bodyId: toId }) : h)),
       bomBodyQty: qty,
     });
   };
   const bodyChoices = (ids: string[]) => {
-    const seen = new Map<string, CatalogItem>();
+    const compatible: CatalogItem[][] = [];
     for (const id of ids) {
       const h = heads.find((x) => x.id === id);
       const item = h ? itemById(h.catalogId) : null;
       if (!item) continue;
-      for (const b of bodiesFor(item)) seen.set(b.id, b);
+      compatible.push(bodiesFor(item));
     }
-    return [...seen.values()];
+    return (compatible[0] ?? []).filter(body => compatible.every(list => list.some(option => option.id === body.id)));
   };
   return (
-    <div className="p-1.5 sm:p-4">
+    <div className="estimate-card">
       <Button
+        ref={saveButtonRef}
         className="w-full"
         variant="solid"
         size="sm"
@@ -4006,7 +3874,6 @@ function EstimateCard({ onCheck }: { onCheck: () => void }) {
       >
         {t("saveEstimate")}
       </Button>
-      <p className="mt-3 text-[10px] font-semibold tracking-wide text-muted uppercase">{t("estimate")}</p>
       {sprinklers.length === 0 ? (
         <p className="mt-2 text-[11px] text-muted">{t("heads")}: 0</p>
       ) : (
@@ -4017,12 +3884,12 @@ function EstimateCard({ onCheck }: { onCheck: () => void }) {
             <span>{t("colQty")}</span>
           </li>
           {sprinklers.map((g, i) => (
-            <li key={g.item.id} className="flex items-center gap-2 rounded-sm border border-line p-1.5">
+            <li key={g.key} className="flex items-center gap-2 rounded-sm border border-line p-1.5">
               <span className="w-5 shrink-0 text-center text-[11px] tabular text-muted">{i + 1}</span>
               <CatalogPic item={g.item} className="h-9 w-9" />
-              <span className="min-w-0 flex-1 text-[11px] font-medium leading-snug">{bomLineName(g.item)}</span>
+              <span className="min-w-0 flex-1 text-[11px] font-medium leading-snug">{g.name}</span>
               <span className="shrink-0 text-[11px] tabular text-muted">
-                {g.ids.length} {t("pcs")}
+                {formatNumber(g.ids.length, 0)} {t("pcs")}
               </span>
             </li>
           ))}
@@ -4037,11 +3904,13 @@ function EstimateCard({ onCheck }: { onCheck: () => void }) {
                   <CatalogPic item={g.body} className="h-9 w-9" />
                   <span className="min-w-0 flex-1 text-[11px] font-medium leading-snug">{bomLineName(g.body)}</span>
                   <label className="flex shrink-0 items-center gap-1 text-[10px] text-muted">
-                    <input
+                    <LocalizedNumberInput
                       className="h-7 w-11 rounded-sm bg-bg-2 px-1 text-center text-xs tabular shadow-border"
-                      inputMode="numeric"
+                      aria-label={`${t("colQty")}: ${bomLineName(g.body)}`}
+                      min={0}
+                      digits={0}
                       value={n}
-                      onChange={(e) => setBodyQty(g.body.id, Number(e.target.value) || 0)}
+                      onCommit={value => setBodyQty(g.body.id, value ?? 0)}
                     />
                     {t("pcs")}
                   </label>
@@ -4049,14 +3918,12 @@ function EstimateCard({ onCheck }: { onCheck: () => void }) {
                 {choices.length > 0 && (
                   <select
                     className="mt-1.5 h-8 w-full rounded-sm bg-bg-2 px-1 text-[11px] text-ink shadow-border"
+                    aria-label={bomLineName(g.body)}
                     value={g.body.id}
+                    disabled={g.ids.some(id => heads.some(h => h.id === id && (h.locked || project.zones.some(z => z.id === h.zone && z.locked))))}
                     onChange={(e) => setBodyKind(g.body.id, e.target.value, g.ids)}
                   >
-                    {choices.map((b) => (
-                      <option key={b.id} value={b.id}>
-                        {bomLineName(b)}
-                      </option>
-                    ))}
+                    <BodyOptions bodies={choices} locale={locale}/>
                   </select>
                 )}
                 {rec.length > 0 && (
@@ -4069,14 +3936,13 @@ function EstimateCard({ onCheck }: { onCheck: () => void }) {
           })}
         </ul>
       )}
-      <Button className="mt-3 w-full" variant="solid" size="sm" onClick={onCheck}>
-        {t("checkProject")}
-      </Button>
-      {saveAsk &&
-        createPortal(
-          <div className="fixed inset-0 z-[80] grid place-items-center bg-ink/40 p-4" onClick={() => !saving && setSaveAsk(false)}>
-            <div className="w-full max-w-sm rounded-lg bg-surface p-5 shadow-border" onClick={(e) => e.stopPropagation()}>
-              <p className="font-display text-lg">{t("saveEstimate")}</p>
+      <Dialog.Root open={saveAsk} onOpenChange={open => { if (!saving) setSaveAsk(open); }}>
+        <Dialog.Portal container={typeof document === "undefined" ? undefined : document.querySelector(".app-shell")}>
+          <Dialog.Overlay className="estimate-dialog-overlay estimate-export-overlay" />
+          <Dialog.Content className="estimate-dialog estimate-export-dialog" aria-describedby={undefined}
+            onCloseAutoFocus={event => { event.preventDefault(); saveButtonRef.current?.focus(); }}
+            onPointerDown={event => event.stopPropagation()} onKeyDown={event => event.stopPropagation()}>
+            <Dialog.Title className="font-display text-lg">{t("saveEstimate")}</Dialog.Title>
               <div className="mt-4 flex flex-col gap-2">
                 {(
                   [
@@ -4093,7 +3959,7 @@ function EstimateCard({ onCheck }: { onCheck: () => void }) {
                     disabled={saving}
                     onClick={() => {
                       setSaving(true);
-                      void run().finally(() => {
+                      void run().catch(()=>toast.error(t('toastExportFail'))).finally(() => {
                         setSaving(false);
                         setSaveAsk(false);
                       });
@@ -4106,187 +3972,15 @@ function EstimateCard({ onCheck }: { onCheck: () => void }) {
                   {t("cancel")}
                 </Button>
               </div>
-            </div>
-          </div>,
-          document.body,
-        )}
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
     </div>
   );
 }
 
-function ZoneList({ compact }: { compact?: boolean }) {
-  const project = useProject((s) => s.project);
-  const activeId = useProject((s) => s.activeZoneId);
-  const units = useProject((s) => s.units);
-  const t = useT();
-  const [openId, setOpenId] = useState<number | null>(null);
-  const [zoneAsk, setZoneAsk] = useState<{ id: number; name: string } | null>(null);
-  const firstId = [...project.zones].sort((a, b) => a.id - b.id)[0]?.id;
-  const canDelete = (id: number) => project.zones.length > 1 && id !== 1 && id !== firstId;
-  const askDelete = (id: number) => {
-    const z = project.zones.find((x) => x.id === id);
-    if (z && canDelete(z.id)) setZoneAsk({ id: z.id, name: z.name });
-  };
-  const holes = exclusionPolygons(project.polygons);
-  const d = drawingOrMigrate(project);
-  return (
-    <div className="zone-list">
-      <div className="flex items-center gap-1">
-        <p className="min-w-0 flex-1 px-0.5 text-[10px] font-semibold tracking-wide text-muted uppercase">{t("zonesTitle")}</p>
-        <button
-          type="button"
-          className="grid size-6 place-items-center rounded-sm text-ink-soft hover:bg-bg-2"
-          aria-label={t("addZone")}
-          onClick={() => useProject.getState().addZone()}
-        >
-          <Plus className="size-3.5" />
-        </button>
-      </div>
-      {project.zones.length === 0 ? (
-        <p className="px-0.5 text-[11px] text-muted">{t("noZones")}</p>
-      ) : (
-        <div className="mt-1 flex flex-col gap-1">
-          {project.zones.map((zone) => {
-            const heads = project.heads.filter((h) => h.zone === zone.id);
-            const n = heads.length;
-            const current = zone.id === activeId;
-            const open = openId === zone.id;
-            const q = zoneFlow(heads, zone.id);
-            const pressure = zonePressure(heads, zone.id);
-            const faces = Object.values(d.faces).filter((f) => heads.some((h) => headInsideFace(d, f.id, h)));
-            const areaM2 = faces.length && faces.every(f => !project.heads.some(h => h.zone !== zone.id && headInsideFace(d, f.id, h)))
-              ? faces.reduce((s, f) => s + faceArea(d, f.id), 0)
-              : 0;
-            const footprint = faces[0] ? facePoints(d, faces[0].id) : lawnPolygon(project.polygons);
-            const cov = footprint && footprint.length >= 3 ? coverageStats(footprint, heads, 0.7, holes) : null;
-            const precip = areaM2 > 0 && q ? totalAreaPrecip(q, areaM2) : null;
-            return (
-              <div key={zone.id} className={cn("rounded-sm border border-line", current || open ? "bg-btn-soft" : "bg-surface")}>
-                <div className="flex h-8 items-center gap-0.5 px-0.5">
-                  <button
-                    type="button"
-                    className={cn("relative flex size-7 shrink-0 items-center justify-center", zone.hidden ? "text-danger" : "text-muted")}
-                    aria-label={zone.hidden ? t("showLayer") : t("hideLayer")}
-                    onClick={() => useProject.getState().toggleZoneHidden(zone.id)}
-                  >
-                    <Eye className="size-3.5" />
-                    {zone.hidden && <span className="absolute inset-x-1.5 top-1/2 h-[1.5px] -rotate-45 bg-danger" />}
-                  </button>
-                  <button
-                    type="button"
-                    className={cn("flex size-7 shrink-0 items-center justify-center", zone.locked ? "text-danger" : "text-muted")}
-                    aria-label={zone.locked ? t("unlockLayer") : t("lockLayer")}
-                    onClick={() => useProject.getState().toggleZoneLocked(zone.id)}
-                  >
-                    {zone.locked ? <Lock className="size-3.5" /> : <Unlock className="size-3.5" />}
-                  </button>
-                  <span
-                    className="mx-0.5 size-2.5 shrink-0 rounded-[2px] border border-black/15"
-                    style={{ background: zoneColor(zone.id), opacity: zone.hidden ? 0.35 : 1 }}
-                  />
-                  <button
-                    type="button"
-                    className={cn("min-w-0 flex-1 truncate text-left text-[11px]", zone.hidden && "text-muted")}
-                    onClick={() => useProject.getState().setActiveZone(zone.id)}
-                  >
-                    {zone.name}
-                  </button>
-                  <button
-                    type="button"
-                    className="shrink-0 px-1.5 text-[10px] font-medium text-tool"
-                    onClick={() => {
-                      useProject.getState().setActiveZone(zone.id);
-                      setOpenId(open ? null : zone.id);
-                    }}
-                  >
-                    {t("layerMore")}
-                  </button>
-                </div>
-                <div className="zone-demand" aria-label={`${zone.name}: ${t("flow")}, ${t("zonePressure")}`}>
-                  <span>{q == null ? t("noData") : formatFlowU(q, units.flow)}</span>
-                  <span title={t("zonePressure")}>{pressure == null ? t("noData") : formatPressureU(pressure, units.pressure)}</span>
-                  <span>{t("heads")}: {n}</span>
-                </div>
-                {open && (
-                  <div className={cn("border-t border-line p-2 text-[11px] tabular", compact && "p-1.5")}>
-                    <input
-                      value={zone.name}
-                      onChange={(e) => useProject.getState().renameZone(zone.id, e.target.value)}
-                      className="h-7 w-full rounded-sm bg-bg-2 px-2 text-[11px] shadow-border"
-                    />
-                    <p className="mt-1.5">
-                      {t("flow")}: {q == null ? "Нет данных" : formatFlowU(q, units.flow)}
-                      {precip != null ? ` · ≈ ${fmt1(precip)} ${t("mmhr")} (оценка по площади)` : ""}
-                    </p>
-                    <p>
-                      {t("heads")}: {n}
-                    </p>
-                    <p>
-                      {t("area")}: {areaM2 > 0 ? formatAreaU(areaM2, units.area) : "—"}
-                    </p>
-                    <p>
-                      {t("coverage1")}: {cov ? `${fmt1(cov.cover1)}%` : "—"}
-                    </p>
-                    <p>
-                      {t("coverage2")}: {cov ? `${fmt1(cov.cover2)}%` : "—"}
-                    </p>
-                    {canDelete(zone.id) && (
-                      <Button size="xs" className="mt-2" variant="pale" onClick={() => askDelete(zone.id)}>
-                        {t("delete")}
-                      </Button>
-                    )}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      )}
-      {zoneAsk &&
-        createPortal(
-          <div
-            className="fixed inset-0 z-[80] grid place-items-center bg-ink/40 p-4"
-            onPointerUp={() => setZoneAsk(null)}
-          >
-            <div
-              className="w-full max-w-sm rounded-lg bg-surface p-5 shadow-border"
-              onPointerUp={(e) => e.stopPropagation()}
-            >
-              <p className="font-display text-lg">{t("deleteZone")}</p>
-              <p className="mt-2 text-sm text-ink-soft">{t("deleteZoneConfirm", { name: zoneAsk.name })}</p>
-              <div className="mt-4 flex gap-2">
-                <Button
-                  variant="solid"
-                  className="flex-1"
-                  size="sm"
-                  onPointerUp={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const id = zoneAsk.id;
-                    setZoneAsk(null);
-                    useProject.getState().removeZone(id);
-                  }}
-                >
-                  {t("delete")}
-                </Button>
-                <Button
-                  className="flex-1"
-                  size="sm"
-                  onPointerUp={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    setZoneAsk(null);
-                  }}
-                >
-                  {t("cancel")}
-                </Button>
-              </div>
-            </div>
-          </div>,
-          document.body,
-        )}
-    </div>
-  );
+export function ZoneReview() {
+  return <div className="zone-review"><PumpBox /></div>;
 }
 
 function PumpBox() {
@@ -4294,12 +3988,12 @@ function PumpBox() {
   const project = useProject((s) => s.project);
   const units = useProject((s) => s.units);
   const rec = recommendPump(project);
-  if (!rec) return project.heads.length ? <p className="mt-2 text-xs text-muted">Расчёт насоса: нет данных о расходе одного или нескольких дождевателей. Проверьте сопла и давление.</p> : null;
+  if (!rec) return project.heads.length ? <p className="mt-2 text-xs text-muted">{uiText("pumpMissingFlow")}</p> : null;
   const us = units.flow === "gpm" || units.flow === "gph" || units.pressure === "psi" || units.length === "ft" || units.length === "in";
-  const qMain = formatFlowU(rec.qLpm, us ? "gpm" : "lpm");
-  const qAlt = formatFlowU(rec.qLpm, us ? "gph" : "m3h");
-  const hMain = us ? formatLenU(rec.headM, "ft") : `${Math.round(rec.headM)} ${t("unit_m")}`;
-  const hAlt = formatPressureU(rec.pBar, us ? "psi" : "bar");
+  const qMain = formatFlowU(rec.qLpm, units.flow);
+  const qAlt = formatFlowU(rec.qLpm, units.flow === "gpm" ? "gph" : units.flow === "gph" ? "gpm" : units.flow === "m3h" ? "lpm" : "m3h");
+  const hMain = formatLenU(rec.headM, units.length);
+  const hAlt = formatPressureU(rec.pBar, units.pressure);
   return (
     <div className="mt-1.5 rounded-sm bg-bg-2 px-1.5 py-1.5">
       <p className="text-xs font-semibold text-ink">{t("pumpRec")}</p>
@@ -4310,7 +4004,7 @@ function PumpBox() {
         H {hMain} · {hAlt}
       </p>
       <p className="mt-0.5 text-[10px] leading-snug text-muted">
-        {t("pumpOneZone")}: {rec.zoneName} ({formatFlowU(rec.zoneMaxLpm, us ? "gpm" : "lpm")})
+        {t("pumpOneZone")}: {rec.zoneName} ({formatFlowU(rec.zoneMaxLpm, units.flow)})
       </p>
       <p className="mt-1 text-xs text-muted">{t("zonePressure")}: {formatPressureU(rec.workingBar, units.pressure)} · {rec.pressureZoneName}</p>
       <p className="text-[10px] leading-snug text-muted">{t("pumpNote")}</p>
@@ -4331,8 +4025,9 @@ function ZoneCard({ zoneId }: { zoneId: number }) {
   const heads = project.heads.filter((h) => h.zone === zoneId);
   const q = zoneFlow(heads, zoneId);
   const avail = project.water.availableLpm;
-  const limit = defaultMaxZoneLpm(avail);
-  const [maxLpm, setMaxLpm] = useState(String(limit));
+  const limit = projectZoneLimit(project);
+  const [maxLpm, setMaxLpm] = useState(formatNumber(fromLpm(limit, units.flow), 2));
+  useEffect(() => setMaxLpm(formatNumber(fromLpm(limit, units.flow), 2)), [limit, units.flow]);
   const patchWater = (patch: Partial<typeof project.water>) =>
     useProject.getState().patchProject({ water: { ...project.water, ...patch } });
   if (!z) return null;
@@ -4340,50 +4035,25 @@ function ZoneCard({ zoneId }: { zoneId: number }) {
   return (
     <div className="p-1.5 sm:p-4">
       <p className={cn("text-[11px]", over ? "text-warn" : "text-muted")}>
-        {z.name}: {heads.length} · {q == null ? "Нет данных о расходе" : formatFlowU(q, units.flow)}
+        {zoneLabel(z)}: {heads.length} · {q == null ? uiText("noFlowData") : formatFlowU(q, units.flow)}
         {over ? ` · > ${formatFlowU(limit, units.flow)}` : ""}
       </p>
       <p className="mt-2 text-[9px] font-semibold tracking-wide text-muted uppercase">{t("waterSource")}</p>
-      <label className="mt-1 block text-[10px] text-muted">
-        {t("sourceFlow")}
-        <input
-          inputMode="decimal"
-          value={avail ?? ""}
-          placeholder={String(DEFAULT_ZONE_LPM)}
-          onChange={(e) => {
-            const n = Number(e.target.value.replace(",", "."));
-            patchWater({ availableLpm: e.target.value.trim() === "" || !n ? null : n });
-            if (n > 0) setMaxLpm(String(n));
-          }}
-          className="mt-0.5 h-7 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border"
-        />
+      <label className="mt-1 block text-[10px] text-muted">{t("sourceFlow")} · {flowLabel(units.flow)}
+        <LocalizedNumberInput value={avail == null ? null : fromLpm(avail, units.flow)} min={0.001}
+          placeholder={formatNumber(fromLpm(DEFAULT_ZONE_LPM, units.flow), 2)} onCommit={v => { const n = v == null ? null : toLpm(v, units.flow); patchWater({ availableLpm: n }); if (v != null) setMaxLpm(formatNumber(v, 2)); }}
+          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border" />
       </label>
-      <label className="mt-1 block text-[10px] text-muted">
-        {t("sourceP")}
-        <input
-          inputMode="decimal"
-          value={project.water.dynamicBar ?? ""}
-          onChange={(e) => {
-            const n = Number(e.target.value.replace(",", "."));
-            patchWater({ dynamicBar: e.target.value.trim() === "" || !n ? null : n });
-          }}
-          className="mt-0.5 h-7 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border"
-        />
+      <label className="mt-1 block text-[10px] text-muted">{t("sourceP")} · {pressureLabel(units.pressure)}
+        <LocalizedNumberInput value={project.water.dynamicBar == null ? null : fromBar(project.water.dynamicBar, units.pressure)} min={0.001} onCommit={v => patchWater({ dynamicBar: v == null ? null : toBar(v, units.pressure) })}
+          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border" />
       </label>
-      <label className="mt-1 block text-[10px] text-muted">
-        {t("elevation")}
-        <input
-          inputMode="decimal"
-          value={project.water.elevationM ?? ""}
-          onChange={(e) => {
-            const n = Number(e.target.value.replace(",", "."));
-            patchWater({ elevationM: e.target.value.trim() === "" ? null : n });
-          }}
-          className="mt-0.5 h-7 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border"
-        />
+      <label className="mt-1 block text-[10px] text-muted">{t("elevation")} · {lenLabel(units.length)}
+        <LocalizedNumberInput value={project.water.elevationM == null ? null : fromMeters(project.water.elevationM, units.length)} onCommit={v => patchWater({ elevationM: v == null ? null : toMetersLen(v, units.length) })}
+          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border" />
       </label>
       <label className="mt-2 block text-[10px] text-muted">
-        {t("maxZoneFlow")}
+        {t("maxZoneFlow")} · {flowLabel(units.flow)}
         <input
           value={maxLpm}
           onChange={(e) => setMaxLpm(e.target.value)}
@@ -4392,10 +4062,10 @@ function ZoneCard({ zoneId }: { zoneId: number }) {
       </label>
       <p className="mt-1 text-[10px] text-muted">{t("autoZoneHint")}</p>
       <Button
-        className="mt-2 w-full"
+        className="irrigation-zone-action mt-2 w-full"
         size="sm"
         onClick={() => {
-          const n = Number(maxLpm.replace(",", ".")) || defaultMaxZoneLpm(project.water.availableLpm);
+          const n = toLpm(parseLocalizedNumber(maxLpm), units.flow) || defaultMaxZoneLpm(project.water.availableLpm);
           useProject.getState().autoZone(n);
         }}
       >

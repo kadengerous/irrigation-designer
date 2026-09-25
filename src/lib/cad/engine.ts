@@ -3,6 +3,7 @@ import { applyConstraints, autoSegmentConstraints } from "@/lib/cad/constraints"
 import { defaultLayerState, emptyDrawing, irrigationRegionType, layerForType, type CadDim, type CadDrawing, type CadEdge, type CadFace, type CadLayerId, type CadVertex, type RegionType } from "@/lib/cad/types";
 import type { Geom, Head, PolyKind } from "@/lib/project-types";
 import { textureFrame, validTextureSize, type TextureSize } from "./texture-mapping";
+import { resolveSprinklerDimensions } from './sprinkler-dimensions';
 
 const EPS = 1e-9;
 const ON_EDGE = 1e-7;
@@ -2205,6 +2206,22 @@ export function addDim(d0: CadDrawing, a: Pt, b: Pt, offset = 0.45): CadDrawing 
 }
 
 export function resolveDim(d: CadDrawing, dim: CadDim): { a: Pt; b: Pt } {
+  if (dim.faceAxis) {
+    const f = d.faces[dim.faceAxis.id];
+    if (f?.circle || f?.ellipse) {
+      const c = f.circle ?? f.ellipse!;
+      const r = f.circle?.r ?? (dim.faceAxis.axis === "x" ? f.ellipse!.rx : f.ellipse!.ry);
+      const angle = ((f.ellipse?.rot ?? 0) + (dim.faceAxis.axis === "y" ? 90 : 0)) * Math.PI / 180;
+      const dx = r * Math.cos(angle), dy = r * Math.sin(angle);
+      return { a: { x: c.cx - dx, y: c.cy - dy }, b: { x: c.cx + dx, y: c.cy + dy } };
+    }
+    const pts = f?.spline?.pts ?? f?.freehand?.pts;
+    if (pts?.length) {
+      const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
+      const a = { x: Math.min(...xs), y: Math.min(...ys) };
+      return { a, b: dim.faceAxis.axis === "x" ? { x: Math.max(...xs), y: a.y } : { x: a.x, y: Math.max(...ys) } };
+    }
+  }
   const a = dim.aId && d.vertices[dim.aId] ? { x: d.vertices[dim.aId]!.x, y: d.vertices[dim.aId]!.y } : dim.a;
   const b = dim.bId && d.vertices[dim.bId] ? { x: d.vertices[dim.bId]!.x, y: d.vertices[dim.bId]!.y } : dim.b;
   return { a, b };
@@ -2264,9 +2281,7 @@ export function alignEdgeHorizontal(d0: CadDrawing, edgeId: string, faceId?: str
 }
 
 export function deleteDim(d0: CadDrawing, id: string): CadDrawing {
-  const d = cloneDrawing(d0);
-  if (d.dims) delete d.dims[id];
-  return d;
+  return deleteDimension(d0,id);
 }
 
 export function setFaceHidden(d0: CadDrawing, faceId: string, hidden: boolean): CadDrawing {
@@ -2497,9 +2512,23 @@ export function setDimOffset(d0: CadDrawing, id: string, offset: number): CadDra
 }
 
 export function deleteDimension(d0:CadDrawing,id:string):CadDrawing {
-  if(!d0.dims?.[id]) return d0;
+  return deleteDimensions(d0,[id]);
+}
+/** One clone and one history entry for a whole dimension selection. */
+export function deleteDimensions(d0:CadDrawing,ids:string[]):CadDrawing {
+  if(d0.layers?.dims?.locked || !ids.some(id=>d0.dims?.[id]))return d0;
   const d=cloneDrawing(d0);
-  delete d.dims![id];
+  const suppressed=new Set(d.suppressedAutoDimensions??[]);
+  const irrigation=new Set(d.irrigationDimensions?.suppressed??[]);
+  for(const id of new Set(ids)) {
+    if(!d.dims?.[id])continue;
+    const key=d.dims[id]?.autoKey ?? (id.startsWith('auto:')?id.slice(5):undefined);
+    if(key)suppressed.add(key);
+    if(key?.startsWith('irrigation:'))irrigation.add(key);
+    delete d.dims[id];
+  }
+  d.suppressedAutoDimensions=[...suppressed];
+  if(d.irrigationDimensions)d.irrigationDimensions.suppressed=[...irrigation];
   return d;
 }
 
@@ -3712,10 +3741,26 @@ export function toPolygons(d: CadDrawing): Geom[] {
   return geoms;
 }
 
-export function drawingOrMigrate(project: { polygons: Geom[]; drawing?: CadDrawing | null }): CadDrawing {
+const dimensionDrawings = new WeakMap<object, CadDrawing>();
+export function drawingOrMigrate(project: { polygons: Geom[]; drawing?: CadDrawing | null; heads?: { id: string; x: number; y: number }[] }): CadDrawing {
   if (project.drawing && project.drawing.version && (Object.keys(project.drawing.vertices ?? {}).length + Object.keys(project.drawing.faces ?? {}).length + Object.keys(project.drawing.texts ?? {}).length + Object.keys(project.drawing.dims ?? {}).length || !project.polygons.length)) {
     const d = project.drawing.dims ? project.drawing : { ...project.drawing, dims: {} };
-    return d.texts ? d : { ...d, texts: {} };
+    const drawing = d.texts ? d : { ...d, texts: {} };
+    if (!project.heads || !d.irrigationDimensions && !Object.values(d.dims ?? {}).some(dim => dim.aHeadId || dim.bHeadId)) return drawing;
+    const cached = dimensionDrawings.get(project); if (cached) return cached;
+    const legacySprinklerDimension=Object.values(d.dims??{}).find(dim=>dim.autoKey?.startsWith('heads:'));
+    if(d.irrigationDimensions || legacySprinklerDimension) {
+      const configured={...drawing,irrigationDimensions:d.irrigationDimensions??{offset:Math.abs(legacySprinklerDimension!.offset)}};
+      const resolved={...configured,dims:resolveSprinklerDimensions(configured,project.heads)};
+      dimensionDrawings.set(project,resolved);return resolved;
+    }
+    const heads = new Map(project.heads.map(h => [h.id, h]));
+    const dims = Object.fromEntries(Object.entries(d.dims ?? {}).flatMap(([id, dim]) => {
+      if (!dim.aHeadId && !dim.bHeadId) return [[id, dim]];
+      const a = heads.get(dim.aHeadId!), b = heads.get(dim.bHeadId!);
+      return a && b ? [[id, { ...dim, a: { x: a.x, y: a.y }, b: { x: b.x, y: b.y } }]] : [];
+    }));
+    const resolved = { ...drawing, dims }; dimensionDrawings.set(project, resolved); return resolved;
   }
   return fromPolygons(project.polygons);
 }

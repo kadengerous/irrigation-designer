@@ -1,4 +1,4 @@
-import { activeNumberLocale, formatNumber } from "@/lib/i18n";
+import { activeNumberLocale, formatNumber, text } from "@/lib/i18n";
 
 export type Pt = { x: number; y: number };
 export type MeasureUnit = "m" | "cm" | "mm" | "in" | "ft" | "yd";
@@ -222,12 +222,12 @@ export function formatLen(meters: number, unit: MeasureUnit): string {
   const loc = activeNumberLocale();
   const n = (v: number, d: number) =>
     v.toLocaleString(loc, { minimumFractionDigits: d, maximumFractionDigits: d });
-  if (unit === "cm") return `${n(meters * 100, 1)} cm`;
-  if (unit === "mm") return `${Math.round(meters * 1000).toLocaleString(loc)} mm`;
-  if (unit === "in") return `${n(meters / IN_M, 2)} in`;
-  if (unit === "ft") return `${n(meters / FT_M, 2)} ft`;
-  if (unit === "yd") return `${n(meters / YD_M, 2)} yd`;
-  return `${n(meters, 2)} m`;
+  if (unit === "cm") return `${n(meters * 100, 1)} ${text("unit_cm")}`;
+  if (unit === "mm") return `${Math.round(meters * 1000).toLocaleString(loc)} ${text("unit_mm")}`;
+  if (unit === "in") return `${n(meters / IN_M, 2)} ${text("unit_in")}`;
+  if (unit === "ft") return `${n(meters / FT_M, 2)} ${text("unit_ft")}`;
+  if (unit === "yd") return `${n(meters / YD_M, 2)} ${text("unit_yd")}`;
+  return `${n(meters, 2)} ${text("unit_m")}`;
 }
 
 export function toMeters(value: number, unit: MeasureUnit): number {

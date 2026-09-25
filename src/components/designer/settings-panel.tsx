@@ -1,7 +1,7 @@
 import { hintLabel } from "./drawing-guidance-model";
 import { useState, type ReactNode } from "react";
 import { LOCALES, tr } from "@/lib/i18n";
-import { THEME_IDS, THEME_NAMES, UI_SIZES, themePreview, type ThemeId } from "@/lib/theme";
+import { THEME_IDS, UI_SIZES, themePreview, type ThemeId } from "@/lib/theme";
 import { Check } from "lucide-react";
 import {
   AREA_OPTS,
@@ -34,7 +34,7 @@ function Chip({
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "inline-flex h-8 items-center rounded-sm px-2 text-xs font-medium",
+        "inline-flex min-h-8 h-auto min-w-0 items-center rounded-sm px-2 py-1 text-xs font-medium",
         active ? "bg-btn text-btn-fg" : "bg-bg-2 text-ink hover:bg-btn-soft",
       )}
     >
@@ -78,6 +78,7 @@ export function SettingsPanel({ onClose }: { onClose: () => void }) {
   const showHints = useProject((s) => s.showHints);
   const units = useProject((s) => s.units);
   const unitPreset = useProject((s) => s.unitPreset);
+  const numberFormat = useProject((s) => s.numberFormat);
 
   return (
     <div className="settings-layer absolute inset-0 z-50 grid place-items-center bg-ink/30 p-3 sm:p-4" onClick={onClose}>
@@ -88,7 +89,7 @@ export function SettingsPanel({ onClose }: { onClose: () => void }) {
       >
         <div className="border-b border-line px-4 py-3">
           <p className="font-display text-lg">{t("appSettings")}</p>
-          <div className="mt-2 flex gap-2">
+          <div className="mt-2 flex flex-wrap gap-2">
             {(
               [
                 ["ui", "tabInterface"],
@@ -125,14 +126,14 @@ export function SettingsPanel({ onClose }: { onClose: () => void }) {
                   </button>
                 ))}
               </div>
-              <p className="text-sm font-semibold text-ink">{locale === "ru" ? "Оформление" : "Appearance"}</p>
+              <p className="text-sm font-semibold text-ink">{t("appearance")}</p>
               <div className="grid grid-cols-3 gap-2">
                 {THEME_IDS.map((id) => (
                   <ThemeCard
                     key={id}
                     id={id}
                     active={themeId === id}
-                    label={THEME_NAMES[id]}
+                    label={t(`theme_${id}`)}
                     onClick={() => useProject.getState().setThemeId(id)}
                   />
                 ))}
@@ -146,6 +147,8 @@ export function SettingsPanel({ onClose }: { onClose: () => void }) {
                 {LOCALES.map((l) => (
                   <Button
                     key={l.id}
+                    lang={l.id}
+                    dir={l.dir}
                     size="sm"
                     variant={locale === l.id ? "pressed" : "outline"}
                     onClick={() => useProject.getState().setLocale(l.id)}
@@ -174,6 +177,11 @@ export function SettingsPanel({ onClose }: { onClose: () => void }) {
                 )}
               </div>
               <p className="text-[11px] leading-snug text-muted">{t("unitsKeepLanguage")}</p>
+              <label className="block text-sm">{t("numberFormat")}
+                <select className="mt-1 w-full rounded-md border border-line bg-surface p-2" value={numberFormat} onChange={e => useProject.getState().setNumberFormat(e.target.value as "auto" | "space-comma" | "comma-dot" | "dot-comma")}>
+                  <option value="auto">{t("numberAuto")}</option><option value="space-comma">1 234,56</option><option value="comma-dot">1,234.56</option><option value="dot-comma">1.234,56</option>
+                </select>
+              </label>
               <Row label={t("unitLength")}>
                 {LENGTH_OPTS.map((u) => (
                   <Chip key={u} active={units.length === u} onClick={() => useProject.getState().patchUnits({ length: u })}>

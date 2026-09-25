@@ -1,9 +1,10 @@
+import { tr } from "@/lib/i18n";
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Проектировщик автополива Hunter";
+const APP_NAME = "Irrigation Designer";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -14,7 +15,7 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#2b6f9a" },
       {
         name: "description",
-        content: "Проектирование систем автополива Hunter: чертёж, каталог, зоны и смета",
+        content: tr("en", "appDescription"),
       },
     ],
     links: [

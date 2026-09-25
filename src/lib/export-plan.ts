@@ -1,22 +1,38 @@
-import { bomLineName, defaultBodyFor, defaultNozzle, itemById, stripAtPressure } from "@/lib/hunter-catalog";
+import { visibleProjectHeads } from "./head-visibility";
+import { localeDirection } from "./locale-config";
+import { activeLocale, text, formatDate, formatNumber } from "./i18n";
+import { currentUnits, formatLenU, formatAreaU, formatFlowU, fromMeters } from "./units";
+import { zoneLabel } from "./project-types";
+import { plantName } from "./catalog-localization";
+import { referenceCorners } from "./reference-geometry";
+import { pdfText } from "./pdf-text";
+import { bodyForHead, bomLineName, defaultNozzle, itemById, stripAtPressure } from "@/lib/hunter-catalog";
 import { drawingOrMigrate, facePoints, faceHoles, resolveDim } from "@/lib/cad/engine";
 import { REGION_FILL } from "@/lib/cad/types";
 import { zoneFlow } from "@/lib/hydro";
 import { boundsOf, fmt1, polygonArea, sectorLocal, type Pt } from "@/lib/geometry";
 import type { Project } from "@/lib/project-types";
 import { plantOutline, plantSymbol, plantInk } from "./plant-symbol";
+import { requestFileDestination } from './file-save';
+import { displayedDimensions } from './cad/sprinkler-dimensions';
 
-export async function saveFile(blob: Blob, filename: string) {
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.rel = "noopener";
-  a.target = "_blank";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  window.setTimeout(() => URL.revokeObjectURL(url), 8000);
+export type SaveTarget = { createWritable: () => Promise<{ write: (blob: Blob) => Promise<void>; close: () => Promise<void>; abort: () => Promise<void> }> } | undefined;
+export async function chooseSaveTarget(filename: string, mime: string): Promise<SaveTarget | null> {
+  const picker = (window as unknown as { showSaveFilePicker?: (options: unknown) => Promise<Exclude<SaveTarget,undefined>> }).showSaveFilePicker;
+  if (!picker) return {createWritable:async()=>{
+    let pending:Blob|null=null;
+    return {write:async(blob:Blob)=>{pending=blob;},close:async()=>{if(pending)await requestFileDestination(pending,filename);},abort:async()=>{pending=null;}};
+  }};
+  try { return await picker.call(window,{suggestedName:filename,excludeAcceptAllOption:true,types:[{accept:{[mime]:[`.${filename.split(".").pop()}`]}}]}); }
+  catch (error) { if (error instanceof DOMException && error.name === "AbortError") return null; throw error; }
+}
+export async function saveFile(blob: Blob, filename: string, target?: SaveTarget) {
+  if (target) {
+    const stream = await target.createWritable();
+    try { await stream.write(blob); await stream.close(); } catch(error) { await stream.abort().catch(()=>{}); throw error; }
+    return;
+  }
+  await requestFileDestination(blob,filename);
 }
 
 function escapeXml(s: string) {
@@ -32,12 +48,20 @@ function dataUrlToBlob(dataUrl: string): Blob {
   return new Blob([bytes], { type: mime });
 }
 
-export async function exportPng(dataUrl: string, name: string) {
-  await saveFile(dataUrlToBlob(dataUrl), `${name}.png`);
+export async function exportPng(dataUrl: string, name: string, target?: SaveTarget) {
+  await saveFile(dataUrlToBlob(dataUrl), `${name}.png`, target);
+}
+export async function exportJpegFromProject(project: Project, name: string, target?: SaveTarget) {
+  const src = await rasterizeSvg(projectToSvg(project));
+  const image = new Image(); image.src = src; await image.decode();
+  const canvas = document.createElement("canvas"); canvas.width=image.naturalWidth;canvas.height=image.naturalHeight;
+  const ctx=canvas.getContext("2d")!;ctx.fillStyle="#fff";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(image,0,0);
+  await saveFile(dataUrlToBlob(canvas.toDataURL("image/jpeg",.94)),`${name}.jpeg`,target);
 }
 
 function collectPts(project: Project): Pt[] {
   const pts: Pt[] = [];
+  if (project.underlay?.visible) pts.push(...referenceCorners(project.underlay));
   const d = drawingOrMigrate(project);
   for (const f of Object.values(d.faces)) {
     if (f.hidden) continue;
@@ -52,8 +76,12 @@ function collectPts(project: Project): Pt[] {
   if (d.layers?.plants?.visible !== false) for (const plant of Object.values(d.plants ?? {})) {
     pts.push({x:plant.x-plant.r,y:plant.y-plant.r},{x:plant.x+plant.r,y:plant.y+plant.r});
   }
-  for (const h of project.heads) {
+  for (const h of visibleProjectHeads(project)) {
     pts.push({ x: h.x - h.r, y: h.y - h.r }, { x: h.x + h.r, y: h.y + h.r });
+  }
+  if(d.layers?.dims?.visible!==false)for(const dim of displayedDimensions(d)){
+    const {a,b}=resolveDim(d,dim),len=Math.hypot(b.x-a.x,b.y-a.y)||1,nx=-(b.y-a.y)/len,ny=(b.x-a.x)/len;
+    pts.push({x:a.x+nx*dim.offset,y:a.y+ny*dim.offset},{x:b.x+nx*dim.offset,y:b.y+ny*dim.offset});
   }
   return pts;
 }
@@ -75,6 +103,9 @@ export function projectToSvg(project: Project): string {
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${box.minX} ${box.minY} ${w} ${h}" width="${Math.round(w * 48)}" height="${Math.round(h * 48)}">`,
     `<rect x="${box.minX}" y="${box.minY}" width="${w}" height="${h}" fill="#fffdf8"/>`,
   ];
+
+  const reference = project.underlay;
+  if (reference?.visible) parts.push(`<image href="${escapeXml(reference.src)}" x="${reference.x}" y="${reference.y}" width="${reference.width}" height="${reference.height}" opacity="${reference.opacity}" transform="rotate(${reference.rotation} ${reference.x} ${reference.y})" preserveAspectRatio="none"/>`);
 
   for (const poly of project.polygons) {
     if (poly.ellipse) {
@@ -110,9 +141,7 @@ export function projectToSvg(project: Project): string {
     parts.push(`<path d="${path}" fill="${fill}" fill-rule="evenodd" fill-opacity="${op}" stroke="#1c1b17" stroke-width="0.05"/>`);
   }
 
-  const hidden = new Set(project.zones.filter((z) => z.hidden).map((z) => z.id));
-  for (const head of project.heads) {
-    if (hidden.has(head.zone)) continue;
+  for (const head of visibleProjectHeads(project)) {
     const item = itemById(head.catalogId);
     const nozzle = head.nozzleId ? item?.nozzles.find(n => n.id === head.nozzleId) : item && defaultNozzle(item);
     const color = nozzle?.color ?? item?.color ?? "#6b7280";
@@ -133,19 +162,20 @@ export function projectToSvg(project: Project): string {
   }
 
   if (d.dims && d.layers?.dims?.visible !== false) {
-    for (const dim of Object.values(d.dims)) {
+    for (const dim of displayedDimensions(d)) {
       const { a, b } = resolveDim(d, dim);
       const len = Math.hypot(b.x - a.x, b.y - a.y);
-      const mx = (a.x + b.x) / 2;
-      const my = (a.y + b.y) / 2;
-      parts.push(`<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="#2b6f9a" stroke-width="0.04"/>`);
-      parts.push(`<text x="${mx}" y="${my - 0.15}" font-size="0.35" fill="#2b6f9a" text-anchor="middle">${escapeXml(dim.label ?? `${len.toFixed(2)} m`)}</text>`);
+      const nx=-(b.y-a.y)/(len||1),ny=(b.x-a.x)/(len||1),a2={x:a.x+nx*dim.offset,y:a.y+ny*dim.offset},b2={x:b.x+nx*dim.offset,y:b.y+ny*dim.offset};
+      const mx = (a2.x + b2.x) / 2;
+      const my = (a2.y + b2.y) / 2;
+      parts.push(`<path d="M${a.x} ${a.y}L${a2.x} ${a2.y} M${b.x} ${b.y}L${b2.x} ${b2.y} M${a2.x} ${a2.y}L${b2.x} ${b2.y}" fill="none" stroke="#2b6f9a" stroke-width="0.04"/>`);
+      parts.push(`<text x="${mx}" y="${my - 0.15}" font-size="0.35" fill="#2b6f9a" text-anchor="middle">${escapeXml(dim.label ?? formatLenU(len, currentUnits().length))}</text>`);
     }
   }
   if (d.layers?.plants?.visible !== false) for (const plant of Object.values(d.plants ?? {})) {
     const coords = plantOutline(plantSymbol(plant), plant.r);
     const points = Array.from({length:coords.length/2},(_,i)=>`${plant.x+coords[i*2]!},${plant.y+coords[i*2+1]!}`).join(" ");
-    parts.push(`<g><title>${escapeXml(plant.catalog?.russianName ?? plant.catalog?.latinName ?? "Растение")}</title><polygon points="${points}" fill="${plantInk(plant.kind)}" fill-opacity="0.16" stroke="${plantInk(plant.kind)}" stroke-width="0.03"/><circle cx="${plant.x}" cy="${plant.y}" r="${Math.min(plant.r*0.08,0.08)}" fill="${plantInk(plant.kind)}"/></g>`);
+    parts.push(`<g><title>${escapeXml(plant.catalog ? plantName(plant.catalog) : text("plant"))}</title><polygon points="${points}" fill="${plantInk(plant.kind)}" fill-opacity="0.16" stroke="${plantInk(plant.kind)}" stroke-width="0.03"/><circle cx="${plant.x}" cy="${plant.y}" r="${Math.min(plant.r*0.08,0.08)}" fill="${plantInk(plant.kind)}"/></g>`);
   }
   if (d.texts) {
     for (const tx of Object.values(d.texts)) {
@@ -183,31 +213,31 @@ export async function rasterizeSvg(svg: string, width = 1800): Promise<string> {
   }
 }
 
-export async function exportSvg(project: Project, name: string) {
+export async function exportSvg(project: Project, name: string, target?: SaveTarget) {
   const svg = projectToSvg(project);
-  await saveFile(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }), `${name}.svg`);
+  await saveFile(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }), `${name}.svg`, target);
 }
 
-export async function exportDxf(project: Project, name: string) {
-  await saveFile(new Blob([projectToDxf(project)], { type: "application/dxf" }), `${name}.dxf`);
+export async function exportDxf(project: Project, name: string, target?: SaveTarget) {
+  await saveFile(new Blob([projectToDxf(project)], { type: "application/dxf" }), `${name}.dxf`, target);
 }
 
 export async function exportProjectJson(project: Project, name: string) {
-  const stem = name.replace(/[^\wа-яё -]+/gi, " ").trim() || "project";
+  const stem = name.replace(/[^\p{L}\p{N} _-]+/gu, " ").trim() || "project";
   await saveFile(
     new Blob([JSON.stringify({ schemaVersion: 1, type: "irrigationproject", project }, null, 2)], { type: "application/json" }),
     `${stem}.json`,
   );
 }
 
-export async function exportPngFromProject(project: Project, name: string) {
+export async function exportPngFromProject(project: Project, name: string, target?: SaveTarget) {
   const png = await rasterizeSvg(projectToSvg(project));
-  await exportPng(png, name);
+  await exportPng(png, name, target);
 }
 
-export async function exportPdfFromProject(project: Project, name: string, pngDataUrl?: string) {
+export async function exportPdfFromProject(project: Project, name: string, pngDataUrl?: string, target?: SaveTarget) {
   const png = pngDataUrl ?? (await rasterizeSvg(projectToSvg(project)));
-  await exportPdf(png, project, name);
+  await exportPdf(png, project, name, target);
 }
 
 function dxfPair(code: number, value: string | number) {
@@ -216,126 +246,72 @@ function dxfPair(code: number, value: string | number) {
 
 export function projectToDxf(project: Project): string {
   const d = drawingOrMigrate(project);
-  let s = dxfPair(0, "SECTION") + dxfPair(2, "ENTITIES");
+  const length = currentUnits().length;
+  const pair = (code: number, value: string | number) => dxfPair(code, typeof value === "number" && [10, 20, 11, 21, 40].includes(code) ? fromMeters(value, length) : value);
+  let s = dxfPair(0, "SECTION") + dxfPair(2, "HEADER") + dxfPair(9, "$INSUNITS") + dxfPair(70, { in: 1, ft: 2, mm: 4, cm: 5, m: 6 }[length]) + dxfPair(0, "ENDSEC") + dxfPair(0, "SECTION") + dxfPair(2, "ENTITIES");
   const flip = (y: number) => -y;
   for (const f of Object.values(d.faces)) {
     if (f.hidden) continue;
     if (f.circle) {
-      s += dxfPair(0, "CIRCLE") + dxfPair(8, f.type);
-      s += dxfPair(10, f.circle.cx) + dxfPair(20, flip(f.circle.cy)) + dxfPair(40, f.circle.r);
+      s += pair(0, "CIRCLE") + pair(8, f.type);
+      s += pair(10, f.circle.cx) + pair(20, flip(f.circle.cy)) + pair(40, f.circle.r);
       continue;
     }
     const pts = facePoints(d, f.id);
     if (pts.length < 2) continue;
-    s += dxfPair(0, "LWPOLYLINE") + dxfPair(8, f.type) + dxfPair(90, pts.length) + dxfPair(70, 1);
-    for (const p of pts) s += dxfPair(10, p.x) + dxfPair(20, flip(p.y));
+    s += pair(0, "LWPOLYLINE") + pair(8, f.type) + pair(90, pts.length) + pair(70, 1);
+    for (const p of pts) s += pair(10, p.x) + pair(20, flip(p.y));
   }
-  for (const dim of Object.values(d.layers?.dims?.visible === false ? {} : d.dims ?? {})) {
+  for (const dim of d.layers?.dims?.visible === false ? [] : displayedDimensions(d)) {
     const { a, b } = resolveDim(d, dim);
-    s += dxfPair(0, "LINE") + dxfPair(8, "DIM");
-    s += dxfPair(10, a.x) + dxfPair(20, flip(a.y)) + dxfPair(11, b.x) + dxfPair(21, flip(b.y));
-    if (dim.label) s += dxfPair(0,"TEXT") + dxfPair(8,"DIM") + dxfPair(10,(a.x+b.x)/2) + dxfPair(20,flip((a.y+b.y)/2-0.15)) + dxfPair(40,0.35) + dxfPair(1,dim.label.replace(/[\r\n]/g," "));
+    s += pair(0, "LINE") + pair(8, "DIM");
+    s += pair(10, a.x) + pair(20, flip(a.y)) + pair(11, b.x) + pair(21, flip(b.y));
+    if (dim.label) s += pair(0,"TEXT") + pair(8,"DIM") + pair(10,(a.x+b.x)/2) + pair(20,flip((a.y+b.y)/2-0.15)) + pair(40,0.35) + pair(1,dim.label.replace(/[\r\n]/g," "));
   }
   for (const tx of Object.values(d.texts ?? {})) {
-    s += dxfPair(0, "TEXT") + dxfPair(8, "TEXT") + dxfPair(10, tx.x) + dxfPair(20, flip(tx.y));
-    s += dxfPair(40, tx.size) + dxfPair(1, tx.text);
+    s += pair(0, "TEXT") + pair(8, "TEXT") + pair(10, tx.x) + pair(20, flip(tx.y));
+    s += pair(40, tx.size) + pair(1, tx.text);
   }
   if (d.layers?.plants?.visible !== false) for (const plant of Object.values(d.plants ?? {})) {
-    s += dxfPair(0, "CIRCLE") + dxfPair(8, "PLANTS") + dxfPair(10, plant.x) + dxfPair(20, flip(plant.y)) + dxfPair(40, plant.r);
+    s += pair(0, "CIRCLE") + pair(8, "PLANTS") + pair(10, plant.x) + pair(20, flip(plant.y)) + pair(40, plant.r);
     const label = [plant.catalog?.latinName, plant.catalog?.cultivar].filter(Boolean).join(" ") || "Plant";
-    s += dxfPair(0, "TEXT") + dxfPair(8, "PLANT_LABELS") + dxfPair(10, plant.x) + dxfPair(20, flip(plant.y + plant.r + 0.2)) + dxfPair(40, 0.2) + dxfPair(1, label);
+    s += pair(0, "TEXT") + pair(8, "PLANT_LABELS") + pair(10, plant.x) + pair(20, flip(plant.y + plant.r + 0.2)) + pair(40, 0.2) + pair(1, label);
   }
-  for (const h of project.heads) {
-    s += dxfPair(0, "CIRCLE") + dxfPair(8, "HEAD") + dxfPair(10, h.x) + dxfPair(20, flip(h.y)) + dxfPair(40, 0.15);
+  for (const h of visibleProjectHeads(project)) {
+    s += pair(0, "CIRCLE") + pair(8, "HEAD") + pair(10, h.x) + pair(20, flip(h.y)) + pair(40, 0.15);
   }
-  s += dxfPair(0, "ENDSEC") + dxfPair(0, "EOF");
+  s += pair(0, "ENDSEC") + pair(0, "EOF");
   return s;
 }
 
-export async function exportPdf(pngDataUrl: string, project: Project, name: string) {
+export async function exportPdf(pngDataUrl: string, project: Project, name: string, target?: SaveTarget) {
   const { jsPDF } = await import("jspdf");
+  await document.fonts.ready;
   const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
-  doc.setFillColor(247, 243, 234);
-  doc.rect(0, 0, 297, 210, "F");
-  doc.setTextColor(28, 27, 23);
-  doc.setFontSize(18);
-  doc.text(project.name || "IRRIGATION DESIGNER", 12, 14);
-  doc.setFontSize(10);
-  doc.setTextColor(80, 90, 100);
-  doc.text("Проектирование систем Hunter", 12, 20);
-
-  try {
-    doc.addImage(pngDataUrl, "PNG", 12, 26, 180, 170, undefined, "FAST");
-  } catch {
-    doc.text("План не удалось встроить.", 12, 40);
-  }
-
-  let y = 28;
-  doc.setTextColor(28, 27, 23);
-  doc.setFontSize(11);
-  doc.text("Зоны", 200, y);
-  y += 6;
-  doc.setFontSize(9);
+  const units = currentUnits();
+  const rtl = localeDirection(activeLocale()) === "rtl";
+  doc.setFillColor(247, 243, 234); doc.rect(0, 0, 297, 210, "F");
+  pdfText(doc, project.name || text("untitled"), rtl ? 285 : 12, 8, { size: 16, width: 270, bold: true, align: rtl ? "right" : "left" });
+  pdfText(doc, text("hunterTagline"), rtl ? 285 : 12, 18, { size: 10, align: rtl ? "right" : "left" });
+  const image = doc.getImageProperties(pngDataUrl);
+  const factor = Math.min(180 / image.width, 164 / image.height);
+  doc.addImage(pngDataUrl, "PNG", rtl ? 105 : 12, 29, image.width * factor, image.height * factor, undefined, "FAST");
+  let y = 29;
+  const row = (label: string, bold = false) => {
+    if (y > 192) { doc.addPage(); y = 14; }
+    y += pdfText(doc, label, rtl ? 96 : 200, y, { width: 84, size: bold ? 11 : 9, bold, align: rtl ? "right" : "left" }) + 2;
+  };
+  row(text("zones"), true);
   for (const z of project.zones) {
-    const heads = project.heads.filter((h) => h.zone === z.id);
-    const q = zoneFlow(heads, z.id);
-    doc.text(`${z.name}  ·  ${heads.length} шт  ·  ${q == null ? "Нет данных о расходе" : `${fmt1(q)} л/мин`}`, 200, y);
-    y += 5;
-    if (y > 195) break;
+    const heads = project.heads.filter(h => h.zone === z.id), q = zoneFlow(heads, z.id);
+    row(`${zoneLabel(z)} · ${formatNumber(heads.length, 0)} ${text("pcs")} · ${q == null ? text("noFlowData") : formatFlowU(q, units.flow)}`);
   }
-
-  y += 4;
-  doc.setFontSize(11);
-  doc.text("Смета", 200, y);
-  y += 6;
-  doc.setFontSize(9);
-  const counts = new Map<string, number>();
-  for (const h of project.heads) {
-    const it = itemById(h.catalogId);
-    if (!it) continue;
-    counts.set(it.name, (counts.get(it.name) ?? 0) + 1);
-  }
-  doc.text(`Pro-Spray PRS40  ·  ${project.heads.length} шт`, 200, y);
-  y += 5;
-  for (const [label, n] of counts) {
-    doc.text(`${label}  ·  ${n} шт`, 200, y);
-    y += 5;
-    if (y > 200) break;
-  }
-
-  const lawn = project.polygons.find((p) => p.kind === "lawn");
-  const area = lawn ? polygonArea(lawn.points) : 0;
-  doc.setFontSize(8);
-  doc.setTextColor(109, 104, 95);
-  doc.text(
-    `Газон ${area.toFixed(1)} м² · ${project.heads.length} дождевателей · ${new Date().toLocaleDateString("ru-RU")}`,
-    12,
-    204,
-  );
-
-  const blob = doc.output("blob");
-  await saveFile(blob, `${name}.pdf`);
-}
-
-function bufToB64(buf: ArrayBuffer) {
-  const bytes = new Uint8Array(buf);
-  let s = "";
-  const chunk = 0x8000;
-  for (let i = 0; i < bytes.length; i += chunk) {
-    s += String.fromCharCode(...bytes.subarray(i, i + chunk));
-  }
-  return btoa(s);
-}
-
-async function withCyrFont(doc: InstanceType<typeof import("jspdf").jsPDF>) {
-  try {
-    const buf = await fetch("/fonts/LiberationSans-Regular.ttf").then((r) => r.arrayBuffer());
-    doc.addFileToVFS("LiberationSans-Regular.ttf", bufToB64(buf));
-    doc.addFont("LiberationSans-Regular.ttf", "LiberationSans", "normal");
-    doc.setFont("LiberationSans");
-  } catch {
-    /* fallback Helvetica */
-  }
+  y += 4; row(text("estimate"), true);
+  for (const line of estimateLines(project)) row(`${line.name} · ${formatNumber(line.qty, 0)} ${text("pcs")}`);
+  doc.setPage(1);
+  const lawn = project.polygons.filter(p => p.kind === "lawn").reduce((area, p) => area + polygonArea(p.points), 0);
+  pdfText(doc, `${text("lawn")} ${formatAreaU(lawn, units.area)} · ${text("heads")} ${formatNumber(project.heads.length, 0)} · ${formatDate(new Date())}`, rtl ? 285 : 12, 199, { size: 8, width: 272, color: "#6d685f", align: rtl ? "right" : "left" });
+  await saveFile(doc.output("blob"), `${name}.pdf`, target);
 }
 
 export type EstimateLine = { no: number; name: string; qty: number };
@@ -347,12 +323,12 @@ export function estimateLines(project: Project): EstimateLine[] {
   for (const h of project.heads) {
     const item = itemById(h.catalogId);
     if (!item) continue;
-    const s = spr.get(item.id) ?? { name: bomLineName(item), qty: 0 };
+    const key = item.type === "rotor" ? `${item.id}:${h.popUpMm ?? item.popUpMm}` : item.id;
+    const s = spr.get(key) ?? { name: bomLineName(item, h.popUpMm), qty: 0 };
     s.qty += 1;
-    spr.set(item.id, s);
+    spr.set(key, s);
     if (item.type === "rotor") continue;
-    const bodyId = h.bodyId ?? defaultBodyFor(item);
-    const body = itemById(bodyId);
+    const body = bodyForHead(item, h.bodyId, h.popUpMm);
     if (!body) continue;
     const b = bod.get(body.id) ?? { name: bomLineName(body), qty: 0 };
     b.qty += 1;
@@ -364,123 +340,64 @@ export function estimateLines(project: Project): EstimateLine[] {
   return [...spr.values(), ...bod.values()].map((r, i) => ({ no: i + 1, name: r.name, qty: r.qty }));
 }
 
-export async function exportEstimatePdf(project: Project, name: string) {
+export async function exportEstimatePdf(project: Project, name: string, target?: SaveTarget) {
   const { jsPDF } = await import("jspdf");
+  await document.fonts.ready;
   const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
-  await withCyrFont(doc);
-  const rows = estimateLines(project);
-  doc.setFillColor(247, 243, 234);
-  doc.rect(0, 0, 210, 297, "F");
-  doc.setTextColor(28, 27, 23);
-  doc.setFontSize(16);
-  doc.text("Смета", 14, 16);
-  doc.setFontSize(11);
-  doc.text(project.name || "IRRIGATION DESIGNER", 14, 24);
-  doc.setFontSize(9);
-  doc.setTextColor(80, 90, 100);
-  doc.text(new Date().toLocaleDateString("ru-RU"), 14, 30);
-
-  const col = { no: 16, name: 28, qty: 186 };
-  const headY = 40;
-  doc.setFillColor(11, 110, 98);
-  doc.rect(12, headY - 6, 186, 8, "F");
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(9);
-  doc.text("№", col.no, headY);
-  doc.text("Наименование", col.name, headY);
-  doc.text("Кол-во", col.qty, headY, { align: "right" });
-
-  let y = headY + 10;
-  doc.setTextColor(28, 27, 23);
-  doc.setFontSize(10);
-  for (const r of rows) {
-    if (y > 280) {
-      doc.addPage();
-      doc.setFillColor(247, 243, 234);
-      doc.rect(0, 0, 210, 297, "F");
-      try {
-        doc.setFont("LiberationSans");
-      } catch {
-        /* ignore */
-      }
-      y = 18;
-    }
-    doc.setDrawColor(210, 200, 188);
-    doc.line(12, y + 4, 198, y + 4);
-    doc.text(String(r.no), col.no, y);
-    const label = doc.splitTextToSize(r.name, 140);
-    doc.text(label, col.name, y);
-    doc.text(`${r.qty} шт`, col.qty, y, { align: "right" });
-    y += Math.max(8, label.length * 5 + 4);
+  const rtl = localeDirection(activeLocale()) === "rtl";
+  const start = rtl ? 196 : 14, align = rtl ? "right" : "left";
+  const header = () => {
+    doc.setFillColor(247, 243, 234); doc.rect(0, 0, 210, 297, "F");
+    pdfText(doc, text("estimate"), start, 9, { size: 16, bold: true, align });
+    pdfText(doc, project.name || text("untitled"), start, 21, { size: 11, width: 182, align });
+    pdfText(doc, formatDate(new Date()), start, 31, { size: 9, color: "#505a64", align });
+    doc.setFillColor(11, 110, 98); doc.rect(12, 41, 186, 9, "F");
+    pdfText(doc, text("colNo"), rtl ? 195 : 15, 42, { size: 9, color: "#fff", width: 11, align });
+    pdfText(doc, text("colName"), rtl ? 182 : 28, 42, { size: 9, color: "#fff", width: 123, align });
+    pdfText(doc, text("colQty"), rtl ? 16 : 194, 42, { size: 9, color: "#fff", align: rtl ? "left" : "right", width: 36 });
+  };
+  header(); let y = 55;
+  for (const row of estimateLines(project)) {
+    if (y > 270) { doc.addPage(); header(); y = 55; }
+    pdfText(doc, formatNumber(row.no, 0), rtl ? 195 : 15, y, { size: 9, width: 11, align });
+    const height = pdfText(doc, row.name, rtl ? 182 : 28, y, { size: 10, width: 123, align });
+    pdfText(doc, `${formatNumber(row.qty, 0)} ${text("pcs")}`, rtl ? 16 : 194, y, { size: 10, align: rtl ? "left" : "right", width: 37 });
+    y += Math.max(8, height + 3); doc.setDrawColor(210, 200, 188); doc.line(12, y - 1, 198, y - 1);
   }
-  await saveFile(doc.output("blob"), `${name}.pdf`);
+  await saveFile(doc.output("blob"), `${name}.pdf`, target);
 }
 
 function xmlEsc(s: string) {
   return escapeXml(s);
 }
 
-export async function exportEstimateExcel(project: Project, name: string) {
-  const rows = estimateLines(project);
-  const body = rows
-    .map(
-      (r) => `<Row>
-        <Cell><Data ss:Type="Number">${r.no}</Data></Cell>
-        <Cell><Data ss:Type="String">${xmlEsc(r.name)}</Data></Cell>
-        <Cell><Data ss:Type="Number">${r.qty}</Data></Cell>
-        <Cell><Data ss:Type="String">шт</Data></Cell>
-      </Row>`,
-    )
-    .join("");
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<?mso-application progid="Excel.Sheet"?>
-<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
- xmlns:o="urn:schemas-microsoft-com:office:office"
- xmlns:x="urn:schemas-microsoft-com:office:excel"
- xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
-  <Styles>
-    <Style ss:ID="hdr"><Font ss:Bold="1"/><Interior ss:Color="#0B6E62" ss:Pattern="Solid"/><Font ss:Color="#FFFFFF" ss:Bold="1"/></Style>
-  </Styles>
-  <Worksheet ss:Name="Смета">
-    <Table>
-      <Column ss:Width="40"/>
-      <Column ss:Width="280"/>
-      <Column ss:Width="70"/>
-      <Column ss:Width="40"/>
-      <Row>
-        <Cell ss:StyleID="hdr"><Data ss:Type="String">№</Data></Cell>
-        <Cell ss:StyleID="hdr"><Data ss:Type="String">Наименование</Data></Cell>
-        <Cell ss:StyleID="hdr"><Data ss:Type="String">Количество</Data></Cell>
-        <Cell ss:StyleID="hdr"><Data ss:Type="String">Ед.</Data></Cell>
-      </Row>
-      ${body}
-    </Table>
-  </Worksheet>
-</Workbook>`;
-  await saveFile(new Blob(["\uFEFF", xml], { type: "application/vnd.ms-excel" }), `${name}.xls`);
+export async function exportEstimateExcel(project: Project, name: string, target?: SaveTarget) {
+  const { estimateWorkbook } = await import("./estimate-xlsx");
+  const rows = [[text("colNo"),text("colName"),text("colQty"),text("unit")],...estimateLines(project).map(r=>[r.no,r.name,r.qty,text("pcs")])];
+  await saveFile(estimateWorkbook(rows,text("estimate"),localeDirection(activeLocale())==="rtl"),`${name}.xlsx`,target);
 }
 
-export async function exportEstimateWord(project: Project, name: string) {
+export async function exportEstimateWord(project: Project, name: string, target?: SaveTarget) {
   const rows = estimateLines(project);
   const tr = rows
     .map(
       (r) =>
-        `<tr><td style="border:1px solid #ccc;padding:6px;text-align:center">${r.no}</td><td style="border:1px solid #ccc;padding:6px">${xmlEsc(r.name)}</td><td style="border:1px solid #ccc;padding:6px;text-align:right">${r.qty} шт</td></tr>`,
+        `<tr><td style="border:1px solid #ccc;padding:6px;text-align:center">${formatNumber(r.no,0)}</td><td style="border:1px solid #ccc;padding:6px">${xmlEsc(r.name)}</td><td style="border:1px solid #ccc;padding:6px;text-align:end">${formatNumber(r.qty,0)} ${xmlEsc(text("pcs"))}</td></tr>`,
     )
     .join("");
-  const html = `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word">
-<head><meta charset="utf-8"><title>Смета</title></head>
+  const html = `<html lang="${activeLocale()}" dir="${localeDirection(activeLocale())}" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word">
+<head><meta charset="utf-8"><title>${xmlEsc(text("estimate"))}</title></head>
 <body>
-<h1>Смета</h1>
-<p>${xmlEsc(project.name || "")}<br/>${new Date().toLocaleDateString("ru-RU")}</p>
+<h1>${xmlEsc(text("estimate"))}</h1>
+<p>${xmlEsc(project.name || "")}<br/>${formatDate(new Date())}</p>
 <table style="border-collapse:collapse;width:100%">
 <tr>
-  <th style="border:1px solid #0b6e62;background:#0b6e62;color:#fff;padding:6px;width:40px">№</th>
-  <th style="border:1px solid #0b6e62;background:#0b6e62;color:#fff;padding:6px">Наименование</th>
-  <th style="border:1px solid #0b6e62;background:#0b6e62;color:#fff;padding:6px;width:90px">Количество</th>
+  <th style="border:1px solid #0b6e62;background:#0b6e62;color:#fff;padding:6px;width:40px">${xmlEsc(text("colNo"))}</th>
+  <th style="border:1px solid #0b6e62;background:#0b6e62;color:#fff;padding:6px">${xmlEsc(text("colName"))}</th>
+  <th style="border:1px solid #0b6e62;background:#0b6e62;color:#fff;padding:6px;width:90px">${xmlEsc(text("colQty"))}</th>
 </tr>
 ${tr}
 </table>
 </body></html>`;
-  await saveFile(new Blob(["\uFEFF", html], { type: "application/msword" }), `${name}.doc`);
+  await saveFile(new Blob(["\uFEFF", html], { type: "application/msword" }), `${name}.doc`,target);
 }

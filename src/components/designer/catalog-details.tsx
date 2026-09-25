@@ -1,8 +1,10 @@
+import { localizedFact } from "@/lib/catalog-localization";
+import { fromBar, fromMeters, fromLpm, precipitationUnit, pressureLabel, lenLabel, flowLabel } from "@/lib/units";
 import { Play } from "lucide-react";
 import { categoryPhoto, type CatalogItem, type CatalogNozzle, type Family } from "@/lib/hunter-catalog";
 import { docsForFamily } from "@/lib/hunter-docs";
 import { fmt1 } from "@/lib/geometry";
-import { tr } from "@/lib/i18n";
+import { formatNumber, tr } from "@/lib/i18n";
 import { useProject } from "@/lib/project-store";
 
 export function CatalogSeriesInfo({ family }: { family: Family | "all" }) {
@@ -51,20 +53,23 @@ export function CatalogThumb({ color, arc, strip }: { color: string; arc: number
 
 export function CatalogReference({ item, nozzle }: { item: CatalogItem; nozzle?: CatalogNozzle | null }) {
   const locale = useProject(s => s.locale);
+  const units = useProject(s => s.units);
+  const depthUnit = precipitationUnit(units);
+  const secondary = units.flow === "gpm" || units.flow === "gph" ? "gph" : "m3h";
   const t = (key: string) => tr(locale, key);
   return <details className="mt-3 border-t border-line pt-2">
     <summary className="cursor-pointer py-1 text-xs font-semibold">{t("charTable")}</summary>
-    <p className="mt-2 text-xs text-muted">{t("jetAngle")}: <span className="text-ink">{nozzle?.trajectoryDeg == null ? item.trajectoryNote ?? t("noData") : `${nozzle.trajectoryDeg}°`}</span></p>
+    <p className="mt-2 text-xs text-muted">{t("jetAngle")}: <span className="text-ink">{nozzle?.trajectoryDeg == null ? localizedFact(item.trajectoryNote) ?? t("noData") : `${nozzle.trajectoryDeg}°`}</span></p>
     {nozzle && nozzle.performance.length > 0 && <div className="mt-2 overflow-x-auto">
       <table className="w-full text-[10px]">
         <thead><tr className="text-left text-muted">
-          {["sector", "bar", "unit_m", "lpm", "m3h", "mmhr"].map(key => <th className="pr-1" key={key}>{t(key)}</th>)}
+          {[t("sector"), pressureLabel(units.pressure), lenLabel(units.length), flowLabel(units.flow), flowLabel(secondary), `${lenLabel(depthUnit)}/${t("unitHourShort")}`].map((label, i) => <th className="pr-1" key={i}>{label}</th>)}
         </tr></thead>
         <tbody>{nozzle.performance.map((row, index) => <tr key={index} className="tabular">
-          <td className="pr-1">{row.arcDeg}°</td><td className="pr-1">{fmt1(row.pressureBar)}</td>
-          <td className="pr-1">{item.coverageKind === "point" ? "—" : fmt1(row.radiusM)}</td>
-          <td className="pr-1">{fmt1(row.flowLMin)}</td><td className="pr-1">{row.flowM3H.toFixed(3)}</td>
-          <td>{row.precipSquareMmH == null ? "—" : fmt1(row.precipSquareMmH)}</td>
+          <td className="pr-1">{row.arcDeg}°</td><td className="pr-1">{formatNumber(fromBar(row.pressureBar, units.pressure), 2)}</td>
+          <td className="pr-1">{item.coverageKind === "point" ? "—" : formatNumber(fromMeters(row.radiusM, units.length), 2)}</td>
+          <td className="pr-1">{formatNumber(fromLpm(row.flowLMin, units.flow), 2)}</td><td className="pr-1">{formatNumber(fromLpm(row.flowLMin, secondary), 3)}</td>
+          <td>{row.precipSquareMmH == null ? "—" : formatNumber(depthUnit === "in" ? row.precipSquareMmH / 25.4 : row.precipSquareMmH, 2)}</td>
         </tr>)}</tbody>
       </table>
     </div>}

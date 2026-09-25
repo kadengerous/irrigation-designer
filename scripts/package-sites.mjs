@@ -25,3 +25,6 @@ if (!existsSync(serverJs)) {
 // Keep this release's hashed assets in source too. A fresh checkout must retain
 // the live version's modules for tabs that remain open across the next publish.
 cpSync(join(dist, "client", "assets"), join(root, "public", "assets"), { recursive: true, force: false });
+
+// Bound the upload size without removing immutable source assets or recent tabs' imports.
+await import("./trim-deployment-assets.mjs");

@@ -1,3 +1,4 @@
+import { text as uiText } from "@/lib/i18n";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import * as Popover from "@radix-ui/react-popover";
 import {
@@ -38,32 +39,32 @@ const request = (data?: ColorData): Promise<ColorData> => {
 };
 const families = [
   {
-    name: "Синий",
+    get name() { return uiText("blue"); },
     color: "#4c7fc7",
     shades: ["#d6e8f5", "#c5ddf2", "#86b8e4", "#4c7fc7", "#28558a"],
   },
   {
-    name: "Жёлтый",
+    get name() { return uiText("color:#facc15"); },
     color: "#e7bf32",
     shades: ["#f3ecd4", "#efe3c0", "#fde8c8", "#facc15", "#e7bf32"],
   },
   {
-    name: "Розовый",
+    get name() { return uiText("pink"); },
     color: "#c16b95",
     shades: ["#ead9e8", "#f0c9c9", "#c16b95", "#ef4444", "#7f1d1d"],
   },
   {
-    name: "Зелёный",
+    get name() { return uiText("green"); },
     color: "#79aa58",
     shades: ["#e4f0c8", "#c8e6b0", "#c9d9b8", "#b8e0d2", "#79aa58"],
   },
   {
-    name: "Фиолетовый",
+    get name() { return uiText("color:#8b5cf6"); },
     color: "#9272b9",
     shades: ["#dcccec", "#bda7d5", "#9272b9", "#8b5cf6", "#624584"],
   },
   {
-    name: "Земля",
+    get name() { return uiText("earth"); },
     color: "#aa8060",
     shades: ["#f3d4b8", "#d8d4cc", "#aa8060", "#8b5a3c", "#6b5344"],
   },
@@ -193,17 +194,17 @@ export function AdvancedPalette({
     >
       <header className="advanced-palette-heading">
         <span>{title}</span>
-        <Popover.Close className="palette-close" aria-label="Закрыть">
+        <Popover.Close className="palette-close" aria-label={uiText("close")}>
           <X size={19} />
         </Popover.Close>
       </header>
-      <nav className="palette-mode-bar" aria-label="Способ выбора заливки">
+      <nav className="palette-mode-bar" aria-label={uiText("fillPicker")}>
         {[
-          ["visual", Palette, "Палитра"],
-          ["custom", SlidersHorizontal, "Оттенок"],
-          ["recent", Clock, "Недавние"],
-          ["saved", Bookmark, "Мои цвета"],
-          ["material", Layers, "Материалы"],
+          ["visual", Palette, uiText("palette")],
+          ["custom", SlidersHorizontal, uiText("hue")],
+          ["recent", Clock, uiText("recentColors")],
+          ["saved", Bookmark, uiText("myColors")],
+          ["material", Layers, uiText("paletteMaterials")],
         ].map(([id, Icon, label]) => {
           const Glyph = Icon as typeof Palette;
           return (
@@ -241,10 +242,10 @@ export function AdvancedPalette({
                 </button>
               ))}
             </div>
-            <div className="palette-tone-row" aria-label="Оттенки выбранного цвета">
+            <div className="palette-tone-row" aria-label={uiText("colorShades")}>
               {families[family].shades.map(swatch)}
             </div>
-            <div className="palette-tone-row" aria-label="Нейтральные цвета">
+            <div className="palette-tone-row" aria-label={uiText("neutralColors")}>
               {FACE_FILLS.filter((c) =>
                 ["#ffffff", "#8a8a86", "#5c5c5a", "#1a1a18"].includes(c),
               ).map(swatch)}
@@ -254,8 +255,7 @@ export function AdvancedPalette({
         {mode === "custom" && (
           <div className="precise-color">
             <label>
-              Свой оттенок
-              <input type="color" value={selectedHex} onChange={(e) => choose(e.target.value)} />
+              {uiText("customHue")}<input type="color" value={selectedHex} onChange={(e) => choose(e.target.value)} />
             </label>
             <label>
               HEX
@@ -272,15 +272,14 @@ export function AdvancedPalette({
               />
             </label>
             <button type="button" disabled={!HEX.test(hex)} onClick={() => choose(hex)}>
-              Применить оттенок
-            </button>
+              {uiText("applyHue")}</button>
             <div className="palette-color-preview" style={{ background: selectedHex }} />
           </div>
         )}
         {(mode === "recent" || mode === "saved") && (
           <>
             <p className="palette-help">
-              {mode === "recent" ? "Последние выбранные цвета" : "Ваши сохранённые оттенки"}
+              {mode === "recent" ? uiText("recentColorsHint") : uiText("savedColorsHint")}
             </p>
             <div className="palette-user-colors">
               {data[mode === "recent" ? "recent" : "saved"].map((c) => (
@@ -290,7 +289,7 @@ export function AdvancedPalette({
                     <button
                       type="button"
                       className="palette-remove"
-                      aria-label={`Удалить ${c}`}
+                      aria-label={uiText("deleteNamed", { name: c })}
                       onClick={() =>
                         persist({
                           ...current.current,
@@ -306,7 +305,7 @@ export function AdvancedPalette({
             </div>
             {!data[mode === "recent" ? "recent" : "saved"].length && (
               <p className="palette-empty">
-                {ready ? "Здесь пока нет цветов" : "Загрузка цветов…"}
+                {ready ? uiText("noColors") : uiText("loadingColors")}
               </p>
             )}
           </>
@@ -369,16 +368,14 @@ export function AdvancedPalette({
           }
           onClick={() => persist({ ...current.current, saved: [...current.current.saved, color] })}
         >
-          <Plus size={17} /> Сохранить цвет
-        </button>
+          <Plus size={17} /> {uiText("saveColor")}</button>
         <button type="button" onClick={onClose}>
-          Готово
-        </button>
+          {uiText("drawFinish")}</button>
       </footer>
       <div className="palette-storage-status" role="status">
         {error ? (
           <>
-            <span>Не удалось сохранить или загрузить цвета.</span>
+            <span>{uiText("colorsError")}</span>
             <button
               type="button"
               onClick={() => {
@@ -394,11 +391,10 @@ export function AdvancedPalette({
                     .catch(() => setError(true));
               }}
             >
-              Повторить
-            </button>
+              {uiText("retry")}</button>
           </>
         ) : saving ? (
-          "Сохраняем…"
+          uiText("saving")
         ) : faceTexture(color) ? (
           t(color)
         ) : HEX.test(color) ? (

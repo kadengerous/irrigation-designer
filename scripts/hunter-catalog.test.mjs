@@ -106,8 +106,8 @@ test("Hunter: verified catalog, every model placement, flow, pressure and geomet
     assert.equal(quarter.precipMmHr,half.precipMmHr*2);
     assert.equal(full.precipMmHr,half.precipMmHr/2);
     assert.equal(runTimeMin(10,half.precipMmHr),runTimeMin(5,half.precipMmHr)*2);
-    const lowPressure = performanceAt(i20,rotor.nozzleId,2.1,180).row;
-    const low = headFlow({...rotor,designPressure:2.1,r:lowPressure.radiusM});
+    const lowPressure = performanceAt(i20,rotor.nozzleId,2.4,180).row;
+    const low = headFlow({...rotor,designPressure:2.4,r:lowPressure.radiusM});
     assert.notEqual(low.lpm,half.lpm);
     assert.equal(headWorkingBar({...rotor,designPressure:2.1}),2.1);
     assert.equal(headFlow({...rotor,designPressure:100}).lpm,null);

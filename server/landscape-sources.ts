@@ -1,3 +1,4 @@
+import { LOCALES, matchLocale } from "../src/lib/locale-config";
 import type { PlantRecord, PlantPhoto, PlantRange } from "../src/lib/landscape-types";
 
 type Taxon = { id: number; name: string; rank_level: number; iconic_taxon_id: number;
@@ -5,10 +6,10 @@ type Taxon = { id: number; name: string; rank_level: number; iconic_taxon_id: nu
   preferred_common_name?: string;
   default_photo?: { id: number; medium_url?: string; url?: string; attribution?: string; attribution_name?: string; license_code?: string } };
 export const emptyWater = (): PlantRecord["water"] => ({ need: null, sourceUrl: null, context: null, quantity: null, method: null, wettingZone: null, recommendations: null });
-export function taxonRecord(taxon: Taxon): PlantRecord | null {
+export function taxonRecord(taxon: Taxon, locale = "ru"): PlantRecord | null {
   if (!Number.isSafeInteger(taxon.id) || taxon.id < 1 || taxon.iconic_taxon_id !== 47126 || taxon.rank_level > 10 || !taxon.name) return null;
   const names = (taxon.names ?? []).filter(n => n.is_valid !== false);
-  const russianName = names.find(n => n.locale === "ru")?.name ?? (/^[А-Яа-яЁё]/.test(taxon.preferred_common_name ?? "") ? taxon.preferred_common_name! : null);
+  const russianName = names.find(n => matchLocale(n.locale) === "ru")?.name ?? (matchLocale(locale) === "ru" ? taxon.preferred_common_name ?? null : null);
   const p = taxon.default_photo;
   const license = p?.license_code;
   const photos: PlantPhoto[] = [];
@@ -18,20 +19,20 @@ export function taxonRecord(taxon: Taxon): PlantRecord | null {
       author: p.attribution_name ?? p.attribution ?? "iNaturalist", license: license.toUpperCase(),
       licenseUrl: license === "cc0" ? "https://creativecommons.org/publicdomain/zero/1.0/" : `https://creativecommons.org/licenses/${license.slice(3)}/4.0/` });
   }
-  return { id: `inat-${taxon.id}`, externalId: taxon.id, russianName, latinName: taxon.name, cultivar: null,
-    aliases: names.filter(n => n.locale === "ru" || n.locale === "sci").map(n => n.name).slice(0, 30),
+  return { id: `inat-${taxon.id}`, externalId: taxon.id, russianName, names: Object.fromEntries(LOCALES.map(l => l.id).flatMap(lang => { const name = names.find(n => matchLocale(n.locale) === lang)?.name ?? (locale === lang ? taxon.preferred_common_name : undefined); return name ? [[lang, name]] : []; })), latinName: taxon.name, cultivar: null,
+    aliases: names.filter(n => (n.locale === "sci" || LOCALES.some(l => l.id === matchLocale(n.locale)))).map(n => n.name).slice(0, 30),
     category: null, photos, matureHeightM: null, matureWidthM: null, light: null, soil: null, moisture: null,
     hardiness: null, description: null, water: emptyWater(), symbol: null,
-    sources: [{ title: "iNaturalist · названия и фотографии", url: `https://www.inaturalist.org/taxa/${taxon.id}`, accessedAt: new Date().toISOString().slice(0, 10) }] };
+    sources: [{ title: "sourceInat", url: `https://www.inaturalist.org/taxa/${taxon.id}`, accessedAt: new Date().toISOString().slice(0, 10) }] };
 }
-export async function searchTaxa(query: string, page: number) {
+export async function searchTaxa(query: string, page: number, locale = "ru") {
   const url = new URL("https://api.inaturalist.org/v1/taxa");
-  url.search = new URLSearchParams({ q: query, taxon_id: "47126", locale: "ru", all_names: "true", per_page: "24", page: String(page), is_active: "true" }).toString();
+  url.search = new URLSearchParams({ q: query, taxon_id: "47126", locale, all_names: "true", per_page: "24", page: String(page), is_active: "true" }).toString();
   const response = await fetch(url, { signal: AbortSignal.timeout(8000), headers: { accept: "application/json" } });
   if (!response.ok) throw new Error(`Plant taxonomy provider: ${response.status}`);
   const data = await response.json() as { results?: Taxon[]; total_results?: number };
   if (!Array.isArray(data.results)) throw new Error("Invalid taxonomy response");
-  return { plants: data.results.map(taxonRecord).filter((p): p is PlantRecord => Boolean(p)),
+  return { plants: data.results.map(taxon => taxonRecord(taxon, locale)).filter((p): p is PlantRecord => Boolean(p)),
     hasMore: page * 24 < (data.total_results ?? 0) };
 }
 
@@ -56,15 +57,15 @@ export function parseToolboxFacts(html: string, record: PlantRecord, sourceUrl: 
   const traits = section(text, "Whole Plant Traits:", "Cultural Conditions:");
   const category = /Plant Type:.*?Tree/.test(traits) && !/Plant Type:.*?Shrub/.test(traits) ? "tree"
     : /Plant Type:.*?Shrub/.test(traits) ? "shrub" : /Plant Type:.*?(Herbaceous Perennial|Annual|Bulb)/.test(traits) ? "flower" : null;
-  const light = translated(section(text, "Cultural Conditions: Light:", "Soil Texture:"), [["Full sun", "Солнце"], ["Partial Shade", "Полутень"], ["Dappled Sunlight", "Рассеянный свет"], ["Deep shade", "Тень"]]);
-  const soil = translated(section(text, "Soil Texture:", "Soil pH:") || section(text, "Soil Texture:", "Soil Drainage:"), [["Clay", "Глинистая"], ["Loam", "Суглинок"], ["Sand", "Песчаная"], ["High Organic Matter", "Богатая органикой"], ["Shallow Rocky", "Каменистая"]]);
+  const light = translated(section(text, "Cultural Conditions: Light:", "Soil Texture:"), [["Full sun", "fact_sun"], ["Partial Shade", "fact_partial"], ["Dappled Sunlight", "fact_dappled"], ["Deep shade", "fact_shade"]]);
+  const soil = translated(section(text, "Soil Texture:", "Soil pH:") || section(text, "Soil Texture:", "Soil Drainage:"), [["Clay", "fact_clay"], ["Loam", "fact_loam"], ["Sand", "fact_sand"], ["High Organic Matter", "fact_organic"], ["Shallow Rocky", "fact_rocky"]]);
   const drainage = section(text, "Soil Drainage:", "USDA Plant Hardiness Zone:");
-  const moisture = translated(drainage, [["Good Drainage", "Хороший дренаж"], ["Moist", "Влажная почва"], ["Occasionally Dry", "Допустимо временное подсыхание"], ["Occasionally Wet", "Допустимо временное переувлажнение"]]);
+  const moisture = translated(drainage, [["Good Drainage", "fact_drained"], ["Moist", "fact_moist"], ["Occasionally Dry", "fact_drySometimes"], ["Occasionally Wet", "fact_wetSometimes"]]);
   const zones = text.match(/USDA Plant Hardiness Zone:\s*((?:\d{1,2}[ab](?:,?\s*)?)+)/)?.[1]?.trim().replace(/,$/, "");
   return { ...record, category: record.category ?? category, matureHeightM: range("Height"), matureWidthM: range("Width"), light, soil, moisture,
     hardiness: zones ? `USDA ${zones}` : null,
     symbol: record.symbol ?? (/Needled Evergreen/.test(traits) ? "conifer" : category === "tree" ? "deciduous" : category),
-    sources: [...record.sources.filter(s => s.url !== sourceUrl), { title: "NC State Extension · характеристики", url: sourceUrl, accessedAt: new Date().toISOString().slice(0, 10) }] };
+    sources: [...record.sources.filter(s => s.url !== sourceUrl), { title: "sourceNc", url: sourceUrl, accessedAt: new Date().toISOString().slice(0, 10) }] };
 }
 export async function enrichPlant(record: PlantRecord): Promise<PlantRecord> {
   if (!/^[A-Za-z]+ [a-z-]+$/.test(record.latinName) || record.cultivar) return record;

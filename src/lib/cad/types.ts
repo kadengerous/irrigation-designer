@@ -1,3 +1,4 @@
+import { text as uiText } from "@/lib/i18n";
 import type { Pt } from "@/lib/geometry";
 import type { TextureSize } from "./texture-mapping";
 import type { PlantCategory, PlantRecord, PlantIrrigationContext } from "../landscape-types";
@@ -100,6 +101,10 @@ export type CadConstraint = {
 
 export type CadDim = {
   id: string;
+  autoKey?: string;
+  aHeadId?: string;
+  bHeadId?: string;
+  faceAxis?: { id: string; axis: "x" | "y" };
   label?: string;
   a: Pt;
   b: Pt;
@@ -175,6 +180,9 @@ export type CadText = {
 };
 
 export type CadDrawing = {
+  suppressedAutoDimensions?: string[];
+  irrigationDimensions?: {offset:number;suppressed?:string[];headIds?:string[]};
+  automaticDimensionMode?: 'plan' | 'irrigation';
   faceOrder?: string[];
   version: number;
   vertices: Record<string, CadVertex>;
@@ -317,31 +325,31 @@ export type FaceTexture = { id: `texture:${string}`; label: string; src: string;
 
 /** Row order in the six-column material palette. */
 export const FACE_TEXTURES: readonly FaceTexture[] = [
-  { id: "texture:pavers-gray", label: "Серая плитка", src: "/materials/pavers-gray.png" },
-  { id: "texture:pavers-brick", label: "Клинкерная плитка", src: "/materials/pavers-brick.png" },
-  { id: "texture:decking", label: "Террасная доска", src: "/materials/decking.png" },
-  { id: "texture:roof-shingle", label: "Мягкая кровля", src: "/materials/roof-shingle.png" },
-  { id: "texture:roof-metal", label: "Фальцевая кровля", src: "/materials/roof-metal.png", baseRotation: 90 },
-  { id: "texture:flagstone", label: "Плитняк", src: "/materials/flagstone.png", patternScale: 0.06 },
-  { id: "texture:pavers-beige", label: "Бежевая плитка", src: "/materials/pavers-beige.png" },
-  { id: "texture:asphalt", label: "Асфальт", src: "/materials/asphalt.png" },
-  { id: "texture:concrete", label: "Бетон", src: "/materials/concrete.png" },
-  { id: "texture:roof-tile", label: "Черепица", src: "/materials/roof-tile.png", baseRotation: 90 },
-  { id: "texture:pool-water", label: "Вода в бассейне", src: "/materials/pool-water.png" },
-  { id: "texture:gravel", label: "Гравий", src: "/materials/gravel.png" },
-  { id: "texture:greenhouse", label: "Теплица", src: "/materials/greenhouse.png", baseRotation: 90 },
-  { id: "texture:mulch", label: "Мульча", src: "/materials/mulch.png", patternScale: 0.06 },
-  { id: "texture:soil", label: "Грунт", src: "/materials/soil.png" },
-  { id: "texture:sand", label: "Песок", src: "/materials/sand.png" },
-  { id: "texture:pebbles", label: "Галька", src: "/materials/pebbles.png", patternScale: 0.06 },
-  { id: "texture:rubber-surface", label: "Резиновое покрытие", src: "/materials/rubber-surface.png", patternScale: 0.06 },
+  { id: "texture:pavers-gray", get label() { return uiText("material_tile_gray"); }, src: "/materials/pavers-gray.png" },
+  { id: "texture:pavers-brick", get label() { return uiText("material_clinker"); }, src: "/materials/pavers-brick.png" },
+  { id: "texture:decking", get label() { return uiText("material_deck"); }, src: "/materials/decking.png" },
+  { id: "texture:roof-shingle", get label() { return uiText("material_shingle"); }, src: "/materials/roof-shingle.png" },
+  { id: "texture:roof-metal", get label() { return uiText("material_metal_roof"); }, src: "/materials/roof-metal.png", baseRotation: 90 },
+  { id: "texture:flagstone", get label() { return uiText("material_flagstone"); }, src: "/materials/flagstone.png", patternScale: 0.06 },
+  { id: "texture:pavers-beige", get label() { return uiText("material_tile_beige"); }, src: "/materials/pavers-beige.png" },
+  { id: "texture:asphalt", get label() { return uiText("material_asphalt"); }, src: "/materials/asphalt.png" },
+  { id: "texture:concrete", get label() { return uiText("material_concrete"); }, src: "/materials/concrete.png" },
+  { id: "texture:roof-tile", get label() { return uiText("material_roof_tile"); }, src: "/materials/roof-tile.png", baseRotation: 90 },
+  { id: "texture:pool-water", get label() { return uiText("material_pool"); }, src: "/materials/pool-water.png" },
+  { id: "texture:gravel", get label() { return uiText("material_gravel"); }, src: "/materials/gravel.png" },
+  { id: "texture:greenhouse", get label() { return uiText("material_greenhouse"); }, src: "/materials/greenhouse.png", baseRotation: 90 },
+  { id: "texture:mulch", get label() { return uiText("material_mulch"); }, src: "/materials/mulch.png", patternScale: 0.06 },
+  { id: "texture:soil", get label() { return uiText("material_soil"); }, src: "/materials/soil.png" },
+  { id: "texture:sand", get label() { return uiText("material_sand"); }, src: "/materials/sand.png" },
+  { id: "texture:pebbles", get label() { return uiText("material_pebble"); }, src: "/materials/pebbles.png", patternScale: 0.06 },
+  { id: "texture:rubber-surface", get label() { return uiText("material_rubber"); }, src: "/materials/rubber-surface.png", patternScale: 0.06 },
 ] as const;
 
 /** Retired choices remain renderable in saved projects. */
 export const ALL_FACE_TEXTURES: readonly FaceTexture[] = [
   ...FACE_TEXTURES,
-  { id: "texture:lawn", label: "Газон", src: "/materials/lawn.png" },
-  { id: "texture:vegetable-beds", label: "Грядки", src: "/materials/vegetable-beds.png", patternScale: 0.06 },
+  { id: "texture:lawn", get label() { return uiText("material_lawn"); }, src: "/materials/lawn.png" },
+  { id: "texture:vegetable-beds", get label() { return uiText("material_beds"); }, src: "/materials/vegetable-beds.png", patternScale: 0.06 },
 ];
 
 export function faceTexture(fill: string | undefined): FaceTexture | undefined {

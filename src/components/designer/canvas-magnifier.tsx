@@ -43,7 +43,8 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       const state = useProject.getState();
       const eligible = canShowMagnifier({ blocked: gestureBlocked.current || contacts.size !== 1,
         catalogOpen: state.catalogOpen, editDrag: editDrag.current, tool: state.tool, drawSub: state.drawSub,
-        cadEditId: state.cadEditId, selectedEdgeId: state.selectedEdgeId, draftPointCount: state.draft.points.length });
+        cadEditId: state.cadEditId, selectedEdgeId: state.selectedEdgeId, draftPointCount: state.draft.points.length,
+        sectorEditId: state.sectorEditId });
       if (!stage || !contact.moved || !eligible) {
         hide();
         raf = requestAnimationFrame(frame);
@@ -51,15 +52,29 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       }
       const rect = wrap.getBoundingClientRect();
       const finger = { x: contact.x - rect.left, y: contact.y - rect.top };
+      let focus = finger;
+      if (editDrag.current && contact.handle?.getStage() === stage && contact.handle.isVisible()) {
+        const position = contact.handle.getAbsolutePosition();
+        focus = { x: position.x * rect.width / stage.width(), y: position.y * rect.height / stage.height() };
+      } else if (!editDrag.current && drawingFocusRef.current) {
+        const point = drawingFocusRef.current;
+        focus = { x: (point.x * state.pxPerMeter + state.panX) * rect.width / stage.width(),
+          y: (point.y * state.pxPerMeter + state.panY) * rect.height / stage.height() };
+      }
       // Phone tool/layer strips overlay the stage; tablet toolbars are already above it in flow.
       // Measure the current strip so opening, closing or resizing it cannot cover the lens.
       const topPanel = wrap.closest(".mobile-canvas-stage")?.querySelector<HTMLElement>("[data-magnifier-top-panel]");
       const topInset = topPanel ? Math.max(0, topPanel.getBoundingClientRect().bottom - rect.top) : 0;
       let layout = magnifierLayout(rect.width, rect.height, topInset);
-      if (!document.querySelector('.app-shell[data-mobile="true"]')) {
-        const bounds=workspaceBounds(),obstacles=floatingObstacles(frameElement,30);
-        const wanted={x:bounds.x+bounds.width-120,y:bounds.y};
-        const first=placeFloating(bounds,{width:120,height:120},wanted,obstacles);
+      const phone = !!document.querySelector('.app-shell[data-mobile="true"]');
+      if (!phone || state.sectorEditId) {
+        const bounds = phone ? { x: rect.left + 4, y: rect.top + topInset + 4, width: rect.width - 8, height: rect.height - topInset - 8 } : workspaceBounds();
+        const obstacles = [...floatingObstacles(frameElement,30),
+          {x:contact.x-44,y:contact.y-44,width:88,height:88},
+          {x:rect.left+focus.x-32,y:rect.top+focus.y-32,width:64,height:64}];
+        const lensSize = phone ? 100 : 120;
+        const wanted={x:bounds.x+bounds.width-lensSize,y:bounds.y};
+        const first=placeFloating(bounds,{width:lensSize,height:lensSize},wanted,obstacles);
         const size=Math.min(first.width,first.height);
         const placed=placeFloating(bounds,{width:size,height:size},wanted,obstacles);
         layout=size>=60?{size,left:placed.x-rect.left,top:placed.y-rect.top}:null;
@@ -81,17 +96,6 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       ctx.clearRect(0, 0, contentSize, contentSize);
       ctx.fillStyle = theme.bg;
       ctx.fillRect(0, 0, contentSize, contentSize);
-      let focus = finger;
-      // Follow the real handle after snapping, including the original touch offset.
-      // The window stays fixed in the top-right corner while its contents follow the point.
-      if (editDrag.current && contact.handle?.getStage() === stage && contact.handle.isVisible()) {
-        const position = contact.handle.getAbsolutePosition();
-        focus = { x: position.x * rect.width / stage.width(), y: position.y * rect.height / stage.height() };
-      } else if (!editDrag.current && drawingFocusRef.current) {
-        const point = drawingFocusRef.current;
-        focus = { x: (point.x * state.pxPerMeter + state.panX) * rect.width / stage.width(),
-          y: (point.y * state.pxPerMeter + state.panY) * rect.height / stage.height() };
-      }
       const source = renderer.render(stage, focus, rect.width, rect.height, contentSize, dpr, theme.bg);
       ctx.drawImage(source, 0, 0, contentSize, contentSize);
       // A fine, open-centre sight leaves the actual join visible.
@@ -111,7 +115,7 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       raf = requestAnimationFrame(frame);
     };
     const down = (event: PointerEvent) => {
-      if (event.pointerType !== "touch" && event.pointerType !== "pen") return;
+      if (event.pointerType === "mouse" && event.button !== 0) return;
       contacts.add(event.pointerId);
       if (contacts.size !== 1 || gestureBlocked.current) { stop(); return; }
       const stage = stageRef.current;
@@ -124,6 +128,8 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
         if (parent.getClassName() === "Layer") break;
         if (parent.hasName("magnifier-symbol") || parent.getChildren().some(child => child.hasName("edit-point-glyph"))) { handle = parent; break; }
       }
+      // Desktop magnification is reserved for the small irrigation editing handles.
+      if (event.pointerType === "mouse" && !handle?.hasName("sector-edit-handle")) return;
       contact = { id: event.pointerId, x: event.clientX, y: event.clientY,
         startX: event.clientX, startY: event.clientY, moved: false, handle };
       if (!raf) raf = requestAnimationFrame(frame);
