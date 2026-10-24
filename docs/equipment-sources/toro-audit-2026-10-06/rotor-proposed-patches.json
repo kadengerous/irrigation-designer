@@ -1,0 +1,2690 @@
+{
+  "schemaVersion": 1,
+  "auditedOn": "2026-10-06",
+  "summary": {
+    "modelsAudited": 53,
+    "rotorModels": 13,
+    "bodyModels": 40,
+    "nozzleVariantsPerRotor": 12,
+    "uniquePerformanceRows": 60,
+    "catalogPerformanceRowsChecked": 780,
+    "numericCellsChecked": 6240,
+    "matchingPerformanceRows": 780,
+    "mismatchingPerformanceRows": 0,
+    "publishedPrecipitationCells": 1560,
+    "missingPrecipitationCells": 0,
+    "lowPressureBodiesCorrected": 7,
+    "defaultRadiusCorrections": 3,
+    "shrubAccessoryConflicts": 2,
+    "hydraulicConflicts": 0,
+    "unknownNozzleColorsDistinct": 12,
+    "verifiedRotorCapColors": 13,
+    "verifiedBodyCapColors": 40
+  },
+  "application": "Apply set fields to catalog item ID. Apply nozzlePatches set fields to matching item ID/nozzle ID. No replacement of hydraulic rows. New fields colorSourceKind and unverifiedBodyFeatures require root type/UI integration.",
+  "itemPatches": [
+    {
+      "id": "toro:T5P-RS-LN",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 12
+        }
+      ]
+    },
+    {
+      "id": "toro:T5PE-RS-LN",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#dcccec",
+        "colorName": "Lavender",
+        "colorSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 12
+        }
+      ]
+    },
+    {
+      "id": "toro:T5PCK1.5-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "rNom": 10.668,
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 12
+        }
+      ]
+    },
+    {
+      "id": "toro:T5PCK2.0-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "rNom": 11.2776,
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 12
+        }
+      ]
+    },
+    {
+      "id": "toro:T5PCK2.5-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "rNom": 11.2776,
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 12
+        }
+      ]
+    },
+    {
+      "id": "toro:T5PCK3.0-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 12
+        }
+      ]
+    },
+    {
+      "id": "toro:T5HP-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 13
+        }
+      ]
+    },
+    {
+      "id": "toro:T5HPE-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#dcccec",
+        "colorName": "Lavender",
+        "colorSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 13
+        }
+      ]
+    },
+    {
+      "id": "toro:T5S-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "riser",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "bodyFeatures": [],
+        "unverifiedBodyFeatures": [
+          "CV"
+        ],
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 12
+        }
+      ]
+    },
+    {
+      "id": "toro:T5SE-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "riser",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "bodyFeatures": [
+          "Effluent"
+        ],
+        "unverifiedBodyFeatures": [
+          "CV"
+        ],
+        "color": "#dcccec",
+        "colorName": "Lavender",
+        "colorSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 12
+        }
+      ]
+    },
+    {
+      "id": "toro:T5PSS3.0-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 13
+        }
+      ]
+    },
+    {
+      "id": "toro:T5PSSE3.0-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#dcccec",
+        "colorName": "Lavender",
+        "colorSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 13
+        }
+      ]
+    },
+    {
+      "id": "toro:T5PCKSS3.0-RS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "mountingKind": "integrated",
+        "mountingSourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "color": "#707070",
+        "colorName": "Dark gray",
+        "colorSourceUrl": "https://www.toro.com/getpub/128192",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 103
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 13
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-2P",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-2LP",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap",
+        "recommendedPressureMin": 1.034214
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-3P",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-3LP",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap",
+        "recommendedPressureMin": 1.034214
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4P",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4LP",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap",
+        "recommendedPressureMin": 1.034214
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6P",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6LP",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap",
+        "recommendedPressureMin": 1.034214
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6SI",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6LPSI",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap",
+        "recommendedPressureMin": 1.034214
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12P",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12LP",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap",
+        "recommendedPressureMin": 1.034214
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12SI",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12LPSI",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap",
+        "recommendedPressureMin": 1.034214
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4P-COM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6P-COM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12P-COM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4P-PRX",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6P-PRX",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6SI-PRX",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12P-PRX",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12SI-PRX",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 7
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4P-PRXCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6P-PRXCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12P-PRXCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-3P-PR",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4P-PR",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6P-PR",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12P-PR",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4P-PRCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6P-PRCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12P-PRCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4P-XF",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6P-XF",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6SI-XF",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12P-XF",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12SI-XF",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-4P-XFCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-6P-XFCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    },
+    {
+      "id": "toro:570Z-12P-XFCOM",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "bodyVerifiedOn": "2026-10-06",
+        "mountingKind": "spray",
+        "colorName": "Black",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "colorSourceKind": "cap"
+      },
+      "sourceRefs": [
+        {
+          "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+          "page": 3
+        },
+        {
+          "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+          "page": 69
+        },
+        {
+          "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+          "pdfPage": 6
+        }
+      ]
+    }
+  ],
+  "nozzlePatches": [
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "1.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "2.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "2.5",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "3.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "4.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "5.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "6.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "8.0",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "1.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "1.5LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "2.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "nozzleId": "3.0LA",
+      "set": {
+        "colorName": "Unknown"
+      },
+      "reason": "Official documents identify inserts by molded flow/size markings. No verified per-size color code; retained hex is neutral UI fallback, not a claimed hardware color."
+    }
+  ],
+  "rowPatches": [],
+  "baselineNote": "Root corrected seven LP minima from the interim finding before final comparison script ran. Their final model field checks therefore show match; the patch explicitly repeats 1.034214 for reproducibility."
+}

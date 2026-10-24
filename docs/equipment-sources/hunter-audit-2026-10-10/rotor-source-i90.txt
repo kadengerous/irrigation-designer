@@ -1,0 +1,508 @@
+I-90 | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/rotors/i-90)
+citeturn294view0 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/rotors/i-90","lineno":110}); Total lines: 928
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite9†English L16:   * cite9†Metric L17:   * cite9†Español L18:   * cite9†Italiano L19: 
+L20:   * cite9†Français L21:   * cite9†Português L22:   * cite9†Deutsch L23:   * cite9†Türkçe L24: 
+L25:   * cite9†Polski L26:   * cite9†Русский L27:   * cite9†العربية L28:   * cite9†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: 
+L36: cite10†Image: i-90 Rotor L37: 
+L38: cite11†Image: I-90 Family L39: 
+L40: cite12†Image: Specification builder chart. L41: # I-90
+L42: 
+L43: The robust I-90 Rotor is built for long-distance natural turf applications in large parks, open spaces, and sports fields.
+L44: 
+L45: Radius 73' to 103'
+L46: 
+L47: Flow 29.5 to 83.8 GPM
+L48: 
+L49: Inlet Size 1½" NPT
+L50: 
+L51: Product Line
+L52: 
+L53: Rotors
+L54: 
+L55:   * Accurate: Exclusive PressurePort™ Technology maximizes distribution uniformity
+L56:   * Reliable: Advanced triple nozzles ensure consistent coverage
+L57:   * Efficient: Drain check valve saves water by preventing low-head drainage
+L58:   * cite13†Models L59:   * cite14†Specs L60:   * cite15†Videos L61:   * cite16†Features L62:   * cite17†Charts L63:   * cite18†Documents L64:   * cite19†CAD Details L65:   * cite20†Support L66:   * cite21†Photos L67:   * cite22†Related L68: ## Models
+L69: Model  | Description  | Add to List
+L70: --- | --- | ---
+L71: cite23†I-90-ADV | I-90 Rotor, 3" pop-up, adjustable from 40° to 360°, 1½" inlet, check valve, with eight nozzles included (25–73)  | cite9†+ L72: cite24†I-90-ARV | I-90 Rotor, 3" pop-up, adjustable from 40° to 360°, 1½" inlet, check valve, reclaimed ID, with eight nozzles included (25–73)  | cite9†+ L73: cite25†I-90-36V | I-90 Rotor, 3" pop-up, full-circle, 1½" inlet, check valve, opposing nozzles, with eight nozzles included (25–73)  | cite9†+ L74: cite26†I-90-3RV | I-90 Rotor, 3" pop-up, full-circle, 1½" inlet, check valve, opposing nozzles, reclaimed ID, with eight nozzles included (25–73)  | cite9†+ L75: Showing 1 - 4 of 4
+L76: ## User-installed options
+L77: 
+L78: ### User-Installed Options
+L79: 
+L80: Model  | Description  | Add to List
+L81: --- | --- | ---
+L82: cite27†467955 | Sod Cup Kit for I90  | cite9†+ L83: cite28†234200 | Rubber Cover Kit for I-90-ADV  | cite9†+ L84: ### HSJ Swing Joints
+L85: Model  | Description  | Add to List
+L86: --- | --- | ---
+L87: cite29†HSJ-3-3-2-2-12 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, single top-out, 12" lay arm  | cite9†+ L88: cite30†HSJ-3-3-2-2-18 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male NPT outlet, single top-out, 18" lay arm  | cite9†+ L89: cite31†HSJ-3-3-2-4-12 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, triple top-out, 12" lay arm  | cite9†+ L90: cite32†HSJ-3-3-2-4-18 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, triple top-out, 18" lay arm  | cite9†+ L91: cite33†HSJ-1-3-2-2-12 | HSJ Swing Joint, heavy-duty, 1" diameter, 1" male NPT inlet, 1" male NPT outlet, single top-out, 12" lay arm  | cite9†+ L92: cite34†HSJ-3-M-0-2-12 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male Acme inlet, 1½" male Acme outlet, single top-out, 12" lay arm  | cite9†+ L93: cite35†HSJ-3-3-0-2-12 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male Acme outlet, single top-out, 12" lay arm  | cite9†+ L94: cite36†HSJ-3-6-0-2-12 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male BSP inlet, 1½" male Acme outlet, single top-out, 12" lay arm  | cite9†+ L95: cite37†Image: I-90 L96: 
+L97: [Input]
+L98: 
+L99: I-90
+L100: 
+L101: I-90
+L102: 
+L103: Ordering Number [Input]
+L104: 
+L105: [Input] [Input]
+L106: 
+L107: Qty [Input]
+L108: 
+L109: Notes [Input: Add a note...]
+L110: 
+L111: [Button: Add to list]
+L112: 
+L113: User installed options
+L114: 
+L115: [Input]
+L116: #### Product added to list
+L117: 
+L118: The following product was added to ""
+L119: 
+L120: QTY
+L121: 
+L122: cite38†Review your list L123: 
+L124: cite9†Continue L125: 
+L126: [Input] [Input]
+L127: 
+L128: ## Create a new My List.
+L129: 
+L130: ## Log in to access this feature
+L131: 
+L132: Log in using your Hunter Account
+L133: 
+L134: Username [Input]
+L135: 
+L136: Password [Input]
+L137: 
+L138: [Input] [Input] [Input]
+L139: 
+L140: [Button: Sign In]
+L141: 
+L142: cite39†Contact your local distributor for product availability and ordering. L143: ## Specifications
+L144: 
+L145: Operating Specifications
+L146: 
+L147:   * Nozzle trajectory: 22.5º
+L148:   * I-90 nozzle choices: 8
+L149:   * Radius I-90 ADV: 66' to 97'
+L150:   * Radius I-90 36V: 73' to 103'
+L151:   * Flow I-90 ADV: 29.5 to 83.8 GPM
+L152:   * Flow I-90 36V: 30.5 to 83.3 GPM
+L153:   * Recommended pressure range: 80 to 120 PSI
+L154:   * Operating pressure range: 80 to 120 PSI
+L155:   * Precipitation rate: 0.75 in/hr approximately
+L156:   * Warranty period: 5 years
+L157: 
+L158: Factory-Installed Options
+L159: 
+L160:   * Reclaimed water ID
+L161: 
+L162: User-Installed Options
+L163:   * cite40†Prefabricated PVC HSJ Swing Joints†www.hunterindustries.com L164:   * Upper Snap Ring Assembly P/N 450105
+L165:   * Rubber Cover Kit  P/N 959300SP
+L166:   * Turf Cup Kit P/N 959400SP
+L167:     * No-dig servicing
+L168:     * No-dig arc adjustments
+L169:     * Quick-release turf cup assembly
+L170:     * Threads in cup lock/retain the turf
+L171: 
+L172: * * *
+L173: 
+L174: cite41† Download Product Spec Sheet L175: 
+L176: cite42†  Download Written Specifications (in English) L177: ## Videos
+L178: 
+L179: Rotor T-Handle Pull Up Tool
+L180: 
+L181: The T-Handle Rotor Adjustment Tool is just one of a full range of convenient service tools and auxiliary items for irrigation systems that save time
+L182: 
+L183: How your rotor invoice can help you win big prizes!
+L184: 
+L185: Check out “hunter.info/rr26” for more great prizes! Buy Hunter rotors or upload your invoice or design plans to get entries to win.
+L186: 
+L187: Buy Rotors. Win BIG. Here’s How.
+L188: 
+L189: Behind the Scenes: Hunter Rotor Manufacturing
+L190: Take a walk through the Hunter manufacturing floor with Gregg Roesink and see what goes into every rotor.
+L191: 
+L192: Hunter I-Series Rotors Product Guide
+L193: 
+L194: Learn about recent product improvements that raise the bar for durability and performance, and why there is no better commercial sprinkler than Hunte
+L195: 
+L196: cite43†All Product Videos L197: ## Features
+L198: The I-90 is Hunter’s longest-distance rotor specifically designed for natural turf, parks, sports fields, and public areas. With a radius of up to 101', the I-90 boasts the longest throw capability of all natural turf rotors. Yet its reduced-size diameter and cushioned rubber cover make it the perfect choice for parks and wide-open lawn areas, as well as perimeter watering of athletic fields and horse arenas.
+L199: The rotor is also easy to service, with a “jar-top” body cap that allows quick access to the filter screen and check valve with no extra pieces, parts, or tools required. The I-90 is offered in two models: a full-circle opposing-nozzle model and an adjustable arc model, each with color-coded nozzles that can be field-changed to match the specific needs of any large site.
+L200: #### Key Benefits
+L201: 
+L202: Exclusive PressurePort™ Technology creates exceptional nozzle uniformity
+L203: 
+L204: Forward-facing triple nozzles (I-90) or opposing triple nozzles (I-90-ON) create uniform nozzle profiles in part- and full-circle applications
+L205: 
+L206: QuickCheck™ Arc Mechanism for fast arc adjustment and review of the arc setting
+L207: 
+L208: Part- and full-circle in one model provides flexible installation options and decreases inventory (I-90)
+L209: 
+L210: Drain Check Valve prevents low-head drainage (up to 7' of elevation)
+L211: #### Advanced Features
+L212: 
+L213: ### Opposing Nozzle 360˚ Model
+L214: 
+L215: The opposing nozzle design offers excellent water distribution. With primary and secondary nozzles on opposing sides of the turret, streams arc in opposite directions as the sprinkler rotates for outstanding mid-range and close-in watering.
+L216: 
+L217: cite44†Image: The I-40 nozzle in use. L218: ### I-90 Dual Trajectory Color-Coded Nozzles
+L219: 
+L220: All I-90 Series rotors have color-coded nozzles for easy identification and, the nozzle numbers approximate the flow in gallons per minute. Choose from the eight standard 22.5 degree trajectory nozzles or the eight 15 degree nozzles for low-angle applications.
+L221: 
+L222: Standard 22.5 degree trajectory nozzles
+L223: 
+L224: cite45†Image L225: 
+L226: Low-angle 15 degree trajectory nozzles
+L227: 
+L228: cite46†Image L229: ### I-90 RECLAIMED WATER ID
+L230: 
+L231: Purple logo caps indicate the use of non-potable irrigation. They are available as a factory installed-option or as a replacement part.
+L232: 
+L233: cite47†Image: I-90 Reclaimed Cap  L234: 
+L235: ### I-90 DRAIN CHECK VALVE (up to 7' of Elevation)
+L236: 
+L237: As air in the system piping can cause long-term damage to rotors and plumbing, the drain check valve keeps lines from draining when the system is shut off. This saves water, reduces liability, and increases system life.
+L238: 
+L239: cite48†Image: I-90 Sprinkler Assembly  L240: ## Charts
+L241: ### I-90-ADV Performance Data
+L242: 
+L243: I-90-ADV Nozzle Performance Data cite49†View Nozzle L244: ---
+L245: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L246:    | PSI  | ft  | GPM  | cite50†Image | cite51†Image L247: 25 • Lt. Blue  | 80  | 66  | 29.5  | 1.30  | 1.51
+L248: 90  | 67  | 31.5  | 1.35  | 1.56
+L249: 100  | 68  | 33.2  | 1.38  | 1.60
+L250: 110  | 69  | 35.6  | 1.44  | 1.66
+L251: 33 • Gray  | 80  | 68  | 36.2  | 1.51  | 1.74
+L252: 90  | 69  | 38.2  | 1.54  | 1.78
+L253: 100  | 70  | 40.4  | 1.59  | 1.83
+L254: 110  | 71  | 42.6  | 1.63  | 1.88
+L255: 38 • Red  | 80  | 72  | 40.6  | 1.51  | 1.74
+L256: 90  | 73  | 43.0  | 1.55  | 1.79
+L257: 100  | 75  | 45.4  | 1.55  | 1.79
+L258: 110  | 76  | 47.6  | 1.59  | 1.83
+L259: 43 • Dk. Brown  | 80  | 74  | 46.1  | 1.62  | 1.87
+L260: 90  | 74  | 48.5  | 1.70  | 1.97
+L261: 100  | 75  | 50.7  | 1.74  | 2.00
+L262: 110  | 77  | 53.4  | 1.73  | 2.00
+L263: 48 • Dk. Green  | 80  | 77  | 50.2  | 1.63  | 1.88
+L264: 90  | 79  | 52.6  | 1.62  | 1.87
+L265: 100  | 81  | 55.1  | 1.62  | 1.87
+L266: 110  | 82  | 57.5  | 1.65  | 1.90
+L267: 53 • Dk. Blue*  | 80  | 81  | 54.9  | 1.61  | 1.86
+L268: 90  | 84  | 57.2  | 1.56  | 1.80
+L269: 100  | 86  | 59.5  | 1.55  | 1.79
+L270: 110  | 87  | 62.1  | 1.58  | 1.82
+L271: 120  | 88  | 64.4  | 1.60  | 1.85
+L272: 63 • Black  | 80  | 86  | 62.3  | 1.62  | 1.87
+L273: 90  | 88  | 65.5  | 1.63  | 1.88
+L274: 100  | 90  | 69.0  | 1.64  | 1.89
+L275: 110  | 91  | 71.9  | 1.67  | 1.93
+L276: 120  | 92  | 74.7  | 1.70  | 1.96
+L277: 73 • Orange  | 80  | 89  | 72.7  | 1.77  | 2.04
+L278: 90  | 91  | 75.4  | 1.75  | 2.02
+L279: 100  | 93  | 78.1  | 1.74  | 2.01
+L280: 110  | 95  | 80.9  | 1.73  | 1.99
+L281: 120  | 97  | 83.8  | 1.71  | 1.98
+L282: * Factory installed nozzle Notes:
+L283: All precipitation rates calculated for 180 degree operation. For the precipitation rate for a 360 degree sprinkler, divide by 2.
+L284: ### I-90-36V Performance Data
+L285: 
+L286: I-90-36V Nozzle Performance Data cite49†View Nozzle L287: ---
+L288: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L289:    | PSI  | ft  | GPM  | cite50†Image | cite51†Image L290: 25 • Lt. Blue  | 80  | 73  | 30.5  | 0.55  | 0.64
+L291: 90  | 75  | 32.4  | 0.55  | 0.64
+L292: 100  | 76  | 34.3  | 0.57  | 0.66
+L293: 110  | 78  | 36.5  | 0.58  | 0.67
+L294: 33 • Grey  | 80  | 77  | 36.3  | 0.59  | 0.68
+L295: 90  | 78  | 38.4  | 0.61  | 0.7
+L296: 100  | 80  | 40.6  | 0.61  | 0.71
+L297: 110  | 81  | 42.7  | 0.63  | 0.72
+L298: 38 • Red  | 80  | 80  | 40.6  | 0.61  | 0.71
+L299: 90  | 82  | 42.9  | 0.61  | 0.71
+L300: 100  | 83  | 45.3  | 0.63  | 0.73
+L301: 110  | 85  | 47.7  | 0.64  | 0.73
+L302: 43 • Dk. Brown  | 80  | 83  | 46.2  | 0.65  | 0.75
+L303: 90  | 84  | 48.6  | 0.66  | 0.77
+L304: 100  | 85  | 50.9  | 0.68  | 0.78
+L305: 110  | 86  | 53.4  | 0.69  | 0.8
+L306: 48 • Dk. Green  | 80  | 86  | 49.6  | 0.65  | 0.75
+L307: 90  | 89  | 52.5  | 0.64  | 0.74
+L308: 100  | 90  | 54.8  | 0.65  | 0.75
+L309: 110  | 91  | 57.3  | 0.67  | 0.77
+L310: 53 • Dk. Blue*  | 80  | 89  | 54.2  | 0.66  | 0.76
+L311: 90  | 90  | 56.7  | 0.67  | 0.78
+L312: 100  | 92  | 59.2  | 0.67  | 0.78
+L313: 110  | 93  | 61.7  | 0.69  | 0.79
+L314: 120  | 94  | 64.2  | 0.7  | 0.81
+L315: 63 • Black  | 80  | 92  | 63.2  | 0.72  | 0.83
+L316: 90  | 94  | 65.9  | 0.72  | 0.83
+L317: 100  | 96  | 69.4  | 0.72  | 0.84
+L318: 110  | 97  | 72  | 0.74  | 0.85
+L319: 120  | 98  | 74.9  | 0.75  | 0.87
+L320: 73 • Orange  | 80  | 96  | 72.1  | 0.75  | 0.87
+L321: 90  | 98  | 75  | 0.75  | 0.87
+L322: 100  | 99  | 77.8  | 0.76  | 0.88
+L323: 110  | 102  | 80.5  | 0.74  | 0.86
+L324: 120  | 103  | 83.3  | 0.76  | 0.87
+L325: * Factory installed nozzle. Notes:
+L326: Precipitation rates for 36V models are calculated for 360-degree operation. All triangular rates are equilateral. For low angle nozzle performance, reduce radius by 15%. Complies to ASAE standard.
+L327: ## Documents
+L328: ### Select Type
+L329: 
+L330:   * All Documents
+L331:   * Manuals
+L332:   * Marketing
+L333:   * Specifications
+L334:   * Replacement Parts
+L335: 
+L336: I-90 Installation Card
+L337: 
+L338: cite9†Select Language  L339: 
+L340: I-90 Brochure
+L341: 
+L342: cite9†Select Language  L343: 
+L344: cite52†USA   L345: 
+L346: cite53†Metric   L347: 
+L348: cite54†Spanish   L349: 
+L350: cite55†Italian   L351: 
+L352: cite56†French   L353: 
+L354: cite57†Portuguese - Brazil   L355: 
+L356: cite58†German   L357: 
+L358: cite59†Turkish   L359: 
+L360: Reclaimed Water Solutions Brochure
+L361: 
+L362: cite9†Select Language  L363: 
+L364: CAD - I-90 with Swing Arm
+L365: 
+L366: cite9†Select Format  L367: 
+L368: CAD - I-90 with Swing Arm and Turf Cup
+L369: 
+L370: cite9†Select Format  L371: CAD - I-90 with HSJ Swing Arm
+L372: 
+L373: cite9†Select Format  L374: 
+L375: CAD - I-90 with HSJ Swing Arm and Turf Cup
+L376: 
+L377: cite9†Select Format  L378: 
+L379: I-90 Written Specifications
+L380: 
+L381: cite60†Download   L382: 
+L383: I-90 Replacement Parts List
+L384: 
+L385: cite61†Download   L386: 
+L387: LEED Guide - Construction
+L388: 
+L389: cite9†Select Language  L390: 
+L391: LEED Guide - Multi-Family
+L392: 
+L393: cite9†Select Language  L394: 
+L395: LEED Guide - Single Family
+L396: 
+L397: cite9†Select Language  L398: 
+L399: Reclaimed Water Solutions Brochure
+L400: 
+L401: cite62†Download   L402: 
+L403: Environmental Product Declaration (Rotors)
+L404: 
+L405: cite63†Download   L406: 
+L407: cite9†Show all documents L408: ## CAD Installation Details
+L409: 
+L410: I-90 with HSJ Swing Arm  | cite64†DWG | cite65†DXF | cite66†PDF |
+L411: I-90 with HSJ Swing Arm and Turf Cup  | cite67†DWG | cite68†DXF | cite69†PDF |
+L412: I-90 with Swing Arm  | cite70†DWG | cite71†DXF | cite72†PDF |
+L413: I-90 with Swing Arm and Turf Cup  | cite73†DWG | cite74†DXF | cite75†PDF |
+L414: HUNTER I-XX ROTOR CONNECTED TO MAINLINE BY SADDLE  | cite76†DWG |  | cite77†PDF |
+L415: ## CAD Installation Details
+L416: 
+L417: CAD - I-90 with HSJ Swing Arm
+L418: 
+L419: cite9†Select Format  L420: 
+L421: CAD - I-90 with HSJ Swing Arm and Turf Cup
+L422: 
+L423: cite9†Select Format  L424: 
+L425: CAD - I-90 with Swing Arm
+L426: 
+L427: cite9†Select Format  L428: 
+L429: CAD - I-90 with Swing Arm and Turf Cup
+L430: 
+L431: cite9†Select Format  L432: 
+L433: HUNTER I-XX ROTOR CONNECTED TO MAINLINE BY SADDLE
+L434: 
+L435: cite9†Select Format  L436: 
+L437: ## Support
+L438: 
+L439: ## cite78†Commercial Rotors L440: 
+L441: ### Installation
+L442: 
+L443: ### Rotor Adjustments
+L444: 
+L445: ### Stator Adjustment
+L446: 
+L447: ### Turf Cup Kit
+L448: 
+L449: ### FAQs
+L450: 
+L451: ### Troubleshooting
+L452: 
+L453: ### Replacement Guides
+L454: 
+L455: ## Photos
+L456: ## Application Photos
+L457: 
+L458: cite9†Image L459: 
+L460: cite79†Image L461: 
+L462: Title:
+L463: 
+L464: I-90
+L465: 
+L466: File:
+L467: 
+L468: 4_rt.jpg
+L469: 
+L470: Classification:
+L471: 
+L472: Application
+L473: 
+L474: Product Line:
+L475: 
+L476: Rotors
+L477: 
+L478: Products:
+L479: 
+L480: cite80†I-90 L481: 
+L482: Keywords:
+L483: 
+L484: product
+L485: 
+L486: ,
+L487: 
+L488: location
+L489: 
+L490: ,
+L491: 
+L492: rotor
+L493: 
+L494: ,
+L495: 
+L496: I-90
+L497: 
+L498: cite81†Image Page L499: 
+L500: * * *
+L501: 
+L502: #### Download Image
+L503: 
+L504: cite82†Medium cite83†Original L505: 
+L506: By clicking download, you agree to our cite9†terms and conditions .
+L507: ### Photo Usage Disclaimer
+L508: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L509: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L510: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L511: 
+L512: cite9†Image L513: 
+L514: cite84†Image L515: 
+L516: Title:
+L517: 
+L518: I-90
+L519: 
+L520: File:
+L521: 
+L522: hunter-i90-rt.jpg
+L523: 
+L524: Classification:
+L525: 
+L526: Application
+L527: 
+L528: Product Line:
+L529: 
+L530: Rotors
+L531: 
+L532: Products:
+L533: 
+L534: cite80†I-90 L535: 
+L536: Keywords:
+L537: 
+L538: I-90
+L539: 
+L540: ,
+L541: 
+L542: rotor
+L543: 
+L544: cite85†Image Page L545: 
+L546: * * *
+L547: #### Download Image
+L548: 
+L549: cite86†Medium cite87†Original L550: 
+L551: By clicking download, you agree to our cite9†terms and conditions .
+L552: ### Photo Usage Disclaimer
+L553: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L554: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L555: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L556: ## Studio Photos
+L557: 
+L558: cite9†Image L559: 
+L560: cite88†Image L561: 
+L562: Title:
+L563: 
+L564: I-90-ADV Reclaimed Water ID Cap
+L565: 
+L566: File:
+L567: 
+L568: i-90-adv-r_clipped.jpg
+L569: 
+L570: Classification:
+L571: 
+L572: Studio
+L573: 
+L574: Product Line:
+L575: 
+L576: Rotors
+L577: 
+L578: Products:
+L579: 
+L580: cite80†I-90 L581: 
+L582: Keywords:
+L583: 
+L584: rotor
+L585: 
+L586: ,
+L587: 
+L588: I-90
+L589: 
+L590: ,
+L591: 
+L592: parts
+L593: 
+L594: ,
+L595: 
+L596: reclaimed
+L597: 
+L598: ,
+L599: 
+L600: cap
+L601: 
+L602: cite89†Image Page L603: 
+L604: * * *
+L605: 
+L606: #### Download Image
+L607: 
+L608: cite90†Medium cite91†Original L609: 
+L610: By clicking download, you agree to our cite9†terms and conditions .
+L611: ### Photo Usage Disclaimer
+L612: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L613: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+

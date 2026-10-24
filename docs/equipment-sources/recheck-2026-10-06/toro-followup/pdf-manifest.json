@@ -1,0 +1,104 @@
+[
+  {
+    "file": "psn-catalog-2026.pdf",
+    "sha256": "7c170c6d1279a49db8b25d64d53456c77c3120ae74c2cbed0f726b2e8e991920",
+    "sizeBytes": 13068709,
+    "pdfMetadata": {
+      "/CreationDate": "D:20251112093216-08'00'",
+      "/Creator": "Adobe InDesign 21.0 (Macintosh)",
+      "/ModDate": "D:20251119103010-08'00'",
+      "/Producer": "Adobe PDF Library 18.0",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "file": "psn-chart-2026.pdf",
+    "sha256": "245119c04c278a69574354ff5c680746f5990738b1ebfc68f49b343e2d221ed5",
+    "sizeBytes": 787233,
+    "pdfMetadata": {
+      "/CreationDate": "D:20260508160129-07'00'",
+      "/Creator": "Adobe InDesign 21.3 (Macintosh)",
+      "/ModDate": "D:20260508160131-07'00'",
+      "/Producer": "Adobe PDF Library 18.0",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "file": "psn-legacy-charts-only.pdf",
+    "sha256": "dc46c3d3ae7e21c055c362fe9d76bb455356374e414f43bb76606f078de2abd6",
+    "sizeBytes": 1578860,
+    "pdfMetadata": {
+      "/CreationDate": "D:20241111132745-08'00'",
+      "/Creator": "Adobe InDesign 20.0 (Macintosh)",
+      "/ModDate": "D:20241111132748-08'00'",
+      "/Producer": "Adobe PDF Library 17.0",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "file": "psn-sellsheet-2025.pdf",
+    "sha256": "bb49a5cbdca23dca9eff987c3589b7983696caad1da1ff419ae3b80e7e736365",
+    "sizeBytes": 4043874,
+    "pdfMetadata": {
+      "/CreationDate": "D:20241111132437-08'00'",
+      "/Creator": "Adobe InDesign 20.0 (Macintosh)",
+      "/ModDate": "D:20241111132444-08'00'",
+      "/Producer": "Adobe PDF Library 17.0",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "file": "psn-sellsheet-2026.pdf",
+    "sha256": "bd4214de50b99246098a81312299344d6e97acac415344a909bd029b61b08b4a",
+    "sizeBytes": 408502,
+    "pdfMetadata": {
+      "/CreationDate": "D:20260512094125-07'00'",
+      "/Creator": "Adobe InDesign 21.1 (Macintosh)",
+      "/ModDate": "D:20260512094127-07'00'",
+      "/Producer": "Adobe PDF Library 18.0",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "file": "t5-2015-bid-spec.pdf",
+    "sha256": "f1e15d7f8145c099e92a60e821ef464952a03c6f8c07b5b0195ddf9fe70ecfe9",
+    "sizeBytes": 105272,
+    "pdfMetadata": {
+      "/Author": "The Toro Company",
+      "/Commerce Model Identifier": "",
+      "/Commerce Series Identifier": "P-220-Series",
+      "/Company": "The Toro Company",
+      "/CreationDate": "D:20150413143837-07'00'",
+      "/Creator": "Acrobat PDFMaker 10.1 for Word",
+      "/Document Type": "Manual",
+      "/Keywords": "",
+      "/Language": ";#English (United States);#",
+      "/ModDate": "D:20150422134155-07'00'",
+      "/Order": "38800.0000000000",
+      "/Producer": "Adobe PDF Library 10.0",
+      "/SourceModified": "D:20150406185039",
+      "/Subject": "",
+      "/TemplateUrl": "",
+      "/Title": "Bid Specs",
+      "/Year": "2010",
+      "/_SharedFileIndex": "",
+      "/_SourceUrl": "",
+      "/display_urn:schemas-microsoft-com:office:office#Author": "System Account",
+      "/display_urn:schemas-microsoft-com:office:office#Editor": "System Account",
+      "/xd_ProgID": "",
+      "/xd_Signature": ""
+    }
+  },
+  {
+    "file": "t5-us-2015.pdf",
+    "sha256": "3b5f1a06e229b65bfe40dd194e327602592de65affcca841bb3eb19d6ff4e218",
+    "sizeBytes": 2423331,
+    "pdfMetadata": {
+      "/CreationDate": "D:20150923095144-07'00'",
+      "/Creator": "Adobe InDesign CC 2015 (Macintosh)",
+      "/ModDate": "D:20150923095220-07'00'",
+      "/Producer": "Adobe PDF Library 15.0",
+      "/Trapped": "/False"
+    }
+  }
+]

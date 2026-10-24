@@ -1,0 +1,93 @@
+Commercial Rotors - I-90 Rotor Adjustment Instructions | Hunter Industries (https://www.hunterirrigation.com/support/commercial-rotors-i-90-rotor-adjustment-instructions)
+citeturn325view0 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/support/commercial-rotors-i-90-rotor-adjustment-instructions","lineno":null}); Total lines: 136
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite9†English L16:   * cite9†Metric L17:   * cite9†Español L18:   * cite9†Italiano L19: 
+L20:   * cite9†Français L21:   * cite9†Português L22:   * cite9†Deutsch L23:   * cite9†Türkçe L24: 
+L25:   * cite9†Polski L26:   * cite9†Русский L27:   * cite9†العربية L28:   * cite9†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: ]
+L35: 
+L36: [Button: Cancel]
+L37: # Commercial Rotors - I-90 Rotor Adjustment Instructions
+L38: 
+L39: cite10†Adjustment L40: 
+L41: cite11†Installation Procedures L42: 
+L43:   * cite12†I-90 Rotor Adjustment Sockets L44:   * cite13†Arc Adjustment (I-90 ADV only) L45:   * cite14†Aligning the Right (Fixed) Side of the Arc (I-90 ADV only) L46:   * cite15†Precipitation Rate Adjustment L47: 
+L48: I-90 Rotor Adjustment Sockets
+L49: 
+L50: cite16†Image L51: 
+L52:   1. Lift up socket
+L53:   2. Arc adjustment direction
+L54:   3. Arc adjustment socket
+L55:   4. Specific model
+L56:   5. Non-potable water
+L57: 
+L58: Arc Adjustment (I-90 ADV only)
+L59: Adjustable heads are preset to approximately 180°. The I-90 can be adjusted from 40-360 degrees. Sprinklers may be adjusted with water on or off. It is recommended that initial adjustment be made before installation.
+L60: 
+L61: Note: It is not necessary to disassemble the sprinkler to make adjustments.
+L62: 
+L63:   1. Rotate the nozzle turret clockwise to the right stop. This is the fixed side of the arc. The nozzle turret must be held in this position for arc adjustments. The right stop does not change
+L64: 
+L65: cite17†Image L66: To Increase Arc
+L67: 
+L68:   1. Insert the plastic key end of the Hunter wrench into the adjustment socket.
+L69:   2. While holding the nozzle turret at the right stop, turn the wrench clockwise. Each full 360º turn of the wrench increases the arc 45º.
+L70:   3. Adjust to any arc between 40º and 360º. The wrench will stop turning, or there will be a ratcheting noise, when the maximum arc of 360º (full circle) has been reached.
+L71: 
+L72: cite18†Image L73: 
+L74: To Decrease Arc:
+L75:   1. Insert the key end of the Hunter wrench into the adjustment socket.
+L76:   2. While holding the nozzle turret at the right stop, turn the wrench counterclockwise. Each full 360º turn of the wrench will decrease the arc 45º.
+L77:   3. Adjust to any arc between 40º and 360º. The wrench will stop turning, or there will be a ratcheting noise, when the minimum arc of 40º has been reached.
+L78: 
+L79: Aligning the Right (Fixed) Side of the Arc (I-90 ADV only)
+L80: If the right side of the arc is not properly aligned, the results may be a wet walkway or a dry turf area. The right side can easily be realigned. One way to realign the right stop is to unscrew the body cap counterclockwise and remove the internal assembly from the body. Once removed, rotate the nozzle turret to the right stop, insert the internal assembly back into the body with the nozzle aligned to the right side of the area you want irrigated.
+L81: At this point you realigned the right arc stop, and you can adjust the left arc to an appropriate setting.
+L82: Precipitation Rate Adjustment
+L83: 
+L84: If you have excessively wet or dry areas, you can change the nozzle in the sprinkler to increase or decrease the precipitation rate. For dry areas, install a larger nozzle. For wet areas, install a smaller nozzle.
+L85: 
+L86: Note: Refer to the Nozzle/Stator Chart below for nozzle and stator settings.
+L87: 
+L88: Nozzle/Stator Chart
+L89: Nozzle Number  | Stator Position
+L90: 33  | 33
+L91: 38  | 38
+L92: 43  | 43
+L93: 48  | 48
+L94: 53  | 53
+L95: 63  | 63
+L96: 
+L97: I-90 Brochure
+L98: 
+L99: cite9†Select Language  L100: 
+L101: cite19†USA   L102: 
+L103: cite20†Metric   L104: 
+L105: cite21†Spanish   L106: cite22†Italian   L107: 
+L108: cite23†French   L109: 
+L110: cite24†Portuguese - Brazil   L111: 
+L112: cite25†German   L113: 
+L114: cite26†Turkish   L115: ## Still need help? We're here.
+L116: 
+L117: Tell us what you need support with and we'll find the best solution for you.
+L118: 
+L119: cite27†Contact Support L120: 
+L121: Previous article
+L122: 
+L123: cite28†I-80 - Adjust L124: 
+L125: Next article
+L126: 
+L127: cite29†Filter Information L128: 
+L129:   * cite30†Find a Distributor L130:   * cite31†Find a Contractor L131:   * cite32†Contact Sales L132: 
+L133: cite33†Find Hunter L134: 
+L135: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite34†Privacy Policy |
+

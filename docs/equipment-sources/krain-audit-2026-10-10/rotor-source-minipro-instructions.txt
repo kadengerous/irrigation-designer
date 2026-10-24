@@ -1,0 +1,150 @@
+6 Language Instructions (https://www.krain.com/content/files/images/landingpages/rotors/minipro/minipro%20setting%20instructions.pdf)
+citeturn474view0 [wordlim: 200] Crawled: 5 days ago; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/rotors/minipro/minipro%20setting%20instructions.pdf","lineno":null}); Total lines: 147
+L0@P0: CHANGING A NOZZLE
+L1@P0: 1. REMOVING THE NOZZLE RETENTION SCREW
+L2@P0: Use your K-Key (K) or a small flat blade screwdriver to remove
+L3@P0: the nozzle retention screw (C) by turning counter-clockwise to
+L4@P0: remove and clockwise to re-install.
+L5@P0: 2. PULL UP THE RISER
+L6@P0: Insert the K-Key (K) in the keyhole (D) on the top of the nozzle
+L7@P0: turret (M) and turn the key ¼ turn to insure that the key does
+L8@P0: not slip out of the keyhole when you pull it up. Firmly pull up
+L9@P0: the entire spring-loaded riser to access the nozzle socket (N).
+L10@P0: Hold the riser assembly with one hand.
+L11@P0: 3. REMOVING THE NOZZLE
+L12@P0: Insert the end of the K-Key (K), hook side up, into the tall slot
+L13@P0: along the right side of the nozzle (J) and pull up to pop out the
+L14@P0: nozzle. NOTE: Do not put the K-Key or any instrument into the
+L15@P0: nozzle opening.
+L16@P0: 4. INSTALLING A NOZZLE
+L17@P0: Press the desired nozzle into the nozzle socket (N). Make sure
+L18@P0: the nozzle number is visible and the nozzle “wing” is up.
+L19@P0: Then, re-install the nozzle retention screw (C).
+L20@P0: NOTE: The nozzle retention screw is also a break-up screw
+L21@P0: and used to adjust the distance of the spray.
+L22@P0: SETTING THE ARC ADJUSTMENT
+L23@P0: 1. FINDING THE LEFT START POSITION
+L24@P0: Place your finger on the top center of the nozzle turret (M).
+L25@P0: Rotate the turret to the right until it stops and then back to
+L26@P0: the left until it stops. Notice the position of the nozzle arrow.
+L27@P0: This is the “Left Start” (L) position. The sprinkler will begin
+L28@P0: spraying from this position and rotate clockwise until it
+L29@P0: reaches the right “Arc Stop” (F).
+L30@P0: 2. ORIENTING THE LEFT START POSITION
+L31@P0: Insert the K-Key (K) in the keyhole (D) on the top of the nozzle
+L32@P0: turret (M) and turn the key ¼ turn to insure that the key does
+L33@P0: not slip out of the keyhole when you pull it up. Being careful
+L34@P0: not to allow the nozzle turret to turn, firmly pull up the entire
+L35@P0: spring-loaded riser. Hold the lower riser assembly up with
+L36@P0: one hand. Now turn only the lower riser (O) clockwise or
+L37@P0: counter-clockwise until the nozzle arrow is pointing where
+L38@P0: you want the sprinkler to begin spraying.
+L39@P0: 3. CHANGING THE ARC
+L40@P0: Insert K-Key (K) or flat blade screwdriver into Arc Set Adjustment
+L41@P0: slot (I). Turn clockwise to increase the arc or counter-clockwise
+L42@P0: to decrease the arc. NOTE: The arc set arrow in the center of
+L43@P0: the nozzle turret rotates to show the correct setting.
+L44@P0: D
+L45@P0: A
+L46@P0: B
+L47@P0: C
+L48@P0:  Ra Flow K L/M M3
+L49@P0:  R F GP
+L50@P0: I
+L51@P0: G
+L52@P0: H
+L53@P0: 30° – 360°
+L54@P0:  Ra Flow K L/M M3
+L55@P0:  R F GP
+L56@P0: A TURRET TOP
+L57@P0: ARC SELECTION:
+L58@P0: 30° TO 360°
+L59@P0: Nozzle
+L60@P0: Position
+L61@P0: Keyhole
+L62@P0: K K-KEY
+L63@P0: J NOZZLE
+L64@P0: Nozzle
+L65@P0: Retention
+L66@P0: Screw
+L67@P0: MINIPRO ™ GEAR DRIVEN SPRINKLER SETTING INSTRUCTIONS
+L68@P0: NOTE: The MiniPro is factory preset with a 40° arc setting,
+L69@P0: and includes a pre-installed #1.5 nozzle. B
+L70@P0: C
+L71@P0: D
+L72@P0: G
+L73@P0: Q
+L74@P0: R
+L75@P0: HSousing
+L76@P0: Can
+L77@P0: Sprinkler
+L78@P0: Assembly
+L79@P0: Twist-Lock
+L80@P0: Top
+L81@P0: Q
+L82@P0: R
+L83@P0: S
+L84@P0: K
+L85@P0:  R F GP
+L86@P0: E
+L87@P0: F
+L88@P0: Left
+L89@P0: Start
+L90@P0: Adjustable
+L91@P0: Stop-Return
+L92@P0: Point H
+L93@P0: I
+L94@P0: Arc Set
+L95@P0: Arrow
+L96@P0: Arc’s
+L97@P0: Adjustable
+L98@P0: Range
+L99@P0: E
+L100@P0: F
+L101@P0-1: Arc Set AdjustmentSPRINKLER INSTALLATION
+L102@P1: 1. INSTALL AND BURY
+L103@P1: Thread the sprinkler on the pipe. Bury the sprinkler
+L104@P1: flush to grade. NOTE: Do not use pipe dope. Gear driven
+L105@P1: sprinklers and pop-up sprays should not be installed on
+L106@P1: the same watering zone.
+L107@P1: 2. INSPECTING THE FILTER
+L108@P1: Unscrew the top and lift the complete sprinkler assembly
+L109@P1: out of the housing can (S). The filter is located on the
+L110@P1: bottom of the sprinkler assembly and can be easily
+L111@P1: pulled out, cleaned and re-installed.
+L112@P1: 3. WINTERIZATION TIPS
+L113@P1: When using an air compressor to remove water from the
+L114@P1: system please note the following:
+L115@P1: a. Do not exceed 30 PSI.
+L116@P1: b. Always introduce air into the system gradually to avoid
+L117@P1: air pressure surges. Sudden release of compressed
+L118@P1: air into the sprinkler can cause damage.
+L119@P1: c. Each zone should run no longer than 1 minute on air.
+L120@P1: Sprinklers turn 10 to 12 time faster on air than on
+L121@P1: water. Over spinning rotors on air can cause damage
+L122@P1: to the internal components.
+L123@P1: K-Rain Manufacturing Corp.
+L124@P1: 1640 Australian Avenue I Riviera Beach, FL 33404 USA
+L125@P1: PH: 561-844-1002 I 1-800-735-7246 I FAX: 561-842-9493
+L126@P1: WEB: http://www.krain.com
+L127@P1: MINIPRO ™ GEAR DRIVEN SPRINKLER SETTING INSTRUCTIONS
+L128@P1: Continued
+L129@P1: © K-RAIN Manufacturing Corp.
+L130@P1: L
+L131@P1: M
+L132@P1: O
+L133@P1: N
+L134@P1: P NOPZZLE
+L135@P1: KEY NOTCH
+L136@P1: Key in Keyhold
+L137@P1: Turret
+L138@P1: Nozzle
+L139@P1: Socket
+L140@P1: Lower
+L141@P1: Riser
+L142@P1: L
+L143@P1: M
+L144@P1: N
+L145@P1: O
+L146@P1: 13005105 Rev. 16
+

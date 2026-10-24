@@ -1,0 +1,73 @@
+{
+  "auditedOn": "2026-10-10",
+  "sourceRows": 198,
+  "comparedCopies": [
+    "src/data/rain-bird-rvan-performance.json",
+    "src/data/equipment/rain-bird-rvan.json"
+  ],
+  "models": [
+    {
+      "modelId": "R-VAN14",
+      "sourceRowsCompared": 54,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    },
+    {
+      "modelId": "R-VAN18",
+      "sourceRowsCompared": 54,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    },
+    {
+      "modelId": "R-VAN24",
+      "sourceRowsCompared": 54,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    },
+    {
+      "modelId": "R-VAN18-360",
+      "sourceRowsCompared": 6,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    },
+    {
+      "modelId": "R-VAN14-360",
+      "sourceRowsCompared": 6,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    },
+    {
+      "modelId": "R-VAN24-360",
+      "sourceRowsCompared": 6,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    },
+    {
+      "modelId": "R-VAN-SST",
+      "sourceRowsCompared": 6,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    },
+    {
+      "modelId": "R-VAN-LCS",
+      "sourceRowsCompared": 6,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    },
+    {
+      "modelId": "R-VAN-RCS",
+      "sourceRowsCompared": 6,
+      "rawMatches": true,
+      "catalogMatches": true,
+      "differences": []
+    }
+  ]
+}

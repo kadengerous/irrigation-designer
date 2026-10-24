@@ -1,0 +1,474 @@
+ (https://www.toro.com/getpub/128192)
+citeturn439view0 [wordlim: 200] Crawled: 5 days ago; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://www.toro.com/getpub/128192","lineno":650}); Total lines: 857
+L380@P2: firmemente e rodar no sentido contrário ao
+L381@P2: dos ponteiros do relógio até à posição do limite
+L382@P2: esquerdo (270° neste exemplo). O ruído de
+L383@P2: “cliques” é normal.
+L384@P2: +
+L385@P2: Click! Click! Click!
+L386@P2: +
+L387@P2: (DEU) Drehen Sie die Düse schnell zur
+L394@P2: novamente para o limite esquerdo na distância
+L395@P2: de redução de arco que deseja.
+L396@P2: (DEU) Fassen Sie die Düse fest an und drehen Sie die
+L397@P2: Düse nach rechts zurück bis zur rechten Kante. Das
+L398@P2: Klickgeräusch ist normal. Wiederholen Sie Schritt 1, um zu
+L399@P2: bestätigen, dass der Sektor den gewünschten Winkel hat
+L400@P2: (in diesem Beispiel 180°).
+L401@P2: (POR) Agarrar firmemente o bico e rodá-lo no sentido dos
+L402@P2: ponteiros do relógio até à posição do limite direito. O ruído
+L403@P2: de “cliques” é normal. Repetir o passo 1 para confirmar se
+L404@P2: o arco está no ângulo certo (180° neste exemplo).
+L405@P2: 4 5
+L406@P2: (DEU)
+L407@P2: Ein Video, in dem diese
+L408@P2: Schritte vorgeführt werden,
+L409@P2: finden Sie unter www.toro.
+L410@P2: com/T5 oder schauen Sie das
+L411@P2: Video auf dem Smartphone mit
+L412@P2: dem QR-Code unten an.
+L413@P2: (POR)
+L414@P2: Pode ver um vídeo que
+L415@P2: demonstra este processo em
+L416@P2: www.toro.com/T5 ou no seu
+L417@P2: smartphone utilizando o código
+L418@P2: QR seguinte.
+L419@P2: (DEU) Drehen Sie
+L420@P2: das Düsendrehkreuz
+L421@P2: schnell nach links
+L422@P2: und rechts, bis Sie
+L423@P2: einen Widerstand
+L424@P2: feststellen. Dies
+L425@P2: sind die Kanten des
+L426@P2: Drehkreuzsektors.
+L427@P2: (POR) Empurrar
+L428@P2: a cabeça do bico
+L429@P2: para a esquerda e
+L430@P2: direita rapidamente
+L431@P2: até encontrar
+L432@P2: resistência. Esses
+L433@P2: são os limites de
+L434@P2: arco da cabeça.
+L435@P2: Getrieberegner der Serie T5
+L436@P2: mit RapidSet™
+L437@P2: Rotor da série T5
+L438@P2: com RapidSet™ Getrieberegner der Serie T5
+L439@P2: mit RapidSet™
+L440@P2: Rotor da série T5
+L441@P2: com RapidSet™
+L442@P2: (DEU) Ziehen Sie den Düsenaufsteiger hoch:
+L443@P2: (POR) Empurrar o sistema elevatório do bico para cima:
+L444@P2: ! (DEU) Sie erkennen den T5-Getrieberegner mit
+L445@P2: RapidSet an der dunkelgrauen Drehkreuzgummiabdeckung. Wenn der T5-Getrieberegner eine
+L446@P2: schwarze Drehkreuzkappe hat, Versuchen Sie
+L447@P2: NICHT, das RapidSet-Feature zu verwenden.
+L448@P2: ! (POR) O rotor T5 com RapidSet (regulação
+L449@P2: rápida) distingue-se por uma tampa de borracha
+L450@P2: cinzenta escura que diz « T5 RapidSet ». Se o seu
+L451@P2: rotor tem uma tampa de cabeça preta, NÃO tentar
+L452@P2: utilizar a função de RapidSet (regulação rápida).
+L453@P2: 180°
+L454@P2: (Werkseinstellungen /
+L455@P2: padrão)
+L456@P2: festen linken
+L457@P2: Rand / borda
+L458@P2: esquerda fixo
+L459@P2: einstellbar
+L460@P2: rechten
+L461@P2: Rand /
+L462@P2: borda direita
+L463@P2: ajustável
+L464@P2: 180°
+L465@P2: (Werkseinstellungen /
+L466@P2: padrão)
+L467@P2: einstellbar
+L468@P2: linken Rand /
+L469@P2: borda esquer- da ajustável
+L470@P2: festen rechten
+L471@P2: Rand / borda
+L472@P2: fixa direita
+L473@P2: rechten Rand /
+L474@P2: borda direita
+L475@P2: linken Rand /
+L476@P2: borda esquerda
+L477@P2: 180°
+L478@P2: 270°
+L479@P2: rechten Rand /
+L480@P2: borda direita
+L481@P2: neuen linken Rand /
+L482@P2: nova borda
+L483@P2: esquerda
+L484@P2: alten linken Rand /
+L485@P2: borda velha
+L486@P2: esquerda
+L487@P2: linken Rand /
+L488@P2: borda esquerda
+L489@P2: 270°
+L490@P2: 180°
+L491@P2: rechten Rand /
+L492@P2: borda direita
+L493@P2: hier halten /
+L494@P2: parar por aqui
+L495@P2: Kurbel zurück zum
+L496@P2: rechten Rand /
+L497@P2: manivela de volta
+L498@P2: para a borda direita
+L499@P2: neuen linken Rand /
+L500@P2: nova borda
+L501@P2: esquerda
+L502@P2: alten linken Rand /
+L503@P2: borda velha
+L504@P2: esquerda
+L505@P2: festen rechten Rand
+L506@P2: / borda fixa direita
+L507@P2-3: 1 2 3U.S. Charts
+L508@P3: Pressure – psi
+L509@P3: Radius – Feet
+L510@P3: Flow – GPM
+L511@P3: Precip. Rate – in./hr.
+L512@P3: Metric Charts
+L513@P3: Pressure – Bar
+L514@P3: Radius – Meters
+L515@P3: Flow 1– m³/hr.
+L516@P3: Flow 2– LPM
+L517@P3: Precip. Rate – mm/hr.
+L518@P3: Valori U.S.A.
+L519@P3: Pressione – PSI
+L520@P3: Gittata – Piedi
+L521@P3: Portata – GPM
+L522@P3: Precip. – In./Hr.
+L523@P3: Valori Metrici
+L524@P3: Pressione – Bar
+L525@P3: Gittata – Metri
+L526@P3: Portata 1 – m³/Hr.
+L527@P3: Portata 2 – l/min
+L528@P3: Precip. Rate – mm/hr.
+L529@P3: Note: Precipitation rate based on 50%
+L530@P3: diameter, 1/2-circle operation.
+L531@P3: Nota: Pluviometria calcolata con
+L532@P3: interdistanza pari al 50% del diametro e una
+L533@P3: rotazione di 180°.
+L534@P3: (ENG) Low Angle – U.S.
+L535@P3: (SPA) Ángulo cerrado –
+L536@P3: Sistema inglés
+L537@P3: (FRA) Trajectoire basse –
+L538@P3: Unités américaines
+L539@P3: (ITA) Traiettoria bassa –
+L540@P3: Valori U.S.A.
+L541@P3: (DEU) Flacher Winkel –
+L542@P3: amerikanische Maße
+L543@P3: (POR) Ângulo baixo – EUA
+L544@P3: (ENG) Standard Angle – Metric
+L545@P3: (SPA) Ángulo estándar –
+L546@P3: Sistema métrico
+L547@P3: (FRA) Trajectoire standard –
+L548@P3: Unités métriques
+L549@P3: (ITA) Traiettoria standard –
+L550@P3: Valori metrici
+L551@P3: (DEU) Standardwinkel –
+L552@P3: metrisch
+L553@P3: (POR) Ângulo padrão – Métrico
+L554@P3: (ENG) Standard Angle – U.S.
+L555@P3: (SPA) Ángulo estándar –
+L556@P3: Sistema inglés
+L557@P3: (FRA) Trajectoire standard –
+L558@P3: Unités américaines
+L559@P3: (ITA) Traiettoria standard –
+L560@P3: Valori U.S.A.
+L561@P3: (DEU) Standardwinkel –
+L562@P3: amerikanische Maße
+L563@P3: (POR) Ângulo padrão – EUA
+L564@P3: (ENG) Low Angle – Metric
+L565@P3: (SPA) Ángulo cerrado –
+L566@P3: Sistema métrico
+L567@P3: (FRA) Trajectoire basse –
+L568@P3: Unités métriques
+L569@P3: (ITA) Traiettoria bassa –
+L570@P3: Valori metrici
+L571@P3: (DEU) Flacher Winkel – metrisch
+L572@P3: (POR) Ângulo baixo – Métric
+L573@P3: 25 33 1.15 0.20 0.23
+L574@P3:  35 34 1.38 0.23 0.27
+L575@P3:  45 35 1.59 0.25 0.29
+L576@P3:  55 35 1.74 0.27 0.32
+L577@P3:  65 36 1.88 0.28 0.32
+L578@P3: 1.5
+L579@P3: 25 35 1.45 0.23 0.26
+L580@P3:  35 36 1.80 0.27 0.31
+L581@P3:  45 37 2.12 0.30 0.34
+L582@P3:  55 37 2.30 0.32 0.37
+L583@P3:  65 37 2.58 0.36 0.42
+L584@P3: 2.0
+L585@P3: 25 35 1.75 0.28 0.32
+L586@P3:  35 36 2.20 0.33 0.38
+L587@P3:  45 37 2.55 0.36 0.41
+L588@P3:  55 37 2.80 0.39 0.45
+L589@P3:  65 37 3.05 0.43 0.50
+L590@P3: 2.5
+L591@P3: 
+L592@P3: 25 36 2.20 0.33 0.38
+L593@P3:  35 38 2.60 0.35 0.40
+L594@P3:  45 40 3.05 0.37 0.42
+L595@P3:  55 40 3.52 0.42 0.49
+L596@P3:  65 40 3.80 0.46 0.53
+L597@P3: 3.0
+L598@P3: 25 37 2.95 0.41 0.48
+L599@P3:  35 40 3.55 0.43 0.49
+L600@P3:  45 42 4.10 0.45 0.52
+L601@P3:  55 42 4.45 0.49 0.56
+L602@P3:  65 43 4.85 0.50 0.58
+L603@P3: 4.0
+L604@P3: 25 39 3.75 0.47 0.55
+L605@P3:  35 41 4.50 0.52 0.60
+L606@P3:  45 43 5.10 0.53 0.61
+L607@P3:  55 45 5.75 0.55 0.63
+L608@P3:  65 45 6.10 0.58 0.67
+L609@P3: 5.0
+L610@P3: 25 39 4.20 0.53 0.61
+L611@P3:  35 43 5.20 0.54 0.63
+L612@P3:  45 44 6.05 0.60 0.69
+L613@P3:  55 47 6.65 0.58 0.67
+L614@P3:  65 48 7.25 0.61 0.70
+L615@P3: 6.0
+L616@P3: 25 36 5.75 0.85 0.99
+L617@P3:  35 43 7.10 0.74 0.85
+L618@P3:  45 47 8.05 0.70 0.81
+L619@P3:  55 48 8.95 0.75 0.86
+L620@P3:  65 50 9.70 0.75 0.86
+L621@P3: 8.0
+L622@P3: 1.5
+L623@P3: 2.0
+L624@P3: 2.5
+L625@P3: 3.0
+L626@P3: 4.0
+L627@P3: 5.0
+L628@P3: 6.0
+L629@P3: 8.0
+L630@P3: Nozzle Press. Rad. Flow Precip. Precip.
+L631@P3: Boquilla Presión Radio Caudal Precip. Precip.
+L632@P3: Buse Press. Portée Débit Pluviom. Pluviom.
+L633@P3: Ugello Press. Gittata Port. Precip. Precip.
+L634@P3: Boquilla Presión Radio Caudal Precip. Precip.
+L635@P3: Buse Press. Portée Débit Pluviom. Pluviom. 25 25 0.74 0.23 0.26
+L636@P3:  35 28 0.94 0.23 0.27
+L637@P3:  45 29 1.02 0.23 0.27
+L638@P3:  55 29 1.14 0.26 0.30
+L639@P3:  65 29 1.25 0.29 0.33
+L640@P3: 1.0
+L641@P3: LA
+L642@P3: 1.5
+L643@P3: LA
+L644@P3: 2.0
+L645@P3: LA
+L646@P3: 3.0
+L647@P3: LA
+L648@P3: 25 27 1.10 0.29 0.34
+L649@P3:  35 30 1.35 0.29 0.33
+L650@P3:  45 31 1.52 0.30 0.35
+L651@P3:  55 31 1.75 0.35 0.40
+L652@P3:  65 31 1.90 0.38 0.44
+L653@P3: 25 29 1.40 0.32 0.37
+L654@P3:  35 31 1.72 0.34 0.40
+L655@P3:  45 32 2.05 0.39 0.45
+L656@P3:  55 33 2.25 0.40 0.46
+L657@P3:  65 33 2.45 0.43 0.50
+L658@P3: 25 29 2.20 0.50 0.58
+L659@P3:  35 33 2.60 0.46 0.53
+L660@P3:  45 34 3.05 0.51 0.59
+L661@P3:  55 36 3.40 0.51 0.58
+L662@P3:  65 36 3.70 0.55 0.63
+L663@P3: 1,7 7,6 0,17 2,8 6 7
+L664@P3:  2,0 8,1 0,19 3,2 6 7
+L665@P3:  2,5 8,5 0,21 3,6 6 7
+L666@P3:  3,0 8,8 0,23 3,9 6 7
+L667@P3:  3,5 8,8 0,25 4,1 6 7
+L668@P3: 4,0 8,8 0,27 4,2 7 8
+L669@P3: 4,5 8,8 0,28 4,7 7 8
+L670@P3: 1,7 8,2 0,25 4,2 8 9
+L671@P3:  2,0 8,7 0,28 4,6 8 9
+L672@P3:  2,5 9,1 0,31 5,1 7 8
+L673@P3:  3,0 9,4 0,35 5,8 8 9
+L674@P3:  3,5 9,4 0,37 6,2 8 10
+L675@P3: 4,0 9,4 0,41 6,9 9 11
+L676@P3: 4,5 9,4 0,43 7,2 10 11
+L677@P3: 1,7 8,8 0,32 5,3 8 9
+L678@P3:  2,0 9,1 0,35 5,9 8 10
+L679@P3:  2,5 9,4 0,39 6,5 9 10
+L680@P3:  3,0 9,8 0,47 7,8 10 11
+L681@P3:  3,5 9,9 0,49 8,1 10 11
+L682@P3: 4,0 10,1 0,53 8,9 11 12
+L683@P3: 4,5 10,1 0,56 9,3 11 13
+L684@P3: 1,7 8,8 0,50 8,3 13 15
+L685@P3:  2,0 9,4 0,55 9,1 12 14
+L686@P3:  2,5 10,1 0,59 9,8 12 13
+L687@P3:  3,0 10,4 0,69 11,5 13 15
+L688@P3:  3,5 10,7 0,73 12,2 13 15
+L689@P3: 4,0 11,0 0,81 13,4 13 15
+L690@P3: 4,5 11,0 0,84 14,0 14 16
+L691@P3: 1.0
+L692@P3: LA
+L693@P3: 1.5
+L694@P3: LA
+L695@P3: 2.0
+L696@P3: LA
+L697@P3: 3.0
+L698@P3: LA
+L699@P3: ©2013 The Toro Company, Irrigation • www.toro.com • Technical Support: 1-877-345-8676
+L700@P3: Unidades inglesas
+L701@P3: Presión – psi
+L702@P3: Radio – pies
+L703@P3: Caudal – GPM
+L704@P3: Índice de precipitación
+L705@P3: (pulgadas/hora)
+L706@P3: Unidades métricas
+L707@P3: Presión – bar
+L708@P3: Radio – metros
+L709@P3: Caudal 1 – m³/hora
+L710@P3: Caudal 2 – LPM
+L711@P3: Índice de precipitación
+L712@P3: (mm/hora)
+L713@P3: Amerikanische Maße
+L714@P3: Druck (PSI)
+L715@P3: Wurfweite (Fuß)
+L716@P3: Fluss (GPM)
+L717@P3: Niederschlagsrate –
+L718@P3: Zoll/Std.
+L719@P3: Metrisch
+L720@P3: Druck (bar)
+L721@P3: Wurfweite (Meters)
+L722@P3: Fluss 1 (m³/Std.)
+L723@P3: Fluss 2 (l/min)
+L724@P3: Niederschlagsrate –
+L725@P3: mm/Std.
+L726@P3: Nota: Índice de precipitación basado en el
+L727@P3: 50 % del diámetro, con un ángulo de aspersión
+L728@P3: de 180º.
+L729@P3: Hinweis: Die Niederschlagsrate basiert auf
+L730@P3: einem Durchmesser von 50 %, Halbkreis.
+L731@P3: Unités américaines
+L732@P3: Pression – psi
+L733@P3: Portée – pieds
+L734@P3: Débit – GPM
+L735@P3: Pluviométrie – po/h
+L736@P3: Unités métriques
+L737@P3: Pression – bars
+L738@P3: Portée – mètres
+L739@P3: Débit 1– m³/h
+L740@P3: Débit 2– LPM
+L741@P3: Pluviométrie – mm/h
+L742@P3: Gráficos EUA
+L743@P3: Pressão – psi
+L744@P3: Raio – Pés
+L745@P3: Caudal – GPM
+L746@P3: Precipitação –
+L747@P3: Pol./H.
+L748@P3: Gráficos Métrico
+L749@P3: Pressão – Bar
+L750@P3: Raio – Metros
+L751@P3: Caudal 1 – m³/H.
+L752@P3: Caudal 2 – LPM
+L753@P3: Precipitação –
+L754@P3: mm/H.
+L755@P3: Remarque : Pluviométrie basée sur un
+L756@P3: diamètre de 50%, un secteur d’un demicercle.
+L757@P3: Nota: Precipitação baseada em diâmetro de
+L758@P3: 50%, funcionamento de 1/2-círculo.
+L759@P3: The Toro Company
+L760@P3: 5825 Jasmine Street
+L761@P3: Riverside, CA 92504
+L762@P3: 1,7 10,1 0,26 4,4 5 6
+L763@P3:  2,0 10,2 0,29 4,8 6 6
+L764@P3:  2,5 10,4 0,31 5,2 6 7
+L765@P3:  3,0 10,7 0,36 6,0 6 7
+L766@P3:  3,5 10,7 0,38 6,3 7 8
+L767@P3: 4,0 10,8 0,41 6,9 7 8
+L768@P3: 4,5 11,0 0,43 7,1 7 8
+L769@P3: 1,7 10,7 0,33 5,5 6 7
+L770@P3:  2,0 10,8 0,37 6,2 6 7
+L771@P3:  2,5 11,0 0,41 6,8 7 8
+L772@P3:  3,0 11,3 0,48 8,0 8 9
+L773@P3:  3,5 11,3 0,50 8,4 8 9
+L774@P3: 4,0 11,3 0,55 9,2 9 10
+L775@P3: 4,5 11,3 0,59 9,8 9 11
+L776@P3: 1.5
+L777@P3: 2.0
+L778@P3: 1,7 10,7 0,40 6,6 7 8
+L779@P3:  2,0 10,8 0,45 7,5 8 9
+L780@P3:  2,5 11,0 0,50 8,3 8 10
+L781@P3:  3,0 11,3 0,58 9,7 9 11
+L782@P3:  3,5 11,3 0,61 10,1 10 11
+L783@P3: 4,0 11,3 0,66 11,1 10 12
+L784@P3: 4,5 11,3 0,69 11,5 11 13
+L785@P3: 2.5
+L786@P3: 1,7 11,0 0,50 8,3 8 10
+L787@P3:  2,0 11,3 0,55 9,1 9 10
+L788@P3:  2,5 11,6 0,59 9,8 9 10
+L789@P3:  3,0 12,2 0,69 11,5 9 11
+L790@P3:  3,5 12,2 0,75 12,4 10 12
+L791@P3: 4,0 12,2 0,83 13,9 11 13
+L792@P3: 4,5 12,2 0,86 14,4 12 13
+L793@P3: 3.0
+L794@P3: 1,7 11,3 0,67 11,2 11 12
+L795@P3:  2,0 11,7 0,74 12,3 11 12
+L796@P3:  2,5 12,3 0,81 13,4 11 13
+L797@P3:  3,0 12,8 0,93 15,5 11 13
+L798@P3:  3,5 12,8 0,97 16,2 12 14
+L799@P3: 4,0 13,0 1,06 17,6 13 15
+L800@P3: 4,5 13,1 1,10 18,4 13 15
+L801@P3: 4.0
+L802@P3: 1,7 11,9 0,85 14,2 12 14
+L803@P3:  2,0 12,2 0,94 15,6 13 15
+L804@P3:  2,5 12,5 1,02 17,0 13 15
+L805@P3:  3,0 13,1 1,16 19,3 13 16
+L806@P3:  3,5 13,4 1,23 20,5 14 16
+L807@P3: 4,0 13,7 1,35 22,4 14 17
+L808@P3: 4,5 13,7 1,39 23,1 15 17
+L809@P3: 5.0
+L810@P3: 1,7 11,9 0,95 15,9 14 16
+L811@P3:  2,0 12,5 1,07 17,8 14 16
+L812@P3:  2,5 13,1 1,18 19,7 14 16
+L813@P3:  3,0 13,4 1,37 22,9 15 18
+L814@P3:  3,5 13,9 1,44 24,0 14 17
+L815@P3: 4,0 14,5 1,58 26,3 15 17
+L816@P3: 4,5 14,6 1,65 27,4 15 18
+L817@P3: 6.0
+L818@P3: 1,7 11,0 1,31 21,8 22 25
+L819@P3:  2,0 12,0 1,46 24,3 20 23
+L820@P3:  2,5 13,1 1,61 26,9 19 22
+L821@P3:  3,0 14,3 1,83 30,5 18 21
+L822@P3:  3,5 14,5 1,93 32,2 18 21
+L823@P3: 4,0 14,9 2,12 35,3 19 22
+L824@P3: 4,5 15,2 2,20 36,7 19 22
+L825@P3: 8.0
+L826@P3: Nozzle Press. Rad. Flow 1Flow 2 Precip. Precip.
+L827@P3: Boquilla Presión Radio Caudal 1Caudal 2 Precip. Precip.
+L828@P3: Buse Press. Portée Débit 1 Debit 2 Pluviom. Pluviom.
+L829@P3: Ugello Press. Gittata Port. 1 Port. 2 Precip. Precip.
+L830@P3: Boquilla Presión Radio Caudal 1 Caudal 2 Precip. Precip.
+L831@P3: Buse Press. PortéeDébit 1 Debit 2 Pluviom. Pluviom.
+L832@P3: English
+L833@P3: Italiano
+L834@P3: Español
+L835@P3: Deutsch
+L836@P3: Français
+L837@P3: Português
+L838@P3: Nozzle Press. Rad. Flow Precip. Precip.
+L839@P3: Boquilla Presión Radio Caudal Precip. Precip.
+L840@P3: Buse Press. Portée Débit Pluviom. Pluviom.
+L841@P3: Ugello Press. Gittata Port. Precip. Precip.
+L842@P3: Boquilla Presión Radio Caudal Precip. Precip.
+L843@P3: Buse Press. Portée Débit Pluviom. Pluviom.
+L844@P3: Nozzle Press. Rad. Flow 1Flow 2 Precip. Precip.
+L845@P3: Boquilla Presión Radio Caudal 1Caudal 2 Precip. Precip.
+L846@P3: Buse Press. Portée Débit 1 Debit 2 Pluviom. Pluviom.
+L847@P3: Ugello Press. Gittata Port. 1 Port. 2 Precip. Precip.
+L848@P3: Boquilla Presión Radio Caudal 1 Caudal 2 Precip. Precip.
+L849@P3: Buse Press. PortéeDébit 1 Debit 2 Pluviom. Pluviom.
+L850@P3: Form Number 373-0765 Rev. A
+L851@P3: Nozzle Performance
+L852@P3: Prestazioni degli ugelli
+L853@P3: Especificaciones de la boquilla
+L854@P3: Düsenleistung
+L855@P3: Performances des buses
+L856@P3: Rendimento do bico
+

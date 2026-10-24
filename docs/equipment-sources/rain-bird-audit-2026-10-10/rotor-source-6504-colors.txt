@@ -1,0 +1,56 @@
+ (https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_Falcon6504.pdf)
+citeturn404view0 [wordlim: 200] Crawled: last week; Content type: application/pdf; Number of pages: 1; Source: open({"ref_id":"https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_Falcon6504.pdf","lineno":0}); Total lines: 53
+L0@P0: Page
+L1@P0: 1 of 1 TO BUY GENUINE RAIN BIRD PARTS, CONTACT YOUR LOCAL DISTRIBUTOR OR VISIT OUR ONLINE STORE AT WWW.RAINBIRD.COM
+L2@P0: Part/Full Circle Rotor
+L3@P0: falcon® 6504
+L4@P0: Note: Part numbers enclosed in brackets ( ) are not available individually, but may be sold in assemblies or kits.
+L5@P0: 1
+L6@P0: 2
+L7@P0: 3
+L8@P0: 5
+L9@P0: 4
+L10@P0: Falcon 6504 Rain Curtain Nozzles (rotors built 09/27/99 and after)
+L11@P0: Ref. Part Description Qty Part Number
+L12@P0: INTERNAL components
+L13@P0: 1 Radius Adjustment Screw 1 (231491-S)
+L14@P0: 2 Filter Screen w/SAM Assy 1 209702
+L15@P0: CASE
+L16@P0: 3 Case - NPT 1 (231420-01)
+L17@P0: 3 Case - BSP 1 (231420-02)
+L18@P0: NOZZLES
+L19@P0: 4 Nozzle - #4 (Black) 1 B81600-04
+L20@P0: 4 Nozzle - #6 (Lt Blue) 1 B81600-06
+L21@P0: 4 Nozzle - #8 (Dk Green) 1 B81600-08
+L22@P0: 4 Nozzle - #10 (Gray) 1 B81600-10
+L23@P0: 4 Nozzle - #12 (Beige) 1 B81600-12
+L24@P0: 4 Nozzle - #14 (Lt Green) 1 B81600-14
+L25@P0: 4 Nozzle - #16 (Dk Brown) 1 B81600-16
+L26@P0: 4 Nozzle - #18 (Dk Blue) 1 B81600-18
+L27@P0: 5 Third Port Nozzle 1 231777
+L28@P0: Falcon “Original” Rain Curtain Nozzles (rotors built prior to 09/27/99)
+L29@P0: Ref. Part Description Qty Part Number
+L30@P0: INTERNAL Components
+L31@P0: 1 Radius Adjustment Screw 1 208751
+L32@P0: 2 Filter Screen w/SAM Assy 1 209702
+L33@P0: CASE
+L34@P0: 3 Case - NPT 1 (231420-01)
+L35@P0: 3 Case - BSP 1 (231420-02)
+L36@P0: NOZZLES
+L37@P0: 6 Nozzle - #4 (Black) 1 B00500-04
+L38@P0: 6 Nozzle - #6 (Lt Blue) 1 B00500-06
+L39@P0: 6 Nozzle - #8 (Dk Green) 1 B00500-08
+L40@P0: 6 Nozzle - #10 (Gray) 1 B00500-10
+L41@P0: 6 Nozzle - #12 (Beige) 1 B00500-12
+L42@P0: 6 Nozzle - #14 (Lt Green) 1 B00500-14
+L43@P0: 6 Nozzle - #16 (Dk Brown) 1 B00500-16
+L44@P0: 6 Nozzle - #18 (Dk Blue) 1 B00500-18
+L45@P0: Falcon 6504
+L46@P0: Rain Curtain™ Nozzles
+L47@P0: (rotors built 09/27/99 and after)
+L48@P0: 6
+L49@P0: Falcon “Original”
+L50@P0: Rain Curtain Nozzles
+L51@P0: (rotors built prior to 09/27/99)
+L52@P0: 414 Catalog Number
+

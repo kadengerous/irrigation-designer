@@ -1,0 +1,727 @@
+SRM | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/rotors/srm)
+citeturn288view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/rotors/srm","lineno":140}); Total lines: 904
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite9†English L16:   * cite9†Metric L17:   * cite9†Español L18:   * cite9†Italiano L19: 
+L20:   * cite9†Français L21:   * cite9†Português L22:   * cite9†Deutsch L23:   * cite9†Türkçe L24: 
+L25:   * cite9†Polski L26:   * cite9†Русский L27:   * cite9†العربية L28:   * cite9†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: 
+L36: cite10†Image: Thumbnail L37: 
+L38: cite11†Image: SRM Family L39: # SRM
+L40: 
+L41: The SRM is an economical short-range rotor that offers a convenient and efficient alternative to spray heads.
+L42: 
+L43: Radius 15' to 34'
+L44: 
+L45: Flow 0.42 - 4.3 GPM
+L46: 
+L47: Inlet Size ½"
+L48: 
+L49: Product Line
+L50: 
+L51: Rotors
+L52: 
+L53:   * Radius adjustment up to 25%
+L54:   * Part circle and full circle operation in one unit
+L55:   * Proven water lubricated gear drive
+L56: 
+L57:   * cite12†Models L58:   * cite13†Specs L59:   * cite14†Videos L60:   * cite15†Features L61:   * cite16†Charts L62:   * cite17†Documents L63:   * cite18†Support L64:   * cite19†Photos L65:   * cite20†Related L66: 
+L67: ## Models
+L68: 
+L69: ### Popular Models
+L70: ## cite21†SRM-04 L71: 
+L72: SRM Rotor, adjustable from 40° to 360°, no check valve
+L73: 
+L74: SRM Rotor, adjustable from 40° to 360°, no check valve
+L75: 
+L76: [Button: Add to List]
+L77: 
+L78: Model  | Description  | Add to List
+L79: --- | --- | ---
+L80: cite21†SRM-04 | SRM Rotor, adjustable from 40° to 360°, no check valve  | cite9†+ L81: 
+L82: Showing 1 - 1 of 1
+L83: 
+L84: ## User-installed options
+L85: ### SJ Swing Joints
+L86: Model  | Description  | Add to List
+L87: --- | --- | ---
+L88: cite22†SJ-506 | SJ Swing Joint, ½" x 6", standard, preassembled, with four swing elbows  | cite9†+ L89: cite23†SJ-512 | SJ Swing Joint, ½" x 12", standard, preassembled, with four swing elbows  | cite9†+ L90: cite24†SJ-706 | SJ Swing Joint, ¾" x 6", standard, preassembled, with four swing elbows  | cite9†+ L91: cite25†SJ-712 | SJ Swing Joint, ¾" x 12", standard, preassembled, with four swing elbows  | cite9†+ L92: cite26†SJ-7506 | SJ Swing Joint, ½" x ¾" x 6", standard, preassembled, with four swing elbows  | cite9†+ L93: cite27†SJ-7512 | SJ Swing Joint, ½" x ¾" x 12", standard, preassembled, with four swing elbows  | cite9†+ L94: ### Flex Tubing
+L95: 
+L96: Model  | Description  | Add to List
+L97: --- | --- | ---
+L98: cite28†FLEXSG-18 | FlexSG Tubing, soft-grip, precut 18" segments  | cite9†+ L99: cite29†HSBE-075 | ¾" male thread x spiral barb elbow, gray  | cite9†+ L100: 
+L101: cite30†Image: SRM L102: 
+L103: [Input]
+L104: 
+L105: SRM
+L106: 
+L107: SRM
+L108: 
+L109: Ordering Number [Input]
+L110: 
+L111: [Input] [Input]
+L112: 
+L113: Qty [Input]
+L114: 
+L115: Notes [Input: Add a note...]
+L116: 
+L117: [Button: Add to list]
+L118: 
+L119: User installed options
+L120: 
+L121: [Input]
+L122: #### Product added to list
+L123: 
+L124: The following product was added to ""
+L125: 
+L126: QTY
+L127: 
+L128: cite31†Review your list L129: 
+L130: cite9†Continue L131: 
+L132: [Input] [Input]
+L133: 
+L134: ## Create a new My List.
+L135: 
+L136: ## Log in to access this feature
+L137: 
+L138: Log in using your Hunter Account
+L139: 
+L140: Username [Input]
+L141: 
+L142: Password [Input]
+L143: 
+L144: [Input] [Input] [Input]
+L145: 
+L146: [Button: Sign In]
+L147: 
+L148: cite32†Contact your local distributor for product availability and ordering. L149: ## Specifications
+L150: 
+L151: Operating Specifications
+L152: 
+L153:   * Nozzle choices: 8
+L154:   * Radius: 15' to 34'
+L155:   * Flow: 0.42 to 4.3 GPM
+L156:   * Recommended pressure range: 30 to 50 PSI
+L157:   * Operating pressure range: 20 to 100 PSI
+L158:   * Precipitation rate: 0.6 in/hr approximately
+L159:   * Nozzle trajectory: 14° approximately
+L160:   * Warranty period: 1 year
+L161: 
+L162: User-Installed Options
+L163: 
+L164:   *   Drain Check Valve (up to 7' of elevation) P/N
+L165:   * : 462078SP
+L166: 
+L167: * * *
+L168: 
+L169: cite33† Download Product Spec Sheet L170: 
+L171: cite34†  Download Written Specifications (in English) L172: ## Videos
+L173: 
+L174: Rotor T-Handle Pull Up Tool
+L175: 
+L176: The T-Handle Rotor Adjustment Tool is just one of a full range of convenient service tools and auxiliary items for irrigation systems that save time
+L177: 
+L178: How your rotor invoice can help you win big prizes!
+L179: 
+L180: Check out “hunter.info/rr26” for more great prizes! Buy Hunter rotors or upload your invoice or design plans to get entries to win.
+L181: 
+L182: Buy Rotors. Win BIG. Here’s How.
+L183: 
+L184: Behind the Scenes: Hunter Rotor Manufacturing
+L185: Take a walk through the Hunter manufacturing floor with Gregg Roesink and see what goes into every rotor.
+L186: 
+L187: Cleaning a Filter on a Hunter Rotor
+L188: 
+L189: The most common reason for a sprinkler to stop rotating is the accumulation of debris in the filter.
+L190: 
+L191: Hunter Rotor Right Stop Alignment
+L192: 
+L193: With a rotor tool, it's easy to adjust the left stop, but ever wonder how to adjust the right stop after install?
+L194: 
+L195:   * 1
+L196:   * cite35†2 L197:   * cite35†› L198:   * cite35†» L199: 
+L200: cite36†All Product Videos L201: ## Features
+L202: The SRM is Hunter’s shortest-range rotor, and was designed to offer a convenient and efficient alternative to spray their. It is capable of working in tandem with larger rotors to combine big and small areas in a single zone. Utilizing the SRM where appropriate results in fewer sprinklers performing more efficient work at a more economical price. The SRM features a rack of six water-efficient nozzles—all of which can be easily identified by its flow rates and installed and changed quickly and easily.
+L203: This versatile rotor also includes a radius adjustment feature that fine-tunes the spray to keep water off driveways, walks, and other non-landscaped surfaces.
+L204: #### Key Benefits
+L205: 
+L206: Adjustable arc from 40° to 360° to keep water in the appropriate areas
+L207: 
+L208: Standard factory-installed 2.0 nozzle speeds installation
+L209: 
+L210: Through-the-top arc adjustment for easy installation
+L211: 
+L212: QuickCheck™ Arc Mechanism for fast arc adjustment
+L213: 
+L214: ## Charts
+L215: ### SRM Nozzle Performance Data
+L216: 
+L217: SRM Nozzle Performance Data cite37†View Nozzle L218: ---
+L219: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L220:    | PSI  | ft  | GPM  | cite38†Image | cite39†Image L221: .50 • Dk. Green  | 30  | 14  | 0.42  | 0.41  | 0.48
+L222: 40  | 15  | 0.5  | 0.43  | 0.49
+L223: 50  | 16  | 0.58  | 0.44  | 0.5
+L224: .75 • Dk. Green  | 30  | 15  | 0.64  | 0.55  | 0.63
+L225: 40  | 16  | 0.75  | 0.56  | 0.65
+L226: 50  | 17  | 0.85  | 0.57  | 0.65
+L227: 1.0 • Dk. Green  | 30  | 18  | 0.85  | 0.51  | 0.58
+L228: 40  | 19  | 1  | 0.51  | 0.59
+L229: 50  | 19  | 1.1  | 0.57  | 0.66
+L230: 1.5 • Dk. Green  | 30  | 21  | 1.3  | 0.57  | 0.66
+L231: 40  | 22  | 1.5  | 0.6  | 0.69
+L232: 50  | 22  | 1.7  | 0.67  | 0.77
+L233: 2.0 • Dk. Green  | 30  | 24  | 1.7  | 0.55  | 0.64
+L234: 40  | 25  | 2  | 0.62  | 0.71
+L235: 50  | 25  | 2.3  | 0.71  | 0.82
+L236: 2.5 • Dk. Green  | 30  | 27  | 2.2  | 0.58  | 0.67
+L237: 40  | 28  | 2.5  | 0.6  | 0.69
+L238: 50  | 28  | 2.8  | 0.68  | 0.79
+L239: 3.0 • Dk. Green  | 30  | 30  | 2.5  | 0.53  | 0.62
+L240: 40  | 31  | 3  | 0.6  | 0.69
+L241: 50  | 31  | 3.4  | 0.68  | 0.79
+L242: 4.0 • Dk. Green  | 30  | 33  | 3.7  | 0.65  | 0.76
+L243: 40  | 33  | 4  | 0.71  | 0.82
+L244: 50  | 34  | 4.3  | 0.72  | 0.83
+L245: Notes:
+L246: Bold = Recommended pressure.
+L247: All precipitation rates calculated for 180 degree operation. For the precipitation rate for a 360 degree sprinkler, divide by 2.
+L248: ## Documents
+L249: ### Select Type
+L250: 
+L251:   * All Documents
+L252:   * Manuals
+L253:   * Marketing
+L254:   * Specifications
+L255:   * Replacement Parts
+L256: 
+L257: SRM Installation Card
+L258: 
+L259: cite40†Download   L260: 
+L261: SRM Brochure
+L262: 
+L263: cite9†Select Language  L264: 
+L265: California MWELO Compliant Products
+L266: 
+L267: cite41†Download   L268: 
+L269: SRM Product Cutsheet
+L270: 
+L271: cite9†Select Language  L272: 
+L273: cite42†USA   L274: 
+L275: cite43†Metric   L276: 
+L277: cite44†Spanish   L278: 
+L279: cite45†Spanish - USA   L280: 
+L281: cite46†Italian   L282: 
+L283: cite47†French   L284: 
+L285: cite48†Portuguese - Brazil   L286: 
+L287: cite49†German   L288: 
+L289: cite50†Turkish   L290: 
+L291: cite51†Polish   L292: 
+L293: cite52†Russian   L294: 
+L295: cite53†Arabic   L296: 
+L297: cite54†Hungarian   L298: 
+L299: cite55†Slovak   L300: SRM Written Specifications
+L301: 
+L302: cite56†Download   L303: 
+L304: SRM Replacement Parts List
+L305: 
+L306: cite57†Download   L307: 
+L308: Environmental Product Declaration (Rotors)
+L309: 
+L310: cite58†Download   L311: 
+L312: cite9†Show all documents L313: ## Support
+L314: 
+L315: ## cite59†Residential Rotors L316: 
+L317: ### Performance Cards
+L318: 
+L319: ### Installation
+L320: 
+L321: ### Rotor Adjustments
+L322: 
+L323: ### FAQs
+L324: 
+L325: ### Troubleshooting
+L326: 
+L327: ### Accessories
+L328: 
+L329: ## Photos
+L330: 
+L331: ## Application Photos
+L332: 
+L333: cite9†Image L334: 
+L335: cite60†Image L336: 
+L337: Title:
+L338: 
+L339: SRM
+L340: 
+L341: File:
+L342: 
+L343: h0734.jpg
+L344: 
+L345: Classification:
+L346: 
+L347: Application
+L348: 
+L349: Product Line:
+L350: 
+L351: Rotors
+L352: 
+L353: Products:
+L354: 
+L355: cite61†SRM L356: 
+L357: Keywords:
+L358: 
+L359: product
+L360: 
+L361: ,
+L362: 
+L363: rotor
+L364: 
+L365: ,
+L366: 
+L367: srm
+L368: 
+L369: cite62†Image Page L370: 
+L371: * * *
+L372: 
+L373: #### Download Image
+L374: 
+L375: cite63†Medium cite64†Original L376: 
+L377: By clicking download, you agree to our cite9†terms and conditions .
+L378: ### Photo Usage Disclaimer
+L379: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L380: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L381: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L382: ## Studio Photos
+L383: 
+L384: cite9†Image L385: 
+L386: cite65†Image L387: 
+L388: Title:
+L389: 
+L390: SRM-04
+L391: 
+L392: File:
+L393: 
+L394: srm-04_011_rt.jpg
+L395: 
+L396: Classification:
+L397: 
+L398: Studio
+L399: 
+L400: Product Line:
+L401: 
+L402: Rotors
+L403: 
+L404: Products:
+L405: 
+L406: cite61†SRM L407: 
+L408: Keywords:
+L409: 
+L410: product
+L411: 
+L412: ,
+L413: 
+L414: rotor
+L415: 
+L416: ,
+L417: 
+L418: SRM-04
+L419: 
+L420: cite66†Image Page L421: 
+L422: * * *
+L423: 
+L424: #### Download Image
+L425: 
+L426: cite67†Medium cite68†Original L427: 
+L428: By clicking download, you agree to our cite9†terms and conditions .
+L429: ### Photo Usage Disclaimer
+L430: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L431: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L432: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L433: 
+L434: cite9†Image L435: 
+L436: cite69†Image L437: 
+L438: Title:
+L439: 
+L440: SRM-04
+L441: 
+L442: File:
+L443: 
+L444: srm-04_010_rt.jpg
+L445: 
+L446: Classification:
+L447: 
+L448: Studio
+L449: 
+L450: Product Line:
+L451: 
+L452: Rotors
+L453: 
+L454: Products:
+L455: 
+L456: cite61†SRM L457: 
+L458: Keywords:
+L459: 
+L460: product
+L461: 
+L462: ,
+L463: 
+L464: rotor
+L465: 
+L466: ,
+L467: 
+L468: SRM-04
+L469: 
+L470: ,
+L471: 
+L472: part
+L473: 
+L474: ,
+L475: 
+L476: nozzle
+L477: 
+L478: ,
+L479: 
+L480: nozzle rack
+L481: 
+L482: cite70†Image Page L483: 
+L484: * * *
+L485: #### Download Image
+L486: 
+L487: cite71†Medium cite72†Original L488: 
+L489: By clicking download, you agree to our cite9†terms and conditions .
+L490: ### Photo Usage Disclaimer
+L491: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L492: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L493: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L494: 
+L495: cite9†Image L496: 
+L497: cite73†Image L498: 
+L499: Title:
+L500: 
+L501: SRM-04
+L502: 
+L503: File:
+L504: 
+L505: srm-04_009_rt.jpg
+L506: 
+L507: Classification:
+L508: 
+L509: Studio
+L510: 
+L511: Product Line:
+L512: 
+L513: Rotors
+L514: 
+L515: Products:
+L516: 
+L517: cite61†SRM L518: 
+L519: Keywords:
+L520: 
+L521: product
+L522: 
+L523: ,
+L524: 
+L525: rotor
+L526: 
+L527: ,
+L528: 
+L529: SRM-04
+L530: 
+L531: ,
+L532: 
+L533: part
+L534: 
+L535: ,
+L536: 
+L537: nozzle
+L538: 
+L539: ,
+L540: 
+L541: nozzle rack
+L542: 
+L543: cite74†Image Page L544: 
+L545: * * *
+L546: #### Download Image
+L547: 
+L548: cite75†Medium cite76†Original L549: 
+L550: By clicking download, you agree to our cite9†terms and conditions .
+L551: ### Photo Usage Disclaimer
+L552: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L553: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L554: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L555: 
+L556: cite9†Image L557: 
+L558: cite77†Image L559: 
+L560: Title:
+L561: 
+L562: SRM-04
+L563: 
+L564: File:
+L565: 
+L566: srm-04_008_rt.jpg
+L567: 
+L568: Classification:
+L569: 
+L570: Studio
+L571: 
+L572: Product Line:
+L573: 
+L574: Rotors
+L575: 
+L576: Products:
+L577: 
+L578: cite61†SRM L579: 
+L580: Keywords:
+L581: 
+L582: product
+L583: 
+L584: ,
+L585: 
+L586: rotor
+L587: 
+L588: ,
+L589: 
+L590: SRM-04
+L591: 
+L592: cite78†Image Page L593: 
+L594: * * *
+L595: #### Download Image
+L596: 
+L597: cite79†Medium cite80†Original L598: 
+L599: By clicking download, you agree to our cite9†terms and conditions .
+L600: ### Photo Usage Disclaimer
+L601: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L602: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L603: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L604: 
+L605: cite9†Image L606: 
+L607: cite81†Image L608: 
+L609: Title:
+L610: 
+L611: SRM-04
+L612: 
+L613: File:
+L614: 
+L615: srm-04_007_rt.jpg
+L616: 
+L617: Classification:
+L618: 
+L619: Studio
+L620: 
+L621: Product Line:
+L622: 
+L623: Rotors
+L624: 
+L625: Products:
+L626: 
+L627: cite61†SRM L628: 
+L629: Keywords:
+L630: 
+L631: product
+L632: 
+L633: ,
+L634: 
+L635: rotor
+L636: 
+L637: ,
+L638: 
+L639: SRM-04
+L640: 
+L641: cite82†Image Page L642: 
+L643: * * *
+L644: #### Download Image
+L645: 
+L646: cite83†Medium cite84†Original L647: 
+L648: By clicking download, you agree to our cite9†terms and conditions .
+L649: ### Photo Usage Disclaimer
+L650: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L651: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L652: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L653: 
+L654: cite9†Image L655: 
+L656: cite85†Image L657: 
+L658: Title:
+L659: 
+L660: SRM-04
+L661: 
+L662: File:
+L663: 
+L664: srm-04_005_rt.jpg
+L665: 
+L666: Classification:
+L667: 
+L668: Studio
+L669: 
+L670: Product Line:
+L671: 
+L672: Rotors
+L673: 
+L674: Products:
+L675: 
+L676: cite61†SRM L677: 
+L678: Keywords:
+L679: 
+L680: product
+L681: 
+L682: ,
+L683: 
+L684: rotor
+L685: 
+L686: ,
+L687: 
+L688: SRM-04
+L689: 
+L690: cite86†Image Page L691: 
+L692: * * *
+L693: #### Download Image
+L694: 
+L695: cite87†Medium cite88†Original L696: 
+L697: By clicking download, you agree to our cite9†terms and conditions .
+L698: ### Photo Usage Disclaimer
+L699: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L700: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L701: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L702: 
+L703: cite9†Image L704: 
+L705: cite89†Image L706: 
+L707: Title:
+L708: 
+L709: SRM-04
+L710: 
+L711: File:
+L712: 
+L713: srm-04_003_rt.jpg
+L714: 
+L715: Classification:
+L716: 
+L717: Studio
+L718: 
+L719: Product Line:
+L720: 
+L721: Rotors
+L722: 
+L723: Products:
+L724: 
+L725: cite61†SRM L726: 
+L727: Keywords:
+L728: 
+L729: product
+L730: 
+L731: ,
+L732: 
+L733: rotor
+L734: 
+L735: ,
+L736: 
+L737: SRM-04
+L738: 
+L739: cite90†Image Page L740: 
+L741: * * *
+L742: #### Download Image
+L743: 
+L744: cite91†Medium cite92†Original L745: 
+L746: By clicking download, you agree to our cite9†terms and conditions .
+L747: ### Photo Usage Disclaimer
+L748: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L749: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L750: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L751: 
+L752: cite9†Image L753: 
+L754: cite93†Image L755: 
+L756: Title:
+L757: 
+L758: SRM-04
+L759: 
+L760: File:
+L761: 
+L762: srm-04_002_rt_0.jpg
+L763: 
+L764: Classification:
+L765: 
+L766: Studio
+L767: 
+L768: Product Line:
+L769: 
+L770: Rotors
+L771: 
+L772: Products:
+L773: 
+L774: cite61†SRM L775: 
+L776: Keywords:
+L777: 
+L778: product
+L779: 
+L780: ,
+L781: 
+L782: rotor
+L783: 
+L784: ,
+L785: 
+L786: SRM-04
+L787: 
+L788: cite94†Image Page L789: 
+L790: * * *
+L791: #### Download Image
+L792: 
+L793: cite95†Medium cite96†Original L794: 
+L795: By clicking download, you agree to our cite9†terms and conditions .
+L796: ### Photo Usage Disclaimer
+L797: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L798: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L799: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L800: 
+L801: cite9†Image L802: 
+L803: cite97†Image L804: 
+L805: Title:
+L806: 
+L807: SRM-04
+L808: 
+L809: File:
+L810: 
+L811: srm-04_001_rt_0.jpg
+L812: 
+L813: Classification:
+L814: 
+L815: Studio
+L816: 
+L817: Product Line:
+L818: 
+L819: Rotors
+L820: 
+L821: Products:
+L822: 
+L823: cite61†SRM L824: 
+L825: Keywords:
+L826: 
+L827: product
+L828: 
+L829: ,
+L830: 
+L831: rotor
+L832: 
+L833: ,
+L834: 
+L835: SRM-04
+L836: 
+L837: cite98†Image Page L838: 
+L839: * * *
+L840: #### Download Image
+L841: 
+L842: cite99†Medium cite100†Original L843: 
+L844: By clicking download, you agree to our cite9†terms and conditions .
+L845: ### Photo Usage Disclaimer
+L846: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L847: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L848: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L849: ## Related Products
+L850: ## cite101†1/2" and 3/4" Inlet Rotor Comparison Chart L851: 
+

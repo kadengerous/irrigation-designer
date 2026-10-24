@@ -1,0 +1,392 @@
+[
+  {
+    "modelId": "P12Q",
+    "nozzleId": "k-rain:P12Q",
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "field": "radiusM",
+    "metricValue": 4.3,
+    "usRow": {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 0.5,
+      "precipSquareInH": 1.14,
+      "precipTriangleInH": 1.32
+    },
+    "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+        "page": 2,
+        "role": "Different older pressure sequence"
+      }
+    ]
+  },
+  {
+    "modelId": "P12Q",
+    "nozzleId": "k-rain:P12Q",
+    "rowIndex": 3,
+    "pressureBar": 2.8,
+    "arcDeg": 90,
+    "field": "radiusM",
+    "metricValue": 4.6,
+    "usRow": {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.6,
+      "precipSquareInH": 1.18,
+      "precipTriangleInH": 1.36
+    },
+    "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+        "page": 2,
+        "role": "Different older pressure sequence"
+      }
+    ]
+  },
+  {
+    "modelId": "P12H",
+    "nozzleId": "k-rain:P12H",
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "field": "radiusM",
+    "metricValue": 4.3,
+    "usRow": {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.0,
+      "precipSquareInH": 1.14,
+      "precipTriangleInH": 1.32
+    },
+    "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+        "page": 2,
+        "role": "Different older pressure sequence"
+      }
+    ]
+  },
+  {
+    "modelId": "P12H",
+    "nozzleId": "k-rain:P12H",
+    "rowIndex": 3,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "field": "radiusM",
+    "metricValue": 4.6,
+    "usRow": {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 1.18,
+      "precipTriangleInH": 1.36
+    },
+    "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+        "page": 2,
+        "role": "Different older pressure sequence"
+      }
+    ]
+  },
+  {
+    "modelId": "P12TQ",
+    "nozzleId": "k-rain:P12TQ",
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "field": "radiusM",
+    "metricValue": 4.3,
+    "usRow": {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 1.14,
+      "precipTriangleInH": 1.31
+    },
+    "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+        "page": 2,
+        "role": "Different older pressure sequence"
+      }
+    ]
+  },
+  {
+    "modelId": "P12TQ",
+    "nozzleId": "k-rain:P12TQ",
+    "rowIndex": 3,
+    "pressureBar": 2.8,
+    "arcDeg": 270,
+    "field": "radiusM",
+    "metricValue": 4.6,
+    "usRow": {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.18,
+      "precipTriangleInH": 1.36
+    },
+    "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+        "page": 2,
+        "role": "Different older pressure sequence"
+      }
+    ]
+  },
+  {
+    "modelId": "P12F",
+    "nozzleId": "k-rain:P12F",
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "field": "radiusM",
+    "metricValue": 4.3,
+    "usRow": {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 2.0,
+      "precipSquareInH": 1.14,
+      "precipTriangleInH": 1.32
+    },
+    "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+        "page": 2,
+        "role": "Different older pressure sequence"
+      }
+    ]
+  },
+  {
+    "modelId": "P12F",
+    "nozzleId": "k-rain:P12F",
+    "rowIndex": 3,
+    "pressureBar": 2.8,
+    "arcDeg": 360,
+    "field": "radiusM",
+    "metricValue": 4.6,
+    "usRow": {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 1.18,
+      "precipTriangleInH": 1.36
+    },
+    "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+        "page": 2,
+        "role": "Different older pressure sequence"
+      }
+    ]
+  },
+  {
+    "modelId": "P15H",
+    "nozzleId": "k-rain:P15H",
+    "rowIndex": 2,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "field": "pressureBar",
+    "metricValue": 2.8,
+    "usRow": {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.35,
+      "precipTriangleInH": 1.56
+    },
+    "reason": "Metric 2.8/3.4 bar corresponds to US 30/40 PSI in the same rows. A prior brochure has different hydraulics. No verified current correction selected.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      }
+    ]
+  },
+  {
+    "modelId": "P15H",
+    "nozzleId": "k-rain:P15H",
+    "rowIndex": 3,
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "field": "pressureBar",
+    "metricValue": 3.4,
+    "usRow": {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 2.2,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.69
+    },
+    "reason": "Metric 2.8/3.4 bar corresponds to US 30/40 PSI in the same rows. A prior brochure has different hydraulics. No verified current correction selected.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      }
+    ]
+  },
+  {
+    "modelId": "P15TQ",
+    "nozzleId": "k-rain:P15TQ",
+    "rowIndex": 0,
+    "pressureBar": 1.4,
+    "arcDeg": 270,
+    "field": "radiusM",
+    "metricValue": 3.4,
+    "usRow": {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.36,
+      "precipTriangleInH": 1.57
+    },
+    "reason": "At first pressure metric 3.4 m conflicts with 13 ft (approximately 4.0 m); no independent matching current hydraulic table resolves it.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      }
+    ]
+  },
+  {
+    "modelId": "P15F",
+    "nozzleId": "k-rain:P15F",
+    "rowIndex": 0,
+    "pressureBar": 1.4,
+    "arcDeg": 360,
+    "field": "radiusM",
+    "metricValue": 3.4,
+    "usRow": {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 1.37,
+      "precipTriangleInH": 1.58
+    },
+    "reason": "First metric radius 3.4 m conflicts with 13 ft.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      }
+    ]
+  },
+  {
+    "modelId": "P15F",
+    "nozzleId": "k-rain:P15F",
+    "rowIndex": 2,
+    "pressureBar": 2.8,
+    "arcDeg": 360,
+    "field": "pressureBar",
+    "metricValue": 2.8,
+    "usRow": {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 3.6,
+      "precipSquareInH": 1.35,
+      "precipTriangleInH": 1.56
+    },
+    "reason": "Metric 2.8/3.4 bar conflicts with US 30/40 PSI.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      }
+    ]
+  },
+  {
+    "modelId": "P15F",
+    "nozzleId": "k-rain:P15F",
+    "rowIndex": 3,
+    "pressureBar": 3.4,
+    "arcDeg": 360,
+    "field": "pressureBar",
+    "metricValue": 3.4,
+    "usRow": {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 4.4,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.69
+    },
+    "reason": "Metric 2.8/3.4 bar conflicts with US 30/40 PSI.",
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Current conflicting unit columns"
+      }
+    ]
+  }
+]

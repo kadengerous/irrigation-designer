@@ -1,0 +1,417 @@
+ (https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf)
+citeturn453view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 100; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf","lineno":null}); Total lines: 6106
+L0@P0: 2025
+L1@P0: Down here. Doing. It. Right
+L2@P0-1: - 2026 -Table of Contents
+L3@P1: ROTORS
+L4@P1: Rotor Comparison Chart 5
+L5@P1: MiniPro® 6
+L6@P1: RPS™ 50 8
+L7@P1: RPS™ 75 9
+L8@P1: RPS™ 75i 12
+L9@P1: RPS™ Select 16
+L10@P1: ProPlus® 18
+L11@P1: SuperPro® 20
+L12@P1: ProSport® 24
+L13@P1: TurfCup 24
+L14@P1: Rotor Accessories 26
+L15@P1: SPRAYS
+L16@P1: Spray Body Comparison Chart 29
+L17@P1: Pro-S™ Sprays 30
+L18@P1: NP Sprays 32
+L19@P1: K-Sprays 33
+L20@P1: Spray Accessories 34
+L21@P1: NOZZLES
+L22@P1: Nozzle Comparison Chart 37
+L23@P1: Rotary Nozzle Series 38
+L24@P1: Fully Adjustable Rotary Nozzles 42
+L25@P1: KVF Nozzles 44
+L26@P1: KV Nozzles 46
+L27@P1: Fixed Pattern Nozzles 48
+L28@P1: DRIP, BUBBLERS
+L29@P1: Bubblers 50
+L30@P1: Drip Irrigation 51
+L31@P1: ELECTRIC VALVES
+L32@P1: Valve Comparison Chart 53
+L33@P1: ProSeries 100 Valves 54
+L34@P1: ProSeries 150 Valves 56
+L35@P1: ProSeries 200 Valves 58
+L36@P1: Valve Accessories 59
+L37@P1: CONTROLLERS
+L38@P1: Controller Comparison Chart 61
+L39@P1: SiteMaster 62
+L40@P1: PRO-EX3 64
+L41@P1: PRO EX 2.0 66
+L42@P1: PRO-LC 68
+L43@P1: BLUE-LTE 70
+L44@P1: K-Rain®
+L45@P1:  BLUE® 71
+L46@P1: RPS™ 46 72
+L47@P1: Rain Sensor 73
+L48@P1: PRO-TAP 100 74
+L49@P1: Controller Accessories 75
+L50@P1: PUMP START RELAYS 76
+L51@P1: SINGLE STATION CONTROLLERS 77
+L52@P1: INDEXING VALVES
+L53@P1: 4000 Series Indexing Valves 78
+L54@P1: 6000 Series Indexing Valves 79
+L55@P1: RECLAIMED WATER (RCW) Series 80
+L56@P1: Custom Products 82
+L57@P1: Contractor Loyalty Program 83
+L58@P1: Design Resources 84
+L59@P1: Charts 85
+L60@P1: Warranty 96
+L61@P1: It’s our best warranty ever,
+L62@P1: and no one else offers anything better.
+L63@P1-2: (See page 92 for detailed information)Our Grass Roots
+L64@P2: It’s about hard work and teamwork and a relentless spirit.
+L65@P2: It’s about fifty plus years of every little thing mattering.
+L66@P2: It’s not rocket science. Or is it?
+L67@P2: Our story begins with a rocket scientist. A real rocket scientist. With a background in chemical engineering
+L68@P2: and a stint in the Army Artillery Corps Guided Missile School, Carl Kah Jr. helped develop early reusable rocket
+L69@P2: technology at Pratt & Whitney. That’s NASA rocket technology (still in use today mind you).
+L70@P2: With a natural born instinct for invention, Carl turned his attention to his own landscape irrigation system and
+L71@P2: thought, I can make it better. Call it: When science meets grass roots greatness. From the lathe in his garage,
+L72@P2: he designed and machined a valve that cycled zone-to-zone and eliminated the need for multiple valves. That
+L73@P2: creative inventiveness, or inventive creativity, led to patent number one in 1966.
+L74@P2: With acres of ideas for greening up any size space, in 1970 Carl invented and patented a device he called
+L75@P2: Modulated Pressure Control. It allowed for the control of the entire irrigation system of a golf course without wires
+L76@P2: or tubes. The sale of that patent was the green light to incorporating K-Rain® Manufacturing in 1972.
+L77@P2: Cultivating growth
+L78@P2: Helping to grow the business from the ground up was son, Chip, who joined the company in 1986. Committed
+L79@P2: to engineering products that are reliable and eco-conscious, Chip led the development and growth of indexing
+L80@P2: valves for the wastewater disposal industry.
+L81@P2: In 1991, Carl and Chip, always innovating, introduced the first of many patented gear drive rotors. Four years later,
+L82@P2: K-Rain® augmented the professional line by expanding its products into the retail market - taking the business to
+L83@P2: the next level.
+L84@P2: Joining the burgeoning business that same year were Carl’s two daughters, Gretchen and Deborah. Gretchen
+L85@P2: would lead growth in the west coast sales division. Deborah, an attorney, would be managing intellectual
+L86@P2: property and human resources. And in 2016, Chip’s two sons, Christopher and Trevor, joined K-Rain® making it a
+L87@P2: 3rd generation company.
+L88@P2: Green and Growing the Industry
+L89@P2: Look across the industry and you’ll find a little bit of K-Rain® innovation sprinkled into the competitive set. K-Rain®
+L90@P2: holds over 100 patents specific to irrigation including the three-spring reversing mechanism still used today in
+L91@P2: most gear-driven sprinklers.
+L92@P2: Engineering the hardest-working irrigation products in the world is our heritage and our mission. Our
+L93@P2: commitment to quality is reflected in an ISO 9001 quality certification - the standard for manufacturing and
+L94@P2: process control.
+L95@P2: We’re also environmentally conscious about the materials we select and the products we produce. Sustainability
+L96@P2: is in our DNA. That’s why we’re an industry leader with a full range of products for reclaimed/recycled water.
+L97@P2: Over 400 men and women make up the K-Rain® dream team, serving customers in the United States and more
+L98@P2-4: than 60 countries worldwide.ROTORSkrain.com 5
+L99@P4: Rotors | Comparison Chart
+L100@P4: From small landscapes to sports stadiums, K-Rain® has a rotor for every landscape. Designed and built to provide
+L101@P4: high performance and low maintenance year after year, K-Rain® rotors deliver outstanding coverage on any
+L102@P4: terrain. Enjoy a comprehensive range of innovative features and exceptional functionality.
+L103@P4: MiniPro® RPS™50 RPS™75 RPS™75i RPS™ Select ProPlus® SuperPro® ProSport®
+L104@P4: Specifications
+L105@P4: Inlet Size 1/2" 1/2" 3/4" 3/4" 3/4" 3/4" 3/4" 1"
+L106@P4: Radius 18'-33' 18'-33' 22'-51' 26'-48' 33'-46' 22'-50' 26'-46' 43'-77'
+L107@P4: Flow Range (GPM) 0.8-3.8 0.8-3.8 0.7-8.3 0.9-9.7 1.3-6.8 0.5-10.0 0.8-11.1 5.1-32.5
+L108@P4: Features
+L109@P4: Operating
+L110@P4: Pressure range (PSI) 20-100 20-100 20-100 20-100 20-100 20-100 20-100 40-100
+L111@P4: Recommended
+L112@P4: Pressure Range (PSI) 30-50 30-50 30-70 30-70 30-50 30-70 30-70 40-90
+L113@P4: Nozzle Trajectory 25° 25° 26° 26° 24° 26° 26° 26°
+L114@P4: Pre-installed Nozzles #1.5 #1.5 #3.0 #2.5 4 built-in
+L115@P4: selectable #2.5 #2.5 #10
+L116@P4: Low Angle Nozzle
+L117@P4: Choices 11° 11° 12° 11°
+L118@P4: Non-Strippable Drive
+L119@P4: (arc memory clutch) • • •
+L120@P4: Arc Adjustment
+L121@P4: Range 40°-360° 40°-360° 40°-360° 40°-360° 40°-360° 40° to cont. 360°
+L122@P4: 40° to
+L123@P4: cont. 360°
+L124@P4: 40° to
+L125@P4: cont. 360°
+L126@P4: Top Arc Set • • • • •
+L127@P4: Intelligent Flow
+L128@P4: Technology® • •
+L129@P4: Reclaimed Water
+L130@P4: Available • • • • • • • •
+L131@P4: Stainless Steel
+L132@P4: Available • • •
+L133@P4: Optional or Factory
+L134@P4: Installed CV • • • • • • • Standard
+L135@P4: Pressure Regulation
+L136@P4: Optional • •
+L137@P4: Customizable • • •
+L138@P4-5: Warranty 7 years 7 years 7 years 7 years 7 years 7 years 7 years 7 years6 Down Here. Doing. It. Right.
+L139@P5: MiniPro®
+L140@P5: Perfect for small lawn and landscape areas.
+L141@P5: Easy Arc Setting
+L142@P5: Arc Selection: 40° to 360°
+L143@P5: Adjust from left start
+L144@P5: Features
+L145@P5: n Revolutionary Patented Top Arc Set – Simplified arc set allows
+L146@P5: for wet or dry adjustment in seconds
+L147@P5: n 1/2" Inlet – Replaces all standard mini rotors and pop-up sprays
+L148@P5: n Adjustable to 360° – Full range of adjustment from 40° to 360°
+L149@P5: n Patented Top Arc Set Degree Markings – Clearly indicates
+L150@P5: the current watering pattern and simplifies arc set adjustment
+L151@P5: n Time Proven Patented Reversing Mechanism – Assures
+L152@P5: continuous reverse and return…over a 35 year history
+L153@P5: n Rubber Cover – Seals out dirt and increases product durability
+L154@P5: n Optional Check Valve – Prevents low head drainage
+L155@P5: Specifications
+L156@P5: n Arc Adjustment Range: 40° – 360°
+L157@P5: n Flow Range: 0.8 – 3.8 GPM (3,0 – 14,4 LPM)
+L158@P5: n Operating Pressure Range: 20 – 100 PSI (1,4 – 6,9 bar)
+L159@P5: n Recommended Pressure Range: 30 – 50 PSI (2,1 – 3,4 bar)
+L160@P5: n Precipitation Rate: 0.26 – 0.67 in/hr (7 – 17 mm/hr)
+L161@P5: (depending on spacing and nozzle used)
+L162@P5: n Radius: 18' – 33' (5,5 – 10,1 m)
+L163@P5: n Nozzle Trajectory: 25°
+L164@P5: Model
+L165@P5: 13003 4" (10,2 cm) MiniPro®
+L166@P5: 13006 6" (15,2 cm) MiniPro®
+L167@P5: 13012 12" (30,5 cm) MiniPro®
+L168@P5: Accessories
+L169@P5: See page 26-27
+L170@P5: Fast Facts
+L171@P5: ALL INLET: 1/2” (1,3 CM) FEMALE THREAD NPT
+L172@P5: 4" Retracted height: 6" (15,2 cm)
+L173@P5: Riser height: 4" (10,2 cm)
+L174@P5: 6" Retracted height: 8 3/8" (21,3 cm)
+L175@P5: Riser height: 6" (15,2 cm)
+L176@P5: 12" Retracted height: 15 1/4" (38,7 cm)
+L177@P5-6: Riser height: 12" (30,5 cm) krain.com
+L178@P6: 7
+L179@P6: *All precipitation rates calculated for 180° operation.
+L180@P6: For the precipitation rate for a 360° sprinkler, divide by 2.
+L181@P6: Performance Data - U.S.
+L182@P6: NOZZLE
+L183@P6: PRESSURE RADIUS FLOW PRECIP in/hr
+L184@P6: PSI FEET GPM
+L185@P6: np #0.75 30 18 0.8 0.48 0.55
+L186@P6: 40 19 0.8 0.43 0.49
+L187@P6: 50 20 0.9 0.43 0.50
+L188@P6: #1.0 30 26 0.9 0.26 0.30
+L189@P6: 40 27 1.2 0.32 0.37
+L190@P6: 50 27 1.3 0.34 0.40
+L191@P6: #1.5 30 27 1.5 0.40 0.46
+L192@P6: PreInstalled40 27 1.8 0.48 0.55
+L193@P6: 50 28 2.0 0.49 0.57
+L194@P6: #2.0 30 29 2.0 0.46 0.53
+L195@P6: 40 30 2.3 0.49 0.57
+L196@P6: 50 31 2.7 0.54 0.62
+L197@P6: #3.0 30 32 3.0 0.56 0.65
+L198@P6: 40 33 3.4 0.60 0.69
+L199@P6: 50 33 3.8 0.67 0.78
+L200@P6: Performance Data - Metric
+L201@P6: NOZZLE
+L202@P6: PRESSURE RADIUS FLOW PRECIP mm/hr
+L203@P6: BAR METERS L/M
+L204@P6: np #0.75 2,1 5,5 3,0 12 14
+L205@P6: 2,8 5,8 3,0 11 13
+L206@P6: 3,4 6,1 3,4 11 13
+L207@P6: #1.0 2,1 7,9 3,478
+L208@P6: 2,8 8,2 4,589
+L209@P6: 3,4 8,2 4,99 10
+L210@P6: #1.5 2,1 8,2 5,7 10 12
+L211@P6: PreInstalled2,8 8,2 6,8 12 14
+L212@P6: 3,4 8,5 7,6 12 14
+L213@P6: #2.0 2,1 8,8 7,6 12 13
+L214@P6: 2,8 9,1 8,7 12 14
+L215@P6: 3,4 9,4 10,2 14 16
+L216@P6: #3.0 2,1 9,8 11,4 14 17
+L217@P6: 2,8 10,1 12,9 15 18
+L218@P6: 3,4 10,1 14,4 17 20
+L219@P6: How to Specify with Options
+L220@P6: MODELS OPTIONS
+L221@P6: 13003 -CV
+L222@P6: u Check Valve
+L223@P6: 13006 -NN
+L224@P6: u No Nozzle
+L225@P6: 13012 -RCW
+L226@P6: u Reclaimed Water Use
+L227@P6-7: Examples: 13003-NN, 13006-RCW-CV8 Down Here. Doing. It. Right.
+L228@P7: RPS™ 50
+L229@P7: Features
+L230@P7: n Right Position Start
+L231@P7: n Patented Reversing Mechanism – Continuous reverse and return
+L232@P7: n Ideal for use in tandem with larger rotors
+L233@P7: n Rubber Cover – Seals out dirt and increases product durability
+L234@P7: n Comes with 5 Nozzles for system flexibility
+L235@P7: n Optional Check Valve – Prevents low head drainage
+L236@P7: Specifications
+L237@P7: n Arc Adjustment Range: 40° – 360°
+L238@P7: n Flow Range: 0.8 – 3.8 GPM (3,0 – 14,4 LPM)
+L239@P7: n Operating Pressure Range: 20 – 100 PSI (1,4 – 6,9 bar)
+L240@P7: n Recommended Pressure Range: 30 – 50 PSI (2,1 – 3,4 bar)
+L241@P7: n Precipitation Rate: 0.26 – 0.67 in/hr (7 – 17 mm/hr
+L242@P7: (depending on spacing and nozzle used)
+L243@P7: n Radius: 18' – 33' (5,5 – 10,1 m)
+L244@P7: n Nozzle Trajectory: 25º
+L245@P7: Easy Arc Setting
+L246@P7: Arc Selection: 40° to 360°
+L247@P7: Adjust from right start
+L248@P7: Model
+L249@P7: RPS50 RPS™ 50
+L250@P7: Accessories
+L251@P7: See page 26-27
+L252@P7: Designed for smaller landscape areas.
+L253@P7: *All precipitation rates calculated for 180° operation.
+L254@P7: For the precipitation rate for a 360° sprinkler, divide by 2.
+L255@P7: Fast Facts
+L256@P7: INLET: 1/2” (1,3 CM) FEMALE THREAD NPT
+L257@P7: Retracted height: 6" (15,2 cm)
+L258@P7: Riser height: 4" (10,2 cm)
+L259@P7: How to Specify
+L260@P7: MODELS OPTIONS
+L261@P7: RPS50 -CV u Check Valve
+L262@P7: -RCW u Reclaimed Water Use
+L263@P7: Examples: RPS50-CV
+L264@P7: Performance Data - U.S.
+L265@P7: NOZZLE
+L266@P7: PRESSURE RADIUS FLOW PRECIP in/hr
+L267@P7: PSI FEET GPM n p #0.75 30 18 0.8 0.48 0.55
+L268@P7: 40 19 0.8 0.43 0.49
+L269@P7: 50 20 0.9 0.43 0.50
+L270@P7: #1.0 30 26 0.9 0.26 0.30
+L271@P7: 40 27 1.2 0.32 0.37
+L272@P7: 50 27 1.3 0.34 0.40
+L273@P7: #1.5 30 27 1.5 0.40 0.46
+L274@P7: PreInstalled40 27 1.8 0.48 0.55
+L275@P7: 50 28 2.0 0.49 0.57
+L276@P7: #2.0 30 29 2.0 0.46 0.53
+L277@P7: 40 30 2.3 0.49 0.57
+L278@P7: 50 31 2.7 0.54 0.62
+L279@P7: #3.0 30 32 3.0 0.56 0.65
+L280@P7: 40 33 3.4 0.60 0.69
+L281@P7: 50 33 3.8 0.67 0.78
+L282@P7: Performance Data - Metric
+L283@P7: NOZZLE
+L284@P7: PRESSURE RADIUS FLOW PRECIP mm/hr
+L285@P7: BAR METERS L/M n p #0.75 2,1 5,5 3,0 12 14
+L286@P7: 2,8 5,8 3,0 11 13
+L287@P7: 3,4 6,1 3,4 11 13
+L288@P7: #1.0 2,1 7,9 3,4 7 8
+L289@P7: 2,8 8,2 4,5 8 9
+L290@P7: 3,4 8,2 4,9 9 10
+L291@P7: #1.5 2,1 8,2 5,7 10 12
+L292@P7: PreInstalled2,8 8,2 6,8 12 14
+L293@P7: 3,4 8,5 7,6 12 14
+L294@P7: #2.0 2,1 8,8 7,6 12 13
+L295@P7: 2,8 9,1 8,7 12 14
+L296@P7: 3,4 9,4 10,2 14 16
+L297@P7: #3.0 2,1 9,8 11,4 14 17
+L298@P7: 2,8 10,1 12,9 15 18
+L299@P7-8: 3,4 10,1 14,4 17 20krain.com 9
+L300@P8: RPS™ 75
+L301@P8: Features
+L302@P8: n Right Position Start
+L303@P8: n Patented Reversing Mechanism – Continuous
+L304@P8: reverse and return
+L305@P8: n Full and Part Circle Rotation – Provides a full
+L306@P8: range of adjustment from 40° to 360°
+L307@P8: n Non-flushing Wiper Seal – Reduces leaks caused
+L308@P8: by debris trapped under seal
+L309@P8: n 3/4" (1,9 cm) Inlet – Replaces all standard rotors
+L310@P8: n Rubber Cover – Seals out dirt and increases durability
+L311@P8: n Wide Selection of Nozzles – Including standard
+L312@P8: and low angle for flexibility in system design
+L313@P8: n Includes 5 Free Check Valve Assemblies Per Box
+L314@P8: n Universal Riser Assembly – Fits into existing
+L315@P8: Hunter®
+L316@P8:  PGP® and PGP® Ultra cans
+L317@P8: n Pressure Regulated – 45 PSI available (6" only)
+L318@P8: Specifications
+L319@P8: n Arc Adjustment Range: 40° – 360°
+L320@P8: n Flow Range: 0.7 – 8.3 GPM (2,6 – 31 LPM)
+L321@P8: n Operating Pressure Range: 20 – 100 PSI (1,4 – 6,9 bar)
+L322@P8: n Recommended Pressure RRange: 30 – 70 PSI (2,1 – 4,8 bar)
+L323@P8: n Precipitation Rate: .16 – 1.0 in/hr (4 – 25,4 mm/hr)
+L324@P8: (depending on spacing and nozzle used)
+L325@P8: n Radius: 22' – 51' (6,7 – 15,5 m)
+L326@P8: n Nozzle Trajectory: 26°
+L327@P8: n Low Angle Nozzle Trajectory: 11°
+L328@P8: n 8 Standard and 4 Low Angle Nozzles Included
+L329@P8: Accessories
+L330@P8: See page 26-27
+L331@P8: Sets the standard for 3/4" gear-driven rotors.
+L332@P8: Easy Arc Setting
+L333@P8: Arc Selection: 40° to 360°
+L334@P8: Adjust from right start
+L335@P8: Fast Facts
+L336@P8: ALL INLET: 3/4” (1,9 CM) FEMALE THREAD NPT
+L337@P8: 4" Retracted height: 7 3/8" (19,7 cm)
+L338@P8: Riser height: 4 3/8" (11,1 cm)
+L339@P8: 6" Retracted height: 9 1/2" (24,1 cm)
+L340@P8: Riser height: 6 3/8" (16,2 cm)
+L341@P8-9: Shrub Height: 7 1/2" (19,1 cm)10 Down Here. Doing. It. Right.
+L342@P9: RPS™ 75
+L343@P9: *All precipitation rates calculated for 180° operation. For the precipitation rate for a 360° sprinkler, divide by 2.
+L344@P9: Models
+L345@P9: RPS75 RPS™ 75 Rotor
+L346@P9: RPS75-360 RPS™ 75 Rotor, 360°
+L347@P9: RPS75-SH RPS™ 75 Rotor, Shrub
+L348@P9: RPS75-360-SH RPS™ 75 Rotor, 360°, Shrub
+L349@P9: RPS75-6INCH RPS™ 75 Rotor 6" (15,2 cm)
+L350@P9: How to Specify with Options
+L351@P9: MODELS OPTIONS
+L352@P9: RPS75 -SS u Stainless Steel
+L353@P9: RPS75-360 -CV u Check Valve
+L354@P9: RPS75-SH -NN u No Nozzle
+L355@P9: RPS75-360-SH -RCW u Reclaimed Water Use
+L356@P9: RPS75-6inch -PR u Pressure Regulation (6”only)
+L357@P9: Examples: RPS75-SS, RPS75-360-RCW-CV
+L358@P9: Performance Data - U.S.
+L359@P9: NOZZLE
+L360@P9: PRESSURE RADIUS FLOW PRECIP in/hr
+L361@P9: PSI FEET GPM n p #.75 30 29 0.7 0.16 0.19
+L362@P9: 40 30 0.8 0.17 0.20
+L363@P9: 50 30 0.9 0.19 0.22
+L364@P9: 60 31 1.0 0.20 0.23
+L365@P9: #1.0 30 30 0.9 0.19 0.22
+L366@P9: 40 31 1.0 0.20 0.23
+L367@P9: 50 31 1.2 0.24 0.28
+L368@P9: 60 32 1.3 0.24 0.28
+L369@P9: #1.5 30 32 1.2 0.23 0.26
+L370@P9: 40 33 1.4 0.25 0.29
+L371@P9: 50 34 1.6 0.27 0.31
+L372@P9: 60 34 1.8 0.30 0.35
+L373@P9: #2.0 30 34 1.6 0.27 0.31
+L374@P9: 40 36 1.8 0.27 0.31
+L375@P9: 50 38 2.0 0.27 0.31
+L376@P9: 60 38 2.2 0.29 0.34
+L377@P9: #3.0
+L378@P9: PreInstalled
+L379@P9: 30 36 2.0 0.30 0.34
+L380@P9: 40 38 2.4 0.32 0.37
+L381@P9: 50 40 2.7 0.32 0.38
+L382@P9: 60 40 2.9 0.35 0.40
+L383@P9: #4.0 30 36 2.6 0.39 0.45
+L384@P9: 40 40 3.0 0.36 0.42
+L385@P9: 50 42 3.4 0.37 0.43
+L386@P9: 60 42 3.7 0.40 0.47
+L387@P9: #6.0 40 38 4.2 0.56 0.65
+L388@P9: 50 43 4.9 0.51 0.59
+L389@P9: 60 46 5.5 0.50 0.58
+L390@P9: 70 47 6.0 0.52 0.60
+L391@P9: #8.0 40 45 6.0 0.57 0.66
+L392@P9: 50 48 6.8 0.57 0.66
+L393@P9: 60 49 7.6 0.61 0.70
+L394@P9: 70 51 8.2 0.61 0.70
+L395@P9: PR Performance Data - U.S.
+L396@P9: NOZZLE
+L397@P9: PRESSURE RADIUS FLOW PRECIP in/hr
+L398@P9: PSI FEET GPM n p #.75 30 29 0.7 0.16 0.19
+L399@P9: 40 30 0.8 0.17 0.20
+L400@P9: 50 30 0.9 0.19 0.22
+L401@P9: 60 30 0.9 0.19 0.22
+L402@P9: #1.0 30 30 0.9 0.19 0.22
+L403@P9: 40 31 1.0 0.20 0.23
+L404@P9: 50 31 1.2 0.24 0.28
+L405@P9: 60 31 1.2 0.24 0.28
+L406@P9: #1.5 30 32 1.2 0.23 0.26
+L407@P9: 40 33 1.4 0.25 0.29
+L408@P9: 50 34 1.6 0.27 0.31
+L409@P9: 60 34 1.6 0.27 0.31
+L410@P9: #2.0 30 34 1.6 0.27 0.31
+--------------------------------------------------------------------------------
+Rotor Sprinklers for Lawn and Landscapes (https://www.krain.com/professional-rotor-sprinklers)
+citeturn453view1 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://www.krain.com/professional-rotor-sprinklers","lineno":null}); Total lines: 372
+

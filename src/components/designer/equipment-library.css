@@ -1,0 +1,46 @@
+.equipment-library-controls{display:flex;flex-direction:column;gap:.5rem;padding:.625rem;border-bottom:1px solid var(--color-line);font-size:.875rem;flex-shrink:0}
+.equipment-library-controls label{display:flex;flex-direction:column;gap:.375rem;color:var(--color-muted)}
+.equipment-library-controls select{min-width:0;width:100%;min-height:2.75rem;border:1px solid var(--color-line);border-radius:.5rem;padding:.5rem .625rem;background:var(--color-surface);color:var(--color-ink);font-size:1rem}
+.equipment-manufacturer-controls{--manufacturer-color:#0067b1}
+.equipment-manufacturer-controls[data-manufacturer="rain-bird"]{--manufacturer-color:#00843d}
+.equipment-manufacturer-controls[data-manufacturer="toro"]{--manufacturer-color:#cd2027}
+.equipment-manufacturer-controls[data-manufacturer="k-rain"]{--manufacturer-color:#232c64}
+.equipment-manufacturer-controls select{background:var(--manufacturer-color);border:.125rem solid var(--manufacturer-color);color:#fff;font-weight:600;color-scheme:light}
+.equipment-manufacturer-controls select option{background:var(--color-surface);color:var(--color-ink)}
+.equipment-manufacturer-controls select:focus-visible{outline:.125rem solid var(--color-ink);outline-offset:.125rem}
+.equipment-series-controls{background:var(--color-surface)}
+.equipment-subgroups{display:flex;flex-wrap:wrap;gap:.375rem;padding:.5rem;border-bottom:1px solid var(--color-line);flex-shrink:0}
+.equipment-subgroups>button{display:flex;align-items:center;justify-content:center;gap:.375rem;min-height:2.75rem;min-width:2.75rem;flex:1 0 auto;padding:.375rem .5rem;border:1px solid var(--color-line);border-radius:.5rem;background:var(--color-surface);color:var(--color-ink);font-size:.75rem;line-height:1.3}
+.equipment-subgroups>button[aria-pressed=true]{background:var(--color-btn-soft);border-color:var(--color-btn);box-shadow:inset 0 0 0 1px var(--color-btn);font-weight:600}
+.equipment-subgroups>button:focus-visible{outline:2px solid var(--color-btn);outline-offset:2px}
+.equipment-subgroup-color{display:block;flex-shrink:0;width:1rem;height:1rem;border-radius:50%;border:1px solid var(--color-muted)}
+.equipment-group-note{margin:0;padding:.5rem .625rem;font-size:.75rem;line-height:1.4;color:var(--color-muted);overflow-wrap:anywhere;flex-shrink:0}
+.equipment-group-note>strong{display:block;margin-bottom:.375rem;color:var(--color-ink)}
+.info-panel>.equipment-group-note,.mobile-catalog-info>.equipment-group-note{border-top:1px solid var(--color-line)}
+.equipment-group-note p+p{margin-top:.375rem}
+.mobile-catalog-navigation{position:sticky;top:0;z-index:2;background:var(--color-surface)}
+.mobile-catalog-navigation .mobile-categories{position:static}
+.irrigation-catalog-card{display:flex;align-items:center;justify-content:space-between;gap:.375rem;width:100%;min-height:3.5rem;margin-bottom:.25rem;padding:.25rem .375rem;border:1px solid var(--color-line);border-radius:.5rem;text-align:start;touch-action:pan-y;user-select:none;background:var(--color-surface);color:var(--color-ink)}
+.irrigation-catalog-card strong{min-width:0;font-size:.875rem;line-height:1.2;font-weight:600;overflow-wrap:anywhere}
+.irrigation-catalog-card>svg{flex-shrink:0}
+.automatic-library-card{min-height:3rem}
+.mobile-catalog-card>.irrigation-catalog-card{margin:0;border:0;border-radius:inherit;padding:.375rem .5rem}
+.mobile-catalog-card>.irrigation-catalog-card strong{font-size:.875rem}
+.mobile-catalog-list .automatic-library-card{margin:0}
+.equipment-data-status{display:block;font-size:.75rem;line-height:1.35;color:var(--color-warn);overflow-wrap:anywhere}
+.mobile-catalog-card>.equipment-data-status{order:1;flex-basis:100%;padding:0 .75rem .5rem}
+
+.irrigation-catalog-copy{display:flex;flex-direction:column;gap:0;min-width:0;flex:1}
+.irrigation-catalog-brand,.irrigation-catalog-spec{font-size:.625rem;line-height:1.25;color:var(--color-muted);overflow-wrap:anywhere}
+.irrigation-catalog-spec{font-variant-numeric:tabular-nums}
+.irrigation-catalog-card>svg{width:2.25rem;height:2.25rem}
+.irrigation-catalog-card>svg[data-coverage="strip"]{width:3.75rem;height:3rem}
+.irrigation-catalog-card>svg[data-coverage="square"]{width:3rem;height:3rem}
+.mobile-catalog-info{flex-basis:100%;min-width:0;border-top:1px solid var(--color-line)}
+
+/* Keep the automatic action distinct from ordinary cards in every theme. */
+@layer designer-controls{
+ html:has(.app-shell) body .app-shell [data-catalog] button.automatic-library-card[aria-pressed]{border:.125rem solid #8b5cc4!important;background:color-mix(in srgb,#8b5cc4 8%,var(--color-surface))!important;outline:none!important}
+ html:has(.app-shell) body .app-shell [data-catalog] button.automatic-library-card[aria-pressed=true]{background:color-mix(in srgb,#8b5cc4 22%,var(--color-surface))!important}
+ html:has(.app-shell) body .app-shell [data-catalog] button.automatic-library-card[aria-pressed]:focus-visible{outline:.125rem solid #8b5cc4!important;outline-offset:.125rem!important}
+}

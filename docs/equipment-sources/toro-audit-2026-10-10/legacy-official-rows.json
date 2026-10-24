@@ -1,0 +1,2072 @@
+{
+  "auditedOn": "2026-10-10",
+  "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+  "sourceVersion": "25-1045-IRC, O-model performance pages 6–7",
+  "method": "Fresh web PDF text; all contiguous source lines 451–768 collected, 204 physical rows parsed, separate from prior audit transcriptions.",
+  "rows": [
+    {
+      "modelSuffix": "5-60",
+      "line": 453,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.04,
+      "radiusFt": 4.7,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-60",
+      "line": 454,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.04,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-60",
+      "line": 455,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.04,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-60",
+      "line": 456,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.05,
+      "radiusFt": 5.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "5-Q",
+      "line": 459,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.06,
+      "radiusFt": 4.6,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-Q",
+      "line": 460,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.06,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "5-Q",
+      "line": 461,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.07,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-Q",
+      "line": 462,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.07,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-T",
+      "line": 465,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.07,
+      "radiusFt": 4.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-T",
+      "line": 466,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.09,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-T",
+      "line": 467,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.09,
+      "radiusFt": 5.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-T",
+      "line": 468,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.1,
+      "radiusFt": 5.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "5-150",
+      "line": 471,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.07,
+      "radiusFt": 4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-150",
+      "line": 472,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.11,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-150",
+      "line": 473,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.12,
+      "radiusFt": 5.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-150",
+      "line": 474,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.13,
+      "radiusFt": 5.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-H",
+      "line": 477,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.1,
+      "radiusFt": 4.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-H",
+      "line": 478,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.13,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-H",
+      "line": 479,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.14,
+      "radiusFt": 5.1,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-H",
+      "line": 480,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.14,
+      "radiusFt": 5.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "5-210",
+      "line": 483,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.1,
+      "radiusFt": 4.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-210",
+      "line": 484,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.15,
+      "radiusFt": 5.2,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-210",
+      "line": 485,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.16,
+      "radiusFt": 5.3,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "5-210",
+      "line": 486,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.17,
+      "radiusFt": 5.5,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "5-TT",
+      "line": 489,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.14,
+      "radiusFt": 4.3,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "5-TT",
+      "line": 490,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.17,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "5-TT",
+      "line": 491,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.19,
+      "radiusFt": 5,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-TT",
+      "line": 492,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.19,
+      "radiusFt": 5,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "5-TQ",
+      "line": 495,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.15,
+      "radiusFt": 4.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-TQ",
+      "line": 496,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.2,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-TQ",
+      "line": 497,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.21,
+      "radiusFt": 5,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-TQ",
+      "line": 498,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.22,
+      "radiusFt": 5,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "5-F",
+      "line": 501,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.17,
+      "radiusFt": 4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-F",
+      "line": 502,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.26,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-F",
+      "line": 503,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.26,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "5-F",
+      "line": 504,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.26,
+      "radiusFt": 5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-60",
+      "line": 514,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.1,
+      "radiusFt": 7.6,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-60",
+      "line": 515,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.11,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-60",
+      "line": 516,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.12,
+      "radiusFt": 8.1,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-60",
+      "line": 517,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.13,
+      "radiusFt": 8.3,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "8-Q",
+      "line": 519,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.14,
+      "radiusFt": 7,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "8-Q",
+      "line": 520,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.17,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-Q",
+      "line": 521,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.18,
+      "radiusFt": 8.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-Q",
+      "line": 522,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.18,
+      "radiusFt": 8.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-T",
+      "line": 524,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.2,
+      "radiusFt": 7.6,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-T",
+      "line": 525,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.22,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-T",
+      "line": 526,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.23,
+      "radiusFt": 8.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-T",
+      "line": 527,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.24,
+      "radiusFt": 8.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-150",
+      "line": 529,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.25,
+      "radiusFt": 7.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-150",
+      "line": 530,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.27,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-150",
+      "line": 531,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.28,
+      "radiusFt": 8.1,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-150",
+      "line": 532,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.29,
+      "radiusFt": 8.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-H",
+      "line": 534,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.26,
+      "radiusFt": 7,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-H",
+      "line": 535,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.33,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-H",
+      "line": 536,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.34,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-H",
+      "line": 537,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.34,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-210",
+      "line": 539,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.33,
+      "radiusFt": 7.6,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "8-210",
+      "line": 540,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.36,
+      "radiusFt": 8,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "8-210",
+      "line": 541,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.37,
+      "radiusFt": 8.1,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "8-210",
+      "line": 542,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.38,
+      "radiusFt": 8.2,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "8-TT",
+      "line": 544,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.34,
+      "radiusFt": 7,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-TT",
+      "line": 545,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.44,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-TT",
+      "line": 546,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.46,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-TT",
+      "line": 547,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.46,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-TQ",
+      "line": 549,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.41,
+      "radiusFt": 7.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-TQ",
+      "line": 550,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.49,
+      "radiusFt": 8,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-TQ",
+      "line": 551,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.54,
+      "radiusFt": 8,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-TQ",
+      "line": 552,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.55,
+      "radiusFt": 8,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-F",
+      "line": 554,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.55,
+      "radiusFt": 7,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-F",
+      "line": 555,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.66,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "8-F",
+      "line": 556,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.68,
+      "radiusFt": 8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "8-F",
+      "line": 557,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.71,
+      "radiusFt": 8,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-60",
+      "line": 567,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.16,
+      "radiusFt": 9.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-60",
+      "line": 568,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.17,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-60",
+      "line": 569,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.18,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-60",
+      "line": 570,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.19,
+      "radiusFt": 10,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "10-Q",
+      "line": 572,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.26,
+      "radiusFt": 9.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-Q",
+      "line": 573,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.23,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-Q",
+      "line": 574,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.28,
+      "radiusFt": 10.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-Q",
+      "line": 575,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.28,
+      "radiusFt": 10.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-T",
+      "line": 577,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.31,
+      "radiusFt": 9.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-T",
+      "line": 578,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.34,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-T",
+      "line": 579,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.36,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-T",
+      "line": 580,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.37,
+      "radiusFt": 10,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-150",
+      "line": 582,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.41,
+      "radiusFt": 9.8,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-150",
+      "line": 583,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.43,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-150",
+      "line": 584,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.44,
+      "radiusFt": 10.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-150",
+      "line": 585,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.46,
+      "radiusFt": 10.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-H",
+      "line": 587,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.48,
+      "radiusFt": 9.7,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-H",
+      "line": 588,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.51,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-H",
+      "line": 589,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.55,
+      "radiusFt": 10.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-H",
+      "line": 590,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.56,
+      "radiusFt": 10.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-210",
+      "line": 592,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.56,
+      "radiusFt": 9.8,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "10-210",
+      "line": 593,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.58,
+      "radiusFt": 10,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "10-210",
+      "line": 594,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.6,
+      "radiusFt": 10.4,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-210",
+      "line": 595,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.62,
+      "radiusFt": 10.5,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "10-TT",
+      "line": 597,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.63,
+      "radiusFt": 9.6,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-TT",
+      "line": 598,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.69,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "10-TT",
+      "line": 599,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.73,
+      "radiusFt": 10.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-TT",
+      "line": 600,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.74,
+      "radiusFt": 10.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-TQ",
+      "line": 602,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.71,
+      "radiusFt": 9.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-TQ",
+      "line": 603,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 0.79,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-TQ",
+      "line": 604,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 0.84,
+      "radiusFt": 10.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-TQ",
+      "line": 605,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 0.86,
+      "radiusFt": 10.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-F",
+      "line": 607,
+      "sourcePage": 6,
+      "pressurePsi": 20,
+      "flowGpm": 0.95,
+      "radiusFt": 9.6,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-F",
+      "line": 608,
+      "sourcePage": 6,
+      "pressurePsi": 30,
+      "flowGpm": 1.03,
+      "radiusFt": 10,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-F",
+      "line": 609,
+      "sourcePage": 6,
+      "pressurePsi": 40,
+      "flowGpm": 1.08,
+      "radiusFt": 10.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "10-F",
+      "line": 610,
+      "sourcePage": 6,
+      "pressurePsi": 50,
+      "flowGpm": 1.12,
+      "radiusFt": 10.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-60",
+      "line": 621,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.24,
+      "radiusFt": 11.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-60",
+      "line": 622,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.25,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-60",
+      "line": 623,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.26,
+      "radiusFt": 12.1,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-60",
+      "line": 624,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.28,
+      "radiusFt": 12.2,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "12-Q",
+      "line": 627,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.34,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-Q",
+      "line": 628,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.37,
+      "radiusFt": 12.1,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-Q",
+      "line": 629,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.39,
+      "radiusFt": 11.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-Q",
+      "line": 630,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.39,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-T",
+      "line": 633,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.46,
+      "radiusFt": 11.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-T",
+      "line": 634,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.49,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-T",
+      "line": 635,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.51,
+      "radiusFt": 12.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-T",
+      "line": 636,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.52,
+      "radiusFt": 12.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-150",
+      "line": 639,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.6,
+      "radiusFt": 11.6,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-150",
+      "line": 640,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.62,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-150",
+      "line": 641,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.63,
+      "radiusFt": 12.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-150",
+      "line": 642,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.64,
+      "radiusFt": 12.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-H",
+      "line": 645,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.7,
+      "radiusFt": 11.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-H",
+      "line": 646,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.74,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-H",
+      "line": 647,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.79,
+      "radiusFt": 12.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-H",
+      "line": 648,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.8,
+      "radiusFt": 12.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-210",
+      "line": 651,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.76,
+      "radiusFt": 11.6,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "12-210",
+      "line": 652,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.82,
+      "radiusFt": 12,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "12-210",
+      "line": 653,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.84,
+      "radiusFt": 12.3,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-210",
+      "line": 654,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.85,
+      "radiusFt": 12.4,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-TT",
+      "line": 657,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.9,
+      "radiusFt": 11.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-TT",
+      "line": 658,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.99,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-TT",
+      "line": 659,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 1.04,
+      "radiusFt": 12.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-TT",
+      "line": 660,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 1.05,
+      "radiusFt": 12.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-TQ",
+      "line": 663,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 1.05,
+      "radiusFt": 11.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-TQ",
+      "line": 664,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 1.15,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-TQ",
+      "line": 665,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 1.19,
+      "radiusFt": 12.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-TQ",
+      "line": 666,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 1.22,
+      "radiusFt": 12.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "12-F",
+      "line": 669,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 1.35,
+      "radiusFt": 11.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-F",
+      "line": 670,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 1.48,
+      "radiusFt": 12,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-F",
+      "line": 671,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 1.59,
+      "radiusFt": 12.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "12-F",
+      "line": 672,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 1.6,
+      "radiusFt": 12.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-60",
+      "line": 682,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.35,
+      "radiusFt": 14,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-60",
+      "line": 683,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.39,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-60",
+      "line": 684,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.4,
+      "radiusFt": 15.1,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-60",
+      "line": 685,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.42,
+      "radiusFt": 15.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-Q",
+      "line": 687,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.53,
+      "radiusFt": 14.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-Q",
+      "line": 688,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.58,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-Q",
+      "line": 689,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.6,
+      "radiusFt": 15.1,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-Q",
+      "line": 690,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.61,
+      "radiusFt": 15.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-T",
+      "line": 692,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.72,
+      "radiusFt": 14.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-T",
+      "line": 693,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.77,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-T",
+      "line": 694,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.81,
+      "radiusFt": 15.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-T",
+      "line": 695,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.82,
+      "radiusFt": 15.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-150",
+      "line": 697,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.92,
+      "radiusFt": 14.7,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-150",
+      "line": 698,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.96,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-150",
+      "line": 699,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 1,
+      "radiusFt": 15.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-150",
+      "line": 700,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 1.1,
+      "radiusFt": 15.3,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "15-H",
+      "line": 702,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 1.1,
+      "radiusFt": 14.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-H",
+      "line": 703,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 1.16,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-H",
+      "line": 704,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 1.25,
+      "radiusFt": 15.4,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-H",
+      "line": 705,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 1.28,
+      "radiusFt": 15.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-210",
+      "line": 707,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 1.15,
+      "radiusFt": 14.5,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-210",
+      "line": 708,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 1.2,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-210",
+      "line": 709,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 1.3,
+      "radiusFt": 15.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-210",
+      "line": 710,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 1.4,
+      "radiusFt": 15.6,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "15-TT",
+      "line": 712,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 1.45,
+      "radiusFt": 14.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-TT",
+      "line": 713,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 1.54,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-TT",
+      "line": 714,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 1.58,
+      "radiusFt": 15.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-TT",
+      "line": 715,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 1.61,
+      "radiusFt": 15.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-TQ",
+      "line": 717,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 1.72,
+      "radiusFt": 14.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-TQ",
+      "line": 718,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 1.78,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-TQ",
+      "line": 719,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 1.82,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-TQ",
+      "line": 720,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 1.9,
+      "radiusFt": 15.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-F",
+      "line": 722,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 2.2,
+      "radiusFt": 14.5,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "15-F",
+      "line": 723,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 2.31,
+      "radiusFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-F",
+      "line": 724,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 2.35,
+      "radiusFt": 15.2,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "15-F",
+      "line": 725,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 2.4,
+      "radiusFt": 15.3,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "4X30-SST",
+      "line": 735,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.62,
+      "widthFt": 4,
+      "lengthFt": 28,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "4X30-SST",
+      "line": 736,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.66,
+      "widthFt": 4,
+      "lengthFt": 30,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X30-SST",
+      "line": 737,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.67,
+      "widthFt": 4,
+      "lengthFt": 30,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X30-SST",
+      "line": 738,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.68,
+      "widthFt": 4,
+      "lengthFt": 30,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "4X15-LCS",
+      "line": 741,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.32,
+      "widthFt": 4,
+      "lengthFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X15-LCS",
+      "line": 742,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.33,
+      "widthFt": 4,
+      "lengthFt": 15,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X15-LCS",
+      "line": 743,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.34,
+      "widthFt": 4,
+      "lengthFt": 15,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X15-LCS",
+      "line": 744,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.34,
+      "widthFt": 4,
+      "lengthFt": 15,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "4X15-RCS",
+      "line": 747,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.32,
+      "widthFt": 4,
+      "lengthFt": 15,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X15-RCS",
+      "line": 748,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.33,
+      "widthFt": 4,
+      "lengthFt": 15,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X15-RCS",
+      "line": 749,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.34,
+      "widthFt": 4,
+      "lengthFt": 15,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "4X15-RCS",
+      "line": 750,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.34,
+      "widthFt": 4,
+      "lengthFt": 15,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.3
+    },
+    {
+      "modelSuffix": "4X18-SST",
+      "line": 753,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.36,
+      "widthFt": 4,
+      "lengthFt": 18,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "4X18-SST",
+      "line": 754,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.37,
+      "widthFt": 4,
+      "lengthFt": 18,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "4X18-SST",
+      "line": 755,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.38,
+      "widthFt": 4,
+      "lengthFt": 18,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X18-SST",
+      "line": 756,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.38,
+      "widthFt": 4,
+      "lengthFt": 18,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X9-LCS",
+      "line": 759,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.18,
+      "widthFt": 4,
+      "lengthFt": 9,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X9-LCS",
+      "line": 760,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.19,
+      "widthFt": 4,
+      "lengthFt": 9,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X9-LCS",
+      "line": 761,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.2,
+      "widthFt": 4,
+      "lengthFt": 9,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X9-LCS",
+      "line": 762,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.2,
+      "widthFt": 4,
+      "lengthFt": 9,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.1
+    },
+    {
+      "modelSuffix": "4X9-RCS",
+      "line": 765,
+      "sourcePage": 7,
+      "pressurePsi": 20,
+      "flowGpm": 0.18,
+      "widthFt": 4,
+      "lengthFt": 9,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X9-RCS",
+      "line": 766,
+      "sourcePage": 7,
+      "pressurePsi": 30,
+      "flowGpm": 0.19,
+      "widthFt": 4,
+      "lengthFt": 9,
+      "precipSquareInH": 1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X9-RCS",
+      "line": 767,
+      "sourcePage": 7,
+      "pressurePsi": 40,
+      "flowGpm": 0.2,
+      "widthFt": 4,
+      "lengthFt": 9,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    },
+    {
+      "modelSuffix": "4X9-RCS",
+      "line": 768,
+      "sourcePage": 7,
+      "pressurePsi": 50,
+      "flowGpm": 0.2,
+      "widthFt": 4,
+      "lengthFt": 9,
+      "precipSquareInH": 1.1,
+      "precipTriangleInH": 1.2
+    }
+  ]
+}

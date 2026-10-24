@@ -1,0 +1,130 @@
+Pressure Compensating Bubbler | Rain Bird (https://www.rainbird.com/products/1400-series-pressure-compensating-bubbler)
+citeturn401view0 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://www.rainbird.com/products/1400-series-pressure-compensating-bubbler","lineno":null}); Total lines: 78
+L0: cite0†iframe†www.googletagmanager.com L1: 
+L2: cite1†Image: 1400 L3: 
+L4: cite2†Image: 1400 L5: 
+L6: # Pressure Compensating Bubbler
+L7: ##
+L8: 
+L9: Rain Bird 1400 Series pressure compensating full circle bubblers provide a controlled, gentle umbrella of water for irrigating trees, flowers, and shrub areas where pressure compensation is required.
+L10: 
+L11: Mount these bubblers on ½" male risers to effectively water areas from 1' to 3'.
+L12: 
+L13: cite3†Buy Now†store.rainbird.com L14: 
+L15:   * cite4†Features L16:   * cite5†Specs L17:   * cite6†Models L18:   * cite7†Documents L19:   * cite8†Related Products L20: ## Features
+L21: 
+L22: Low flow rates allow water to be absorbed as needed, reduces runoff
+L23: 
+L24: Flow will not fluctuate at pressures between 20 and 90 psi (1.4 to 6.2 bar)
+L25: 
+L26: Flow is not adjustable for increased vandal resistance
+L27: 
+L28: Corrosion-proof plastic and rubber construction for long life
+L29: 
+L30: Shipped with special SR-050 ½" (15/21) bubbler filter screen for easy installation and resistance to debris
+L31: 
+L32: Trickle pattern on models 1401 and 1402; umbrella pattern on models 1404 and 1408
+L33: 
+L34: Five-year trade warranty
+L35: ## Specs
+L36: 
+L37: Flow: 0.25 to 2.00 gpm (1.2 to 7.12 l/m)
+L38: 
+L39: Spacing: 1 to 3 feet (0.3 to 0.9 m)*
+L40: 
+L41: Pressure: 20 to 90 psi (1.4 to 6.2 bar)
+L42: 
+L43: * These ranges are based on proper pressure at nozzle. Rain Bird recommends using 1800/RD1800 PRS Spray Bodies to maintain optimum nozzle performance in higher pressure situations
+L44: 
+L45: Dimensions
+L46: 
+L47: ½" (15/21) female threaded inlet
+L48: 
+L49: Height: 1" (2.5 cm)
+L50: 
+L51: Top diameter: 1" (2.5 cm)
+L52: 
+L53: ## Model Comparison
+L54: ###
+L55: 
+L56: * 1401: 0.25 gpm (0,06 m³/h; 0,02 l/s); full-circle, trickle pattern
+L57: 
+L58: * 1402: 0.50 gpm (0,11 m³/h; 0,03 l/s); full-circle, trickle pattern
+L59: 
+L60: * 1404: 1.00 gpm (0,23 m³/h; 0,06 l/s); full-circle, umbrella pattern
+L61: 
+L62: ### Accessories
+L63: 
+L64: * PA80: Adapts Rain Bird Spray Sprinkler Bodies for use with any 1/2" (15/21) FPT bubbler
+L65: 
+L66: ## Related Documents
+L67: 
+L68: [Select]
+L69: 
+L70: [Input]
+L71: 
+L72: cite9†1300A-F and 1400 Series Bubblers Tech Spec L73: 
+L74: cite10†Bubbler Heads Tech Spec L75: ## Related Products
+L76: 
+L77: Copyright © 2026 Rain Bird Corporation. All rights reserved. | cite11†Your Privacy Choices --------------------------------------------------------------------------------
+1300A-F Adjustable Full-Circle Bubbler | Rain Bird (https://www.rainbird.com/products/1300a-f-adjustable-full-circle-bubbler)
+citeturn401view1 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://www.rainbird.com/products/1300a-f-adjustable-full-circle-bubbler","lineno":null}); Total lines: 71
+L0: cite0†iframe†www.googletagmanager.com L1: 
+L2: cite1†Image: Rain Bird 1300 Flower Bubbler L3: 
+L4: cite2†Image: Rain Bird 1300 Flower Bubbler cite3†Image: 1300 Bubbler in action L5: 
+L6: # 1300A-F Adjustable Full-Circle Bubbler
+L7: ##
+L8: 
+L9: Rain Bird 1300 Series Flower Bubblers provide a controlled, gentle umbrella of water for irrigating trees, flowers and shrub areas. Mount these bubblers on ½" male risers to effectively water areas from 1' to 3'.
+L10: 
+L11: cite4†Buy Now†store.rainbird.com L12: 
+L13:   * cite5†Features L14:   * cite6†Specs L15:   * cite7†Models L16:   * cite8†Documents L17:   * cite9†Related Products L18: ## Features
+L19: 
+L20: Stainless steel adjustment screw regulates flow and radius for spacing between from 1 to 3 feet (0.3 m to 0.9 m) apart
+L21: 
+L22: Non-corrosive plastic and stainless steel construction for long life
+L23: 
+L24: Shipped with SR-050 ½" (15/21) inlet filter screen for easy installation and resistance to debris
+L25: 
+L26: Operates over a wide range of pressures
+L27: 
+L28: Full circle pattern only
+L29: 
+L30: Five-year trade warranty
+L31: ## Specs
+L32: 
+L33: Flow: 1.0 to 2.3 gpm (3.6 to 8.4 l/m)
+L34: 
+L35: Spacing: 1 to 3 feet (0.3 m to 0.9 m)*
+L36: 
+L37: Pressure: 10 to 60 psi (0.7 to 4.1 bar)**
+L38: 
+L39: * These ranges are based on proper pressure at nozzle
+L40: 
+L41: ** Rain Bird recommends using 1800 PRS Spray Bodies to maintain optimum nozzle performance in higher pressure situations
+L42: 
+L43: Dimensions
+L44: 
+L45: Inlet: ½-inch female threaded
+L46: 
+L47: Height: 1"
+L48: 
+L49: Top diameter: 1"
+L50: 
+L51: ## Model Comparison
+L52: 
+L53: ###
+L54: 
+L55: * 1300A-F
+L56: ## Related Documents
+L57: 
+L58: [Select]
+L59: 
+L60: [Input]
+L61: 
+L62: cite10†1300A-F Performance Chart L63: 
+L64: cite11†1300A-F and 1400 Series Bubblers Tech Spec L65: 
+L66: cite12†Bubbler Heads Tech Spec L67: 
+L68: ## Related Products
+L69: 
+L70: Copyright © 2026 Rain Bird Corporation. All rights reserved. | cite13†Your Privacy Choices 

@@ -1,0 +1,23 @@
+{
+  "verifiedOn": "2026-10-10",
+  "test": "scripts/krain-recheck.test.mjs",
+  "passed": 11,
+  "failed": 0,
+  "baseRows": 764,
+  "disputedBaseRows": 17,
+  "manualRowsPreserved": 743,
+  "highLowRowsWithoutFootprint": 4,
+  "automaticRadiusEndpoints": 1432,
+  "manualReductionEndpoints": 716,
+  "bodyAndSnapshotConfigurations": 34,
+  "reducedFlowPoints": 162,
+  "verifiedReducedFlowPoints": 159,
+  "disputedReducedFlowPoints": 3,
+  "estimatedRN80To89Cases": 27,
+  "groupedPlaceableModels": 70,
+  "notes": [
+    "RPS75i standard1.5 at3.4bar square precipitation staysnull,7.6L/min and9mm/h triangle preserved",
+    "No browser QA or publication attempted",
+    "No application/catalog changes by this agent"
+  ]
+}

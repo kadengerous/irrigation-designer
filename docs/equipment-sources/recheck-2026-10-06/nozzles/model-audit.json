@@ -1,0 +1,545 @@
+[
+  {
+    "modelId": "RN100-ADJ-90-210",
+    "rows": 15,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN100-ADJ-210-270",
+    "rows": 10,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN100-FIX360",
+    "rows": 5,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN200-ADJ-90-210",
+    "rows": 15,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN200-ADJ-210-270",
+    "rows": 10,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN200-FIX360",
+    "rows": 5,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN300-ADJ-90-210",
+    "rows": 15,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN300-ADJ-210-270",
+    "rows": 10,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN300-FIX360",
+    "rows": 5,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RNS-RES-515",
+    "rows": 5,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "RNS-LES-515",
+    "rows": 5,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "RNS-SS-530",
+    "rows": 5,
+    "sourcePage": 40,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "RN100-ADJ",
+    "rows": 9,
+    "sourcePage": 43,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN200-ADJ",
+    "rows": 9,
+    "sourcePage": 43,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "RN300-ADJ",
+    "rows": 9,
+    "sourcePage": 43,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KVF6",
+    "rows": 16,
+    "sourcePage": 44,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle; KVF6 one square cell excluded"
+  },
+  {
+    "modelId": "KVF8",
+    "rows": 16,
+    "sourcePage": 44,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KVF10",
+    "rows": 16,
+    "sourcePage": 44,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KVF12",
+    "rows": 16,
+    "sourcePage": 45,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KVF15",
+    "rows": 16,
+    "sourcePage": 45,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KVF17",
+    "rows": 16,
+    "sourcePage": 45,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KV8",
+    "rows": 16,
+    "sourcePage": 46,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KV10",
+    "rows": 16,
+    "sourcePage": 46,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KV12",
+    "rows": 16,
+    "sourcePage": 46,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KV15",
+    "rows": 16,
+    "sourcePage": 47,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "KV17",
+    "rows": 16,
+    "sourcePage": 47,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-8Q",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-8H",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-8TQ",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-8F",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-10Q",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-10H",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-10TQ",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-10F",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-12Q",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-12H",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-12TQ",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-12F",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-15Q",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-15H",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-15TQ",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "FN-15F",
+    "rows": 3,
+    "sourcePage": 48,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P12Q",
+    "rows": 4,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [
+      2,
+      3
+    ],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P12H",
+    "rows": 4,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [
+      2,
+      3
+    ],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P12TQ",
+    "rows": 4,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [
+      2,
+      3
+    ],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P12F",
+    "rows": 4,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [
+      2,
+      3
+    ],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P15Q",
+    "rows": 4,
+    "sourcePage": 49,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P15H",
+    "rows": 4,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [
+      2,
+      3
+    ],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P15TQ",
+    "rows": 4,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [
+      0
+    ],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P15F",
+    "rows": 4,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [
+      0,
+      2,
+      3
+    ],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "published square/triangle"
+  },
+  {
+    "modelId": "P15CS",
+    "rows": 2,
+    "sourcePage": 49,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "FN-15CS",
+    "rows": 2,
+    "sourcePage": 49,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "P15ES",
+    "rows": 2,
+    "sourcePage": 49,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "FN-15ES",
+    "rows": 2,
+    "sourcePage": 49,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "P15SS",
+    "rows": 2,
+    "sourcePage": 49,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "FN-15SS",
+    "rows": 2,
+    "sourcePage": 49,
+    "currentVerification": "Verified",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Verified",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "P15HL",
+    "rows": 2,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Needs Review",
+    "precipitationStatus": "unpublished for special pattern"
+  },
+  {
+    "modelId": "FN-15HL",
+    "rows": 2,
+    "sourcePage": 49,
+    "currentVerification": "Needs Review",
+    "disputedHydraulicRows": [],
+    "geometryStatus": "Needs Review",
+    "precipitationStatus": "unpublished for special pattern"
+  }
+]

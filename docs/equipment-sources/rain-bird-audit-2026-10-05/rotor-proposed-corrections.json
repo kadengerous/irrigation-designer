@@ -1,0 +1,477 @@
+{
+  "summary": {
+    "date": "2026-10-05",
+    "originalRecords": 26,
+    "rotorRecords": 7,
+    "bodyRecords": 19,
+    "newBodyRecords": 2,
+    "proposedRecords": 28,
+    "nozzleEntries": 94,
+    "performanceRows": 567,
+    "uniquePerformanceRows": 371,
+    "previousNeedsReview": 4,
+    "resolvedNeedsReview": 4,
+    "remainingNeedsReview": 0,
+    "newNeedsReview": 0,
+    "flowLMinCellsChanged": 3,
+    "precipitationCellsCleared": 26,
+    "precipitationRoundingCellsChanged": 1,
+    "allM3HNormalized": true,
+    "unknownReducedRadiusFlows": "3500,5000,5000Plus,5000PRS,Falcon6504;8005reductionrange also unpublished in reviewedcurrentdocs",
+    "sourceCatalog": "Current officialcommercialcataloglinks resolve to2023;2026catalog is consumerproducts anddoesnot replace these commercialtables."
+  },
+  "fieldCorrections": [
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:6/performance/4.5/flowLMin",
+      "old": 28.2,
+      "new": 27.333333,
+      "reason": "Published1.64m3/h converts to27.333333L/min, independently corroborated by65psi7.22GPM=27.330673L/min; reject inconsistent28.2L/min cell.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/2.0/precipSquareMmH",
+      "old": 32.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/2.0/precipTriangleMmH",
+      "old": 37.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/2.5/precipSquareMmH",
+      "old": 24.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/2.5/precipTriangleMmH",
+      "old": 28.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/3.0/precipSquareMmH",
+      "old": 23.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/3.0/precipTriangleMmH",
+      "old": 27.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/3.5/precipSquareMmH",
+      "old": 20.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/3.5/precipTriangleMmH",
+      "old": 24.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/4.0/precipSquareMmH",
+      "old": 21.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "field": "nozzles/rain-bird:5000:8/performance/4.0/precipTriangleMmH",
+      "old": 25.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:6/performance/4.5/flowLMin",
+      "old": 28.2,
+      "new": 27.333333,
+      "reason": "Published1.64m3/h converts to27.333333L/min, independently corroborated by65psi7.22GPM=27.330673L/min; reject inconsistent28.2L/min cell.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/2.0/precipSquareMmH",
+      "old": 32.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/2.0/precipTriangleMmH",
+      "old": 37.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/2.5/precipSquareMmH",
+      "old": 24.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/2.5/precipTriangleMmH",
+      "old": 28.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/3.0/precipSquareMmH",
+      "old": 23.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/3.0/precipTriangleMmH",
+      "old": 27.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/3.5/precipSquareMmH",
+      "old": 20.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/3.5/precipTriangleMmH",
+      "old": 24.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/4.0/precipSquareMmH",
+      "old": 21.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "field": "nozzles/rain-bird:5000:8/performance/4.0/precipTriangleMmH",
+      "old": 25.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "nozzles/rain-bird:5000-PRS:4/performance/2.0/precipTriangleMmH",
+      "old": 12.6,
+      "new": 13,
+      "reason": "Current tech spec rounds12.6 to13mm/h, consistent with2023catalog.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "nozzles/rain-bird:5000-PRS:4/performance/3.0/flowLMin",
+      "old": 16.8,
+      "new": 14.833333,
+      "reason": "Published0.89m3/h converts to14.833333L/min. SamePRS imperial35psi3.50/45psi4.01GPM brackets corroborate14.8921L/min at3bar; reject16.8L/min. This is unit conversion of publishedm3/h, not a fabricated measured row or a borrowed bare-rotor curve.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "nozzles/rain-bird:5000-PRS:8/performance/2.0/precipSquareMmH",
+      "old": 32.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "nozzles/rain-bird:5000-PRS:8/performance/2.0/precipTriangleMmH",
+      "old": 37.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "nozzles/rain-bird:5000-PRS:8/performance/2.5/precipSquareMmH",
+      "old": 24.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "nozzles/rain-bird:5000-PRS:8/performance/2.5/precipTriangleMmH",
+      "old": 18.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "nozzles/rain-bird:5000-PRS:8/performance/3.0/precipSquareMmH",
+      "old": 23.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "nozzles/rain-bird:5000-PRS:8/performance/3.0/precipTriangleMmH",
+      "old": 27.0,
+      "new": null,
+      "reason": "Material precipitation conflict with same-row radius/flow and explicitly stated half-circle50%-diameter spacing; unresolved publishedprecipitation omitted. No pressure/radius/flow row removed.",
+      "sources": [
+        {
+          "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "itemId": "rain-bird:1802",
+      "field": "nozzleCompatibilitySeries",
+      "old": [
+        "HE-VAN",
+        "VAN",
+        "MPR",
+        "U-Series",
+        "SQ",
+        "R-VAN"
+      ],
+      "new": [
+        "HE-VAN",
+        "VAN",
+        "MPR",
+        "U-Series",
+        "SQ"
+      ],
+      "reason": "Current official R-VAN store listing explicitly excludes1802/1803 spray bodies.",
+      "sources": "https://store.rainbird.com/r-van24-17-24-ft-adjustable-rotary-nozzles-45-to-270-degree.html"
+    },
+    {
+      "itemId": "rain-bird:3504-PC",
+      "field": "verificationStatus",
+      "old": "Needs Review",
+      "new": "Verified",
+      "reason": "Active hydraulic fields resolved by field-level evidence; deliberately unavailable reduced-radius flow/precipitation remain unknown and do not create invented calculations.",
+      "sources": []
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "field": "verificationStatus",
+      "old": "Needs Review",
+      "new": "Verified",
+      "reason": "Active hydraulic fields resolved by field-level evidence; deliberately unavailable reduced-radius flow/precipitation remain unknown and do not create invented calculations.",
+      "sources": []
+    },
+    {
+      "itemId": "rain-bird:6504-PC",
+      "field": "verificationStatus",
+      "old": "Needs Review",
+      "new": "Verified",
+      "reason": "Active hydraulic fields resolved by field-level evidence; deliberately unavailable reduced-radius flow/precipitation remain unknown and do not create invented calculations.",
+      "sources": []
+    },
+    {
+      "itemId": "rain-bird:6504-FC",
+      "field": "verificationStatus",
+      "old": "Needs Review",
+      "new": "Verified",
+      "reason": "Active hydraulic fields resolved by field-level evidence; deliberately unavailable reduced-radius flow/precipitation remain unknown and do not create invented calculations.",
+      "sources": []
+    }
+  ],
+  "newItemIds": [
+    "rain-bird:1802-PRS",
+    "rain-bird:1803-PRS"
+  ],
+  "notes": [
+    "Apply byitemId only. Do not replace otherRainBirdfamilies.",
+    "All567flowM3H fields are deterministicconversion ofselectedflowLMin. Rawvaluespreservedseparately.",
+    "Unknownprecipitation remainsnull; reduced-radiusflow remainsunknown;no rowdeleted."
+  ]
+}

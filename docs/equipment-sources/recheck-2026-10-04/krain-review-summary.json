@@ -1,0 +1,55 @@
+{
+  "verifiedOn": "2026-10-04",
+  "recordsReviewed": 84,
+  "priorVerifiedRechecked": 51,
+  "priorNeedsReview": 33,
+  "statusCounts": {
+    "Verified": 73,
+    "Needs Review": 11
+  },
+  "previousReviewResolved": 22,
+  "remainingNeedsReview": 11,
+  "hydraulicallyVerifiedNonBodyModels": 58,
+  "hydraulicallyUnresolvedModels": [
+    "P12Q",
+    "P12H",
+    "P12TQ",
+    "P12F",
+    "P15H",
+    "P15TQ",
+    "P15F",
+    "RPS-Select",
+    "SuperPro"
+  ],
+  "footprintOnlyUnresolvedModels": [
+    "P15HL",
+    "FN-15HL"
+  ],
+  "baseRowsRechecked": 764,
+  "reductionRowsRechecked": 162,
+  "bodyRecordsRechecked": 17,
+  "numericCellsCorrectedFromCorroboratedOfficialValues": 20,
+  "precipitationCellsMadeNull": 108,
+  "noPerformanceRowsDeleted": true,
+  "noSyntheticHydraulicRowsAdded": true,
+  "officialPdfsRefetched": 28,
+  "allSourceHashesUnchanged": true,
+  "newNeedsReviewModels": 0,
+  "previousVerifiedRetained": 51,
+  "resolvedByReason": {
+    "pressureSpecificRangesOverrideNominal": 5,
+    "fullyAdjustableCatalogAuthorityAndOneCorroboratedRadiusFix": 3,
+    "corroboratedFn12FlowCorrections": 4,
+    "corroboratedRps75FlowCorrections": 1,
+    "verifiedHydraulicsWithDisputedPrecipitationNull": 3,
+    "explicitMetricSpecialStripTableAuthority": 6
+  },
+  "excludedFromPlacement": [
+    "P15HL",
+    "FN-15HL"
+  ],
+  "notIncludedDueToMissingPerformance": [
+    "KV5"
+  ],
+  "missingPerformanceCountOutside84": 1
+}

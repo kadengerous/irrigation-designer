@@ -1,0 +1,76 @@
+{
+  "checkedOn": "2026-10-10",
+  "baselineVersion": 445,
+  "baselineCommit": "74cad5e99069d9d4251e95d871607d8cba873361",
+  "tests": {
+    "passed": 97,
+    "failed": 0,
+    "catalogModels": 461,
+    "modelsWithSupportedAnimation": 460,
+    "unknownPatternsRetained": 1,
+    "validatedStreamPoints": 2567136,
+    "typecheck": "passed"
+  },
+  "nativeCanvas": {
+    "renderer": "Actual WateringHead Konva sceneFunc via ReactKonvaCore and @napi-rs/canvas",
+    "limitation": "Native paint timing only; excludes browser compositing and does not measure browser FPS.",
+    "before": [
+      {
+        "pxPerM": 18,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 133.3450799166666,
+        "medianMs": 132.77941699999997,
+        "p95Ms": 139.78204099999994
+      },
+      {
+        "pxPerM": 36,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 132.91459033333328,
+        "medianMs": 133.067583,
+        "p95Ms": 133.95008400000006
+      },
+      {
+        "pxPerM": 72,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 133.3427639166667,
+        "medianMs": 133.18866700000035,
+        "p95Ms": 135.15175
+      }
+    ],
+    "after": [
+      {
+        "pxPerM": 18,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 7.715388833333312,
+        "medianMs": 7.615957999999864,
+        "p95Ms": 8.767750000000092
+      },
+      {
+        "pxPerM": 36,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 10.413437416666662,
+        "medianMs": 10.441708000000062,
+        "p95Ms": 10.68208299999992
+      },
+      {
+        "pxPerM": 72,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 12.79855191666663,
+        "medianMs": 12.752707999999984,
+        "p95Ms": 13.233916000000136
+      }
+    ],
+    "visuallyInspected": [
+      "contact-sheet.png",
+      "mp-motion-frames.png"
+    ]
+  },
+  "browserCheck": "Previously blocked by automatic approval review; no alternative browser or transport attempted",
+  "scope": "Visual morphology and rendering only; manufacturer pressure/radius/sector/flow and project data preserved"
+}

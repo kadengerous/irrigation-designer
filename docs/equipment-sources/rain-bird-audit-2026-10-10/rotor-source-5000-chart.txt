@@ -1,0 +1,393 @@
+ (https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf)
+citeturn386view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf","lineno":0}); Total lines: 465
+L0@P0: 42 The Intelligent Use of Water.™
+L1@P0: Rotors
+L2@P0: Rotors
+L3@P0: 5000 Series
+L4@P0: Precipitation rates based on half-circle operation
+L5@P0: n Square spacing based on 50% diameter of throw
+L6@P0: s Triangular spacing based on 50% diameter of throw
+L7@P0: Performance data collected in zero wind conditions
+L8@P0: Performance data derived from tests that conform with ASABE Standards; ASABE S398.1.
+L9@P0: See page 198 for complete ASABE Test Certification Statement.
+L10@P0: Pressure
+L11@P0: psi
+L12@P0: Nozzle Radius
+L13@P0: ft.
+L14@P0: Flow
+L15@P0: gpm
+L16@P0: n
+L17@P0: Precip
+L18@P0: In/h
+L19@P0: s
+L20@P0: Precip
+L21@P0: In/h
+L22@P0: 25 1.5 33 1.12 0.20 0.23
+L23@P0: 2.0 35 1.50 0.24 0.27
+L24@P0: 2.5 35 1.81 0.28 0.33
+L25@P0: 3.0 36 2.26 0.34 0.39
+L26@P0: 4.0 36 2.91 0.43 0.49
+L27@P0: 5.0 37 3.72 0.52 0.60
+L28@P0: 6.0 37 4.25 0.60 0.69
+L29@P0: 8.0 33 5.90 1.26 1.50
+L30@P0: 35 1.5 34 1.35 0.22 0.26
+L31@P0: 2.0 36 1.81 0.27 0.31
+L32@P0: 2.5 37 2.17 0.31 0.35
+L33@P0: 3.0 38 2.71 0.36 0.42
+L34@P0: 4.0 40 3.50 0.42 0.49
+L35@P0: 5.0 41 4.47 0.51 0.59
+L36@P0: 6.0 43 5.23 0.54 0.63
+L37@P0: 8.0 41 7.06 0.94 1.10
+L38@P0: 45 1.5 35 1.54 0.24 0.28
+L39@P0: 2.0 37 2.07 0.29 0.34
+L40@P0: 2.5 37 2.51 0.35 0.41
+L41@P0: 3.0 39 3.09 0.37 0.43
+L42@P0: 4.0 42 4.01 0.44 0.51
+L43@P0: 5.0 43 5.09 0.48 0.56
+L44@P0: 6.0 44 6.01 0.59 0.69
+L45@P0: 8.0 44 8.03 0.92 1.06
+L46@P0: 55 1.5 35 1.71 0.27 0.31
+L47@P0: 2.0 37 2.30 0.32 0.37
+L48@P0: 2.5 37 2.76 0.39 0.45
+L49@P0: 3.0 40 3.47 0.42 0.48
+L50@P0: 4.0 42 4.44 0.48 0.56
+L51@P0: 5.0 45 5.66 0.54 0.62
+L52@P0: 6.0 50 6.63 0.51 0.59
+L53@P0: 8.0 47 8.86 0.80 0.93
+L54@P0: 65 1.5 34 1.86 0.31 0.36
+L55@P0: 2.0 35 2.52 0.40 0.46
+L56@P0: 2.5 37 3.01 0.42 0.49
+L57@P0: 3.0 40 3.78 0.45 0.53
+L58@P0: 4.0 42 4.83 0.53 0.61
+L59@P0: 5.0 45 6.16 0.59 0.68
+L60@P0: 6.0 50 7.22 0.55 0.64
+L61@P0: 8.0 48 9.63 0.84 0.97
+L62@P0: 5000 Series Std. Angle Rain Curtain™ Nozzle Performance
+L63@P0: Pressure
+L64@P0: bar
+L65@P0: Nozzle Radius
+L66@P0: m
+L67@P0: Flow
+L68@P0: m3/h
+L69@P0: Flow
+L70@P0: l/m
+L71@P0: n
+L72@P0: Precip
+L73@P0: mm/h
+L74@P0: s
+L75@P0: Precip
+L76@P0: mm/h
+L77@P0: 2.0 1.5 10.2 0.28 4.8 5 6
+L78@P0: 2.0 10.8 0.36 6.0 6 7
+L79@P0: 2.5 10.9 0.44 7.2 7 9
+L80@P0: 3.0 11.2 0.55 9.0 9 10
+L81@P0: 4.0 11.6 0.71 12.0 11 12
+L82@P0: 5.0 12.1 0.91 15.0 13 15
+L83@P0: 6.0 12.4 1.05 17.4 15 17
+L84@P0: 8.0 11.8 1.45 24.0 32 37
+L85@P0: 2.5 1.5 10.4 0.31 5.4 6 7
+L86@P0: 2.0 11.0 0.41 6.6 7 8
+L87@P0: 2.5 11.3 0.50 8.4 8 9
+L88@P0: 3.0 11.2 0.62 10.2 9 11
+L89@P0: 4.0 12.3 0.81 13.2 11 13
+L90@P0: 5.0 12.7 1.03 17.4 13 15
+L91@P0: 6.0 13.2 1.21 20.4 14 16
+L92@P0: 8.0 13.3 1.63 27.0 24 28
+L93@P0: 3.0 1.5 10.6 0.34 6.0 6 7
+L94@P0: 2.0 11.2 0.45 7.8 7 8
+L95@P0: 2.5 11.3 0.56 9.6 9 10
+L96@P0: 3.0 12.1 0.69 11.4 9 11
+L97@P0: 4.0 12.7 0.89 15.0 11 13
+L98@P0: 5.0 13.5 1.13 18.6 12 14
+L99@P0: 6.0 13.4 1.34 22.2 13 17
+L100@P0: 8.0 13.4 1.79 30.0 23 27
+L101@P0: 3.5 1.5 10.7 0.37 6.0 7 8
+L102@P0: 2.0 11.3 0.49 8.4 8 9
+L103@P0: 2.5 11.3 0.60 10.2 9 11
+L104@P0: 3.0 12.2 0.74 12.6 10 12
+L105@P0: 4.0 12.8 0.97 16.2 12 14
+L106@P0: 5.0 13.7 1.23 20.4 13 15
+L107@P0: 6.0 14.2 1.45 24.0 13 15
+L108@P0: 8.0 14.9 1.93 32.4 20 24
+L109@P0: 4.0 1.5 10.6 0.40 6.6 7 8
+L110@P0: 2.0 11.1 0.52 9.0 8 10
+L111@P0: 2.5 11.3 0.64 10.8 10 12
+L112@P0: 3.0 12.2 0.80 13.2 11 12
+L113@P0: 4.0 12.8 1.04 17.4 13 15
+L114@P0: 5.0 13.7 1.32 22.2 14 16
+L115@P0: 6.0 14.9 1.55 25.8 14 16
+L116@P0: 8.0 15.2 2.06 34.2 21 25
+L117@P0: 4.5 1.5 10.4 0.42 7.2 8 9
+L118@P0: 2.0 10.7 0.55 9.0 10 11
+L119@P0: 2.5 11.3 0.68 11.4 11 12
+L120@P0: 3.0 12.2 0.84 13.8 11 13
+L121@P0: 4.0 12.8 1.10 18.0 13 15
+L122@P0: 5.0 13.7 1.40 23.4 15 17
+L123@P0: 6.0 14.6 1.64 28.2 15 18
+L124@P0: 8.0 15.2 2.19 36.6 19 22
+L125@P0-1: 5000 Series Std. Angle Rain Curtain™ Nozzle Performance METRICwww.rainbird.com/rotors
+L126@P1: www.rainbird.com 43
+L127@P1: Rotors
+L128@P1: Rotors
+L129@P1: 5000 Series
+L130@P1: Precipitation rates based on half-circle operation
+L131@P1: n Square spacing based on 50% diameter of throw
+L132@P1: s Triangular spacing based on 50% diameter of throw
+L133@P1: Performance data collected in zero wind conditions
+L134@P1: Performance data derived from tests that conform with ASABE Standards; ASABE S398.1.
+L135@P1: See page 198 for complete ASABE Test Certification Statement.
+L136@P1: All nozzles are numbered
+L137@P1: in gallons per minute and
+L138@P1: keyed for easy installation. Front View
+L139@P1: Both low angle 10°
+L140@P1: and standard 25°
+L141@P1: nozzles are included.
+L142@P1: Tools
+L143@P1: Holdup Tool with
+L144@P1: Bubble Level
+L145@P1: Features
+L146@P1: • Combination holdup tool/bubble
+L147@P1: level makes proper installation easier
+L148@P1: • Works with 5000, Falcon® 6504, and
+L149@P1: 8005
+L150@P1: Model
+L151@P1: • HOLDUPTOOL
+L152@P1: HOLDUPTOOL
+L153@P1: Rotor Tool
+L154@P1: Features
+L155@P1: • Flat blade screwdriver and
+L156@P1: pull-up tool all in one
+L157@P1: • Works with 3500, 5000,
+L158@P1: Falcon® 6504, and 8005
+L159@P1: Model
+L160@P1: • ROTORTOOL
+L161@P1: ROTORTOOL
+L162@P1: Pressure
+L163@P1: psi
+L164@P1: Nozzle Radius
+L165@P1: ft.
+L166@P1: Flow
+L167@P1: gpm
+L168@P1: n
+L169@P1: Precip
+L170@P1: In/h
+L171@P1: s
+L172@P1: Precip
+L173@P1: In/h
+L174@P1: 25 1.0 LA 25 0.76 0.23 0.27
+L175@P1: 1.5 LA 27 1.15 0.30 0.35
+L176@P1: 2.0 LA 29 1.47 0.34 0.39
+L177@P1: 3.0 LA 29 2.23 0.51 0.59
+L178@P1: 35 1.0 LA 28 0.92 0.23 0.26
+L179@P1: 1.5 LA 30 1.38 0.30 0.34
+L180@P1: 2.0 LA 31 1.77 0.35 0.41
+L181@P1: 3.0 LA 33 2.68 0.47 0.55
+L182@P1: 45 1.0 LA 29 1.05 0.24 0.28
+L183@P1: 1.5 LA 31 1.58 0.32 0.37
+L184@P1: 2.0 LA 32 2.02 0.38 0.44
+L185@P1: 3.0 LA 35 3.07 0.48 0.56
+L186@P1: 55 1.0 LA 29 1.17 0.27 0.31
+L187@P1: 1.5 LA 31 1.76 0.35 0.41
+L188@P1: 2.0 LA 33 2.24 0.40 0.46
+L189@P1: 3.0 LA 36 3.41 0.51 0.58
+L190@P1: 65 1.0 LA 29 1.27 0.29 0.34
+L191@P1: 1.5 LA 31 1.92 0.38 0.44
+L192@P1: 2.0 LA 33 2.45 0.43 0.50
+L193@P1: 3.0 LA 36 3.72 0.55 0.64
+L194@P1: 5000 Series Low Angle Nozzle Performance
+L195@P1: Pressure
+L196@P1: bar
+L197@P1: Nozzle Radius
+L198@P1: m
+L199@P1: Flow
+L200@P1: m3/h
+L201@P1: Flow
+L202@P1: l/m
+L203@P1: n
+L204@P1: Precip
+L205@P1: mm/h
+L206@P1: s
+L207@P1: Precip
+L208@P1: mm/h
+L209@P1: 1.7 1.0 LA 7.6 0.17 3.0 6 7
+L210@P1: 1.5 LA 8.2 0.26 4.2 8 9
+L211@P1: 2.0 LA 8.8 0.33 5.4 9 10
+L212@P1: 3.0 LA 8.8 0.51 8.4 13 15
+L213@P1: 2.0 1.0 LA 8.0 0.18 3.0 6 6
+L214@P1: 1.5 LA 8.6 0.28 4.8 8 9
+L215@P1: 2.0 LA 9.1 0.36 6.0 9 10
+L216@P1: 3.0 LA 9.3 0.55 9.0 13 15
+L217@P1: 2.5 1.0 LA 8.6 0.20 3.6 5 6
+L218@P1: 1.5 LA 9.2 0.32 5.4 8 9
+L219@P1: 2.0 LA 9.5 0.41 6.6 9 10
+L220@P1: 3.0 LA 10.1 0.62 10.2 12 14
+L221@P1: 3.0 1.0 LA 8.8 0.22 3.6 6 7
+L222@P1: 1.5 LA 9.4 0.35 6.0 8 9
+L223@P1: 2.0 LA 9.7 0.45 7.8 10 11
+L224@P1: 3.0 LA 10.6 0.68 11.4 12 14
+L225@P1: 3.5 1.0 LA 8.8 0.24 4.2 6 7
+L226@P1: 1.5 LA 9.4 0.38 6.6 9 10
+L227@P1: 2.0 LA 9.9 0.49 8.4 10 11
+L228@P1: 3.0 LA 10.8 0.74 12.6 13 15
+L229@P1: 4.0 1.0 LA 8.8 0.26 4.2 7 8
+L230@P1: 1.5 LA 9.4 0.41 6.6 9 11
+L231@P1: 2.0 LA 10.1 0.52 9.0 10 12
+L232@P1: 3.0 LA 11.0 0.80 13.2 13 15
+L233@P1: 4.5 1.0 LA 8.8 0.27 4.8 7 8
+L234@P1: 1.5 LA 9.4 0.44 7.2 10 11
+L235@P1: 2.0 LA 10.1 0.56 9.0 11 13
+L236@P1: 3.0 LA 11.0 0.84 13.8 14 16
+L237@P1-2: 5000 Series Low Angle Nozzle Performance METRIC44 The Intelligent Use of Water.™
+L238@P2: Rotors
+L239@P2: Precipitation rates based on half-circle operation
+L240@P2: n Square spacing based on 50% diameter of throw
+L241@P2: s Triangular spacing based on 50% diameter of throw
+L242@P2: Performance data collected in zero wind conditions
+L243@P2: Performance data derived from tests that conform with ASABE Standards; ASABE S398.1.
+L244@P2: See page 198 for complete ASABE Test Certification Statement.
+L245@P2: Rotors
+L246@P2: 5000 Series
+L247@P2: Pressure
+L248@P2: psi
+L249@P2: Nozzle Radius
+L250@P2: ft.
+L251@P2: Flow
+L252@P2: gpm
+L253@P2: n
+L254@P2: Precip
+L255@P2: In/h
+L256@P2: s
+L257@P2: Precip
+L258@P2: In/h
+L259@P2: 25 1.5 33 1.12 0.2 0.23
+L260@P2: 2.0 35 1.5 0.24 0.27
+L261@P2: 2.5 35 1.81 0.28 0.33
+L262@P2: 3.0 36 2.26 0.34 0.39
+L263@P2: 4.0 36 2.91 0.43 0.49
+L264@P2: 5.0 37 3.72 0.52 0.66
+L265@P2: 6.0 37 4.25 0.60 0.69
+L266@P2: 8.0 33 5.9 1.26 1.5
+L267@P2: 35 1.5 34 1.35 0.22 0.26
+L268@P2: 2.0 36 1.81 0.27 0.31
+L269@P2: 2.5 37 2.17 0.31 0.35
+L270@P2: 3.0 38 2.71 0.36 0.41
+L271@P2: 4.0 40 3.5 0.42 0.49
+L272@P2: 5.0 41 4.47 0.51 0.59
+L273@P2: 6.0 43 5.23 0.54 0.63
+L274@P2: 8.0 41 7.06 0.94 1.1
+L275@P2: 45 1.5 35 1.54 0.24 0.28
+L276@P2: 2.0 37 2.07 0.29 0.34
+L277@P2: 2.5 37 2.51 0.35 0.41
+L278@P2: 3.0 39 3.09 0.37 0.43
+L279@P2: 4.0 42 4.01 0.44 0.51
+L280@P2: 5.0 43 5.09 0.48 0.56
+L281@P2: 6.0 44 6.01 0.55 0.63
+L282@P2: 8.0 44 8.03 0.92 1.06
+L283@P2: 55 – 75 1.5 35 1.59 0.25 0.29
+L284@P2: 2.0 37 2.14 0.3 0.35
+L285@P2: 2.5 37 2.6 0.37 0.42
+L286@P2: 3.0 39 3.2 0.39 0.44
+L287@P2: 4.0 42 4.15 0.45 0.52
+L288@P2: 5.0 43 5.27 0.5 0.58
+L289@P2: 6.0 44 6.22 0.57 0.65
+L290@P2: 8.0 44 8.31 0.72 0.84
+L291@P2: 5000 PRS Std. Angle Rain Curtain™ Nozzle Performance
+L292@P2: Pressure
+L293@P2: bar
+L294@P2: Nozzle Radius
+L295@P2: m
+L296@P2: Flow
+L297@P2: m3/h
+L298@P2: Flow
+L299@P2: l/m
+L300@P2: n
+L301@P2: Precip
+L302@P2: mm/h
+L303@P2: s
+L304@P2: Precip
+L305@P2: mm/h
+L306@P2: 1.7 1.5 10.1 0.25 4.2 5 6
+L307@P2: 2.0 10.7 0.34 5.4 6 7
+L308@P2: 2.5 10.7 0.41 6.6 7 8
+L309@P2: 3.0 11.0 0.51 8.4 8 10
+L310@P2: 4.0 11.3 0.66 10.8 10 12
+L311@P2: 5.0 11.9 0.84 13.8 12 14
+L312@P2: 6.0 11.9 0.97 16.2 14 16
+L313@P2: 8.0 11.0 1.34 22.2 22 26
+L314@P2: 2.0 1.5 10.2 0.28 4.8 5 6
+L315@P2: 2.0 10.8 0.36 6.0 6 7
+L316@P2: 2.5 10.9 0.44 7.2 7 9
+L317@P2: 3.0 11.2 0.55 9.0 9 10
+L318@P2: 4.0 11.6 0.71 12.0 11 12.6
+L319@P2: 5.0 12.1 0.91 15.0 13 15
+L320@P2: 6.0 12.4 1.05 17.4 15 17
+L321@P2: 8.0 11.8 1.45 24.0 32 37
+L322@P2: 2.5 1.5 10.4 0.31 5.4 6 7
+L323@P2: 2.0 11.0 0.41 6.6 7 8
+L324@P2: 2.5 11.3 0.50 8.4 8 9
+L325@P2: 3.0 11.2 0.62 10.2 9 11
+L326@P2: 4.0 12.3 0.81 13.2 11 13
+L327@P2: 5.0 12.7 1.03 17.4 13 15
+L328@P2: 6.0 13.2 1.21 20.4 14 16
+L329@P2: 8.0 13.3 1.63 27.0 24 18
+L330@P2: 3.0 1.5 10.6 0.34 6.0 6 7
+L331@P2: 2.0 11.2 0.45 7.8 7 8
+L332@P2: 2.5 11.3 0.56 9.6 9 10
+L333@P2: 3.0 12.1 0.69 11.4 9 11
+L334@P2: 4.0 12.7 0.89 16.8 11 13
+L335@P2: 5.0 13.5 1.13 18.6 12 14
+L336@P2: 6.0 13.9 1.34 22.2 14 16
+L337@P2: 8.0 14.1 1.79 30.0 23 27
+L338@P2: 3.5 – 5.2 1.5 10.6 0.35 6.0 6 7
+L339@P2: 2.0 11.2 0.47 7.8 8 9
+L340@P2: 2.5 11.3 0.58 10.2 9 11
+L341@P2: 3.0 12.1 0.71 12.0 10 11
+L342@P2: 4.0 12.7 0.92 15.6 12 13
+L343@P2: 5.0 13.5 1.17 19.2 13 15
+L344@P2: 6.0 13.9 1.39 22.8 14 17
+L345@P2: 8.0 14.1 1.85 31.2 18 21
+L346@P2-3: 5000 PRS Std. Angle Rain Curtain™ Nozzle Performance METRICwww.rainbird.com/rotors
+L347@P3: www.rainbird.com 45
+L348@P3: Rotors
+L349@P3: Rotors
+L350@P3: 5000 Series
+L351@P3: Precipitation rates based on half-circle operation
+L352@P3: n Square spacing based on 50% diameter of throw
+L353@P3: s Triangular spacing based on 50% diameter of throw
+L354@P3: Performance data collected in zero wind conditions
+L355@P3: Performance data derived from tests that conform with ASABE Standards; ASABE S398.1.
+L356@P3: See page 198 for complete ASABE Test Certification Statement. Flow Rate (gpm)
+L357@P3: 15 20 25 30 35 40 45 50 55 60 65 70 75
+L358@P3: 12.0
+L359@P3: 11.0
+L360@P3: 10.0
+L361@P3: 9.0
+L362@P3: 8.0
+L363@P3: 7.0
+L364@P3: 6.0
+L365@P3: 5.0
+L366@P3: 4.0
+L367@P3: 3.0
+L368@P3: 2.0
+L369@P3: 1.0
+L370@P3: 0.0
+L371@P3: Inlet Pressure (psi)
+L372@P3: 8.0 RC - with PRS
+L373@P3: 5.0 RC - with PRS
+L374@P3: 2.0 RC - with PRS
+L375@P3: 8.0 RC - no PRS
+L376@P3: 5.0 RC - no PRS
+L377@P3: 3.0 RC - no PRS
+L378@P3: 2.0 RC - no PRS
+L379@P3: 3.0 RC - with PRS
+L380@P3: Flow 45 50 55 60 65 70 75 80
+L381@P3: GPM
+L382@P3: 6 0 0.33 0.66 0.96 1.25 1.54 1.81 2.06
+L383@P3: 8 0 0.43 0.85 1.24 1.62 1.98 2.33 2.67
+L384@P3: 10 0 0.55 1.07 1.57 2.05 2.52 2.96 3.39
+L385@P3: 12 0 0.66 1.27 1.86 2.43 2.97 3.50 4.01
+L386@P3: 14 0 0.77 1.49 2.18 2.84 3.48 4.10 4.70
+L387@P3: 16 0 0.87 1.69 2.48 3.24 3.97 4.67 5.35
+L388@P3: 18 0 0.98 1.90 2.79 3.64 4.46 5.25 6.01
+L389@P3: 20 0 1.10 2.12 3.10 4.05 4.96 5.83 6.68
+

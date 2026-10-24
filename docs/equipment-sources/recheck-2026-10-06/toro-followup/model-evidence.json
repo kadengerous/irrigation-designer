@@ -1,0 +1,206 @@
+{
+  "checkedOn": "2026-10-06",
+  "psn": {
+    "models": [
+      "toro:PSN15-F",
+      "toro:PSN15T-F"
+    ],
+    "conclusion": "Adopt current product-linked May 2026 chart by explicit primary-source precedence. Not manufacturer-confirmed erratum; retain alternatives for provenance.",
+    "selectedSource": "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+    "modelIdentitySource": "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+    "selectedRows": [
+      {
+        "pressurePsi": 20,
+        "flowGpm": 2.2,
+        "radiusFt": 14.5,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.2,
+        "diagnosticSquareInH": 1.007134,
+        "diagnosticTriangleInH": 1.162939,
+        "directRoundingConsistent": true,
+        "roundingConsistent": true
+      },
+      {
+        "pressurePsi": 30,
+        "flowGpm": 2.31,
+        "radiusFt": 15.0,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1,
+        "diagnosticSquareInH": 0.988167,
+        "diagnosticTriangleInH": 1.141037,
+        "directRoundingConsistent": true,
+        "roundingConsistent": true
+      },
+      {
+        "pressurePsi": 40,
+        "flowGpm": 2.35,
+        "radiusFt": 15.2,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1,
+        "diagnosticSquareInH": 0.978997,
+        "diagnosticTriangleInH": 1.130449,
+        "directRoundingConsistent": true,
+        "roundingConsistent": true
+      },
+      {
+        "pressurePsi": 50,
+        "flowGpm": 2.4,
+        "radiusFt": 15.3,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1,
+        "diagnosticSquareInH": 0.9868,
+        "diagnosticTriangleInH": 1.139458,
+        "directRoundingConsistent": true,
+        "roundingConsistent": true
+      }
+    ],
+    "alternativeRows": [
+      {
+        "pressurePsi": 30,
+        "flowGpm": 1.94,
+        "radiusFt": 14.1,
+        "precipSquareInH": 0.9,
+        "precipTriangleInH": 1.1,
+        "diagnosticSquareInH": 0.939213,
+        "diagnosticTriangleInH": 1.08451,
+        "directRoundingConsistent": true,
+        "roundingConsistent": true
+      },
+      {
+        "pressurePsi": 40,
+        "flowGpm": 2.25,
+        "radiusFt": 14.5,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.2,
+        "diagnosticSquareInH": 1.030024,
+        "diagnosticTriangleInH": 1.189369,
+        "directRoundingConsistent": true,
+        "roundingConsistent": true
+      },
+      {
+        "pressurePsi": 50,
+        "flowGpm": 2.51,
+        "radiusFt": 15.0,
+        "precipSquareInH": 1.1,
+        "precipTriangleInH": 1.2,
+        "diagnosticSquareInH": 1.073722,
+        "diagnosticTriangleInH": 1.239828,
+        "directRoundingConsistent": true,
+        "roundingConsistent": true
+      },
+      {
+        "pressurePsi": 60,
+        "flowGpm": 2.76,
+        "radiusFt": 14.8,
+        "precipSquareInH": 1.2,
+        "precipTriangleInH": 1.4,
+        "diagnosticSquareInH": 1.212792,
+        "diagnosticTriangleInH": 1.400412,
+        "directRoundingConsistent": true,
+        "roundingConsistent": true
+      },
+      {
+        "pressurePsi": 70,
+        "flowGpm": 2.95,
+        "radiusFt": 15.1,
+        "precipSquareInH": 1.3,
+        "precipTriangleInH": 1.4,
+        "diagnosticSquareInH": 1.245285,
+        "diagnosticTriangleInH": 1.437932,
+        "directRoundingConsistent": false,
+        "roundingConsistent": true
+      }
+    ],
+    "alternativeSources": [
+      "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/PSN-CHARTS-ONLY.ashx"
+    ],
+    "modelIdentity": "2026 model list labels male PSN15T-F and female PSN15-F, both 360 degrees. Current chart header uses PSNXX-XX shorthand and states both Toro male and female threads. Older PSN+ chart uses the same PSN15-F identifier; this is a same-SKU publication conflict, not simply PSN versus O.",
+    "predecessorWarning": "Latest 15-F numbers also coincide with older O15-F values. This alone does not prove an erroneous copy or a hardware change. Most other Q/H/F current rows coincide with older PSN+ data.",
+    "internalConsistency": "All four selected rows reproduce printed precipitation with direct one-decimal rounding under a full-circle head-to-head spacing diagnostic. The alternatives are also consistent within their displayed flow/radius precision; at 70 psi the printed square value needs rounding tolerance rather than exact arithmetic from rounded inputs. This check finds no arithmetic reason to reject either table and does not prove Toro intended a correction. Published rows stay unchanged.",
+    "pressureScope": {
+      "selectedMeasuredPsi": [
+        20,
+        30,
+        40,
+        50
+      ],
+      "operatingPsi": [
+        20,
+        75
+      ],
+      "recommendedPsi": 30,
+      "doNotMergeOlderMeasuredPsi": [
+        60,
+        70
+      ]
+    },
+    "sourceDates": {
+      "selectedChartCreated": "2026-05-08",
+      "currentModelListCreated": "2026-05-12",
+      "catalogCreated": "2025-11-12",
+      "catalogModified": "2025-11-19",
+      "legacyChartCreated": "2024-11-11"
+    },
+    "manufacturerErratumFound": false
+  },
+  "t5": {
+    "models": [
+      "toro:T5S-RS",
+      "toro:T5SE-RS"
+    ],
+    "conclusion": "Unresolved factory CV inclusion only; preserve Verified nozzle hydraulics and unverifiedBodyFeatures CV.",
+    "sources": [
+      {
+        "url": "https://www.toro.com/en/product/T5S-RS",
+        "appliesTo": [
+          "T5S-RS"
+        ],
+        "claim": "Check Valve No; Body Type Shrub; also gives 5-inch popup, an inappropriate shrub travel specification.",
+        "date": "current page checked 2026-10-06"
+      },
+      {
+        "url": "https://media.toro.com/CatalogDocuments/Product%20Literature/t5_sell_sheet.pdf",
+        "appliesTo": [
+          "T5S-RS",
+          "T5SE-RS"
+        ],
+        "claim": "15-1009-IRC footnote says CV standard on all shrub models.",
+        "date": "2015; PDF created 2015-09-23"
+      },
+      {
+        "url": "https://www.toro.com.au/media/10635/t5-rapidset-rotors_sell-sheet-april2016_web.pdf",
+        "appliesTo": [
+          "T5S-RS"
+        ],
+        "claim": "Exact model table says shrub with check valve.",
+        "date": "APRIL2016",
+        "access": "Official web-tool PDF text verified; local direct request returned challenge HTML; no bypass attempted."
+      },
+      {
+        "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "appliesTo": [
+          "T5S-RS",
+          "T5SE-RS"
+        ],
+        "claim": "Current linked 20-1009-IRC sheet lists shrub models and optional CV generically, without exact shrub inclusion."
+      },
+      {
+        "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "appliesTo": [
+          "T5S-RS",
+          "T5SE-RS"
+        ],
+        "claim": "2026 catalogue model list gives shrub/effluent descriptions without resolving factory CV."
+      },
+      {
+        "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Rotors/T5-RapidSet-Series/T5-RapidSet-Series-Sprinkler-Bidding-Specs.ashx",
+        "appliesTo": [
+          "T5 series"
+        ],
+        "claim": "2015 bid spec makes CV optional generically; is framed around the five-inch popup and does not establish exact shrub inclusion."
+      }
+    ],
+    "manufacturerChangeNoticeFound": false
+  }
+}

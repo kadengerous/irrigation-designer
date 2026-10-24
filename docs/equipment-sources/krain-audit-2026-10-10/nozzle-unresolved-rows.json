@@ -1,0 +1,468 @@
+{
+  "hydraulicRows": [
+    {
+      "modelId": "P12Q",
+      "nozzleId": "k-rain:P12Q",
+      "rowIndex": 2,
+      "arcDeg": 90,
+      "pressureBar": 2.1,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 2.1,
+        "radiusM": 4.3,
+        "flowLMin": 1.9,
+        "precipSquareMmH": 29.0,
+        "precipTriangleMmH": 33.0,
+        "arcDeg": 90
+      },
+      "pairedUs": {
+        "pressurePsi": 30.0,
+        "radiusFt": 13.0,
+        "flowGpm": 0.5,
+        "precipSquareInH": 1.14,
+        "precipTriangleInH": 1.32,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3275,
+          "lineEnd": 3291
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P12Q",
+      "nozzleId": "k-rain:P12Q",
+      "rowIndex": 3,
+      "arcDeg": 90,
+      "pressureBar": 2.8,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 2.8,
+        "radiusM": 4.6,
+        "flowLMin": 2.3,
+        "precipSquareMmH": 30.0,
+        "precipTriangleMmH": 35.0,
+        "arcDeg": 90
+      },
+      "pairedUs": {
+        "pressurePsi": 40.0,
+        "radiusFt": 14.0,
+        "flowGpm": 0.6,
+        "precipSquareInH": 1.18,
+        "precipTriangleInH": 1.36,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3275,
+          "lineEnd": 3291
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P12H",
+      "nozzleId": "k-rain:P12H",
+      "rowIndex": 2,
+      "arcDeg": 180,
+      "pressureBar": 2.1,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 2.1,
+        "radiusM": 4.3,
+        "flowLMin": 3.8,
+        "precipSquareMmH": 29.0,
+        "precipTriangleMmH": 33.0,
+        "arcDeg": 180
+      },
+      "pairedUs": {
+        "pressurePsi": 30.0,
+        "radiusFt": 13.0,
+        "flowGpm": 1.0,
+        "precipSquareInH": 1.14,
+        "precipTriangleInH": 1.32,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3275,
+          "lineEnd": 3291
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P12H",
+      "nozzleId": "k-rain:P12H",
+      "rowIndex": 3,
+      "arcDeg": 180,
+      "pressureBar": 2.8,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 2.8,
+        "radiusM": 4.6,
+        "flowLMin": 4.6,
+        "precipSquareMmH": 30.0,
+        "precipTriangleMmH": 35.0,
+        "arcDeg": 180
+      },
+      "pairedUs": {
+        "pressurePsi": 40.0,
+        "radiusFt": 14.0,
+        "flowGpm": 1.2,
+        "precipSquareInH": 1.18,
+        "precipTriangleInH": 1.36,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3275,
+          "lineEnd": 3291
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P12TQ",
+      "nozzleId": "k-rain:P12TQ",
+      "rowIndex": 2,
+      "arcDeg": 270,
+      "pressureBar": 2.1,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 2.1,
+        "radiusM": 4.3,
+        "flowLMin": 5.7,
+        "precipSquareMmH": 29.0,
+        "precipTriangleMmH": 33.0,
+        "arcDeg": 270
+      },
+      "pairedUs": {
+        "pressurePsi": 30.0,
+        "radiusFt": 13.0,
+        "flowGpm": 1.5,
+        "precipSquareInH": 1.14,
+        "precipTriangleInH": 1.31,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3275,
+          "lineEnd": 3291
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P12TQ",
+      "nozzleId": "k-rain:P12TQ",
+      "rowIndex": 3,
+      "arcDeg": 270,
+      "pressureBar": 2.8,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 2.8,
+        "radiusM": 4.6,
+        "flowLMin": 6.9,
+        "precipSquareMmH": 30.0,
+        "precipTriangleMmH": 34.0,
+        "arcDeg": 270
+      },
+      "pairedUs": {
+        "pressurePsi": 40.0,
+        "radiusFt": 14.0,
+        "flowGpm": 1.8,
+        "precipSquareInH": 1.18,
+        "precipTriangleInH": 1.36,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3275,
+          "lineEnd": 3291
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P12F",
+      "nozzleId": "k-rain:P12F",
+      "rowIndex": 2,
+      "arcDeg": 360,
+      "pressureBar": 2.1,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 2.1,
+        "radiusM": 4.3,
+        "flowLMin": 7.6,
+        "precipSquareMmH": 29.0,
+        "precipTriangleMmH": 33.0,
+        "arcDeg": 360
+      },
+      "pairedUs": {
+        "pressurePsi": 30.0,
+        "radiusFt": 13.0,
+        "flowGpm": 2.0,
+        "precipSquareInH": 1.14,
+        "precipTriangleInH": 1.32,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3275,
+          "lineEnd": 3291
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P12F",
+      "nozzleId": "k-rain:P12F",
+      "rowIndex": 3,
+      "arcDeg": 360,
+      "pressureBar": 2.8,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 2.8,
+        "radiusM": 4.6,
+        "flowLMin": 9.1,
+        "precipSquareMmH": 30.0,
+        "precipTriangleMmH": 35.0,
+        "arcDeg": 360
+      },
+      "pairedUs": {
+        "pressurePsi": 40.0,
+        "radiusFt": 14.0,
+        "flowGpm": 2.4,
+        "precipSquareInH": 1.18,
+        "precipTriangleInH": 1.36,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3275,
+          "lineEnd": 3291
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P15H",
+      "nozzleId": "k-rain:P15H",
+      "rowIndex": 2,
+      "arcDeg": 180,
+      "pressureBar": 2.8,
+      "conflictingFields": [
+        "pressureBar"
+      ],
+      "metric": {
+        "pressureBar": 2.8,
+        "radiusM": 4.9,
+        "flowLMin": 6.8,
+        "precipSquareMmH": 34.0,
+        "precipTriangleMmH": 40.0,
+        "arcDeg": 180
+      },
+      "pairedUs": {
+        "pressurePsi": 30.0,
+        "radiusFt": 16.0,
+        "flowGpm": 1.8,
+        "precipSquareInH": 1.35,
+        "precipTriangleInH": 1.56,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3309,
+          "lineEnd": 3326
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P15H",
+      "nozzleId": "k-rain:P15H",
+      "rowIndex": 3,
+      "arcDeg": 180,
+      "pressureBar": 3.4,
+      "conflictingFields": [
+        "pressureBar"
+      ],
+      "metric": {
+        "pressureBar": 3.4,
+        "radiusM": 5.2,
+        "flowLMin": 8.3,
+        "precipSquareMmH": 37.0,
+        "precipTriangleMmH": 43.0,
+        "arcDeg": 180
+      },
+      "pairedUs": {
+        "pressurePsi": 40.0,
+        "radiusFt": 17.0,
+        "flowGpm": 2.2,
+        "precipSquareInH": 1.47,
+        "precipTriangleInH": 1.69,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3309,
+          "lineEnd": 3326
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P15TQ",
+      "nozzleId": "k-rain:P15TQ",
+      "rowIndex": 0,
+      "arcDeg": 270,
+      "pressureBar": 1.4,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 1.4,
+        "radiusM": 3.4,
+        "flowLMin": 6.8,
+        "precipSquareMmH": 35.0,
+        "precipTriangleMmH": 40.0,
+        "arcDeg": 270
+      },
+      "pairedUs": {
+        "pressurePsi": 20.0,
+        "radiusFt": 13.0,
+        "flowGpm": 1.8,
+        "precipSquareInH": 1.36,
+        "precipTriangleInH": 1.57,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3309,
+          "lineEnd": 3326
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P15F",
+      "nozzleId": "k-rain:P15F",
+      "rowIndex": 0,
+      "arcDeg": 360,
+      "pressureBar": 1.4,
+      "conflictingFields": [
+        "radiusM"
+      ],
+      "metric": {
+        "pressureBar": 1.4,
+        "radiusM": 3.4,
+        "flowLMin": 9.1,
+        "precipSquareMmH": 35.0,
+        "precipTriangleMmH": 40.0,
+        "arcDeg": 360
+      },
+      "pairedUs": {
+        "pressurePsi": 20.0,
+        "radiusFt": 13.0,
+        "flowGpm": 2.4,
+        "precipSquareInH": 1.37,
+        "precipTriangleInH": 1.58,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3309,
+          "lineEnd": 3326
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P15F",
+      "nozzleId": "k-rain:P15F",
+      "rowIndex": 2,
+      "arcDeg": 360,
+      "pressureBar": 2.8,
+      "conflictingFields": [
+        "pressureBar"
+      ],
+      "metric": {
+        "pressureBar": 2.8,
+        "radiusM": 4.9,
+        "flowLMin": 13.6,
+        "precipSquareMmH": 34.0,
+        "precipTriangleMmH": 40.0,
+        "arcDeg": 360
+      },
+      "pairedUs": {
+        "pressurePsi": 30.0,
+        "radiusFt": 16.0,
+        "flowGpm": 3.6,
+        "precipSquareInH": 1.35,
+        "precipTriangleInH": 1.56,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3309,
+          "lineEnd": 3326
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    },
+    {
+      "modelId": "P15F",
+      "nozzleId": "k-rain:P15F",
+      "rowIndex": 3,
+      "arcDeg": 360,
+      "pressureBar": 3.4,
+      "conflictingFields": [
+        "pressureBar"
+      ],
+      "metric": {
+        "pressureBar": 3.4,
+        "radiusM": 5.2,
+        "flowLMin": 16.7,
+        "precipSquareMmH": 37.0,
+        "precipTriangleMmH": 43.0,
+        "arcDeg": 360
+      },
+      "pairedUs": {
+        "pressurePsi": 40.0,
+        "radiusFt": 17.0,
+        "flowGpm": 4.4,
+        "precipSquareInH": 1.47,
+        "precipTriangleInH": 1.69,
+        "evidence": {
+          "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 49,
+          "lineStart": 3309,
+          "lineEnd": 3326
+        }
+      },
+      "decision": "Retain Needs Review and per-row interpolation barrier; companion table cannot repair this current row."
+    }
+  ],
+  "precipitationCells": [
+    {
+      "modelId": "KVF6",
+      "rowIndex": 1,
+      "arcDeg": 90,
+      "pressureBar": 1.72,
+      "field": "precipSquareMmH",
+      "published": 156,
+      "retained": null
+    }
+  ],
+  "unsupportedFootprints": [
+    "P15HL",
+    "FN-15HL"
+  ],
+  "unpublishedModel": "KV5"
+}

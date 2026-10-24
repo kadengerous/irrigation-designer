@@ -1,0 +1,53 @@
+{
+  "checkedOn": "2026-10-10",
+  "baselineVersion": 444,
+  "baselineCommit": "7231506d1a7d236c986ea5c00bcb41d7d35a8f31",
+  "catalog": {
+    "records": 89,
+    "nozzleModels": 58,
+    "rotorModels": 9,
+    "bodies": 17,
+    "bubblers": 5,
+    "placeableModels": 70,
+    "automaticModels": 56,
+    "groups": 8,
+    "baseRows": 764,
+    "reducedRows": 162,
+    "totalTablePoints": 926,
+    "disputedBaseRows": 17,
+    "disputedReducedRows": 3
+  },
+  "validation": {
+    "uniquePassedTests": 112,
+    "failedTests": 0,
+    "manualTableSettings": 743,
+    "automaticRadiusEndpoints": 1432,
+    "bodyAndSnapshotConfigurations": 34,
+    "uiLocales": 20,
+    "pressureUnits": [
+      "bar",
+      "psi"
+    ],
+    "typecheck": "passed",
+    "browserVisualQA": "Unavailable after earlier automatic approval rejection; no alternate transport attempted"
+  },
+  "changes": [
+    "Canonical nominal psi pressure checkpoints for KV/KVF only, including saved heads, body limits, diagnostics and display",
+    "RN80–89 degree matched-precipitation estimates, explicitly marked; unsupported sectors rejected",
+    "Small KV/KVF sector geometry only where all published sectors and pressure endpoints share throw; unknown discharge remains unknown",
+    "K-Rain body regulator caps apply to editing and simulation; Pro-S nominal regulation inlet guarantee limited to6.9bar",
+    "RPS75-PR and RPS75i-PR table pressures labelled as inlet without clipping higher inlet rows",
+    "RPS75i standard1.5 at3.4bar square precipitation withheld; radius10.7m, flow7.6L/min and triangle9mm/h retained",
+    "K-Rain strips retain pressure-specific geometry and diagnostics use pressure-specific reduction floor",
+    "Audit dates refreshed for89records,50 named nozzle colors and86 rotor nozzle colors; unknown colors unchanged"
+  ],
+  "limitations": [
+    "Existing17disputed base points and3disputed reduced points remain gated",
+    "TB-ADJ has no trustworthy discharge; two HighLow models lack representable verified footprints and remain excluded",
+    "Eight special-pattern nozzle colors andfourRPSSelect nozzle colors remain unverified",
+    "RPS50/RPSSelect360-degree rotation mechanism remains unknown; no guessed animation",
+    "Reduced rotor flow unknown outside exact verified source points; small KV/KVF flow unknown",
+    "Current RN webpage2.8bar recommendation conflicts with dated2026catalog2.1bar; datedcatalog choice documented, no claim of official supersession"
+  ],
+  "primarySource": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+}

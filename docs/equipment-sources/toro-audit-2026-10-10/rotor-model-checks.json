@@ -1,0 +1,730 @@
+[
+  {
+    "id": "toro:T5P-RS-LN",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "Application selection, not a factory-installation claim, because this SKU is less-nozzle.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5PE-RS-LN",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Lavender",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "Effluent"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "Application selection, not a factory-installation claim, because this SKU is less-nozzle.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5PCK1.5-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "1.5",
+      "rNom": 10.668000000000001
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "CV"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5PCK2.0-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "2.0",
+      "rNom": 11.277600000000001
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "CV"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5PCK2.5-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "2.5",
+      "rNom": 11.277600000000001
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "CV"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5PCK3.0-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "CV"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5HP-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 304.8,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5HPE-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 304.8,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Lavender",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "Effluent"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5S-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 0,
+      "mountingKind": "riser",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [],
+    "unverifiedBodyFeatures": [
+      "CV"
+    ],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5SE-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 0,
+      "mountingKind": "riser",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Lavender",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "Effluent"
+    ],
+    "unverifiedBodyFeatures": [
+      "CV"
+    ],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5PSS3.0-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "Stainless steel"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5PSSE3.0-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Lavender",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "Effluent",
+      "Stainless steel"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  },
+  {
+    "id": "toro:T5PCKSS3.0-RS",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "current2026PriceListUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "exactSkuPresent": true,
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "rowCount": 60,
+    "expected": {
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.723689,
+      "recommendedPressureMax": 4.481592,
+      "recommendedPressureBar": 3.102641,
+      "rMin": 7.62,
+      "rMax": 15.24,
+      "inlet": "3/4-inch NPT female",
+      "popUpMm": 127,
+      "mountingKind": "integrated",
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "colorName": "Dark gray",
+      "colorSourceKind": "cap",
+      "defaultNozzleId": "3.0",
+      "rNom": 12.192
+    },
+    "differences": [],
+    "bodyFeatures": [
+      "CV",
+      "Stainless steel"
+    ],
+    "unverifiedBodyFeatures": [],
+    "defaultNozzleBasis": "SKU-specific installed size where encoded; otherwise family standard design selection.",
+    "pressureRegulator": false,
+    "fullCircleRotation": "reversing",
+    "rotationSourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+    "flowAtReducedRadius": "unknown",
+    "precipitationBasis": {
+      "arcDeg": 180,
+      "spacingFractionOfDiameter": 0.5,
+      "sourceUrl": "https://www.toro.com/getpub/128192"
+    }
+  }
+]

@@ -1,0 +1,700 @@
+[
+  {
+    "id": "rain-bird:HE-VAN-8",
+    "modelId": "HE-VAN-8",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Add published 25% radius-reduction limit; reduced-radius flow remains unknown."
+    ]
+  },
+  {
+    "id": "rain-bird:HE-VAN-10",
+    "modelId": "HE-VAN-10",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Add published 25% radius-reduction limit; reduced-radius flow remains unknown."
+    ]
+  },
+  {
+    "id": "rain-bird:HE-VAN-12",
+    "modelId": "HE-VAN-12",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Add published 25% radius-reduction limit; reduced-radius flow remains unknown."
+    ]
+  },
+  {
+    "id": "rain-bird:HE-VAN-15",
+    "modelId": "HE-VAN-15",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Add published 25% radius-reduction limit; reduced-radius flow remains unknown."
+    ]
+  },
+  {
+    "id": "rain-bird:4-VAN",
+    "modelId": "4-VAN",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:6-VAN",
+    "modelId": "6-VAN",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:8-VAN",
+    "modelId": "8-VAN",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:10-VAN",
+    "modelId": "10-VAN",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:12-VAN",
+    "modelId": "12-VAN",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:15-VAN",
+    "modelId": "15-VAN",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:18-VAN",
+    "modelId": "18-VAN",
+    "independentlyComparedBaselineRows": 16,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-8F",
+    "modelId": "U-8F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-8H",
+    "modelId": "U-8H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-8Q",
+    "modelId": "U-8Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-10F",
+    "modelId": "U-10F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-10H",
+    "modelId": "U-10H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-10Q",
+    "modelId": "U-10Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-12F",
+    "modelId": "U-12F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-12H",
+    "modelId": "U-12H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-12Q",
+    "modelId": "U-12Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-15F",
+    "modelId": "U-15F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-15H",
+    "modelId": "U-15H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:U-15Q",
+    "modelId": "U-15Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:5F",
+    "modelId": "5F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:5H",
+    "modelId": "5H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Select complete internally coherent official US grid and convert exactly to SI; preserve rejected metric rows as evidence."
+    ]
+  },
+  {
+    "id": "rain-bird:5Q",
+    "modelId": "5Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Select complete internally coherent official US grid and convert exactly to SI; preserve rejected metric rows as evidence."
+    ]
+  },
+  {
+    "id": "rain-bird:8F",
+    "modelId": "8F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:8H",
+    "modelId": "8H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:8Q",
+    "modelId": "8Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:10F",
+    "modelId": "10F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:10H",
+    "modelId": "10H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Select complete internally coherent official US grid and convert exactly to SI; preserve rejected metric rows as evidence."
+    ]
+  },
+  {
+    "id": "rain-bird:10Q",
+    "modelId": "10Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Select complete internally coherent official US grid and convert exactly to SI; preserve rejected metric rows as evidence."
+    ]
+  },
+  {
+    "id": "rain-bird:12F",
+    "modelId": "12F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:12H",
+    "modelId": "12H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:12Q",
+    "modelId": "12Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:15F",
+    "modelId": "15F",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:15H",
+    "modelId": "15H",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:15Q",
+    "modelId": "15Q",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:5F-B",
+    "modelId": "5F-B",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Discrete stream geometry is not a verified filled sector; preserve placementSupported false."
+    ]
+  },
+  {
+    "id": "rain-bird:5H-B",
+    "modelId": "5H-B",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Discrete stream geometry is not a verified filled sector; preserve placementSupported false."
+    ]
+  },
+  {
+    "id": "rain-bird:5Q-B",
+    "modelId": "5Q-B",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Discrete stream geometry is not a verified filled sector; preserve placementSupported false."
+    ]
+  },
+  {
+    "id": "rain-bird:5CST-B",
+    "modelId": "5CST-B",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Discrete stream geometry is not a verified filled sector; preserve placementSupported false."
+    ]
+  },
+  {
+    "id": "rain-bird:15EST",
+    "modelId": "15EST",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:15CST",
+    "modelId": "15CST",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:15RCS",
+    "modelId": "15RCS",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:15LCS",
+    "modelId": "15LCS",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:15SST",
+    "modelId": "15SST",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:9SST",
+    "modelId": "9SST",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:8H-FLT",
+    "modelId": "8H-FLT",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:8Q-FLT",
+    "modelId": "8Q-FLT",
+    "independentlyComparedBaselineRows": 4,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:SQ-3QTR",
+    "modelId": "SQ-3QTR",
+    "independentlyComparedBaselineRows": 8,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:SQ-FUL",
+    "modelId": "SQ-FUL",
+    "independentlyComparedBaselineRows": 8,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:SQ-HLF",
+    "modelId": "SQ-HLF",
+    "independentlyComparedBaselineRows": 8,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Verify only large setting discharge from complete US grid; retain small setting with hydraulic Needs Review and exclude its flow from calculations; withhold disputed no-overlap precipitation."
+    ]
+  },
+  {
+    "id": "rain-bird:SQ-QTR",
+    "modelId": "SQ-QTR",
+    "independentlyComparedBaselineRows": 8,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:1300A-F",
+    "modelId": "1300A-F",
+    "independentlyComparedBaselineRows": 9,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Select complete internally coherent official US grid and convert exactly to SI; preserve rejected metric rows as evidence."
+    ]
+  },
+  {
+    "id": "rain-bird:1401",
+    "modelId": "1401",
+    "independentlyComparedBaselineRows": 0,
+    "nominalFlowChecked": true,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:1402",
+    "modelId": "1402",
+    "independentlyComparedBaselineRows": 0,
+    "nominalFlowChecked": true,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:1404",
+    "modelId": "1404",
+    "independentlyComparedBaselineRows": 0,
+    "nominalFlowChecked": true,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:1408",
+    "modelId": "1408",
+    "independentlyComparedBaselineRows": 0,
+    "nominalFlowChecked": true,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Preserve Deprecated status and historical nominal flow."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN14",
+    "modelId": "R-VAN14",
+    "independentlyComparedBaselineRows": 54,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN18",
+    "modelId": "R-VAN18",
+    "independentlyComparedBaselineRows": 54,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN24",
+    "modelId": "R-VAN24",
+    "independentlyComparedBaselineRows": 54,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN18-360",
+    "modelId": "R-VAN18-360",
+    "independentlyComparedBaselineRows": 6,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN14-360",
+    "modelId": "R-VAN14-360",
+    "independentlyComparedBaselineRows": 6,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN24-360",
+    "modelId": "R-VAN24-360",
+    "independentlyComparedBaselineRows": 6,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN-SST",
+    "modelId": "R-VAN-SST",
+    "independentlyComparedBaselineRows": 6,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN-LCS",
+    "modelId": "R-VAN-LCS",
+    "independentlyComparedBaselineRows": 6,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN-RCS",
+    "modelId": "R-VAN-RCS",
+    "independentlyComparedBaselineRows": 6,
+    "nominalFlowChecked": false,
+    "colorEvidence": "color-evidence.json",
+    "decisions": [
+      "Retain existing independently re-extracted source performance or nominal flow.",
+      "Exclude 1802/1803 bodies and their PRS variants; PRS extension is explicit compatibility inference."
+    ]
+  }
+]

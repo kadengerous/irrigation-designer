@@ -1,0 +1,87 @@
+| Toro (https://www.toro.com/en/product/T5S-RS)
+citeturn438view0 [wordlim: 200] Crawled: last month; Content type: text/html; Source: open({"ref_id":"turn431view1","lineno":170}); Total lines: 253
+L0: cite0†iframe†www.googletagmanager.com L1:   * cite1†Products L2:     * cite2†Homeowner L3:       * cite3†Sale Items L4:       * cite4†Lawn Mowers L5:       * cite5†60V Max Battery Products L6:       * cite6†Yard Tools L7:       * cite7†Snow Blowers L8:       * cite8†Gift Guide L9:     * cite9†Golf L10:       * cite10†Greens Mowers L11:       * cite11†Fairway Mowers L12:       * cite12†Autonomous Turf Products L13:       * cite13†Rough Mowers L14:       * cite14†Trim and Surrounds Mowers L15:       * cite15†Golf Utility Vehicles L16:       * cite16†Vista® L17:       * cite17†Outcross® L18:       * cite18†Top Dressers L19:       * cite19†Aerators L20:       * cite20†Turf Sprayers L21:       * cite21†Bunker Rakes L22:       * cite22†Debris Blowers L23:       * cite23†Hover Mowers, Greens Roller, ProStripe L24:       * cite24†Digital Solutions L25:       * cite25†Central Irrigation Systems L26:       * cite26†Irrigation Control System Upgrades L27:       * cite27†Golf Course Irrigation Heads L28:       * cite28†Golf Irrigation Sprinkler Valves L29:       * cite29†Twilight™ Golf Lighting L30:       * cite30†Professional Services L31:       * cite31†myTurf Pro® L32:       * cite32†Toro Genuine Parts L33:       * cite33†Commercial Equipment Home L34:       * cite34†Education and Technical Reference L35:     * cite35†Professional Contractor L36:       * cite36†Mowers L37:       * cite37†Autonomous PROLINE L38:       * cite38†Commercial Battery Handheld Equipment L39:       * cite39†SprayMaster Irrigation Lawn Sprayers L40:       * cite40†Professional Turf Renovation Equipment L41:       * cite41†Snow Removal L42:       * cite42†Irrigation Spray Heads L43:       * cite43†Compact Utility Loaders L44:       * cite44†Compact Utility Loader Attachments L45:       * cite45†Material Buggies L46:       * cite46†Tree Care L47:       * cite47†Walk Behind Trenchers L48:       * cite48†Vibratory Plows L49:       * cite49†Irrigation Rotors and Sprinklers L50:       * cite50†Commercial Irrigation Valves L51:       * cite51†Irrigation Controllers L52:       * cite52†Irrigation Rain Sensors and Remotes L53:       * cite53†Irrigation Central Control Systems L54:       * cite54†Commercial Drip Irrigation L55:     * cite55†Sports Fields & Grounds L56:       * cite56†Rotary Mowers L57:       * cite57†Reel Mowers, Riding & Walk Mowers L58:       * cite58†Infield Groomers L59:       * cite59†Sports Field Utility Vehicles L60:       * cite60†Vista® L61:       * cite61†Outcross® Sports Field Utility Vehicles L62:       * cite62†Debris Blowers L63:       * cite63†Aerators L64:       * cite64†Top Dressers L65:       * cite65†Turf Sprayers L66:       * cite66†Hover Mowers, Greens Roller, ProStripe L67:       * cite67†Irrigation Sprays L68:       * cite68†Digital Solutions L69:       * cite69†Autonomous Turf Products L70:       * cite70†Field Irrigation Rotors and Sprinklers L71:       * cite71†Irrigation Central Control Systems L72:       * cite72†Irrigation Controllers L73:       * cite73†Irrigation Sensors and Remotes L74:       * cite74†Irrigation Sprinkler Valves L75:       * cite75†Drip Irrigation L76:       * cite76†Professional Services L77:       * cite31†myTurf Pro® L78:       * cite77†Toro Genuine Parts L79:       * cite33†Commercial Equipment Home L80:       * cite34†Education and Technical Reference L81:     * cite78†Agriculture L82:       * cite79†Automation System L83:       * cite80†Drip Tape Irrigation Lines L84:       * cite81†Irrigation Pipes L85:       * cite82†Irrigation Drippers L86:       * cite83†Drip Tape Irrigation Fittings L87:       * cite84†Filtration L88:       * cite85†Irrigation Controllers L89:       * cite86†Irrigation Valves L90:       * cite87†Greenhouse Irrigation Systems L91:     * cite88†Rental L92:       * cite89†Compact Utility Loaders L93:       * cite90†Compact Utility Loader Attachments L94:       * cite91†Material Buggies L95:       * cite92†Tree Care L96:       * cite93†Turf Renovation and Specialty Equipment L97:       * cite94†Walk Behind Trenchers L98:       * cite95†Vibratory Plows L99:     * cite96†Government L100:       * cite97†Cooperative Contracts L101:       * cite98†Federal Contracts L102:       * cite99†State & Local Contracts L103:   * cite100†Parts & Manuals L104:   * cite101†Where To Buy L105:   * cite102†Support L106:   * cite103†Sign In L107: [Input: Search] cite104†Image: searchicon†cdn2.toro.com L108:   *     * cite105†Deutsch - Deutschland L109:     * cite106†English - United Kingdom L110:     * cite106†English - Ireland L111:     * cite107†Español -España L112:     * cite108†Français - Belgique L113:     * cite109†Français - France L114:     * cite110†Italiano - l'Italia L115:     * cite111†Nederlands - België L116:     * cite112†Nederlands - Nederland L117:     * cite113†Português - Portugal L118:     * cite114†Svenska - Sverige L119:     * cite115†English - Australia†www.toro.com.au L120:     * cite116†简体中文 – 中国 L121:     * cite117†日本語 - 日本 L122:     * cite118†한국어 - 한국 L123:     * cite119†English - Canada L124:     * cite120†Español - Estados Unidos L125:     * cite121†Español - Latin America L126:     * cite122†Français - Canada L127: cite123†0†shop.toro.com L128: 
+L129: cite124†Image: T5 RapidSet Shrub Rotor†cdn.thetorocompany.com L130: 
+L131:   * cite124†Image: T5 RapidSet Shrub Rotor†cdn.thetorocompany.com L132:   * cite125†Image: T5 RapidSet Shrub Rotor†cdn.thetorocompany.com L133: 
+L134:   * cite124†Image: T5 RapidSet Shrub Rotor†cdn.thetorocompany.com L135:   * cite125†Image: T5 RapidSet Shrub Rotor†cdn.thetorocompany.com L136: 
+L137:   * 0
+L138:   * 1
+L139: # T5 RapidSet Shrub Rotor
+L140: ##### Patented RapidSet arc adjustment requires No Tools!
+L141: 
+L142:   * Model: T5S-RS
+L143:   * UPC/EAN: 90258055983
+L144: cite126†See All Items in T5 Rapidset Series Rotors L145:   * Arc adjustments from 40° to 360° can be made quickly with a few twists of the turret – no tools required. The patent-pending RapidSet slip clutch also protects against gear damage caused by intentional vandalism or inexperienced users.
+L146:   * The T5 RapidSet rotor comes with a full set of 8 standard nozzles (25° trajectory) and 4 low angle (10° trajectory) nozzles. The nozzles’ unique geometry creates a zone of low pressure just below the main stream to gently guide water downward for unmatched uniformity without forcefully washing out newly-laid seeds.
+L147:   * Easily replaces most competitive 4” pop-up rotors in the same footprint, but delivers an extra inch of nozzle clearance.
+L148:   * Commercial-grade 304 stainless steel riser and nozzle base sleeves help prevent ‘stick-ups’ and eliminate scoring of the riser caused by coarse and sandy soils.
+L149: [Input] [Input] [Input]
+L150: 
+L151: Top
+L152: 
+L153:   * Jump To
+L154:   * cite127†Overview L155:   * cite128†Features L156:   * cite129†Specifications L157:   * cite130†Accessories L158:   * cite131†Documents L159:   * cite132†Parts & Manuals L160:   * cite133†Warranty L161:   * Back To Top
+L162: [Input]
+L163: ## Overview
+L164: 
+L165: The Toro T5 RapidSet Series Rotor has the features to satisfy all your basic irrigation needs while surprising you with a few extras.
+L166: 
+L167: ## Features
+L168: 
+L169: cite134†Image: RapidSet® Arc Adjustment†cdn.thetorocompany.com L170: ##### RapidSet® Arc Adjustment
+L171: 
+L172: Arc adjustments from 40° to 360° can be made quickly with a few twists of the turret – no tools required. The patent-pending RapidSet slip clutch also protects against gear damage caused by intentional vandalism or inexperienced users.
+L173: 
+L174: cite135†Image: Airfoil Technology Nozzles†cdn.thetorocompany.com L175: ##### Airfoil Technology Nozzles
+L176: 
+L177: The T5 RapidSet rotor comes with a full set of 8 standard nozzles (25° trajectory) and 4 low angle (10° trajectory) nozzles. The nozzles’ unique geometry creates a zone of low pressure just below the main stream to gently guide water downward for unmatched uniformity without forcefully washing out newly-laid seeds.
+L178: 
+L179: cite136†Image: 5†cdn.thetorocompany.com L180: ##### 5" Pop-Up
+L181: 
+L182: Easily replaces most competitive 4” pop-up rotors in the same footprint, but delivers an extra inch of nozzle clearance.
+L183: 
+L184: cite137†Image: Available Stainless Steel Models†cdn.thetorocompany.com L185: 
+L186: ##### Available Stainless Steel Models
+L187: 
+L188: Commercial-grade 304 stainless steel riser and nozzle base sleeves help prevent ‘stick-ups’ and eliminate scoring of the riser caused by coarse and sandy soils.
+L189: ## Specifications
+L190: 
+L191: Arc  | 40 - 360 deg.
+L192: Body Type  | Shrub
+L193: Check Valve  | No
+L194: Effluent  | No
+L195: Inlet Size  | 0.75 in.
+L196: Less Nozzle  | No
+L197: Nozzle Size  | 3
+L198: Pop-up Height  | 5" (127 mm)
+L199: Radius  | 25 - 50 ft (7.6 - 15.2m)
+L200: Rapid Set  | Yes
+L201: Stainless Steel  | No
+L202: 
+L203: ## Documents
+L204: 
+L205: Title  | Documents
+L206: --- | ---
+L207: cite138†20-1009-T5-RapidSet-SS.pdf†cdn.thetorocompany.com | PDF - Sellsheet-en-us
+L208: 
+L209: 
+L210: 
+L211: ## Warranty
+L212: 
+L213: ##### For complete product warranty information contact Toro Customer Service
+L214: 
+L215: **See dealer for Warranty details.
+L216: ####
+L217: 
+L218: ###### Product Information
+L219: 
+L220:   * cite100†Parts & Manuals L221:   * cite139†Product Registration L222:   * cite140†Homeowner Special Offers L223:   * cite141†Professional Contractor Special Offers L224:   * cite142†Financing L225:   * cite143†Apparel & Merchandise†gear.thetorocompany.com L226: 
+L227: ###### Customer Service
+L228: 
+L229:   * cite144†Order Status†shop.toro.com L230:   * cite145†Online Store Support L231:   * cite145†Return Policy L232:   * cite146†Shipping & Tax Policies L233:   * cite101†Where To Buy L234:   * cite147†Dealer Login†shop.thetorocompany.com L235:   * cite102†Customer Support L236: ###### About Toro
+L237: 
+L238:   * cite148†Our Company†www.thetorocompany.com L239:   * cite149†Sustainability†www.thetorocompany.com L240:   * cite150†Safety L241:   * cite151†Newsroom†newsroom.toro.com L242:   * cite152†Investors†thetorocompany.gcs-web.com L243:   * cite153†Careers†www.thetorocompany.com L244:   * cite154†YardCare.com†www.yardcare.com L245: ###### Connect With Us
+L246: 
+L247:   *   *   *   *   * cite155†Terms of Use L248:   * cite156†Privacy Policy L249:   * cite157†DMCA/Copyright Policy L250:   * cite158†Statement on Modern Slavery†cdn2.toro.com L251: 
+L252: Copyright © The Toro Company. All Rights Reserved.
+

@@ -1,0 +1,75 @@
+{
+  "accessedOn": "2026-10-10",
+  "method": "web__run only; no shell network/browser",
+  "sources": [
+    {
+      "id": "current-product-page",
+      "url": "https://www.toro.com/en/product/Precision-Series-Spray-Nozzles",
+      "result": "Read through web tool; confirms direct links to both current 2026 attachments."
+    },
+    {
+      "id": "current-chart",
+      "url": "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+      "result": "All204 table tuples read; current chart p1; screenshot returned only source-reference payload."
+    },
+    {
+      "id": "current-model-list",
+      "url": "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+      "result": "Initial direct access failed; product-page link click succeeded. All102 identities/colors p3, thread/trajectory/pressure specs p4."
+    },
+    {
+      "id": "psn-microsite",
+      "url": "https://psn.toro.com/",
+      "result": "Read; physical mechanism, nominal matched precipitation, major-brand thread compatibility."
+    },
+    {
+      "id": "au-psn-plus",
+      "url": "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/",
+      "result": "Read; explicit25% mechanical radius reduction. Pressure/PCD claims not used because linked brochure differs."
+    },
+    {
+      "id": "au-psn-brochure",
+      "url": "https://www.toroirrigationsolutions.com.au/wp-content/uploads/2025/12/PSN-Brochure-Spread-3.pdf",
+      "result": "Read; exactPSNQ/H/F model identities, officialToroAustralia branding/contact, lower pressure range. Not selected as hydraulic source."
+    },
+    {
+      "id": "au-site-identity",
+      "url": "https://www.toroirrigationsolutions.com.au/wp-content/uploads/2021/04/privacy-policy.pdf",
+      "result": "Readp1 identifyingToroAustraliaPtyLtd; used only for website provenance."
+    },
+    {
+      "id": "older-us-psn-plus",
+      "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+      "result": "Read olderPSN+ table; confirms source discrepancy, not selected source."
+    },
+    {
+      "id": "large-2026-catalog",
+      "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "result": "Fresh open unavailable: web content-length limit13068709bytes; prior audit evidence preserved, not called freshly verified."
+    },
+    {
+      "id": "legacy-O-bid-spec",
+      "url": "https://specifier.toro.com/cads/nozzles/precision_series_nozzles.doc",
+      "result": "Fresh web open unavailable. No legacy reduction-flow law transferred toPSN+."
+    }
+  ],
+  "retainedWebExtracts": [
+    {
+      "file": "psn-current-chart-web.txt",
+      "sha256OfUtf8Extract": "86b953c299267b3cc1af7422bc741783caaafa26b5b8fa8a1403f4e94378abaa",
+      "bytes": 8879
+    },
+    {
+      "file": "psn-current-sellsheet-web.txt",
+      "sha256OfUtf8Extract": "07574b790227144fe69cbe4092f49510f20bf6d198099e76aa5b40b618bd78ab",
+      "bytes": 9829
+    },
+    {
+      "file": "psn-regional-evidence-web.txt",
+      "sha256OfUtf8Extract": "89bfedad288fa360728bf887ef71dc5356e036a2aededa51cebfba85914953d3",
+      "bytes": 22599
+    }
+  ],
+  "previousPdfMetadataEvidence": "../recheck-2026-10-06/toro-followup/pdf-manifest.json",
+  "metadataNote": "PreviousPDFcreationdates are inherited provenance, not a fresh PDF download or hash verification."
+}

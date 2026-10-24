@@ -1,0 +1,214 @@
+{
+  "checkedOn": "2026-10-10",
+  "catalogFieldPatches": [],
+  "performanceRowPatches": [],
+  "reason": "All 780 stored rows, all 13 rotor metadata records and all 40 body metadata records agree with selected current authoritative sources. Preserve existing unknowns; no numerical replacement is warranted.",
+  "optionalProvenancePatches": [
+    {
+      "id": "toro:T5P-RS-LN",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5PE-RS-LN",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5PCK1.5-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5PCK2.0-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5PCK2.5-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5PCK3.0-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5HP-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5HPE-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5S-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5SE-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5PSS3.0-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5PSSE3.0-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    },
+    {
+      "id": "toro:T5PCKSS3.0-RS",
+      "field": "coverageRuleSource",
+      "old": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "new": "https://www.toro.com/getpub/128192",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "reason": "Current linked installation manual explicitly defines published rates at 50% of spray diameter and a half-circle; older head-to-head citation remains valid, so this is provenance enrichment only."
+    }
+  ],
+  "retainUnknown": [
+    {
+      "ids": [
+        "toro:T5S-RS",
+        "toro:T5SE-RS"
+      ],
+      "field": "unverifiedBodyFeatures",
+      "value": [
+        "CV"
+      ],
+      "sourceUrls": [
+        "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+        "https://www.toro.com/en/product/T5S-RS",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      ],
+      "reason": "Older specification says standard shrub CV; current model page says No but also carries lawn pop-up template fields; current dedicated sheet and 2026 exact-SKU list do not settle inclusion."
+    },
+    {
+      "ids": [
+        "toro:T5P-RS-LN",
+        "toro:T5PE-RS-LN",
+        "toro:T5PCK1.5-RS",
+        "toro:T5PCK2.0-RS",
+        "toro:T5PCK2.5-RS",
+        "toro:T5PCK3.0-RS",
+        "toro:T5HP-RS",
+        "toro:T5HPE-RS",
+        "toro:T5S-RS",
+        "toro:T5SE-RS",
+        "toro:T5PSS3.0-RS",
+        "toro:T5PSSE3.0-RS",
+        "toro:T5PCKSS3.0-RS"
+      ],
+      "field": "radiusAdjustment.flowPolicy",
+      "value": "unknown",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Rotors/T5-RapidSet-Series/T5-RapidSet-Series-Sprinkler-Bidding-Specs.ashx",
+      "reason": "25% geometric radius reduction is explicit; no reduced-radius discharge curve is published."
+    },
+    {
+      "ids": [
+        "toro:570Z-4P-PRX",
+        "toro:570Z-6P-PRX",
+        "toro:570Z-6SI-PRX",
+        "toro:570Z-12P-PRX",
+        "toro:570Z-12SI-PRX",
+        "toro:570Z-4P-PRXCOM",
+        "toro:570Z-6P-PRXCOM",
+        "toro:570Z-12P-PRXCOM",
+        "toro:570Z-3P-PR",
+        "toro:570Z-4P-PR",
+        "toro:570Z-6P-PR",
+        "toro:570Z-12P-PR",
+        "toro:570Z-4P-PRCOM",
+        "toro:570Z-6P-PRCOM",
+        "toro:570Z-12P-PRCOM"
+      ],
+      "field": "nominalRegulationMinInletBar",
+      "value": null,
+      "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+      "reason": "Nominal 30 psi regulation is explicit; no separate minimum inlet threshold or inlet/output pressure-drop curve was found."
+    }
+  ],
+  "runtimeRecommendations": [
+    {
+      "target": "src/lib/flow.ts radiusRange",
+      "finding": "Use selected-pressure full-throw radius times 0.75 for T5, without global item.rMin floor. 1.0LA at 25 psi gives 7.62 m full throw and 5.715 m permitted minimum. Legacy O nominal-floor semantics are separate.",
+      "statusAtFinalReview": "Root change now present in working tree: Toro included in pressureRelative and legacy O floor isolated. No runtime file edited by this audit.",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Rotors/T5-RapidSet-Series/T5-RapidSet-Series-Sprinkler-Bidding-Specs.ashx"
+    },
+    {
+      "target": "pressure/body selection",
+      "finding": "Cap working nozzle pressure at the selected PR/PRX nominal 30 psi; never treat recommended 45 psi or X-Flow as regulation. Do not infer an exact low-inlet output curve.",
+      "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3"
+    }
+  ],
+  "regressionRecommendations": [
+    {
+      "case": "All 780 T5 table operating points",
+      "expect": "Reachable within 25–65 psi; radius, flow and both precipitation values preserved."
+    },
+    {
+      "case": "T5 1.0LA at 25 psi, radius 5.715 m and just below",
+      "expect": "Minimum accepted geometry, just below rejected; reduced-radius flow unknown; full 7.62 m row flow retained."
+    },
+    {
+      "case": "T5 every nozzle at 40/180/360 degrees",
+      "expect": "Arc domain valid, same selected-nozzle discharge, precipitation uses 180-degree chart basis; 360-degree animation reverses."
+    },
+    {
+      "case": "570Z 7 LP vs 33 non-LP models",
+      "expect": "15 psi lower operating bound only LP; 20 psi for others, all maximum 75 psi."
+    },
+    {
+      "case": "15 PR/PRX vs 25 unregulated bodies",
+      "expect": "30 psi cap only regulated bodies; X-Flow alone adds no pressure compensation; no manufactured min-inlet threshold."
+    },
+    {
+      "case": "T5S-RS and T5SE-RS",
+      "expect": "CV remains unknown accessory; nozzle performance remains verified."
+    }
+  ]
+}

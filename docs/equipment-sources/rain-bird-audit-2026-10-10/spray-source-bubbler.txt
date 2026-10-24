@@ -1,0 +1,129 @@
+
+ (https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf)
+citeturn364view1 [wordlim: 200] Crawled: last week; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf","lineno":null}); Total lines: 126
+L0@P0: Adjustable Full-Circle
+L1@P0: Bubbler
+L2@P0: 1300A-F
+L3@P0: Designed for tree, shrub and flower areas.
+L4@P0: Operating Range
+L5@P0: •	 Flow: 1.0 to 2.3 gpm (0.23 to 0.52 m3/h;
+L6@P0: 0.06 to 0.14 l/s)
+L7@P0: •	 Spacing: 1 to 3 feet (0.3 to 0.9 m)
+L8@P0: •	 Pressure: 10 to 60 psi (0.7 to 4.0 bar)
+L9@P0: Dimensions
+L10@P0: •	 1
+L11@P0: ⁄2 inch (15/21) female threaded inlet
+L12@P0: •	 Height: 1 inch (2.5 cm)
+L13@P0: •	 Top diameter: 1 inch (2.5 cm)
+L14@P0: Pressure Compensating
+L15@P0: Full-Circle Bubblers
+L16@P0: 1400 Series
+L17@P0: Designed for irrigating tree, shrub and
+L18@P0: flower areas where pressure compensation is
+L19@P0: required.
+L20@P0: Operating Range
+L21@P0: •	 Flow: 0.25 to 2.0 gpm (0.06 to 0.46 m3/h;
+L22@P0: 0.02 to 0.13 l/s)
+L23@P0: •	 Spacing: 1 to 3 feet (0.3 to 0.9 m)
+L24@P0: •	 Pressure: 20 to 90 psi (1.5 to 6.0 bar)
+L25@P0: Dimensions
+L26@P0: •	 Same as 1300A-F
+L27@P0: Models and Specifications
+L28@P0: •	 1401: 0.25 gpm (0.06 m3/h; 0.02 l/s);
+L29@P0: full circle, trickle pattern
+L30@P0: •	 1402: 0.5 gpm (0.11 m3
+L31@P0: /h; 0.03 l/s);
+L32@P0: full circle, trickle pattern
+L33@P0: •	 1408: 2.0 gpm (0.46 m3/h; 0.12 l/s);
+L34@P0: full circle, umbrella pattern
+L35@P0: Bubbler Heads
+L36@P0: Tech Spec
+L37@P0: How To Specify
+L38@P0: 1404
+L39@P0: 1300A-F
+L40@P0: 1400 Series
+L41@P0: Nozzle Pressure Flow
+L42@P0: psi gpm
+L43@P0: F 10 1.0
+L44@P0: 20 1.4
+L45@P0: 30 1.7
+L46@P0: 40 1.9
+L47@P0: 50 2.1
+L48@P0: 60 2.3
+L49@P0: 1300A-F
+L50@P0: Nozzle Pressure Radius Flow
+L51@P0: bar m3⁄h l/m
+L52@P0: F 0.7 0.23 3.6
+L53@P0: 1.0 0.26 4.2
+L54@P0: 1.5 0.30 4.8
+L55@P0: 2.0 0.34 5.4
+L56@P0: 2.5 0.39 6.0
+L57@P0: 3.0 0.43 7.2
+L58@P0: 3.5 0.48 7.8
+L59@P0: 4.0 0.52 8.4
+L60@P0: 4.1 0.53 8.4
+L61@P0: 1300A-F METRIC
+L62@P0: •	 1404: 1.0 gpm (0.23 m3/h; 0.06 l/s);
+L63@P0: full circle, umbrella pattern
+L64@P0: Model
+L65@P0: 1300A-F
+L66@P0: 1401
+L67@P0: 1402
+L68@P0: 1404
+L69@P0-1: 1408D50005EO
+L70@P1: Rain Bird Corporation
+L71@P1: 970 West Sierra Madre Avenue
+L72@P1: Azusa, CA 91702
+L73@P1: Phone: (626) 812-3400
+L74@P1: Fax: (626) 812-3411
+L75@P1: Specification Hotline
+L76@P1: 800-458-3005 (U.S. and Canada)
+L77@P1: Rain Bird International, Inc.
+L78@P1: 1000 West Sierra Madre Ave.
+L79@P1: Azusa, CA 91702
+L80@P1: Phone: (626) 963-9311
+L81@P1: Fax: (626) 852-7343
+L82@P1: The Intelligent Use of Water™
+L83@P1: www.rainbird.com
+L84@P1: Rain Bird Corporation
+L85@P1: 6991 E. Southpoint Road
+L86@P1: Tucson, AZ 85756
+L87@P1: Phone: (520) 741-6100
+L88@P1: Fax: (520) 741-6522
+L89@P1: Rain Bird Technical Services
+L90@P1: (800) RAINBIRD (1-800-724-6247)
+L91@P1: (U.S. and Canada)
+L92@P1: ® Registered Trademark of Rain Bird Corporation
+L93@P1: © 2021 Rain Bird Corporation 2/21
+L94@P1: 1300A-F
+L95@P1: Adjustable Flood Bubbler
+L96@P1: The bubbler body shall be constructed of
+L97@P1: durable UV-resistant plastic. It shall have
+L98@P1: a plastic inlet filter screen to protect the
+L99@P1: nozzle against clogging, and a stainless steel
+L100@P1: adjusting screw, capable of shutting off the
+L101@P1: bubbler and regulating the flow.
+L102@P1: The bubbler shall have a 1
+L103@P1: ⁄2 inch (15,21)
+L104@P1: female threaded inlet for connecting to the
+L105@P1: piping system riser.
+L106@P1: The bubbler shall be as manufactured by
+L107@P1: Rain Bird Corporation, Glendora, California.
+L108@P1: Specifications
+L109@P1: 1401, 1402, 1404, 1408
+L110@P1: Pressure Compensating Flood Bubbler
+L111@P1: The bubbler shall have a “trickle” pattern
+L112@P1: (1401 & 1402 models) or an “umbrella” pattern (1404 & 1408 models) discharge.
+L113@P1: The bubbler assembly shall have a plastic inlet filter screen to protect the nozzle against
+L114@P1: clogging.
+L115@P1: The pressure compensating bubbler shall
+L116@P1: be of a permanently assembled design constructed of durable, UV-resistant plastic with
+L117@P1: an integral rubber flow washer for regulating
+L118@P1: the flow rate at an operating pressure range
+L119@P1: of 20 to 90 psi (1,5 to 6,0 bar).
+L120@P1: The pressure compensating bubbler shall
+L121@P1: have a 1⁄2 inch (15,21) female threaded inlet
+L122@P1: for connection to the piping system riser.
+L123@P1: The pressure compensating bubbler shall be
+L124@P1: as manufactured by Rain Bird Corporation,
+L125@P1: Glendora, California.

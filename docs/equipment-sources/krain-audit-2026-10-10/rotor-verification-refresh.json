@@ -1,0 +1,947 @@
+{
+  "checkedOn": "2026-10-10",
+  "baselineHead": "7231506d1a7d236c986ea5c00bcb41d7d35a8f31",
+  "modelDateCount": 9,
+  "nozzleColorDateCount": 86,
+  "totalDatePatches": 95,
+  "patches": [
+    {
+      "id": "k-rain:MiniPro",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:MiniPro",
+      "nozzleId": "k-rain:MiniPro:standard-0.75",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:MiniPro",
+      "nozzleId": "k-rain:MiniPro:standard-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:MiniPro",
+      "nozzleId": "k-rain:MiniPro:standard-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:MiniPro",
+      "nozzleId": "k-rain:MiniPro:standard-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:MiniPro",
+      "nozzleId": "k-rain:MiniPro:standard-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS50",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:RPS50",
+      "nozzleId": "k-rain:RPS50:standard-0.75",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS50",
+      "nozzleId": "k-rain:RPS50:standard-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS50",
+      "nozzleId": "k-rain:RPS50:standard-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS50",
+      "nozzleId": "k-rain:RPS50:standard-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS50",
+      "nozzleId": "k-rain:RPS50:standard-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:standard-0.75",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:standard-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:standard-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:standard-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:standard-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:standard-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:standard-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:standard-8.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:low-angle-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:low-angle-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:low-angle-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75",
+      "nozzleId": "k-rain:RPS75:low-angle-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-2.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-5.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-8.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:low-angle-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:low-angle-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:low-angle-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:low-angle-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-2.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-5.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-8.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:low-angle-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:low-angle-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:low-angle-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:low-angle-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:RPS-Select",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-0.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-0.75",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-2.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:standard-8.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:low-angle-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:low-angle-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:low-angle-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:ProPlus",
+      "nozzleId": "k-rain:ProPlus:low-angle-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "field": "verifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "reason": "All stored nozzle rows and model constraints rechecked; existing unresolved flags retained. Apply substantive isolated-field patch first."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-2.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-4.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-5.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-6.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-8.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:low-angle-1.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:low-angle-1.5",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:low-angle-2.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:low-angle-3.0",
+      "field": "colorVerifiedOn",
+      "old": "2026-10-06",
+      "new": "2026-10-10",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePage": 26,
+      "reason": "Fresh catalogue explicitly names the family nozzle rack red or green; approximate hexadecimal swatch is not newly manufacturer-certified."
+    }
+  ],
+  "doNotRefresh": [
+    "Unknown model/body color: no colorVerifiedOn added",
+    "Four RPS-Select built-in nozzle colors remain unknown and undated",
+    "Absent nozzle-level verifiedOn fields are not introduced",
+    "Status flags are unaffected"
+  ]
+}

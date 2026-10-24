@@ -1,0 +1,233 @@
+ (https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3)
+citeturn428view0 [wordlim: 200] Crawled: last week; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3","lineno":null}); Total lines: 230
+L0@P0: RUGGED – FLEXIBLE – VERSITILE – RELIABLE: Toro®
+L1@P0:  570Z Series pop-up spray bodies and 570S Series shrub
+L2@P0: adapters and shrub risers provide a durable, professional-grade solution for residential and commercial contractors
+L3@P0: to satisfy all new installation and retrofit requirements. In combination with Toro fixed spray and rotating nozzles,
+L4@P0: 570Z and 570S Series spray and shrub models can be configured in hundreds of combinations and present an
+L5@P0: unparalleled range of flexibility. Available in bottom-inlet shrub versions and pop-up body heights of 2”, 3”, 4”, 6”
+L6@P0: and 12” models (side inlet thread options on 6” and 12”). 570Z and 570S Series spray and shrub models are further
+L7@P0: available with water-saving factory-installed X-Flow® Technology, and/or integrated Pressure Regulating features.
+L8@P0: Trusted for over 25 years, 570Z and 570S Series spray and shrub models are the ideal choice.
+L9@P0: Zero Flush Wiper Seal & Ratcheting Riser
+L10@P0: Wiper Seal helps eliminate flushing on pop-up (allows more sprinklers per zone).
+L11@P0: Ratcheting Riser for quick and precise arc adjustment on all pop-up models.
+L12@P0: X-Flow Technology
+L13@P0: X-Flow in-stem flow shut-off technology built into the riser restricts water
+L14@P0: loss by 99% should the nozzle be removed or damaged. The exclusive X-Flow
+L15@P0: technology reduces water waste, landscape erosion, and wet hardscape
+L16@P0: safety concerns. X-Flow also allows for ‘dry’ nozzle and filter replacement
+L17@P0: or system maintenance while the system is running.
+L18@P0: Pressure Regulator
+L19@P0: Built in pressure regulation to a consistent 30 PSI is available on 570Z and 570S
+L20@P0: shrub models. WaterSense® certified to prevent water waste due to misting and
+L21@P0: fogging caused by high-pressure environments.
+L22@P0: One-Piece Check Valve (570CV)
+L23@P0: One-piece check valve prevents low-head drainage on elevation changes of up
+L24@P0: to 10 feet. Available factory pre-installed or field install.
+L25@P0: 570Z & 570S SERIES SPRAY AND SHRUB BODIES
+L26@P0: FEATURES & BENEFITS
+L27@P0: Effluent
+L28@P0: Options
+L29@P0: Available
+L30@P0: Check
+L31@P0: Valve
+L32@P0: Options
+L33@P0-1: AvailablePRODUCT HIGHLIGHT
+L34@P1: Enhanced Zero Flush Seal
+L35@P1: No Water Wasted at System Start
+L36@P1: System start up is a critical time when water waste can occur. The Toro 570Z Series
+L37@P1: spray head’s wiper seal is pressure-activated and prevents flow-by at start up, meaning
+L38@P1: no water is wasted and more heads can be installed on the same line.
+L39@P1: X-Flow® Shut-off Technology
+L40@P1: X-Flow® Technology Cuts Off Water Waste
+L41@P1: Up to 40 gallons of water per minute can escape through a spray head that has a
+L42@P1: missing or damaged nozzle. This wasted water can lead to landscape erosion, property
+L43@P1: damage, or unsafe conditions due to wet hardscapes. X-Flow is factory installed in the
+L44@P1: riser and holds back over 99% of the water that would otherwise be wasted in cases
+L45@P1: where the nozzle has been compromised through unintentional accidents or vandalism.
+L46@P1: Furthermore, X-Flow Technology allows for spray head maintenance or component
+L47@P1: replacement without the need to turn off the system.
+L48@P1: Pressure Regulator
+L49@P1: Reliability thanks to Built-in Pressure Regulation
+L50@P1: Available for both 570Z (SPRAY) and 570S (SHRUB) models, Toro’s factory-installed
+L51@P1: pressure regulator eliminates water misting and fogging at the nozzle that can lead to
+L52@P1: rapid evaporation or water being blown away from the intended irrigation area. From the
+L53@P1: first to the last head, the in-stem pressure regulator provides a steady outlet pressure of
+L54@P1: 30 PSI and consistent spray head performance across the zone.
+L55@P1: Without X-Flow With X-Flow
+L56@P1-2: Without Pressure Regulation With Pressure Regulation570Z SERIES SPRAY BODIES
+L57@P2: 570Z & 570ZLP
+L58@P2: 570S
+L59@P2: Shrub Adapter
+L60@P2: 570Z-2P 2” Spray Head
+L61@P2: 570Z-2LP 2” Spray Head,
+L62@P2: Low Pressure
+L63@P2: 570Z-3P 3” Spray Head
+L64@P2: 570Z-3LP 3” Spray Head,
+L65@P2: Low Pressure
+L66@P2: 570Z-4P 4” Spray Head
+L67@P2: 570Z-4LP 4” Spray Head,
+L68@P2: Low Pressure
+L69@P2: 570Z-6P 6” Spray Head
+L70@P2: 570Z-6LP 6” Spray Head,
+L71@P2: Low Pressure
+L72@P2: 570Z-6SI 6” Spray Head,
+L73@P2: Side Inlet body
+L74@P2: 570Z-6LPSI 6” Spray Head,
+L75@P2: Low Pressure, Side Inlet body
+L76@P2: 570Z-12P 12” Spray Head
+L77@P2: 570Z-12LP 12” Spray Head,
+L78@P2: Low Pressure
+L79@P2: 570Z-12SI 12” Spray Head,
+L80@P2: Side Inlet body
+L81@P2: 570Z-12LPSI 12” Spray
+L82@P2: Head, Low Pressure, Side
+L83@P2: Inlet body
+L84@P2: 570Z-4P-COM 4” Spray Head
+L85@P2: with Check Valve
+L86@P2: 570Z-6P-COM 6” Spray Head
+L87@P2: with Check Valve
+L88@P2: 570Z-12P-COM 12” Spray Head
+L89@P2: with Check Valve
+L90@P2: 570ZPRX
+L91@P2: 570S-PRX
+L92@P2: PRX Shrub Riser
+L93@P2: 570Z-4P-PRX
+L94@P2: 4” PRX Spray Head
+L95@P2: 570Z-6P-PRX
+L96@P2: 6” PRX Spray Head
+L97@P2: 570Z-6SI-PRX
+L98@P2: 6” PRX Spray Head,
+L99@P2: Side Inlet Body
+L100@P2: 570Z-12P-PRX
+L101@P2: 12” PRX Spray Head
+L102@P2: 570Z-12SI-PRX
+L103@P2: 12” PRX Spray Head,
+L104@P2: Side Inlet Body
+L105@P2: 570Z-4P-PRXCOM
+L106@P2: 4” PRX Spray Head
+L107@P2: with Check Valve
+L108@P2: 570Z-6P-PRXCOM
+L109@P2: 6” PRX Spray Head
+L110@P2: with Check Valve
+L111@P2: 570Z-12P-PRXCOM
+L112@P2: 12” PRX Spray Head
+L113@P2: with Check Valve
+L114@P2: 570ZPR
+L115@P2: 570S-PR
+L116@P2: PR Shrub Riser
+L117@P2: 570Z-3P-PR
+L118@P2: 3” PR Spray Head
+L119@P2: 570Z-4P-PR
+L120@P2: 4” PR Spray Head
+L121@P2: 570Z-6P-PR
+L122@P2: 6” PR Spray Head
+L123@P2: 570Z-12P-PR
+L124@P2: 12” PR Spray Head
+L125@P2: 570Z-4P-PRCOM
+L126@P2: 4” PR Spray Head
+L127@P2: with Check Valve
+L128@P2: 570Z-6P-PRCOM
+L129@P2: 6” PR Spray Head
+L130@P2: with Check Valve
+L131@P2: 570Z-12P-PRCOM
+L132@P2: 12” PR Spray Head
+L133@P2: with Check Valve
+L134@P2: 570ZXF
+L135@P2: 570S-XF
+L136@P2: Shrub Riser
+L137@P2: with X-Flow
+L138@P2: 570Z-4P-XF
+L139@P2: 4” XF Spray Head
+L140@P2: 570Z-6P-XF
+L141@P2: 6” XF Spray Head
+L142@P2: 570Z-6SI-XF
+L143@P2: 6” XF Spray Head,
+L144@P2: Side Inlet Body
+L145@P2: 570Z-12P-XF
+L146@P2: 12” XF Spray Head
+L147@P2: 570Z-12SI-XF
+L148@P2: 12” XF Spray Head,
+L149@P2: Side Inlet Body
+L150@P2: 570Z-4P-XFCOM
+L151@P2: 4” XF Spray Head
+L152@P2: with Check Valve
+L153@P2: 570Z-6P-XFCOM
+L154@P2: 6” XF Spray Head
+L155@P2: with Check Valve
+L156@P2: 570Z-12P-XFCOM
+L157@P2: 12” XF Spray Head
+L158@P2-3: with Check ValveSPECIFICATIONS
+L159@P3: Operational
+L160@P3: • Radius: 2 feet to 26 feet
+L161@P3: • Operating pressure range: 20-75 psi (15-75 psi for Low Pressure models)
+L162@P3: • Recommended operating pressure for spray nozzles: 30 psi
+L163@P3: • Recommended operating pressure for rotating nozzles: 45 psi
+L164@P3: • Flow rate: 0.5 – 4.5 gpm
+L165@P3: Dimensions
+L166@P3: • Body diameters:
+L167@P3:  – 13/8” on 2”, 3”, 4”, 6” and 6” Side Inlet
+L168@P3:  – 15/8” on 12”
+L169@P3:  – 13/4” on 12” Side Inlet
+L170@P3: • Cap diameter: 2”
+L171@P3: • Inlet thread: 1/2” Female
+L172@P3: • Side inlet location: 43/4” (measured from the top of spray head to
+L173@P3: center of the side inlet port)
+L174@P3: Warranty
+L175@P3: • Five years on all models
+L176@P3: Additional Features
+L177@P3: Corrosion-resistant stainless steel retraction spring
+L178@P3: All models shipped with installed flush plug
+L179@P3: Options Available
+L180@P3: Serviceable Check Valve (570CV) prevents low-head
+L181@P3: drainage on elevation changes of up to 10 feet (not
+L182@P3: compatible with Side Inlet or Shrub models)
+L183@P3: Replacement Zero-Flush seal (570SEAL)
+L184@P3: Effluent water indicators:
+L185@P3:  – Effluent Shrub Adapter (102-1231)
+L186@P3:  – Effluent snap-on cap cover (89-9752)
+L187@P3:  – Effluent Cap with seal (102-1211)
+L188@P3: 6” Riser Extender (570-6X)
+L189@P3: 6” Stationary Riser (570-SR-6)
+L190@P3: [1/2” male-threaded inlet]
+L191@P3: 18” Stationary Riser (570-SR-18)
+L192@P3: [1/2” male-threaded inlet]
+L193@P3: Riser Pull-up Tool (89-6395)
+L194@P3: Nozzle Adjustment Key (89-7350)
+L195@P3: Pressure Regulating Shrub Risers
+L196@P3: Toro 570S Series shrub risers with Pressure
+L197@P3: Regulation and X-Flow® Technology.
+L198@P3: • 570S-XF (Shrub Riser with X-Flow)
+L199@P3: • 570S-PR (Shrub Riser with
+L200@P3: Pressure Regulation)
+L201@P3: • 570S-PRX (Shrub Riser with
+L202@P3: Pressure Regulation and X-Flow)
+L203@P3: (Add “E” for Effluent Models)
+L204@P3: Specifying Information—570Z Series
+L205@P3: 570X-XXXXX-XXXXXXX
+L206@P3: Base Model Pop-Up Height Spring and Inlet Optional Optional Optional
+L207@P3: 570X XX XXX- XXX XXX X
+L208@P3: S — Shrub
+L209@P3: Z — Lawn Pop-up
+L210@P3: 2 — 2”
+L211@P3: 3 — 3”
+L212@P3: 4 — 4”
+L213@P3: 6 — 6”
+L214@P3: 12 — 12”
+L215@P3: P — Standard
+L216@P3: LP — Low Pressure
+L217@P3: SI — Std. Side Inlet*
+L218@P3: LPSI — Low Pressure SI
+L219@P3: XF — X-Flow® Technology
+L220@P3: PR — Pressure Regulator
+L221@P3: PRX — Pressure Regulator
+L222@P3:  with XF
+L223@P3: COM — Check Valve** E — Effluent
+L224@P3: Example: A 570Z PRX Series Sprinkler with a 6” pop-up height, side inlet would be specified as: 570Z-6SI-PRX
+L225@P3: *Available for 6” and 12” models. **Not compatible with Side Inlet or Shrub models.
+L226@P3: www.toro.com
+L227@P3: The Toro Company • Irrigation Business • 5825 Jasmine St. • Riverside, CA • 92504 • 877-345-8676
+L228@P3: Specifications subject to change without notice. For more information, contact your local Toro distributor. ©2022 The Toro Company. All rights reserved. 22-1021-IRC
+L229@P3: Pressure Regulation
+

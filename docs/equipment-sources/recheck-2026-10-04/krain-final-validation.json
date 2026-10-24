@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "itemCount": 84,
+  "baseRows": 764,
+  "reductionRows": 162,
+  "uniqueIds": 84,
+  "correctedCellCount": 20,
+  "nullPrecipitationCells": 108,
+  "catalogSha256": "ce600446521b72dd508ff75c2470fac5fe04a75505440907e338b37988b5dc44",
+  "tableTranscriptionDiffs": 0,
+  "reductionTranscriptionDiffs": 0
+}

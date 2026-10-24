@@ -1,0 +1,2840 @@
+[
+  {
+    "id": "toro:PSN5-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.43256,
+      "rMax": 1.61544,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.43256,
+      "rMax": 1.61544,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.40208,
+      "rMax": 1.85928,
+      "rNom": 1.70688,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.40208,
+      "rMax": 1.85928,
+      "rNom": 1.70688,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.34112,
+      "rMax": 1.64592,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.34112,
+      "rMax": 1.64592,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.2192,
+      "rMax": 1.64592,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.2192,
+      "rMax": 1.64592,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.34112,
+      "rMax": 1.92024,
+      "rNom": 1.6764,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.34112,
+      "rMax": 1.92024,
+      "rNom": 1.6764,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.34112,
+      "rMax": 1.6764,
+      "rNom": 1.58496,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.34112,
+      "rMax": 1.6764,
+      "rNom": 1.58496,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.31064,
+      "rMax": 1.524,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.31064,
+      "rMax": 1.524,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.31064,
+      "rMax": 1.524,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.31064,
+      "rMax": 1.524,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.2192,
+      "rMax": 1.8288,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN5T-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 1.2192,
+      "rMax": 1.8288,
+      "rNom": 1.524,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.31648,
+      "rMax": 2.52984,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.31648,
+      "rMax": 2.52984,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.1336,
+      "rMax": 2.68224,
+      "rNom": 2.56032,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.1336,
+      "rMax": 2.68224,
+      "rNom": 2.56032,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.31648,
+      "rMax": 2.52984,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.31648,
+      "rMax": 2.52984,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.286,
+      "rMax": 2.49936,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.286,
+      "rMax": 2.49936,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.1336,
+      "rMax": 2.7432,
+      "rNom": 2.5908,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.1336,
+      "rMax": 2.7432,
+      "rNom": 2.5908,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.31648,
+      "rMax": 2.49936,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.31648,
+      "rMax": 2.49936,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.1336,
+      "rMax": 2.4384,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.1336,
+      "rMax": 2.4384,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.19456,
+      "rMax": 2.4384,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.19456,
+      "rMax": 2.4384,
+      "rNom": 2.4384,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.1336,
+      "rMax": 2.71272,
+      "rNom": 2.52984,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN8T-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.1336,
+      "rMax": 2.71272,
+      "rNom": 2.52984,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.8956,
+      "rMax": 3.048,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.8956,
+      "rMax": 3.048,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.8956,
+      "rMax": 3.23088,
+      "rNom": 3.16992,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.8956,
+      "rMax": 3.23088,
+      "rNom": 3.16992,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.8956,
+      "rMax": 3.048,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.8956,
+      "rMax": 3.048,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.98704,
+      "rMax": 3.16992,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.98704,
+      "rMax": 3.16992,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.95656,
+      "rMax": 3.2004,
+      "rNom": 3.10896,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.95656,
+      "rMax": 3.2004,
+      "rNom": 3.10896,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.98704,
+      "rMax": 3.2004,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.98704,
+      "rMax": 3.2004,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.92608,
+      "rMax": 3.16992,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.92608,
+      "rMax": 3.16992,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.8956,
+      "rMax": 3.16992,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.8956,
+      "rMax": 3.16992,
+      "rNom": 3.048,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.92608,
+      "rMax": 3.10896,
+      "rNom": 2.98704,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN10T-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 2.92608,
+      "rMax": 3.10896,
+      "rNom": 2.98704,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.5052,
+      "rMax": 3.71856,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.5052,
+      "rMax": 3.71856,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.5052,
+      "rMax": 3.6576,
+      "rNom": 3.5052,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.5052,
+      "rMax": 3.6576,
+      "rNom": 3.5052,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.5052,
+      "rMax": 3.74904,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.5052,
+      "rMax": 3.74904,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.53568,
+      "rMax": 3.74904,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.53568,
+      "rMax": 3.74904,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.44424,
+      "rMax": 3.5052,
+      "rNom": 3.47472,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.44424,
+      "rMax": 3.5052,
+      "rNom": 3.47472,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.53568,
+      "rMax": 3.77952,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.53568,
+      "rMax": 3.77952,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.47472,
+      "rMax": 3.77952,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.47472,
+      "rMax": 3.77952,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.47472,
+      "rMax": 3.74904,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.47472,
+      "rMax": 3.74904,
+      "rNom": 3.6576,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.29184,
+      "rMax": 3.5052,
+      "rNom": 3.29184,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN12T-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 3.29184,
+      "rMax": 3.5052,
+      "rNom": 3.29184,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.2672,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-60",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 60,
+      "arcMax": 60,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.2672,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.32816,
+      "rMax": 4.8768,
+      "rNom": 4.8768,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-Q",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 90,
+      "arcMax": 90,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.32816,
+      "rMax": 4.8768,
+      "rNom": 4.8768,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.35864,
+      "rMax": 4.69392,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-T",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 120,
+      "arcMax": 120,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.35864,
+      "rMax": 4.69392,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.48056,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-150",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 150,
+      "arcMax": 150,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.48056,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.78536,
+      "rNom": 4.66344,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-H",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.78536,
+      "rNom": 4.66344,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.75488,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-210",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 210,
+      "arcMax": 210,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.75488,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-TT",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 240,
+      "arcMax": 240,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-TQ",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 270,
+      "arcMax": 270,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN15T-F",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 360,
+      "arcMax": 360,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "sector",
+      "precipBasis": "square",
+      "rMin": 4.4196,
+      "rMax": 4.66344,
+      "rNom": 4.572,
+      "radiusAdjustment": {
+        "minimumRatio": 1,
+        "flowPolicy": "unknown"
+      }
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X30-SST",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 4.2672,
+      "rMax": 4.572,
+      "rNom": 4.572,
+      "strip": {
+        "w": 1.2192,
+        "l": 9.144,
+        "ox": -4.572,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 8.5344
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 9.144
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 9.144
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 9.144
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X30T-SST",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 4.2672,
+      "rMax": 4.572,
+      "rNom": 4.572,
+      "strip": {
+        "w": 1.2192,
+        "l": 9.144,
+        "ox": -4.572,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 8.5344
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 9.144
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 9.144
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 9.144
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X15-LCS",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 4.572,
+      "rMax": 4.572,
+      "rNom": 4.572,
+      "strip": {
+        "w": 1.2192,
+        "l": 4.572,
+        "ox": 0,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 4.572
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X15T-LCS",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 4.572,
+      "rMax": 4.572,
+      "rNom": 4.572,
+      "strip": {
+        "w": 1.2192,
+        "l": 4.572,
+        "ox": 0,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 4.572
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X15-RCS",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 4.572,
+      "rMax": 4.572,
+      "rNom": 4.572,
+      "strip": {
+        "w": 1.2192,
+        "l": 4.572,
+        "ox": -4.572,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 4.572
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X15T-RCS",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 4.572,
+      "rMax": 4.572,
+      "rNom": 4.572,
+      "strip": {
+        "w": 1.2192,
+        "l": 4.572,
+        "ox": -4.572,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 4.572
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 4.572
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X18-SST",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 2.7432,
+      "rMax": 2.7432,
+      "rNom": 2.7432,
+      "strip": {
+        "w": 1.2192,
+        "l": 5.486400000000001,
+        "ox": -2.7432000000000003,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 5.486400000000001
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 5.486400000000001
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 5.486400000000001
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 5.486400000000001
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X18T-SST",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 2.7432,
+      "rMax": 2.7432,
+      "rNom": 2.7432,
+      "strip": {
+        "w": 1.2192,
+        "l": 5.486400000000001,
+        "ox": -2.7432000000000003,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 5.486400000000001
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 5.486400000000001
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 5.486400000000001
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 5.486400000000001
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X9-LCS",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 2.7432,
+      "rMax": 2.7432,
+      "rNom": 2.7432,
+      "strip": {
+        "w": 1.2192,
+        "l": 2.7432000000000003,
+        "ox": 0,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X9T-LCS",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 2.7432,
+      "rMax": 2.7432,
+      "rNom": 2.7432,
+      "strip": {
+        "w": 1.2192,
+        "l": 2.7432000000000003,
+        "ox": 0,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X9-RCS",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "female",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 2.7432,
+      "rMax": 2.7432,
+      "rNom": 2.7432,
+      "strip": {
+        "w": 1.2192,
+        "l": 2.7432000000000003,
+        "ox": -2.7432000000000003,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        }
+      ]
+    },
+    "trajectoryPass": true
+  },
+  {
+    "id": "toro:PSN4X9T-RCS",
+    "pass": true,
+    "differences": {},
+    "expectedFields": {
+      "arcMin": 180,
+      "arcMax": 180,
+      "nozzleThread": "male",
+      "recommendedPressureBar": 2.068427,
+      "recommendedPressureMin": 1.378951,
+      "recommendedPressureMax": 3.447379,
+      "operatingPressureMinBar": 1.378951,
+      "operatingPressureMaxBar": 5.171068,
+      "coverageKind": "strip",
+      "precipBasis": "strip",
+      "rMin": 2.7432,
+      "rMax": 2.7432,
+      "rNom": 2.7432,
+      "strip": {
+        "w": 1.2192,
+        "l": 2.7432000000000003,
+        "ox": -2.7432000000000003,
+        "oy": -1.2192
+      },
+      "stripPerformance": [
+        {
+          "pressureBar": 1.378951,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 2.068427,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 2.757903,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        },
+        {
+          "pressureBar": 3.447379,
+          "w": 1.2192,
+          "l": 2.7432000000000003
+        }
+      ]
+    },
+    "trajectoryPass": true
+  }
+]

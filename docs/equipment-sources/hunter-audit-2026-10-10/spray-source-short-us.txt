@@ -1,0 +1,48 @@
+Short-Radius Micro Spray Nozzles | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles)
+citeturn277view0 [wordlim: 200] Crawled: 5 days ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles","lineno":null}); Total lines: 651
+## Charts
+L192: 
+L193: ### Short-Radius Nozzles Performance Data
+L194: ## Short Radius Nozzles Performance Data
+L195: ---
+L196: • Nozzle Lt. Brown
+L197: Arc  | Pressure  | Position  | Radius  | Flow  | *Precip
+L198:    | PSI  |    | ft  | GPM  | GPH  | in/hr
+L199: 90° cite49†Image | 20  | 2Q  | 2  | 0.09  | 5.4  | 2.17
+L200: 25  | 2  | 0.10  | 6.0  | 2.41
+L201: 30  | 2  | 0.11  | 6.6  | 2.65
+L202: 35  | 2  | 0.13  | 7.8  | 3.13
+L203: 40  | 2  | 0.14  | 8.4  | 3.37
+L204: 180° cite50†Image | 20  | 2H  | 2  | 0.14  | 8.4  | 1.68
+L205: 25  | 2  | 0.15  | 9.0  | 1.80
+L206: 30  | 2  | 0.20  | 12.0  | 2.41
+L207: 35  | 2  | 0.20  | 12.0  | 2.41
+L208: 40  | 2  | 0.21  | 12.6  | 2.53
+L209: • Nozzle Lt. Green
+L210: Arc  | Pressure  | Position  | Radius  | Flow  | *Precip
+L211:    | PSI  |    | ft  | GPM  | GPH  | in/hr
+L212: 90° cite49†Image | 20  | 4Q  | 4  | 0.18  | 10.8  | 1.08
+L213: 25  | 4  | 0.20  | 12.0  | 1.20
+L214: 30  | 4  | 0.20  | 12.0  | 1.20
+L215: 35  | 4  | 0.22  | 13.2  | 1.32
+L216: 40  | 4  | 0.24  | 14.4  | 1.44
+L217: 180° cite50†Image | 20  | 4H  | 4  | 0.33  | 19.8  | 0.99
+L218: 25  | 4  | 0.34  | 20.4  | 1.02
+L219: 30  | 4  | 0.40  | 24.0  | 1.20
+L220: 35  | 4  | 0.40  | 24.0  | 1.20
+L221: 40  | 4  | 0.44  | 26.4  | 1.32
+L222: • Nozzle Lt. Blue
+L223: Arc  | Pressure  | Position  | Radius  | Flow  | *Precip
+L224:    | PSI  |    | ft  | GPM  | GPH  | in/hr
+L225: 90° cite49†Image | 20  | 6Q  | 6  | 0.22  | 13.2  | 0.59
+L226: 25  | 6  | 0.24  | 14.4  | 0.64
+L227: 30  | 6  | 0.30  | 18.0  | 0.80
+L228: 35  | 6  | 0.30  | 18.0  | 0.80
+L229: 40  | 6  | 0.30  | 18.0  | 0.80
+L230: 180° cite50†Image | 20  | 6H  | 6  | 0.40  | 24.0  | 0.53
+L231: 25  | 6  | 0.44  | 26.4  | 0.59
+L232: 30  | 6  | 0.50  | 30.0  | 0.67
+L233: 35  | 6  | 0.52  | 31.2  | 0.70
+L234: 40  | 6  | 0.54  | 32.4  | 0.72
+L235: * Precipitation rate shown without overlap
+L236: 

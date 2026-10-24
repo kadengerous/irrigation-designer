@@ -1,0 +1,155 @@
+{
+  "mode": "built-in image_gen",
+  "createdOn": "2026-10-10",
+  "technicalProcessing": "WebP quality 88 compression with unchanged dimensions and alpha; no image redraw. Crop metadata uses alpha >= 16 to exclude nearly transparent generation noise.",
+  "assets": [
+    {
+      "id": "pool-square",
+      "prompt": "Use case: product-mockup. Asset type: a single photorealistic cutout sprite for a landscape design plan. Camera: STRICT orthographic plan view directly overhead, optical axis exactly vertical. No perspective, no isometric angle, no visible exterior side walls, no horizon. The entire object must be completely visible, centered, with approximately 6 percent empty transparent padding around its outer bounds. Transparent alpha background outside the object's precise silhouette, not a checkerboard or a colored background. Soft evenly diffuse daylight, subtle realistic materials, restrained realistic water caustics and ripples. No people, no text, no labels, no logos, no watermark, no decorations, no ground, no patio, no plants, no external accessories, no detached shadows. Show ONLY the requested object. Subject: a compact square in-ground swimming pool, exactly square 4 by 4 metre OUTER footprint, axis-aligned. A continuous narrow pale beige limestone coping border with neat stone slab seams encloses clear blue water; square inner basin with very slightly softened inner corners, a small shallow integrated submerged entry step along one inner side. The upper and lower edges are parallel, left and right edges parallel, all four exterior sides exactly equal. Matching realistic stone-and-water quality of a refined landscape-plan asset. The stone coping itself is the outer boundary; nothing outside it.",
+      "source": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-3178d94e-5afe-44ab-90e7-a7a16112e442.png",
+      "finalPath": "public/landscape/pool-square.webp",
+      "bounds": {
+        "x": 93,
+        "y": 96,
+        "width": 1070,
+        "height": 1065,
+        "imageWidth": 1254,
+        "imageHeight": 1254
+      },
+      "bytes": 363740,
+      "transparentPixels": 378809,
+      "alphaUnchanged": true,
+      "physicalSizeM": {
+        "width": 4,
+        "height": 4
+      }
+    },
+    {
+      "id": "pool-round",
+      "prompt": "Use case: product-mockup. Asset type: a single photorealistic cutout sprite for a landscape design plan. Camera: STRICT orthographic plan view directly overhead, optical axis exactly vertical. No perspective, no isometric angle, no visible exterior side walls, no horizon. The entire object must be completely visible, centered, with approximately 6 percent empty transparent padding around its outer bounds. Transparent alpha background outside the object's precise silhouette, not a checkerboard or a colored background. Soft evenly diffuse daylight, subtle realistic materials, restrained realistic water caustics and ripples. No people, no text, no labels, no logos, no watermark, no decorations, no ground, no patio, no plants, no external accessories, no detached shadows. Show ONLY the requested object. Subject: a round in-ground swimming pool, exact perfect circular 4 metre diameter OUTER footprint. A continuous narrow pale beige limestone coping ring with realistic segment seams encloses a perfect circular basin of clear blue water. Top-down circle must be a CIRCLE, not an ellipse. Very subtle small pool-floor tile texture under the water. No stairs or ladders protruding beyond the ring. The stone coping ring itself is the outer boundary; nothing outside it.",
+      "source": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-440f668c-4eff-4912-92ef-bead8601ba29.png",
+      "finalPath": "public/landscape/pool-round.webp",
+      "bounds": {
+        "x": 62,
+        "y": 58,
+        "width": 1129,
+        "height": 1133,
+        "imageWidth": 1254,
+        "imageHeight": 1254
+      },
+      "bytes": 404172,
+      "transparentPixels": 557988,
+      "alphaUnchanged": true,
+      "physicalSizeM": {
+        "width": 4,
+        "height": 4
+      }
+    },
+    {
+      "id": "pool-rectangle",
+      "prompt": "Use case: product-mockup. Asset type: a single photorealistic cutout sprite for a landscape design plan. Camera: STRICT orthographic plan view directly overhead, optical axis exactly vertical. No perspective, no isometric angle, no visible exterior side walls, no horizon. The entire object must be completely visible, centered, with approximately 6 percent empty transparent padding around its outer bounds. Transparent alpha background outside the object's precise silhouette, not a checkerboard or a colored background. Soft evenly diffuse daylight, subtle realistic materials, restrained realistic water caustics and ripples. No people, no text, no labels, no logos, no watermark, no decorations, no ground, no patio, no plants, no external accessories, no detached shadows. Show ONLY the requested object. Subject: a rectangular in-ground swimming pool, exact 6 by 3 metre OUTER footprint, long axis horizontal, precisely TWO TIMES as wide as tall. Straight parallel axis-aligned edges with square exterior corners. A narrow pale beige limestone coping border with realistic slab seams encloses clear blue water; small broad submerged entry steps entirely inside one short end. Fine restrained blue pool-floor tile texture visible under water. The stone coping itself is the outer boundary; nothing outside it. Preserve the outer silhouette width:height ratio EXACTLY 2:1; this is a horizontal rectangle, not a square.",
+      "source": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-fac7208d-223d-4729-91dc-d3424d329af5.png",
+      "generationSource": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-ac2abfbb-9bfe-4046-b7ce-7b055f165671.png",
+      "edits": [
+        {
+          "input": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-ac2abfbb-9bfe-4046-b7ce-7b055f165671.png",
+          "prompt": "Use case: precise-object-edit. Edit this image of a single swimming pool cutout. Keep the same realistic limestone coping, blue water, submerged steps, strict orthographic overhead camera, materials, colors and transparent alpha background. Change ONLY the shape proportions: the existing pool is too long and narrow (about 2.6 times as wide as tall). Make its OUTER RIM a proper 6 by 3 metre horizontal rectangle, with its WIDTH EXACTLY TWICE its HEIGHT. Increase the object's vertical extent by about 30 percent while keeping its horizontal extent. The top and bottom edges remain perfectly horizontal and the left and right edges perfectly vertical. Complete object visible with modest transparent padding. Absolutely no perspective, no surrounding ground, no exterior accessories, no text, no people. The outline itself, excluding empty transparent canvas, must be EXACTLY 2:1. Remove any residual background flecks outside the clean rim."
+        },
+        {
+          "input": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-954cdbc8-ae07-44bb-8454-a868f106df2b.png",
+          "prompt": "Precise geometry correction to the referenced transparent overhead pool sprite. Keep all materials, water, coping, lighting, steps and orthographic view unchanged. The pool is still too narrow vertically. Its actual exterior rectangle must be exactly 2:1 width:height. On this 1774×887 image, place the OUTER STONE EDGE at x=80 on the left, x=1694 on the right, y=40 on top, y=847 on bottom. Therefore the visible stone pool rectangle is 1614 pixels wide and 807 pixels high. Extend it vertically to these bounds; keep the entire pool inside the frame. Transparent area outside. No outer side wall or shadow. No text. This is a correction of the object's rectangle, not merely a crop or a canvas shape change. Water and step geometry follow the expanded inner rectangle. Absolutely strict orthographic top view."
+        }
+      ],
+      "finalPath": "public/landscape/pool-rectangle.webp",
+      "bounds": {
+        "x": 63,
+        "y": 45,
+        "width": 1648,
+        "height": 794,
+        "imageWidth": 1774,
+        "imageHeight": 887
+      },
+      "bytes": 189976,
+      "transparentPixels": 255038,
+      "alphaUnchanged": true,
+      "physicalSizeM": {
+        "width": 6,
+        "height": 3
+      }
+    },
+    {
+      "id": "tub-round-wood",
+      "prompt": "Use case: product-mockup. Asset type: a single photorealistic cutout sprite for a landscape design plan. Camera: STRICT orthographic plan view directly overhead, optical axis exactly vertical. No perspective, no isometric angle, no visible exterior side walls, no horizon. The entire object must be completely visible, centered, with approximately 6 percent empty transparent padding around its outer bounds. Transparent alpha background outside the object's precise silhouette, not a checkerboard or a colored background. Soft evenly diffuse daylight, subtle realistic materials, restrained realistic water caustics and ripples. No people, no text, no labels, no logos, no watermark, no decorations, no ground, no patio, no plants, no external accessories, no detached shadows. Show ONLY the requested object. Subject: a round wooden barrel-style plunge tub, exact perfect circular 2 metre diameter OUTER footprint. Distinct natural warm cedar or larch stave construction visible as the thick circular wooden top rim with radial joinery and restrained wood grain. A narrow dark metal band may be visible ONLY within the circular top outline. Inside: deep clear turquoise-blue water, a compact submerged curved wooden seating ledge against the interior wall. Perfect circle, not ellipse; do not show any outer vertical barrel wall. No heater, pipe, ladder, external steps or objects beyond the circular wooden rim.",
+      "source": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-a73b7284-3bb2-4d4c-b319-24e9bafb2b7b.png",
+      "finalPath": "public/landscape/tub-round-wood.webp",
+      "bounds": {
+        "x": 40,
+        "y": 32,
+        "width": 1173,
+        "height": 1174,
+        "imageWidth": 1254,
+        "imageHeight": 1254
+      },
+      "bytes": 335450,
+      "transparentPixels": 482244,
+      "alphaUnchanged": true,
+      "physicalSizeM": {
+        "width": 2,
+        "height": 2
+      }
+    },
+    {
+      "id": "tub-square-spa",
+      "prompt": "Use case: product-mockup. Asset type: a single photorealistic cutout sprite for a landscape design plan. Camera: STRICT orthographic plan view directly overhead, optical axis exactly vertical. No perspective, no isometric angle, no visible exterior side walls, no horizon. The entire object must be completely visible, centered, with approximately 6 percent empty transparent padding around its outer bounds. Transparent alpha background outside the object's precise silhouette, not a checkerboard or a colored background. Soft evenly diffuse daylight, subtle realistic materials, restrained realistic water caustics and ripples. No people, no text, no labels, no logos, no watermark, no decorations, no ground, no patio, no plants, no external accessories, no detached shadows. Show ONLY the requested object. Subject: a modern square spa / hot tub, exact 2 by 2 metre OUTER footprint, square with softly rounded exterior corners and axis-aligned sides. A broad light grey composite rim and clean ivory molded acrylic interior distinguish it clearly from a swimming pool. Within the rim, sculpted ergonomic seat wells at four sides, a few small recessed jet outlets, and calm pale turquoise water with very subtle ripples. All seat details are seen directly from overhead, no perspective. No cover, no external equipment, no control text, no detached items. Outer width and height exactly equal.",
+      "source": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-ad0cc0f5-93f1-41d2-a64d-522c25a178be.png",
+      "finalPath": "public/landscape/tub-square-spa.webp",
+      "bounds": {
+        "x": 76,
+        "y": 83,
+        "width": 1103,
+        "height": 1063,
+        "imageWidth": 1254,
+        "imageHeight": 1254
+      },
+      "bytes": 186210,
+      "transparentPixels": 407179,
+      "alphaUnchanged": true,
+      "physicalSizeM": {
+        "width": 2,
+        "height": 2
+      }
+    },
+    {
+      "id": "tub-rectangle-plunge",
+      "prompt": "Use case: product-mockup. Asset type: a single photorealistic cutout sprite for a landscape design plan. Camera: STRICT orthographic plan view directly overhead, optical axis exactly vertical. No perspective, no isometric angle, no visible exterior side walls, no horizon. The entire object must be completely visible, centered, with approximately 6 percent empty transparent padding around its outer bounds. Transparent alpha background outside the object's precise silhouette, not a checkerboard or a colored background. Soft evenly diffuse daylight, subtle realistic materials, restrained realistic water caustics and ripples. No people, no text, no labels, no logos, no watermark, no decorations, no ground, no patio, no plants, no external accessories, no detached shadows. Show ONLY the requested object. Subject: a modern rectangular cold-plunge tub, exact 2 by 1.2 metre OUTER footprint, long axis horizontal, outer width:height exactly FIVE TO THREE. Rounded rectangular charcoal composite outer rim, inset light grey molded interior, blue cold water; one simple submerged interior step/seat at one short end. Distinct compact utilitarian cold-plunge tub, not a large swimming pool. Straight parallel edges, gentle corner radius, strict vertical overhead view. No ice cubes, no cover, no chiller, no plumbing, no accessories outside the rim. Preserve the outer 5:3 horizontal silhouette.",
+      "source": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-7abbf12b-e8f3-4bcc-ab47-55d3e88403c8.png",
+      "generationSource": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-d1c1fb0b-b1b7-4007-8e87-8c7c9f3f1a37.png",
+      "edits": [
+        {
+          "input": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-d1c1fb0b-b1b7-4007-8e87-8c7c9f3f1a37.png",
+          "prompt": "Use case: precise-object-edit. Edit this cold plunge tub cutout. Keep the same charcoal composite rim, light grey molded interior, blue water, interior submerged step, strict orthographic overhead camera, materials, colors and transparent alpha background. Change ONLY the shape proportions: the existing tub is too narrow (about twice as wide as tall). Make its OUTER RIM a proper 2 by 1.2 metre horizontal rectangle, WIDTH exactly FIVE THIRDS its HEIGHT, approximately 1.667:1. Increase the object's vertical extent by about 20 percent while keeping its horizontal extent. The top and bottom edges stay horizontal and the sides vertical, with the same softly rounded corners. Complete object visible with modest transparent padding. No perspective, exterior walls, surrounding ground, accessories, people, text. The visible object silhouette itself, excluding transparent canvas, must be 5:3. Remove any residual background flecks outside the clean rim."
+        },
+        {
+          "input": "/Users/dankarayman/.codex/generated_images/01a126b6-2073-7e81-b8b5-e188c3d57876/exec-a94f5e83-799b-4ec2-be29-c0e31d40e61f.png",
+          "prompt": "Precise geometry correction to the referenced transparent overhead cold-plunge sprite. Keep all materials, water, charcoal rim, interior step, lighting and strict orthographic top view. The tub is still too narrow vertically. Its actual exterior rounded rectangle must be exactly 5:3 width:height. On this 1619×972 image, place the OUTER RIM at x=60 left, x=1560 right, y=36 top, y=936 bottom. Thus the visible tub itself is 1500 pixels wide and 900 pixels high. Extend the object vertically to these bounds; don't merely change the canvas. All of the object is visible with transparent padding. Preserve softly rounded corners. No outer walls, ground, accessories, shadow, text or people. Water basin and seat follow the wider vertical interior."
+        }
+      ],
+      "finalPath": "public/landscape/tub-rectangle-plunge.webp",
+      "bounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1525,
+        "height": 896,
+        "imageWidth": 1619,
+        "imageHeight": 971
+      },
+      "bytes": 213440,
+      "transparentPixels": 198972,
+      "alphaUnchanged": true,
+      "physicalSizeM": {
+        "width": 2,
+        "height": 1.2
+      }
+    }
+  ]
+}

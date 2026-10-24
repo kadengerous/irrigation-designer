@@ -1,0 +1,412 @@
+ (https://www.rainbird.com/media/4668)
+citeturn403view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 5; Source: open({"ref_id":"https://www.rainbird.com/media/4668","lineno":0}); Total lines: 494
+L0@P0: © 2023 Rain Bird Corporation D42381 Rainbird.com
+L1@P0: OPERATING RANGE:
+L2@P0: Precipitation Rate
+L3@P0: 0.37 to 1.26 in/hr (9 to 32 mm/h)
+L4@P0: Flow Rate
+L5@P0: 2.9 to 21.7 gpm (0.66 to 4.93 m3
+L6@P0: /h;
+L7@P0: 10.8 to 82.2 l/m)
+L8@P0: Radius
+L9@P0: 37 to 65 ft (11.3 to 19.8 m)
+L10@P0: Pressure
+L11@P0: 30 to 90 psi (2.1 to 6.2 bar)
+L12@P0: SPECIFICATIONS:
+L13@P0: y 1” female NPT or BSP threaded inlet
+L14@P0: y SAM check device holds up to 10 ft
+L15@P0: (3.1 m) of head
+L16@P0: y Nozzle outlet trajectory is 25°
+L17@P0: DIMENSIONS:
+L18@P0: Exposed Surface Diameter
+L19@P0: 2” (5.1 cm)
+L20@P0: Overall Height
+L21@P0: 81/2” (21.6 cm)
+L22@P0: Pop-up Height
+L23@P0: 4” (10.2 cm)
+L24@P0: Note: Pop-up height is measured from
+L25@P0: cover to center of primary nozzle port.
+L26@P0: Overall body height is measured
+L27@P0: popped down.
+L28@P0: MODELS:
+L29@P0: y 6504-FC: Full-circle
+L30@P0: y 6504-PC: Part-circle
+L31@P0: y 6504-FC-NP: Full-circle,
+L32@P0: non-potable cover
+L33@P0: y 6504-PC-NP: Part-circle,
+L34@P0: non-potable cover
+L35@P0: y Stainless steel riser option helps deter
+L36@P0: vandalism on public turf areas
+L37@P0: y Five-year trade warranty
+L38@P0: y Easy arc adjustment (part-circle model)
+L39@P0: through top of rotor from 40° to 360°
+L40@P0: y Water-lubricated gear drive for reliable,
+L41@P0: durable rotation
+L42@P0: y Heavy-duty stainless steel retract spring
+L43@P0: ensures positive pop-down
+L44@P0: y Standard black rubber cover or
+L45@P0: optional purple rubber cover for nonpotable water
+L46@P0: y Removable Seal-A-Matic™ (SAM) check
+L47@P0: device prevents puddling and erosion
+L48@P0: caused by low-head drainage
+L49@P0: y Eight color-coded Rain Curtain nozzles
+L50@P0: offer greater design flexibility
+L51@P0: y Rain Curtain nozzles have three ports
+L52@P0: for optimal long-range, mid-range, and
+L53@P0: close-in watering for green grass even
+L54@P0: in the heat of summer
+L55@P0: y Nozzles are interchangeable from the
+L56@P0: front with no special tools
+L57@P0: y Small 2” (5.1 cm) exposed diameter
+L58@P0: reduces possibility of injury in play areas
+L59@P0: y Patented, pressure-activated wiper seal
+L60@P0: and tapered riser stem on both plastic
+L61@P0: and stainless steel models protect
+L62@P0: internals from debris to ensure positive
+L63@P0: pop-up and retraction
+L64@P0: y 4” (10.2 cm) pop-up height to center line
+L65@P0: of nozzle clears taller turfgrass
+L66@P0: y Stainless steel trip gears ensure longterm durability
+L67@P0: With the Falcon 6504 rotor you can have it all—superior distribution, reliability and
+L68@P0: durability! Rain Curtain™ nozzles maximize performance and coverage. A multi-function
+L69@P0: wiper seal and tapered riser keep the stem clear of debris, providing long-term protection.
+L70@P0: Plus, heavy-duty construction makes the Falcon 6504 one of the toughest rotors in the
+L71@P0: field. Available in full- and part-circle models with optional stainless steel riser, the Falcon
+L72@P0: 6504 rotor is ideal for large turf sites such as parks, athletic fields, cemeteries, schools and
+L73@P0: commercial applications.
+L74@P0: FEATURES:
+L75@P0: Falcon® 6504 Rotors
+L76@P0: Technical Specifications
+L77@P0: 6504 - PC - SS - NP - 16
+L78@P0: Rotation
+L79@P0: Part-Circle
+L80@P0: Note: For non-U.S. applications, it is necessary to
+L81@P0: specify NPT or BSP thread type.
+L82@P0: Optional
+L83@P0: Feature
+L84@P0: Stainless
+L85@P0: Steel Riser
+L86@P0: Optional
+L87@P0: Feature
+L88@P0: NonPotable
+L89@P0: Cover
+L90@P0: Model
+L91@P0: 6504: Falcon
+L92@P0: Nozzle
+L93@P0: Size
+L94@P0: 16
+L95@P0: y 6504-FC-SS: Full-circle, stainless steel
+L96@P0: y 6504-PC-SS: Part-circle, stainless steel
+L97@P0: y 6504-FC-SS-NP: Full-circle, stainless steel,
+L98@P0: non-potable cover
+L99@P0: y 6504-PC-SS-NP: Part-circle, stainless steel,
+L100@P0-1: non-potable coverFalcon® 6504 Rotors
+L101@P1: © 2023 Rain Bird Corporation D42381 Rainbird.com
+L102@P1: Technical Specifications
+L103@P1: Standard Rubber Cover with
+L104@P1: 2” Exposed Diameter
+L105@P1: For enhanced safety on playing areas
+L106@P1: Tapered Riser Stem (All Models)
+L107@P1: Ensures positive pop-up and retraction
+L108@P1: Stainless Steel Trip Gears
+L109@P1: For long-term strength
+L110@P1: and durability
+L111@P1: Seal-A-Matic™ (SAM)
+L112@P1: Check Device
+L113@P1: Prevents puddling/erosion
+L114@P1: Nozzle Retention Screw
+L115@P1: Allows up to 25% radius reduction
+L116@P1: without changing nozzles
+L117@P1: Interchangeable
+L118@P1: Color-Coded Nozzles
+L119@P1: For superior water distribution
+L120@P1: Patented, Pressure-Activated
+L121@P1: Wiper Seal
+L122@P1: Protects the internals
+L123@P1: from debris
+L124@P1: Water Lubricated Gear Drive
+L125@P1: For reliable rotation
+L126@P1: Self-Adjusting Stator
+L127@P1: Automatically adjusts when
+L128@P1-2: nozzle is changedFalcon® 6504 Rotors
+L129@P2: © 2023 Rain Bird Corporation D42381 Rainbird.com
+L130@P2: Technical Specifications
+L131@P2: FALCON 6504 NOZZLE PERFORMANCE
+L132@P2: ■ ▲ PRESSURE
+L133@P2: (PSI)
+L134@P2: NOZZLE RADIUS
+L135@P2: (FT)
+L136@P2: FLOW
+L137@P2: (GPM)
+L138@P2: PRECIP
+L139@P2: (IN/H)
+L140@P2: PRECIP
+L141@P2: (IN/H)
+L142@P2: 30 ● 04 39 2.9 0.37 0.42
+L143@P2: ● 06 43 4.2 0.44 0.50
+L144@P2: 40 ● 04 41 3.3 0.38 0.44
+L145@P2: ● 06 45 4.9 0.47 0.54
+L146@P2: ● 08 49 6.6 0.53 0.61
+L147@P2: ● 10 51 8.1 0.60 0.69
+L148@P2: ● 12 53 9.7 0.66 0.77
+L149@P2: ● 14 55 11.3 0.72 0.83
+L150@P2: ● 16 55 12.6 0.80 0.93
+L151@P2: ● 18 59 13.7 0.76 0.87
+L152@P2: 50 ● 04 41 3.7 0.42 0.49
+L153@P2: ● 06 49 5.5 0.44 0.51
+L154@P2: ● 08 51 7.4 0.55 0.63
+L155@P2: ● 10 53 9.1 0.62 0.72
+L156@P2: ● 12 55 11.0 0.70 0.81
+L157@P2: ● 14 59 12.7 0.70 0.81
+L158@P2: ● 16 61 14.3 0.74 0.85
+L159@P2: ● 18 59 15.4 0.85 0.98
+L160@P2: 60 ● 04 41 4.0 0.46 0.53
+L161@P2: ● 06 47 6.0 0.52 0.60
+L162@P2: ● 08 51 8.2 0.61 0.70
+L163@P2: ● 10 55 10.0 0.64 0.73
+L164@P2: ● 12 57 12.2 0.72 0.83
+L165@P2: ● 14 61 14.0 0.72 0.84
+L166@P2: ● 16 63 15.7 0.76 0.88
+L167@P2: ● 18 63 17.1 0.83 0.96
+L168@P2: 70 ● 04 41 4.4 0.50 0.58
+L169@P2: ● 06 49 6.3 0.51 0.58
+L170@P2: ● 08 51 8.9 0.66 0.76
+L171@P2: ● 10 57 10.8 0.64 0.74
+L172@P2: ● 12 59 13.2 0.73 0.84
+L173@P2: ● 14 61 15.2 0.79 0.91
+L174@P2: ● 16 63 16.9 0.82 0.95
+L175@P2: ● 18 65 18.3 0.83 0.96
+L176@P2: 80 ● 04 43 4.6 0.48 0.55
+L177@P2: ● 06 49 6.9 0.55 0.64
+L178@P2: ● 08 53 9.4 0.64 0.74
+L179@P2: ● 10 55 11.6 0.74 0.85
+L180@P2: ● 12 61 14.0 0.72 0.84
+L181@P2: ● 14 61 16.2 0.84 0.97
+L182@P2: ● 16 63 18.1 0.88 1.01
+L183@P2: ● 18 65 19.6 0.89 1.03
+L184@P2: 90 ● 18 65 21.7 0.99 1.14
+L185@P2: Precipitation rates based on half-circle operation
+L186@P2: ■ Square spacing based on 50% diameter of throw
+L187@P2: ▲Triangular spacing based on 50% diameter of throw
+L188@P2: Performance data collected in zero wind conditions
+L189@P2: Performance data derived from tests that conform with ASAE
+L190@P2: Standards; ASAE S398.1.
+L191@P2: FALCON 6504 NOZZLE PERFORMANCE METRIC
+L192@P2: ■ ▲ PRESSURE
+L193@P2: (BAR)
+L194@P2: NOZZLE RADIUS
+L195@P2: (M)
+L196@P2: FLOW
+L197@P2: (M3/H)
+L198@P2: FLOW
+L199@P2: (L/M)
+L200@P2: PRECIP
+L201@P2: (MM/H)
+L202@P2: PRECIP
+L203@P2: (MM/H)
+L204@P2: 2.1 ● 04 11.9 0.66 10.98 9 11
+L205@P2: ● 06 13.1 0.95 15.90 11 13
+L206@P2: 2.5 ● 04 12.3 0.72 11.92 10 11
+L207@P2: ● 06 13.5 1.05 17.56 12 13
+L208@P2: ● 08 14.9 1.50 25.20 13 16
+L209@P2: ● 10 15.5 1.84 30.60 15 18
+L210@P2: ● 12 16.2 2.20 36.60 17 19
+L211@P2: ● 14 16.8 2.57 42.60 18 21
+L212@P2: ● 16 16.8 2.86 47.40 20 24
+L213@P2: ● 18 18.0 3.11 51.60 19 22
+L214@P2: 3.0 ● 04 12.5 0.78 13.02 10 12
+L215@P2: ● 06 14.1 1.16 19.34 12 13
+L216@P2: ● 08 15.1 1.56 26.04 14 16
+L217@P2: ● 10 15.8 1.92 31.99 15 18
+L218@P2: ● 12 16.4 2.31 38.44 17 20
+L219@P2: ● 14 17.2 2.68 44.63 18 21
+L220@P2: ● 16 17.4 3.00 49.95 20 23
+L221@P2: ● 18 18.0 3.25 54.11 20 23
+L222@P2: 3.5 ● 04 12.5 0.85 14.09 11 13
+L223@P2: ● 06 14.9 1.26 20.96 11 13
+L224@P2: ● 08 15.5 1.69 28.24 14 16
+L225@P2: ● 10 16.2 2.08 34.70 16 18
+L226@P2: ● 12 16.8 2.52 41.98 18 21
+L227@P2: ● 14 18.0 2.91 48.45 18 21
+L228@P2: ● 16 18.6 3.27 54.53 19 22
+L229@P2: ● 18 18.1 3.53 58.78 22 25
+L230@P2: 4.0 ● 04 12.5 0.89 14.91 11 13
+L231@P2: ● 06 14.4 1.34 22.33 13 15
+L232@P2: ● 08 15.5 1.83 30.44 15 17
+L233@P2: ● 10 16.6 2.23 37.17 16 19
+L234@P2: ● 12 17.3 2.72 45.28 18 21
+L235@P2: ● 14 18.5 3.12 52.01 18 21
+L236@P2: ● 16 19.1 3.50 58.37 19 22
+L237@P2: ● 18 19.0 3.81 63.45 21 24
+L238@P2: 4.5 ● 04 12.5 0.96 15.94 12 14
+L239@P2: ● 06 14.6 1.40 16.72 13 15
+L240@P2: ● 08 15.5 1.95 32.43 16 19
+L241@P2: ● 10 17.1 2.37 39.44 16 19
+L242@P2: ● 12 17.7 2.89 48.17 18 21
+L243@P2: ● 14 18.6 3.32 55.38 19 22
+L244@P2: ● 16 19.2 3.71 61.82 20 23
+L245@P2: ● 18 19.5 4.03 67.12 21 24
+L246@P2: 5.0 ● 04 12.7 1.01 16.84 13 15
+L247@P2: ● 06 14.9 1.47 15.08 13 15
+L248@P2: ● 08 15.7 2.05 34.16 17 19
+L249@P2: ● 10 17.2 2.50 41.64 17 19
+L250@P2: ● 12 18.1 3.04 50.72 19 21
+L251@P2: ● 14 18.6 3.51 58.49 20 23
+L252@P2: ● 16 19.2 3.91 65.11 21 24
+L253@P2: ● 18 19.8 4.23 70.51 22 25
+L254@P2: 5.5 ● 04 13.1 1.04 17.39 12 14
+L255@P2: ● 06 14.9 1.56 25.79 14 16
+L256@P2: ● 08 16.1 2.13 35.54 16 19
+L257@P2: ● 10 16.8 2.63 43.84 19 22
+L258@P2: ● 12 18.6 3.18 52.92 18 21
+L259@P2: ● 14 18.6 3.67 61.23 21 25
+L260@P2: ● 16 19.2 4.10 68.40 22 26
+L261@P2: ● 18 19.8 4.44 74.07 23 26
+L262@P2: 6.0 ● 18 19.8 4.79 79.77 24 28
+L263@P2-3: 6.2 ● 18 19.8 4.93 82.13 25 29Falcon® 6504 Rotors
+L264@P3: © 2023 Rain Bird Corporation D42381 Rainbird.com
+L265@P3: Technical Specifications
+L266@P3: HIGH-SPEED FALCON 6504 NOZZLE PERFORMANCE
+L267@P3: ■ ▲ PRESSURE
+L268@P3: (PSI)
+L269@P3: NOZZLE RADIUS
+L270@P3: (FT)
+L271@P3: FLOW
+L272@P3: (GPM)
+L273@P3: PRECIP
+L274@P3: (IN/H)
+L275@P3: PRECIP
+L276@P3: (IN/H)
+L277@P3: 30 ● 04 37 3.0 0.42 0.49
+L278@P3: ● 06 39 4.3 0.54 0.63
+L279@P3: 40 ● 04 41 3.5 0.40 0.46
+L280@P3: ● 06 43 6.0 0.62 0.72
+L281@P3: ● 08 47 6.6 0.58 0.66
+L282@P3: ● 10 47 8.1 0.71 0.82
+L283@P3: ● 12 49 9.9 0.79 0.92
+L284@P3: ● 14 53 11.4 0.78 0.90
+L285@P3: ● 16 51 12.6 0.93 1.08
+L286@P3: ● 18 53 13.9 0.95 1.10
+L287@P3: 50 ● 04 41 3.7 0.42 0.49
+L288@P3: ● 06 45 5.6 0.53 0.62
+L289@P3: ● 08 49 7.5 0.60 0.69
+L290@P3: ● 10 49 9.2 0.74 0.85
+L291@P3: ● 12 53 11.2 0.77 0.89
+L292@P3: ● 14 53 12.9 0.88 1.02
+L293@P3: ● 16 53 14.3 0.98 1.13
+L294@P3: ● 18 55 15.6 0.99 1.15
+L295@P3: 60 ● 04 41 4.2 0.48 0.56
+L296@P3: ● 06 45 6.2 0.59 0.68
+L297@P3: ● 08 47 8.3 0.72 0.84
+L298@P3: ● 10 49 10.2 0.82 0.94
+L299@P3: ● 12 53 12.4 0.85 0.98
+L300@P3: ● 14 53 14.2 0.97 1.12
+L301@P3: ● 16 55 15.7 1.00 1.15
+L302@P3: ● 18 59 17.2 0.95 1.10
+L303@P3: 70 ● 04 41 4.6 0.53 0.61
+L304@P3: ● 06 43 6.7 0.70 0.81
+L305@P3: ● 08 49 9.0 0.72 0.83
+L306@P3: ● 10 51 11.1 0.82 0.95
+L307@P3: ● 12 55 13.5 0.86 0.99
+L308@P3: ● 14 53 15.3 1.05 1.21
+L309@P3: ● 16 57 17.1 1.01 1.17
+L310@P3: ● 18 59 18.6 1.03 1.19
+L311@P3: 80 ● 04 39 4.9 0.62 0.72
+L312@P3: ● 06 43 7.1 0.74 0.85
+L313@P3: ● 08 51 9.7 0.72 0.83
+L314@P3: ● 10 49 11.9 0.95 1.10
+L315@P3: ● 12 55 14.4 0.92 1.06
+L316@P3: ● 14 53 16.5 1.13 1.31
+L317@P3: ● 16 59 18.4 1.02 1.18
+L318@P3: ● 18 59 20.0 1.11 1.28
+L319@P3: 90 ● 18 61 21.3 1.10 1.27
+L320@P3: Precipitation rates based on half-circle operation
+L321@P3: ■ Square spacing based on 50% diameter of throw
+L322@P3: ▲Triangular spacing based on 50% diameter of throw
+L323@P3: Performance data collected in zero wind conditions
+L324@P3: Performance data derived from tests that conform with ASAE
+L325@P3: Standards; ASAE S398.1.
+L326@P3: HIGH-SPEED FALCON 6504 NOZZLE PERFORMANCE
+L327@P3: METRIC
+L328@P3: ■ ▲ PRESSURE
+L329@P3: (BAR)
+L330@P3: NOZZLE RADIUS
+L331@P3: (M)
+L332@P3: FLOW
+L333@P3: (M3/H)
+L334@P3: FLOW
+L335@P3: (L/M)
+L336@P3: PRECIP
+L337@P3: (MM/H)
+L338@P3: PRECIP
+L339@P3: (MM/H)
+L340@P3: 2.1 ● 04 11.3 0.68 11.35 11 12
+L341@P3: ● 06 11.9 0.98 15.90 14 16
+L342@P3: 2.5 ● 04 12.0 0.75 12.54 10 12
+L343@P3: ● 06 12.7 1.22 20.16 15 18
+L344@P3: ● 08 14.2 1.49 25.20 15 17
+L345@P3: ● 10 14.2 1.83 30.60 18 21
+L346@P3: ● 12 14.8 2.24 37.20 20 24
+L347@P3: ● 14 16.0 2.58 43.20 20 23
+L348@P3: ● 16 15.4 2.85 47.40 24 28
+L349@P3: ● 18 16.0 3.15 52.80 24 28
+L350@P3: 3.0 ● 04 12.5 0.81 13.51 10 12
+L351@P3: ● 06 13.3 1.33 22.18 15 17
+L352@P3: ● 08 14.5 1.57 26.18 15 17
+L353@P3: ● 10 14.5 1.93 32.12 18 21
+L354@P3: ● 12 15.4 2.35 39.20 20 23
+L355@P3: ● 14 16.2 2.71 48.09 21 24
+L356@P3: ● 16 15.8 3.00 49.95 24 28
+L357@P3: ● 18 16.4 3.29 54.87 25 28
+L358@P3: 3.5 ● 04 12.5 0.85 14.15 11 13
+L359@P3: ● 06 13.7 1.28 21.37 14 16
+L360@P3: ● 08 14.9 1.72 28.62 16 18
+L361@P3: ● 10 14.9 2.11 35.11 19 22
+L362@P3: ● 12 16.2 2.56 42.74 20 23
+L363@P3: ● 14 16.2 2.95 49.20 23 26
+L364@P3: ● 16 16.2 3.27 54.53 25 29
+L365@P3: ● 18 16.9 3.57 59.51 25 29
+L366@P3: 4.0 ● 04 12.5 0.93 15.52 12 14
+L367@P3: ● 06 13.7 1.38 23.02 15 17
+L368@P3: ● 08 14.4 1.85 30.81 18 21
+L369@P3: ● 10 14.9 2.27 37.86 20 24
+L370@P3: ● 12 16.2 2.76 46.03 21 24
+L371@P3: ● 14 16.2 3.17 52.77 24 28
+L372@P3: ● 16 16.6 3.50 58.37 25 29
+L373@P3: ● 18 17.7 3.83 63.90 24 28
+L374@P3: 4.5 ● 04 12.5 1.00 16.69 13 15
+L375@P3: ● 06 13.4 1.48 24.46 16 19
+L376@P3: ● 08 14.6 1.97 32.81 18 21
+L377@P3: ● 10 15.3 2.42 40.40 21 24
+L378@P3: ● 12 16.5 2.95 49.13 22 25
+L379@P3: ● 14 16.2 3.36 55.94 26 30
+L380@P3: ● 16 17.1 3.73 62.22 26 30
+L381@P3: ● 18 18.0 4.07 67.89 25 29
+L382@P3: 5.0 ● 04 12.3 1.06 17.70 14 16
+L383@P3: ● 06 13.1 1.56 25.74 18 21
+L384@P3: ● 08 15.1 2.08 34.73 18 21
+L385@P3: ● 10 15.4 2.57 42.78 22 25
+L386@P3: ● 12 16.8 3.12 51.96 22 26
+L387@P3: ● 14 16.2 3.54 59.06 27 31
+L388@P3: ● 16 17.5 3.96 65.96 26 30
+L389@P3: ● 18 18.0 4.30 71.74 27 31
+L390@P3: 5.5 ● 04 11.9 1.11 18.52 16 18
+L391@P3: ● 06 13.1 1.61 26.84 19 22
+L392@P3: ● 08 15.5 2.20 36.65 18 21
+L393@P3: ● 10 14.9 2.70 44.97 24 28
+L394@P3: ● 12 16.8 3.27 54.43 23 27
+L395@P3: ● 14 16.2 3.74 62.35 29 33
+L396@P3: ● 16 18.0 4.17 69.53 26 30
+L397@P3: ● 18 18.0 4.53 75.58 28 32
+L398@P3: 6.0 ● 18 18.4 4.75 79.16 28 32
+L399@P3-4: 6.2 ● 18 18.6 4.84 80.62 28 32Falcon® 6504 Rotors
+L400@P4: © 2023 Rain Bird Corporation D42381 Rainbird.com
+L401@P4: Technical Specifications
+L402@P4: The full- or part-circle sprinkler shall be
+L403@P4: a single stream, water lubricated, gear
+L404@P4: drive type capable of covering a
+L405@P4: foot (meter) radius at a base pressure
+L406@P4: of pounds per square inch
+L407@P4: (Bars) with a discharge rate of
+L408@P4: gallons per minute (l/s, m3/h). The partcircle sprinkler shall have adjustable arc
+

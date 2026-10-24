@@ -1,0 +1,92 @@
+{
+  "checkedOn": "2026-10-10",
+  "access": "Native web tool; no CLI network/browser. PDF text/table extraction. Screenshot reference-only output, no fresh image inspection claimed.",
+  "sources": [
+    {
+      "url": "https://www.rainbird.com/media/4680",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/products/1300a-f-adjustable-full-circle-bubbler",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/products/1400-series-pressure-compensating-bubbler",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/products/he-van-high-efficiency-variable-arc-nozzles",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/products/van-series-variable-arc-nozzles",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/u-series_tech_spec_d37038j_-_rev11-7-2023.pdf",
+      "status": "Fresh official text retrieved",
+      "note": "URL date does not determine engineering revision."
+    }
+  ],
+  "files": [
+    "spray-baseline-catalog.json",
+    "spray-color-evidence.json",
+    "spray-model-coverage.json",
+    "spray-notes.md",
+    "spray-proposed-patches.json",
+    "spray-row-audit.py",
+    "spray-row-checks.json",
+    "spray-source-bubbler-products.txt",
+    "spray-source-bubbler.txt",
+    "spray-source-he-tech.txt",
+    "spray-source-he.txt",
+    "spray-source-mpr.txt",
+    "spray-source-poster.txt",
+    "spray-source-product-pages.txt",
+    "spray-source-sq-product.txt",
+    "spray-source-sq.txt",
+    "spray-source-u-tech.txt",
+    "spray-source-u.txt",
+    "spray-source-van.txt"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "checkedOn": "2026-10-06",
+  "sources": [
+    {
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "page": 50,
+      "authority": "dated current catalog",
+      "localPageImage": "/private/tmp/irri-krain-audit-20261006/nozzles/catalog-p50.png"
+    },
+    {
+      "url": "https://www.krain.com/bubblers",
+      "authority": "current family model availability"
+    },
+    {
+      "url": "https://www.krain.com/bubblers/bubbler-adjustable-tb--adj",
+      "authority": "current TB-ADJ model body; SEO title inconsistent"
+    },
+    {
+      "url": "https://www.krain.com/content/files/images/landingpages/bubblers/bubblers%20product%20brochure.pdf",
+      "version": "Rev.02, undated",
+      "authority": "corroborates four fixed nominal flows; pressure metric maximum and adjustable range conflict"
+    }
+  ],
+  "fixedFlowsLMin": {
+    "TB-025": 0.95,
+    "TB-05": 1.9,
+    "TB-10": 3.8,
+    "TB-20": 7.6
+  },
+  "unknown": [
+    "TB-ADJ setting-specific flow",
+    "wetting radius/area for every bubbler",
+    "manufacturer RGB colors"
+  ],
+  "photoEvidence": {
+    "models": [
+      "TB-025",
+      "TB-05",
+      "TB-10",
+      "TB-20",
+      "TB-ADJ"
+    ],
+    "observedColor": "Black",
+    "kind": "visual official photograph, not an official named color specification"
+  }
+}

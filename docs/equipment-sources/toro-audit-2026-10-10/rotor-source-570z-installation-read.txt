@@ -1,0 +1,265 @@
+ (https://cdn.thetorocompany.com/api/assetstorage/623_ae281be2-af5a-400b-ad94-3f9b39003d91)
+citeturn440view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"turn415view3","lineno":0}); Total lines: 262
+L0@P0: CV
+L1@P0: 570Z & 570S Series Sprinklers
+L2@P0: Installation Instructions
+L3@P0: 570Z-4P Pop-Up
+L4@P0: 570Z-6P Pop-Up
+L5@P0: 570 Series Sprinkler Specifications 570Z-12P Pop-Up
+L6@P0: Shrub Head Body (570S)
+L7@P0: • Inlet: 1/2" I.P.S. Thread
+L8@P0: • Maximum Working Pressure: 75 PSI
+L9@P0: • Recommended Operating Range: 20–50 PSI
+L10@P0: 4" & 6" Pop-Up Body (570Z)
+L11@P0: • Inlet: 1/2" I.P.S. Thread
+L12@P0: • Height: 4 3/4" (4"), 7 1/8" (6")
+L13@P0: • Pop-Up: 4", 6"
+L14@P0: • Retraction: Positive Spring Retraction
+L15@P0: • Maximum Working Pressure: 75 PSI
+L16@P0: • Recommended Operating Range: 20–50 PSI
+L17@P0: • Side-Inlet Option
+L18@P0: 12" Pop-Up Body (570Z)
+L19@P0: • Inlet: 1/2" I.P.S. Thread
+L20@P0: • Height: 16"
+L21@P0: • Pop-Up: 12"
+L22@P0: • Retraction: Positive Spring Retraction
+L23@P0: • Maximum Working Pressure: 75 PSI
+L24@P0: • Recommended Operating Range: 20–50 PSI
+L25@P0: • Side-Inlet Option
+L26@P0: Nozzle Installation
+L27@P0: Shrub
+L28@P0: 1. If loose screen, place the filter screen, closed end first, into the shrub base. If integrated
+L29@P0: screen, drop the entire nozzle assembly into the riser.
+L30@P0: 2. Screw nozzle onto the shrub base and hand-tighten.
+L31@P0: Pop-Up
+L32@P0: 1. With your little finger, reach down into the riser (threads) and pull up.
+L33@P0: 2. Grasp the riser above the cap firmly with your thumb and forefinger. Avoid using pliers
+L34@P0: which may damage the riser.
+L35@P0: 3. If loose screen, place the filter screen, closed end first, into the riser. If integrated screen,
+L36@P0: drop the entire nozzle assembly into the riser.
+L37@P0: 4. Screw the nozzle into the riser and hand-tighten.
+L38@P0: 5. Release the riser slowly to the fully retracted position.
+L39@P0: 6. If replacing the complete riser assembly (stem, spring and cap), align the keyways in the
+L40@P0: riser with the body and screw on the cap. Do not over tighten the cap on the body as removal will be necessary to properly align spray patterns and flush the system.
+L41@P0-1: 570S Shrub HeadSprinkler Installation
+L42@P1: Caution: Use only PTFE tape to make threaded connections from riser or barbed ell to sprinkler body. Deterioration of plastic
+L43@P1: may occur if other sealing compounds are used.
+L44@P1: Note: It is recommended that shrub and pop-up sprinklers be installed on polyethylene risers or barbed ell and thick walled poly
+L45@P1: pipe. The 12" high pop should be installed on a barbed ell and thick walled poly pipe to reduce trenching depth.
+L46@P1: Shrub Sprinkler
+L47@P1: 1. Screw assembled shrub sprinkler securely onto PTFE taped riser and position the spray pattern indicator on nozzle with the intended coverage area for part circle models.
+L48@P1: Pop-Up Sprinkler
+L49@P1: 1. Grasp the sprinkler by the body (not cap) and screw securely onto
+L50@P1: the PTFE taped riser or barbed ell. Do not over tighten, hand-tight is
+L51@P1: sufficient.
+L52@P1: Note: The 570 Series pop-up sprinkler should be installed so that
+L53@P1: the top of the cap is level with the final finished grade (soil).
+L54@P1: 2. After all pop-up sprinkler heads have been installed, remove the cap
+L55@P1: and riser from each body. For shrubs, remove nozzle and filter screen.
+L56@P1: 3. Flush the system with water until all dirt and debris has been removed.
+L57@P1: 4. Reinstall all shrub nozzles, filter screens, riser and cap assemblies,
+L58@P1: positioning riser keyway of part circle models to properly align spray
+L59@P1: pattern with intended coverage area. For adjustable arc nozzles, turn
+L60@P1: the arc adjustment to the intended coverage area.
+L61@P1: 5. Backfill the soil around the heads carefully, avoiding soil contact with
+L62@P1: the top of the cap.
+L63@P1: 6. Turn on the water source to the system.
+L64@P1: 7. Adjust the spray radius as necessary. This is accomplished by turning
+L65@P1: the slotted screw located on the top center of all nozzles.
+L66@P1: A. To decrease radius (3' minimum), turn the adjustment screw clockwise. Precipitation rate and GPM will be reduced as well, depending upon working pressure of the system.
+L67@P1: B. To increase the radius (15' maximum), turn the adjustment screw
+L68@P1: counterclockwise.
+L69@P1: Shrub Installation
+L70@P1: Tee Installation
+L71@P1: Swing Pipe Installation
+L72@P1: Spray Pattern (Half Circle Shown)
+L73@P1: Radius Adjustment Screw
+L74@P1: Radius Indicator
+L75@P1: Spray Pattern Indicator
+L76@P1: Q - Quarter Circle
+L77@P1: H - Half Circle
+L78@P1-2: F - Full Circle570 Nozzle Series
+L79@P2: • Maximum Pressure: 75 PSI
+L80@P2: • Recommended Operating Range: 20–50 PSI
+L81@P2: 15' SERIES WITH 27°TRAJECTORY
+L82@P2: Part No. Model No. Description Screen(s)
+L83@P2: 89-1769 15-Q1/4 CircleWhite
+L84@P2: 89-1768 15-T1/3 CircleWhite
+L85@P2: 89-1767 15-H1/2 CircleWhite
+L86@P2: 89-1766 15-TT 2/3 Circle White
+L87@P2: 89-1765 15-TQ 3/4 CircleWhite
+L88@P2: 89-1764 15-FFull-circleWhite
+L89@P2: 12' SERIES WITH 23°TRAJECTORY
+L90@P2: Part No. Model No. Description Screen(s)
+L91@P2: 89-1775 12-Q1/4 CircleWhite
+L92@P2: 89-1774 12-T1/3 CircleWhite
+L93@P2: 89-1773 12-H1/2 CircleWhite
+L94@P2: 89-1772 12-TT 2/3 Circle White
+L95@P2: 89-1771 12-TQ 3/4 CircleWhite
+L96@P2: 89-1770 12-FFull-circleWhite
+L97@P2: 10' SERIES WITH 12°TRAJECTORY
+L98@P2: Part No. Model No. Description Screen(s)
+L99@P2: 89-1781 10-Q1/4 CircleWhite
+L100@P2: 89-1780 10-T1/3 CircleWhite
+L101@P2: 89-1779 10-H1/2 CircleWhite
+L102@P2: 89-1778 10-TT 2/3 Circle White
+L103@P2: 89-1777 10-TQ 3/4 CircleWhite
+L104@P2: 89-1776 10-FFull-circleWhite
+L105@P2: 8' SERIES WITH 5° TRAJECTORY
+L106@P2: Part No. Model No. Description Screen(s)
+L107@P2: 89-17878-Q 1/4 Circle Red
+L108@P2: 89-17868-T 1/3 Circle Red
+L109@P2: 89-17858-H 1/2 Circle Red
+L110@P2: 89-17848-TT2/3 CircleRed
+L111@P2: 89-17838-TQ3/4 CircleRed
+L112@P2: 89-17828-F Full-circle Red
+L113@P2: 5' SERIES WITH 0° TRAJECTORY
+L114@P2: Part No. Model No. Description Screen(s)
+L115@P2: 89-17935-Q 1/4 Circle Red & Metal
+L116@P2: 89-17925-T 1/3 Circle Red & Metal
+L117@P2: 89-17915-H 1/2 Circle Red & Metal
+L118@P2: 89-17905-TT2/3 CircleRed & Metal
+L119@P2: 89-17895-TQ3/4 CircleRed & Metal
+L120@P2: 89-17885-F Full-circle Red & Metal
+L121@P2: SPECIAL PATTERNS
+L122@P2: Part No. Model No. Description Screen(s)
+L123@P2: 89-1796 4x30-SST Side Strip, 4' x 30'Red
+L124@P2: 89-1795 4x30-EST End Strip, 4' x 15' White
+L125@P2: 89-1794 4x30-CST Center Strip, 4' x 30'White
+L126@P2: 89-1797 9x18-SST Side Strip, 9' x 18'White
+L127@P2: 89-1798 4x18-SST Side Strip, 4' x 18'Red
+L128@P2: 89-1799 2x6-SST Side Strip, 2' x 6' Red & Metal
+L129@P2: 570 MPR Nozzles – Standard 570 MPR Plus Nozzles – Press. Comp.
+L130@P2: 15' SERIES WITH 27°TRAJECTORY
+L131@P2: Part No. Model No. DescriptionScreen(s)
+L132@P2: 89-1416 15-Q-PC 1/4 Circle White
+L133@P2: 89-1413 15-T-PC 1/3 Circle White
+L134@P2: 89-1410 15-H-PC 1/2 Circle White
+L135@P2: 89-1407 15-TT-PC2/3 CircleWhite
+L136@P2: 89-1404 15-TQ-PC 3/4 CircleWhite
+L137@P2: 89-1401 15-F-PC Full-circleWhite
+L138@P2: 12' SERIES WITH 23° TRAJECTORY
+L139@P2: Part No. Model No. Description Screen(s)
+L140@P2: 89-1434 12-Q-PC 1/4 Circle White
+L141@P2: 89-1431 12-T-PC 1/3 Circle White
+L142@P2: 89-1428 12-H-PC 1/2 Circle White
+L143@P2: 89-1425 12-TT-PC2/3 Circle White
+L144@P2: 89-1422 12-TQ-PC 3/4 Circle White
+L145@P2: 89-1419 12-F-PC Full-circleWhite
+L146@P2: 10' SERIES WITH 12°TRAJECTORY
+L147@P2: Part No. Model No. Description Screen(s)
+L148@P2: 89-1452 10-Q-PC 1/4 Circle White
+L149@P2: 89-1449 10-T-PC 1/3 Circle White
+L150@P2: 89-1446 10-H-PC 1/2 CircleWhite
+L151@P2: 89-1443 10-TT-PC2/3 CircleWhite
+L152@P2: 89-1440 10-TQ-PC 3/4 CircleWhite
+L153@P2: 89-1437 10-F-PC Full-circleWhite
+L154@P2: 8' SERIES WITH 5° TRAJECTORY
+L155@P2: Part No. Model No. Description Screen(s)
+L156@P2: 89-14708-Q-PC1/4 Circle Red
+L157@P2: 89-1467 8-T-PC 1/3 Circle Red
+L158@P2: 89-14648-H-PC1/2 CircleRed
+L159@P2: 89-14618-TT-PC 2/3 CircleRed
+L160@P2: 89-14588-TQ-PC 3/4 CircleRed
+L161@P2: 89-14558-F-PC Full-circle Red
+L162@P2: 5' SERIES WITH 0° TRAJECTORY
+L163@P2: Part No. Model No. Description Screen(s)
+L164@P2: 89-14885-Q-PC1/4 Circle Red & Metal
+L165@P2: 89-14855-T-PC 1/3 Circle Red & Metal
+L166@P2: 89-14825-H-PC1/2 CircleRed & Metal
+L167@P2: 89-14795-TT-PC 2/3 CircleRed & Metal
+L168@P2: 89-14765-TQ-PC 3/4 CircleRed & Metal
+L169@P2: 89-14735-F-PC Full-circle Red & Metal
+L170@P2: SPECIALPATTERNS
+L171@P2: Part No. Model No. Description Screen(s)
+L172@P2: 89-1503 4x30-SST-PC Side Strip, 4' x 30'Red
+L173@P2: 89-1500 4x30-EST-PC End Strip, 4' x 15' White
+L174@P2: 89-1497 4x30-CST-PC Center Strip, 4' x 30'White
+L175@P2: 89-1506 9x18-SST-PC Side Strip, 9' x 18'White
+L176@P2: 89-1509 4x18-SST-PC Side Strip, 4' x 18'Red
+L177@P2-3: 89-1512 2x6-SST-PCSide Strip, 2' x 6' Red & Metal© 2019 The Toro Company • www.toro.com Part Number 373-1029 Revision A
+L178@P3: WARNING: Cancer and Reproductive harm – www.P65Warnings.ca.gov
+L179@P3: For more information, please visit www.toro.com/CAProp65.
+L180@P3: Patent: www.ttcopats.com
+L181@P3: PRESSURE COMPENSATING DEVICES
+L182@P3: Model No. DescriptionModel No.Description
+L183@P3: PCD-.25.25 GPM PCD-1.41.4 GPM
+L184@P3: PCD-.50.50 GPM PCD-2.02.0 GPM
+L185@P3: PCD-.70.70 GPM PCD-3.03.0 GPM
+L186@P3: PCD-1.01.0 GPM
+L187@P3: STREAM BUBBLER NOZZLES
+L188@P3: Part No. Model No. DescriptionScreen(s)
+L189@P3: 89-1806 SB-90 1/4 Circle White
+L190@P3: 89-1807 SB-180 1/2 Circle White
+L191@P3: 89-1808 SB-360 Full-circle White
+L192@P3: 89-1809 SB-2-180 1/2 Circle, 2 Stream White
+L193@P3: 89-1810 SB-4-180 1/2 Circle, 4 Stream White
+L194@P3: FLAT SPRAY– PRESSURE COMPENSATING
+L195@P3: Part No. Model No. Description Screen(s)
+L196@P3: 35-7704FSQ-PC Flat Spray, 90°White
+L197@P3: 35-7700FSH-PC Flat Spray, 180°White
+L198@P3: 35-7698FSF-PC Flat Spray, 360° White
+L199@P3: 35-7712FSQ-LG-PC Flat Spray, 90°Low GPMRed & Metal
+L200@P3: 35-7708FSH-LG-PC Flat Spray, 180° Low GPM Red & Metal
+L201@P3: 35-7706FSF-LG-PC Flat Spray, 360°Low GPMRed & Metal
+L202@P3: 35° STREAM SPRAY– STANDARD
+L203@P3: Part No. Model No. Description Screen(s)
+L204@P3: 89-1800 35-SSF Stream Spray, 360° Red & Metal
+L205@P3: 89-1801 35-SSH Stream Spray, 180° Red & Metal
+L206@P3: 89-1802 35-SSQ Stream Spray, 90° Red & Metal
+L207@P3: 35° STREAM SPRAY – PRESSURE COMPENSATING
+L208@P3: Part No. Model No. Description Screen(s)
+L209@P3: 89-1491 35-SSF-PC Stream Spray, 360° Red & Metal
+L210@P3: 89-1493 35-SSH-PC Stream Spray, 180°Red & Metal
+L211@P3: 89-1495 35-SSQ-PC Stream Spray, 90°Red & Metal
+L212@P3: 10° STREAM SPRAY– STANDARD
+L213@P3: Part No. Model No. Description Screen(s)
+L214@P3: 89-1803 10-SSF Stream Spray, 360° Red & Metal
+L215@P3: 89-1804 10-SSH Stream Spray, 180° Red & Metal
+L216@P3: 89-1805 10-SSQ Stream Spray, 90° Red & Metal
+L217@P3: 10° STREAM SPRAY – PRESSURE COMPENSATING
+L218@P3: Part No. Model No. Description Screen(s)
+L219@P3: 89-1519 10-SSF-PC Stream Spray, 360° Red & Metal
+L220@P3: 89-1521 10-SSH-PC Stream Spray, 180°Red & Metal
+L221@P3: 89-1547 10-SSQ-PC Stream Spray, 90°Red & Metal
+L222@P3: FLOOD BUBBLER – PRESSURE COMPENSATING
+L223@P3: Part No. Model No.Description Screen(s)
+L224@P3: 89-1727FB-25-PC Flood Bubbler, Red& Metal
+L225@P3: .25 GPM
+L226@P3: 89-1729FB-50-PC Flood Bubbler, Red& Metal
+L227@P3: .50 GPM
+L228@P3: 89-1731FB-100-PC Flood Bubbler, Red& Metal
+L229@P3: 1.00 GPM
+L230@P3: 89-1733FB-200-ADJ-PC
+L231@P3: 570 Flat Spray – Pressure Compensating
+L232@P3: 570 Stream Spray – Standard
+L233@P3: 570 Stream Bubblers – Standard
+L234@P3: 570 Stream Bubblers – Pressure Comp.
+L235@P3: 570 Stream Spray – Pressure Comp.
+L236@P3: 570 Flood Bubbler – Pressure Comp.
+L237@P3: TORO ADJUSTABLE ARC NOZZLES
+L238@P3: Model No. Description
+L239@P3: TVAN-8 8' Variable Arc Pattern (Includes Screen)
+L240@P3: TVAN-10 10' Variable Arc Pattern (Includes Screen)
+L241@P3: TVAN-12 12' Variable Arc Pattern (Includes Screen)
+L242@P3: TVAN-15 15' Variable Arc Pattern (Includes Screen)
+L243@P3: TVAN-17 18' Variable Arc Pattern (Includes Screen)
+L244@P3: FLAT SPRAY– STANDARD
+L245@P3: Part No. Model No.Description Screen(s)
+L246@P3: 35-2748FSQ Flat Spray, 90°White
+L247@P3: 35-2747FSH Flat Spray, 180°White
+L248@P3: 35-2746FSF Flat Spray, 360°White
+L249@P3: 35-4245FSQ-LGFlat Spray, 90°Low GPMRed & Metal
+L250@P3: 35-4246FSH-LGFlat Spray, 180° Low GPMRed & Metal
+L251@P3: 35-4247FSF-LGFlat Spray, 360° Low GPMRed & Metal
+L252@P3: 570 Flat Spray – Standard
+L253@P3: Variable Arc Nozzles (TVANs)
+L254@P3: 570 Pressure Compensating Devices
+L255@P3: STREAM BUBBLER NOZZLES
+L256@P3: Part No. Model No.Description Screen(s)
+L257@P3: 89-7865 SB-90-PC21/4 CircleWhite
+L258@P3: 89-7875 SB-180-PC21/2 CircleWhite
+L259@P3: 89-7877 SB-360-PC2Full-circle White
+L260@P3: 89-7871 SB-2-180-PC21/2 Circle, 2 Stream White
+L261@P3: 89-7873 SB-4-180-PC21/2 Circle, 4 Stream White
+

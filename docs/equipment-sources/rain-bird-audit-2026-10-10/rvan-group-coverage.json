@@ -1,0 +1,1415 @@
+{
+  "auditedOn": "2026-10-10",
+  "source": "Current equipment-groups.ts, read-only SSR inventory",
+  "activeModels": 70,
+  "missing": [],
+  "duplicatedNozzles": [],
+  "groups": [
+    {
+      "id": "rvan",
+      "label": "Rotary MPR",
+      "mode": "matched",
+      "nominalRate": 15.24,
+      "items": [
+        {
+          "id": "rain-bird:5004-PC",
+          "modelId": "5004-PC MPR",
+          "series": "5000 MPR",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": true,
+          "allowedArcRanges": [
+            [
+              90,
+              90
+            ],
+            [
+              120,
+              120
+            ],
+            [
+              180,
+              180
+            ],
+            [
+              360,
+              360
+            ]
+          ],
+          "nozzles": [
+            {
+              "id": "rain-bird:5000-MPR-25:Quarter",
+              "type": "MPR",
+              "designArcDeg": 90
+            },
+            {
+              "id": "rain-bird:5000-MPR-25:Third",
+              "type": "MPR",
+              "designArcDeg": 120
+            },
+            {
+              "id": "rain-bird:5000-MPR-25:Half",
+              "type": "MPR",
+              "designArcDeg": 180
+            },
+            {
+              "id": "rain-bird:5000-MPR-25:Full",
+              "type": "MPR",
+              "designArcDeg": 360
+            },
+            {
+              "id": "rain-bird:5000-MPR-30:Quarter",
+              "type": "MPR",
+              "designArcDeg": 90
+            },
+            {
+              "id": "rain-bird:5000-MPR-30:Third",
+              "type": "MPR",
+              "designArcDeg": 120
+            },
+            {
+              "id": "rain-bird:5000-MPR-30:Half",
+              "type": "MPR",
+              "designArcDeg": 180
+            },
+            {
+              "id": "rain-bird:5000-MPR-30:Full",
+              "type": "MPR",
+              "designArcDeg": 360
+            },
+            {
+              "id": "rain-bird:5000-MPR-35:Quarter",
+              "type": "MPR",
+              "designArcDeg": 90
+            },
+            {
+              "id": "rain-bird:5000-MPR-35:Third",
+              "type": "MPR",
+              "designArcDeg": 120
+            },
+            {
+              "id": "rain-bird:5000-MPR-35:Half",
+              "type": "MPR",
+              "designArcDeg": 180
+            },
+            {
+              "id": "rain-bird:5000-MPR-35:Full",
+              "type": "MPR",
+              "designArcDeg": 360
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:5004+PC",
+          "modelId": "5004+PC MPR",
+          "series": "5000 MPR",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": true,
+          "allowedArcRanges": [
+            [
+              90,
+              90
+            ],
+            [
+              120,
+              120
+            ],
+            [
+              180,
+              180
+            ],
+            [
+              360,
+              360
+            ]
+          ],
+          "nozzles": [
+            {
+              "id": "rain-bird:5000-MPR-25:Quarter",
+              "type": "MPR",
+              "designArcDeg": 90
+            },
+            {
+              "id": "rain-bird:5000-MPR-25:Third",
+              "type": "MPR",
+              "designArcDeg": 120
+            },
+            {
+              "id": "rain-bird:5000-MPR-25:Half",
+              "type": "MPR",
+              "designArcDeg": 180
+            },
+            {
+              "id": "rain-bird:5000-MPR-25:Full",
+              "type": "MPR",
+              "designArcDeg": 360
+            },
+            {
+              "id": "rain-bird:5000-MPR-30:Quarter",
+              "type": "MPR",
+              "designArcDeg": 90
+            },
+            {
+              "id": "rain-bird:5000-MPR-30:Third",
+              "type": "MPR",
+              "designArcDeg": 120
+            },
+            {
+              "id": "rain-bird:5000-MPR-30:Half",
+              "type": "MPR",
+              "designArcDeg": 180
+            },
+            {
+              "id": "rain-bird:5000-MPR-30:Full",
+              "type": "MPR",
+              "designArcDeg": 360
+            },
+            {
+              "id": "rain-bird:5000-MPR-35:Quarter",
+              "type": "MPR",
+              "designArcDeg": 90
+            },
+            {
+              "id": "rain-bird:5000-MPR-35:Third",
+              "type": "MPR",
+              "designArcDeg": 120
+            },
+            {
+              "id": "rain-bird:5000-MPR-35:Half",
+              "type": "MPR",
+              "designArcDeg": 180
+            },
+            {
+              "id": "rain-bird:5000-MPR-35:Full",
+              "type": "MPR",
+              "designArcDeg": 360
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN14",
+          "modelId": "R-VAN14",
+          "series": "R-VAN Adjustable",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN14",
+              "type": "rotary"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN18",
+          "modelId": "R-VAN18",
+          "series": "R-VAN Adjustable",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN18",
+              "type": "rotary"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN24",
+          "modelId": "R-VAN24",
+          "series": "R-VAN Adjustable",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN24",
+              "type": "rotary"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN18-360",
+          "modelId": "R-VAN18-360",
+          "series": "R-VAN 360°",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN18-360",
+              "type": "rotary"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN14-360",
+          "modelId": "R-VAN14-360",
+          "series": "R-VAN 360°",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN14-360",
+              "type": "rotary"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN24-360",
+          "modelId": "R-VAN24-360",
+          "series": "R-VAN 360°",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN24-360",
+              "type": "rotary"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN-SST",
+          "modelId": "R-VAN-SST",
+          "series": "R-VAN Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN-SST",
+              "type": "rotary"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN-LCS",
+          "modelId": "R-VAN-LCS",
+          "series": "R-VAN Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN-LCS",
+              "type": "rotary"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:R-VAN-RCS",
+          "modelId": "R-VAN-RCS",
+          "series": "R-VAN Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:R-VAN-RCS",
+              "type": "rotary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spray-mpr",
+      "label": "Spray MPR",
+      "mode": "matched",
+      "nominalRate": 40,
+      "items": [
+        {
+          "id": "rain-bird:HE-VAN-8",
+          "modelId": "HE-VAN-8",
+          "series": "HE-VAN",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:HE-VAN-8",
+              "type": "HE-VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:HE-VAN-10",
+          "modelId": "HE-VAN-10",
+          "series": "HE-VAN",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:HE-VAN-10",
+              "type": "HE-VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:HE-VAN-12",
+          "modelId": "HE-VAN-12",
+          "series": "HE-VAN",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:HE-VAN-12",
+              "type": "HE-VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:HE-VAN-15",
+          "modelId": "HE-VAN-15",
+          "series": "HE-VAN",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:HE-VAN-15",
+              "type": "HE-VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:12-VAN",
+          "modelId": "12-VAN",
+          "series": "VAN 12–18",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:12-VAN",
+              "type": "VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15-VAN",
+          "modelId": "15-VAN",
+          "series": "VAN 12–18",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15-VAN",
+              "type": "VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:18-VAN",
+          "modelId": "18-VAN",
+          "series": "VAN 12–18",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:18-VAN",
+              "type": "VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-8F",
+          "modelId": "U-8F",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-8F",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-8H",
+          "modelId": "U-8H",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-8H",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-8Q",
+          "modelId": "U-8Q",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-8Q",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-10F",
+          "modelId": "U-10F",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-10F",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-10H",
+          "modelId": "U-10H",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-10H",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-10Q",
+          "modelId": "U-10Q",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-10Q",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-12F",
+          "modelId": "U-12F",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-12F",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-12H",
+          "modelId": "U-12H",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-12H",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-12Q",
+          "modelId": "U-12Q",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-12Q",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-15F",
+          "modelId": "U-15F",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-15F",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-15H",
+          "modelId": "U-15H",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-15H",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:U-15Q",
+          "modelId": "U-15Q",
+          "series": "U-Series",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:U-15Q",
+              "type": "U-Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:5F",
+          "modelId": "5F",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:5F",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:5H",
+          "modelId": "5H",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:5H",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:5Q",
+          "modelId": "5Q",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:5Q",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:8F",
+          "modelId": "8F",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:8F",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:8H",
+          "modelId": "8H",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:8H",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:8Q",
+          "modelId": "8Q",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:8Q",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:10F",
+          "modelId": "10F",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:10F",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:10H",
+          "modelId": "10H",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:10H",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:10Q",
+          "modelId": "10Q",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:10Q",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:12F",
+          "modelId": "12F",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:12F",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:12H",
+          "modelId": "12H",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:12H",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:12Q",
+          "modelId": "12Q",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:12Q",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15F",
+          "modelId": "15F",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15F",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15H",
+          "modelId": "15H",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15H",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15Q",
+          "modelId": "15Q",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15Q",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15EST",
+          "modelId": "15EST",
+          "series": "MPR Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15EST",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15CST",
+          "modelId": "15CST",
+          "series": "MPR Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15CST",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15RCS",
+          "modelId": "15RCS",
+          "series": "MPR Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15RCS",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15LCS",
+          "modelId": "15LCS",
+          "series": "MPR Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15LCS",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:15SST",
+          "modelId": "15SST",
+          "series": "MPR Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:15SST",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:9SST",
+          "modelId": "9SST",
+          "series": "MPR Strip",
+          "coverageKind": "strip",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:9SST",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:8H-FLT",
+          "modelId": "8H-FLT",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:8H-FLT",
+              "type": "MPR"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:8Q-FLT",
+          "modelId": "8Q-FLT",
+          "series": "MPR Fixed",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:8Q-FLT",
+              "type": "MPR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "van",
+      "label": "VAN 4–10",
+      "mode": "configured",
+      "items": [
+        {
+          "id": "rain-bird:4-VAN",
+          "modelId": "4-VAN",
+          "series": "4-VAN",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:4-VAN",
+              "type": "VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:6-VAN",
+          "modelId": "6-VAN",
+          "series": "6-VAN",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:6-VAN",
+              "type": "VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:8-VAN",
+          "modelId": "8-VAN",
+          "series": "8-VAN",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:8-VAN",
+              "type": "VAN"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:10-VAN",
+          "modelId": "10-VAN",
+          "series": "10-VAN",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:10-VAN",
+              "type": "VAN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sq",
+      "label": "SQ Series",
+      "mode": "layout",
+      "items": [
+        {
+          "id": "rain-bird:SQ-3QTR",
+          "modelId": "SQ-3QTR",
+          "series": "SQ Series",
+          "coverageKind": "square",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:SQ-3QTR:throw-0.8",
+              "type": "SQ Series"
+            },
+            {
+              "id": "rain-bird:SQ-3QTR:throw-1.2",
+              "type": "SQ Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:SQ-FUL",
+          "modelId": "SQ-FUL",
+          "series": "SQ Series",
+          "coverageKind": "square",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:SQ-FUL:throw-0.8",
+              "type": "SQ Series"
+            },
+            {
+              "id": "rain-bird:SQ-FUL:throw-1.2",
+              "type": "SQ Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:SQ-HLF",
+          "modelId": "SQ-HLF",
+          "series": "SQ Series",
+          "coverageKind": "square",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:SQ-HLF:throw-0.8",
+              "type": "SQ Series"
+            },
+            {
+              "id": "rain-bird:SQ-HLF:throw-1.2",
+              "type": "SQ Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:SQ-QTR",
+          "modelId": "SQ-QTR",
+          "series": "SQ Series",
+          "coverageKind": "square",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:SQ-QTR:throw-0.8",
+              "type": "SQ Series"
+            },
+            {
+              "id": "rain-bird:SQ-QTR:throw-1.2",
+              "type": "SQ Series"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rotor",
+      "label": "Rotors",
+      "mode": "configured",
+      "items": [
+        {
+          "id": "rain-bird:3504-PC",
+          "modelId": "3504-PC",
+          "series": "3500",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:3500:0.75",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:3500:1",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:3500:1.5",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:3500:2",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:3500:3",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:3500:4",
+              "type": "Rain Curtain"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:5004-PC",
+          "modelId": "5004-PC Standard / LA",
+          "series": "5000",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:5000:1.5",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:2",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:2.5",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:3",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:4",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:5",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:6",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:8",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000-LA:1-LA",
+              "type": "low angle"
+            },
+            {
+              "id": "rain-bird:5000-LA:1.5-LA",
+              "type": "low angle"
+            },
+            {
+              "id": "rain-bird:5000-LA:2-LA",
+              "type": "low angle"
+            },
+            {
+              "id": "rain-bird:5000-LA:3-LA",
+              "type": "low angle"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:5004+PC",
+          "modelId": "5004+PC Standard / LA",
+          "series": "5000 Plus",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:5000:1.5",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:2",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:2.5",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:3",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:4",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:5",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:6",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000:8",
+              "type": "standard angle"
+            },
+            {
+              "id": "rain-bird:5000-LA:1-LA",
+              "type": "low angle"
+            },
+            {
+              "id": "rain-bird:5000-LA:1.5-LA",
+              "type": "low angle"
+            },
+            {
+              "id": "rain-bird:5000-LA:2-LA",
+              "type": "low angle"
+            },
+            {
+              "id": "rain-bird:5000-LA:3-LA",
+              "type": "low angle"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:5004+PCR",
+          "modelId": "5004+PCR",
+          "series": "5000 Plus PRS",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:5000-PRS:1.5",
+              "type": "PRS standard angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS:2",
+              "type": "PRS standard angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS:2.5",
+              "type": "PRS standard angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS:3",
+              "type": "PRS standard angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS:4",
+              "type": "PRS standard angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS:5",
+              "type": "PRS standard angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS:6",
+              "type": "PRS standard angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS:8",
+              "type": "PRS standard angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS-LA:1-LA",
+              "type": "PRS low angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS-LA:1.5-LA",
+              "type": "PRS low angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS-LA:2-LA",
+              "type": "PRS low angle"
+            },
+            {
+              "id": "rain-bird:5000-PRS-LA:3-LA",
+              "type": "PRS low angle"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:6504-PC",
+          "modelId": "6504-PC",
+          "series": "Falcon 6504",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:Falcon 6504:4",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:6",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:8",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:10",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:12",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:14",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:16",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:18",
+              "type": "Rain Curtain"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:6504-FC",
+          "modelId": "6504-FC",
+          "series": "Falcon 6504",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:Falcon 6504:4",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:6",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:8",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:10",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:12",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:14",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:16",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:Falcon 6504:18",
+              "type": "Rain Curtain"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:8005",
+          "modelId": "8005",
+          "series": "8005",
+          "coverageKind": "sector",
+          "automaticDesignArcOnly": false,
+          "allowedArcRanges": [
+            [
+              50,
+              330
+            ],
+            [
+              360,
+              360
+            ]
+          ],
+          "nozzles": [
+            {
+              "id": "rain-bird:8005:4",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:6",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:8",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:10",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:12",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:14",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:16",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:18",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:20",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:22",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:24",
+              "type": "Rain Curtain"
+            },
+            {
+              "id": "rain-bird:8005:26",
+              "type": "Rain Curtain"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bubbler",
+      "label": "Bubblers",
+      "mode": "localized",
+      "items": [
+        {
+          "id": "rain-bird:1300A-F",
+          "modelId": "1300A-F",
+          "series": "1300 Series",
+          "coverageKind": "point",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:1300A-F",
+              "type": "1300 Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:1401",
+          "modelId": "1401",
+          "series": "1400 Series",
+          "coverageKind": "point",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:1401",
+              "type": "1400 Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:1402",
+          "modelId": "1402",
+          "series": "1400 Series",
+          "coverageKind": "point",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:1402",
+              "type": "1400 Series"
+            }
+          ]
+        },
+        {
+          "id": "rain-bird:1404",
+          "modelId": "1404",
+          "series": "1400 Series",
+          "coverageKind": "point",
+          "automaticDesignArcOnly": false,
+          "nozzles": [
+            {
+              "id": "rain-bird:1404",
+              "type": "1400 Series"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

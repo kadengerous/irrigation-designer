@@ -1,0 +1,639 @@
+PGJ | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/rotors/pgj)
+citeturn290view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/rotors/pgj","lineno":150}); Total lines: 1037
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite9†English L16:   * cite9†Metric L17:   * cite9†Español L18:   * cite9†Italiano L19: 
+L20:   * cite9†Français L21:   * cite9†Português L22:   * cite9†Deutsch L23:   * cite9†Türkçe L24: 
+L25:   * cite9†Polski L26:   * cite9†Русский L27:   * cite9†العربية L28:   * cite9†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: 
+L36: cite10†Image: Hunter PGJ rotor L37: 
+L38: cite11†Image: PGJ Family L39: 
+L40: cite12†Image: PGJ specification builder with part number description L41: # PGJ
+L42: 
+L43: The highly durable PGJ offers all the benefits of a large rotor in a compact, spray-sized package, with water-efficient nozzles and easy arc adjustment.
+L44: 
+L45: Radius 15' to 34'
+L46: 
+L47: Flow 0.42 - 4.3 GPM
+L48: 
+L49: Inlet Size ½"
+L50: 
+L51: Product Line
+L52: 
+L53: Rotors
+L54: 
+L55: Compact: Get all the benefits of a rotor in a spray-sized package
+L56: 
+L57: Short Radius: Get close-in rotor coverage with a 15' minimum radius
+L58: 
+L59: Reliable: The PGJ is engineered to take on harsh conditions for years on end
+L60:   * cite13†Models L61:   * cite14†Specs L62:   * cite15†Videos L63:   * cite16†Features L64:   * cite17†Charts L65:   * cite18†Documents L66:   * cite19†CAD Details L67:   * cite20†Support L68:   * cite21†Photos L69:   * cite22†Related L70: ## Models
+L71: 
+L72: ### Popular Models
+L73: 
+L74: ## cite23†PGJ-04 L75: 
+L76: PGJ Rotor, 4", adjustable from 40° to 360°, ½" inlet, nozzle 2.0 installed
+L77: 
+L78: PGJ Rotor, 10 cm, adjustable from 40° to 360°, ½" inlet, nozzle 2.0 installed
+L79: 
+L80: [Button: Add to List]
+L81: 
+L82: ## Filter
+L83: 
+L84: ## Filter
+L85: 
+L86: ## Pop-up Height
+L87: 
+L88:   * cite24†Shrub (2) L89:   * cite25†4" (3) L90:   * cite26†6" (3) L91:   * cite27†12" (3) L92: ## Feature Options
+L93: 
+L94:   * cite28†Reclaimed water (4) L95:   * cite29†Check valve (2) L96: Model  | Description  | Add to List
+L97: --- | --- | ---
+L98: cite30†PGJ-00 | PGJ Rotor, shrub, adjustable from 40° to 360°, ½" inlet, nozzle 2.0 installed  | cite9†+ L99: cite31†PGJ-00-R | PGJ Rotor, shrub, adjustable from 40° to 360°, ½" inlet, reclaimed ID, nozzle 2.0 installed  | cite9†+ L100: cite23†PGJ-04 | PGJ Rotor, 4", adjustable from 40° to 360°, ½" inlet, nozzle 2.0 installed  | cite9†+ L101: cite32†PGJ-04-R | PGJ Rotor, 4", adjustable from 40° to 360°, ½" inlet, reclaimed ID, nozzle 2.0 installed  | cite9†+ L102: cite33†PGJ-04-V | PGJ Rotor, 4", adjustable from 40° to 360°, ½" inlet, check valve, nozzle 2.0 installed  | cite9†+ L103: cite34†PGJ-06 | PGJ Rotor, 6", adjustable from 40° to 360°, ½" inlet, nozzle 2.0 installed  | cite9†+ L104: cite35†PGJ-06-R | PGJ Rotor, 6", adjustable from 40° to 360°, ½" inlet, reclaimed ID, nozzle 2.0 installed  | cite9†+ L105: cite36†PGJ-06-V | PGJ Rotor, 6", adjustable from 40° to 360°, ½" inlet, check valve, nozzle 2.0 installed  | cite9†+ L106: cite37†PGJ-12 | PGJ Rotor, 12", adjustable from 40° to 360°, ½" inlet, nozzle 2.0 installed  | cite9†+ L107: cite38†PGJ-12-R | PGJ Rotor, 12", adjustable from 40° to 360°, ½" inlet, reclaimed ID, nozzle 2.0 installed  | cite9†+ L108: cite39†PGJ-12-V | PGJ Rotor, 12", adjustable from 40° to 360°, ½" inlet, check valve, nozzle 2.0 installed  | cite9†+ L109: Showing 1 - 11 of 11
+L110: ## User-installed options
+L111: 
+L112: ### SJ Swing Joints (Flow <= 5 GPM)
+L113: 
+L114: Model  | Description  | Add to List
+L115: --- | --- | ---
+L116: cite40†SJ-506 | SJ Swing Joint, ½" x 6", standard, preassembled, with four swing elbows  | cite9†+ L117: cite41†SJ-512 | SJ Swing Joint, ½" x 12", standard, preassembled, with four swing elbows  | cite9†+ L118: 
+L119: cite42†Image: PGJ L120: 
+L121: [Input]
+L122: 
+L123: PGJ
+L124: 
+L125: PGJ
+L126: 
+L127: Ordering Number [Input]
+L128: 
+L129: [Input] [Input]
+L130: 
+L131: Qty [Input]
+L132: 
+L133: Notes [Input: Add a note...]
+L134: 
+L135: [Button: Add to list]
+L136: 
+L137: User installed options
+L138: 
+L139: [Input]
+L140: #### Product added to list
+L141: 
+L142: The following product was added to ""
+L143: 
+L144: QTY
+L145: 
+L146: cite43†Review your list L147: 
+L148: cite9†Continue L149: 
+L150: [Input] [Input]
+L151: 
+L152: ## Create a new My List.
+L153: 
+L154: ## Log in to access this feature
+L155: 
+L156: Log in using your Hunter Account
+L157: 
+L158: Username [Input]
+L159: 
+L160: Password [Input]
+L161: 
+L162: [Input] [Input] [Input]
+L163: 
+L164: [Button: Sign In]
+L165: 
+L166: cite44†Contact your local distributor for product availability and ordering. L167: ## Specifications
+L168: 
+L169: Operating Specifications
+L170: 
+L171:   * Nozzle choices: 8
+L172:   * Radius: 15' to 34'
+L173:   * Flow: 0.42 to 4.3 GPM
+L174:   * Recommended pressure range: 30 to 50 PSI
+L175:   * Operating pressure range: 20 to 100 PSI
+L176:   * Precipitation rate: 0.6 in/hr approximately
+L177:   * Nozzle trajectory: 14° approximately
+L178:   * Warranty period: 2 years
+L179: 
+L180: Factory-Installed Options
+L181: 
+L182:   * Drain Check Valve (up to 7' of elevation) excluding PGJ-00
+L183:   * Reclaimed water ID
+L184: 
+L185: User-Installed Options
+L186:   * Drain Check Valve (up to 7' of elevation) excluding PGJ-00 (P/N 462078SP)
+L187:   * HC-50F-50M Check Valve (up to 32' of elevation)
+L188: 
+L189: * * *
+L190: 
+L191: cite45† Download Product Spec Sheet L192: 
+L193: cite46†  Download Written Specifications (in English) L194: ## Videos
+L195: 
+L196: Rotor T-Handle Pull Up Tool
+L197: 
+L198: The T-Handle Rotor Adjustment Tool is just one of a full range of convenient service tools and auxiliary items for irrigation systems that save time
+L199: 
+L200: How your rotor invoice can help you win big prizes!
+L201: 
+L202: Check out “hunter.info/rr26” for more great prizes! Buy Hunter rotors or upload your invoice or design plans to get entries to win.
+L203: 
+L204: Buy Rotors. Win BIG. Here’s How.
+L205: 
+L206: Behind the Scenes: Hunter Rotor Manufacturing
+L207: Take a walk through the Hunter manufacturing floor with Gregg Roesink and see what goes into every rotor.
+L208: 
+L209: Cleaning a Filter on a Hunter Rotor
+L210: 
+L211: The most common reason for a sprinkler to stop rotating is the accumulation of debris in the filter.
+L212: 
+L213: Hunter Rotor Right Stop Alignment
+L214: 
+L215: With a rotor tool, it's easy to adjust the left stop, but ever wonder how to adjust the right stop after install?
+L216: 
+L217:   * 1
+L218:   * cite47†2 L219:   * cite47†› L220:   * cite47†» L221: 
+L222: cite48†All Product Videos L223: ## Features
+L224: The PGJ was built to bring all the efficient benefits of rotary sprinklers to applications that typically call for a spray. Its many features include a rack of easily installable, water-efficient nozzles, a QuickCheck^{TM} Arc Mechanism, and a durable rubber cover. The PGJ is capable of working in tandem with larger rotors to combine big and small areas in a single zone, offering a convenience and efficiency that sprays do not.
+L225: When used in the right application, the PGJ allows fewer heads to perform more efficiently at a more economical price.
+L226: #### Key Benefits
+L227: 
+L228: Headed and slotted setscrew allows radius adjustment with a Hunter Wrench or flat-blade screwdriver
+L229: 
+L230: Adjustable arc from 40° to 360° to keep water in the appropriate areas
+L231: 
+L232: Standard factory-installed 2.0 nozzle speeds installation
+L233: 
+L234: QuickCheck™ Arc Mechanism for fast arc adjustment
+L235: 
+L236: #### Advanced Features
+L237: 
+L238: ### Headed and Slotted SetScrew PGJ
+L239: 
+L240: Use a slotted screwdriver or the Hunter wrench for easier and simpler adjustments as needed.
+L241: 
+L242: cite49†Image: Adjusting PGJ Rotor L243: ### OPTIONAL RECLAIMED WATER ID
+L244: 
+L245: Purple caps indicate where non-potable irrigation water is being used.
+L246: 
+L247: cite50†Image L248: 
+L249: ### Drain Check Valve (up to 10 ft. of elevation)
+L250: 
+L251: The drain check valve keeps lines from draining when the system is shut off. This saves water, reduces liability, and increases system life.
+L252: 
+L253: cite51†Image L254: 
+L255: ## Charts
+L256: ### PGJ Nozzle Performance Data
+L257: PGJ Nozzle Performance Datacite52†View Nozzle L258: ---
+L259: 
+L260: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L261:    | PSI  | ft  | GPM  | cite53†Image | cite54†Image L262: 0.50 •Red  | 30  | 14  | 0.42  | 0.41  | 0.48
+L263: 40  | 15  | 0.50  | 0.43  | 0.49
+L264: 50  | 16  | 0.58  | 0.44  | 0.50
+L265: .75 •Red  | 30  | 15  | 0.64  | 0.55  | 0.63
+L266: 40  | 16  | 0.75  | 0.56  | 0.65
+L267: 50  | 17  | 0.85  | 0.57  | 0.65
+L268: 1.0 •Red  | 30  | 18  | 0.85  | 0.51  | 0.58
+L269: 40  | 19  | 1.0  | 0.53  | 0.62
+L270: 50  | 19  | 1.1  | 0.59  | 0.68
+L271: 1.5 •Red  | 30  | 21  | 1.3  | 0.57  | 0.66
+L272: 40  | 22  | 1.5  | 0.60  | 0.69
+L273: 50  | 22  | 1.7  | 0.68  | 0.78
+L274: 2.0 •Red  | 30  | 24  | 1.7  | 0.57  | 0.66
+L275: 40  | 25  | 2.0  | 0.62  | 0.71
+L276: 50  | 25  | 2.3  | 0.71  | 0.82
+L277: 2.5 •Red  | 30  | 27  | 2.2  | 0.58  | 0.67
+L278: 40  | 28  | 2.5  | 0.61  | 0.71
+L279: 50  | 28  | 2.8  | 0.69  | 0.79
+L280: 3.0 •Red  | 30  | 30  | 2.5  | 0.53  | 0.62
+L281: 40  | 31  | 3.0  | 0.60  | 0.69
+L282: 50  | 31  | 3.4  | 0.68  | 0.79
+L283: 4.0 •Red  | 30  | 33  | 3.7  | 0.65  | 0.76
+L284: 40  | 34  | 4.0  | 0.67  | 0.77
+L285: 50  | 34  | 4.3  | 0.72  | 0.83
+L286: Notes:
+L287: Bold = Recommended pressure.
+L288: All precipitation rates calculated for 180 degree operation. For the precipitation rate for a 360 degree sprinkler, divide by 2.
+L289: ## Documents
+L290: ### Select Type
+L291: 
+L292:   * All Documents
+L293:   * Manuals
+L294:   * Marketing
+L295:   * Specifications
+L296:   * Replacement Parts
+L297: 
+L298: PGJ Instruction Guide
+L299: 
+L300: cite55†Download   L301: 
+L302: PGJ Installation Card
+L303: 
+L304: cite56†Download   L305: 
+L306: PGJ Brochure
+L307: 
+L308: cite9†Select Language  L309: 
+L310: cite57†USA   L311: 
+L312: cite58†Metric   L313: 
+L314: cite59†Spanish   L315: 
+L316: cite60†Italian   L317: 
+L318: cite61†French   L319: 
+L320: cite62†Portuguese - Brazil   L321: 
+L322: cite63†German   L323: 
+L324: cite64†Turkish   L325: 
+L326: cite65†Russian   L327: 
+L328: California MWELO Compliant Products
+L329: 
+L330: cite66†Download   L331: 
+L332: PGJ Product Cutsheet
+L333: 
+L334: cite9†Select Language  L335: 
+L336: cite67†USA   L337: 
+L338: cite68†Metric   L339: 
+L340: cite69†Spanish   L341: cite70†Spanish - USA   L342: 
+L343: cite71†Italian   L344: 
+L345: cite72†French   L346: 
+L347: cite73†Portuguese - Brazil   L348: 
+L349: cite74†German   L350: 
+L351: cite75†Turkish   L352: 
+L353: cite76†Polish   L354: 
+L355: cite77†Russian   L356: 
+L357: cite78†Arabic   L358: 
+L359: cite79†Hungarian   L360: 
+L361: cite80†Slovak   L362: 
+L363: Reclaimed Water Solutions Brochure
+L364: 
+L365: cite9†Select Language  L366: 
+L367: CAD - PGJ-00 with SJ Swing Arm and Check Valve
+L368: 
+L369: cite9†Select Format  L370: 
+L371: CAD - PGJ-00 On Grade with Swivel Riser and Check Valve
+L372: 
+L373: cite9†Select Format  L374: 
+L375: CAD - PGJ-00 On Grade with Rigid Riser
+L376: 
+L377: cite9†Select Format  L378: 
+L379: CAD - PGJ-00 On Grade with Rigid Riser and Check Valve
+L380: cite9†Select Format  L381: 
+L382: CAD - PGJ-00 with Swing Arm and Check Valve
+L383: 
+L384: cite9†Select Format  L385: 
+L386: CAD - PGJ-06 with SJ Swing Arm
+L387: 
+L388: cite9†Select Format  L389: 
+L390: CAD - PGJ-12 with Swing Arm
+L391: 
+L392: cite9†Select Format  L393: 
+L394: CAD - PGJ-12 with SJ Swing Arm
+L395: 
+L396: cite9†Select Format  L397: 
+L398: CAD - PGJ-00 with SJ Swing Arm
+L399: 
+L400: cite9†Select Format  L401: 
+L402: CAD - PGJ-00 with Swing Arm
+L403: 
+L404: cite9†Select Format  L405: 
+L406: CAD - PGJ-04 with Swing Arm
+L407: 
+L408: cite9†Select Format  L409: 
+L410: CAD - PGJ-04 with SJ Swing Arm
+L411: 
+L412: cite9†Select Format  L413: 
+L414: CAD - PGJ-06 with Swing Arm
+L415: 
+L416: cite9†Select Format  L417: PGJ Rotor Written Specifications
+L418: 
+L419: cite81†Download   L420: 
+L421: PGJ Replacement Parts List
+L422: 
+L423: cite82†Download   L424: 
+L425: PGJ-00 Replacement Parts List
+L426: 
+L427: cite83†Download   L428: 
+L429: LEED Guide - Construction
+L430: 
+L431: cite9†Select Language  L432: 
+L433: LEED Guide - Multi-Family
+L434: 
+L435: cite9†Select Language  L436: 
+L437: LEED Guide - Single Family
+L438: 
+L439: cite9†Select Language  L440: 
+L441: Environmental Product Declaration (Rotors)
+L442: 
+L443: cite84†Download   L444: 
+L445: cite9†Show all documents L446: ## CAD Installation Details
+L447: PGJ-00 On Grade with Rigid Riser  | cite85†DWG | cite86†DXF | cite87†PDF |
+L448: PGJ-00 On Grade with Rigid Riser and Check Valve  | cite85†DWG | cite86†DXF | cite88†PDF |
+L449: PGJ-00 On Grade with Swivel Riser and Check Valve  | cite85†DWG | cite86†DXF | cite89†PDF |
+L450: PGJ-00 with SJ Swing Arm  | cite90†DWG | cite91†DXF | cite92†PDF |
+L451: PGJ-00 with SJ Swing Arm and Check Valve  | cite93†DWG | cite94†DXF | cite95†PDF |
+L452: PGJ-00 with Swing Arm  | cite96†DWG | cite97†DXF | cite98†PDF |
+L453: PGJ-00 with Swing Arm and Check Valve  | cite93†DWG | cite94†DXF | cite99†PDF |
+L454: PGJ-04 with SJ Swing Arm  | cite100†DWG | cite101†DXF | cite102†PDF |
+L455: PGJ-04 with Swing Arm  | cite103†DWG | cite104†DXF | cite105†PDF |
+L456: PGJ-06 with SJ Swing Arm  | cite106†DWG | cite107†DXF | cite108†PDF |
+L457: PGJ-06 with Swing Arm  | cite109†DWG | cite110†DXF | cite111†PDF |
+L458: PGJ-12 with SJ Swing Arm  | cite112†DWG | cite113†DXF | cite114†PDF |
+L459: PGJ-12 with Swing Arm  | cite112†DWG | cite113†DXF | cite115†PDF |
+L460: ## CAD Installation Details
+L461: 
+L462: CAD - PGJ-00 On Grade with Rigid Riser
+L463: 
+L464: cite9†Select Format  L465: 
+L466: CAD - PGJ-00 On Grade with Rigid Riser and Check Valve
+L467: 
+L468: cite9†Select Format  L469: 
+L470: CAD - PGJ-00 On Grade with Swivel Riser and Check Valve
+L471: 
+L472: cite9†Select Format  L473: 
+L474: CAD - PGJ-00 with SJ Swing Arm
+L475: 
+L476: cite9†Select Format  L477: 
+L478: CAD - PGJ-00 with SJ Swing Arm and Check Valve
+L479: 
+L480: cite9†Select Format  L481: 
+L482: CAD - PGJ-00 with Swing Arm
+L483: 
+L484: cite9†Select Format  L485: 
+L486: CAD - PGJ-00 with Swing Arm and Check Valve
+L487: 
+L488: cite9†Select Format  L489: 
+L490: CAD - PGJ-04 with SJ Swing Arm
+L491: cite9†Select Format  L492: 
+L493: CAD - PGJ-04 with Swing Arm
+L494: 
+L495: cite9†Select Format  L496: 
+L497: CAD - PGJ-06 with SJ Swing Arm
+L498: 
+L499: cite9†Select Format  L500: 
+L501: CAD - PGJ-06 with Swing Arm
+L502: 
+L503: cite9†Select Format  L504: 
+L505: CAD - PGJ-12 with SJ Swing Arm
+L506: 
+L507: cite9†Select Format  L508: 
+L509: CAD - PGJ-12 with Swing Arm
+L510: 
+L511: cite9†Select Format  L512: ## Support
+L513: 
+L514: ## cite116†Residential Rotors L515: 
+L516: ### Performance Cards
+L517: 
+L518: ### Installation
+L519: 
+L520: ### Rotor Adjustments
+L521: 
+L522: ### FAQs
+L523: 
+L524: ### Troubleshooting
+L525: 
+L526: ### Accessories
+L527: 
+L528: ## Photos
+L529: 
+L530: ## Application Photos
+L531: 
+L532: cite9†Image L533: 
+L534: cite117†Image L535: 
+L536: Title:
+L537: 
+L538: PGJ
+L539: 
+L540: File:
+L541: 
+L542: h3669_rt.jpg
+L543: 
+L544: Classification:
+L545: 
+L546: Application
+L547: 
+L548: Product Line:
+L549: 
+L550: Rotors
+L551: 
+L552: Products:
+L553: 
+L554: cite118†PGJ L555: 
+L556: Keywords:
+L557: 
+L558: product
+L559: 
+L560: ,
+L561: 
+L562: rotor
+L563: 
+L564: ,
+L565: 
+L566: pgj
+L567: 
+L568: cite119†Image Page L569: 
+L570: * * *
+L571: 
+L572: #### Download Image
+L573: 
+L574: cite120†Medium cite121†Original L575: 
+L576: By clicking download, you agree to our cite9†terms and conditions .
+L577: ### Photo Usage Disclaimer
+L578: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L579: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L580: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L581: 
+L582: cite9†Image L583: 
+L584: cite122†Image L585: 
+L586: Title:
+L587: 
+L588: PGJ
+L589: 
+L590: File:
+L591: 
+L592: pgj-3_rt_0.jpg
+L593: 
+L594: Classification:
+L595: 
+L596: Application
+L597: 
+L598: Product Line:
+L599: 
+L600: Rotors
+L601: 
+L602: Products:
+L603: 
+L604: cite118†PGJ L605: 
+L606: Keywords:
+L607: 
+L608: rotor
+L609: 
+L610: ,
+L611: 
+L612: pgj
+L613: 
+L614: ,
+L615: 
+L616: running
+L617: 
+L618: ,
+L619: 
+L620: pgj-06
+L621: 
+L622: cite123†Image Page L623: 
+L624: * * *
+L625: #### Download Image
+L626: 
+L627: cite124†Medium cite125†Original L628: 
+L629: By clicking download, you agree to our cite9†terms and conditions .
+L630: ### Photo Usage Disclaimer
+L631: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L632: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L633: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L634: ## Studio Photos
+L635: 
+L636: cite9†Image L637: 
+L638: cite126†Image L639: 
+L640: Title:
+L641: 
+L642: PGJ Reclaimed Water ID Cap
+L643: 
+L644: File:
+L645: 
+L646: pgj-r_clipped.jpg
+L647: 
+L648: Classification:
+L649: 
+L650: Studio
+L651: 
+L652: Product Line:
+L653: 
+L654: Rotors
+L655: 
+L656: Products:
+L657: 
+L658: cite118†PGJ L659: 
+L660: Keywords:
+L661: 
+L662: rotor
+L663: 
+L664: ,
+L665: 
+L666: cap
+L667: 
+L668: ,
+L669: 
+L670: clipped
+L671: 
+L672: ,
+L673: 
+L674: product
+L675: 
+L676: ,
+L677: 
+L678: pgj
+L679: 
+L680: ,
+L681: 
+L682: reclaimed
+L683: 
+L684: cite127†Image Page L685: 
+L686: * * *
+L687: 
+L688: #### Download Image
+L689: 
+L690: cite128†Medium cite129†Original L691: 
+L692: By clicking download, you agree to our cite9†terms and conditions .
+L693: ### Photo Usage Disclaimer
+L694: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L695: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L696: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L697: 
+L698: cite9†Image L699: 
+L700: cite130†Image L701: 
+L702: Title:
+L703: 
+L704: PGJ Red Nozzles
+L705: 
+L706: File:
+L707: 
+L708: pgj_nozzles_01.jpg
+L709: 
+L710: Classification:
+L711: 
+L712: Studio
+L713: 
+L714: Product Line:
+L715: 
+L716: Rotors
+L717: 
+L718: Products:
+L719: 
+L720: cite118†PGJ L721: 
+L722: Keywords:
+L723: 
+L724: pgj
+L725: 
+L726: ,
+L727: 
+L728: nozzle
+L729: 
+L730: ,
+L731: 
+L732: clipped
+L733: 
+L734: ,
+L735: 
+L736: product
+L737: 
+L738: ,
+L739: 
+L740: rotor
+L741: 
+L742: cite131†Image Page L743: 
+L744: * * *
+L745: #### Download Image
+L746: 
+L747: cite132†Medium cite133†Original L748: 
+L749: By clicking download, you agree to our cite9†terms and conditions .
+L750: ### Photo Usage Disclaimer
+L751: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L752: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L753: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L754: 
+L755: cite9†Image L756: 
+L757: cite134†Image L758: 
+L759: Title:
+L760: 
+L761: PGJ 12"
+L762: 
+L763: File:
+L764: 
+L765: pgj-12_clipped.jpg
+L766: 
+L767: Classification:
+L768: 
+L769: Studio
+L770: 
+L771: Product Line:
+L772: 
+L773: Rotors
+L774: 
+L775: Products:
+L776: 
+L777: cite118†PGJ L778: 
+L779: Keywords:
+L780: 
+L781: pgj
+L782: 
+L783: ,
+L784: 
+L785: product
+L786: 
+L787: ,
+L788: 
+L789: plastic
+L790: 
+L791: ,
+

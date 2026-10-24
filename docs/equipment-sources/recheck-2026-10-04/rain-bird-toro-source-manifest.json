@@ -1,0 +1,106 @@
+[
+  {
+    "file": "1400-tech-2021.pdf",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+    "bytes": 354631,
+    "sha256": "a2dc877e4db36b23b49c5ec186a8c3025e77b50d295da54554d891841ff5f11e",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "3500-tech-2023.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/4634",
+    "bytes": 464843,
+    "sha256": "260c4206c95ebeca7f94c41a31eab8260ddce5f70951a4aec46e4de61a6b996c",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "5000-tech-2023.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/4635",
+    "bytes": 1100244,
+    "sha256": "e223c352c9694ea7d0f813599f2e21954381834edf2ac5e0d468b4279d3904c5",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "falcon-tech-2023.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/4668",
+    "bytes": 406511,
+    "sha256": "5047b26c560334d55fa5524bec8a23abcf3be9b14a4fd074466f1a7ee758618c",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "falcon-performance.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/4170",
+    "bytes": 179554,
+    "sha256": "a536b3f9df22c513753e44a0b1625b9ce6540183f89efda11c5948ab07530318",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "mpr-performance.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/4174",
+    "bytes": 149505,
+    "sha256": "ac177ada4df4468df016f3b030ea4fe62baf5f23934c01d95ace2a15137afc4f",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "sq-tech.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/13442",
+    "bytes": 1628385,
+    "sha256": "9fd2df5dcbca4b54df23b6cd100de38cacc7378cba7d1ebdb839deaa34450296",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "sq-3qtr-sellsheet.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/13444",
+    "bytes": 2033997,
+    "sha256": "355eae31ec1dec8b82313676c6e9961d0015f455220184881b813227f6c7b456",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "pricelist-2025.pdf",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-06/2025_us_landscape_price_list_updated_6.5.25.pdf",
+    "bytes": 683281,
+    "sha256": "09c64f929148d29bdb14b7c34c17bc86f6f91d0261501dc89d522b4a489ebb3a",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "drop-dom-2023.xlsx",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-08/2023_yearendproductdropnotification_dom_-_080823.xlsx",
+    "bytes": 15792,
+    "sha256": "760f95df27684c1d2d8aef497217c05256ea0f24113f017384e4005479894d75",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "psn-2026.pdf",
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+    "bytes": 787233,
+    "sha256": "245119c04c278a69574354ff5c680746f5990738b1ebfc68f49b343e2d221ed5",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "psn-plus-2025.pdf",
+    "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+    "bytes": 4043874,
+    "sha256": "bb49a5cbdca23dca9eff987c3589b7983696caad1da1ff419ae3b80e7e736365",
+    "checkedOn": "2026-10-04",
+    "note": null
+  },
+  {
+    "file": "rain-bird-current-catalog.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/15300",
+    "bytes": 26010114,
+    "sha256": "9c2bea21bd0d8eb24ce3ec217ebec8d5f07a6cfb4e3c0d47ddf5c22ea7546ee9",
+    "checkedOn": "2026-10-04",
+    "note": "This downloaded catalog is 2023 despite current link; PDF date must not be called 2026."
+  }
+]

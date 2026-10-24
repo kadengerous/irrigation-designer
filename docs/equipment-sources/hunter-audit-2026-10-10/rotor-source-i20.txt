@@ -1,0 +1,362 @@
+I-20 | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/rotors/i-20)
+citeturn287view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/rotors/i-20","lineno":250}); Total lines: 1615
+L110: cite37†I-20-04-NCV | I-20 Rotor, 4", adjustable from 50° to 360°, ¾" inlet, no check valve, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L111: cite38†I-20-04-R | I-20 Rotor, 4", adjustable from 50° to 360°, ¾" inlet, check valve, reclaimed ID, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L112: cite39†I-20-04-SS | I-20 Rotor, 4", adjustable from 50° to 360°, ¾" inlet, stainless steel riser, check valve, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L113: cite40†I-20-04-SS-NCV | I-20 Rotor, 4", adjustable from 50° to 360°, ¾" inlet, stainless steel riser, no check valve, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L114: cite41†I-20-04-SS-R | I-20 Rotor, 4", adjustable from 50° to 360°, ¾" inlet, stainless steel riser, check valve, reclaimed ID, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L115: cite42†I-20-06 | I-20 Rotor, 6", adjustable from 50° to 360°, ¾" inlet, check valve, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L116: cite43†I-20-06-R | I-20 Rotor, 6", adjustable from 50° to 360°, ¾" inlet, check valve, reclaimed ID, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L117: cite44†I-20-06-SS | I-20 Rotor, 6", adjustable from 50° to 360°, ¾" inlet, stainless steel riser, check valve, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L118: cite45†I-20-06-SS-R | I-20 Rotor, 6", adjustable from 50° to 360°, ¾" inlet, stainless steel riser, check valve, reclaimed ID, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L119: cite46†I-20-12 | I-20 Rotor, 12", adjustable from 50° to 360°, ¾" inlet, check valve, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L120: cite47†I-20-12-R | I-20 Rotor, 12", adjustable from 50° to 360°, ¾" inlet, check valve, reclaimed ID, also available with a 1.5–4.0 nozzle pre-installed  | cite9†+ L121: Showing 1 - 14 of 14
+L122: ## User-installed options
+L123: 
+L124: ### User-Installed Options
+L125: 
+L126: Model  | Description  | Add to List
+L127: --- | --- | ---
+L128: cite48†463551SP | Rotor Staking Kit for models PGP-00 and I-20-00  | cite9†+ L129: ### SJ Swing Joints
+L130: Model  | Description  | Add to List
+L131: --- | --- | ---
+L132: cite49†SJ-506 | SJ Swing Joint, ½" x 6", standard, preassembled, with four swing elbows  | cite9†+ L133: cite50†SJ-512 | SJ Swing Joint, ½" x 12", standard, preassembled, with four swing elbows  | cite9†+ L134: cite51†SJ-706 | SJ Swing Joint, ¾" x 6", standard, preassembled, with four swing elbows  | cite9†+ L135: cite52†SJ-712 | SJ Swing Joint, ¾" x 12", standard, preassembled, with four swing elbows  | cite9†+ L136: cite53†SJ-7506 | SJ Swing Joint, ½" x ¾" x 6", standard, preassembled, with four swing elbows  | cite9†+ L137: cite54†SJ-7512 | SJ Swing Joint, ½" x ¾" x 12", standard, preassembled, with four swing elbows  | cite9†+ L138: ### Flex Tubing
+L139: 
+L140: Model  | Description  | Add to List
+L141: --- | --- | ---
+L142: cite55†FLEXSG-18 | FlexSG Tubing, soft-grip, precut 18" segments  | cite9†+ L143: cite56†HSBE-075 | ¾" male thread x spiral barb elbow, gray  | cite9†+ L144: 
+L145: cite57†Image: I-20 L146: 
+L147: [Input]
+L148: 
+L149: I-20
+L150: 
+L151: I-20
+L152: 
+L153: Ordering Number [Input]
+L154: 
+L155: [Input] [Input]
+L156: 
+L157: Qty [Input]
+L158: 
+L159: Notes [Input: Add a note...]
+L160: 
+L161: [Button: Add to list]
+L162: 
+L163: User installed options
+L164: 
+L165: [Input]
+L166: #### Product added to list
+L167: 
+L168: The following product was added to ""
+L169: 
+L170: QTY
+L171: 
+L172: cite58†Review your list L173: 
+L174: cite9†Continue L175: 
+L176: [Input] [Input]
+L177: 
+L178: ## Create a new My List.
+L179: 
+L180: ## Log in to access this feature
+L181: 
+L182: Log in using your Hunter Account
+L183: 
+L184: Username [Input]
+L185: 
+L186: Password [Input]
+L187: 
+L188: [Input] [Input] [Input]
+L189: 
+L190: [Button: Sign In]
+L191: 
+L192: cite59†Contact your local distributor for product availability and ordering. L193: ## Specifications
+L194: 
+L195: Operating Specifications
+L196: 
+L197:   * Nozzle choices: 34
+L198:   * Radius: 17' to 46'
+L199:   * Flow: 0.36 to 14.8 GPM
+L200:   * Recommended pressure range: 25 to 70 PSI
+L201:   * Operating pressure range: 20 to 100 PSI
+L202:   * Precipitation rate: 0.4 in/hr approximately
+L203:   * Nozzle trajectory: standard = 25°, low-angle = 13°
+L204:   * Nozzle racks: 1.5 to 8.0 blue, 2.0 to 4.5 low-angle gray, 0.50 to 3.0 black, 6.0 to 13.0 green, MPR-25, MPR-30, MPR-35
+L205:   * Warranty period: 5 years
+L206: 
+L207: Factory-Installed Options
+L208:   * No drain Check Valve (NCV models)
+L209:   * Reclaimed water ID
+L210:   * Blue 1.5–4.0 nozzles
+L211: 
+L212: User-Installed Options
+L213: 
+L214:   * HSJ-0 prefabricated ¾" PVC Swing Joint
+L215: 
+L216: * * *
+L217: 
+L218: cite60† Download Product Spec Sheet L219: 
+L220: cite61†  Download Written Specifications (in English) L221: ## Videos
+L222: 
+L223: Hunter Rotors: Full 360° Control in the Field
+L224: 
+L225: Every job is different, and your rotors should be able to adapt.
+L226: 
+L227: Hunter Rotors: Swap Nozzles in Seconds
+L228: 
+L229: Hunter rotors are designed for easy nozzle installation, so you can make changes efficiently and keep your job moving without unnecessary delays.
+L230: 
+L231: I-20 Shutoff - FlowStop Technology
+L232: 
+L233: The I-20 is loaded with upgraded features such as FloStop® control, check valves, and efficient nozzles that make it the perfect choice in a range of
+L234: PGP Ultra & I-20 - Same Nozzles, More Options
+L235: 
+L236: Hunter Pitot Gauge Tool
+L237: 
+L238: Rotor T-Handle Pull Up Tool
+L239: 
+L240: The T-Handle Rotor Adjustment Tool is just one of a full range of convenient service tools and auxiliary items for irrigation systems that save time
+L241: 
+L242:   * 1
+L243:   * cite62†2 L244:   * cite63†3 L245:   * cite64†4 L246:   * cite62†› L247:   * cite64†» L248: 
+L249: cite65†All Product Videos L250: ## Features
+L251: With 34 nozzle options, a 17’ to 46’ radius, and 6 body choices, the I-20 is an indispensable rotor. Whether you’ve got a small area, sandy soil, or a mix of shrubs and grass, the I-20 is ready to water with efficiency and reliability. Recent improvements include automatic arc return (non-reversing 360, from 50 to 360 degrees) and a non-strippable, vandal-proof drive mechanism that prevents gear stripping and saves repair costs.
+L252: Adding FloStop^{®} control, easy, through-the-top arc adjustment, and a standard drain-check valve all equate to a rotor that stands second-to-none in its class.
+L253: #### Key Benefits
+L254: 
+L255: Patented automatic arc return feature returns the turret back to the original arc pattern if vandalized; adjustable arc from 50° to 360°
+L256: 
+L257: Non-strippable drive mechanism is protected from damage if turned in the opposite direction of travel
+L258: 
+L259: Part- and full-circle in one model for flexibility across landscapes and reduced inventory
+L260: 
+L261: Headed and slotted setscrew allows radius adjustment with a Hunter wrench or flat-blade screwdriver
+L262: FloStop® closes the flow of water from individual sprinklers to change the nozzle or perform repairs
+L263: 
+L264: Flat-top nozzles allow fast, easy insertion
+L265: 
+L266: QuickCheck™ Arc Mechanism for fast arc adjustment
+L267: 
+L268: Available stainless steel riser for extra durability
+L269: 
+L270: Drain check valve prevents low-head drainage (up to 10' of elevation)
+L271: #### Advanced Features
+L272: 
+L273: ### Automatic Arc Return
+L274: 
+L275: This patented feature returns the turret to the original arc regardless of where it is turned. This ensures vandal protection in any environment.
+L276: 
+L277: cite66†Image: Advanced Feature - Auto Arc Return L278: 
+L279: ### Non-Strippable Drive
+L280: 
+L281: The patented, non-strippable, vandal proof drive mechanism enables the turret to be turned without causing damage.
+L282: 
+L283: cite67†Image L284: ### Part- and Full-Circle in One Model
+L285: 
+L286: Patented non-reversing 360 for part- and full-circle in one model, from 50 to 360 degrees. Not available in opposing nozzle options.
+L287: 
+L288: cite68†Image: Advanced Feature - Part- And Full-Circle in One Model L289: 
+L290: ### Headed and Slotted Set Screw
+L291: 
+L292: Use a slotted screwdriver or the Hunter wrench for easier and simpler adjustments as needed.
+L293: 
+L294: cite69†Image L295: ### FloStop® Control
+L296: 
+L297: FloStop closes the flow of water from individual sprinkler heads while the system is running. This is ideal for changing nozzles or turning off specific heads during maintenance and construction.
+L298: 
+L299: cite70†Image: Advanced Feature - FloStop Control L300: 
+L301: ### OPTIONAL RECLAIMED WATER ID
+L302: 
+L303: Purple caps indicate where non-potable irrigation water is being used.
+L304: 
+L305: cite71†Image L306: ### Stainless Steel Riser
+L307: 
+L308: For unforgiving soil conditions, unpredictable climates, or heavy foot traffic, stainless steel is the best choice
+L309: 
+L310: cite72†Image: I-40-06-SS-ON-HS in use L311: 
+L312: ### Drain Check Valve (up to 10 ft. of elevation)
+L313: 
+L314: The drain check valve keeps lines from draining when the system is shut off. This saves water, reduces liability, and increases system life.
+L315: 
+L316: cite73†Image L317: 
+L318: ## Charts
+L319: ### PGP Ultra / I-20 Blue Standard Nozzle Performance Data
+L320: 
+L321: PGP Ultra / I-20 Blue Standard
+L322: Nozzle Performance Data cite74†View Nozzle L323: ---
+L324: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L325:    | PSI  | ft  | GPM  | cite75†Image | cite76†Image L326: 1.5 • Blue  | 25  | 29  | 1.2  | 0.27  | 0.32
+L327: 35  | 31  | 1.4  | 0.28  | 0.32
+L328: 45  | 31  | 1.5  | 0.30  | 0.35
+L329: 55  | 32  | 1.8  | 0.34  | 0.39
+L330: 65  | 32  | 1.9  | 0.36  | 0.41
+L331: 2.0 • Blue  | 25  | 33  | 1.4  | 0.25  | 0.29
+L332: 35  | 33  | 1.7  | 0.30  | 0.35
+L333: 45  | 34  | 2.0  | 0.33  | 0.38
+L334: 55  | 34  | 2.1  | 0.35  | 0.40
+L335: 65  | 34  | 2.3  | 0.38  | 0.44
+L336: 2.5 • Blue  | 25  | 33  | 1.7  | 0.30  | 0.35
+L337: 35  | 35  | 2.1  | 0.33  | 0.38
+L338: 45  | 35  | 2.5  | 0.39  | 0.45
+L339: 55  | 35  | 2.6  | 0.41  | 0.47
+L340: 65  | 35  | 2.9  | 0.46  | 0.53
+L341: 3.0 • Blue  | 25  | 35  | 2.2  | 0.35  | 0.40
+L342: 35  | 36  | 2.7  | 0.40  | 0.46
+L343: 45  | 38  | 3.0  | 0.40  | 0.46
+L344: 55  | 39  | 3.4  | 0.43  | 0.50
+L345: 65  | 39  | 3.7  | 0.47  | 0.54
+L346: 4.0 • Blue  | 25  | 37  | 3.0  | 0.42  | 0.49
+L347: 35  | 39  | 3.5  | 0.44  | 0.51
+L348: 45  | 40  | 4.0  | 0.48  | 0.56
+L349: 55  | 41  | 4.5  | 0.52  | 0.60
+L350: 65  | 41  | 4.8  | 0.55  | 0.63
+L351: 5.0 • Blue  | 25  | 37  | 3.7  | 0.52  | 0.60
+L352: 35  | 39  | 4.5  | 0.57  | 0.66
+L353: 45  | 42  | 5.0  | 0.55  | 0.63
+L354: 55  | 42  | 5.7  | 0.62  | 0.72
+L355: 65  | 42  | 6.2  | 0.68  | 0.78
+L356: 6.0 • Blue  | 25  | 38  | 4.3  | 0.57  | 0.66
+L357: 35  | 40  | 5.6  | 0.67  | 0.78
+L358: 45  | 43  | 6.0  | 0.62  | 0.72
+L359: 55  | 44  | 6.7  | 0.67  | 0.77
+L360: 65  | 44  | 7.3  | 0.73  | 0.84
+L361: 8.0 • Blue  | 25  | 37  | 6.0  | 0.84  | 0.97
+L362: 35  | 41  | 7.0  | 0.80  | 0.93
+L363: 45  | 44  | 8.0  | 0.80  | 0.92
+L364: 55  | 46  | 9.0  | 0.82  | 0.95
+L365: 65  | 46  | 9.8  | 0.89  | 1.03
+L366: Notes:
+L367: Bold = Recommended pressure.
+L368: All precipitation rates calculated for 180 degree operation. For the precipitation rate for a 360 degree sprinkler, divide by 2.
+L369: ### PGP Ultra / I-20 Grey Low-Angle Nozzle Performance Data
+L370: 
+L371: PGP Ultra / I-20 Grey Low Angle Nozzle Performance Data cite74†View Nozzle L372: ---
+L373: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L374:    | PSI  | ft  | GPM  | cite75†Image | cite76†Image L375: 2.0
+L376: LA • Grey  | 30  | 25  | 1.6  | 0.49  | 0.57
+L377: 40  | 27  | 1.9  | 0.50  | 0.58
+L378: 50  | 28  | 2.1  | 0.52  | 0.60
+L379: 60  | 30  | 2.3  | 0.49  | 0.57
+L380: 2.5
+L381: LA • Grey  | 30  | 27  | 2.1  | 0.55  | 0.64
+L382: 40  | 30  | 2.5  | 0.53  | 0.62
+L383: 50  | 33  | 2.8  | 0.49  | 0.57
+L384: 60  | 35  | 3.0  | 0.47  | 0.54
+L385: 3.5
+L386: LA • Grey  | 30  | 29  | 2.8  | 0.64  | 0.74
+L387: 40  | 32  | 3.1  | 0.58  | 0.67
+L388: 50  | 35  | 3.5  | 0.55  | 0.64
+L389: 60  | 37  | 3.8  | 0.53  | 0.62
+L390: 4.5
+L391: LA • Grey  | 30  | 29  | 3.4  | 0.78  | 0.90
+L392: 40  | 32  | 3.9  | 0.73  | 0.85
+L393: 50  | 35  | 4.4  | 0.69  | 0.80
+L394: 60  | 37  | 4.7  | 0.66  | 0.76
+L395: Notes:
+L396: Bold = Recommended pressure.
+L397:   All precipitation rates calculated for 180 degree operation. For the precipitation rate for a 360 degree sprinkler, divide by 2.
+L398: ### PGP Ultra / I-20 High-Flow Nozzle Performance Data
+L399: 
+L400: PGP Ultra / I-20 High Flow Nozzle Performance Data cite77†View Nozzle L401: ---
+L402: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L403:    | PSI  | ft  | GPM  | cite75†Image | cite76†Image L404: 10 • Dk. Green  | 40  | 42  | 8.4  | 0.92  | 1.06
+L405: 50  | 43  | 9.5  | 0.99  | 1.14
+L406: 60  | 45  | 10.5  | 1.00  | 1.15
+L407: 70  | 47  | 11.4  | 0.99  | 1.15
+L408: 13 • Dk. Green  | 40  | 43  | 10.9  | 1.13  | 1.31
+L409: 50  | 44  | 12.3  | 1.22  | 1.41
+L410: 60  | 45  | 13.6  | 1.29  | 1.49
+L411: 70  | 47  | 14.8  | 1.29  | 1.49
+L412: 6.0
+L413: LA • Dk. Green  | 30  | 31  | 4.2  | 0.84  | 0.97
+L414: 40  | 35  | 5.0  | 0.79  | 0.91
+L415: 50  | 37  | 5.8  | 0.82  | 0.94
+L416: 60  | 39  | 6.3  | 0.80  | 0.92
+L417: 8.0
+L418: LA •  Dk. Green  | 40  | 37  | 6.7  | 0.94  | 1.09
+L419: 50  | 39  | 7.7  | 0.97  | 1.13
+L420: 60  | 41  | 8.5  | 0.97  | 1.12
+L421: 70  | 41  | 9.2  | 1.05  | 1.22
+L422: Notes:
+L423: Bold = Recommended pressure.
+L424: All precipitation rates calculated for 180 degree operation. For the precipitation rate for a 360 degree sprinkler, divide by 2.
+L425: ### PGP Ultra / I-20 Black Short-Radius Nozzle Performance Data
+L426: 
+L427: 
+L428: PGP Ultra / I-20 Black Short Radius Nozzle Performance Data cite78†View Nozzle L429: ---
+L430: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L431:    | PSI  | ft  | GPM  | cite75†Image | cite76†Image L432: .50
+L433: SR • Black  | 30  | 17  | 0.36  | 0.24  | 0.28
+L434: 40  | 17  | 0.43  | 0.29  | 0.33
+L435: 50  | 18  | 0.50  | 0.30  | 0.34
+L436: 60  | 19  | 0.57  | 0.30  | 0.35
+L437: 1.0
+L438: SR • Black  | 30  | 17  | 0.78  | 0.52  | 0.60
+L439: 40  | 17  | 0.90  | 0.60  | 0.69
+L440: 50  | 18  | 1.0  | 0.59  | 0.69
+L441: 60  | 19  | 1.1  | 0.59  | 0.68
+L442: 2.0
+L443: SR • Black  | 30  | 17  | 1.4  | 0.93  | 1.08
+L444: 40  | 17  | 1.7  | 1.13  | 1.31
+L445: 50  | 18  | 2.0  | 1.19  | 1.37
+L446: 60  | 19  | 2.2  | 1.17  | 1.35
+L447: .75
+L448: SR • Black  | 30  | 23  | 0.58  | 0.21  | 0.24
+L449: 40  | 24  | 0.68  | 0.23  | 0.26
+L450: 50  | 25  | 0.75  | 0.23  | 0.27
+L451: 60  | 26  | 0.83  | 0.24  | 0.27
+L452: 1.5
+L453: SR • Black  | 30  | 23  | 1.1  | 0.40  | 0.46
+L454: 40  | 24  | 1.3  | 0.43  | 0.50
+L455: 50  | 25  | 1.5  | 0.46  | 0.53
+L456: 60  | 26  | 1.6  | 0.46  | 0.53
+L457: 3.0
+L458: SR • Black  | 30  | 23  | 2.5  | 0.91  | 1.05
+L459: 40  | 24  | 2.7  | 0.90  | 1.04
+L460: 50  | 25  | 3.0  | 0.92  | 1.07
+L461: 60  | 26  | 3.1  | 0.88  | 1.02
+L462: Notes:
+L463: Bold = Recommended pressure.
+L464:   All precipitation rates calculated for 180 degree operation. For the precipitation rate for a 360 degree sprinkler, divide by 2.
+L465: ### MPR-25 Red Nozzle Performance Data
+L466: 
+L467: PGP ULTRA / I-20 MPR-25 RED NOZZLE PERFORMANCE DATA
+L468: ---
+L469: Arc  | Pressure  | Radius  | Flow  | Precip in/hr
+L470:    | PSI  | ft  | GPM  | cite75†Image | cite76†Image L471: • Red 90° cite79†Image | 25  | 23  | 0.74  | 0.54  | 0.62
+L472: 35  | 24  | 0.88  | 0.59  | 0.68
+L473: 45  | 25  | 1.00  | 0.62  | 0.71
+L474: 55  | 25  | 1.11  | 0.68  | 0.79
+L475: 65  | 25  | 1.21  | 0.75  | 0.86
+L476: • Red 120° cite80†Image | 25  | 23  | 1.00  | 0.55  | 0.63
+L477: 35  | 24  | 1.21  | 0.61  | 0.70
+L478: 45  | 25  | 1.38  | 0.64  | 0.74
+L479: 55  | 25  | 1.53  | 0.71  | 0.82
+L480: 65  | 25  | 1.67  | 0.77  | 0.89
+L481: • Red 180° cite81†Image | 25  | 23  | 1.44  | 0.52  | 0.61
+L482: 35  | 24  | 1.73  | 0.58  | 0.67
+L483: 45  | 25  | 1.98  | 0.61  | 0.70
+L484: 55  | 25  | 2.21  | 0.68  | 0.79
+L485: 65  | 25  | 2.41  | 0.74  | 0.86
+L486: • Red 360° cite82†Image | 25  | 23  | 2.78  | 0.51  | 0.58
+L487: 35  | 24  | 3.34  | 0.56  | 0.64
+L488: 45  | 25  | 3.82  | 0.59  | 0.68
+L489: 55  | 25  | 4.25  | 0.65  | 0.76
+L490: 65  | 25  | 4.63  | 0.71  | 0.82
+L491: ### MPR-30 Lt. Green Nozzle Performance Data
+L492: 
+L493: PGP ULTRA / I-20 MPR-30 LT. GREEN NOZZLE PERFORMANCE DATA
+L494: ---
+L495: Arc  | Pressure  | Radius  | Flow  | Precip in/hr
+L496:    | PSI  | ft  | GPM  | cite75†Image | cite76†Image L497: • Lt. Green 90° cite79†Image | 25  | 29  | 1.03  | 0.47  | 0.54
+L498: 35  | 30  | 1.23  | 0.53  | 0.61
+L499: 45  | 30  | 1.40  | 0.60  | 0.69
+L500: 55  | 30  | 1.56  | 0.67  | 0.77
+L501: 65  | 30  | 1.69  | 0.72  | 0.83
+L502: • Lt. Green 120° cite80†Image | 25  | 29  | 1.34  | 0.46  | 0.53
+L503: 35  | 30  | 1.62  | 0.52  | 0.60
+L504: 45  | 30  | 1.85  | 0.59  | 0.69
+L505: 55  | 30  | 2.06  | 0.66  | 0.76
+L506: 65  | 30  | 2.24  | 0.72  | 0.83
+L507: • Lt. Green 180° cite81†Image | 25  | 29  | 2.15  | 0.49  | 0.57
+L508: 35  | 30  | 2.59  | 0.55  | 0.64
+L509: 45  | 30  | 2.96  | 0.63  | 0.73
+L510: 55  | 30  | 3.30  | 0.71  | 0.82
+L511: 65  | 30  | 3.60  | 0.77  | 0.89
+L512: • Lt. Green 360° cite82†Image | 25  | 29  | 4.24  | 0.49  | 0.56
+L513: 35  | 30  | 5.08  | 0.54  | 0.63
+L514: 45  | 30  | 5.78  | 0.62  | 0.71
+L515: 55  | 30  | 6.39  | 0.68  | 0.79
+L516: 65  | 30  | 6.92  | 0.74  | 0.85
+L517: ### MPR-35 Beige Nozzle Performance Data
+L518: 
+

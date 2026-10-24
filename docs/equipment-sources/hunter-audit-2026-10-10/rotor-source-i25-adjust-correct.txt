@@ -1,0 +1,79 @@
+Commercial Rotors - I-25 Rotor Adjustment Instructions | Hunter Industries (https://www.hunterirrigation.com/en-metric/support/commercial-rotors-i-25-adjust)
+citeturn351view0 [wordlim: 200] Crawled: last month; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/en-metric/support/commercial-rotors-i-25-adjust","lineno":75}); Total lines: 107
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: Metric
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite0†English L16:   * cite9†Metric L17:   * cite10†Español L18:   * cite11†Italiano L19: 
+L20:   * cite12†Français L21:   * cite13†Português L22:   * cite14†Deutsch L23:   * cite15†Türkçe L24: 
+L25:   * cite16†Polski L26:   * cite17†Русский L27:   * cite18†العربية L28:   * cite19†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: ]
+L35: 
+L36: [Button: Cancel]
+L37: # Commercial Rotors - I-25 Rotor Adjustment Instructions
+L38: 
+L39: I-25 Rotor Adjustment Sockets
+L40: 
+L41: cite20†Image L42: 
+L43:   1. Arc adjustment direction
+L44:   2. To service riser: screw accessed through membrane here (caution: under spring tension)
+L45:   3. Specific model
+L46:   4. Flow direction arrow & nozzle-retainer/range-adjustment screw
+L47:   5. Lift-up socket
+L48:   6. Arc adjustment
+L49: 
+L50: Arc Adjustment
+L51: 
+L52: cite21†Image L53: All I-25 Ultra adjustable arc sprinklers are preset at approximately 180°. The I-25 can be adjusted from 50-360 degrees. Sprinklers may be adjusted with water on or off. It is recommended that initial adjustment be made before installation.
+L54:   1. Using the palm of your hand, rotate the nozzle turret counterclockwise to left stop to complete any interrupted rotation cycle.
+L55:   2. Rotate the nozzle turret clockwise to right stop. This is the fixed side of the arc. The nozzle turret must be held in this position for all arc adjustments.
+L56: 
+L57: cite22†Image L58: 
+L59: To Increase Arc
+L60: 
+L61:   1. Insert the key end of the Hunter wrench into the adjustment socket.
+L62:   2. While holding the nozzle turret at the right stop, turn the wrench clockwise. Each 360° turn of the wrench increases the arc 45°.
+L63: 
+L64:   3. Adjust to any arc between 50° and 360°.
+L65: 
+L66:   4. Wrench will stop turning, or there will be a ratcheting noise, when the maximum arc (360°) is reached.
+L67: 
+L68:   5. When set to 360°, the sprinkler will rotate continually counterclockwise.
+L69: 
+L70: cite23†Image L71: 
+L72: To Decrease Arc
+L73: 
+L74:   1. Insert the key end of the Hunter wrench into the adjustment socket.
+L75:   2. While holding the nozzle turret at the right stop, turn the wrench counterclockwise. Each 360° turn of the wrench decreases the arc 45°.
+L76: 
+L77:   3. Adjust to any arc between 50° and 360°.
+L78: 
+L79:   4. Wrench will stop turning, or there will be a ratcheting noise, when the minimum arc (50°) is reached.
+L80: 
+L81: Radius Adjustment
+L82: Insert the hex end of the Hunter wrench into the nozzle-retainer/range-adjustment screw. Turn the screw clockwise into the stream of water to decrease the radius, or counterclockwise to increase the radius.
+L83: 
+L84: Precipitation Rate Adjustment
+L85: 
+L86: Where excessively wet or dry areas are a problem, the precipitation rate may be adjusted. Simply replace the existing nozzle with a larger one to increase or a smaller one to decrease the rate of precipitation.
+L87: ## Still need help? We're here.
+L88: 
+L89: Tell us what you need support with and we'll find the best solution for you.
+L90: 
+L91: cite24†Contact Support L92: 
+L93: Previous article
+L94: 
+L95: cite25†Swing Joints L96: 
+L97: Next article
+L98: 
+L99: cite26†I-40 - Adjust L100: 
+L101:   * cite27†Find a Distributor L102:   * cite28†Contact Sales L103: 
+L104: cite29†Find Hunter L105: 
+L106: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite30†Privacy Policy |
+

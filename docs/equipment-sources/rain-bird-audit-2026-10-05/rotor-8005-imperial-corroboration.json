@@ -1,0 +1,2530 @@
+[
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:4",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 11.9,
+    "flowM3H": 0.86,
+    "flowLMin": 14.38,
+    "precipSquareMmH": 12.0,
+    "precipTriangleMmH": 14.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 39.0,
+        "flowGpm": 3.8,
+        "precipSquareInH": 0.48,
+        "precipTriangleInH": 0.56
+      },
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 39.0,
+        "flowGpm": 3.8,
+        "precipSquareInH": 0.48,
+        "precipTriangleInH": 0.56
+      }
+    ],
+    "corroboratingImperialLMin": 14.38456,
+    "lMinDifference": -0.00456,
+    "m3hAsLMinDifference": -0.05123
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:6",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 13.7,
+    "flowM3H": 1.28,
+    "flowLMin": 21.34,
+    "precipSquareMmH": 14.0,
+    "precipTriangleMmH": 16.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 45.0,
+        "flowGpm": 5.6,
+        "precipSquareInH": 0.53,
+        "precipTriangleInH": 0.62
+      },
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 45.0,
+        "flowGpm": 6.1,
+        "precipSquareInH": 0.58,
+        "precipTriangleInH": 0.67
+      }
+    ],
+    "corroboratingImperialLMin": 21.34276,
+    "lMinDifference": -0.00276,
+    "m3hAsLMinDifference": -0.00943
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:8",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 14.9,
+    "flowM3H": 1.59,
+    "flowLMin": 25.5,
+    "precipSquareMmH": 14.0,
+    "precipTriangleMmH": 16.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 49.0,
+        "flowGpm": 6.6,
+        "precipSquareInH": 0.53,
+        "precipTriangleInH": 0.61
+      },
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 49.0,
+        "flowGpm": 8.4,
+        "precipSquareInH": 0.67,
+        "precipTriangleInH": 0.78
+      }
+    ],
+    "corroboratingImperialLMin": 25.50375,
+    "lMinDifference": -0.00375,
+    "m3hAsLMinDifference": 0.99625
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:10",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 16.1,
+    "flowM3H": 2.1,
+    "flowLMin": 35.43,
+    "precipSquareMmH": 16.0,
+    "precipTriangleMmH": 19.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 53.0,
+        "flowGpm": 9.3,
+        "precipSquareInH": 0.64,
+        "precipTriangleInH": 0.74
+      },
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 53.0,
+        "flowGpm": 10.1,
+        "precipSquareInH": 0.69,
+        "precipTriangleInH": 0.8
+      }
+    ],
+    "corroboratingImperialLMin": 35.43545,
+    "lMinDifference": -0.00545,
+    "m3hAsLMinDifference": -0.43545
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:12",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 17.5,
+    "flowM3H": 2.52,
+    "flowLMin": 42.27,
+    "precipSquareMmH": 16.0,
+    "precipTriangleMmH": 19.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 57.0,
+        "flowGpm": 11.1,
+        "precipSquareInH": 0.66,
+        "precipTriangleInH": 0.76
+      },
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 59.0,
+        "flowGpm": 12.0,
+        "precipSquareInH": 0.66,
+        "precipTriangleInH": 0.77
+      }
+    ],
+    "corroboratingImperialLMin": 42.27809,
+    "lMinDifference": -0.00809,
+    "m3hAsLMinDifference": -0.27809
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:14",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 18.0,
+    "flowM3H": 2.89,
+    "flowLMin": 48.18,
+    "precipSquareMmH": 18.0,
+    "precipTriangleMmH": 21.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 59.0,
+        "flowGpm": 12.6,
+        "precipSquareInH": 0.7,
+        "precipTriangleInH": 0.81
+      },
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.3,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.85
+      }
+    ],
+    "corroboratingImperialLMin": 48.18733,
+    "lMinDifference": -0.00733,
+    "m3hAsLMinDifference": -0.02066
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:16",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 18.7,
+    "flowM3H": 3.28,
+    "flowLMin": 54.59,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.3,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.85
+      },
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 65.0,
+        "flowGpm": 15.9,
+        "precipSquareInH": 0.72,
+        "precipTriangleInH": 0.84
+      }
+    ],
+    "corroboratingImperialLMin": 54.59364,
+    "lMinDifference": -0.00364,
+    "m3hAsLMinDifference": 0.07303
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:18",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.2,
+    "flowM3H": 3.69,
+    "flowLMin": 61.43,
+    "precipSquareMmH": 20.0,
+    "precipTriangleMmH": 23.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 63.0,
+        "flowGpm": 16.1,
+        "precipSquareInH": 0.78,
+        "precipTriangleInH": 0.9
+      },
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 65.0,
+        "flowGpm": 17.8,
+        "precipSquareInH": 0.81,
+        "precipTriangleInH": 0.94
+      }
+    ],
+    "corroboratingImperialLMin": 61.43627,
+    "lMinDifference": -0.00627,
+    "m3hAsLMinDifference": 0.06373
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:20",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.9,
+    "flowM3H": 4.25,
+    "flowLMin": 70.83,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 25.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 65.0,
+        "flowGpm": 18.6,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.98
+      },
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 67.0,
+        "flowGpm": 20.1,
+        "precipSquareInH": 0.86,
+        "precipTriangleInH": 1.0
+      }
+    ],
+    "corroboratingImperialLMin": 70.84202,
+    "lMinDifference": -0.01202,
+    "m3hAsLMinDifference": -0.00868
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:22",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.0,
+    "flowM3H": 5.08,
+    "flowLMin": 79.07,
+    "precipSquareMmH": 25.0,
+    "precipTriangleMmH": 29.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 65.0,
+        "flowGpm": 20.7,
+        "precipSquareInH": 0.94,
+        "precipTriangleInH": 1.09
+      },
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 71.0,
+        "flowGpm": 23.2,
+        "precipSquareInH": 0.89,
+        "precipTriangleInH": 1.02
+      }
+    ],
+    "corroboratingImperialLMin": 79.08029,
+    "lMinDifference": -0.01029,
+    "m3hAsLMinDifference": 5.58638
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:24",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.3,
+    "flowM3H": 5.11,
+    "flowLMin": 85.1,
+    "precipSquareMmH": 27.0,
+    "precipTriangleMmH": 32.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 63.0,
+        "flowGpm": 22.3,
+        "precipSquareInH": 1.08,
+        "precipTriangleInH": 1.25
+      },
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 69.0,
+        "flowGpm": 24.7,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.15
+      }
+    ],
+    "corroboratingImperialLMin": 85.10806,
+    "lMinDifference": -0.00806,
+    "m3hAsLMinDifference": 0.05861
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:26",
+    "pressureBar": 3.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.0,
+    "flowM3H": 5.57,
+    "flowLMin": 92.67,
+    "precipSquareMmH": 28.0,
+    "precipTriangleMmH": 32.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 65.0,
+        "flowGpm": 24.3,
+        "precipSquareInH": 1.11,
+        "precipTriangleInH": 1.28
+      },
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 73.0,
+        "flowGpm": 26.7,
+        "precipSquareInH": 0.96,
+        "precipTriangleInH": 1.11
+      }
+    ],
+    "corroboratingImperialLMin": 92.67888,
+    "lMinDifference": -0.00888,
+    "m3hAsLMinDifference": 0.15445
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:4",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 11.9,
+    "flowM3H": 0.93,
+    "flowLMin": 14.38,
+    "precipSquareMmH": 13.0,
+    "precipTriangleMmH": 15.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 39.0,
+        "flowGpm": 3.8,
+        "precipSquareInH": 0.48,
+        "precipTriangleInH": 0.56
+      },
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 39.0,
+        "flowGpm": 3.8,
+        "precipSquareInH": 0.48,
+        "precipTriangleInH": 0.56
+      }
+    ],
+    "corroboratingImperialLMin": 14.38456,
+    "lMinDifference": -0.00456,
+    "m3hAsLMinDifference": 1.11544
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:6",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 13.7,
+    "flowM3H": 1.37,
+    "flowLMin": 22.71,
+    "precipSquareMmH": 15.0,
+    "precipTriangleMmH": 17.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 45.0,
+        "flowGpm": 5.6,
+        "precipSquareInH": 0.53,
+        "precipTriangleInH": 0.62
+      },
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 45.0,
+        "flowGpm": 6.1,
+        "precipSquareInH": 0.58,
+        "precipTriangleInH": 0.67
+      }
+    ],
+    "corroboratingImperialLMin": 22.71533,
+    "lMinDifference": -0.00533,
+    "m3hAsLMinDifference": 0.11801
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:8",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 14.9,
+    "flowM3H": 1.75,
+    "flowLMin": 30.44,
+    "precipSquareMmH": 16.0,
+    "precipTriangleMmH": 18.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 49.0,
+        "flowGpm": 6.6,
+        "precipSquareInH": 0.53,
+        "precipTriangleInH": 0.61
+      },
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 49.0,
+        "flowGpm": 8.4,
+        "precipSquareInH": 0.67,
+        "precipTriangleInH": 0.78
+      }
+    ],
+    "corroboratingImperialLMin": 30.445,
+    "lMinDifference": -0.005,
+    "m3hAsLMinDifference": -1.27833
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:10",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 16.3,
+    "flowM3H": 2.3,
+    "flowLMin": 37.63,
+    "precipSquareMmH": 17.0,
+    "precipTriangleMmH": 20.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 53.0,
+        "flowGpm": 9.3,
+        "precipSquareInH": 0.64,
+        "precipTriangleInH": 0.74
+      },
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 53.0,
+        "flowGpm": 10.1,
+        "precipSquareInH": 0.69,
+        "precipTriangleInH": 0.8
+      }
+    ],
+    "corroboratingImperialLMin": 37.63156,
+    "lMinDifference": -0.00156,
+    "m3hAsLMinDifference": 0.70177
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:12",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 17.7,
+    "flowM3H": 2.7,
+    "flowLMin": 44.74,
+    "precipSquareMmH": 17.0,
+    "precipTriangleMmH": 20.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 57.0,
+        "flowGpm": 11.1,
+        "precipSquareInH": 0.66,
+        "precipTriangleInH": 0.76
+      },
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 59.0,
+        "flowGpm": 12.0,
+        "precipSquareInH": 0.66,
+        "precipTriangleInH": 0.77
+      }
+    ],
+    "corroboratingImperialLMin": 44.74871,
+    "lMinDifference": -0.00871,
+    "m3hAsLMinDifference": 0.25129
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:14",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 18.5,
+    "flowM3H": 3.17,
+    "flowLMin": 52.85,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 21.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 59.0,
+        "flowGpm": 12.6,
+        "precipSquareInH": 0.7,
+        "precipTriangleInH": 0.81
+      },
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.3,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.85
+      }
+    ],
+    "corroboratingImperialLMin": 52.85406,
+    "lMinDifference": -0.00406,
+    "m3hAsLMinDifference": -0.02073
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:16",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.6,
+    "flowM3H": 3.54,
+    "flowLMin": 58.98,
+    "precipSquareMmH": 18.0,
+    "precipTriangleMmH": 21.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.3,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.85
+      },
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 65.0,
+        "flowGpm": 15.9,
+        "precipSquareInH": 0.72,
+        "precipTriangleInH": 0.84
+      }
+    ],
+    "corroboratingImperialLMin": 58.98586,
+    "lMinDifference": -0.00586,
+    "m3hAsLMinDifference": 0.01414
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:18",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.7,
+    "flowM3H": 3.97,
+    "flowLMin": 66.1,
+    "precipSquareMmH": 20.0,
+    "precipTriangleMmH": 24.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 63.0,
+        "flowGpm": 16.1,
+        "precipSquareInH": 0.78,
+        "precipTriangleInH": 0.9
+      },
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 65.0,
+        "flowGpm": 17.8,
+        "precipSquareInH": 0.81,
+        "precipTriangleInH": 0.94
+      }
+    ],
+    "corroboratingImperialLMin": 66.103,
+    "lMinDifference": -0.003,
+    "m3hAsLMinDifference": 0.06366
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:20",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.3,
+    "flowM3H": 4.5,
+    "flowLMin": 74.95,
+    "precipSquareMmH": 22.0,
+    "precipTriangleMmH": 25.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 65.0,
+        "flowGpm": 18.6,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.98
+      },
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 67.0,
+        "flowGpm": 20.1,
+        "precipSquareInH": 0.86,
+        "precipTriangleInH": 1.0
+      }
+    ],
+    "corroboratingImperialLMin": 74.95972,
+    "lMinDifference": -0.00972,
+    "m3hAsLMinDifference": 0.04028
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:22",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.3,
+    "flowM3H": 5.23,
+    "flowLMin": 85.94,
+    "precipSquareMmH": 23.0,
+    "precipTriangleMmH": 27.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 65.0,
+        "flowGpm": 20.7,
+        "precipSquareInH": 0.94,
+        "precipTriangleInH": 1.09
+      },
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 71.0,
+        "flowGpm": 23.2,
+        "precipSquareInH": 0.89,
+        "precipTriangleInH": 1.02
+      }
+    ],
+    "corroboratingImperialLMin": 85.94313,
+    "lMinDifference": -0.00313,
+    "m3hAsLMinDifference": 1.22353
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:24",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.7,
+    "flowM3H": 5.5,
+    "flowLMin": 91.69,
+    "precipSquareMmH": 26.0,
+    "precipTriangleMmH": 30.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 63.0,
+        "flowGpm": 22.3,
+        "precipSquareInH": 1.08,
+        "precipTriangleInH": 1.25
+      },
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 69.0,
+        "flowGpm": 24.7,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.15
+      }
+    ],
+    "corroboratingImperialLMin": 91.69639,
+    "lMinDifference": -0.00639,
+    "m3hAsLMinDifference": -0.02972
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:26",
+    "pressureBar": 4.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.8,
+    "flowM3H": 6.01,
+    "flowLMin": 99.26,
+    "precipSquareMmH": 25.0,
+    "precipTriangleMmH": 29.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 50.0,
+        "radiusFt": 65.0,
+        "flowGpm": 24.3,
+        "precipSquareInH": 1.11,
+        "precipTriangleInH": 1.28
+      },
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 73.0,
+        "flowGpm": 26.7,
+        "precipSquareInH": 0.96,
+        "precipTriangleInH": 1.11
+      }
+    ],
+    "corroboratingImperialLMin": 99.26721,
+    "lMinDifference": -0.00721,
+    "m3hAsLMinDifference": 0.89946
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:4",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 11.9,
+    "flowM3H": 1.0,
+    "flowLMin": 16.18,
+    "precipSquareMmH": 14.0,
+    "precipTriangleMmH": 16.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 39.0,
+        "flowGpm": 3.8,
+        "precipSquareInH": 0.48,
+        "precipTriangleInH": 0.56
+      },
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 39.0,
+        "flowGpm": 4.7,
+        "precipSquareInH": 0.6,
+        "precipTriangleInH": 0.69
+      }
+    ],
+    "corroboratingImperialLMin": 16.17896,
+    "lMinDifference": 0.00104,
+    "m3hAsLMinDifference": 0.48771
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:6",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 13.7,
+    "flowM3H": 1.45,
+    "flowLMin": 24.28,
+    "precipSquareMmH": 15.0,
+    "precipTriangleMmH": 18.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 45.0,
+        "flowGpm": 6.1,
+        "precipSquareInH": 0.58,
+        "precipTriangleInH": 0.67
+      },
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 45.0,
+        "flowGpm": 6.7,
+        "precipSquareInH": 0.64,
+        "precipTriangleInH": 0.74
+      }
+    ],
+    "corroboratingImperialLMin": 24.28727,
+    "lMinDifference": -0.00727,
+    "m3hAsLMinDifference": -0.12061
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:8",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 14.9,
+    "flowM3H": 1.92,
+    "flowLMin": 32.99,
+    "precipSquareMmH": 17.0,
+    "precipTriangleMmH": 20.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 49.0,
+        "flowGpm": 8.4,
+        "precipSquareInH": 0.67,
+        "precipTriangleInH": 0.78
+      },
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 49.0,
+        "flowGpm": 9.0,
+        "precipSquareInH": 0.72,
+        "precipTriangleInH": 0.83
+      }
+    ],
+    "corroboratingImperialLMin": 32.99372,
+    "lMinDifference": -0.00372,
+    "m3hAsLMinDifference": -0.99372
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:10",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 16.5,
+    "flowM3H": 2.4,
+    "flowLMin": 40.22,
+    "precipSquareMmH": 18.0,
+    "precipTriangleMmH": 20.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 53.0,
+        "flowGpm": 10.1,
+        "precipSquareInH": 0.69,
+        "precipTriangleInH": 0.8
+      },
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 55.0,
+        "flowGpm": 11.1,
+        "precipSquareInH": 0.71,
+        "precipTriangleInH": 0.82
+      }
+    ],
+    "corroboratingImperialLMin": 40.22643,
+    "lMinDifference": -0.00643,
+    "m3hAsLMinDifference": -0.22643
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:12",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 18.0,
+    "flowM3H": 2.87,
+    "flowLMin": 47.81,
+    "precipSquareMmH": 18.0,
+    "precipTriangleMmH": 20.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 59.0,
+        "flowGpm": 12.0,
+        "precipSquareInH": 0.66,
+        "precipTriangleInH": 0.77
+      },
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 59.0,
+        "flowGpm": 13.2,
+        "precipSquareInH": 0.73,
+        "precipTriangleInH": 0.84
+      }
+    ],
+    "corroboratingImperialLMin": 47.81746,
+    "lMinDifference": -0.00746,
+    "m3hAsLMinDifference": 0.01587
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:14",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 18.9,
+    "flowM3H": 3.37,
+    "flowLMin": 56.12,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.3,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.85
+      },
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 63.0,
+        "flowGpm": 15.3,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.86
+      }
+    ],
+    "corroboratingImperialLMin": 56.12516,
+    "lMinDifference": -0.00516,
+    "m3hAsLMinDifference": 0.04151
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:16",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.1,
+    "flowM3H": 3.77,
+    "flowLMin": 62.77,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 65.0,
+        "flowGpm": 15.9,
+        "precipSquareInH": 0.72,
+        "precipTriangleInH": 0.84
+      },
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 67.0,
+        "flowGpm": 17.2,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.85
+      }
+    ],
+    "corroboratingImperialLMin": 62.77995,
+    "lMinDifference": -0.00995,
+    "m3hAsLMinDifference": 0.05339
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:18",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.1,
+    "flowM3H": 4.22,
+    "flowLMin": 70.36,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 24.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 65.0,
+        "flowGpm": 17.8,
+        "precipSquareInH": 0.81,
+        "precipTriangleInH": 0.94
+      },
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 67.0,
+        "flowGpm": 19.3,
+        "precipSquareInH": 0.83,
+        "precipTriangleInH": 0.96
+      }
+    ],
+    "corroboratingImperialLMin": 70.37098,
+    "lMinDifference": -0.01098,
+    "m3hAsLMinDifference": -0.03765
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:20",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.1,
+    "flowM3H": 4.79,
+    "flowLMin": 79.87,
+    "precipSquareMmH": 22.0,
+    "precipTriangleMmH": 25.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 67.0,
+        "flowGpm": 20.1,
+        "precipSquareInH": 0.86,
+        "precipTriangleInH": 1.0
+      },
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 71.0,
+        "flowGpm": 22.0,
+        "precipSquareInH": 0.84,
+        "precipTriangleInH": 0.97
+      }
+    ],
+    "corroboratingImperialLMin": 79.87494,
+    "lMinDifference": -0.00494,
+    "m3hAsLMinDifference": -0.04161
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:22",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.0,
+    "flowM3H": 5.51,
+    "flowLMin": 91.8,
+    "precipSquareMmH": 23.0,
+    "precipTriangleMmH": 26.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 71.0,
+        "flowGpm": 23.2,
+        "precipSquareInH": 0.89,
+        "precipTriangleInH": 1.02
+      },
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 73.0,
+        "flowGpm": 25.2,
+        "precipSquareInH": 0.91,
+        "precipTriangleInH": 1.05
+      }
+    ],
+    "corroboratingImperialLMin": 91.80909,
+    "lMinDifference": -0.00909,
+    "m3hAsLMinDifference": 0.02424
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:24",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.0,
+    "flowM3H": 5.88,
+    "flowLMin": 98.08,
+    "precipSquareMmH": 24.0,
+    "precipTriangleMmH": 28.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 69.0,
+        "flowGpm": 24.7,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.15
+      },
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 75.0,
+        "flowGpm": 27.0,
+        "precipSquareInH": 0.92,
+        "precipTriangleInH": 1.07
+      }
+    ],
+    "corroboratingImperialLMin": 98.08534,
+    "lMinDifference": -0.00534,
+    "m3hAsLMinDifference": -0.08534
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:26",
+    "pressureBar": 4.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.6,
+    "flowM3H": 6.42,
+    "flowLMin": 106.44,
+    "precipSquareMmH": 25.0,
+    "precipTriangleMmH": 29.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 60.0,
+        "radiusFt": 73.0,
+        "flowGpm": 26.7,
+        "precipSquareInH": 0.96,
+        "precipTriangleInH": 1.11
+      },
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 75.0,
+        "flowGpm": 29.4,
+        "precipSquareInH": 1.01,
+        "precipTriangleInH": 1.16
+      }
+    ],
+    "corroboratingImperialLMin": 106.45367,
+    "lMinDifference": -0.01367,
+    "m3hAsLMinDifference": 0.54633
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:4",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 11.9,
+    "flowM3H": 1.06,
+    "flowLMin": 18.08,
+    "precipSquareMmH": 15.0,
+    "precipTriangleMmH": 17.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 39.0,
+        "flowGpm": 4.7,
+        "precipSquareInH": 0.6,
+        "precipTriangleInH": 0.69
+      },
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 39.0,
+        "flowGpm": 5.0,
+        "precipSquareInH": 0.63,
+        "precipTriangleInH": 0.73
+      }
+    ],
+    "corroboratingImperialLMin": 18.07748,
+    "lMinDifference": 0.00252,
+    "m3hAsLMinDifference": -0.41082
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:6",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 13.7,
+    "flowM3H": 1.54,
+    "flowLMin": 25.74,
+    "precipSquareMmH": 16.0,
+    "precipTriangleMmH": 19.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 45.0,
+        "flowGpm": 6.7,
+        "precipSquareInH": 0.64,
+        "precipTriangleInH": 0.74
+      },
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 45.0,
+        "flowGpm": 7.1,
+        "precipSquareInH": 0.68,
+        "precipTriangleInH": 0.78
+      }
+    ],
+    "corroboratingImperialLMin": 25.74366,
+    "lMinDifference": -0.00366,
+    "m3hAsLMinDifference": -0.07699
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:8",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 14.9,
+    "flowM3H": 2.09,
+    "flowLMin": 34.83,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 49.0,
+        "flowGpm": 9.0,
+        "precipSquareInH": 0.72,
+        "precipTriangleInH": 0.83
+      },
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 49.0,
+        "flowGpm": 9.8,
+        "precipSquareInH": 0.79,
+        "precipTriangleInH": 0.91
+      }
+    ],
+    "corroboratingImperialLMin": 34.8315,
+    "lMinDifference": -0.0015,
+    "m3hAsLMinDifference": 0.00183
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:10",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 16.7,
+    "flowM3H": 2.5,
+    "flowLMin": 42.68,
+    "precipSquareMmH": 18.0,
+    "precipTriangleMmH": 21.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 55.0,
+        "flowGpm": 11.1,
+        "precipSquareInH": 0.71,
+        "precipTriangleInH": 0.82
+      },
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 55.0,
+        "flowGpm": 11.8,
+        "precipSquareInH": 0.75,
+        "precipTriangleInH": 0.87
+      }
+    ],
+    "corroboratingImperialLMin": 42.68552,
+    "lMinDifference": -0.00552,
+    "m3hAsLMinDifference": -1.01885
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:12",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 18.3,
+    "flowM3H": 3.05,
+    "flowLMin": 50.92,
+    "precipSquareMmH": 18.0,
+    "precipTriangleMmH": 21.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 59.0,
+        "flowGpm": 13.2,
+        "precipSquareInH": 0.73,
+        "precipTriangleInH": 0.84
+      },
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.2,
+        "precipSquareInH": 0.73,
+        "precipTriangleInH": 0.85
+      }
+    ],
+    "corroboratingImperialLMin": 50.92093,
+    "lMinDifference": -0.00093,
+    "m3hAsLMinDifference": -0.0876
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:14",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.2,
+    "flowM3H": 3.54,
+    "flowLMin": 58.96,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 63.0,
+        "flowGpm": 15.3,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.86
+      },
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 63.0,
+        "flowGpm": 16.4,
+        "precipSquareInH": 0.8,
+        "precipTriangleInH": 0.92
+      }
+    ],
+    "corroboratingImperialLMin": 58.96565,
+    "lMinDifference": -0.00565,
+    "m3hAsLMinDifference": 0.03435
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:16",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.4,
+    "flowM3H": 3.99,
+    "flowLMin": 66.44,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 67.0,
+        "flowGpm": 17.2,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.85
+      },
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 67.0,
+        "flowGpm": 18.6,
+        "precipSquareInH": 0.8,
+        "precipTriangleInH": 0.92
+      }
+    ],
+    "corroboratingImperialLMin": 66.44398,
+    "lMinDifference": -0.00398,
+    "m3hAsLMinDifference": 0.05602
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:18",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.6,
+    "flowM3H": 4.47,
+    "flowLMin": 74.58,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 24.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 67.0,
+        "flowGpm": 19.3,
+        "precipSquareInH": 0.83,
+        "precipTriangleInH": 0.96
+      },
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 69.0,
+        "flowGpm": 20.9,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.98
+      }
+    ],
+    "corroboratingImperialLMin": 74.58404,
+    "lMinDifference": -0.00404,
+    "m3hAsLMinDifference": -0.08404
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:20",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.6,
+    "flowM3H": 5.11,
+    "flowLMin": 85.08,
+    "precipSquareMmH": 22.0,
+    "precipTriangleMmH": 25.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 71.0,
+        "flowGpm": 22.0,
+        "precipSquareInH": 0.84,
+        "precipTriangleInH": 0.97
+      },
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 71.0,
+        "flowGpm": 23.9,
+        "precipSquareInH": 0.91,
+        "precipTriangleInH": 1.05
+      }
+    ],
+    "corroboratingImperialLMin": 85.0907,
+    "lMinDifference": -0.0107,
+    "m3hAsLMinDifference": 0.07597
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:22",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.4,
+    "flowM3H": 5.84,
+    "flowLMin": 97.39,
+    "precipSquareMmH": 23.0,
+    "precipTriangleMmH": 27.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 73.0,
+        "flowGpm": 25.2,
+        "precipSquareInH": 0.91,
+        "precipTriangleInH": 1.05
+      },
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 75.0,
+        "flowGpm": 27.3,
+        "precipSquareInH": 0.93,
+        "precipTriangleInH": 1.08
+      }
+    ],
+    "corroboratingImperialLMin": 97.39472,
+    "lMinDifference": -0.00472,
+    "m3hAsLMinDifference": -0.06138
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:24",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 23.0,
+    "flowM3H": 6.26,
+    "flowLMin": 104.29,
+    "precipSquareMmH": 24.0,
+    "precipTriangleMmH": 27.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 75.0,
+        "flowGpm": 27.0,
+        "precipSquareInH": 0.92,
+        "precipTriangleInH": 1.07
+      },
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 77.0,
+        "flowGpm": 29.2,
+        "precipSquareInH": 0.95,
+        "precipTriangleInH": 1.1
+      }
+    ],
+    "corroboratingImperialLMin": 104.30381,
+    "lMinDifference": -0.01381,
+    "m3hAsLMinDifference": 0.02952
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:26",
+    "pressureBar": 5.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 23.2,
+    "flowM3H": 6.8,
+    "flowLMin": 113.28,
+    "precipSquareMmH": 25.0,
+    "precipTriangleMmH": 29.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 75.0,
+        "flowGpm": 29.4,
+        "precipSquareInH": 1.01,
+        "precipTriangleInH": 1.16
+      },
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 79.0,
+        "flowGpm": 31.5,
+        "precipSquareInH": 0.97,
+        "precipTriangleInH": 1.12
+      }
+    ],
+    "corroboratingImperialLMin": 113.29345,
+    "lMinDifference": -0.01345,
+    "m3hAsLMinDifference": 0.03989
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:4",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 11.9,
+    "flowM3H": 1.13,
+    "flowLMin": 18.9,
+    "precipSquareMmH": 16.0,
+    "precipTriangleMmH": 18.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 39.0,
+        "flowGpm": 4.7,
+        "precipSquareInH": 0.6,
+        "precipTriangleInH": 0.69
+      },
+      {
+        "nozzle": 4.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 39.0,
+        "flowGpm": 5.0,
+        "precipSquareInH": 0.63,
+        "precipTriangleInH": 0.73
+      }
+    ],
+    "corroboratingImperialLMin": 18.90103,
+    "lMinDifference": -0.00103,
+    "m3hAsLMinDifference": -0.06769
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:6",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 13.7,
+    "flowM3H": 1.62,
+    "flowLMin": 26.84,
+    "precipSquareMmH": 17.0,
+    "precipTriangleMmH": 20.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 45.0,
+        "flowGpm": 6.7,
+        "precipSquareInH": 0.64,
+        "precipTriangleInH": 0.74
+      },
+      {
+        "nozzle": 6.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 45.0,
+        "flowGpm": 7.1,
+        "precipSquareInH": 0.68,
+        "precipTriangleInH": 0.78
+      }
+    ],
+    "corroboratingImperialLMin": 26.84171,
+    "lMinDifference": -0.00171,
+    "m3hAsLMinDifference": 0.15829
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:8",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 14.9,
+    "flowM3H": 2.25,
+    "flowLMin": 37.02,
+    "precipSquareMmH": 20.0,
+    "precipTriangleMmH": 23.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 49.0,
+        "flowGpm": 9.0,
+        "precipSquareInH": 0.72,
+        "precipTriangleInH": 0.83
+      },
+      {
+        "nozzle": 8.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 49.0,
+        "flowGpm": 9.8,
+        "precipSquareInH": 0.79,
+        "precipTriangleInH": 0.91
+      }
+    ],
+    "corroboratingImperialLMin": 37.02761,
+    "lMinDifference": -0.00761,
+    "m3hAsLMinDifference": 0.47239
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:10",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 16.8,
+    "flowM3H": 2.7,
+    "flowLMin": 44.6,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 55.0,
+        "flowGpm": 11.1,
+        "precipSquareInH": 0.71,
+        "precipTriangleInH": 0.82
+      },
+      {
+        "nozzle": 10.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 55.0,
+        "flowGpm": 11.8,
+        "precipSquareInH": 0.75,
+        "precipTriangleInH": 0.87
+      }
+    ],
+    "corroboratingImperialLMin": 44.60711,
+    "lMinDifference": -0.00711,
+    "m3hAsLMinDifference": 0.39289
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:12",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 18.5,
+    "flowM3H": 3.23,
+    "flowLMin": 53.66,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 59.0,
+        "flowGpm": 13.2,
+        "precipSquareInH": 0.73,
+        "precipTriangleInH": 0.84
+      },
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.2,
+        "precipSquareInH": 0.73,
+        "precipTriangleInH": 0.85
+      }
+    ],
+    "corroboratingImperialLMin": 53.66607,
+    "lMinDifference": -0.00607,
+    "m3hAsLMinDifference": 0.16726
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:14",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.2,
+    "flowM3H": 3.72,
+    "flowLMin": 61.98,
+    "precipSquareMmH": 20.0,
+    "precipTriangleMmH": 23.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 63.0,
+        "flowGpm": 15.3,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.86
+      },
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 63.0,
+        "flowGpm": 16.4,
+        "precipSquareInH": 0.8,
+        "precipTriangleInH": 0.92
+      }
+    ],
+    "corroboratingImperialLMin": 61.9853,
+    "lMinDifference": -0.0053,
+    "m3hAsLMinDifference": 0.0147
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:16",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.4,
+    "flowM3H": 4.22,
+    "flowLMin": 70.28,
+    "precipSquareMmH": 20.0,
+    "precipTriangleMmH": 23.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 67.0,
+        "flowGpm": 17.2,
+        "precipSquareInH": 0.74,
+        "precipTriangleInH": 0.85
+      },
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 67.0,
+        "flowGpm": 18.6,
+        "precipSquareInH": 0.8,
+        "precipTriangleInH": 0.92
+      }
+    ],
+    "corroboratingImperialLMin": 70.28717,
+    "lMinDifference": -0.00717,
+    "m3hAsLMinDifference": 0.04616
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:18",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.0,
+    "flowM3H": 4.74,
+    "flowLMin": 78.97,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 25.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 67.0,
+        "flowGpm": 19.3,
+        "precipSquareInH": 0.83,
+        "precipTriangleInH": 0.96
+      },
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 69.0,
+        "flowGpm": 20.9,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.98
+      }
+    ],
+    "corroboratingImperialLMin": 78.97626,
+    "lMinDifference": -0.00626,
+    "m3hAsLMinDifference": 0.02374
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:20",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.6,
+    "flowM3H": 5.42,
+    "flowLMin": 90.3,
+    "precipSquareMmH": 23.0,
+    "precipTriangleMmH": 27.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 71.0,
+        "flowGpm": 22.0,
+        "precipSquareInH": 0.84,
+        "precipTriangleInH": 0.97
+      },
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 71.0,
+        "flowGpm": 23.9,
+        "precipSquareInH": 0.91,
+        "precipTriangleInH": 1.05
+      }
+    ],
+    "corroboratingImperialLMin": 90.30646,
+    "lMinDifference": -0.00646,
+    "m3hAsLMinDifference": 0.02687
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:22",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.8,
+    "flowM3H": 6.19,
+    "flowLMin": 103.15,
+    "precipSquareMmH": 24.0,
+    "precipTriangleMmH": 28.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 73.0,
+        "flowGpm": 25.2,
+        "precipSquareInH": 0.91,
+        "precipTriangleInH": 1.05
+      },
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 75.0,
+        "flowGpm": 27.3,
+        "precipSquareInH": 0.93,
+        "precipTriangleInH": 1.08
+      }
+    ],
+    "corroboratingImperialLMin": 103.15951,
+    "lMinDifference": -0.00951,
+    "m3hAsLMinDifference": 0.00716
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:24",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 23.5,
+    "flowM3H": 6.62,
+    "flowLMin": 110.33,
+    "precipSquareMmH": 24.0,
+    "precipTriangleMmH": 28.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 75.0,
+        "flowGpm": 27.0,
+        "precipSquareInH": 0.92,
+        "precipTriangleInH": 1.07
+      },
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 77.0,
+        "flowGpm": 29.2,
+        "precipSquareInH": 0.95,
+        "precipTriangleInH": 1.1
+      }
+    ],
+    "corroboratingImperialLMin": 110.34311,
+    "lMinDifference": -0.01311,
+    "m3hAsLMinDifference": -0.00978
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:26",
+    "pressureBar": 5.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 24.1,
+    "flowM3H": 7.14,
+    "flowLMin": 119.05,
+    "precipSquareMmH": 25.0,
+    "precipTriangleMmH": 28.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 70.0,
+        "radiusFt": 75.0,
+        "flowGpm": 29.4,
+        "precipSquareInH": 1.01,
+        "precipTriangleInH": 1.16
+      },
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 79.0,
+        "flowGpm": 31.5,
+        "precipSquareInH": 0.97,
+        "precipTriangleInH": 1.12
+      }
+    ],
+    "corroboratingImperialLMin": 119.05824,
+    "lMinDifference": -0.00824,
+    "m3hAsLMinDifference": -0.05824
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:12",
+    "pressureBar": 6.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 18.6,
+    "flowM3H": 3.3,
+    "flowLMin": 55.07,
+    "precipSquareMmH": 19.0,
+    "precipTriangleMmH": 22.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.2,
+        "precipSquareInH": 0.73,
+        "precipTriangleInH": 0.85
+      },
+      {
+        "nozzle": 12.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 61.0,
+        "flowGpm": 14.7,
+        "precipSquareInH": 0.76,
+        "precipTriangleInH": 0.88
+      }
+    ],
+    "corroboratingImperialLMin": 55.08203,
+    "lMinDifference": -0.01203,
+    "m3hAsLMinDifference": -0.08203
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:14",
+    "pressureBar": 6.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.6,
+    "flowM3H": 3.96,
+    "flowLMin": 66.06,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 24.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 63.0,
+        "flowGpm": 16.4,
+        "precipSquareInH": 0.8,
+        "precipTriangleInH": 0.92
+      },
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 65.0,
+        "flowGpm": 17.9,
+        "precipSquareInH": 0.82,
+        "precipTriangleInH": 0.94
+      }
+    ],
+    "corroboratingImperialLMin": 66.06829,
+    "lMinDifference": -0.00829,
+    "m3hAsLMinDifference": -0.06829
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:16",
+    "pressureBar": 6.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 20.9,
+    "flowM3H": 4.45,
+    "flowLMin": 74.12,
+    "precipSquareMmH": 20.0,
+    "precipTriangleMmH": 24.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 67.0,
+        "flowGpm": 18.6,
+        "precipSquareInH": 0.8,
+        "precipTriangleInH": 0.92
+      },
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 69.0,
+        "flowGpm": 20.0,
+        "precipSquareInH": 0.81,
+        "precipTriangleInH": 0.93
+      }
+    ],
+    "corroboratingImperialLMin": 74.13036,
+    "lMinDifference": -0.01036,
+    "m3hAsLMinDifference": 0.0363
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:18",
+    "pressureBar": 6.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.5,
+    "flowM3H": 4.95,
+    "flowLMin": 82.56,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 25.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 69.0,
+        "flowGpm": 20.9,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.98
+      },
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 71.0,
+        "flowGpm": 22.2,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.98
+      }
+    ],
+    "corroboratingImperialLMin": 82.57097,
+    "lMinDifference": -0.01097,
+    "m3hAsLMinDifference": -0.07097
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:20",
+    "pressureBar": 6.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.1,
+    "flowM3H": 5.65,
+    "flowLMin": 94.18,
+    "precipSquareMmH": 23.0,
+    "precipTriangleMmH": 27.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 71.0,
+        "flowGpm": 23.9,
+        "precipSquareInH": 0.91,
+        "precipTriangleInH": 1.05
+      },
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 73.0,
+        "flowGpm": 25.3,
+        "precipSquareInH": 0.91,
+        "precipTriangleInH": 1.06
+      }
+    ],
+    "corroboratingImperialLMin": 94.19304,
+    "lMinDifference": -0.01304,
+    "m3hAsLMinDifference": -0.02638
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:22",
+    "pressureBar": 6.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.9,
+    "flowM3H": 6.71,
+    "flowLMin": 108.12,
+    "precipSquareMmH": 26.0,
+    "precipTriangleMmH": 30.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 75.0,
+        "flowGpm": 27.3,
+        "precipSquareInH": 0.93,
+        "precipTriangleInH": 1.08
+      },
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 75.0,
+        "flowGpm": 29.1,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.15
+      }
+    ],
+    "corroboratingImperialLMin": 108.12679,
+    "lMinDifference": -0.00679,
+    "m3hAsLMinDifference": 3.70654
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:24",
+    "pressureBar": 6.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 23.9,
+    "flowM3H": 6.92,
+    "flowLMin": 115.31,
+    "precipSquareMmH": 24.0,
+    "precipTriangleMmH": 28.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 77.0,
+        "flowGpm": 29.2,
+        "precipSquareInH": 0.95,
+        "precipTriangleInH": 1.1
+      },
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 79.0,
+        "flowGpm": 31.0,
+        "precipSquareInH": 0.96,
+        "precipTriangleInH": 1.1
+      }
+    ],
+    "corroboratingImperialLMin": 115.31907,
+    "lMinDifference": -0.00907,
+    "m3hAsLMinDifference": 0.01426
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:26",
+    "pressureBar": 6.0,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 24.1,
+    "flowM3H": 7.5,
+    "flowLMin": 125.08,
+    "precipSquareMmH": 26.0,
+    "precipTriangleMmH": 30.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 79.0,
+        "flowGpm": 31.5,
+        "precipSquareInH": 0.97,
+        "precipTriangleInH": 1.12
+      },
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 79.0,
+        "flowGpm": 33.7,
+        "precipSquareInH": 1.04,
+        "precipTriangleInH": 1.2
+      }
+    ],
+    "corroboratingImperialLMin": 125.08886,
+    "lMinDifference": -0.00886,
+    "m3hAsLMinDifference": -0.08886
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:14",
+    "pressureBar": 6.2,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 19.8,
+    "flowM3H": 4.06,
+    "flowLMin": 67.75,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 24.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 63.0,
+        "flowGpm": 16.4,
+        "precipSquareInH": 0.8,
+        "precipTriangleInH": 0.92
+      },
+      {
+        "nozzle": 14.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 65.0,
+        "flowGpm": 17.9,
+        "precipSquareInH": 0.82,
+        "precipTriangleInH": 0.94
+      }
+    ],
+    "corroboratingImperialLMin": 67.71538,
+    "lMinDifference": 0.03462,
+    "m3hAsLMinDifference": -0.04871
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:16",
+    "pressureBar": 6.2,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.0,
+    "flowM3H": 4.54,
+    "flowLMin": 75.7,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 24.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 67.0,
+        "flowGpm": 18.6,
+        "precipSquareInH": 0.8,
+        "precipTriangleInH": 0.92
+      },
+      {
+        "nozzle": 16.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 69.0,
+        "flowGpm": 20.0,
+        "precipSquareInH": 0.81,
+        "precipTriangleInH": 0.93
+      }
+    ],
+    "corroboratingImperialLMin": 75.66764,
+    "lMinDifference": 0.03236,
+    "m3hAsLMinDifference": -0.00097
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:18",
+    "pressureBar": 6.2,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 21.7,
+    "flowM3H": 5.04,
+    "flowLMin": 84.02,
+    "precipSquareMmH": 21.0,
+    "precipTriangleMmH": 25.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 80.0,
+        "radiusFt": 69.0,
+        "flowGpm": 20.9,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.98
+      },
+      {
+        "nozzle": 18.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 71.0,
+        "flowGpm": 22.2,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.98
+      }
+    ],
+    "corroboratingImperialLMin": 83.99845,
+    "lMinDifference": 0.02155,
+    "m3hAsLMinDifference": 0.00155
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:20",
+    "pressureBar": 6.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.5,
+    "flowM3H": 5.89,
+    "flowLMin": 98.19,
+    "precipSquareMmH": 23.0,
+    "precipTriangleMmH": 27.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 73.0,
+        "flowGpm": 25.3,
+        "precipSquareInH": 0.91,
+        "precipTriangleInH": 1.06
+      },
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 75.0,
+        "flowGpm": 26.8,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.97
+      }
+    ],
+    "corroboratingImperialLMin": 98.19805,
+    "lMinDifference": -0.00805,
+    "m3hAsLMinDifference": -0.03138
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:22",
+    "pressureBar": 6.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 23.4,
+    "flowM3H": 6.84,
+    "flowLMin": 112.73,
+    "precipSquareMmH": 25.0,
+    "precipTriangleMmH": 29.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 75.0,
+        "flowGpm": 29.1,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.15
+      },
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 77.0,
+        "flowGpm": 30.7,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.15
+      }
+    ],
+    "corroboratingImperialLMin": 112.74442,
+    "lMinDifference": -0.01442,
+    "m3hAsLMinDifference": 1.25558
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:24",
+    "pressureBar": 6.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 24.1,
+    "flowM3H": 7.22,
+    "flowLMin": 120.25,
+    "precipSquareMmH": 25.0,
+    "precipTriangleMmH": 29.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 79.0,
+        "flowGpm": 31.0,
+        "precipSquareInH": 0.96,
+        "precipTriangleInH": 1.1
+      },
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 79.0,
+        "flowGpm": 32.8,
+        "precipSquareInH": 1.01,
+        "precipTriangleInH": 1.17
+      }
+    ],
+    "corroboratingImperialLMin": 120.26032,
+    "lMinDifference": -0.01032,
+    "m3hAsLMinDifference": 0.07301
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:26",
+    "pressureBar": 6.5,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 24.3,
+    "flowM3H": 7.91,
+    "flowLMin": 131.76,
+    "precipSquareMmH": 27.0,
+    "precipTriangleMmH": 31.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 90.0,
+        "radiusFt": 79.0,
+        "flowGpm": 33.7,
+        "precipSquareInH": 1.04,
+        "precipTriangleInH": 1.2
+      },
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 81.0,
+        "flowGpm": 36.3,
+        "precipSquareInH": 1.07,
+        "precipTriangleInH": 1.23
+      }
+    ],
+    "corroboratingImperialLMin": 131.7754,
+    "lMinDifference": -0.0154,
+    "m3hAsLMinDifference": 0.05793
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:20",
+    "pressureBar": 6.9,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 22.9,
+    "flowM3H": 6.09,
+    "flowLMin": 101.43,
+    "precipSquareMmH": 23.0,
+    "precipTriangleMmH": 27.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 75.0,
+        "flowGpm": 26.8,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.97
+      },
+      {
+        "nozzle": 20.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 75.0,
+        "flowGpm": 26.8,
+        "precipSquareInH": 0.85,
+        "precipTriangleInH": 0.97
+      }
+    ],
+    "corroboratingImperialLMin": 101.44904,
+    "lMinDifference": -0.01904,
+    "m3hAsLMinDifference": 0.05096
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:22",
+    "pressureBar": 6.9,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 23.5,
+    "flowM3H": 6.97,
+    "flowLMin": 116.19,
+    "precipSquareMmH": 25.0,
+    "precipTriangleMmH": 29.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 77.0,
+        "flowGpm": 30.7,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.15
+      },
+      {
+        "nozzle": 22.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 77.0,
+        "flowGpm": 30.7,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.15
+      }
+    ],
+    "corroboratingImperialLMin": 116.21214,
+    "lMinDifference": -0.02214,
+    "m3hAsLMinDifference": -0.04548
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:24",
+    "pressureBar": 6.9,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 24.1,
+    "flowM3H": 7.45,
+    "flowLMin": 124.14,
+    "precipSquareMmH": 26.0,
+    "precipTriangleMmH": 30.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 79.0,
+        "flowGpm": 32.8,
+        "precipSquareInH": 1.01,
+        "precipTriangleInH": 1.17
+      },
+      {
+        "nozzle": 24.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 79.0,
+        "flowGpm": 32.8,
+        "precipSquareInH": 1.01,
+        "precipTriangleInH": 1.17
+      }
+    ],
+    "corroboratingImperialLMin": 124.16151,
+    "lMinDifference": -0.02151,
+    "m3hAsLMinDifference": 0.00516
+  },
+  {
+    "modelId": "rain-bird:8005",
+    "nozzleId": "rain-bird:8005:26",
+    "pressureBar": 6.9,
+    "sourceFile": "8005-tech-p2-right.txt",
+    "radiusM": 24.7,
+    "flowM3H": 8.24,
+    "flowLMin": 137.39,
+    "precipSquareMmH": 27.0,
+    "precipTriangleMmH": 31.0,
+    "imperialBrackets": [
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 81.0,
+        "flowGpm": 36.3,
+        "precipSquareInH": 1.07,
+        "precipTriangleInH": 1.23
+      },
+      {
+        "nozzle": 26.0,
+        "pressurePsi": 100.0,
+        "radiusFt": 81.0,
+        "flowGpm": 36.3,
+        "precipSquareInH": 1.07,
+        "precipTriangleInH": 1.23
+      }
+    ],
+    "corroboratingImperialLMin": 137.41045,
+    "lMinDifference": -0.02045,
+    "m3hAsLMinDifference": -0.07711
+  }
+]

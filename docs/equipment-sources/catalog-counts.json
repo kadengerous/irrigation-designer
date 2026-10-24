@@ -1,0 +1,23 @@
+{
+  "rain-bird": {
+    "items": 94,
+    "verified": 88,
+    "review": 5,
+    "deprecated": 1,
+    "unsupportedPlacement": 4
+  },
+  "toro": {
+    "items": 257,
+    "verified": 255,
+    "review": 2,
+    "deprecated": 0,
+    "unsupportedPlacement": 0
+  },
+  "k-rain": {
+    "items": 84,
+    "verified": 73,
+    "review": 11,
+    "deprecated": 0,
+    "unsupportedPlacement": 2
+  }
+}

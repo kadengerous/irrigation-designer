@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {createServer} from 'vite';
+const server=await createServer({server:{middlewareMode:true,hmr:false}});
+const {useProject}=await server.ssrLoadModule('/src/lib/project-store.ts');
+const {emptyProject}=await server.ssrLoadModule('/src/lib/project-types.ts');
+const {finishHeadControlDrag,headReturnHit}=await server.ssrLoadModule('/src/lib/head-edit-drop.ts');
+const {catalogHeadDefaults}=await server.ssrLoadModule('/src/lib/flow.ts');
+const {itemById}=await server.ssrLoadModule('/src/lib/hunter-catalog.ts');
+const {setPlacementFocus,usePlacementFocus}=await server.ssrLoadModule('/src/components/designer/placement-focus.ts');
+await server.close();
+test('editing return to library deletes in one undo step and cancellation restores the original position',()=>{
+ const head={...catalogHeadDefaults(itemById('I-20')),id:'edit',catalogId:'I-20',zone:1,x:12,y:8,locked:false};
+ const reset=()=>useProject.setState({project:{...emptyProject(),heads:[head],zones:[{id:1,name:'1',locked:false,hidden:false}]},past:[],future:[],pastOps:[],futureOps:[],sectorEditId:'edit',selectedId:'edit',selectedIds:['edit']});
+ reset();useProject.getState().beginHeadEdit();useProject.getState().patchHeadLive('edit',{x:100,y:200});
+ finishHeadControlDrag('edit',false,true,true);
+ assert.equal(useProject.getState().project.heads.length,0);assert.equal(useProject.getState().past.length,1);
+ assert.equal(useProject.getState().sectorEditId,null);
+ useProject.getState().undo();assert.deepEqual(useProject.getState().project.heads,[head]);
+ useProject.getState().redo();assert.equal(useProject.getState().project.heads.length,0);
+ reset();useProject.getState().beginHeadEdit();useProject.getState().patchHeadLive('edit',{x:100});
+ finishHeadControlDrag('edit',true,true,true);assert.deepEqual(useProject.getState().project.heads,[head]);assert.equal(useProject.getState().past.length,0);
+ const rect={left:200,right:300,top:0,bottom:100,width:100,height:100};
+ assert.equal(headReturnHit({x:0,y:50},{x:250,y:50},rect),true);
+ assert.equal(headReturnHit({x:240,y:50},{x:250,y:50},rect),false);
+ assert.equal(headReturnHit({x:0,y:50},{x:150,y:50},rect),false);
+});
+test('ending an old gesture cannot clear the next placement focus',()=>{
+ setPlacementFocus('old',{x:1,y:2},'a');setPlacementFocus('new',{x:3,y:4},'b');setPlacementFocus('old',null);
+ assert.deepEqual(usePlacementFocus.getState().focus,{owner:'new',point:{x:3,y:4},objectId:'b'});
+ setPlacementFocus('new',null);assert.equal(usePlacementFocus.getState().focus,null);
+});

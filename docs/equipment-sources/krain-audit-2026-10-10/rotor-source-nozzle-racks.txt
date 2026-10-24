@@ -1,0 +1,210 @@
+K-Rain Nozzle Racks for Rotor Sprinklers (https://www.krain.com/nozzle-racks/)
+citeturn471view0 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: open({"ref_id":"https://www.krain.com/nozzle-racks/","lineno":null}); Total lines: 324
+L0: cite0†GTM†www.googletagmanager.com cite1†PiwikPro†sana-commerce.containers.piwik.pro L1: 
+L2: For full functionality of this site it is necessary to enable JavaScript.
+L3: Here are the
+L4: cite2†instructions how to enable JavaScript in your web browser†www.enable-javascript.com .
+L5: 
+L6: [Input: Product name or item number...]
+L7: 
+L8: When search results are available use up and down arrows to review and enter to select. Touch device users explore by touch.
+L9: 
+L10: [Input: Product name or item number...]
+L11: When search results are available use up and down arrows to review and enter to select. Touch device users explore by touch.
+L12: 
+L13: cite3†Login L14: 
+L15: QUESTIONS? CALL US 800-735-7246
+L16: 
+L17: cite4†CUSTOMER SERVICE L18: 
+L19: Login
+L20: 
+L21: cite3†Login L22: 
+L23: [Input: Product name or item number...]
+L24: 
+L25: When search results are available use up and down arrows to review and enter to select. Touch device users explore by touch.
+L26: 
+L27:   * cite5†Products L28: 
+L29: [Button: Expand: Products]
+L30:     * cite6†Rotors L31:       * cite7†MiniPro L32:       * cite8†RPS 50 L33:       * cite9†RPS 75 L34:       * cite10†RPS 75i L35:       * cite11†RPS Select L36:       * cite12†ProPlus L37:       * cite13†SuperPro L38:       * cite14†ProSport L39:     * cite15†Sprays L40:       * cite16†Pro-S Sprays L41:       * cite17†NP Sprays L42:       * cite18†K-Sprays L43:     * cite19†Nozzles L44:       * cite20†Rotary Nozzle Series L45:       * cite21†Fully Adjustable Rotary Nozzles L46:       * cite22†KVF Nozzles L47:       * cite23†KV Nozzles L48:       * cite24†Fixed Pattern Nozzles L49:     * cite25†Electric Valves L50:       * cite26†ProSeries 100 L51:       * cite27†ProSeries 150 L52:       * cite28†ProSeries 200 L53:     * cite29†Irrigation Controllers L54:       * cite30†SiteMaster L55:       * cite31†PRO-EX3 L56:       * cite32†PRO-LC L57:       * cite33†K-RAIN BLUE L58:       * cite34†PRO EX 2.0 L59:       * cite35†RPS 46 L60:       * cite36†Rain Sensor L61:       * cite37†Single Station L62:       * cite38†PRO-TAP 100 L63:     * cite39†Bubblers L64:     * cite40†Drip Irrigation L65:     * cite41†Pump Start Relays L66:     * cite42†Indexing Valves L67:       * cite43†4000 Series L68:       * cite44†6000 Series L69:     * cite45†Reclaimed Water L70:     * cite46†Impact Sprinkler L71:     * cite47†Accessories & Parts L72:       * cite48†4000 Series Indexing Valve Parts L73:       * cite49†6000 Series Indexing Valve Parts L74:       * cite50†Nozzle Racks L75:   * cite51†Catalog L76:   * cite52†Manuals L77: [Button: Expand: Manuals]
+L78: 
+L79:     * cite53†Irrigation Manuals L80:     * cite54†Videos L81:   * cite55†About L82: 
+L83: [Button: Expand: About]
+L84: 
+L85:     * cite56†News & Press Releases L86:     * cite57†Warranty L87:     * cite58†International L88:     * cite59†ISO Certification L89:     * cite60†Trade Shows L90:   * cite61†Premier Contractor†premier.krain.com L91:   * cite62†Find a Distributor L92:   * cite63†For Pros L93: 
+L94: [Button: Expand: For Pros]
+L95:     * cite64†Blog L96:     * cite65†Custom Products L97:     * cite66†Design and Resources L98:       * cite67†CAD Detail Drawings L99:       * cite68†Sport Field Designs L100:       * cite69†Written Specifications L101:     * cite70†Distributor Ordering Portal†www.krainorder.com L102:     * cite71†Mobile Apps L103:     * cite45†RCW Products L104:   * cite72†For Homeowners L105: 
+L106: [Button: Expand: For Homeowners]
+L107:     * cite73†Water Calculator L108:     * cite47†Parts and Accessories L109:     * cite74†Find a Local Contractor L110:     * cite75†Find a Retail Location L111:     * cite76†Buy Products Online L112:     * cite77†Water Saving Rebates L113:     * cite64†Blog L114:     * cite78†FAQs L115: 
+L116: cite79†product(s) L117: # Rotor Nozzle Racks
+L118: 
+L119: 5 product(s) found
+L120: 
+L121: Sort by:
+L122: 
+L123: [Select]
+L124: 
+L125: View:
+L126: 
+L127: cite80†RACK, NOZZLES, WITH HANDLE, RPS75 L128: 
+L129: Item No. P16001101
+L130: 
+L131: $1.^{93}
+L132: 
+L133: Add to cart
+L134: 
+L135: [Input]
+L136: 
+L137: Compare product
+L138: 
+L139: cite81†RACK, NOZZLES, GREEN, WITH CLIP, RPS75i and SUPER PRO L140: 
+L141: Item No. P16001110
+L142: 
+L143: $1.^{91}
+L144: 
+L145: Add to cart
+L146: 
+L147: [Input]
+L148: 
+L149: Compare product
+L150: 
+L151: cite82†RED STD NOZZLE RACK PRO PLUS L152: 
+L153: Item No. P51399
+L154: 
+L155: $0.^{71}
+L156: 
+L157: Add to cart
+L158: 
+L159: [Input]
+L160: 
+L161: Compare product
+L162: 
+L163: cite83†K1 MINI PRO - RPS50, NOZZLE REPLACEMENT RACK L164: 
+L165: Item No. P52775
+L166: 
+L167: $0.^{71}
+L168: 
+L169: Add to cart
+L170: 
+L171: [Input]
+L172: Compare product
+L173: 
+L174: cite84†RACK, NOZZLES, LOW ANGLE, GREEN L175: 
+L176: Item No. P90001102
+L177: 
+L178: $0.^{73}
+L179: 
+L180: Add to cart
+L181: 
+L182: [Input]
+L183: 
+L184: Compare product
+L185: 
+L186: 5 product(s) found
+L187: ### Id
+L188: 
+L189:   * [Input]
+L190: 
+L191: cite85†P51399 (1)
+L192:   * [Input]
+L193: 
+L194: cite86†P52775 (1)
+L195:   * [Input]
+L196: 
+L197: cite87†P16001101 (1)
+L198:   * [Input]
+L199: 
+L200: cite88†P16001110 (1)
+L201:   * [Input]
+L202: 
+L203: cite89†P90001102 (1)
+L204: # Rotor Nozzle Racks
+L205: 
+L206: Keep your rotor sprinklers performing at their best with K-Rain replacement nozzle racks. Compatible with K1, K2, ProPlus, RPS, SuperPro, ProSport and all major sprinkler brands, these universal nozzle racks ensure precise, efficient irrigation across your landscape. Durable and easy to install, they provide long-lasting performance and reliable spray patterns.
+L207: 
+L208: 5 product(s) found
+L209: 
+L210: Sort by:
+L211: 
+L212: [Select]
+L213: 
+L214: View:
+L215: 
+L216: cite80†RACK, NOZZLES, WITH HANDLE, RPS75 L217: 
+L218: Item No. P16001101
+L219: 
+L220: $1.^{93}
+L221: Add to cart
+L222: 
+L223: [Input]
+L224: 
+L225: Compare product
+L226: 
+L227: cite81†RACK, NOZZLES, GREEN, WITH CLIP, RPS75i and SUPER PRO L228: 
+L229: Item No. P16001110
+L230: 
+L231: $1.^{91}
+L232: 
+L233: Add to cart
+L234: 
+L235: [Input]
+L236: 
+L237: Compare product
+L238: 
+L239: cite82†RED STD NOZZLE RACK PRO PLUS L240: 
+L241: Item No. P51399
+L242: 
+L243: $0.^{71}
+L244: 
+L245: Add to cart
+L246: 
+L247: [Input]
+L248: 
+L249: Compare product
+L250: 
+L251: cite83†K1 MINI PRO - RPS50, NOZZLE REPLACEMENT RACK L252: 
+L253: Item No. P52775
+L254: 
+L255: $0.^{71}
+L256: 
+L257: Add to cart
+L258: 
+L259: [Input]
+L260: 
+L261: Compare product
+L262: 
+L263: cite84†RACK, NOZZLES, LOW ANGLE, GREEN L264: 
+L265: Item No. P90001102
+L266: 
+L267: $0.^{73}
+L268: 
+L269: Add to cart
+L270: 
+L271: [Input]
+L272: 
+L273: Compare product
+L274:   * cite90†Home L275:   * cite3†Login L276:   * cite4†Customer Service L277:   * cite91†My Account L278:   * cite79†Shopping Cart L279:   * cite92†Contact us L280:   * cite64†Blog L281: ## Newsletter
+L282: 
+L283: Subscribe to our newsletter.
+L284: 
+L285: [Input: E-mail address]
+L286: 
+L287: Subscribe
+L288: 
+L289:   * cite93†Privacy Policy L290:   * cite94†Disclaimer L291: 
+L292: © Copyright 2026 K-Rain Manufacturing. All rights reserved.
+L293: 
+L294: cite55†ABOUT US L295: cite57†WARRANTY  L296: 
+L297: cite63†FOR PROS L298: 
+L299: cite72†FOR HOMEOWNERS L300: cite4†CUSTOMER SERVICE L301: cite56†NEWS L302: 
+L303: cite52†MANUALS L304: cite74†FIND CONTRACTOR L305: cite62†FIND DISTRIBUTOR L306: cite92†CONTACT US L307: cite64†BLOG L308: cite95†CORPORATE SOCIAL RESPONSIBILITY L309: 
+L310: cite96†Image: K-Rain Manufacturing L311: 
+L312: NEWSLETTER
+L313: Subscribe to our newsletter.
+L314: 
+L315: [Input: E-mail address]
+L316: Subscribe
+L317: 
+L318: © Copyright 2026 K-Rain Manufacturing. All rights reserved.
+L319: 
+L320:   * cite93†Privacy Policy L321:   * cite94†Disclaimer L322: 
+L323: cite97†Image: CTPAT Logo 

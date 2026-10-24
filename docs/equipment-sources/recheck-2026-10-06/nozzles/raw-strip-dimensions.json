@@ -1,0 +1,155 @@
+{
+  "RNS-RES-515": [
+    {
+      "pressureBar": 2.1,
+      "w": 1.2,
+      "l": 4.6
+    },
+    {
+      "pressureBar": 2.4,
+      "w": 1.5,
+      "l": 4.6
+    },
+    {
+      "pressureBar": 2.8,
+      "w": 1.5,
+      "l": 4.6
+    },
+    {
+      "pressureBar": 3.1,
+      "w": 1.8,
+      "l": 4.9
+    },
+    {
+      "pressureBar": 3.4,
+      "w": 1.8,
+      "l": 4.9
+    }
+  ],
+  "RNS-LES-515": [
+    {
+      "pressureBar": 2.1,
+      "w": 1.2,
+      "l": 4.6
+    },
+    {
+      "pressureBar": 2.4,
+      "w": 1.5,
+      "l": 4.6
+    },
+    {
+      "pressureBar": 2.8,
+      "w": 1.5,
+      "l": 4.6
+    },
+    {
+      "pressureBar": 3.1,
+      "w": 1.8,
+      "l": 4.6
+    },
+    {
+      "pressureBar": 3.4,
+      "w": 1.8,
+      "l": 4.9
+    }
+  ],
+  "RNS-SS-530": [
+    {
+      "pressureBar": 2.1,
+      "w": 1.2,
+      "l": 8.8
+    },
+    {
+      "pressureBar": 2.4,
+      "w": 1.5,
+      "l": 9.1
+    },
+    {
+      "pressureBar": 2.8,
+      "w": 1.5,
+      "l": 9.1
+    },
+    {
+      "pressureBar": 3.1,
+      "w": 1.8,
+      "l": 9.4
+    },
+    {
+      "pressureBar": 3.4,
+      "w": 2.1,
+      "l": 9.7
+    }
+  ],
+  "P15CS": [
+    {
+      "pressureBar": 1.5,
+      "w": 1.2,
+      "l": 7.3
+    },
+    {
+      "pressureBar": 2.0,
+      "w": 1.2,
+      "l": 9.1
+    }
+  ],
+  "FN-15CS": [
+    {
+      "pressureBar": 1.5,
+      "w": 1.2,
+      "l": 7.3
+    },
+    {
+      "pressureBar": 2.0,
+      "w": 1.2,
+      "l": 9.1
+    }
+  ],
+  "P15ES": [
+    {
+      "pressureBar": 1.5,
+      "w": 1.2,
+      "l": 3.7
+    },
+    {
+      "pressureBar": 2.0,
+      "w": 1.2,
+      "l": 4.6
+    }
+  ],
+  "FN-15ES": [
+    {
+      "pressureBar": 1.5,
+      "w": 1.2,
+      "l": 3.7
+    },
+    {
+      "pressureBar": 2.0,
+      "w": 1.2,
+      "l": 4.6
+    }
+  ],
+  "P15SS": [
+    {
+      "pressureBar": 1.5,
+      "w": 1.2,
+      "l": 8.5
+    },
+    {
+      "pressureBar": 2.0,
+      "w": 1.5,
+      "l": 9.8
+    }
+  ],
+  "FN-15SS": [
+    {
+      "pressureBar": 1.5,
+      "w": 1.2,
+      "l": 8.5
+    },
+    {
+      "pressureBar": 2.0,
+      "w": 1.5,
+      "l": 9.8
+    }
+  ]
+}

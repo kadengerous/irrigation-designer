@@ -1,0 +1,1526 @@
+[
+  {
+    "id": "rain-bird:HE-VAN-8",
+    "modelId": "HE-VAN-8",
+    "color": "#269653",
+    "colorName": "green",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "green",
+    "evidenceKind": "published color name, page 69; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:HE-VAN-8",
+        "color": "#269653",
+        "colorName": "green",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:HE-VAN-10",
+    "modelId": "HE-VAN-10",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "blue",
+    "evidenceKind": "published color name, page 69; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:HE-VAN-10",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:HE-VAN-12",
+    "modelId": "HE-VAN-12",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "brown",
+    "evidenceKind": "published color name, page 69; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:HE-VAN-12",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:HE-VAN-15",
+    "modelId": "HE-VAN-15",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published color name, page 69; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:HE-VAN-15",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:4-VAN",
+    "modelId": "4-VAN",
+    "color": "#ebcb30",
+    "colorName": "yellow",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:4-VAN",
+        "color": "#ebcb30",
+        "colorName": "yellow",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:6-VAN",
+    "modelId": "6-VAN",
+    "color": "#eb7837",
+    "colorName": "orange",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:6-VAN",
+        "color": "#eb7837",
+        "colorName": "orange",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:8-VAN",
+    "modelId": "8-VAN",
+    "color": "#269653",
+    "colorName": "green",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:8-VAN",
+        "color": "#269653",
+        "colorName": "green",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:10-VAN",
+    "modelId": "10-VAN",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:10-VAN",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:12-VAN",
+    "modelId": "12-VAN",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:12-VAN",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15-VAN",
+    "modelId": "15-VAN",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15-VAN",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:18-VAN",
+    "modelId": "18-VAN",
+    "color": "#c89f73",
+    "colorName": "tan",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:18-VAN",
+        "color": "#c89f73",
+        "colorName": "tan",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-8F",
+    "modelId": "U-8F",
+    "color": "#269653",
+    "colorName": "green",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "green",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-8F",
+        "color": "#269653",
+        "colorName": "green",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-8H",
+    "modelId": "U-8H",
+    "color": "#269653",
+    "colorName": "green",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "green",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-8H",
+        "color": "#269653",
+        "colorName": "green",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-8Q",
+    "modelId": "U-8Q",
+    "color": "#269653",
+    "colorName": "green",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "green",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-8Q",
+        "color": "#269653",
+        "colorName": "green",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-10F",
+    "modelId": "U-10F",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "blue",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-10F",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-10H",
+    "modelId": "U-10H",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "blue",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-10H",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-10Q",
+    "modelId": "U-10Q",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "blue",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-10Q",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-12F",
+    "modelId": "U-12F",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "brown",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-12F",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-12H",
+    "modelId": "U-12H",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "brown",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-12H",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-12Q",
+    "modelId": "U-12Q",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "brown",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-12Q",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-15F",
+    "modelId": "U-15F",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-15F",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-15H",
+    "modelId": "U-15H",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-15H",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:U-15Q",
+    "modelId": "U-15Q",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published color name, U-Series Landscape Solutions page; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:U-15Q",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:5F",
+    "modelId": "5F",
+    "color": "#d13c37",
+    "colorName": "red",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "red",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:5F",
+        "color": "#d13c37",
+        "colorName": "red",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:5H",
+    "modelId": "5H",
+    "color": "#d13c37",
+    "colorName": "red",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "red",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:5H",
+        "color": "#d13c37",
+        "colorName": "red",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:5Q",
+    "modelId": "5Q",
+    "color": "#d13c37",
+    "colorName": "red",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "red",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:5Q",
+        "color": "#d13c37",
+        "colorName": "red",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:8F",
+    "modelId": "8F",
+    "color": "#269653",
+    "colorName": "green",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "green",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:8F",
+        "color": "#269653",
+        "colorName": "green",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:8H",
+    "modelId": "8H",
+    "color": "#269653",
+    "colorName": "green",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "green",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:8H",
+        "color": "#269653",
+        "colorName": "green",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:8Q",
+    "modelId": "8Q",
+    "color": "#269653",
+    "colorName": "green",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "green",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:8Q",
+        "color": "#269653",
+        "colorName": "green",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:10F",
+    "modelId": "10F",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "blue",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:10F",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:10H",
+    "modelId": "10H",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "blue",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:10H",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:10Q",
+    "modelId": "10Q",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "blue",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:10Q",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:12F",
+    "modelId": "12F",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "brown",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:12F",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:12H",
+    "modelId": "12H",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "brown",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:12H",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:12Q",
+    "modelId": "12Q",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "brown",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:12Q",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15F",
+    "modelId": "15F",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15F",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15H",
+    "modelId": "15H",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15H",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15Q",
+    "modelId": "15Q",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15Q",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:5F-B",
+    "modelId": "5F-B",
+    "color": "#8c9499",
+    "colorName": "gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "gray",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:5F-B",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:5H-B",
+    "modelId": "5H-B",
+    "color": "#8c9499",
+    "colorName": "gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "gray",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:5H-B",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:5Q-B",
+    "modelId": "5Q-B",
+    "color": "#8c9499",
+    "colorName": "gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "gray",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:5Q-B",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:5CST-B",
+    "modelId": "5CST-B",
+    "color": "#8c9499",
+    "colorName": "gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "gray",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:5CST-B",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15EST",
+    "modelId": "15EST",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15EST",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15CST",
+    "modelId": "15CST",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15CST",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15RCS",
+    "modelId": "15RCS",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15RCS",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15LCS",
+    "modelId": "15LCS",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15LCS",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:15SST",
+    "modelId": "15SST",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "black",
+    "evidenceKind": "published model color names, tech-spec page 1; corroborated by spray poster",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:15SST",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:9SST",
+    "modelId": "9SST",
+    "color": "#8c9499",
+    "colorName": "gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:9SST",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:8H-FLT",
+    "modelId": "8H-FLT",
+    "color": "#8c9499",
+    "colorName": "gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:8H-FLT",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:8Q-FLT",
+    "modelId": "8Q-FLT",
+    "color": "#8c9499",
+    "colorName": "gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "manufacturer diagram and product photo",
+    "coloredPart": "top identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation.",
+    "nozzles": [
+      {
+        "id": "rain-bird:8Q-FLT",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:SQ-3QTR",
+    "modelId": "SQ-3QTR",
+    "color": "#8c9499",
+    "colorName": "gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "gray",
+    "evidenceKind": "published model color names, printed page 132",
+    "coloredPart": "bottom insert",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. SQ top and housing are black; color code is on bottom insert, not a painted top.",
+    "nozzles": [
+      {
+        "id": "rain-bird:SQ-3QTR:throw-0.8",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      },
+      {
+        "id": "rain-bird:SQ-3QTR:throw-1.2",
+        "color": "#8c9499",
+        "colorName": "gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:SQ-FUL",
+    "modelId": "SQ-FUL",
+    "color": "#d13c37",
+    "colorName": "red",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "red",
+    "evidenceKind": "published model color names, printed page 132",
+    "coloredPart": "bottom insert",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. SQ top and housing are black; color code is on bottom insert, not a painted top.",
+    "nozzles": [
+      {
+        "id": "rain-bird:SQ-FUL:throw-0.8",
+        "color": "#d13c37",
+        "colorName": "red",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      },
+      {
+        "id": "rain-bird:SQ-FUL:throw-1.2",
+        "color": "#d13c37",
+        "colorName": "red",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:SQ-HLF",
+    "modelId": "SQ-HLF",
+    "color": "#8b5e3c",
+    "colorName": "brown",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "brown",
+    "evidenceKind": "published model color names, printed page 132",
+    "coloredPart": "bottom insert",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. SQ top and housing are black; color code is on bottom insert, not a painted top.",
+    "nozzles": [
+      {
+        "id": "rain-bird:SQ-HLF:throw-0.8",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      },
+      {
+        "id": "rain-bird:SQ-HLF:throw-1.2",
+        "color": "#8b5e3c",
+        "colorName": "brown",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:SQ-QTR",
+    "modelId": "SQ-QTR",
+    "color": "#78589a",
+    "colorName": "purple",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": "purple",
+    "evidenceKind": "published model color names, printed page 132",
+    "coloredPart": "bottom insert",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. SQ top and housing are black; color code is on bottom insert, not a painted top.",
+    "nozzles": [
+      {
+        "id": "rain-bird:SQ-QTR:throw-0.8",
+        "color": "#78589a",
+        "colorName": "purple",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      },
+      {
+        "id": "rain-bird:SQ-QTR:throw-1.2",
+        "color": "#78589a",
+        "colorName": "purple",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-05/d37200t_2022_dom_turf_catalog_v8_eng.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:1300A-F",
+    "modelId": "1300A-F",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "D50005EO2/21 page 1 product photo",
+    "coloredPart": "housing",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. Family photo confirms housing appearance; no per-flow identification color is published for 1401/1402/1404/1408. White component is separate filter screen.",
+    "nozzles": [
+      {
+        "id": "rain-bird:1300A-F",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:1401",
+    "modelId": "1401",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "D50005EO2/21 page 1 product photo",
+    "coloredPart": "housing",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. Family photo confirms housing appearance; no per-flow identification color is published for 1401/1402/1404/1408. White component is separate filter screen.",
+    "nozzles": [
+      {
+        "id": "rain-bird:1401",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:1402",
+    "modelId": "1402",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "D50005EO2/21 page 1 product photo",
+    "coloredPart": "housing",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. Family photo confirms housing appearance; no per-flow identification color is published for 1401/1402/1404/1408. White component is separate filter screen.",
+    "nozzles": [
+      {
+        "id": "rain-bird:1402",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:1404",
+    "modelId": "1404",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "D50005EO2/21 page 1 product photo",
+    "coloredPart": "housing",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. Family photo confirms housing appearance; no per-flow identification color is published for 1401/1402/1404/1408. White component is separate filter screen.",
+    "nozzles": [
+      {
+        "id": "rain-bird:1404",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:1408",
+    "modelId": "1408",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "D50005EO2/21 page 1 product photo",
+    "coloredPart": "housing",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. Family photo confirms housing appearance; no per-flow identification color is published for 1401/1402/1404/1408. White component is separate filter screen.",
+    "nozzles": [
+      {
+        "id": "rain-bird:1408",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN14",
+    "modelId": "R-VAN14",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN14",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN18",
+    "modelId": "R-VAN18",
+    "color": "#c89f73",
+    "colorName": "tan",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN18",
+        "color": "#c89f73",
+        "colorName": "tan",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN24",
+    "modelId": "R-VAN24",
+    "color": "#8e355f",
+    "colorName": "magenta",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN24",
+        "color": "#8e355f",
+        "colorName": "magenta",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN18-360",
+    "modelId": "R-VAN18-360",
+    "color": "#c89f73",
+    "colorName": "tan",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN18-360",
+        "color": "#c89f73",
+        "colorName": "tan",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN14-360",
+    "modelId": "R-VAN14-360",
+    "color": "#2b69b5",
+    "colorName": "blue",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN14-360",
+        "color": "#2b69b5",
+        "colorName": "blue",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN24-360",
+    "modelId": "R-VAN24-360",
+    "color": "#8e355f",
+    "colorName": "magenta",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN24-360",
+        "color": "#8e355f",
+        "colorName": "magenta",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN-SST",
+    "modelId": "R-VAN-SST",
+    "color": "#1f2937",
+    "colorName": "black",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN-SST",
+        "color": "#1f2937",
+        "colorName": "black",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN-LCS",
+    "modelId": "R-VAN-LCS",
+    "color": "#b6b8b7",
+    "colorName": "light gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN-LCS",
+        "color": "#b6b8b7",
+        "colorName": "light gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  },
+  {
+    "id": "rain-bird:R-VAN-RCS",
+    "modelId": "R-VAN-RCS",
+    "color": "#737b80",
+    "colorName": "dark gray",
+    "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "colorVerifiedOn": "2026-10-05",
+    "manufacturerColorName": null,
+    "evidenceKind": "07/24 D42102 page 1 model-aligned product photos",
+    "coloredPart": "outer identification ring",
+    "hexIsApproximation": true,
+    "note": "Color name describes visible manufacturer coding; exact RGB/hex is a display approximation. R-VAN24 current ring is magenta/burgundy; yellow R-VAN1724 is an older model and must not be substituted. RCS/LCS gray shades inferred visually, not separately named by manufacturer.",
+    "nozzles": [
+      {
+        "id": "rain-bird:R-VAN-RCS",
+        "color": "#737b80",
+        "colorName": "dark gray",
+        "colorSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+        "colorVerifiedOn": "2026-10-05"
+      }
+    ]
+  }
+]

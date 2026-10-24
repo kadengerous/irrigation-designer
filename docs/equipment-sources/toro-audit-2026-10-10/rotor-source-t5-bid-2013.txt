@@ -1,0 +1,243 @@
+ (https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf)
+citeturn449view0 [wordlim: 200] Crawled: 5 days ago; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"turn448view0","lineno":null}); Total lines: 240
+L0@P0: T5 Series Sprinklers
+L1@P0: December 2013
+L2@P0: Specifications
+L3@P0:  Radius: 25’-50’ (7,6 – 15,2m)
+L4@P0:  Flow rate: .76-9.63 gpm (2,8-36,5
+L5@P0: lpm)
+L6@P0:  Arc: Reversing, part-circle/full
+L7@P0: circle rotation, adjustable from 40-
+L8@P0: 360
+L9@P0:  Recommended operating pressure
+L10@P0: range: 25-70 psi (1,7-4,8 Bar)
+L11@P0:  Check valve capable of checking up
+L12@P0: to 7’ (2,1m) of elevation difference
+L13@P0:  Inlet size: 3/4” (20mm) NPT
+L14@P0:  Overall height: 7.5” (190mm)
+L15@P0:  Body diameter: 2.25 ” (57mm)
+L16@P0:  Pop-up to nozzle: 5” (127,0mm)
+L17@P0:  Weight: .49 lbs. (.22 kg.)
+L18@P0:  Precipitation rates:
+L19@P0: - Minimum: .20”/hr. (5,1 mm/hr.)
+L20@P0: - Maximum: .86”/hr. (21,8
+L21@P0: mm/hr.)
+L22@P0:  Radius reduction screw retains
+L23@P0: nozzle and provides up to 25%
+L24@P0: radius reduction
+L25@P0:  Two nozzle trees: Eight standard
+L26@P0: angle (25°) nozzles (1.5, 2.0, 2.5,
+L27@P0: 3.0, 4.0, 5.0, 6.0, 8.0). Four low
+L28@P0: angle (10°) nozzles (1.0, 1.5, 2.0,
+L29@P0: 3.0)
+L30@P0: Bidding Specifications
+L31@P0: This sprinkler shall be
+L32@P0: capable of reversing full-circle and
+L33@P0: part-circle operation and be a geardriven rotary type. The sprinkler
+L34@P0: shall be of a pop-up design with a
+L35@P0: overall height to nozzle of 5”
+L36@P0: (127mm), and a cap diameter of 2.6”
+L37@P0: (66,0mm). The sprinkler shall have a
+L38@P0: 3/4” (20mm) NPT female-threaded
+L39@P0: inlet. The sprinkler shall be capable
+L40@P0: of covering ___ feet radius at ___
+L41@P0: pounds per square inch pressure with
+L42@P0: a discharge rate of ___ gallons per
+L43@P0: minute.
+L44@P0: Water distribution shall be via
+L45@P0: a single pressed-in nozzle mounted in
+L46@P0: a 1.44” (36,6mm)-diameter plastic
+L47@P0: nozzle turret and retained by the
+L48@P0: radius reduction screw. There shall
+L49@P0: be two nozzle trajectory angles
+L50@P0: available – a standard angle of 25°
+L51@P0: and a low angle of 10°. The standard
+L52@P0: angle nozzle set shall cover a flow
+L53@P0: range of 1.15-9.70 gpm (4.35-36.72
+L54@P0: lpm) flow and a radius range of 33’-
+L55@P0: 50’ (10,1-15,2m). The low angle
+L56@P0: nozzle set shall cover a flow range of
+L57@P0: .74-3.70 gpm (2,80-14,01 lpm) flow
+L58@P0: and a radius range of 25’-36’ (7,6-
+L59@P0: 11,0m). All of the sprinkler nozzles
+L60@P0: shall have molded-in text for easy
+L61@P0: identification of radius and flow
+L62@P0: performance capabilities. A stainlesssteel radius reduction screw shall be
+L63@P0: provided for fine-tuning the radius
+L64@P0: up to a 25% reduction. All nozzles
+L65@P0: shall be sized to allow any particle
+L66@P0: capable of passing through the riser
+L67@P0: screen to pass through the nozzle.
+L68@P0: The arc of the sprinkler shall
+L69@P0: be top-adjustable with the provided
+L70@P0: tool, wet or dry. The sprinkler shall
+L71@P0: enable the user to fast forward
+L72@P0: (advancing in the same direction as
+L73@P0: the gear drive) the nozzle turret in
+L74@P0: either direction (wet or dry). The left
+L75@P0: and right arc limits shall be hard
+L76@P0: stops, so that the user can palpate the
+L77@P0: arc limits. The sprinkler shall be
+L78@P0: adjustable from a minimum of 40°
+L79@P0: part-circle to maximum of 360°
+L80@P0: reversing full circle. When using the
+L81@P0: arc adjustment tool, the left arc
+L82@P0: position shall be fixed and be readily
+L83@P0: identified by a manually fast
+L84@P0: forwarding to the hard stop. The
+L85@P0: right arc shall be the adjustable
+L86@P0: position when using the arc
+L87@P0: adjustment tool.
+L88@P0: The sprinkler shall also be
+L89@P0: available with an optional RapidSet™
+L90@P0: arc adjustment which allows arc
+L91@P0: adjustment with no tools. When
+L92@P0: adjusting the arc with this method,
+L93@P0: the right arc position shall only be
+L94@P0: adjustable in the clockwise direction,
+L95@P0: by clutching the nozzle turret beyond
+L96@P0: the hard right stop. Similarly, the left
+L97@P0: arc position shall be adjusted in the
+L98@P0: counterclockwise direction by
+L99@P0: Specifying Information – T5 Series Sprinklers
+L100@P0: T5XX XXXX CK E-RS
+L101@P0: Sprinkler
+L102@P0: Model
+L103@P0: Body
+L104@P0: Type
+L105@P0: Optional Nozzle Optional Additional
+L106@P0: Options
+L107@P0: Toro T5
+L108@P0: Rotor
+L109@P0: P – 5”
+L110@P0: Lawn
+L111@P0: Pop-Up
+L112@P0: S – Shrub
+L113@P0: HP – 12”
+L114@P0: High-Pop
+L115@P0: CK–Check-OMatic*1.5–1.5 GPM
+L116@P0: 2.0–2.0 GPM
+L117@P0: 2.5–2.5 GPM
+L118@P0: 3.0–3.0 GPM
+L119@P0: 4. 0–4.0 GPM
+L120@P0: 5. 0–5.0 GPM
+L121@P0: 6. 0–6.0 GPM
+L122@P0: 8. 0–8.0 GPM
+L123@P0: Low Angle
+L124@P0: Nozzles
+L125@P0: E-Effluent RS–RapidSet™
+L126@P0: Arc
+L127@P0: 10LA-1.0 GPM Adjustment
+L128@P0: 15LA-1.5 GPM
+L129@P0: 20LA-2.0 GPM
+L130@P0: 30LA-3.0 GPM
+L131@P0: Example: When specifying a T5 Series Sprinkler with check valve, RapidSet™ arc adjustment, and 2.5 gallon
+L132@P0: nozzle, use the following designation: T5PCK2.5-RS
+L133@P0-1: *Check-O-Matic standard on all shrub models.T5 Series Sprinklers
+L134@P1: December 2013
+L135@P1: clutching the nozzle turret beyond
+L136@P1: the hard left stop position. Finally,
+L137@P1: the left arc position may be adjusted
+L138@P1: in the clockwise direction by turning
+L139@P1: the nozzle turret to the hard right
+L140@P1: stop, next turning towards the hard
+L141@P1: left stop by the amount of
+L142@P1: adjustment desired, then clutching
+L143@P1: the nozzle turret back to the hard
+L144@P1: right stop.
+L145@P1: The date of manufacture shall
+L146@P1: be stamped onto the bottom of the
+L147@P1: riser in the Julian calendar format.
+L148@P1: Rotation shall be
+L149@P1: accomplished by a water-lubricated
+L150@P1: cluster gear drive. The drive
+L151@P1: assembly shall be driven by a variable
+L152@P1: stator that maintains a constant speed
+L153@P1: of rotation with all nozzles. The
+L154@P1: variable stator shall require no
+L155@P1: adjustments when changing nozzles.
+L156@P1: The body and cap of the
+L157@P1: sprinkler shall be injection-molded
+L158@P1: from ABS, a corrosion-proof,
+L159@P1: impact-resistant, UV-resistant, heavyduty, engineering-grade plastic
+L160@P1: material. The nozzle turret cover
+L161@P1: shall incorporate a pull-up feature
+L162@P1: that provides serviceability of the
+L163@P1: nozzles and riser assembly. The
+L164@P1: sprinkler shall have a plastic filter
+L165@P1: screen in the riser to prevent entry of
+L166@P1: foreign material from clogging the
+L167@P1: nozzle.
+L168@P1: All internal components shall
+L169@P1: be serviceable from the top of the
+L170@P1: sprinkler without disturbing the body
+L171@P1: installation. The sprinkler shall have
+L172@P1: a riser/body seal assembly that
+L173@P1: regulates flushing during pop-up and
+L174@P1: retraction to clear any debris from
+L175@P1: around the riser, and a heavy-duty,
+L176@P1: stainless-steel spring to ensure
+L177@P1: positive retraction. Sprinkler flush
+L178@P1: rate shall not exceed 1 GPM (3,8
+L179@P1: lpm).
+L180@P1: The rubber cover shall be
+L181@P1: injection-molded from Santoprene
+L182@P1: thermoplastic elastomer intended to
+L183@P1: provide a cushion to avoid personal
+L184@P1: injury from contact. The rubber
+L185@P1: cover shall be available in a lavender
+L186@P1: color to identify the use of nonpotable water (effluent) not intended
+L187@P1: for human consumption.
+L188@P1: The sprinkler shall provide a
+L189@P1: check valve feature that prevents low
+L190@P1: head drainage, soil erosion and water
+L191@P1: waste while maintaining water in the
+L192@P1: piping system up to 7’ (2,1m) of
+L193@P1: elevation difference. The check valve
+L194@P1: shall be removable, allowing full pipe
+L195@P1: drainage if desired.
+L196@P1: The sprinkler shall be
+L197@P1: developed and manufactured by an
+L198@P1: ISO 9001-certified facility. The
+L199@P1: sprinkler shall be model
+L200@P1: number_______________ and shall
+L201@P1: be manufactured by The Toro
+L202@P1: Company, Irrigation Division.
+L203@P1: Recommended Installation
+L204@P1: Procedures
+L205@P1: The T5 Series sprinkler is
+L206@P1: designed specifically for turf areas
+L207@P1: requiring ______ coverage. These
+L208@P1: products offer the most economical
+L209@P1: method of irrigation where flows and
+L210@P1: system pressures are available to
+L211@P1: support a short- to medium-range
+L212@P1: radius.
+L213@P1: The T5 Series sprinkler
+L214@P1: should be specified for installation on
+L215@P1: a swing joint. The swing joint should
+L216@P1: be specified as a triple-swing type,
+L217@P1: allowing movement up, down,
+L218@P1: laterally, and at an angle to grade.
+L219@P1: The sprinkler should be installed with
+L220@P1: the top of the cap at finished grade.
+L221@P1: T5 Series sprinklers are
+L222@P1: engineered to provide a smooth,
+L223@P1: consistent curtain of water across the
+L224@P1: arc, with provision made for head-tohead coverage. For proper spacing,
+L225@P1: ensure that system design and
+L226@P1: installation accounts for prevailing
+L227@P1: wind conditions.
+L228@P1: It is recommended that
+L229@P1: sprinklers are installed 2” (5 cm)
+L230@P1: from hardscaping and 6”-12” (15.2-
+L231@P1: 30.5 cm) from buildings or other
+L232@P1: vertical impediments to allow for
+L233@P1: normal maintenance procedures and
+L234@P1: to minimize overspray on buildings.
+L235@P1: Where possible, sprinklers should be
+L236@P1: installed in a manner that will
+L237@P1: minimize nozzle stream contact with
+L238@P1: trees, controller enclosures,
+L239@P1: shrubbery or other obstructions.
+

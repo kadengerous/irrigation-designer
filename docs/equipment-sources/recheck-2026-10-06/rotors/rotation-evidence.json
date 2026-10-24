@@ -1,0 +1,115 @@
+[
+  {
+    "itemId": "k-rain:MiniPro",
+    "fullCircleRotation": "continuous",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/minipro%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "page": 1,
+      "linkedFrom": "https://www.krain.com/written-specifications",
+      "quote": "The sprinkler shall perform as a continuous full circle and as an adjustable part-circle configuration in a single unit.",
+      "publicationDate": null,
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Explicit full-circle mechanism for the named model; general reverse-and-return wording concerns part-circle operation and does not contradict this specific claim."
+    }
+  },
+  {
+    "itemId": "k-rain:RPS50",
+    "fullCircleRotation": "unknown",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps50%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "page": 1,
+      "linkedFrom": "https://www.krain.com/written-specifications",
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Specification confirms adjustable part-circle and full-circle coverage but does not say continuous or reversing at 360 degrees. General reversing mechanism wording alone does not establish an exact full-circle reversal."
+    }
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "fullCircleRotation": "continuous",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "page": 1,
+      "linkedFrom": "https://www.krain.com/written-specifications",
+      "quote": "The sprinkler shall perform as a continuous full circle and as an adjustable part-circle configuration in a single unit.",
+      "publicationDate": null,
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Explicit full-circle mechanism for the named model; general reverse-and-return wording concerns part-circle operation and does not contradict this specific claim."
+    }
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "fullCircleRotation": "continuous",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "pages": [
+        9,
+        12
+      ],
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Documented family-level inference: current catalog lists pressure regulation as a 6-inch option of this rotor family. Family written specification explicitly states continuous full circle. Regulation changes pressure; no separate rotation mechanism or contradictory full-circle behavior is documented for the option.",
+      "familyMechanismSourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "inference": true
+    }
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "fullCircleRotation": "continuous",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75i%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "page": 1,
+      "linkedFrom": "https://www.krain.com/written-specifications",
+      "quote": "The sprinkler shall perform as a continuous full circle and as an adjustable part-circle configuration in a single unit.",
+      "publicationDate": null,
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Explicit full-circle mechanism for the named model; general reverse-and-return wording concerns part-circle operation and does not contradict this specific claim."
+    }
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "fullCircleRotation": "continuous",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "pages": [
+        9,
+        12
+      ],
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Documented family-level inference: current catalog lists pressure regulation as a 6-inch option of this rotor family. Family written specification explicitly states continuous full circle. Regulation changes pressure; no separate rotation mechanism or contradictory full-circle behavior is documented for the option.",
+      "familyMechanismSourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75i%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "inference": true
+    }
+  },
+  {
+    "itemId": "k-rain:RPS-Select",
+    "fullCircleRotation": "unknown",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps%20select%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "page": 1,
+      "linkedFrom": "https://www.krain.com/written-specifications",
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Specification confirms adjustable part-circle and full-circle coverage but does not say continuous or reversing at 360 degrees. General reversing mechanism wording alone does not establish an exact full-circle reversal."
+    }
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "fullCircleRotation": "continuous",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/rotors/proplus/proplus%20setting%20instructions.pdf",
+      "page": 1,
+      "quote": "When set at 360°, the ProPlus will rotate continuously in a clockwise direction.",
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Exact operational instruction; direction clockwise."
+    }
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "fullCircleRotation": "continuous",
+    "evidence": {
+      "url": "https://www.krain.com/content/files/images/landingpages/rotors/superpro/superpro%20instruction%20sheet.pdf",
+      "page": 1,
+      "quote": "When set at 360°, the SuperPro will rotate continuously in a clockwise direction.",
+      "retrievedOn": "2026-10-06",
+      "interpretation": "Exact operational instruction; direction clockwise."
+    }
+  }
+]

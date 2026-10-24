@@ -1,0 +1,135 @@
+{
+  "checkedOn": "2026-10-10",
+  "sources": [
+    {
+      "file": "rotor-source-t5-sheet.txt",
+      "url": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+      "version": "20-1009-IRC, copyright 2020; linked from current T5P-RS-LN page",
+      "scope": "All pages; performance on PDF page 3",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "a61d0773f46a6b3169215c925a7c62e2192b6d5eea45da281416da63a81fd4d8",
+      "bytes": 8217
+    },
+    {
+      "file": "rotor-source-570z-sheet.txt",
+      "url": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3",
+      "version": "22-1021-IRC, copyright 2022; linked from current 570Z-Series page",
+      "scope": "All pages; model list PDF page 3, limits page 4",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "f587886730fd4f74a95294f9e224740270c590ca0de1931eb9f99c3cb6e44e75",
+      "bytes": 10158
+    },
+    {
+      "file": "rotor-source-t5-bid.txt",
+      "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Rotors/T5-RapidSet-Series/T5-RapidSet-Series-Sprinkler-Bidding-Specs.ashx",
+      "version": "T5 RapidSet bidding specification, April 2015",
+      "scope": "Complete; radius reduction and arc rules",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "79a662d67b9660d18b6d0d0e44eb56c08fedd5325f32a96b540835b7ef846983",
+      "bytes": 4358
+    },
+    {
+      "file": "rotor-source-t5-bid-2013.txt",
+      "url": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "version": "T5 Series bidding specification, December 2013",
+      "scope": "Complete; explicit reversing full circle, effluent lavender; obsolete pressure upper bound not applied",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "322d2defe3865b5e7c612d602f6ae88189d404792a753269e52ffe59b8c570ec",
+      "bytes": 9822
+    },
+    {
+      "file": "rotor-source-t5-manual.txt",
+      "url": "https://www.toro.com/getpub/128192",
+      "version": "Toro current published T5 RapidSet installation instructions, document 373-0765 Rev. A",
+      "scope": "First segment, lines 0–581",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "beebb47b06363b3983b0d957d66d4ea74c6048edcbfd9eaf0f4b06ccd1c75c95",
+      "bytes": 21114
+    },
+    {
+      "file": "rotor-source-t5-manual-end.txt",
+      "url": "https://www.toro.com/getpub/128192",
+      "version": "Same manual",
+      "scope": "Remaining segment through line 856; overlaps first segment",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "a2432dc560395c6c6cf53fa902341d7b97303be71b45790454fcfab19bb20cc6",
+      "bytes": 15079
+    },
+    {
+      "file": "rotor-source-570z-installation-read.txt",
+      "url": "https://cdn.thetorocompany.com/api/assetstorage/623_ae281be2-af5a-400b-ad94-3f9b39003d91",
+      "version": "570Z installation instructions linked from current product page",
+      "scope": "Successful extracted text, 262 lines",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "fca8f32ad10616d484eb8383ac0cd6ab8d8adb584c18ce93a60d568207e46c76",
+      "bytes": 13131
+    },
+    {
+      "file": "rotor-source-price-list-bodies.txt",
+      "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+      "version": "Current 2026 price list despite 2025 URL filename",
+      "scope": "Bodies and accessories pages; confirms all 40 exact body SKUs and black replacement cap",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "36649fcc0fa7488cbe3d5faa62bbb663c720a7aea3c896db2dea6e71a367fd8f",
+      "bytes": 18536
+    },
+    {
+      "file": "rotor-source-price-list-t5.txt",
+      "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+      "version": "Same current 2026 price list",
+      "scope": "T5 rotor pages; confirms all 13 exact rotor SKUs",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "fcad7389e6f23b8374cd1f74361b986d04451ca93955c0559940dc66dfb81416",
+      "bytes": 17939
+    },
+    {
+      "file": "rotor-source-t5-shrub-page.txt",
+      "url": "https://www.toro.com/en/product/T5S-RS",
+      "version": "Current exact model product page",
+      "scope": "CV No conflicts with older standard-CV claim; contains misleading 5-inch pop-up field for shrub",
+      "checkedOn": "2026-10-10",
+      "method": "native web open; official source text extraction",
+      "sha256": "1b2c591b9ab1239732793abd7e6cfc6186579d0d44bcf0dc780ab382f6a239b8",
+      "bytes": 12689
+    }
+  ],
+  "productLinkVerification": [
+    {
+      "url": "https://www.toro.com/en/product/T5P-RS-LN",
+      "linkedSource": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25"
+    },
+    {
+      "url": "https://www.toro.com/en/product/570Z-Series",
+      "linkedSource": "https://cdn.thetorocompany.com/api/assetstorage/623_d96f613f-4053-4dcd-887c-4b324d0cb3d3"
+    },
+    {
+      "url": "https://www.toro.com/en/product/570Z-PRX-Series",
+      "finding": "Confirms 20–75 psi operating range and 30 psi regulated nozzle pressure"
+    },
+    {
+      "url": "https://specifier.toro.com/sprays.html",
+      "linkedSource": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+    }
+  ],
+  "retrievalLimitations": [
+    {
+      "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "status": "Current official catalogue link failed native web retrieval; no fresh full-catalogue comparison claimed. Current model chart plus 2026 price list verified independently."
+    },
+    {
+      "url": "https://cdn.thetorocompany.com/api/assetstorage/623_ae281be2-af5a-400b-ad94-3f9b39003d91",
+      "file": "rotor-source-570z-installation.txt",
+      "status": "Initial failed retrieval stub retained; subsequent native cached reference succeeded and is rotor-source-570z-installation-read.txt."
+    }
+  ],
+  "networkPolicy": "Only permitted native web tools used; no CLI network or browser workaround."
+}

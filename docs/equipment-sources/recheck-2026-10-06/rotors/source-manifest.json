@@ -1,0 +1,154 @@
+[
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/2026-catalog.pdf",
+    "sha256": "2055f3f861c1767d18223b3724b619bb7bdbf457ce51c5508b0f1dfbe65c8af9",
+    "bytes": 7708982,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/sprays/pro-s%20sprays/pros%20sprays%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/pros-sprays-product-brochure.pdf",
+    "sha256": "84e35a192b81fe5b84ebf3801077b75fa7fa09bdcb5d3c553e74ad077e58222b",
+    "bytes": 887709,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/sprays/k-sprays/ksprays%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/ksprays-product-brochure.pdf",
+    "sha256": "4e74dbd86ea807649eccb59c6bbeea3184062802e8b9b03f1e94574762c019f7",
+    "bytes": 340979,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/minipro/minipro%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/minipro-product-brochure.pdf",
+    "sha256": "448bdf34f3e5b13b99c0cbfadde28e706f2c1d3b9687977ea160d7db1267f7e5",
+    "bytes": 361750,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/minipro/minipro%20setting%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/minipro-setting-instructions.pdf",
+    "sha256": "eccd4bceca176bdf688cf2bf291c8b514f89f7a87c62e521809acefe18de8a5d",
+    "bytes": 585310,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps50/rps50%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/rps50-product-brochure.pdf",
+    "sha256": "155bb940a5d91e11cbb566a5369f9547df8304d82f0de76dad0b996228817775",
+    "bytes": 244766,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps50/rps50%20setting%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/rps50-setting-instructions.pdf",
+    "sha256": "ce27d1d3b87d7a2c97622610952c3fd180bb85ba7fdf7a691ce4183915af0a28",
+    "bytes": 364199,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/rps75-product-brochure.pdf",
+    "sha256": "2db5b9be9e3ef11c1d7590e7a6f854f93b2704405188e3cac297c82cfe125f89",
+    "bytes": 393227,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/rps75-setting-instructions.pdf",
+    "sha256": "54f2e62fb4dda585acb19f29ff9eab14be3c9f7c8bb120b1fb086c1812083ccd",
+    "bytes": 468038,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75i/rps75i%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/rps75i-product-brochure.pdf",
+    "sha256": "1c9461f0a69aea3dabf0285ac24b37608994523c94c77a9ce84b386cb29c5c3a",
+    "bytes": 667715,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75i/rps75i%20setting%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/rps75i-setting-instructions.pdf",
+    "sha256": "8c7677fc91994b56003c195c399308333272d9df132cba86530307d5622b1ea5",
+    "bytes": 242358,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps%20select/rps%20select%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/rps-select-product-brochure.pdf",
+    "sha256": "a9ce3eaf6c9e852b3928aa2a162fcaca0321a08162287c52a47200f384575069",
+    "bytes": 396335,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps%20select/rps%20select%20setting%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/rps-select-setting-instructions.pdf",
+    "sha256": "d9a0438cf111a2f7376b0d152713aaed41450bc2332d8183f73ecd4f815c00e8",
+    "bytes": 152224,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/proplus/proplus%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/proplus-product-brochure.pdf",
+    "sha256": "e148a6b623dac17331ca82184a785116fdf51d4183b50e3b80f33ddd71d01937",
+    "bytes": 330495,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/proplus/proplus%20low%20angle%20nozzles%20performance%20chart.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/proplus-low-angle-nozzles-performance-chart.pdf",
+    "sha256": "f1c22d349257374c2680bf4181422992411bca5e7db6c99d9393a7685c032fca",
+    "bytes": 15065,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/proplus/proplus%20setting%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/proplus-setting-instructions.pdf",
+    "sha256": "af6915e6b7fcbebf27deaf70b6111a1e4649b24fbc1d79cd2188f3c596b6d08e",
+    "bytes": 498402,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/superpro/superpro%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/superpro-product-brochure.pdf",
+    "sha256": "91ce516fc0da7e93d6c15bf80f6fe4ec3f538e3249c8c6e3e969f019544f6ff0",
+    "bytes": 394388,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/rotors/superpro/superpro%20instruction%20sheet.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/superpro-instruction-sheet.pdf",
+    "sha256": "41066b483dc201fcb1b9efe194d5436046cacfa07a20d8db10184887cff5ddb3",
+    "bytes": 421126,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/sprays/np%20sprays/np%20sprays%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-audit-20261006/rotors/sources/np-sprays-product-brochure.pdf",
+    "sha256": "8ad5d3cbe94e3d2799fead08793e99cab7b9a4b9c6fa5f55c792546e33d377e9",
+    "bytes": 300195,
+    "fetchedOn": "2026-10-06",
+    "unchangedFrom20261004": true
+  }
+]

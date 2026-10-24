@@ -1,0 +1,121 @@
+ (https://www.krain.com/content/files/images/landingpages/rotors/proplus/proplus%20product%20brochure.pdf)
+citeturn472view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/rotors/proplus/proplus%20product%20brochure.pdf","lineno":null}); Total lines: 118
+L0@P0: Packed with features that ensure reliability, saving the
+L1@P0: installer time and money on every job.
+L2@P0: n Revolutionary Patented Easy Arc Set – Simplified arc set allow
+L3@P0: for wet or dry adjustment in seconds.
+L4@P0: n 3/4" Inlet – Replaces all standard rotors.
+L5@P0: n 2N1 Adjustable or Continuous Rotation – Provides a full range adjustment from 40°
+L6@P0: to a continuous full circle.
+L7@P0: n Patented Arc Set Degree Markings – Clearly indicates the current watering pattern
+L8@P0: and simplifies arc set adjustment.
+L9@P0: n Arc Memory Clutch – Prevents internal gear damage and returns rotor to its prior
+L10@P0: setting automatically if nozzle turret is forced past its stop.
+L11@P0: n Time Proven Patented Reversing Mechanism – Assures continuous reverse and
+L12@P0: return…over a 20 year history.
+L13@P0: n Ratcheting Riser – Allows for easy adjustment of your left starting position with a
+L14@P0: simple turn of the riser.
+L15@P0: n Rubber Cover – Seals out dirt and increases product durability.
+L16@P0: n Wide Selection of Nozzles – Including standard and low angle, provides flexibility in
+L17@P0: system design.
+L18@P0: n Optional Check Valve – Prevents low head drainage.
+L19@P0: K-Rain Manufacturing Corp.
+L20@P0: 1640 Australian Avenue
+L21@P0: Riviera Beach, FL 33404 USA
+L22@P0: 561.844.1002
+L23@P0: FAX: 561.842.9493
+L24@P0: 1.800.735.7246 | www.krain.com
+L25@P0-1: PROPLUS™Easy Arc Setting
+L26@P1: Arc Selection 40° to
+L27@P1: Continuous 360°
+L28@P1: Adjust From Left Start
+L29@P1: Specifications
+L30@P1: n Inlet: (1,9 cm) 3/4" Threaded NPT
+L31@P1: n Arc Adjustment Range: 40° to Continuous 360°
+L32@P1: n Flow Range: .5 – 10.0 GPM (1,9 – 37,8 LPM)
+L33@P1: n Pressure Rating: 30 – 70 PSI (2 – 4,8 bar)
+L34@P1: n Precipitation Rate: .12 – 1.01 in/hr (3 – 26 mm/hr)
+L35@P1: (Depending on Spacing and Nozzle Used)
+L36@P1: n Retracted Height: 7 1/2" (19 cm)
+L37@P1: n Riser Height: 4 1/2" (11,4 cm)
+L38@P1: n Recommended Spacing: 28' – 44' (8,5 – 13,2 m)
+L39@P1: n Radius: 22' – 50' (6,7 – 15,3 m)
+L40@P1: n Nozzle Trajectory: 26°
+L41@P1: n Low Angle Nozzle Trajectory: 12°
+L42@P1: n Standard and Low Angle Nozzles Included
+L43@P1: 11020002 Rev. 01
+L44@P1: © K-Rain Manufacturing Corporation
+L45@P1: AN ISO 9001 CERTIFIED COMPANY
+L46@P1: Models
+L47@P1: 11003 ProPlus
+L48@P1: 11003-RCW ProPlus for reclaimed water
+L49@P1: with low angle nozzle
+L50@P1: Other Options: Add to Part Number:
+L51@P1: -CV Check Valve
+L52@P1: -LA Low Angle Nozzle
+L53@P1: -NN No Nozzle
+L54@P1: How to Specify
+L55@P1: Model Number Description
+L56@P1: 11003 -RCW
+L57@P1: Performance Data
+L58@P1: NOZZLE PRESSURE RADIUS FLOW RATE PRECIPITATION
+L59@P1: PSI kPa Bars Ft. M. GPM L/M M3/H n in/hr p n mm/hr p
+L60@P1: #0.5 30 207 2,1 28 8,5 0.5 1,9 0,11 0.12 0.14 3 4
+L61@P1: 40 276 2,8 29 8,8 0.6 2,3 0,14 0.14 0.16 4 4
+L62@P1: 50 345 3,5 29 8,8 0.7 2,7 0,16 0.16 0.19 4 5
+L63@P1: 60 414 4,1 30 9,1 0.8 3,0 0,18 0.17 0.20 4 5
+L64@P1: #0.75 30 207 2,1 29 8,8 0.7 2,7 0,16 0.16 0.19 4 5
+L65@P1: 40 275 2,8 30 9,1 0.8 3,0 0,18 0.17 0.20 4 5
+L66@P1: 50 344 3,4 31 9,4 0.9 3,4 0,20 0.18 0.21 5 5
+L67@P1: 60 413 4,1 32 9,8 1.0 3,8 0,23 0.19 0.22 5 6
+L68@P1: #1.0 30 207 2,1 32 9,8 1.3 4,9 0,30 0.24 0.28 6 7
+L69@P1: 40 275 2,8 33 10,1 1.5 5,7 0,34 0.27 0.31 7 8
+L70@P1: 50 344 3,4 34 10,4 1.6 6,1 0,36 0.27 0.31 7 8
+L71@P1: 60 413 4,1 35 10,7 1.8 6,8 0,41 0.28 0.33 7 8
+L72@P1: #2.0 30 207 2,1 37 11,3 2.4 9,1 0,55 0.34 0.39 9 10
+L73@P1: 40 275 2,8 40 12,2 2.5 9,5 0,57 0.30 0.35 8 9
+L74@P1: 50 344 3,4 42 12,8 3.0 11,4 0,68 0.33 0.38 8 10
+L75@P1: 60 413 4,1 43 13,1 3.3 11,4 0,68 0.34 0.36 8 9
+L76@P1: 2.5 30 207 2,1 38 11,6 2.5 9,5 0,57 0.33 0.38 8 10
+L77@P1: 40 275 2,8 39 11,9 2.8 10,6 0,64 0.35 0.41 9 10
+L78@P1: 50 344 3,4 40 12,2 3.2 12,1 0,73 0.39 0.44 10 11
+L79@P1: 60 413 4,1 41 12,5 3.5 13,3 0,80 0.40 0.46 10 12
+L80@P1: #3.0 30 207 2,1 38 11,6 3.6 13,6 0,82 0.48 0.55 12 14
+L81@P1: 40 275 2,8 39 11,9 4.2 15,9 0,96 0.53 0.61 13 15
+L82@P1: 50 344 3,4 41 12,5 4.6 17,4 1,05 0.53 0.61 13 15
+L83@P1: 60 413 4,1 42 12,8 5.0 19,0 1,14 0.55 0.63 14 16
+L84@P1: #4.0 30 207 2,1 43 13,1 4.4 16,7 1,00 0.46 0.53 12 13
+L85@P1: 40 275 2,8 44 13,4 5.1 19,3 1,16 0.51 0.59 13 15
+L86@P1: 50 344 3,4 46 14,0 5.6 21,2 1,27 0.51 0.59 13 15
+L87@P1: 60 413 4,1 49 14,9 5.9 22,4 1,34 0.47 0.55 12 14
+L88@P1: #6.0 40 276 2,8 45 13,7 5.9 22,4 1,34 0.56 0.65 14 17
+L89@P1: 50 344 3,4 46 14,0 6.0 22,7 1,36 0.55 0.63 14 16
+L90@P1: 60 413 4,1 48 14,6 6.3 23,9 1,43 0.53 0.61 13 15
+L91@P1: 70 482 4,8 49 14,9 6.7 25,4 1,52 0.54 0.62 14 16
+L92@P1: #8.0 40 276 2,8 42 12,8 8.0 30,3 1,82 0.87 1.01 22 26
+L93@P1: 50 344 3,4 45 13,7 8.5 32,2 1,93 0.81 0.93 21 24
+L94@P1: 60 413 4,1 49 14,9 9.5 36,0 2,16 0.76 0.88 19 22
+L95@P1: 70 482 4,8 50 15,2 10. 37,9 2,27 0.77 0.89 20 23
+L96@P1: Low Angle Performance Data
+L97@P1: NOZZLE PRESSURE RADIUS FLOW RATE PRECIPITATION
+L98@P1: PSI kPa Bars Ft. M. GPM L/M M3/H n in/hr p n mm/hr p
+L99@P1: #1.0 30 207 2,1 22 6,7 1.2 4,5 0,27 0.48 0.55 12 14
+L100@P1: 40 276 2,8 24 7,3 1.7 6,4 0,39 0.57 0.66 14 17
+L101@P1: 50 345 3,4 26 7,9 1.8 6,8 0,41 0.51 0.59 13 15
+L102@P1: 60 414 4,1 28 8,5 2.0 7,6 0,45 0.49 0.57 12 14
+L103@P1: #3.0 30 207 2,1 29 8,8 3.0 11,4 0,68 0.69 0.79 18 20
+L104@P1: 40 276 2,8 32 9,8 3.1 11,7 0,70 0.58 0.67 15 17
+L105@P1: 50 345 3,4 35 10,7 3.5 13,2 0,80 0.55 0.64 14 16
+L106@P1: 60 414 4,1 37 11,3 3.8 14,4 0,86 0.53 0.62 14 16
+L107@P1: #4.0 30 207 2,1 31 9,4 3.4 12,9 0,77 0.68 0.79 17 20
+L108@P1: 40 276 2,8 34 10,4 3.9 14,8 0,89 0.65 0.75 17 19
+L109@P1: 50 345 3,4 37 11,3 4.4 16,7 1,00 0.62 0.71 16 18
+L110@P1: 60 414 4,1 38 11,6 4.7 17,8 1,07 0.63 0.72 16 18
+L111@P1: #6.0 40 275 2,8 38 11,6 6.5 24,6 1,48 0.87 1.00 22 25
+L112@P1: 50 344 3,4 40 12,2 7.3 27,7 1,66 0.88 1.01 22 26
+L113@P1: 60 413 4,1 42 12,8 8.0 30,3 1,82 0.87 1.01 22 26
+L114@P1: 70 482 4,8 44 13,4 8.6 32,6 1,96 0.86 0.99 22 25
+L115@P1: All precipitation rates are calculated for 180° operation.
+L116@P1: For the percipitation rate for a 360° sprinkler, divide by 2.
+L117@P1: Preinstalled
+

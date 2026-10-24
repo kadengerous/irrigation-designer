@@ -1,0 +1,354 @@
+{
+  "verifiedOn": "2026-10-10",
+  "bodies": 17,
+  "bubblers": 5,
+  "fixedNominalFlowValuesCompared": 4,
+  "publishedPressureSpecificFlowRows": 0,
+  "modelCoverage": [
+    {
+      "id": "k-rain:78002",
+      "type": "body",
+      "expected": {
+        "popUpMm": 38,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78003",
+      "type": "body",
+      "expected": {
+        "popUpMm": 64,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78004",
+      "type": "body",
+      "expected": {
+        "popUpMm": 89,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78004-PR30",
+      "type": "body",
+      "expected": {
+        "popUpMm": 89,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": 2.1,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78004-PR40",
+      "type": "body",
+      "expected": {
+        "popUpMm": 89,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": 2.8,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78006",
+      "type": "body",
+      "expected": {
+        "popUpMm": 140,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78006-PR30",
+      "type": "body",
+      "expected": {
+        "popUpMm": 140,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": 2.1,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78006-PR40",
+      "type": "body",
+      "expected": {
+        "popUpMm": 140,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": 2.8,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78012",
+      "type": "body",
+      "expected": {
+        "popUpMm": 292,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78012-PR30",
+      "type": "body",
+      "expected": {
+        "popUpMm": 292,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": 2.1,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:78012-PR40",
+      "type": "body",
+      "expected": {
+        "popUpMm": 292,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 7.6,
+        "nozzleThread": "female",
+        "regulatedPressureBar": 2.8,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:NP2",
+      "type": "body",
+      "expected": {
+        "popUpMm": 51,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 4.8,
+        "nozzleThread": "female",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:NP4",
+      "type": "body",
+      "expected": {
+        "popUpMm": 98,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 4.8,
+        "nozzleThread": "female",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:73001",
+      "type": "body",
+      "expected": {
+        "popUpMm": 64,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 4.8,
+        "nozzleThread": "male",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:74001",
+      "type": "body",
+      "expected": {
+        "popUpMm": 102,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 4.8,
+        "nozzleThread": "male",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:76001",
+      "type": "body",
+      "expected": {
+        "popUpMm": 149,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 4.8,
+        "nozzleThread": "male",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:71201",
+      "type": "body",
+      "expected": {
+        "popUpMm": 292,
+        "recommendedPressureMin": 1.4,
+        "recommendedPressureMax": 4.8,
+        "nozzleThread": "male",
+        "regulatedPressureBar": null,
+        "inlet": "1/2 in female NPT"
+      },
+      "actualDifferences": [],
+      "source": "catalog2026 pp29–33",
+      "performanceRows": 0
+    },
+    {
+      "id": "k-rain:TB-025",
+      "type": "bubbler",
+      "nominalFlowLMin": 0.95,
+      "pressureBar": [
+        1.4,
+        3.5
+      ],
+      "geometry": "point; no verified wetted throw or area",
+      "spacingM": [
+        0.3,
+        0.9
+      ],
+      "source": "catalog2026 p50 and bubblers category",
+      "actualDifferences": [],
+      "performanceRows": 0,
+      "status": "Verified nominal constant flow"
+    },
+    {
+      "id": "k-rain:TB-05",
+      "type": "bubbler",
+      "nominalFlowLMin": 1.9,
+      "pressureBar": [
+        1.4,
+        3.5
+      ],
+      "geometry": "point; no verified wetted throw or area",
+      "spacingM": [
+        0.3,
+        0.9
+      ],
+      "source": "catalog2026 p50 and bubblers category",
+      "actualDifferences": [],
+      "performanceRows": 0,
+      "status": "Verified nominal constant flow"
+    },
+    {
+      "id": "k-rain:TB-10",
+      "type": "bubbler",
+      "nominalFlowLMin": 3.8,
+      "pressureBar": [
+        1.4,
+        3.5
+      ],
+      "geometry": "point; no verified wetted throw or area",
+      "spacingM": [
+        0.3,
+        0.9
+      ],
+      "source": "catalog2026 p50 and bubblers category",
+      "actualDifferences": [],
+      "performanceRows": 0,
+      "status": "Verified nominal constant flow"
+    },
+    {
+      "id": "k-rain:TB-20",
+      "type": "bubbler",
+      "nominalFlowLMin": 7.6,
+      "pressureBar": [
+        1.4,
+        3.5
+      ],
+      "geometry": "point; no verified wetted throw or area",
+      "spacingM": [
+        0.3,
+        0.9
+      ],
+      "source": "catalog2026 p50 and bubblers category",
+      "actualDifferences": [],
+      "performanceRows": 0,
+      "status": "Verified nominal constant flow"
+    },
+    {
+      "id": "k-rain:TB-ADJ",
+      "type": "bubbler",
+      "nominalFlowLMin": null,
+      "pressureBar": [
+        1.4,
+        3.5
+      ],
+      "geometry": "point; no verified wetted throw or area",
+      "spacingM": [
+        0.3,
+        0.9
+      ],
+      "source": "catalog2026 p50 and bubblers category",
+      "actualDifferences": [],
+      "performanceRows": 0,
+      "status": "Unresolved adjustable flow; keep Needs Review"
+    }
+  ]
+}

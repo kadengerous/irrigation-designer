@@ -1,0 +1,99 @@
+ (https://www.krain.com/content/files/images/landingpages/rotors/rps75i/rps75i%20product%20brochure.pdf)
+citeturn473view0 [wordlim: 200] Crawled: 2 weeks ago; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/rotors/rps75i/rps75i%20product%20brochure.pdf","lineno":null}); Total lines: 96
+L0@P0: RPS™
+L1@P0:  75i Rotors
+L2@P0: With Intelligent Flow Technology®
+L3@P0: u Right position start
+L4@P0: u Patented Intelligent Flow Technology®
+L5@P0:  – Reduce distance
+L6@P0: and water flow simultaneously and proportionately
+L7@P0: u Shut off flow from the head
+L8@P0: u Patented Reversing Mechanism – Continuous reverse
+L9@P0: and return
+L10@P0: u Wide Selection of Nozzles – Including standard
+L11@P0: and low angle for flexibility in system design
+L12@P0: u Rugged RPS Family Construction and features
+L13@P0: u Superior Uniformity, Conserves Water, Fewer
+L14@P0: Zones Required
+L15@P0: u Save Time on Every Project — New or retrofit
+L16@P0: u Includes 5 Free Check Valve Assemblies Per Box
+L17@P0: u Universal Riser Assembly – Fits into existing
+L18@P0: Hunter® PGP® and PGP® Ultra cans
+L19@P0: u Pressure Regulated – 45 PSI available (6” only)
+L20@P0: INLET SIZE
+L21@P0: 3/4”
+L22@P0: RADIUS
+L23@P0: 26’ - 48’
+L24@P0: FLOW RATE
+L25@P0: 0.9 – 9.7 GPM
+L26@P0: l Reduces distance and
+L27@P0:  water flow simultaneously
+L28@P0:  and proportionately
+L29@P0: l Provides full on/off control
+L30@P0: Intelligent Flow
+L31@P0-1: Technology®krain.com © K-Rain Manufacturing Corporation - AN ISO 9001 CERTIFIED COMPANY
+L32@P1: Turn the Flow Control on the RPS™ 75i Rotor with Intelligent Flow Technology® and something
+L33@P1: amazing happens—you get even landscape watering while also saving water. It reduces distance
+L34@P1: and flow rate simultaneously and proportionately. Also provides full on/off control from the head.
+L35@P1: P Contractors stay dry P Landscapes are evenly watered P Water is saved
+L36@P1: Intelligent Flow
+L37@P1: Technology®
+L38@P1: BEFORE Intelligent Flow Technology®
+L39@P1: Total flow is 24 GPM - Precipitation rate is .64 in/hr
+L40@P1: AFTER Intelligent Flow Technology®
+L41@P1: Total flow is 18.3 GPM - Precipitation rate is .49 in/hr
+L42@P1: 24% Less Water Used!
+L43@P1: 90° Nozzle
+L44@P1: Distance 35’
+L45@P1: 1.5 GPM
+L46@P1: 360° Nozzle
+L47@P1: Distance 46’
+L48@P1: 6.0 GPM
+L49@P1: 180° Nozzle
+L50@P1: Distance 40’
+L51@P1: 3.0 GPM
+L52@P1: 90° Nozzle
+L53@P1: Distance
+L54@P1: reduced to 30’
+L55@P1: New flow rate
+L56@P1: 1.3 GPM
+L57@P1: 360° Nozzle
+L58@P1: Distance
+L59@P1: reduced to 30’
+L60@P1: New flow rate
+L61@P1: 3.9 GPM
+L62@P1: 180° Nozzle
+L63@P1: Distance
+L64@P1: reduced to 30’
+L65@P1: New flow rate
+L66@P1: 2.3 GPM
+L67@P1: u
+L68@P1: Specifications
+L69@P1: Radius 26’ – 48’ (7,9 – 14,6 m)
+L70@P1: Flow Rate 0.9 – 9.7 GPM (3,4 – 36,7 LPM)
+L71@P1: Pressure Range 20 – 70 PSI (1,4 – 4,8 bar)
+L72@P1: Precipitation Rate .22 – .85 in/hr (6 – 22 mm/hr)
+L73@P1: Arc Setting Range 40° – 360°
+L74@P1: Nozzle Trajectory 26°
+L75@P1: Low Angle Nozzle Trajectory 11°
+L76@P1: Nozzles Included 8 Standard - 4 Low Angle
+L77@P1: 4 inch Riser height: 4 1/4” (10,81 cm)
+L78@P1: Retracted height: 7 3/8” (18,7 cm)
+L79@P1: 6 inch Riser height: 6 1/4” (15,9 cm)
+L80@P1: Retracted height: 9 1/2” (24,1 cm)
+L81@P1: Shrub Height: 7 1/2” (19,1 cm)
+L82@P1: Inlet Size 3/4” (1,9 cm) Female Thread NPT
+L83@P1: Warranty 7 years
+L84@P1: ARC
+L85@P1: FLOW
+L86@P1: Intelligent Flow
+L87@P1: Technology®
+L88@P1: l Reduces distance and
+L89@P1:  water flow simultaneously
+L90@P1:  and proportionately
+L91@P1: l Provides full on/off control
+L92@P1: Watch the video.
+L93@P1: Scan this code with
+L94@P1: your smartphone
+L95@P1: camera.
+

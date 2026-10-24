@@ -1,0 +1,173 @@
+[
+  {
+    "file": "catalog26.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2026-01/rb14374_cpcatalog26-1b.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2026-01/rb14374_cpcatalog26-1b.pdf",
+    "bytes": 22748013,
+    "sha256": "bfe6c4445294cb1f251c9016a1633e7ecf22dcc56cdebe606a87a92dee6d0ac9",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Consumer products scope check; no commercial rotor performance tables"
+  },
+  {
+    "file": "3500-tech.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42378_3500_rotor_tech_spec.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42378_3500_rotor_tech_spec.pdf",
+    "bytes": 464843,
+    "sha256": "260c4206c95ebeca7f94c41a31eab8260ddce5f70951a4aec46e4de61a6b996c",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "36 metric performance rows + mechanical constraints + blue nozzle tree"
+  },
+  {
+    "file": "5000-tech.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+    "bytes": 1100244,
+    "sha256": "e223c352c9694ea7d0f813599f2e21954381834edf2ac5e0d468b4279d3904c5",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "136 standard/LA/PRS unique metric rows + model constraints + cover identification"
+  },
+  {
+    "file": "5000-chart.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+    "bytes": 243817,
+    "sha256": "8e9add07865596c1aa75d2699183f8b8efa507b2514460bf8e7e407ac76574bc",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "5000-mpr.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-mpr-nozzle-performance-chart.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-mpr-nozzle-performance-chart.pdf",
+    "bytes": 178571,
+    "sha256": "02dd90e52e10cc110c03539d9d23b40d7950b234e7b3d39f1a6cc19363f5e58b",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "60 unique MPR metric rows + explicit colors"
+  },
+  {
+    "file": "6504-tech.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42381_6504_rotor_tech_spec.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42381_6504_rotor_tech_spec.pdf",
+    "bytes": 406511,
+    "sha256": "5047b26c560334d55fa5524bec8a23abcf3be9b14a4fd074466f1a7ee758618c",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "6504-chart.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/falcon-6504-series-rotors-performance-charts.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/falcon-6504-series-rotors-performance-charts.pdf",
+    "bytes": 179554,
+    "sha256": "a536b3f9df22c513753e44a0b1625b9ce6540183f89efda11c5948ab07530318",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "60 metric rows + color dots + two corroborated flow cells"
+  },
+  {
+    "file": "8005-tech.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42406-_8005_rotor_tech_spec-web.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42406-_8005_rotor_tech_spec-web.pdf",
+    "bytes": 465566,
+    "sha256": "eef7a33338d25fd629987f6ea9ea710aa63d7465b827a778d98df5001f045fab",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "79 metric rows + independent imperial flow corroboration + mechanical constraints"
+  },
+  {
+    "file": "8005-chart.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/8005-series-rotor-nozzle-performance-charts.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/8005-series-rotor-nozzle-performance-charts.pdf",
+    "bytes": 180341,
+    "sha256": "d59cfe86c628c8c8fbe7be94a42b7facea3f735da4239f901c06eedd7cc9fa42",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "1800-tech.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/1800-series-tech-spec.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/1800-series-tech-spec.pdf",
+    "bytes": 1107680,
+    "sha256": "cf74064601ce4794aa6bae33b7d67718192175cd1b671e835658ce66b4a209ae",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "19 existing +2 new body records; inlet/heights/pressure/regulators/sideinlets/SAM"
+  },
+  {
+    "file": "5000-page.html",
+    "url": "https://www.rainbird.com/products/5000-series",
+    "finalUrl": "https://www.rainbird.com/products/5000-series",
+    "bytes": 129402,
+    "sha256": "84a57bdb86318b7de8f11ad95d07ba803338fa0ffcf41c34fb98875e85c3ec7b",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "1800-page.html",
+    "url": "https://www.rainbird.com/products/1800-series-spray-sprinkler-bodies",
+    "finalUrl": "https://www.rainbird.com/products/1800-series-spray-sprinkler-bodies",
+    "bytes": 134891,
+    "sha256": "559184cb55bf3ea58b2d70d50b9e91211a5c2ef54582b698f8299efa33d0f92d",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "domestic-catalog.pdf",
+    "url": "https://www.rainbird.com/media/15300",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-11/d42139_2023_dom_turf_catalog_v3_eng.pdf",
+    "bytes": 26010114,
+    "sha256": "9c2bea21bd0d8eb24ce3ec217ebec8d5f07a6cfb4e3c0d47ddf5c22ea7546ee9",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "2023 currently linked commercial catalog: repeated metric tables, MPR120sourcechecks and Falcon flow corroboration"
+  },
+  {
+    "file": "intl-catalog.pdf",
+    "url": "https://www.rainbird.com/media/15299",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-11/d42140_2023_intl_turf_catalog_v3_eng.pdf",
+    "bytes": 24204345,
+    "sha256": "291d34a9a4393d65899aca4c6f176f98430e9ed247c29f4996ad20e7b83ef6b3",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "falcon-parts.pdf",
+    "url": "https://www.rainbird.com/media/5344",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_Falcon6504.pdf",
+    "bytes": 138808,
+    "sha256": "675673948786d5423e1b31c25189734db7f64baafb3e1e5e50510ab880542f63",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "8005-parts.pdf",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_7005-8005.pdf",
+    "finalUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_7005-8005.pdf",
+    "bytes": 115268,
+    "sha256": "bd3f1deb1cbd2df08cf6767816c32236dc25ccc452265bdae9ef229d0e49028c",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "3500-page.html",
+    "url": "https://www.rainbird.com/products/3500-series-rotor-sprinklers",
+    "finalUrl": "https://www.rainbird.com/products/3500-series-rotor-sprinklers",
+    "bytes": 105704,
+    "sha256": "c21b0208e9b2ecf82439f409799e087426499c33a5831c9e7519261856cba935",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "6504-page.html",
+    "url": "https://www.rainbird.com/products/falcon-6504-series",
+    "finalUrl": "https://www.rainbird.com/products/falcon-6504-series",
+    "bytes": 113302,
+    "sha256": "a68fbd470ae33c339518279bcc8a3ff3933a40673317d3e256840277d1af603e",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  },
+  {
+    "file": "8005-page.html",
+    "url": "https://www.rainbird.com/products/8005-series",
+    "finalUrl": "https://www.rainbird.com/products/8005-series",
+    "bytes": 112838,
+    "sha256": "09dd31f726249d4753285e1ccf1bd539c6333784989ddf392098f3d1bdbe50a5",
+    "retrievedOn": "2026-10-05",
+    "auditScope": "Corroborating official source; see audit report and color/variant evidence"
+  }
+]

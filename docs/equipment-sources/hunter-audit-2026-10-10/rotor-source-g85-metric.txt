@@ -1,0 +1,397 @@
+G-85-B | Hunter Industries (https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-85-b)
+citeturn354view0 [wordlim: 200] Crawled: 4 days ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-85-b","lineno":155}); Total lines: 512
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: Metric
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite0†English L16:   * cite9†Metric L17:   * cite10†Español L18:   * cite11†Italiano L19: 
+L20:   * cite12†Français L21:   * cite13†Português L22:   * cite14†Deutsch L23:   * cite15†Türkçe L24: 
+L25:   * cite16†Polski L26:   * cite17†Русский L27:   * cite18†العربية L28:   * cite19†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: # G-85-B
+L36: 
+L37: The Perfect Combination of Power and Performance
+L38: 
+L39: Model Full-Circle / Part-Circle
+L40: 
+L41: Radius 11.3 to 28.7 m
+L42: 
+L43: Flow 2.02 to 13.54 m³/hr; 33.7 to 225.6 l/min
+L44: 
+L45: Pressure 3.4 to 6.9 bar; 340 to 690 kPa
+L46: 
+L47: Product Line
+L48: 
+L49: Golf Rotor
+L50: 
+L51:   * cite20†Models L52:   * cite21†Specs L53:   * cite22†Videos L54:   * cite23†Features L55:   * cite24†Charts L56:   * cite25†Documents L57:   * cite26†Photos L58:   * cite27†Related L59: ## Models
+L60: Model  | Description  | Add to List
+L61: --- | --- | ---
+L62: cite28†G-85-B-10 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 10 installed  | cite29†+ L63: cite30†G-85-B-13 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 13 installed  | cite29†+ L64: cite31†G-85-B-15 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 15 installed  | cite29†+ L65: cite32†G-85-B-18-S | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 18 installed  | cite29†+ L66: cite33†G-85-B-20 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 20 installed  | cite29†+ L67: cite34†G-85-B-23 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 23 installed  | cite29†+ L68: cite35†G-85-B-25-S | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 25 installed  | cite29†+ L69: cite36†G-85-B-33 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 33 installed  | cite29†+ L70: cite37†G-85-B-38 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 38 installed  | cite29†+ L71: cite38†G-85-B-43 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 43 installed  | cite29†+ L72: cite39†G-85-B-48-S | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 48 installed  | cite29†+ L73: cite40†G-85-B-53 | G-85B Golf Rotor, full-/part-circle, block check valve, 1¼" Acme inlet, nozzle 53 installed  | cite29†+ L74: Showing 1 - 12 of 12
+L75: 
+L76: cite41†Image: G-85-B L77: 
+L78: [Input]
+L79: 
+L80: G-85-B
+L81: 
+L82: G-85-B
+L83: 
+L84: Ordering Number [Input]
+L85: 
+L86: [Input] [Input]
+L87: 
+L88: Qty [Input]
+L89: 
+L90: Notes [Input: Add a note...]
+L91: 
+L92: [Button: Add to list]
+L93: 
+L94: User installed options
+L95: 
+L96: [Input]
+L97: #### Product added to list
+L98: 
+L99: The following product was added to ""
+L100: 
+L101: QTY
+L102: 
+L103: cite42†Review your list L104: 
+L105: cite29†Continue L106: 
+L107: [Input] [Input]
+L108: 
+L109: ## Create a new My List.
+L110: 
+L111: ## Log in to access this feature
+L112: 
+L113: Log in using your Hunter Account
+L114: 
+L115: Username [Input]
+L116: 
+L117: Password [Input]
+L118: 
+L119: [Input] [Input] [Input]
+L120: 
+L121: [Button: Sign In]
+L122: 
+L123: cite43†Contact your local distributor for product availability and ordering. L124: 
+L125: ## Specifications
+L126: 
+L127: ### MODEL SPECIFICATIONS
+L128: 
+L129:   * True Full circle/Adjustable Part circle (60° to 360°)
+L130: ### MODEL VARIATIONS
+L131: 
+L132:   B = Block checks up to 2 m in elevation change
+L133: 
+L134: ### NOZZLE RANGE
+L135: 
+L136:   * #10 to #53
+L137: 
+L138: ### NOZZLE CHOICE
+L139: 
+L140:   * 12 standard trajectory (22.5 degrees)
+L141:   * 9 low-angle trajectory (15 degrees)
+L142: ### OPERATING SPECIFICATIONS
+L143: 
+L144:   * Discharge rate: 1.86 to 13.06 m^{3}/hr; 31.0 to 217.7 l/min
+L145:   * Radius: 13.1 to 27.7 m
+L146:   * Pressure range: 3.4 to 6.9 bars; 340 to 690 kPa
+L147:   * Pressure rating: 10 bars; 1,000 kPa
+L148: 
+L149: * * *
+L150: 
+L151: cite44† Download Product Spec Sheet L152: 
+L153: cite45†  Download Written Specifications (in English) L154: ## Videos
+L155: 
+L156: G85 Holds Its Arc
+L157: 
+L158: Learn about the G85 and how it holds its arc!
+L159: 
+L160: Hunter Golf - Rotor Manufacturing Factory Tour
+L161: 
+L162: See the entire process of how a Hunter Golf Rotor is manufactured and assembled in this Director Commentary narrated video.
+L163: 
+L164: cite46†All Product Videos L165: ## Features
+L166: 
+L167: Boasting the highest torque output of any golf rotor on the market, the G-85’s patented gear drive will push through anything that gets in its way. Try it yourself and see. With just one rotation of the turret by hand, you can clearly feel this rotor’s formidable durability. With such a powerful core, an array of efficient nozzles, and true full circle and part circle capabilities, the new G-885 is the golf rotor you can always count on.
+L168: With a Block rotor design, the G-85 is a cost-competitive and highly reliable performer. It is the perfect choice for new construction, retrofit, and system upgrade situations that call for a Block rotor configuration.
+L169: #### Key Benefits
+L170: 
+L171: Full circle/Adjustable part circle (60° to 360°)
+L172: 
+L173: QuickCheck arc mechanism
+L174: 
+L175: QuickSet-360 arc mechanism
+L176: 
+L177: Exclusive PressurePort™ nozzle technology
+L178: 
+L179: Contour “Back-Nozzle” capabilities
+L180: 
+L181: Ratcheting stainless steel riser
+L182: 
+L183: Water lubricated gear-drive
+L184: 
+L185: Check height up to 2 m in elevation change
+L186: 
+L187: Dual trajectory color-coded nozzles: 12 standard trajectory (22.5°) and 9 low-angle trajectory (15°)
+L188: 
+L189: #### Advanced Features
+L190: ### G85B Dual Nozzle Trajectory Flexibility
+L191: 
+L192: Choose from the wide assortment of efficient wind-fighting 22.5° standard trajectory nozzles or, the 15° low-angle trajectory nozzles. Either way, there is a perfect match for your unique course conditions and problem-solving needs. Regardless of the version you choose, changing nozzles is fast and easy with Hunter’s exclusive QuickChange technology.
+L193: 
+L194: 22.5° Standard trajectory nozzles
+L195: 
+L196: cite47†Image L197: 
+L198: 15° Low-angle trajectory nozzles
+L199: 
+L200: cite48†Image L201: ### B Series Rotors are Yardage Marker Capable
+L202: 
+L203: All B Series rotors have a recessed area on the flange to accommodate installation of custom yardage markers.
+L204: 
+L205: cite49†Image: Yardage Marker on Golf Rotor  L206: 
+L207: ## Charts
+L208: 
+L209: ### G85B Dimensions
+L210: 
+L211:    | cite50†Image G85B
+L212: --- | ---
+L213: Overall Height  | 24.5 cm
+L214: Pop-up Height  | 9.5 cm
+L215: Flange Diameter  | 13.7 cm
+L216: Inlet Size  | 1-1/4" Female ACME
+L217: ### TTS-885 / G885 / G85B Nozzle Performance Data*
+L218: TTS-885 / G885 / G85B Nozzle Performance Data* - Metric
+L219: ---
+L220: Nozzle  | Pressure  | Radius  | Flow  | Precip mm/hr
+L221:    |    |    | bar  | kPa  | m  | m³/hr  | l/min  | cite51†Image | cite52†Image L222: Orange
+L223: cite53†Image L224: 803603  | 10 • Lt. Green  | Dk. Green
+L225: cite54†Image L226: 315312  | 3.4  | 344  | 11.3  | 2.02  | 33.7  | 15.9  | 18.4
+L227: 4.1  | 413  | 11.9  | 2.23  | 37.1  | 15.8  | 18.2
+L228: 4.5  | 450  | 12.5  | 2.32  | 38.6  | 14.8  | 17.1
+L229: -  | -  | -  | -  | -  | -  | -
+L230: -  | -  | -  | -  | -  | -  | -
+L231: Orange
+L232: cite53†Image L233: 803603  | 13 • Lt. Blue  | White
+L234: cite55†Image L235: 315314  | 3.4  | 344  | 14.3  | 2.59  | 43.2  | 12.6  | 14.6
+L236: 4.1  | 413  | 14.6  | 2.79  | 46.6  | 13.1  | 15.1
+L237: 4.5  | 450  | 14.9  | 2.93  | 48.8  | 13.1  | 15.2
+L238: -  | -  | -  | -  | -  | -  | -
+L239: -  | -  | -  | -  | -  | -  | -
+L240: Orange
+L241: cite53†Image L242: 803603  | 15 • White  | White
+L243: cite55†Image L244: 315314  | 3.4  | 344  | 15.9  | 2.93  | 48.8  | 11.7  | 13.5
+L245: 4.1  | 413  | 15.9  | 3.29  | 54.9  | 13.1  | 15.1
+L246: 4.5  | 450  | 16.2  | 3.38  | 56.4  | 13.0  | 15.0
+L247: 4.8  | 482  | 16.2  | 3.52  | 58.7  | 13.5  | 15.6
+L248: 5.5  | 551  | 16.5  | 3.75  | 62.5  | 13.8  | 16.0
+L249: Orange
+L250: cite53†Image L251: 803603  | 18 • Orange  | Lt. Green
+L252: cite56†Image L253: 315313  | 3.4  | 344  | 17.4  | 3.77  | 62.8  | 12.5  | 14.4
+L254: 4.1  | 413  | 17.7  | 4.04  | 67.4  | 12.9  | 14.9
+L255: 4.5  | 450  | 18.0  | 4.23  | 70.4  | 13.1  | 15.1
+L256: 4.8  | 482  | 18.3  | 4.41  | 73.4  | 13.2  | 15.2
+L257: 5.5  | 551  | 18.6  | 4.66  | 77.6  | 13.5  | 15.6
+L258: Orange
+L259: cite53†Image L260: 803603  | 20 • Tan  | Lt. Green
+L261: cite56†Image L262: 315313  | 3.4  | 344  | 18.0  | 4.07  | 67.8  | 12.6  | 14.5
+L263: 4.1  | 413  | 18.6  | 4.43  | 73.8  | 12.8  | 14.8
+L264: 4.5  | 450  | 18.9  | 4.50  | 75.0  | 12.6  | 14.5
+L265: 4.8  | 482  | 19.2  | 4.68  | 78.0  | 12.7  | 14.7
+L266: 5.5  | 551  | 19.5  | 5.02  | 83.7  | 13.2  | 15.2
+L267: Orange
+L268: cite53†Image L269: 803603  | 23 • Green  | Lt. Green
+L270: cite56†Image L271: 315313  | 3.4  | 344  | 19.8  | 4.59  | 76.5  | 11.7  | 13.5
+L272: 4.1  | 413  | 20.1  | 5.02  | 83.7  | 12.4  | 14.3
+L273: 4.5  | 450  | 20.4  | 5.43  | 90.5  | 13.0  | 15.0
+L274: 4.8  | 482  | 20.4  | 5.50  | 91.6  | 13.2  | 15.2
+L275: 5.5  | 551  | 21.0  | 5.88  | 98.0  | 13.3  | 15.4
+L276: Red
+L277: cite57†Image L278: 803602  | 25 • Blue  | Green
+L279: cite58†Image L280: 315310  | 4.5  | 450  | 21.6  | 6.43  | 107.1  | 13.7  | 15.8
+L281: 4.8  | 482  | 21.9  | 6.66  | 110.9  | 13.8  | 16.0
+L282: 5.5  | 551  | 22.3  | 7.16  | 119.2  | 14.5  | 16.7
+L283: 6.2  | 620  | 22.6  | 7.59  | 126.4  | 14.9  | 17.2
+L284: 6.9  | 689  | 22.9  | 8.04  | 134.0  | 15.4  | 17.8
+L285: Red
+L286: cite57†Image L287: 803602  | 33 • Grey  | Green
+L288: cite58†Image L289: 315310  | 4.5  | 450  | 21.9  | 6.95  | 115.8  | 14.4  | 16.7
+L290: 4.8  | 482  | 22.3  | 7.18  | 119.6  | 14.5  | 16.7
+L291: 5.5  | 551  | 22.9  | 7.70  | 128.3  | 14.7  | 17.0
+L292: 6.2  | 620  | 23.5  | 8.13  | 135.5  | 14.8  | 17.0
+L293: 6.9  | 689  | 24.1  | 8.61  | 143.5  | 14.8  | 17.1
+L294: Red
+L295: cite57†Image L296: 803602  | 38 • Red  | Green
+L297: cite58†Image L298: 315310  | 4.5  | 450  | 23.2  | 7.93  | 132.1  | 14.8  | 17.1
+L299: 4.8  | 482  | 23.8  | 8.22  | 137.0  | 14.5  | 16.8
+L300: 5.5  | 551  | 24.4  | 8.88  | 148.0  | 14.9  | 17.2
+L301: 6.2  | 620  | 25.0  | 9.36  | 156.0  | 15.0  | 17.3
+L302: 6.9  | 689  | 25.6  | 9.88  | 164.7  | 15.1  | 17.4
+L303: Red
+L304: cite57†Image L305: 803602  | 43 • Dk. Brown  | Green
+L306: cite58†Image L307: 315310  | -  | -  | -  | -  | -  | -  | -
+L308: 4.8  | 482  | 24.7  | 9.36  | 156.0  | 15.4  | 17.7
+L309: 5.5  | 551  | 25.3  | 9.88  | 164.7  | 15.4  | 17.8
+L310: 6.2  | 620  | 26.2  | 10.49  | 174.9  | 15.3  | 17.6
+L311: 6.9  | 689  | 27.1  | 11.06  | 184.3  | 15.0  | 17.4
+L312: Dk. Red
+L313: cite59†Image L314: 803601  | 48 • Dk. Green  | Dk. Green
+L315: cite54†Image L316: 315312  | -  | -  | -  | -  | -  | -  | -
+L317: 4.8  | 482  | 25.3  | 10.52  | 175.3  | 16.4  | 19.0
+L318: 5.5  | 551  | 25.9  | 10.99  | 183.2  | 16.4  | 18.9
+L319: 6.2  | 620  | 27.1  | 11.74  | 195.7  | 16.0  | 18.4
+L320: 6.9  | 689  | 27.7  | 12.38  | 206.3  | 16.1  | 18.6
+L321: Dk. Red
+L322: cite59†Image L323: 803601  | 53 • Dk. Blue  | Dk. Green
+L324: cite54†Image L325: 315312  | -  | -  | -  | -  | -  | -  | -
+L326: 4.8  | 482  | 26.5  | 11.52  | 191.9  | 16.4  | 18.9
+L327: 5.5  | 551  | 27.1  | 12.06  | 201.0  | 16.4  | 18.9
+L328: 6.2  | 620  | 28.0  | 12.81  | 213.5  | 16.3  | 18.8
+L329: 6.9  | 689  | 28.7  | 13.54  | 225.6  | 16.5  | 19.0
+L330: Note: Nozzle plug P/N 315300 installed in the back side of the nozzle housing.
+L331: Nozzles #10 thru #20 and low-angle nozzles available summer 2013.
+L332: ### Contour Back-Nozzle Performance Data
+L333: P/N  | Color  | Profile  | 4.5 Bar  | 5.5 Bar
+L334: --- | --- | --- | --- | ---
+L335: Metres  | L/M  | Metres  | L/M
+L336: --- | --- | --- | ---
+L337: 803604  | Peach  | cite60†Image | 7.6  | 12.9  | 8.2  | 14.8
+L338: 803603  | Orange  | cite61†Image | 8.5  | 14.4  | 8.8  | 15.9
+L339: 803602  | Red  | cite62†Image | 9.4  | 15.9  | 10.1  | 17.0
+L340: 803601  | Dk. Red  | cite63†Image | 10.4  | 17.4  | 11.0  | 18.5
+L341: 315314  | White  | cite64†Image | 11.3  | 10.6  | 11.6  | 11.0
+L342: 315313  | Lt. Green  | cite65†Image | 12.8  | 16.3  | 13.4  | 17.8
+L343: 315310  | Green  | cite66†Image | 14.0  | 19.7  | 14.6  | 21.6
+L344: 315312  | Dk. Green  | cite67†Image | 14.9  | 29.9  | 15.5  | 33.3
+L345: ## CONTOUR BACK-NOZZLES
+L346: 
+L347: cite68†Image L348: 
+L349: ## Documents
+L350: ### Select Type
+L351: 
+L352:   * All Documents
+L353:   * Manuals
+L354:   * Marketing
+L355:   * Specifications
+L356:   * Replacement Parts
+L357: 
+L358: Hunter Golf Catalogue
+L359: 
+L360: cite29†Select Language  L361: 
+L362: Golf Rotors Installation Details (PDF)
+L363: 
+L364: cite69†Download   L365: 
+L366: Golf Rotors Installation Details (DWG)
+L367: 
+L368: cite70†Download   L369: 
+L370: Golf Rotors Installation Details (DXF)
+L371: 
+L372: cite71†Download   L373: 
+L374: G-84 and G-85 Product Cutsheet
+L375: 
+L376: cite29†Select Language  L377: 
+L378: cite72†Metric   L379: 
+L380: cite73†Spanish   L381: 
+L382: cite74†Italian   L383: 
+L384: cite75†French   L385: 
+L386: cite76†Portuguese - Brazil   L387: 
+L388: cite77†German   L389: 
+L390: cite78†Turkish   L391: 
+L392: cite79†Polish   L393: cite80†Russian   L394: 
+L395: cite81†Arabic   L396: 
+L397: cite82†Hungarian   L398: 
+L399: cite83†Slovak   L400: 
+L401: cite29†Show all documents L402: ## Photos
+L403: 
+L404: ## Studio Photos
+L405: 
+L406: cite29†Image L407: 
+L408: cite84†Image L409: 
+L410: File:
+L411: 
+L412: g85b-with-hsj.jpg
+L413: 
+L414: Classification:
+L415: 
+L416: Studio
+L417: 
+L418: Product Line:
+L419: 
+L420: Golf Rotor
+L421: 
+L422: Products:
+L423: 
+L424: cite85†G-85-B L425: 
+L426: Keywords:
+L427: 
+L428: cite86†Image Page L429: 
+L430: * * *
+L431: 
+L432: #### Download Image
+L433: 
+L434: cite87†Medium cite88†Original L435: 
+L436: By clicking download, you agree to our cite29†terms and conditions .
+L437: ### Photo Usage Disclaimer
+L438: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L439: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L440: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L441: 
+L442: cite29†Image L443: 
+L444: cite89†Image L445: 
+L446: File:
+L447: 
+L448: g85b_rt.jpg
+L449: 
+L450: Classification:
+L451: 
+L452: Studio
+L453: 
+L454: Product Line:
+L455: 
+L456: Golf Rotor
+L457: 
+L458: Products:
+L459: 
+L460: cite85†G-85-B L461: 
+L462: Keywords:
+L463: 
+L464: cite90†Image Page L465: 
+L466: * * *
+L467: #### Download Image
+L468: 
+L469: cite91†Medium cite92†Original L470: 
+L471: By clicking download, you agree to our cite29†terms and conditions .
+L472: ### Photo Usage Disclaimer
+L473: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L474: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L475: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L476: ## Compatible Products
+L477: 
+L478: cite93†HSJ Swing Joints L479: 
+L480: Hunter HSJ Swing Joints by LASCO, are the product of a proven team with time-tested solutions for the irrigation market. Just as Hunter is the recognized world leader in rotor manufacturing and customer support, LASCO is the recognized world leader in irrigation fittings and customer support.
+L481: 
+L482: cite93†View Product L483: 
+L484: cite94†G-80-B L485: 
+L486: Easy to adjust and maintain, Hunter's G80B golf and large turf rotor is also the ideal choice for the customer on a budget.
+L487: cite94†View Product L488: 
+L489: cite95†G-75-B L490: 
+L491: Easy to adjust and maintain, Hunter's G-75 golf and large turf rotor is also the ideal choice for the customer on a budget.
+L492: 
+L493: cite95†View Product L494: 
+L495: cite96†G-70-B L496: 
+L497: Easy to adjust and maintain, Hunter's G-70 golf and large turf rotor is also the ideal choice for the customer on a budget.
+L498: 
+L499: cite96†View Product L500: 
+L501: cite97†G-35-B L502: 
+L503: Easy to adjust and maintain, Hunter's G-35 golf and large turf rotor is also the ideal choice for the customer on a budget.
+L504: 
+L505: cite97†View Product L506:   * cite43†Find a Distributor L507:   * cite98†Contact Sales L508: 
+L509: cite99†Find Hunter L510: 
+L511: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite100†Privacy Policy |
+

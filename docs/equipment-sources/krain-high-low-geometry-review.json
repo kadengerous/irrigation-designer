@@ -1,0 +1,81 @@
+{
+  "verifiedOn": "2026-10-04",
+  "modelIds": [
+    "P15HL",
+    "FN-15HL"
+  ],
+  "orientationVerified": true,
+  "origin": {
+    "x": 0,
+    "y": 0,
+    "meaning": "Nozzle dot lies at horizontal center of shared seam between upper curved lobe and lower rectangle."
+  },
+  "coordinateConvention": "Screen coordinates: x right, y down. Relative nozzle orientation can be rotated.",
+  "upperBounds": "x in [-lengthM/2,+lengthM/2], y in [-highDepthM,0]",
+  "lowerRectangle": "x in [-lengthM/2,+lengthM/2], y in [0,lowWidthM]",
+  "exactUpperCurveVerified": false,
+  "reason": "The icon resembles a semicircle, but separately published high width/depth and total span do not exactly match a circle, particularly 4.6 by 9.8 m (15 by 32 ft). No equations or measured boundary coordinates were found.",
+  "existingFieldCaveat": "highRadiusM contains the printed High depth, not a verified isotropic radius; a new highDepthM name would be more precise.",
+  "proposedSemicircleVerified": false,
+  "possibleApproximation": {
+    "type": "upper-half-ellipse-plus-lower-rectangle",
+    "xRadius": "lengthM/2",
+    "yRadius": "highDepthM",
+    "status": "Engineering visualization approximation preserving printed bounds; not manufacturer-certified exact geometry."
+  },
+  "performance": [
+    {
+      "pressureBar": 1.5,
+      "pressurePsiAsPrinted": 20,
+      "highDepthM": 4.3,
+      "highSpanM": 8.5,
+      "lowDepthM": 1.2,
+      "lowSpanM": 8.5,
+      "flowLMin": 9.5
+    },
+    {
+      "pressureBar": 2.0,
+      "pressurePsiAsPrinted": 30,
+      "highDepthM": 4.6,
+      "highSpanM": 9.8,
+      "lowDepthM": 1.5,
+      "lowSpanM": 9.8,
+      "flowLMin": 11.4
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "printedPage": 49,
+      "pdfPageIndex": 48,
+      "evidence": "Both US and metric icons show origin and lobes; High dimensions and first Low dimensions printed. Second Low dimensions blank."
+    },
+    {
+      "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+      "printedPage": null,
+      "pdfPageIndex": 1,
+      "evidence": "Page 2 explicitly supplies second Low dimensions 5 by 32 ft / 1.5 by 9.8 m; confirms same schematic."
+    },
+    {
+      "url": "https://www.krain.com/fixed-nozzles/fixed-pattern-high-low-female-nozzle-fn--15hl",
+      "evidence": "Current product identity FN-15HL confirms current catalog FN-5HL table typo."
+    },
+    {
+      "url": "https://www.krain.com/fixed-nozzles/fixed-pattern-high-low-male-nozzle-p15hl",
+      "evidence": "Current product identity P15HL."
+    }
+  ],
+  "needsReviewReasonsBeyondUnsupportedGeometry": [
+    "Pressure columns print 20/30 psi versus 1.5/2.0 bar, inconsistent with normal one-decimal conversion (1.4/2.1 bar).",
+    "Current 2026 second Low dimensions omitted, supplied from older linked official brochure.",
+    "Female table label FN-5HL conflicts with model listing and current product FN-15HL.",
+    "Curved-lobe schematic does not establish exact circle versus ellipse; at second pressure published total span exceeds twice high depth."
+  ],
+  "notPublished": [
+    "Boundary coordinates or exact curve equation",
+    "Flow split between high and low lobes",
+    "Precipitation rates by lobe",
+    "Manufacturer pressure interpolation law",
+    "Reduced-radius discharge points"
+  ]
+}

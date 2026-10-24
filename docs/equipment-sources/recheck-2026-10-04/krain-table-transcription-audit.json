@@ -1,0 +1,410 @@
+{
+  "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+  "modelsChecked": 67,
+  "rowsChecked": 764,
+  "checks": [
+    {
+      "modelId": "MiniPro",
+      "rowsChecked": 15,
+      "sourcePage": 7,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RPS50",
+      "rowsChecked": 15,
+      "sourcePage": 8,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RPS75",
+      "rowsChecked": 48,
+      "sourcePage": 11,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RPS75-PR",
+      "rowsChecked": 48,
+      "sourcePage": 11,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RPS75i",
+      "rowsChecked": 54,
+      "sourcePage": 15,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RPS75i-PR",
+      "rowsChecked": 54,
+      "sourcePage": 15,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RPS-Select",
+      "rowsChecked": 20,
+      "sourcePage": 17,
+      "exactMatch": true
+    },
+    {
+      "modelId": "ProPlus",
+      "rowsChecked": 52,
+      "sourcePage": 19,
+      "exactMatch": true
+    },
+    {
+      "modelId": "SuperPro",
+      "rowsChecked": 54,
+      "sourcePage": 22,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN100-ADJ",
+      "rowsChecked": 9,
+      "sourcePage": 43,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN200-ADJ",
+      "rowsChecked": 9,
+      "sourcePage": 43,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN300-ADJ",
+      "rowsChecked": 9,
+      "sourcePage": 43,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KVF6",
+      "rowsChecked": 16,
+      "sourcePage": 44,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KVF8",
+      "rowsChecked": 16,
+      "sourcePage": 44,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KVF10",
+      "rowsChecked": 16,
+      "sourcePage": 44,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KVF12",
+      "rowsChecked": 16,
+      "sourcePage": 45,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KVF15",
+      "rowsChecked": 16,
+      "sourcePage": 45,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KVF17",
+      "rowsChecked": 16,
+      "sourcePage": 45,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KV8",
+      "rowsChecked": 16,
+      "sourcePage": 46,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KV10",
+      "rowsChecked": 16,
+      "sourcePage": 46,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KV12",
+      "rowsChecked": 16,
+      "sourcePage": 46,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KV15",
+      "rowsChecked": 16,
+      "sourcePage": 47,
+      "exactMatch": true
+    },
+    {
+      "modelId": "KV17",
+      "rowsChecked": 16,
+      "sourcePage": 47,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-8Q",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-8H",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-8TQ",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-8F",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-10Q",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-10H",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-10TQ",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-10F",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-12Q",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-12H",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-12TQ",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-12F",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-15Q",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-15H",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-15TQ",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-15F",
+      "rowsChecked": 3,
+      "sourcePage": 48,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P12Q",
+      "rowsChecked": 4,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P12H",
+      "rowsChecked": 4,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P12TQ",
+      "rowsChecked": 4,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P12F",
+      "rowsChecked": 4,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P15Q",
+      "rowsChecked": 4,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P15H",
+      "rowsChecked": 4,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P15TQ",
+      "rowsChecked": 4,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P15F",
+      "rowsChecked": 4,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN100-ADJ-90-210",
+      "rowsChecked": 15,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN100-ADJ-210-270",
+      "rowsChecked": 10,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN100-FIX360",
+      "rowsChecked": 5,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN200-ADJ-90-210",
+      "rowsChecked": 15,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN200-ADJ-210-270",
+      "rowsChecked": 10,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN200-FIX360",
+      "rowsChecked": 5,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN300-ADJ-90-210",
+      "rowsChecked": 15,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN300-ADJ-210-270",
+      "rowsChecked": 10,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RN300-FIX360",
+      "rowsChecked": 5,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RNS-RES-515",
+      "rowsChecked": 5,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RNS-LES-515",
+      "rowsChecked": 5,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "RNS-SS-530",
+      "rowsChecked": 5,
+      "sourcePage": 40,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P15CS",
+      "rowsChecked": 2,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-15CS",
+      "rowsChecked": 2,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P15ES",
+      "rowsChecked": 2,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-15ES",
+      "rowsChecked": 2,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P15SS",
+      "rowsChecked": 2,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-15SS",
+      "rowsChecked": 2,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "P15HL",
+      "rowsChecked": 2,
+      "sourcePage": 49,
+      "exactMatch": true
+    },
+    {
+      "modelId": "FN-15HL",
+      "rowsChecked": 2,
+      "sourcePage": 49,
+      "exactMatch": true
+    }
+  ],
+  "differences": []
+}

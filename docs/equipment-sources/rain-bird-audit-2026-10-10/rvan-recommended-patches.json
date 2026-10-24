@@ -1,0 +1,391 @@
+{
+  "auditedOn": "2026-10-10",
+  "applicationFilesEdited": false,
+  "recommended": [
+    {
+      "modelId": "R-VAN14",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "radiusAdjustment.minimumRadiusM",
+      "oldPresent": false,
+      "old": null,
+      "new": 2.4,
+      "source": "https://www.rainbird.com/media/5918",
+      "page": 2,
+      "reason": "Make the published absolute reduced-radius floor explicit. Preserve minimumRatio=0 and flowPolicy=unknown; do not replace it with a universal percentage."
+    },
+    {
+      "modelId": "R-VAN14",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN14",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN18",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "radiusAdjustment.minimumRadiusM",
+      "oldPresent": false,
+      "old": null,
+      "new": 4.0,
+      "source": "https://www.rainbird.com/media/5918",
+      "page": 2,
+      "reason": "Make the published absolute reduced-radius floor explicit. Preserve minimumRatio=0 and flowPolicy=unknown; do not replace it with a universal percentage."
+    },
+    {
+      "modelId": "R-VAN18",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN18",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN24",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "radiusAdjustment.minimumRadiusM",
+      "oldPresent": false,
+      "old": null,
+      "new": 5.2,
+      "source": "https://www.rainbird.com/media/5918",
+      "page": 2,
+      "reason": "Make the published absolute reduced-radius floor explicit. Preserve minimumRatio=0 and flowPolicy=unknown; do not replace it with a universal percentage."
+    },
+    {
+      "modelId": "R-VAN24",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN24",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN18-360",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "radiusAdjustment.minimumRadiusM",
+      "oldPresent": false,
+      "old": null,
+      "new": 4.0,
+      "source": "https://www.rainbird.com/media/5918",
+      "page": 2,
+      "reason": "Make the published absolute reduced-radius floor explicit. Preserve minimumRatio=0 and flowPolicy=unknown; do not replace it with a universal percentage."
+    },
+    {
+      "modelId": "R-VAN18-360",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN18-360",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN14-360",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "radiusAdjustment.minimumRadiusM",
+      "oldPresent": false,
+      "old": null,
+      "new": 2.4,
+      "source": "https://www.rainbird.com/media/5918",
+      "page": 2,
+      "reason": "Make the published absolute reduced-radius floor explicit. Preserve minimumRatio=0 and flowPolicy=unknown; do not replace it with a universal percentage."
+    },
+    {
+      "modelId": "R-VAN14-360",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN14-360",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN24-360",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "radiusAdjustment.minimumRadiusM",
+      "oldPresent": false,
+      "old": null,
+      "new": 5.2,
+      "source": "https://www.rainbird.com/media/5918",
+      "page": 2,
+      "reason": "Make the published absolute reduced-radius floor explicit. Preserve minimumRatio=0 and flowPolicy=unknown; do not replace it with a universal percentage."
+    },
+    {
+      "modelId": "R-VAN24-360",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN24-360",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN-SST",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "rNom",
+      "old": 9.8,
+      "new": 9.1,
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "page": 2,
+      "reason": "Use strip length at recommended 3.1 bar, matching the advertised strip dimensions and default strip. Existing rNom incorrectly uses maximum-pressure length."
+    },
+    {
+      "modelId": "R-VAN-SST",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN-SST",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN-LCS",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "rNom",
+      "old": 4.9,
+      "new": 4.6,
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "page": 2,
+      "reason": "Use strip length at recommended 3.1 bar, matching the advertised strip dimensions and default strip. Existing rNom incorrectly uses maximum-pressure length."
+    },
+    {
+      "modelId": "R-VAN-LCS",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN-LCS",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN-RCS",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "rNom",
+      "old": 4.9,
+      "new": 4.6,
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "page": 2,
+      "reason": "Use strip length at recommended 3.1 bar, matching the advertised strip dimensions and default strip. Existing rNom incorrectly uses maximum-pressure length."
+    },
+    {
+      "modelId": "R-VAN-RCS",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    },
+    {
+      "modelId": "R-VAN-RCS",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "field": "verifiedOn",
+      "old": "2026-10-04",
+      "new": "2026-10-10",
+      "source": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "reason": "All published hydraulic rows were freshly compared; source version is unchanged. This date does not claim exact color-shade verification."
+    }
+  ],
+  "optionalGeometryNormalizations": [
+    {
+      "modelId": "R-VAN-LCS",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "fields": [
+        {
+          "field": "arcMin",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "field": "arcMax",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "field": "nozzles[0].performance[*].arcDeg",
+          "old": 180,
+          "new": 90,
+          "rows": 6
+        }
+      ],
+      "evidenceKind": "geometric-normalization-not-published-numeric-angle",
+      "source": "https://www.rainbird.com/media/5918",
+      "pages": [
+        1,
+        2
+      ],
+      "reason": "A corner-origin rectangular pattern occupies one quadrant. Manufacturer calls it Left/Right Corner Strip, without specifying a numeric circular sector. Normalize the internal angular envelope to 90 only if this metadata is retained for strips; preserve rectangle offsets/dimensions and manual-only placement. Do not reinterpret as a 90-degree circular sprinkler or scale the published flow."
+    },
+    {
+      "modelId": "R-VAN-LCS",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "fields": [
+        {
+          "field": "arcMin",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "field": "arcMax",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "field": "performance[*].arcDeg",
+          "old": 180,
+          "new": 90,
+          "rows": 6
+        }
+      ],
+      "evidenceKind": "geometric-normalization-not-published-numeric-angle",
+      "source": "https://www.rainbird.com/media/5918",
+      "pages": [
+        1,
+        2
+      ],
+      "reason": "A corner-origin rectangular pattern occupies one quadrant. Manufacturer calls it Left/Right Corner Strip, without specifying a numeric circular sector. Normalize the internal angular envelope to 90 only if this metadata is retained for strips; preserve rectangle offsets/dimensions and manual-only placement. Do not reinterpret as a 90-degree circular sprinkler or scale the published flow."
+    },
+    {
+      "modelId": "R-VAN-RCS",
+      "file": "src/data/equipment/rain-bird-rvan.json",
+      "fields": [
+        {
+          "field": "arcMin",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "field": "arcMax",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "field": "nozzles[0].performance[*].arcDeg",
+          "old": 180,
+          "new": 90,
+          "rows": 6
+        }
+      ],
+      "evidenceKind": "geometric-normalization-not-published-numeric-angle",
+      "source": "https://www.rainbird.com/media/5918",
+      "pages": [
+        1,
+        2
+      ],
+      "reason": "A corner-origin rectangular pattern occupies one quadrant. Manufacturer calls it Left/Right Corner Strip, without specifying a numeric circular sector. Normalize the internal angular envelope to 90 only if this metadata is retained for strips; preserve rectangle offsets/dimensions and manual-only placement. Do not reinterpret as a 90-degree circular sprinkler or scale the published flow."
+    },
+    {
+      "modelId": "R-VAN-RCS",
+      "file": "src/data/rain-bird-rvan-performance.json",
+      "fields": [
+        {
+          "field": "arcMin",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "field": "arcMax",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "field": "performance[*].arcDeg",
+          "old": 180,
+          "new": 90,
+          "rows": 6
+        }
+      ],
+      "evidenceKind": "geometric-normalization-not-published-numeric-angle",
+      "source": "https://www.rainbird.com/media/5918",
+      "pages": [
+        1,
+        2
+      ],
+      "reason": "A corner-origin rectangular pattern occupies one quadrant. Manufacturer calls it Left/Right Corner Strip, without specifying a numeric circular sector. Normalize the internal angular envelope to 90 only if this metadata is retained for strips; preserve rectangle offsets/dimensions and manual-only placement. Do not reinterpret as a 90-degree circular sprinkler or scale the published flow."
+    }
+  ],
+  "hydraulicRowChanges": [],
+  "preserve": [
+    "All 198 pressure/flow/precipitation/dimension rows",
+    "Source document version 07/24 D42102; official upload 2025-10",
+    "minimumRatio=0 and flowPolicy=unknown",
+    "All existing strip rectangles and pressure-dependent stripPerformance dimensions",
+    "Existing exact color shades until independent visual verification; no invented official hex values",
+    "R-VAN body exclusions for 1802/1803 and PRS variants"
+  ]
+}

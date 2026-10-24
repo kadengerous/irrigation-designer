@@ -1,0 +1,1879 @@
+[
+  {
+    "itemId": "k-rain:MiniPro",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 6,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 6
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 6
+      },
+      "popUpMm": {
+        "stored": 102,
+        "selected": 102,
+        "matches": true,
+        "sourcePage": 6
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 6
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 6
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 6
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 6
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 6
+      },
+      "recommendedPressureMax": {
+        "stored": 3.4,
+        "selected": 3.4,
+        "matches": true,
+        "sourcePage": 6
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 6
+      },
+      "rMin": {
+        "stored": 5.5,
+        "selected": 5.5,
+        "matches": true,
+        "sourcePage": 7
+      },
+      "rMax": {
+        "stored": 10.1,
+        "selected": 10.1,
+        "matches": true,
+        "sourcePage": 7
+      }
+    },
+    "rowCoverage": {
+      "base": 15,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.75; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown."
+    ]
+  },
+  {
+    "itemId": "k-rain:RPS50",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 8,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 8
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 8
+      },
+      "popUpMm": {
+        "stored": 102,
+        "selected": 102,
+        "matches": true,
+        "sourcePage": 8
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 8
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 8
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 8
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 8
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 8
+      },
+      "recommendedPressureMax": {
+        "stored": 3.4,
+        "selected": 3.4,
+        "matches": true,
+        "sourcePage": 8
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 8
+      },
+      "rMin": {
+        "stored": 5.5,
+        "selected": 5.5,
+        "matches": true,
+        "sourcePage": 8
+      },
+      "rMax": {
+        "stored": 10.1,
+        "selected": 10.1,
+        "matches": true,
+        "sourcePage": 8
+      }
+    },
+    "rowCoverage": {
+      "base": 15,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.75; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown.",
+      "Current 2026 trajectory 25 degrees is selected over linked written specification 26 degrees. Model-specific current catalog controls numeric performance/trajectory."
+    ]
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 9,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 9
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 9
+      },
+      "popUpMm": {
+        "stored": 111,
+        "selected": 111,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "recommendedPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "inlet": {
+        "stored": "3/4 in female NPT",
+        "selected": "3/4 in female NPT",
+        "matches": true,
+        "sourcePage": 9
+      },
+      "rMin": {
+        "stored": 6.7,
+        "selected": 6.7,
+        "matches": true,
+        "sourcePage": 11
+      },
+      "rMax": {
+        "stored": 15.5,
+        "selected": 15.5,
+        "matches": true,
+        "sourcePage": 11
+      }
+    },
+    "rowCoverage": {
+      "base": 48,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.75; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown."
+    ]
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 9,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 9
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 9
+      },
+      "popUpMm": {
+        "stored": 162,
+        "selected": 162,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "recommendedPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 9
+      },
+      "inlet": {
+        "stored": "3/4 in female NPT",
+        "selected": "3/4 in female NPT",
+        "matches": true,
+        "sourcePage": 9
+      },
+      "rMin": {
+        "stored": 6.7,
+        "selected": 6.7,
+        "matches": true,
+        "sourcePage": 11
+      },
+      "rMax": {
+        "stored": 14.6,
+        "selected": 14.6,
+        "matches": true,
+        "sourcePage": 11
+      }
+    },
+    "rowCoverage": {
+      "base": 48,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.75; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown.",
+      "45 PSI built-in regulator (about 3.1 bar). Use dedicated PR table as an inlet-pressure table; do not clamp input pressure before looking up this table. PR pressure plateau is intentional."
+    ]
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 12,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 12
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 12
+      },
+      "popUpMm": {
+        "stored": 108,
+        "selected": 108,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "recommendedPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "inlet": {
+        "stored": "3/4 in female NPT",
+        "selected": "3/4 in female NPT",
+        "matches": true,
+        "sourcePage": 12
+      },
+      "rMin": {
+        "stored": 7.9,
+        "selected": 7.9,
+        "matches": true,
+        "sourcePage": 15
+      },
+      "rMax": {
+        "stored": 15.2,
+        "selected": 15.2,
+        "matches": true,
+        "sourcePage": 15
+      }
+    },
+    "rowCoverage": {
+      "base": 54,
+      "reduced": 54,
+      "disputed": 0
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.5; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown."
+    ]
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 12,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 12
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 12
+      },
+      "popUpMm": {
+        "stored": 159,
+        "selected": 159,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "recommendedPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 12
+      },
+      "inlet": {
+        "stored": "3/4 in female NPT",
+        "selected": "3/4 in female NPT",
+        "matches": true,
+        "sourcePage": 12
+      },
+      "rMin": {
+        "stored": 7.9,
+        "selected": 7.9,
+        "matches": true,
+        "sourcePage": 15
+      },
+      "rMax": {
+        "stored": 14.6,
+        "selected": 14.6,
+        "matches": true,
+        "sourcePage": 15
+      }
+    },
+    "rowCoverage": {
+      "base": 54,
+      "reduced": 54,
+      "disputed": 0
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.5; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown.",
+      "45 PSI built-in regulator (about 3.1 bar). Use dedicated PR table as an inlet-pressure table; do not clamp input pressure before looking up this table. PR pressure plateau is intentional."
+    ]
+  },
+  {
+    "itemId": "k-rain:RPS-Select",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 16,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 16
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 16
+      },
+      "popUpMm": {
+        "stored": 111,
+        "selected": 111,
+        "matches": true,
+        "sourcePage": 16
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 16
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 16
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 16
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 16
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 16
+      },
+      "recommendedPressureMax": {
+        "stored": 3.4,
+        "selected": 3.4,
+        "matches": true,
+        "sourcePage": 16
+      },
+      "inlet": {
+        "stored": "3/4 in female NPT",
+        "selected": "3/4 in female NPT",
+        "matches": true,
+        "sourcePage": 16
+      },
+      "rMin": {
+        "stored": 10.1,
+        "selected": 10.1,
+        "matches": true,
+        "sourcePage": 17
+      },
+      "rMax": {
+        "stored": 14.0,
+        "selected": 14.0,
+        "matches": true,
+        "sourcePage": 17
+      }
+    },
+    "rowCoverage": {
+      "base": 20,
+      "reduced": 0,
+      "disputed": 2
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.75; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown.",
+      "Four built-in selectable nozzles; do not invent a factory-installed interchangeable nozzle or color code. Current 2026 trajectory 24 degrees takes precedence over older written specification 26 degrees."
+    ]
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 18,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 18
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 18
+      },
+      "popUpMm": {
+        "stored": 108,
+        "selected": 108,
+        "matches": true,
+        "sourcePage": 18
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 18
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 18
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 18
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 18
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 18
+      },
+      "recommendedPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 18
+      },
+      "inlet": {
+        "stored": "3/4 in female NPT",
+        "selected": "3/4 in female NPT",
+        "matches": true,
+        "sourcePage": 18
+      },
+      "rMin": {
+        "stored": 6.7,
+        "selected": 6.7,
+        "matches": true,
+        "sourcePage": 19
+      },
+      "rMax": {
+        "stored": 15.2,
+        "selected": 15.2,
+        "matches": true,
+        "sourcePage": 19
+      }
+    },
+    "rowCoverage": {
+      "base": 52,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.75; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown."
+    ]
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 20,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "rotor",
+        "selected": "rotor",
+        "matches": true,
+        "sourcePage": 20
+      },
+      "mountingKind": {
+        "stored": "integrated",
+        "selected": "integrated",
+        "matches": true,
+        "sourcePage": 20
+      },
+      "popUpMm": {
+        "stored": 121,
+        "selected": 121,
+        "matches": true,
+        "sourcePage": 20
+      },
+      "arcMin": {
+        "stored": 40,
+        "selected": 40,
+        "matches": true,
+        "sourcePage": 20
+      },
+      "arcMax": {
+        "stored": 360,
+        "selected": 360,
+        "matches": true,
+        "sourcePage": 20
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 20
+      },
+      "operatingPressureMax": {
+        "stored": 6.9,
+        "selected": 6.9,
+        "matches": true,
+        "sourcePage": 20
+      },
+      "recommendedPressureMin": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 20
+      },
+      "recommendedPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 20
+      },
+      "inlet": {
+        "stored": "3/4 in female NPT",
+        "selected": "3/4 in female NPT",
+        "matches": true,
+        "sourcePage": 20
+      },
+      "rMin": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 22
+      },
+      "rMax": {
+        "stored": 13.7,
+        "selected": 13.7,
+        "matches": true,
+        "sourcePage": 22
+      }
+    },
+    "rowCoverage": {
+      "base": 54,
+      "reduced": 54,
+      "disputed": 4
+    },
+    "notes": [
+      "Radius envelope is taken from actual pressure-specific metric performance rows, not the nominal marketing range.",
+      "All modeled bodies are integrated pop-up rotors; they do not require a separate spray body.",
+      "Base flow remains independent of selected operating arc; precipitation scales by 180/arc from the published 180-degree basis. Rotation speed/profile and spatial water distribution are not published here.",
+      "Recommended 2.8 bar application default remains explicitly marked as an application default, not an exclusive manufacturer optimum.",
+      "Permitted radius-adjustment lower ratio 0.5; radius-adjustment flow law remains unknown. Current catalog publishes 30% reduction tables only for RPS75i, RPS75i-PR, SuperPro; exact validated published reductions may be used, all other reduced-flow values remain unknown."
+    ]
+  },
+  {
+    "itemId": "k-rain:78002",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 38,
+        "selected": 38,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78003",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 64,
+        "selected": 64,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78004",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 89,
+        "selected": 89,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78004-PR30",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 89,
+        "selected": 89,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      },
+      "regulatedPressureBar": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 31
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Pro-S in-stem regulator is available on nominal 4/6/12-inch models at 30 or 40 PSI. Correct PR40 option label; retain printed 2.8 bar. Regulated outlet cannot exceed inlet pressure.",
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78004-PR40",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 89,
+        "selected": 89,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      },
+      "regulatedPressureBar": {
+        "stored": 2.8,
+        "selected": 2.8,
+        "matches": true,
+        "sourcePage": 31
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Pro-S in-stem regulator is available on nominal 4/6/12-inch models at 30 or 40 PSI. Correct PR40 option label; retain printed 2.8 bar. Regulated outlet cannot exceed inlet pressure.",
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78006",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 140,
+        "selected": 140,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78006-PR30",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 140,
+        "selected": 140,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      },
+      "regulatedPressureBar": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 31
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Pro-S in-stem regulator is available on nominal 4/6/12-inch models at 30 or 40 PSI. Correct PR40 option label; retain printed 2.8 bar. Regulated outlet cannot exceed inlet pressure.",
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78006-PR40",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 140,
+        "selected": 140,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      },
+      "regulatedPressureBar": {
+        "stored": 2.8,
+        "selected": 2.8,
+        "matches": true,
+        "sourcePage": 31
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Pro-S in-stem regulator is available on nominal 4/6/12-inch models at 30 or 40 PSI. Correct PR40 option label; retain printed 2.8 bar. Regulated outlet cannot exceed inlet pressure.",
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78012",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 292,
+        "selected": 292,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78012-PR30",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 292,
+        "selected": 292,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      },
+      "regulatedPressureBar": {
+        "stored": 2.1,
+        "selected": 2.1,
+        "matches": true,
+        "sourcePage": 31
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Pro-S in-stem regulator is available on nominal 4/6/12-inch models at 30 or 40 PSI. Correct PR40 option label; retain printed 2.8 bar. Regulated outlet cannot exceed inlet pressure.",
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:78012-PR40",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "popUpMm": {
+        "stored": 292,
+        "selected": 292,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "operatingPressureMax": {
+        "stored": 7.6,
+        "selected": 7.6,
+        "matches": true,
+        "sourcePage": 30
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 30,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 30
+      },
+      "regulatedPressureBar": {
+        "stored": 2.8,
+        "selected": 2.8,
+        "matches": true,
+        "sourcePage": 31
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Pro-S in-stem regulator is available on nominal 4/6/12-inch models at 30 or 40 PSI. Correct PR40 option label; retain printed 2.8 bar. Regulated outlet cannot exceed inlet pressure.",
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:NP2",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 32,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 32
+      },
+      "popUpMm": {
+        "stored": 51,
+        "selected": 51,
+        "matches": true,
+        "sourcePage": 32
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 32
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 32
+      },
+      "operatingPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 32
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 32,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 32
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:NP4",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 32,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 32
+      },
+      "popUpMm": {
+        "stored": 98,
+        "selected": 98,
+        "matches": true,
+        "sourcePage": 32
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 32
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 32
+      },
+      "operatingPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 32
+      },
+      "nozzleThread": {
+        "stored": "female",
+        "selected": "female",
+        "sourcePage": 32,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 32
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:73001",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 33,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 33
+      },
+      "popUpMm": {
+        "stored": 64,
+        "selected": 64,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 33
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "operatingPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "nozzleThread": {
+        "stored": "male",
+        "selected": "male",
+        "sourcePage": 33,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 33
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:74001",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 33,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 33
+      },
+      "popUpMm": {
+        "stored": 102,
+        "selected": 102,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 33
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "operatingPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "nozzleThread": {
+        "stored": "male",
+        "selected": "male",
+        "sourcePage": 33,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 33
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:76001",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 33,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 33
+      },
+      "popUpMm": {
+        "stored": 149,
+        "selected": 149,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 33
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "operatingPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "nozzleThread": {
+        "stored": "male",
+        "selected": "male",
+        "sourcePage": 33,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 33
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  },
+  {
+    "itemId": "k-rain:71201",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 33,
+    "checkedOn": "2026-10-06",
+    "fields": {
+      "category": {
+        "stored": "body",
+        "selected": "body",
+        "matches": true,
+        "sourcePage": 33
+      },
+      "popUpMm": {
+        "stored": 292,
+        "selected": 292,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "inlet": {
+        "stored": "1/2 in female NPT",
+        "selected": "1/2 in female NPT",
+        "matches": true,
+        "sourcePage": 33
+      },
+      "operatingPressureMin": {
+        "stored": 1.4,
+        "selected": 1.4,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "operatingPressureMax": {
+        "stored": 4.8,
+        "selected": 4.8,
+        "matches": true,
+        "sourcePage": 33
+      },
+      "nozzleThread": {
+        "stored": "male",
+        "selected": "male",
+        "sourcePage": 33,
+        "meaning": "Accepted nozzle thread, not own riser thread."
+      },
+      "mountingKind": {
+        "stored": "spray",
+        "selected": "spray",
+        "sourcePage": 33
+      }
+    },
+    "rowCoverage": {
+      "base": 0,
+      "reduced": 0,
+      "disputed": 0
+    },
+    "notes": [
+      "Actual published metric riser height is used; model nominal inches are not substituted for measured riser travel.",
+      "Body alone has no discharge/precipitation/radius table; paired compatible nozzle supplies hydraulic data.",
+      "Pro-S and NP accept female-threaded nozzles. K-Spray accepts male-threaded nozzles. Own riser-thread genders are the opposite."
+    ]
+  }
+]

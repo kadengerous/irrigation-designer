@@ -1,0 +1,172 @@
+ST-90 | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/st-system/st-90)
+citeturn301view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/st-system/st-90","lineno":120}); Total lines: 219
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite0†USA English L16:   * cite9†English Metric L17:   * cite10†Español L18:   * cite11†Italiano L19: 
+L20:   * cite12†Français L21:   * cite13†Português L22:   * cite14†Deutsch L23:   * cite15†Türkçe L24: 
+L25:   * cite16†Polski L26:   * cite17†Русский L27:   * cite18†العربية L28:   * cite19†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: # ST-90
+L36: 
+L37: The ST-90 synthetic turf rotor is designed for installation in natural turf adjacent to the playing surface — the perfect solution for small and midsize fields.
+L38: 
+L39: Application Synthetic Turf Sports Fields
+L40: 
+L41: Radius 103' to 120'
+L42: 
+L43: Flow 74.5 to 92.0 GPM
+L44: 
+L45: Inlet Size 1½" NPT
+L46: 
+L47: Product Line
+L48: 
+L49: ST System
+L50: 
+L51:   * cite20†Models L52:   * cite21†Specs L53:   * cite22†Features L54:   * cite23†Charts L55:   * cite24†Documents L56: ## Models
+L57: 
+L58: Model  | Description  | Add to List
+L59: --- | --- | ---
+L60: cite25†ST-90-73 | Synthetic turf rotor, 3" pop-up, jar-top cap, adjustable from 40° to 360°, 1½" NPT inlet, nozzle 73 installed  | cite26†+ L61: cite27†ST-90-83 | Synthetic turf rotor, 3" pop-up, jar-top cap, adjustable from 40° to 360°, 1½" NPT inlet, nozzle 83 installed  | cite26†+ L62: 
+L63: Showing 1 - 2 of 2
+L64: 
+L65: cite28†Image: ST-90 L66: 
+L67: [Input]
+L68: 
+L69: ST-90
+L70: 
+L71: ST-90
+L72: 
+L73: Ordering Number [Input]
+L74: 
+L75: [Input] [Input]
+L76: 
+L77: Qty [Input]
+L78: 
+L79: Notes [Input: Add a note...]
+L80: 
+L81: [Button: Add to list]
+L82: User installed options
+L83: 
+L84: [Input]
+L85: #### Product added to list
+L86: 
+L87: The following product was added to ""
+L88: 
+L89: QTY
+L90: 
+L91: cite29†Review your list L92: 
+L93: cite26†Continue L94: 
+L95: [Input] [Input]
+L96: 
+L97: ## Create a new My List.
+L98: 
+L99: ## Log in to access this feature
+L100: 
+L101: Log in using your Hunter Account
+L102: 
+L103: Username [Input]
+L104: 
+L105: Password [Input]
+L106: 
+L107: [Input] [Input] [Input]
+L108: 
+L109: [Button: Sign In]
+L110: 
+L111: cite30†Contact your local distributor for product availability and ordering. L112: 
+L113: ## Specifications
+L114: ### Operating Specifications
+L115: 
+L116:   * Radius: 103' to 120'
+L117:   * Flow: 74.5 to 92.0 GPM
+L118:   * Operating pressure range: 100 to 120 PSI
+L119:   * Precipitation rate: 1.25 in/hr approximately
+L120:   * Warranty period: 5 years for component parts
+L121: 
+L122: 
+L123: 
+L124: ### User-Installed Options
+L125: 
+L126:   * Rubber Cover Kit ST-90: P/N 234200
+L127: 
+L128: * * *
+L129: 
+L130: cite31† Download Product Spec Sheet L131: ## Features
+L132: 
+L133: The perfect solution for small-to-midsize synthetic turf field layouts. Designed for installation adjacent to the synthetic field, the ST-90 rotor provides a cost-competitive solution with a radius range up to 120'.
+L134: #### Key Benefits
+L135: 
+L136: Flexible arc adjustment from 40° to 360° offers narrow-to-wide coverage
+L137: 
+L138: QuickCheck™ Arc Mechanism lets you verify the arc setting without waiting for the sprinkler to finish its rotation
+L139: 
+L140: Through-the-top arc adjustment allows you to easily set the arc at the sprinkler head
+L141: 
+L142: Water-lubricated gear drive delivers reliable operation without clogging
+L143: 
+L144: Factory-installed rubber logo cap increases athlete safety on the field
+L145: 
+L146: Nozzle trajectory: 22.5°
+L147: 
+L148: #### Advanced Features
+L149: ### ST-90
+L150: 
+L151: cite32†Image†www.hunterindustries.com L152: 
+L153: The ST-90 rotor features jar-top access to the riser assembly for easy maintenance and a smaller exposed surface area that minimizes sprinkler contact for greater player safety.
+L154: 
+L155: ## Charts
+L156: ### ST-90 / STG-900 Nozzle Performance Data
+L157: 
+L158: STG-900 Nozzle Performance Data
+L159: ---
+L160: Nozzle  | Pressure
+L161: PSI  | Radius
+L162: ft.  | Flow
+L163: GPM  | Precip in/hr
+L164: cite33†Image | cite34†Image L165: 73 • Orange  | 100  | 103  | 74.5  | 1.35  | 1.56
+L166: 110  | 109  | 77  | 1.25  | 1.44
+L167: 120  | 115  | 79.6  | 1.16  | 1.34
+L168: 83 • Tan  | 100  | 112  | 84.2  | 1.29  | 1.49
+L169: 110  | 116  | 88.1  | 1.26  | 1.46
+L170: 120  | 120  | 92  | 1.23  | 1.42
+L171: Notes:
+L172: All precipitation rates calculated for 180 degree operation. For precipitation rate of 360 degree sprinkler divide by 2.
+L173: Requires minimum 100 PSI dynamic pressure supplied to swing joint inlet.
+L174: ## Documents
+L175: ### Select Type
+L176: 
+L177:   * All Documents
+L178:   * Manuals
+L179:   * Marketing
+L180:   * Specifications
+L181:   * Replacement Parts
+L182: 
+L183: ST-90 Cutsheet
+L184: 
+L185: cite26†Select Language  L186: 
+L187: cite35†USA   L188: 
+L189: cite36†Spanish - USA   L190: 
+L191: cite37†German   L192: 
+L193: cite38†Turkish   L194: 
+L195: cite39†Russian   L196: 
+L197: cite40†Chinese, Simplified   L198: 
+L199: ST-90 Written Specifications
+L200: 
+L201: cite41†Download   L202: 
+L203: ST-90 Replacement Parts List
+L204: 
+L205: cite42†Download   L206: 
+L207: Synthetic Turf Systems Brochure
+L208: 
+L209: cite26†Select Language  L210: 
+L211: cite26†Show all documents L212: 
+L213:   * cite30†Find a Distributor L214:   * cite43†Find a Contractor L215:   * cite44†Contact Sales L216: cite45†Find Hunter L217: 
+L218: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite46†Privacy Policy |
+

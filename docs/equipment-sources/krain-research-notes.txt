@@ -1,0 +1,53 @@
+K-RAIN HYDRAULIC RESEARCH — verified 2026-10-04
+
+Primary: https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf
+Official live catalog page: https://www.krain.com/product-catalog
+Radius instructions: https://www.krain.com/faqs
+
+DELIVERABLE
+catalog-items.json: 84 items; 764 base performance rows; 162 current -30% adjustment rows; 17 spray bodies. Status: 51 Verified, 33 Needs Review. Separate family raw JSONs retain literal published metric values. All pressureKPa/flowM3H additions in catalog-ready data are simple unit conversions. No unprinted pressure/arc/radius performance points were added. Numeric colors and UI reference pressure2.8bar for rotors are display/default choices, not additional manufacturer measurements.
+
+COVERAGE
+RN family:12models/105rows (9sector90rows;3strip15rows), official metric February2024 sheet, exactly matches2026catalog p40.
+Fully Adjustable RN100/200/300-ADJ:3models/27rows,2026p43,arc80-360.
+KVF6/8/10/12/15/17:6models/96rows,p44-45,arc0-360.
+KV8/10/12/15/17:5models/80rows,p46-47,arc0-360; male nozzle thread.
+Fixed FN-8/10/12/15Q/H/TQ/F and P12/P15Q/H/TQ/F:24models/80rows,p48-49.
+Fixed specials P15CS/ES/SS/HL and FN-15CS/ES/SS/HL:8models/16rows,p49.
+Rotors:MiniPro15rows,RPS5015,RPS7548,RPS75-PR48,RPS75i54,RPS75i-PR54,RPS Select20,ProPlus52,SuperPro54. These 9 models contain 90 nozzle groups. RPS Select has 4 built-in nozzles, not a removable rack. No factory-default selection was verified, so no defaultNozzleId is assigned.
+Legacy RPS75i Rev4 sheet:52pressure/nozzle rows ×3states(0,-30,-50)=156states; kept separately, not merged into2026 performance.
+
+RADIUS RULES
+RN:manufacturer states matched precipitation after radius/arc adjustment; advertises RN1002.4-4.6m,RN2004.9-6.1m,RN3006.1-8.5m. No numeric universal reduction percentage and no reduced-radius discharge rows in current sheet/catalog. Actual table radii can exceed advertised range; catalog-ready rMax accommodates tabulated rows and advertisedRadiusRangeM preserves overview bounds.
+Fully Adjustable:2026p42 says up to30% radius reduction with flow control, matched precipitation; no reduced-radius flow rows. Older brochure inconsistently mentions25% and30%; current page says30%.
+KVF/KV/fixed:radius reduction screw allowed; no numeric percent or adjusted discharge table found. Do not apply a generic25% or square-law flow assumption as published data.
+MiniPro/RPS50/RPS75/RPSSelect/ProPlus:FAQ permits up to25% radius reduction using retention screw, max3turns. Adjusted-radius flows are not tabulated. radiusAdjustment.flowPolicy remains unknown.
+RPS75i/SuperPro:FAQ allows flow-control radius/flow reduction up to50%; current2026catalog publishes -30% endpoints only. Do not treat -30% rows as minimum radius or fabricate a -50% flow from linear scaling. RPS75i olderRev4 -50% rows are preserved separately with edition/pressure conflicts.
+All rotor precipitation uses180-degree operation; manufacturer says divide by2for360. A nozzle's flow is not automatically scaled by arc.
+
+COMPATIBILITY
+Female RN/Fully Adjustable/KVF/FN → male spray risers:K-RainPro-S or NP. MaleKV/P → female risers:K-Spray.
+Pro-S actual metric riser heights38/64/89/140/292mm for nominal2/3/4/6/12inch bodies. PR30/PR40 offered on4/6/12. Pro-S operating1.4-7.6bar,1/2inFNPT.
+NP2/NP4 actual51/98mm; K-Spray73001/74001/76001/71201 actual64/102/149/292mm; operating1.4-4.8bar,1/2inFNPT.
+P52775red rack:MiniPro/RPS50. P51399red:ProPlus. P16001101red:RPS75. P16001110green:RPS75i/SuperPro. No cross-brand body defaults assigned.
+
+SOURCE DISPUTES
+unit-audit-discrepancies.json contains166row-level disparities when comparing metric with same-page US unit columns; parallel-imperial-tables.json preserves the US rows. These are source issues, not repaired values.
+RN overview radii differ from performance maxima; e.gRN10090deg3.4bar4.9m. LES/RESat3.1bar have different printed lengths4.6/4.9m.
+FullyAdjustable:catalog recommends2.1bar,live page2.8bar; RN300360deg3.5bar metric8.83m vs US28ft(8.53m). Older brochure precipitation is superseded by2026catalog.
+FN12all4arcs:metric flow values materially conflict with USGPM. P12all4arcs:metric high-pressure radii do not match feet. P15H/F pressure labels, P15TQ/F first radii conflict. Exact metric values retained; NeedsReview.
+RPS75:some high-pressure metric flows appear copied from preceding rows. PRmetric precipitation markedly conflicts with parallelUS. RPSSelect#1/#3at2.8bar metric radii conflict with feet.
+SuperPro2026low-angle heading says“PR”although no PRmodel described. Some printed“30%”adjusted radii are not30%smaller. Current values differ materially from older linked brochure.
+RPS75i:rounded reduced metric radius; some precipitation conflicts; catalog overview8standard nozzles vs9listed on rack/table.
+Special fixed strip pressure labels1.5/2.0bar vs20/30PSI. High-low female table SKUtypoFN-5HL vs model listFN-15HL.
+
+SPECIAL GEOMETRY
+Rectangular strips retain width/length per pressure and origin conventions matching the current schema. Internal radiusM equals striplength for legacy compatibility; it is not circular radius. Arc180in strip PerfRows is an internal sentinel, not manufacturer arc adjustment.
+High-low schematic is a curved upper lobe plus lower rectangle, with the nozzle centered on their shared seam. Exact semicircular geometry is not verified: the printed upper 4.6 x 9.8 m dimensions do not equal a 4.6 m radius semicircle. See high-low-geometry-review.json for the detailed coordinate audit. The two HLitems are placementSupported=false,coverageKind=point,with specialPatternPerformance retained. They must remain excluded from automatic placement until compound geometry is implemented. Second-pressure low width1.5m is printed in standalone fixed brochure, omitted in current catalog table; both sources are recorded.
+
+UNAVAILABLE
+KV5exists at https://www.krain.com/kv-nozzles/variable-arc-male-nozzle-5-kv5 (5ft,male,30PSI), but no hydraulic table found in current catalog or linkedKVbrochure. Stored in unavailable-data.json, not a placeable fabricated item.
+No current50%-reduction rows forSuperPro; RPS75i has older conflicting50%rows only. Missing percentage/flow rules for spray/nozzle radius adjustment remain explicitly unknown.
+
+HANDOFF
+source-manifest.json records 28 official PDF sources with URL, local path, verified date, byte count and SHA256. coverage-summary.json supplies per-family model and row counts. For body threads, riserThread is the body own thread; nozzleThreadAccepted is the required nozzle thread. compatibleBodyFamilyIds remains the authoritative compatibility mapping. mountingKind is spray for nozzle attachments and integrated for rotors; no standalone riser mounting is assumed.

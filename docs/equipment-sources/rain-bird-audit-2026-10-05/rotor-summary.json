@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-05",
+  "originalRecords": 26,
+  "rotorRecords": 7,
+  "bodyRecords": 19,
+  "newBodyRecords": 2,
+  "proposedRecords": 28,
+  "nozzleEntries": 94,
+  "performanceRows": 567,
+  "uniquePerformanceRows": 371,
+  "previousNeedsReview": 4,
+  "resolvedNeedsReview": 4,
+  "remainingNeedsReview": 0,
+  "newNeedsReview": 0,
+  "flowLMinCellsChanged": 3,
+  "precipitationCellsCleared": 26,
+  "precipitationRoundingCellsChanged": 1,
+  "allM3HNormalized": true,
+  "unknownReducedRadiusFlows": "3500,5000,5000Plus,5000PRS,Falcon6504;8005reductionrange also unpublished in reviewedcurrentdocs",
+  "sourceCatalog": "Current officialcommercialcataloglinks resolve to2023;2026catalog is consumerproducts anddoesnot replace these commercialtables.",
+  "sourceFilesDownloaded": 19,
+  "validation": "Passed: 28 unique IDs, 567 retained rows, positive radius/flow, internally consistent flow units, exactly26nullprecipcells,94nozzlecolors with source/date."
+}

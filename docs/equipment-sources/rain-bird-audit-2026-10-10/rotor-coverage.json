@@ -1,0 +1,494 @@
+{
+  "checkedOn": "2026-10-10",
+  "catalogSha256": "cf43df81e2bf5ef94aa77a3c296b2f8ed2a1f6b7f04cf2780fd0d6f571392c0b",
+  "rotorModels": 7,
+  "bodyModels": 21,
+  "nozzleEntries": 94,
+  "performanceRows": 567,
+  "uniqueSourceRows": 371,
+  "metadataChanges": 15,
+  "precipitationFieldChanges": 8,
+  "rotors": [
+    {
+      "id": "rain-bird:3504-PC",
+      "nozzleCount": 6,
+      "rowCount": 36,
+      "arcMin": 40,
+      "arcMax": 360,
+      "allowedArcRanges": null,
+      "pressureMinBar": 1.7,
+      "pressureMaxBar": 3.8,
+      "pressureBasis": "rotor performance test pressure",
+      "allRowsWithinOperatingRange": true,
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "mounting": [
+        {
+          "mm": 102,
+          "sku": "3504-PC"
+        }
+      ],
+      "sourceUrl": "https://www.rainbird.com/products/3500-series-rotor-sprinklers",
+      "sourceTableUrls": [
+        "https://www.rainbird.com/media/4634"
+      ]
+    },
+    {
+      "id": "rain-bird:5004-PC",
+      "nozzleCount": 24,
+      "rowCount": 136,
+      "arcMin": 40,
+      "arcMax": 360,
+      "allowedArcRanges": null,
+      "pressureMinBar": 1.7,
+      "pressureMaxBar": 4.5,
+      "pressureBasis": "rotor performance test pressure",
+      "allRowsWithinOperatingRange": true,
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "mounting": [
+        {
+          "mm": 102,
+          "sku": "5004PC"
+        },
+        {
+          "mm": 152,
+          "sku": "5006PC"
+        }
+      ],
+      "sourceUrl": "https://www.rainbird.com/products/5000-series",
+      "sourceTableUrls": [
+        "https://www.rainbird.com/media/4173",
+        "https://www.rainbird.com/media/4635"
+      ]
+    },
+    {
+      "id": "rain-bird:5004+PC",
+      "nozzleCount": 24,
+      "rowCount": 136,
+      "arcMin": 40,
+      "arcMax": 360,
+      "allowedArcRanges": null,
+      "pressureMinBar": 1.7,
+      "pressureMaxBar": 4.5,
+      "pressureBasis": "rotor performance test pressure",
+      "allRowsWithinOperatingRange": true,
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "mounting": [
+        {
+          "mm": 102,
+          "sku": "5004+PC"
+        },
+        {
+          "mm": 152,
+          "sku": "5006+PC"
+        }
+      ],
+      "sourceUrl": "https://www.rainbird.com/products/5000-series",
+      "sourceTableUrls": [
+        "https://www.rainbird.com/media/4173",
+        "https://www.rainbird.com/media/4635"
+      ]
+    },
+    {
+      "id": "rain-bird:5004+PCR",
+      "nozzleCount": 12,
+      "rowCount": 60,
+      "arcMin": 40,
+      "arcMax": 360,
+      "allowedArcRanges": null,
+      "pressureMinBar": 1.7,
+      "pressureMaxBar": 5.2,
+      "pressureBasis": "inlet",
+      "allRowsWithinOperatingRange": true,
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "mounting": [
+        {
+          "mm": 102,
+          "sku": "5004+PCR"
+        },
+        {
+          "mm": 152,
+          "sku": "5006+PCSAMR"
+        },
+        {
+          "mm": 305,
+          "sku": "5012+PCSAMR"
+        }
+      ],
+      "sourceUrl": "https://www.rainbird.com/products/5000-series",
+      "sourceTableUrls": [
+        "https://www.rainbird.com/media/4635"
+      ]
+    },
+    {
+      "id": "rain-bird:6504-PC",
+      "nozzleCount": 8,
+      "rowCount": 60,
+      "arcMin": 40,
+      "arcMax": 360,
+      "allowedArcRanges": null,
+      "pressureMinBar": 2.1,
+      "pressureMaxBar": 6.2,
+      "pressureBasis": "rotor performance test pressure",
+      "allRowsWithinOperatingRange": true,
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "mounting": [
+        {
+          "mm": 102,
+          "sku": "6504-PC"
+        }
+      ],
+      "sourceUrl": "https://www.rainbird.com/products/falcon-6504-series",
+      "sourceTableUrls": [
+        "https://www.rainbird.com/sites/default/files/media/documents/2020-09/falcon-6504-series-rotors-performance-charts.pdf"
+      ]
+    },
+    {
+      "id": "rain-bird:6504-FC",
+      "nozzleCount": 8,
+      "rowCount": 60,
+      "arcMin": 360,
+      "arcMax": 360,
+      "allowedArcRanges": null,
+      "pressureMinBar": 2.1,
+      "pressureMaxBar": 6.2,
+      "pressureBasis": "rotor performance test pressure",
+      "allRowsWithinOperatingRange": true,
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "mounting": [
+        {
+          "mm": 102,
+          "sku": "6504-FC"
+        }
+      ],
+      "sourceUrl": "https://www.rainbird.com/products/falcon-6504-series",
+      "sourceTableUrls": [
+        "https://www.rainbird.com/sites/default/files/media/documents/2020-09/falcon-6504-series-rotors-performance-charts.pdf"
+      ]
+    },
+    {
+      "id": "rain-bird:8005",
+      "nozzleCount": 12,
+      "rowCount": 79,
+      "arcMin": 50,
+      "arcMax": 360,
+      "allowedArcRanges": [
+        [
+          50,
+          330
+        ],
+        [
+          360,
+          360
+        ]
+      ],
+      "pressureMinBar": 3.5,
+      "pressureMaxBar": 6.9,
+      "pressureBasis": "rotor performance test pressure",
+      "allRowsWithinOperatingRange": true,
+      "radiusAdjustment": null,
+      "mounting": [
+        {
+          "mm": 127,
+          "sku": "8005"
+        }
+      ],
+      "sourceUrl": "https://www.rainbird.com/products/8005-series",
+      "sourceTableUrls": [
+        "https://www.rainbird.com/media/4636"
+      ]
+    }
+  ],
+  "bodies": [
+    {
+      "id": "rain-bird:1802",
+      "popUpMm": 51,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": null,
+      "nominalRegulationMinInletBar": null,
+      "checkValveHeadM": null,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1804",
+      "popUpMm": 102,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": null,
+      "nominalRegulationMinInletBar": null,
+      "checkValveHeadM": null,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1806",
+      "popUpMm": 152,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": null,
+      "nominalRegulationMinInletBar": null,
+      "checkValveHeadM": null,
+      "sideInletAvailable": true,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1812",
+      "popUpMm": 305,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": null,
+      "nominalRegulationMinInletBar": null,
+      "checkValveHeadM": null,
+      "sideInletAvailable": true,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1804-PRS",
+      "popUpMm": 102,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 2.1,
+      "nominalRegulationMinInletBar": 2.413165053,
+      "checkValveHeadM": null,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1806-PRS",
+      "popUpMm": 152,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 2.1,
+      "nominalRegulationMinInletBar": 2.413165053,
+      "checkValveHeadM": null,
+      "sideInletAvailable": true,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1812-PRS",
+      "popUpMm": 305,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 2.1,
+      "nominalRegulationMinInletBar": 2.413165053,
+      "checkValveHeadM": null,
+      "sideInletAvailable": true,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1804-P45",
+      "popUpMm": 102,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 3.1,
+      "nominalRegulationMinInletBar": 3.447378647,
+      "checkValveHeadM": null,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1806-P45",
+      "popUpMm": 152,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 3.1,
+      "nominalRegulationMinInletBar": 3.447378647,
+      "checkValveHeadM": null,
+      "sideInletAvailable": true,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1812-P45",
+      "popUpMm": 305,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 3.1,
+      "nominalRegulationMinInletBar": 3.447378647,
+      "checkValveHeadM": null,
+      "sideInletAvailable": true,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1804-SAM",
+      "popUpMm": 102,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": null,
+      "nominalRegulationMinInletBar": null,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1806-SAM",
+      "popUpMm": 152,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": null,
+      "nominalRegulationMinInletBar": null,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1812-SAM",
+      "popUpMm": 305,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": null,
+      "nominalRegulationMinInletBar": null,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1804-SAM-PRS",
+      "popUpMm": 102,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 2.1,
+      "nominalRegulationMinInletBar": 2.413165053,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1806-SAM-PRS",
+      "popUpMm": 152,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 2.1,
+      "nominalRegulationMinInletBar": 2.413165053,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1812-SAM-PRS",
+      "popUpMm": 305,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 2.1,
+      "nominalRegulationMinInletBar": 2.413165053,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1804-SAM-P45",
+      "popUpMm": 102,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 3.1,
+      "nominalRegulationMinInletBar": 3.447378647,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1806-SAM-P45",
+      "popUpMm": 152,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 3.1,
+      "nominalRegulationMinInletBar": 3.447378647,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1812-SAM-P45",
+      "popUpMm": 305,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1.7,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 3.1,
+      "nominalRegulationMinInletBar": 3.447378647,
+      "checkValveHeadM": 4.2,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1802-PRS",
+      "popUpMm": 51,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 2.1,
+      "nominalRegulationMinInletBar": 2.413165053,
+      "checkValveHeadM": null,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    },
+    {
+      "id": "rain-bird:1803-PRS",
+      "popUpMm": 76,
+      "inlet": "1/2 inch NPT female",
+      "operatingInletMinBar": 1,
+      "operatingInletMaxBar": 4.8,
+      "nominalNozzleOutletBar": 2.1,
+      "nominalRegulationMinInletBar": 2.413165053,
+      "checkValveHeadM": null,
+      "sideInletAvailable": false,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "verified": "Model, rise, inlet, SAM/PRS options and operating family checked against currentproductpage and currentlinkedtechspec."
+    }
+  ]
+}

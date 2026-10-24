@@ -1,0 +1,2342 @@
+{
+  "RN100-ADJ": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 0.22,
+      "precipSquareInH": 0.5,
+      "precipTriangleInH": 0.58
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.25,
+      "precipSquareInH": 0.49,
+      "precipTriangleInH": 0.57
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 0.3,
+      "precipSquareInH": 0.51,
+      "precipTriangleInH": 0.59
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 0.44,
+      "precipSquareInH": 0.5,
+      "precipTriangleInH": 0.58
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.5,
+      "precipSquareInH": 0.49,
+      "precipTriangleInH": 0.57
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 0.6,
+      "precipSquareInH": 0.51,
+      "precipTriangleInH": 0.59
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 0.9,
+      "precipSquareInH": 0.51,
+      "precipTriangleInH": 0.59
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.0,
+      "precipSquareInH": 0.49,
+      "precipTriangleInH": 0.57
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 0.51,
+      "precipTriangleInH": 0.59
+    }
+  ],
+  "RN200-ADJ": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 0.34,
+      "precipSquareInH": 0.51,
+      "precipTriangleInH": 0.59
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 0.41,
+      "precipSquareInH": 0.49,
+      "precipTriangleInH": 0.56
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 19.0,
+      "flowGpm": 0.47,
+      "precipSquareInH": 0.5,
+      "precipTriangleInH": 0.58
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 0.67,
+      "precipSquareInH": 0.5,
+      "precipTriangleInH": 0.58
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 0.83,
+      "precipSquareInH": 0.49,
+      "precipTriangleInH": 0.57
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 19.0,
+      "flowGpm": 0.94,
+      "precipSquareInH": 0.5,
+      "precipTriangleInH": 0.58
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 1.35,
+      "precipSquareInH": 0.51,
+      "precipTriangleInH": 0.59
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 1.7,
+      "precipSquareInH": 0.51,
+      "precipTriangleInH": 0.58
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 19.0,
+      "flowGpm": 1.9,
+      "precipSquareInH": 0.51,
+      "precipTriangleInH": 0.58
+    }
+  ],
+  "RN300-ADJ": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 26.0,
+      "flowGpm": 0.8,
+      "precipSquareInH": 0.46,
+      "precipTriangleInH": 0.53
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 27.0,
+      "flowGpm": 0.9,
+      "precipSquareInH": 0.48,
+      "precipTriangleInH": 0.55
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 29.0,
+      "flowGpm": 1.0,
+      "precipSquareInH": 0.46,
+      "precipTriangleInH": 0.53
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 26.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 0.43,
+      "precipTriangleInH": 0.49
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 27.0,
+      "flowGpm": 1.6,
+      "precipSquareInH": 0.42,
+      "precipTriangleInH": 0.49
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 29.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 0.41,
+      "precipTriangleInH": 0.48
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 26.0,
+      "flowGpm": 3.0,
+      "precipSquareInH": 0.43,
+      "precipTriangleInH": 0.49
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 27.0,
+      "flowGpm": 3.2,
+      "precipSquareInH": 0.42,
+      "precipTriangleInH": 0.49
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 28.0,
+      "flowGpm": 3.8,
+      "precipSquareInH": 0.47,
+      "precipTriangleInH": 0.54
+    }
+  ],
+  "KVF6": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 5.0,
+      "flowGpm": 0.36,
+      "precipSquareInH": 5.54,
+      "precipTriangleInH": 6.4
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 5.0,
+      "flowGpm": 0.43,
+      "precipSquareInH": 6.16,
+      "precipTriangleInH": 7.65
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.5,
+      "precipSquareInH": 5.35,
+      "precipTriangleInH": 6.17
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.59,
+      "precipSquareInH": 6.31,
+      "precipTriangleInH": 7.29
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 5.0,
+      "flowGpm": 0.6,
+      "precipSquareInH": 4.61,
+      "precipTriangleInH": 5.33
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 5.0,
+      "flowGpm": 0.66,
+      "precipSquareInH": 5.07,
+      "precipTriangleInH": 5.86
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.74,
+      "precipSquareInH": 3.95,
+      "precipTriangleInH": 4.56
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.86,
+      "precipSquareInH": 4.59,
+      "precipTriangleInH": 5.3
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 5.0,
+      "flowGpm": 0.8,
+      "precipSquareInH": 4.1,
+      "precipTriangleInH": 4.74
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 5.0,
+      "flowGpm": 0.89,
+      "precipSquareInH": 4.56,
+      "precipTriangleInH": 5.27
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.97,
+      "precipSquareInH": 3.45,
+      "precipTriangleInH": 3.99
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 4.27,
+      "precipTriangleInH": 4.93
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 5.0,
+      "flowGpm": 1.08,
+      "precipSquareInH": 4.15,
+      "precipTriangleInH": 4.79
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 5.0,
+      "flowGpm": 1.25,
+      "precipSquareInH": 4.81,
+      "precipTriangleInH": 5.55
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 1.37,
+      "precipSquareInH": 3.66,
+      "precipTriangleInH": 4.22
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 1.62,
+      "precipSquareInH": 4.33,
+      "precipTriangleInH": 4.99
+    }
+  ],
+  "KVF8": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 0.39,
+      "precipSquareInH": 1.85,
+      "precipTriangleInH": 2.14
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 0.42,
+      "precipSquareInH": 1.62,
+      "precipTriangleInH": 1.87
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 0.5,
+      "precipSquareInH": 1.93,
+      "precipTriangleInH": 2.22
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 0.61,
+      "precipSquareInH": 1.94,
+      "precipTriangleInH": 2.24
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 0.75,
+      "precipSquareInH": 1.78,
+      "precipTriangleInH": 2.06
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 0.85,
+      "precipSquareInH": 2.02,
+      "precipTriangleInH": 2.33
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.0,
+      "precipSquareInH": 1.93,
+      "precipTriangleInH": 2.22
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.16,
+      "precipSquareInH": 2.23,
+      "precipTriangleInH": 2.58
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 1.15,
+      "precipSquareInH": 1.82,
+      "precipTriangleInH": 2.1
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 1.25,
+      "precipSquareInH": 1.98,
+      "precipTriangleInH": 2.29
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 1.93,
+      "precipTriangleInH": 2.22
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.75,
+      "precipSquareInH": 2.25,
+      "precipTriangleInH": 2.59
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 1.78,
+      "precipTriangleInH": 2.06
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 1.7,
+      "precipSquareInH": 2.02,
+      "precipTriangleInH": 2.33
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 2.0,
+      "precipSquareInH": 1.93,
+      "precipTriangleInH": 2.22
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 2.3,
+      "precipSquareInH": 2.21,
+      "precipTriangleInH": 2.56
+    }
+  ],
+  "KVF10": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 0.45,
+      "precipSquareInH": 1.73,
+      "precipTriangleInH": 2.0
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 0.54,
+      "precipSquareInH": 1.72,
+      "precipTriangleInH": 1.98
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 0.62,
+      "precipSquareInH": 1.66,
+      "precipTriangleInH": 1.91
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 0.7,
+      "precipSquareInH": 1.87,
+      "precipTriangleInH": 2.16
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 0.9,
+      "precipSquareInH": 1.73,
+      "precipTriangleInH": 2.0
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.1,
+      "precipSquareInH": 1.75,
+      "precipTriangleInH": 2.02
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.25,
+      "precipSquareInH": 1.67,
+      "precipTriangleInH": 1.93
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.4,
+      "precipSquareInH": 1.87,
+      "precipTriangleInH": 2.16
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.35,
+      "precipSquareInH": 1.73,
+      "precipTriangleInH": 2.0
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.65,
+      "precipSquareInH": 1.75,
+      "precipTriangleInH": 2.02
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.85,
+      "precipSquareInH": 1.65,
+      "precipTriangleInH": 1.9
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.1,
+      "precipSquareInH": 1.87,
+      "precipTriangleInH": 2.16
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.73,
+      "precipTriangleInH": 2.0
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 2.2,
+      "precipSquareInH": 1.75,
+      "precipTriangleInH": 2.02
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.5,
+      "precipSquareInH": 1.67,
+      "precipTriangleInH": 1.93
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.8,
+      "precipSquareInH": 1.87,
+      "precipTriangleInH": 2.16
+    }
+  ],
+  "KVF12": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 0.65,
+      "precipSquareInH": 1.74,
+      "precipTriangleInH": 2.01
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 0.7,
+      "precipSquareInH": 1.59,
+      "precipTriangleInH": 1.84
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.8,
+      "precipSquareInH": 1.57,
+      "precipTriangleInH": 1.81
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.9,
+      "precipSquareInH": 1.77,
+      "precipTriangleInH": 2.04
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.3,
+      "precipSquareInH": 1.74,
+      "precipTriangleInH": 2.01
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.4,
+      "precipSquareInH": 1.59,
+      "precipTriangleInH": 1.84
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.6,
+      "precipSquareInH": 1.57,
+      "precipTriangleInH": 1.81
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.77,
+      "precipTriangleInH": 2.04
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.9,
+      "precipSquareInH": 1.69,
+      "precipTriangleInH": 1.96
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 2.1,
+      "precipSquareInH": 1.59,
+      "precipTriangleInH": 1.84
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 1.57,
+      "precipTriangleInH": 1.81
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.6,
+      "precipSquareInH": 1.7,
+      "precipTriangleInH": 1.97
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.2,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.7
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 2.6,
+      "precipSquareInH": 1.48,
+      "precipTriangleInH": 1.71
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 3.1,
+      "precipSquareInH": 1.52,
+      "precipTriangleInH": 1.76
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 3.5,
+      "precipSquareInH": 1.72,
+      "precipTriangleInH": 1.98
+    }
+  ],
+  "KVF15": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.75,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.7
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 0.85,
+      "precipSquareInH": 1.45,
+      "precipTriangleInH": 1.68
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 0.95,
+      "precipSquareInH": 1.63,
+      "precipTriangleInH": 1.88
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 1.1,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.69
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.4,
+      "precipSquareInH": 1.38,
+      "precipTriangleInH": 1.59
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 1.7,
+      "precipSquareInH": 1.45,
+      "precipTriangleInH": 1.68
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 1.9,
+      "precipSquareInH": 1.63,
+      "precipTriangleInH": 1.88
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 2.3,
+      "precipSquareInH": 1.53,
+      "precipTriangleInH": 1.77
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.25,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.7
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 2.55,
+      "precipSquareInH": 1.45,
+      "precipTriangleInH": 1.68
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 2.8,
+      "precipSquareInH": 1.6,
+      "precipTriangleInH": 1.84
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 3.4,
+      "precipSquareInH": 1.51,
+      "precipTriangleInH": 1.74
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 3.0,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.7
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 3.4,
+      "precipSquareInH": 1.45,
+      "precipTriangleInH": 1.68
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 3.8,
+      "precipSquareInH": 1.63,
+      "precipTriangleInH": 1.88
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 4.6,
+      "precipSquareInH": 1.53,
+      "precipTriangleInH": 1.77
+    }
+  ],
+  "KVF17": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 0.85,
+      "precipSquareInH": 1.13,
+      "precipTriangleInH": 1.31
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 0.95,
+      "precipSquareInH": 1.27,
+      "precipTriangleInH": 1.46
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 1.05,
+      "precipSquareInH": 1.25,
+      "precipTriangleInH": 1.44
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 1.43,
+      "precipTriangleInH": 1.65
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 1.7,
+      "precipSquareInH": 1.28,
+      "precipTriangleInH": 1.48
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 1.9,
+      "precipSquareInH": 1.27,
+      "precipTriangleInH": 1.46
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 2.1,
+      "precipSquareInH": 1.25,
+      "precipTriangleInH": 1.44
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 1.43,
+      "precipTriangleInH": 1.65
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 2.5,
+      "precipSquareInH": 1.25,
+      "precipTriangleInH": 1.45
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 2.8,
+      "precipSquareInH": 1.24,
+      "precipTriangleInH": 1.44
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 3.15,
+      "precipSquareInH": 1.25,
+      "precipTriangleInH": 1.44
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 3.6,
+      "precipSquareInH": 1.43,
+      "precipTriangleInH": 1.65
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 3.4,
+      "precipSquareInH": 1.28,
+      "precipTriangleInH": 1.48
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 3.8,
+      "precipSquareInH": 1.27,
+      "precipTriangleInH": 1.46
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 4.2,
+      "precipSquareInH": 1.25,
+      "precipTriangleInH": 1.44
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 4.8,
+      "precipSquareInH": 1.43,
+      "precipTriangleInH": 1.65
+    }
+  ],
+  "KV8": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 7.0,
+      "flowGpm": 0.3,
+      "precipSquareInH": 2.36,
+      "precipTriangleInH": 2.72
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.4,
+      "precipSquareInH": 2.41,
+      "precipTriangleInH": 2.78
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.4,
+      "precipSquareInH": 2.41,
+      "precipTriangleInH": 2.78
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 0.4,
+      "precipSquareInH": 1.9,
+      "precipTriangleInH": 2.2
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 7.0,
+      "flowGpm": 0.8,
+      "precipSquareInH": 3.14,
+      "precipTriangleInH": 3.63
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.9,
+      "precipSquareInH": 2.71,
+      "precipTriangleInH": 3.13
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 1.0,
+      "precipSquareInH": 3.01,
+      "precipTriangleInH": 3.47
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 1.1,
+      "precipSquareInH": 2.61,
+      "precipTriangleInH": 3.02
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 7.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 3.14,
+      "precipTriangleInH": 3.63
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 2.41,
+      "precipTriangleInH": 2.78
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 1.3,
+      "precipSquareInH": 2.61,
+      "precipTriangleInH": 3.01
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 2.38,
+      "precipTriangleInH": 2.74
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 7.0,
+      "flowGpm": 1.9,
+      "precipSquareInH": 3.73,
+      "precipTriangleInH": 4.31
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 2.0,
+      "precipSquareInH": 3.01,
+      "precipTriangleInH": 3.47
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 2.2,
+      "precipSquareInH": 3.31,
+      "precipTriangleInH": 3.82
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 2.3,
+      "precipSquareInH": 2.73,
+      "precipTriangleInH": 3.16
+    }
+  ],
+  "KV10": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 0.7,
+      "precipSquareInH": 1.87,
+      "precipTriangleInH": 2.16
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.1,
+      "precipSquareInH": 2.94,
+      "precipTriangleInH": 3.4
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.4,
+      "precipSquareInH": 3.19,
+      "precipTriangleInH": 3.68
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 2.95,
+      "precipTriangleInH": 3.4
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.4,
+      "precipSquareInH": 2.23,
+      "precipTriangleInH": 2.57
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.6,
+      "precipSquareInH": 2.55,
+      "precipTriangleInH": 2.94
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 2.41,
+      "precipTriangleInH": 2.78
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 2.0,
+      "precipSquareInH": 2.28,
+      "precipTriangleInH": 2.63
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.7,
+      "precipSquareInH": 2.18,
+      "precipTriangleInH": 2.52
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 2.0,
+      "precipSquareInH": 2.57,
+      "precipTriangleInH": 2.96
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 2.3,
+      "precipSquareInH": 2.44,
+      "precipTriangleInH": 2.82
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.6,
+      "precipSquareInH": 2.32,
+      "precipTriangleInH": 2.68
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 2.2,
+      "precipSquareInH": 2.12,
+      "precipTriangleInH": 2.45
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 2.7,
+      "precipSquareInH": 2.6,
+      "precipTriangleInH": 3.0
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 3.0,
+      "precipSquareInH": 2.39,
+      "precipTriangleInH": 2.76
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 3.5,
+      "precipSquareInH": 2.34,
+      "precipTriangleInH": 2.7
+    }
+  ],
+  "KV12": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.1,
+      "precipSquareInH": 2.94,
+      "precipTriangleInH": 3.4
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.3,
+      "precipSquareInH": 2.96,
+      "precipTriangleInH": 3.42
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 2.95,
+      "precipTriangleInH": 3.4
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 1.7,
+      "precipSquareInH": 2.91,
+      "precipTriangleInH": 3.36
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.6,
+      "precipSquareInH": 2.55,
+      "precipTriangleInH": 2.94
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 2.41,
+      "precipTriangleInH": 2.78
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 2.2,
+      "precipSquareInH": 2.51,
+      "precipTriangleInH": 2.89
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 2.36,
+      "precipTriangleInH": 2.72
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.9,
+      "precipSquareInH": 2.02,
+      "precipTriangleInH": 2.33
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 2.14,
+      "precipTriangleInH": 2.47
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.6,
+      "precipSquareInH": 2.32,
+      "precipTriangleInH": 2.68
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 3.2,
+      "precipSquareInH": 2.43,
+      "precipTriangleInH": 2.81
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 2.8,
+      "precipSquareInH": 2.23,
+      "precipTriangleInH": 2.57
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 3.1,
+      "precipSquareInH": 2.07,
+      "precipTriangleInH": 2.39
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 3.5,
+      "precipSquareInH": 2.34,
+      "precipTriangleInH": 2.7
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 3.9,
+      "precipSquareInH": 2.22,
+      "precipTriangleInH": 2.56
+    }
+  ],
+  "KV15": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 1.3,
+      "precipSquareInH": 2.22,
+      "precipTriangleInH": 2.57
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 1.6,
+      "precipSquareInH": 2.13,
+      "precipTriangleInH": 2.46
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 2.14,
+      "precipTriangleInH": 2.47
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 19.0,
+      "flowGpm": 2.0,
+      "precipSquareInH": 2.13,
+      "precipTriangleInH": 2.46
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.77,
+      "precipTriangleInH": 2.04
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 2.3,
+      "precipSquareInH": 1.97,
+      "precipTriangleInH": 2.27
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 2.6,
+      "precipSquareInH": 1.96,
+      "precipTriangleInH": 2.26
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 2.8,
+      "precipSquareInH": 1.66,
+      "precipTriangleInH": 1.92
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.7,
+      "precipSquareInH": 1.77,
+      "precipTriangleInH": 2.04
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 3.2,
+      "precipSquareInH": 1.83,
+      "precipTriangleInH": 2.11
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 3.6,
+      "precipSquareInH": 1.8,
+      "precipTriangleInH": 2.08
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 4.0,
+      "precipSquareInH": 1.58,
+      "precipTriangleInH": 1.83
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 3.4,
+      "precipSquareInH": 1.67,
+      "precipTriangleInH": 1.93
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 4.2,
+      "precipSquareInH": 1.8,
+      "precipTriangleInH": 2.07
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 4.7,
+      "precipSquareInH": 1.77,
+      "precipTriangleInH": 2.04
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 5.3,
+      "precipSquareInH": 1.99,
+      "precipTriangleInH": 2.3
+    }
+  ],
+  "KV17": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 1.7,
+      "precipSquareInH": 2.02,
+      "precipTriangleInH": 2.33
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 2.14,
+      "precipTriangleInH": 2.47
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 19.0,
+      "flowGpm": 2.0,
+      "precipSquareInH": 2.13,
+      "precipTriangleInH": 2.46
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 20.0,
+      "flowGpm": 2.2,
+      "precipSquareInH": 2.12,
+      "precipTriangleInH": 2.45
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 1.9,
+      "precipSquareInH": 1.27,
+      "precipTriangleInH": 1.46
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 1.43,
+      "precipTriangleInH": 1.65
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 19.0,
+      "flowGpm": 2.6,
+      "precipSquareInH": 1.39,
+      "precipTriangleInH": 1.6
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 19.0,
+      "flowGpm": 2.9,
+      "precipSquareInH": 1.55,
+      "precipTriangleInH": 1.79
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 2.9,
+      "precipSquareInH": 1.45,
+      "precipTriangleInH": 1.68
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 3.4,
+      "precipSquareInH": 1.51,
+      "precipTriangleInH": 1.74
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 4.0,
+      "precipSquareInH": 1.58,
+      "precipTriangleInH": 1.83
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 4.5,
+      "precipSquareInH": 1.78,
+      "precipTriangleInH": 2.06
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 3.5,
+      "precipSquareInH": 1.5,
+      "precipTriangleInH": 1.73
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 4.4,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.69
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 4.9,
+      "precipSquareInH": 1.63,
+      "precipTriangleInH": 1.88
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 50.0,
+      "radiusFeet": 18.0,
+      "flowGpm": 5.4,
+      "precipSquareInH": 1.6,
+      "precipTriangleInH": 1.85
+    }
+  ],
+  "FN-8Q": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.21,
+      "precipSquareInH": 2.25,
+      "precipTriangleInH": 2.59
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 7.0,
+      "flowGpm": 0.24,
+      "precipSquareInH": 1.89,
+      "precipTriangleInH": 2.18
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.26,
+      "precipSquareInH": 1.56,
+      "precipTriangleInH": 1.81
+    }
+  ],
+  "FN-8H": [
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.42,
+      "precipSquareInH": 2.25,
+      "precipTriangleInH": 2.59
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 7.0,
+      "flowGpm": 0.47,
+      "precipSquareInH": 1.85,
+      "precipTriangleInH": 2.13
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.52,
+      "precipSquareInH": 1.56,
+      "precipTriangleInH": 1.81
+    }
+  ],
+  "FN-8TQ": [
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.63,
+      "precipSquareInH": 2.25,
+      "precipTriangleInH": 2.59
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 7.0,
+      "flowGpm": 0.71,
+      "precipSquareInH": 1.86,
+      "precipTriangleInH": 2.15
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.78,
+      "precipSquareInH": 1.56,
+      "precipTriangleInH": 1.81
+    }
+  ],
+  "FN-8F": [
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 6.0,
+      "flowGpm": 0.86,
+      "precipSquareInH": 2.3,
+      "precipTriangleInH": 2.66
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 7.0,
+      "flowGpm": 0.96,
+      "precipSquareInH": 1.89,
+      "precipTriangleInH": 2.18
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 1.05,
+      "precipSquareInH": 1.58,
+      "precipTriangleInH": 1.82
+    }
+  ],
+  "FN-10Q": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.33,
+      "precipSquareInH": 1.99,
+      "precipTriangleInH": 2.29
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 0.36,
+      "precipSquareInH": 1.71,
+      "precipTriangleInH": 1.98
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 0.39,
+      "precipSquareInH": 1.5,
+      "precipTriangleInH": 1.73
+    }
+  ],
+  "FN-10H": [
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.65,
+      "precipSquareInH": 1.96,
+      "precipTriangleInH": 2.26
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 0.72,
+      "precipSquareInH": 1.71,
+      "precipTriangleInH": 1.98
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 0.79,
+      "precipSquareInH": 1.52,
+      "precipTriangleInH": 1.76
+    }
+  ],
+  "FN-10TQ": [
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 0.98,
+      "precipSquareInH": 1.97,
+      "precipTriangleInH": 2.27
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 1.08,
+      "precipSquareInH": 1.71,
+      "precipTriangleInH": 1.98
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.18,
+      "precipSquareInH": 1.51,
+      "precipTriangleInH": 1.75
+    }
+  ],
+  "FN-10F": [
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 8.0,
+      "flowGpm": 1.03,
+      "precipSquareInH": 1.55,
+      "precipTriangleInH": 1.79
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 9.0,
+      "flowGpm": 1.44,
+      "precipSquareInH": 1.71,
+      "precipTriangleInH": 1.98
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.58,
+      "precipSquareInH": 1.52,
+      "precipTriangleInH": 1.76
+    }
+  ],
+  "FN-12Q": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 0.53,
+      "precipSquareInH": 2.04,
+      "precipTriangleInH": 2.36
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 0.6,
+      "precipSquareInH": 1.91,
+      "precipTriangleInH": 2.2
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 0.65,
+      "precipSquareInH": 1.74,
+      "precipTriangleInH": 2.01
+    }
+  ],
+  "FN-12H": [
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.05,
+      "precipSquareInH": 2.02,
+      "precipTriangleInH": 2.33
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 1.91,
+      "precipTriangleInH": 2.2
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.3,
+      "precipSquareInH": 1.74,
+      "precipTriangleInH": 2.01
+    }
+  ],
+  "FN-12TQ": [
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 1.58,
+      "precipSquareInH": 2.03,
+      "precipTriangleInH": 2.34
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.91,
+      "precipTriangleInH": 2.2
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.95,
+      "precipSquareInH": 1.74,
+      "precipTriangleInH": 2.01
+    }
+  ],
+  "FN-12F": [
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 10.0,
+      "flowGpm": 2.1,
+      "precipSquareInH": 2.02,
+      "precipTriangleInH": 2.33
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 1.91,
+      "precipTriangleInH": 2.2
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.6,
+      "precipSquareInH": 1.74,
+      "precipTriangleInH": 2.01
+    }
+  ],
+  "FN-15Q": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 0.75,
+      "precipSquareInH": 2.01,
+      "precipTriangleInH": 2.32
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.82,
+      "precipSquareInH": 1.61,
+      "precipTriangleInH": 1.86
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 0.92,
+      "precipSquareInH": 1.57,
+      "precipTriangleInH": 1.82
+    }
+  ],
+  "FN-15H": [
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 2.01,
+      "precipTriangleInH": 2.32
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.65,
+      "precipSquareInH": 1.62,
+      "precipTriangleInH": 1.87
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 1.85,
+      "precipSquareInH": 1.58,
+      "precipTriangleInH": 1.83
+    }
+  ],
+  "FN-15TQ": [
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 2.25,
+      "precipSquareInH": 2.01,
+      "precipTriangleInH": 2.32
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.48,
+      "precipSquareInH": 1.62,
+      "precipTriangleInH": 1.88
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 2.78,
+      "precipSquareInH": 1.59,
+      "precipTriangleInH": 1.83
+    }
+  ],
+  "FN-15F": [
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 3.0,
+      "precipSquareInH": 2.01,
+      "precipTriangleInH": 2.32
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 3.3,
+      "precipSquareInH": 1.62,
+      "precipTriangleInH": 1.87
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 15.0,
+      "flowGpm": 3.7,
+      "precipSquareInH": 1.58,
+      "precipTriangleInH": 1.83
+    }
+  ],
+  "P12Q": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 0.4,
+      "precipSquareInH": 1.27,
+      "precipTriangleInH": 1.47
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 0.45,
+      "precipSquareInH": 1.2,
+      "precipTriangleInH": 1.39
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 0.5,
+      "precipSquareInH": 1.14,
+      "precipTriangleInH": 1.32
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.6,
+      "precipSquareInH": 1.18,
+      "precipTriangleInH": 1.36
+    }
+  ],
+  "P12H": [
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 0.8,
+      "precipSquareInH": 1.27,
+      "precipTriangleInH": 1.47
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 0.9,
+      "precipSquareInH": 1.2,
+      "precipTriangleInH": 1.39
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.0,
+      "precipSquareInH": 1.14,
+      "precipTriangleInH": 1.32
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 1.18,
+      "precipTriangleInH": 1.36
+    }
+  ],
+  "P12TQ": [
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 1.27,
+      "precipTriangleInH": 1.47
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.35,
+      "precipSquareInH": 1.2,
+      "precipTriangleInH": 1.39
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 1.14,
+      "precipTriangleInH": 1.31
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.18,
+      "precipTriangleInH": 1.36
+    }
+  ],
+  "P12F": [
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 11.0,
+      "flowGpm": 1.6,
+      "precipSquareInH": 1.27,
+      "precipTriangleInH": 1.47
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 12.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.2,
+      "precipTriangleInH": 1.39
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 2.0,
+      "precipSquareInH": 1.14,
+      "precipTriangleInH": 1.32
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 1.18,
+      "precipTriangleInH": 1.36
+    }
+  ],
+  "P15Q": [
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 0.6,
+      "precipSquareInH": 1.37,
+      "precipTriangleInH": 1.58
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 0.75,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.7
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 0.9,
+      "precipSquareInH": 1.35,
+      "precipTriangleInH": 1.56
+    },
+    {
+      "arcDeg": 90.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 1.1,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.69
+    }
+  ],
+  "P15H": [
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.2,
+      "precipSquareInH": 1.37,
+      "precipTriangleInH": 1.58
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 1.5,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.7
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.35,
+      "precipTriangleInH": 1.56
+    },
+    {
+      "arcDeg": 180.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 2.2,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.69
+    }
+  ],
+  "P15TQ": [
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 1.8,
+      "precipSquareInH": 1.36,
+      "precipTriangleInH": 1.57
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 2.25,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.7
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 2.7,
+      "precipSquareInH": 1.35,
+      "precipTriangleInH": 1.56
+    },
+    {
+      "arcDeg": 270.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 3.3,
+      "precipSquareInH": 1.46,
+      "precipTriangleInH": 1.69
+    }
+  ],
+  "P15F": [
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 20.0,
+      "radiusFeet": 13.0,
+      "flowGpm": 2.4,
+      "precipSquareInH": 1.37,
+      "precipTriangleInH": 1.58
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 25.0,
+      "radiusFeet": 14.0,
+      "flowGpm": 3.0,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.7
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 30.0,
+      "radiusFeet": 16.0,
+      "flowGpm": 3.6,
+      "precipSquareInH": 1.35,
+      "precipTriangleInH": 1.56
+    },
+    {
+      "arcDeg": 360.0,
+      "pressurePsi": 40.0,
+      "radiusFeet": 17.0,
+      "flowGpm": 4.4,
+      "precipSquareInH": 1.47,
+      "precipTriangleInH": 1.69
+    }
+  ]
+}

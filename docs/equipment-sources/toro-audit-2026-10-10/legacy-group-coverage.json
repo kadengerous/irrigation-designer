@@ -1,0 +1,3652 @@
+{
+  "auditedOn": "2026-10-10",
+  "activeModels": 217,
+  "bodyModels": 40,
+  "missing": [],
+  "duplicateNozzleConfigurations": [],
+  "groups": [
+    {
+      "id": "precision",
+      "label": "Precision Spray / PSN+",
+      "mode": "matched",
+      "nominalRate": 25.4,
+      "browseBySeries": true,
+      "innerSeries": [
+        "O-10",
+        "O-12",
+        "O-15",
+        "O-5",
+        "O-8",
+        "PSN+ Strip",
+        "PSN10",
+        "PSN12",
+        "PSN15",
+        "PSN5",
+        "PSN8",
+        "Precision Strip"
+      ],
+      "items": [
+        {
+          "id": "toro:PSN5-60",
+          "modelId": "PSN5-60",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-60",
+          "modelId": "PSN5T-60",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5-Q",
+          "modelId": "PSN5-Q",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-Q",
+          "modelId": "PSN5T-Q",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5-T",
+          "modelId": "PSN5-T",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-T",
+          "modelId": "PSN5T-T",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5-150",
+          "modelId": "PSN5-150",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-150",
+          "modelId": "PSN5T-150",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5-H",
+          "modelId": "PSN5-H",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-H",
+          "modelId": "PSN5T-H",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5-210",
+          "modelId": "PSN5-210",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-210",
+          "modelId": "PSN5T-210",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5-TT",
+          "modelId": "PSN5-TT",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-TT",
+          "modelId": "PSN5T-TT",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5-TQ",
+          "modelId": "PSN5-TQ",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-TQ",
+          "modelId": "PSN5T-TQ",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5-F",
+          "modelId": "PSN5-F",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN5T-F",
+          "modelId": "PSN5T-F",
+          "series": "PSN5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN5T-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-60",
+          "modelId": "PSN8-60",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-60",
+          "modelId": "PSN8T-60",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-Q",
+          "modelId": "PSN8-Q",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-Q",
+          "modelId": "PSN8T-Q",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-T",
+          "modelId": "PSN8-T",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-T",
+          "modelId": "PSN8T-T",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-150",
+          "modelId": "PSN8-150",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-150",
+          "modelId": "PSN8T-150",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-H",
+          "modelId": "PSN8-H",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-H",
+          "modelId": "PSN8T-H",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-210",
+          "modelId": "PSN8-210",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-210",
+          "modelId": "PSN8T-210",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-TT",
+          "modelId": "PSN8-TT",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-TT",
+          "modelId": "PSN8T-TT",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-TQ",
+          "modelId": "PSN8-TQ",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-TQ",
+          "modelId": "PSN8T-TQ",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8-F",
+          "modelId": "PSN8-F",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN8T-F",
+          "modelId": "PSN8T-F",
+          "series": "PSN8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN8T-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-60",
+          "modelId": "PSN10-60",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-60",
+          "modelId": "PSN10T-60",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-Q",
+          "modelId": "PSN10-Q",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-Q",
+          "modelId": "PSN10T-Q",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-T",
+          "modelId": "PSN10-T",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-T",
+          "modelId": "PSN10T-T",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-150",
+          "modelId": "PSN10-150",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-150",
+          "modelId": "PSN10T-150",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-H",
+          "modelId": "PSN10-H",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-H",
+          "modelId": "PSN10T-H",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-210",
+          "modelId": "PSN10-210",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-210",
+          "modelId": "PSN10T-210",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-TT",
+          "modelId": "PSN10-TT",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-TT",
+          "modelId": "PSN10T-TT",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-TQ",
+          "modelId": "PSN10-TQ",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-TQ",
+          "modelId": "PSN10T-TQ",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10-F",
+          "modelId": "PSN10-F",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN10T-F",
+          "modelId": "PSN10T-F",
+          "series": "PSN10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN10T-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-60",
+          "modelId": "PSN12-60",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-60",
+          "modelId": "PSN12T-60",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-Q",
+          "modelId": "PSN12-Q",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-Q",
+          "modelId": "PSN12T-Q",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-T",
+          "modelId": "PSN12-T",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-T",
+          "modelId": "PSN12T-T",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-150",
+          "modelId": "PSN12-150",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-150",
+          "modelId": "PSN12T-150",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-H",
+          "modelId": "PSN12-H",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-H",
+          "modelId": "PSN12T-H",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-210",
+          "modelId": "PSN12-210",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-210",
+          "modelId": "PSN12T-210",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-TT",
+          "modelId": "PSN12-TT",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-TT",
+          "modelId": "PSN12T-TT",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-TQ",
+          "modelId": "PSN12-TQ",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-TQ",
+          "modelId": "PSN12T-TQ",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12-F",
+          "modelId": "PSN12-F",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN12T-F",
+          "modelId": "PSN12T-F",
+          "series": "PSN12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN12T-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-60",
+          "modelId": "PSN15-60",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-60",
+          "modelId": "PSN15T-60",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-Q",
+          "modelId": "PSN15-Q",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-Q",
+          "modelId": "PSN15T-Q",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-T",
+          "modelId": "PSN15-T",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-T",
+          "modelId": "PSN15T-T",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-150",
+          "modelId": "PSN15-150",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-150",
+          "modelId": "PSN15T-150",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-H",
+          "modelId": "PSN15-H",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-H",
+          "modelId": "PSN15T-H",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-210",
+          "modelId": "PSN15-210",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-210",
+          "modelId": "PSN15T-210",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-TT",
+          "modelId": "PSN15-TT",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-TT",
+          "modelId": "PSN15T-TT",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-TQ",
+          "modelId": "PSN15-TQ",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-TQ",
+          "modelId": "PSN15T-TQ",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15-F",
+          "modelId": "PSN15-F",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN15T-F",
+          "modelId": "PSN15T-F",
+          "series": "PSN15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "PSN15T-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X30-SST",
+          "modelId": "PSN4X30-SST",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X30-SST",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X30T-SST",
+          "modelId": "PSN4X30T-SST",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X30T-SST",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X15-LCS",
+          "modelId": "PSN4X15-LCS",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X15-LCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X15T-LCS",
+          "modelId": "PSN4X15T-LCS",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X15T-LCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X15-RCS",
+          "modelId": "PSN4X15-RCS",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X15-RCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X15T-RCS",
+          "modelId": "PSN4X15T-RCS",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X15T-RCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X18-SST",
+          "modelId": "PSN4X18-SST",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X18-SST",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X18T-SST",
+          "modelId": "PSN4X18T-SST",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X18T-SST",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X9-LCS",
+          "modelId": "PSN4X9-LCS",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X9-LCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X9T-LCS",
+          "modelId": "PSN4X9T-LCS",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X9T-LCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X9-RCS",
+          "modelId": "PSN4X9-RCS",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X9-RCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:PSN4X9T-RCS",
+          "modelId": "PSN4X9T-RCS",
+          "series": "PSN+ Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "PSN4X9T-RCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-60",
+          "modelId": "O-5-60",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-60",
+          "modelId": "O-T-5-60",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-Q",
+          "modelId": "O-5-Q",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-Q",
+          "modelId": "O-T-5-Q",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-T",
+          "modelId": "O-5-T",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-T",
+          "modelId": "O-T-5-T",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-150",
+          "modelId": "O-5-150",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-150",
+          "modelId": "O-T-5-150",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-H",
+          "modelId": "O-5-H",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-H",
+          "modelId": "O-T-5-H",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-210",
+          "modelId": "O-5-210",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-210",
+          "modelId": "O-T-5-210",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-TT",
+          "modelId": "O-5-TT",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-TT",
+          "modelId": "O-T-5-TT",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-TQ",
+          "modelId": "O-5-TQ",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-TQ",
+          "modelId": "O-T-5-TQ",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-5-F",
+          "modelId": "O-5-F",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-5-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-5-F",
+          "modelId": "O-T-5-F",
+          "series": "O-5",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-5-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-60",
+          "modelId": "O-8-60",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-60",
+          "modelId": "O-T-8-60",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-Q",
+          "modelId": "O-8-Q",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-Q",
+          "modelId": "O-T-8-Q",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-T",
+          "modelId": "O-8-T",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-T",
+          "modelId": "O-T-8-T",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-150",
+          "modelId": "O-8-150",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-150",
+          "modelId": "O-T-8-150",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-H",
+          "modelId": "O-8-H",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-H",
+          "modelId": "O-T-8-H",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-210",
+          "modelId": "O-8-210",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-210",
+          "modelId": "O-T-8-210",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-TT",
+          "modelId": "O-8-TT",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-TT",
+          "modelId": "O-T-8-TT",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-TQ",
+          "modelId": "O-8-TQ",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-TQ",
+          "modelId": "O-T-8-TQ",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-8-F",
+          "modelId": "O-8-F",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-8-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-8-F",
+          "modelId": "O-T-8-F",
+          "series": "O-8",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-8-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-60",
+          "modelId": "O-10-60",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-60",
+          "modelId": "O-T-10-60",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-Q",
+          "modelId": "O-10-Q",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-Q",
+          "modelId": "O-T-10-Q",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-T",
+          "modelId": "O-10-T",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-T",
+          "modelId": "O-T-10-T",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-150",
+          "modelId": "O-10-150",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-150",
+          "modelId": "O-T-10-150",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-H",
+          "modelId": "O-10-H",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-H",
+          "modelId": "O-T-10-H",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-210",
+          "modelId": "O-10-210",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-210",
+          "modelId": "O-T-10-210",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-TT",
+          "modelId": "O-10-TT",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-TT",
+          "modelId": "O-T-10-TT",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-TQ",
+          "modelId": "O-10-TQ",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-TQ",
+          "modelId": "O-T-10-TQ",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-10-F",
+          "modelId": "O-10-F",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-10-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-10-F",
+          "modelId": "O-T-10-F",
+          "series": "O-10",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-10-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-60",
+          "modelId": "O-12-60",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-60",
+          "modelId": "O-T-12-60",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-Q",
+          "modelId": "O-12-Q",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-Q",
+          "modelId": "O-T-12-Q",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-T",
+          "modelId": "O-12-T",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-T",
+          "modelId": "O-T-12-T",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-150",
+          "modelId": "O-12-150",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-150",
+          "modelId": "O-T-12-150",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-H",
+          "modelId": "O-12-H",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-H",
+          "modelId": "O-T-12-H",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-210",
+          "modelId": "O-12-210",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-210",
+          "modelId": "O-T-12-210",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-TT",
+          "modelId": "O-12-TT",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-TT",
+          "modelId": "O-T-12-TT",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-TQ",
+          "modelId": "O-12-TQ",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-TQ",
+          "modelId": "O-T-12-TQ",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-12-F",
+          "modelId": "O-12-F",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-12-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-12-F",
+          "modelId": "O-T-12-F",
+          "series": "O-12",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-12-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-60",
+          "modelId": "O-15-60",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-60",
+          "modelId": "O-T-15-60",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-60",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-Q",
+          "modelId": "O-15-Q",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-Q",
+          "modelId": "O-T-15-Q",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-Q",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-T",
+          "modelId": "O-15-T",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-T",
+          "modelId": "O-T-15-T",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-T",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-150",
+          "modelId": "O-15-150",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-150",
+          "modelId": "O-T-15-150",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-150",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-H",
+          "modelId": "O-15-H",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-H",
+          "modelId": "O-T-15-H",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-H",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-210",
+          "modelId": "O-15-210",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-210",
+          "modelId": "O-T-15-210",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-210",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-TT",
+          "modelId": "O-15-TT",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-TT",
+          "modelId": "O-T-15-TT",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-TT",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-TQ",
+          "modelId": "O-15-TQ",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-TQ",
+          "modelId": "O-T-15-TQ",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-TQ",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-15-F",
+          "modelId": "O-15-F",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-15-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-15-F",
+          "modelId": "O-T-15-F",
+          "series": "O-15",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "O-T-15-F",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-4X30-SST",
+          "modelId": "O-4X30-SST",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-4X30-SST",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-4X30-SST",
+          "modelId": "O-T-4X30-SST",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-T-4X30-SST",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-4X15-LCS",
+          "modelId": "O-4X15-LCS",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-4X15-LCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-4X15-LCS",
+          "modelId": "O-T-4X15-LCS",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-T-4X15-LCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-4X15-RCS",
+          "modelId": "O-4X15-RCS",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-4X15-RCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-4X15-RCS",
+          "modelId": "O-T-4X15-RCS",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-T-4X15-RCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-4X18-SST",
+          "modelId": "O-4X18-SST",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-4X18-SST",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-4X18-SST",
+          "modelId": "O-T-4X18-SST",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-T-4X18-SST",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-4X9-LCS",
+          "modelId": "O-4X9-LCS",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-4X9-LCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-4X9-LCS",
+          "modelId": "O-T-4X9-LCS",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-T-4X9-LCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-4X9-RCS",
+          "modelId": "O-4X9-RCS",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-4X9-RCS",
+              "type": "fixed"
+            }
+          ]
+        },
+        {
+          "id": "toro:O-T-4X9-RCS",
+          "modelId": "O-T-4X9-RCS",
+          "series": "Precision Strip",
+          "coverageKind": "strip",
+          "verificationStatus": "Verified",
+          "automaticEligible": false,
+          "nozzles": [
+            {
+              "id": "O-T-4X9-RCS",
+              "type": "fixed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rotor",
+      "label": "T5 RapidSet",
+      "mode": "configured",
+      "innerSeries": [
+        "T5 RapidSet"
+      ],
+      "items": [
+        {
+          "id": "toro:T5P-RS-LN",
+          "modelId": "T5P-RS-LN",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5PE-RS-LN",
+          "modelId": "T5PE-RS-LN",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5PCK1.5-RS",
+          "modelId": "T5PCK1.5-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5PCK2.0-RS",
+          "modelId": "T5PCK2.0-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5PCK2.5-RS",
+          "modelId": "T5PCK2.5-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5PCK3.0-RS",
+          "modelId": "T5PCK3.0-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5HP-RS",
+          "modelId": "T5HP-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5HPE-RS",
+          "modelId": "T5HPE-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5S-RS",
+          "modelId": "T5S-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5SE-RS",
+          "modelId": "T5SE-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5PSS3.0-RS",
+          "modelId": "T5PSS3.0-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5PSSE3.0-RS",
+          "modelId": "T5PSSE3.0-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        },
+        {
+          "id": "toro:T5PCKSS3.0-RS",
+          "modelId": "T5PCKSS3.0-RS",
+          "series": "T5 RapidSet",
+          "coverageKind": "sector",
+          "verificationStatus": "Verified",
+          "automaticEligible": true,
+          "nozzles": [
+            {
+              "id": "1.5",
+              "type": "standard"
+            },
+            {
+              "id": "2.0",
+              "type": "standard"
+            },
+            {
+              "id": "2.5",
+              "type": "standard"
+            },
+            {
+              "id": "3.0",
+              "type": "standard"
+            },
+            {
+              "id": "4.0",
+              "type": "standard"
+            },
+            {
+              "id": "5.0",
+              "type": "standard"
+            },
+            {
+              "id": "6.0",
+              "type": "standard"
+            },
+            {
+              "id": "8.0",
+              "type": "standard"
+            },
+            {
+              "id": "1.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "1.5LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "2.0LA",
+              "type": "low-angle"
+            },
+            {
+              "id": "3.0LA",
+              "type": "low-angle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

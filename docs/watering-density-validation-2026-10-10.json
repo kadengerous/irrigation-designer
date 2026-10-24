@@ -1,0 +1,184 @@
+{
+  "checkedOn": "2026-10-10",
+  "baselineVersion": 446,
+  "baselineCommit": "ca81fde8ca1230f303ee72323b36d624df9b2ae1",
+  "tests": {
+    "passed": 37,
+    "failed": 0,
+    "catalogModels": 461,
+    "typecheck": "passed"
+  },
+  "nativeCanvas": {
+    "renderer": "Actual WateringHead Konva sceneFunc via ReactKonvaCore and @napi-rs/canvas",
+    "limitation": "Native paint timing only; excludes browser compositing and does not measure browser FPS.",
+    "before": [
+      {
+        "pxPerM": 18,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 7.543642416666671,
+        "medianMs": 7.548750000000155,
+        "p95Ms": 7.795125000000098
+      },
+      {
+        "pxPerM": 36,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 9.971895833333368,
+        "medianMs": 9.985916000000088,
+        "p95Ms": 10.111041999999998
+      },
+      {
+        "pxPerM": 72,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 12.004868166666634,
+        "medianMs": 11.99629200000004,
+        "p95Ms": 12.296208999999862
+      }
+    ],
+    "after": [
+      {
+        "pxPerM": 18,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 12.423409666666638,
+        "medianMs": 12.439875000000029,
+        "p95Ms": 12.620874999999842
+      },
+      {
+        "pxPerM": 36,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 18.402159833333315,
+        "medianMs": 18.385500000000093,
+        "p95Ms": 18.82075000000009
+      },
+      {
+        "pxPerM": 72,
+        "heads": 8,
+        "measuredFrames": 12,
+        "meanMs": 22.07124991666666,
+        "medianMs": 22.184749999999894,
+        "p95Ms": 22.384624999999915
+      }
+    ],
+    "zoomRendered": [
+      {
+        "id": "MP1000-360",
+        "pxPerM": 6,
+        "radiusPixels": 25.6032,
+        "particles": {
+          "main": 31,
+          "micro": 371
+        }
+      },
+      {
+        "id": "MP1000-360",
+        "pxPerM": 12,
+        "radiusPixels": 51.2064,
+        "particles": {
+          "main": 124,
+          "micro": 1483
+        }
+      },
+      {
+        "id": "MP1000-360",
+        "pxPerM": 18,
+        "radiusPixels": 76.8096,
+        "particles": {
+          "main": 279,
+          "micro": 3337
+        }
+      },
+      {
+        "id": "MP1000-360",
+        "pxPerM": 36,
+        "radiusPixels": 153.6192,
+        "particles": {
+          "main": 600,
+          "micro": 7200
+        }
+      },
+      {
+        "id": "rain-bird:R-VAN18-360",
+        "pxPerM": 6,
+        "radiusPixels": 31.200000000000003,
+        "particles": {
+          "main": 46,
+          "micro": 551
+        }
+      },
+      {
+        "id": "rain-bird:R-VAN18-360",
+        "pxPerM": 12,
+        "radiusPixels": 62.400000000000006,
+        "particles": {
+          "main": 184,
+          "micro": 2202
+        }
+      },
+      {
+        "id": "rain-bird:R-VAN18-360",
+        "pxPerM": 18,
+        "radiusPixels": 93.60000000000001,
+        "particles": {
+          "main": 413,
+          "micro": 4955
+        }
+      },
+      {
+        "id": "rain-bird:R-VAN18-360",
+        "pxPerM": 36,
+        "radiusPixels": 187.20000000000002,
+        "particles": {
+          "main": 600,
+          "micro": 7200
+        }
+      },
+      {
+        "id": "k-rain:RN100-ADJ",
+        "pxPerM": 6,
+        "radiusPixels": 23.759999999999998,
+        "particles": {
+          "main": 24,
+          "micro": 288
+        }
+      },
+      {
+        "id": "k-rain:RN100-ADJ",
+        "pxPerM": 12,
+        "radiusPixels": 47.519999999999996,
+        "particles": {
+          "main": 54,
+          "micro": 639
+        }
+      },
+      {
+        "id": "k-rain:RN100-ADJ",
+        "pxPerM": 18,
+        "radiusPixels": 71.28,
+        "particles": {
+          "main": 120,
+          "micro": 1437
+        }
+      },
+      {
+        "id": "k-rain:RN100-ADJ",
+        "pxPerM": 36,
+        "radiusPixels": 142.56,
+        "particles": {
+          "main": 479,
+          "micro": 5747
+        }
+      }
+    ],
+    "visuallyInspected": [
+      "far-zoom-comparison.png",
+      "contact-sheet.png",
+      "mp-motion-frames.png"
+    ]
+  },
+  "browserCheck": "Unavailable after earlier automatic approval rejection; no alternative browser path attempted",
+  "scope": "Visual width, density and dispersion only; no catalog or engineering calculation changes"
+}

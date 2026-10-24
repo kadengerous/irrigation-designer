@@ -1,0 +1,47 @@
+[
+  {
+    "filename": "o-sellsheet-2025.pdf",
+    "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+    "finalUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+    "checkedOn": "2026-10-06",
+    "bytes": 4043874,
+    "sha256": "bb49a5cbdca23dca9eff987c3589b7983696caad1da1ff419ae3b80e7e736365"
+  },
+  {
+    "filename": "o-bid-spec.doc",
+    "url": "https://specifier.toro.com/cads/nozzles/precision_series_nozzles.doc",
+    "finalUrl": "https://specifier.toro.com/cads/nozzles/precision_series_nozzles.doc",
+    "checkedOn": "2026-10-06",
+    "bytes": 27136,
+    "sha256": "eceeda968f3c2f76ab9fd5b9e859fea2e3880169b04b0a201637f9b583d05fb4"
+  },
+  {
+    "filename": "o-pricelist-2026.pdf",
+    "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "finalUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "checkedOn": "2026-10-06",
+    "bytes": 7918638,
+    "sha256": "bdaf42032a15da9b6a9a8190bec49d1b674759462cdbee5a6f28a75bafaa63d2"
+  },
+  {
+    "filename": "o-comparison-current-psn-2026.pdf",
+    "url": "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+    "finalUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+    "checkedOn": "2026-10-06",
+    "bytes": 787233,
+    "sha256": "245119c04c278a69574354ff5c680746f5990738b1ebfc68f49b343e2d221ed5"
+  },
+  {
+    "filename": "psn-catalog-2026.pdf",
+    "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+    "checkedOn": "2026-10-06",
+    "bytes": 13068709,
+    "sha256": "7c170c6d1279a49db8b25d64d53456c77c3120ae74c2cbed0f726b2e8e991920",
+    "downloadedBy": "parallel Toro PSN audit agent; independently read, extracted and visually checked by this O audit",
+    "pagesUsed": [
+      77,
+      80,
+      81
+    ]
+  }
+]

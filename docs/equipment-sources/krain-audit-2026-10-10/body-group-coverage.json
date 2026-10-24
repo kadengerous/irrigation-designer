@@ -1,0 +1,567 @@
+{
+  "verifiedOn": "2026-10-10",
+  "total": 89,
+  "groups": [
+    {
+      "id": "rotary",
+      "label": "RN Rotary Nozzles",
+      "mode": "matched",
+      "nominalRate": 12.7,
+      "models": [
+        {
+          "id": "k-rain:RN100-ADJ-90-210",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN100-ADJ-210-270",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN100-FIX360",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN200-ADJ-90-210",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN200-ADJ-210-270",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN200-FIX360",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN300-ADJ-90-210",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN300-ADJ-210-270",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN300-FIX360",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RNS-RES-515",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series — Strip",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RNS-LES-515",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series — Strip",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RNS-SS-530",
+          "series": "Rotary Nozzle Series",
+          "inner": "Rotary Nozzle Series — Strip",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RN100-ADJ",
+          "series": "Fully Adjustable Rotary Nozzles",
+          "inner": "Fully Adjustable Rotary Nozzles",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN200-ADJ",
+          "series": "Fully Adjustable Rotary Nozzles",
+          "inner": "Fully Adjustable Rotary Nozzles",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        },
+        {
+          "id": "k-rain:RN300-ADJ",
+          "series": "Fully Adjustable Rotary Nozzles",
+          "inner": "Fully Adjustable Rotary Nozzles",
+          "automatic": true,
+          "matchedClass": "k-rain:rn"
+        }
+      ]
+    },
+    {
+      "id": "kvf6",
+      "label": "KVF6",
+      "mode": "configured",
+      "models": [
+        {
+          "id": "k-rain:KVF6",
+          "series": "KVF",
+          "inner": "KVF6",
+          "automatic": true,
+          "matchedClass": null
+        }
+      ]
+    },
+    {
+      "id": "kvf",
+      "label": "KVF 8–17",
+      "mode": "configured",
+      "models": [
+        {
+          "id": "k-rain:KVF8",
+          "series": "KVF",
+          "inner": "KVF8",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:KVF10",
+          "series": "KVF",
+          "inner": "KVF10",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:KVF12",
+          "series": "KVF",
+          "inner": "KVF12",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:KVF15",
+          "series": "KVF",
+          "inner": "KVF15",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:KVF17",
+          "series": "KVF",
+          "inner": "KVF17",
+          "automatic": true,
+          "matchedClass": null
+        }
+      ]
+    },
+    {
+      "id": "kv",
+      "label": "KV Nozzles",
+      "mode": "configured",
+      "models": [
+        {
+          "id": "k-rain:KV8",
+          "series": "KV",
+          "inner": "KV8",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:KV10",
+          "series": "KV",
+          "inner": "KV10",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:KV12",
+          "series": "KV",
+          "inner": "KV12",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:KV15",
+          "series": "KV",
+          "inner": "KV15",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:KV17",
+          "series": "KV",
+          "inner": "KV17",
+          "automatic": true,
+          "matchedClass": null
+        }
+      ]
+    },
+    {
+      "id": "fixed",
+      "label": "Fixed Pattern Nozzles",
+      "mode": "configured",
+      "models": [
+        {
+          "id": "k-rain:FN-8Q",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-8H",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-8TQ",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-8F",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-10Q",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-10H",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-10TQ",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-10F",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-12Q",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-12H",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-12TQ",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-12F",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-15Q",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-15H",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-15TQ",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-15F",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P12Q",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P12H",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P12TQ",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P12F",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P15Q",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P15H",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P15TQ",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P15F",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P",
+          "automatic": true,
+          "matchedClass": null
+        }
+      ]
+    },
+    {
+      "id": "strips",
+      "label": "Strip Nozzles",
+      "mode": "layout",
+      "models": [
+        {
+          "id": "k-rain:P15CS",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P Strip",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-15CS",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN Strip",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P15ES",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P Strip",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-15ES",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN Strip",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:P15SS",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "P Strip",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:FN-15SS",
+          "series": "Fixed Pattern Nozzles",
+          "inner": "FN Strip",
+          "automatic": false,
+          "matchedClass": null
+        }
+      ]
+    },
+    {
+      "id": "rotor",
+      "label": "Rotors",
+      "mode": "configured",
+      "models": [
+        {
+          "id": "k-rain:MiniPro",
+          "series": "MiniPro",
+          "inner": "MiniPro",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RPS50",
+          "series": "RPS50",
+          "inner": "RPS50",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RPS75",
+          "series": "RPS75",
+          "inner": "RPS75",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RPS75-PR",
+          "series": "RPS75-PR",
+          "inner": "RPS75-PR",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RPS75i",
+          "series": "RPS75i",
+          "inner": "RPS75i",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RPS75i-PR",
+          "series": "RPS75i-PR",
+          "inner": "RPS75i-PR",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:RPS-Select",
+          "series": "RPS-Select",
+          "inner": "RPS-Select",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:ProPlus",
+          "series": "ProPlus",
+          "inner": "ProPlus",
+          "automatic": true,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:SuperPro",
+          "series": "SuperPro",
+          "inner": "SuperPro",
+          "automatic": true,
+          "matchedClass": null
+        }
+      ]
+    },
+    {
+      "id": "bubbler",
+      "label": "Bubblers",
+      "mode": "localized",
+      "models": [
+        {
+          "id": "k-rain:TB-025",
+          "series": "Tree Bubblers",
+          "inner": "Tree Bubblers",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:TB-05",
+          "series": "Tree Bubblers",
+          "inner": "Tree Bubblers",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:TB-10",
+          "series": "Tree Bubblers",
+          "inner": "Tree Bubblers",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:TB-20",
+          "series": "Tree Bubblers",
+          "inner": "Tree Bubblers",
+          "automatic": false,
+          "matchedClass": null
+        },
+        {
+          "id": "k-rain:TB-ADJ",
+          "series": "Tree Bubblers",
+          "inner": "Tree Bubblers",
+          "automatic": false,
+          "matchedClass": null
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "id": "k-rain:P15HL",
+      "reason": "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified. Second Low dimensions 1.5 x 9.8 m come from official brochure p2; current female FN-5HL table label is resolved by FN-15HL model list and current product page. Exact curved footprint remains unknown. Published dimensions and centered origin are verified, but the upper schematic has no exact curve definition. At 2.0 bar High 4.6 x 9.8 m is not an exact radius-4.6 m semicircle. No circle or ellipse is asserted; footprint remains unsupported."
+    },
+    {
+      "id": "k-rain:FN-15HL",
+      "reason": "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified. Second Low dimensions 1.5 x 9.8 m come from official brochure p2; current female FN-5HL table label is resolved by FN-15HL model list and current product page. Exact curved footprint remains unknown. Published dimensions and centered origin are verified, but the upper schematic has no exact curve definition. At 2.0 bar High 4.6 x 9.8 m is not an exact radius-4.6 m semicircle. No circle or ellipse is asserted; footprint remains unsupported."
+    }
+  ],
+  "placeableCount": 70,
+  "automaticCount": 56,
+  "duplicates": [],
+  "unassignedPlaceable": []
+}

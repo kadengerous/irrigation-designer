@@ -1,0 +1,25 @@
+{
+  "verifiedOn": "2026-10-10",
+  "status": "final",
+  "models": 102,
+  "circularModels": 90,
+  "stripModels": 12,
+  "uniquePatterns": 51,
+  "uniqueSourceRows": 204,
+  "catalogRows": 408,
+  "rowsMatched": 408,
+  "rowMismatches": 0,
+  "modelFieldMismatches": 0,
+  "freshModelIdentitiesVerified": 102,
+  "colorNamesVerified": 102,
+  "numericPatches": 0,
+  "radiusPolicyPatches": 90,
+  "unresolvedFullRadiusModels": [],
+  "limitations": [
+    "No reduced-radius flow curve or preserved-precipitation law for PSN+ verified.",
+    "No strip-reduction transform or exact square/triangle strip-spacing footnote published in current chart.",
+    "PSN15-F/T-F retain selected current 20–50 psi grid; conflicting older PSN+ table is not merged.",
+    "Australian webpage pressure-compensation/range claims conflict with its linked brochure; neither alters US hydraulic data.",
+    "Fresh current PDF pixel origin inspection unavailable via the returned screenshot payload; existing strip origin evidence remains dated 2026-10-06."
+  ]
+}

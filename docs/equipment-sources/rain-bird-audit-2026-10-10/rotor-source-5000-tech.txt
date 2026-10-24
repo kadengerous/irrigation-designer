@@ -1,0 +1,425 @@
+ (https://www.rainbird.com/media/4635)
+citeturn391view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 8; Source: open({"ref_id":"https://www.rainbird.com/media/4635","lineno":0}); Total lines: 700
+L0@P0: © 2023 Rain Bird Corporation D42380 RainBird.com
+L1@P0: OPERATING RANGE:
+L2@P0: Precipitation Rate
+L3@P0: 0.20 to 1.50 in/hr (5 to 38 mm/hr)
+L4@P0: Flow Rate
+L5@P0: 0.76 to 9.63 gpm (3.0 to 36.6 l/m)
+L6@P0: Radius
+L7@P0: 25 ft to 50 ft (7.6 to 15.2 m)
+L8@P0: Radius may be reduced up to 25% with
+L9@P0: nozzle retention screw
+L10@P0: Pressure
+L11@P0: 25 to 65 psi (1.7 to 4.5 bar)
+L12@P0: SPECIFICATIONS:
+L13@P0: y 3/4” NPT female bottom
+L14@P0: threaded inlet
+L15@P0: y Part Circle: Reversing 40–360°
+L16@P0: y Full Circle: Non-reversing 360°
+L17@P0: DIMENSIONS:
+L18@P0: Exposed Surface Diameter
+L19@P0: 15/8” (4.1 cm)
+L20@P0: Pop-up Height
+L21@P0: Shrub; 4” (10.2 cm); 6” (15.2 cm);
+L22@P0: 12” (30.5 cm)
+L23@P0: Overall Body Height
+L24@P0: Shrub: 73/4” (19.7 cm)
+L25@P0: 4”: 73/8” (18.5 cm); 6”: 95/8” (24.5 cm);
+L26@P0: 12”: 167/8” (42.9 cm)
+L27@P0: Note: Pop-up height measured from the
+L28@P0: cover to the nozzle. Overall body height is
+L29@P0: measured popped down
+L30@P0: y Thicker rubber cover
+L31@P0: y Self-Flushing Arc Adjustment Port: as
+L32@P0: the riser stem pops-up and retracts
+L33@P0: a jet of water cleans out the arc
+L34@P0: adjustment slot
+L35@P0: y Slip Clutch: quickly set the left edge of
+L36@P0: the 5000 Series rotor
+L37@P0: y Self-flushing tapered stem design and
+L38@P0: integrated triple-blade multi-function
+L39@P0: wiper seal protect internals from debris
+L40@P0: y Heavy duty case
+L41@P0: y Part Circle: Reversing 40–360° rotation
+L42@P0: Full Circle: Non-reversing 360° rotation
+L43@P0: y Top-adjust arc adjustment requiring
+L44@P0: only a flat-blade screwdriver
+L45@P0: y Tree of nozzles including 8 Rain Curtain
+L46@P0: (25° trajectory) and 4 low-angle (10°
+L47@P0: trajectory) provides 25 ft to 50 ft (7.6 to
+L48@P0: 15.2 m) distance of throw
+L49@P0: y Rain Curtain nozzles feature:
+L50@P0: - Large droplets for superior
+L51@P0: wind resistance
+L52@P0: - Effective close-in watering
+L53@P0: - Even distribution over the entire radius
+L54@P0: y Optional Matched Precipitation Rate
+L55@P0: (MPR) nozzles
+L56@P0: y True 4 in (10 cm) pop-up (measured
+L57@P0: from the case cover to the nozzle)
+L58@P0: y Five-year trade warranty
+L59@P0: Built from top to bottom with the contractor in mind, the Rain Bird
+L60@P0: 5000 Series product line is the durable, reliable rotor for residential and
+L61@P0: commercial applications. Its Rain Curtain™ nozzle set includes 12 nozzles
+L62@P0: (8 standard and 4 low angle) that ensure you always have the correct
+L63@P0: nozzle in hand for the project.
+L64@P0: FEATURES:
+L65@P0: 5000 Series Rotors
+L66@P0: Technical Specifications
+L67@P0: Note: Certain specifications not available for some rotor series.
+L68@P0: 5004 - S - + - PC - SAM - R - NP - SS
+L69@P0: Model
+L70@P0: Shrub
+L71@P0: Model
+L72@P0: Plus
+L73@P0: Rotation
+L74@P0: “PC” for 40-360 degrees
+L75@P0: “FC” for 360 degree only
+L76@P0: Options
+L77@P0: SAM
+L78@P0: R: PRS
+L79@P0: NP: Non-Potable Cover
+L80@P0: Model
+L81@P0: 5004: 4” pop-up
+L82@P0: 5006: 6” pop-up
+L83@P0: 5012: 12” pop-up
+L84@P0: Model
+L85@P0: Stainless
+L86@P0-1: Steel5000 Series Rotors
+L87@P1: © 2023 Rain Bird Corporation D42380 RainBird.com
+L88@P1: Technical Specifications
+L89@P1: FLOW SHUT OFF PRESSURE REGULATION NON-POTABLE
+L90@P1: PRS (R) NP
+L91@P1: On Without PRS
+L92@P1: O
+L93@P1: Plus (+)
+L94@P1: The Green Top
+L95@P1: With PRS
+L96@P1: FLOW SHUT OFF PRESSURE REGULATION NON-POTABLE
+L97@P1: PRS (R) NP
+L98@P1: On Without PRS
+L99@P1: O
+L100@P1: Plus (+)
+L101@P1: The Green Top
+L102@P1: With PRS
+L103@P1: FLOW SHUT OFF PRESSURE REGULATION NON-POTABLE
+L104@P1: PRS (R) NP
+L105@P1: On Without PRS
+L106@P1: O
+L107@P1: Plus (+)
+L108@P1: The Green Top
+L109@P1: With PRS
+L110@P1: OPTIONAL FEATURES:
+L111@P1: ADDITIONAL FEATURES
+L112@P1: y Turn the rotor on/off at the
+L113@P1: head for easier maintenance
+L114@P1: y Flush zone and nozzle rotor
+L115@P1: without going back and forth to
+L116@P1: a valve or controller
+L117@P1: y Troubleshoot for leaks by
+L118@P1: turning off all the heads in
+L119@P1: that zone
+L120@P1: y Purple top to identify
+L121@P1: non-potable water source
+L122@P1: y Engineered thermoplastics
+L123@P1: resist common chemicals
+L124@P1: present in water source
+L125@P1: P RS W I T H F LOW O PT I M I Z E R™
+L126@P1: TECHNOLOGY
+L127@P1: y Conserve water and manage
+L128@P1: flow at each head by regulating
+L129@P1: pressure to precisely 45 psi
+L130@P1: y Eliminate wasteful misting
+L131@P1: and fogging
+L132@P1: y Ensure even distribution
+L133@P1: uniformity across the entire zone
+L134@P1: y Stainless Steel (SS)
+L135@P1: y Seal-A-Matic™ (SAM) Check Valve
+L136@P1-2: y Matched Precipitation (MPR) Nozzles5000 Series Rotors
+L137@P2: © 2023 Rain Bird Corporation D42380 RainBird.com
+L138@P2: Technical Specifications
+L139@P2: 5000 SERIES STANDARD ANGLE RAIN CURTAIN™
+L140@P2: NOZZLE PERFORMANCE (IMPERIAL)
+L141@P2: ■ ▲ PRESSURE
+L142@P2: (PSI)
+L143@P2: NOZZLE RADIUS
+L144@P2: (FT)
+L145@P2: FLOW
+L146@P2: (GPM)
+L147@P2: PRECIP
+L148@P2: (IN/H)
+L149@P2: PRECIP
+L150@P2: (IN/H)
+L151@P2: 25 1.5 33 1.12 0.20 0.23
+L152@P2: 2.0 35 1.50 0.24 0.27
+L153@P2: 2.5 35 1.81 0.28 0.33
+L154@P2: 3.0 36 2.26 0.34 0.39
+L155@P2: 4.0 36 2.91 0.43 0.49
+L156@P2: 5.0 37 3.72 0.52 0.60
+L157@P2: 6.0 37 4.25 0.60 0.69
+L158@P2: 8.0 33 5.90 1.26 1.50
+L159@P2: 35 1.5 34 1.35 0.22 0.26
+L160@P2: 2.0 36 1.81 0.27 0.31
+L161@P2: 2.5 37 2.17 0.31 0.35
+L162@P2: 3.0 38 2.71 0.36 0.42
+L163@P2: 4.0 40 3.50 0.42 0.49
+L164@P2: 5.0 41 4.47 0.51 0.59
+L165@P2: 6.0 43 5.23 0.54 0.63
+L166@P2: 8.0 41 7.06 0.94 1.10
+L167@P2: 45 1.5 35 1.54 0.24 0.28
+L168@P2: 2.0 37 2.07 0.29 0.34
+L169@P2: 2.5 37 2.51 0.35 0.41
+L170@P2: 3.0 39 3.09 0.37 0.43
+L171@P2: 4.0 42 4.01 0.44 0.51
+L172@P2: 5.0 43 5.09 0.48 0.56
+L173@P2: 6.0 44 6.01 0.59 0.69
+L174@P2: 8.0 44 8.03 0.92 1.06
+L175@P2: 55 1.5 35 1.71 0.27 0.31
+L176@P2: 2.0 37 2.30 0.32 0.37
+L177@P2: 2.5 37 2.76 0.39 0.45
+L178@P2: 3.0 40 3.47 0.42 0.48
+L179@P2: 4.0 42 4.44 0.48 0.56
+L180@P2: 5.0 45 5.66 0.54 0.62
+L181@P2: 6.0 50 6.63 0.51 0.59
+L182@P2: 8.0 47 8.86 0.80 0.93
+L183@P2: 65 1.5 34 1.86 0.31 0.36
+L184@P2: 2.0 35 2.52 0.40 0.46
+L185@P2: 2.5 37 3.01 0.42 0.49
+L186@P2: 3.0 40 3.78 0.45 0.53
+L187@P2: 4.0 42 4.83 0.53 0.61
+L188@P2: 5.0 45 6.16 0.59 0.68
+L189@P2: 6.0 50 7.22 0.55 0.64
+L190@P2: 8.0 48 9.63 0.84 0.97
+L191@P2: Precipitation rates based on half-circle operation
+L192@P2: ■ Square spacing based on 50% diameter of throw
+L193@P2: ▲Triangular spacing based on 50% diameter of throw
+L194@P2: Performance data collected in zero wind conditions
+L195@P2: Performance data derived from tests that conform with ASAE
+L196@P2: Standards; ASAE S398.1.
+L197@P2: 5000 SERIES STANDARD ANGLE RAIN CURTAIN™
+L198@P2: NOZZLE PERFORMANCE (METRIC)
+L199@P2: ■ ▲ PRESSURE
+L200@P2: (BAR)
+L201@P2: NOZZLE RADIUS
+L202@P2: (M)
+L203@P2: FLOW
+L204@P2: (M3/H)
+L205@P2: FLOW
+L206@P2: (L/M)
+L207@P2: PRECIP
+L208@P2: (MM/H)
+L209@P2: PRECIP
+L210@P2: (MM/H)
+L211@P2: 2.0 1.5 10.2 0.28 4.8 5 6
+L212@P2: 2.0 10.8 0.36 6.0 6 7
+L213@P2: 2.5 10.9 0.44 7.2 7 9
+L214@P2: 3.0 11.2 0.55 9.0 9 10
+L215@P2: 4.0 11.6 0.71 12.0 11 12
+L216@P2: 5.0 12.1 0.91 15.0 13 15
+L217@P2: 6.0 12.4 1.05 17.4 15 17
+L218@P2: 8.0 11.8 1.45 24.0 32 37
+L219@P2: 2.5 1.5 10.4 0.31 5.4 6 7
+L220@P2: 2.0 11.0 0.41 6.6 7 8
+L221@P2: 2.5 11.3 0.50 8.4 8 9
+L222@P2: 3.0 11.2 0.62 10.2 9 11
+L223@P2: 4.0 12.3 0.81 13.2 11 13
+L224@P2: 5.0 12.7 1.03 17.4 13 15
+L225@P2: 6.0 13.2 1.21 20.4 14 16
+L226@P2: 8.0 13.3 1.63 27.0 24 28
+L227@P2: 3.0 1.5 10.6 0.34 6.0 6 7
+L228@P2: 2.0 11.2 0.45 7.8 7 8
+L229@P2: 2.5 11.3 0.56 9.6 9 10
+L230@P2: 3.0 12.1 0.69 11.4 9 11
+L231@P2: 4.0 12.7 0.89 15.0 11 13
+L232@P2: 5.0 13.5 1.13 18.6 12 14
+L233@P2: 6.0 13.4 1.34 22.2 13 17
+L234@P2: 8.0 13.4 1.79 30.0 23 27
+L235@P2: 3.5 1.5 10.7 0.37 6.0 7 8
+L236@P2: 2.0 11.3 0.49 8.4 8 9
+L237@P2: 2.5 11.3 0.60 10.2 9 11
+L238@P2: 3.0 12.2 0.74 12.6 10 12
+L239@P2: 4.0 12.8 0.97 16.2 12 14
+L240@P2: 5.0 13.7 1.23 20.4 13 15
+L241@P2: 6.0 14.2 1.45 24.0 13 15
+L242@P2: 8.0 14.9 1.93 32.4 20 24
+L243@P2: 4.0 1.5 10.6 0.40 6.6 7 8
+L244@P2: 2.0 11.1 0.52 9.0 8 10
+L245@P2: 2.5 11.3 0.64 10.8 10 12
+L246@P2: 3.0 12.2 0.80 13.2 11 12
+L247@P2: 4.0 12.8 1.04 17.4 13 15
+L248@P2: 5.0 13.7 1.32 22.2 14 16
+L249@P2: 6.0 14.9 1.55 25.8 14 16
+L250@P2: 8.0 15.2 2.06 34.2 21 25
+L251@P2: 4.5 1.5 10.4 0.42 7.2 8 9
+L252@P2: 2.0 10.7 0.55 9.0 10 11
+L253@P2: 2.5 11.3 0.68 11.4 11 12
+L254@P2: 3.0 12.2 0.84 13.8 11 13
+L255@P2: 4.0 12.8 1.10 18.0 13 15
+L256@P2: 5.0 13.7 1.40 23.4 15 17
+L257@P2: 6.0 14.6 1.64 28.2 15 18
+L258@P2-3: 8.0 15.2 2.19 36.6 19 225000 Series Rotors
+L259@P3: © 2023 Rain Bird Corporation D42380 RainBird.com
+L260@P3: Technical Specifications
+L261@P3: 5000 SERIES LOW-ANGLE NOZZLE PERFORMANCE
+L262@P3: (IMPERIAL)
+L263@P3: ■ ▲ PRESSURE
+L264@P3: (PSI)
+L265@P3: NOZZLE RADIUS
+L266@P3: (FT)
+L267@P3: FLOW
+L268@P3: (GPM)
+L269@P3: PRECIP
+L270@P3: (IN/H)
+L271@P3: PRECIP
+L272@P3: (IN/H)
+L273@P3: 25 1.0 LA 25 0.76 0.23 0.27
+L274@P3: 1.5 LA 27 1.15 0.30 0.35
+L275@P3: 2.0 LA 29 1.47 0.34 0.39
+L276@P3: 3.0 LA 29 2.23 0.51 0.59
+L277@P3: 35 1.0 LA 28 0.92 0.23 0.26
+L278@P3: 1.5 LA 30 1.38 0.30 0.34
+L279@P3: 2.0 LA 31 1.77 0.35 0.41
+L280@P3: 3.0 LA 33 2.68 0.47 0.55
+L281@P3: 45 1.0 LA 29 1.05 0.24 0.28
+L282@P3: 1.5 LA 31 1.58 0.32 0.37
+L283@P3: 2.0 LA 32 2.02 0.38 0.44
+L284@P3: 3.0 LA 35 3.07 0.48 0.56
+L285@P3: 55 1.0 LA 29 1.17 0.27 0.31
+L286@P3: 1.5 LA 31 1.76 0.35 0.41
+L287@P3: 2.0 LA 33 2.24 0.40 0.46
+L288@P3: 3.0 LA 36 3.41 0.51 0.58
+L289@P3: 65 1.0 LA 29 1.27 0.29 0.34
+L290@P3: 1.5 LA 31 1.92 0.38 0.44
+L291@P3: 2.0 LA 33 2.45 0.43 0.50
+L292@P3: 3.0 LA 36 3.72 0.55 0.64
+L293@P3: Precipitation rates based on half-circle operation
+L294@P3: ■ Square spacing based on 50% diameter of throw
+L295@P3: ▲Triangular spacing based on 50% diameter of throw
+L296@P3: Performance data collected in zero wind conditions
+L297@P3: Performance data derived from tests that conform with ASAE
+L298@P3: Standards; ASAE S398.1.
+L299@P3: 5000 SERIES LOW-ANGLE NOZZLE
+L300@P3: PERFORMANCE (METRIC)
+L301@P3: ■ ▲ PRESSURE
+L302@P3: (BAR)
+L303@P3: NOZZLE RADIUS
+L304@P3: (M)
+L305@P3: FLOW
+L306@P3: (M3/H)
+L307@P3: FLOW
+L308@P3: (L/M)
+L309@P3: PRECIP
+L310@P3: (MM/H)
+L311@P3: PRECIP
+L312@P3: (MM/H)
+L313@P3: 1.7 1.0 LA 7.6 0.17 3.0 6 7
+L314@P3: 1.5 LA 8.2 0.26 4.2 8 9
+L315@P3: 2.0 LA 8.8 0.33 5.4 9 10
+L316@P3: 3.0 LA 8.8 0.51 8.4 13 15
+L317@P3: 2.0 1.0 LA 8.0 0.18 3.0 6 6
+L318@P3: 1.5 LA 8.6 0.28 4.8 8 9
+L319@P3: 2.0 LA 9.1 0.36 6.0 9 10
+L320@P3: 3.0 LA 9.3 0.55 9.0 13 15
+L321@P3: 2.5 1.0 LA 8.6 0.20 3.6 5 6
+L322@P3: 1.5 LA 9.2 0.32 5.4 8 9
+L323@P3: 2.0 LA 9.5 0.41 6.6 9 10
+L324@P3: 3.0 LA 10.1 0.62 10.2 12 14
+L325@P3: 3.0 1.0 LA 8.8 0.22 3.6 6 7
+L326@P3: 1.5 LA 9.4 0.35 6.0 8 9
+L327@P3: 2.0 LA 9.7 0.45 7.8 10 11
+L328@P3: 3.0 LA 10.6 0.68 11.4 12 14
+L329@P3: 3.5 1.0 LA 8.8 0.24 4.2 6 7
+L330@P3: 1.5 LA 9.4 0.38 6.6 9 10
+L331@P3: 2.0 LA 9.9 0.49 8.4 10 11
+L332@P3: 3.0 LA 10.8 0.74 12.6 13 15
+L333@P3: 4.0 1.0 LA 8.8 0.26 4.2 7 8
+L334@P3: 1.5 LA 9.4 0.41 6.6 9 11
+L335@P3: 2.0 LA 10.1 0.52 9.0 10 12
+L336@P3: 3.0 LA 11.0 0.80 13.2 13 15
+L337@P3: 4.5 1.0 LA 8.8 0.27 4.8 7 8
+L338@P3: 1.5 LA 9.4 0.44 7.2 10 11
+L339@P3: 2.0 LA 10.1 0.56 9.0 11 13
+L340@P3-4: 3.0 LA 11.0 0.84 13.8 14 165000 Series Rotors
+L341@P4: © 2023 Rain Bird Corporation D42380 RainBird.com
+L342@P4: Technical Specifications
+L343@P4: 5000 SERIES WITH PRS STANDARD ANGLE
+L344@P4: RAIN CURTAIN™ NOZZLE PERFORMANCE (IMPERIAL)
+L345@P4: ■ ▲ PRESSURE
+L346@P4: (PSI)
+L347@P4: NOZZLE RADIUS
+L348@P4: (FT)
+L349@P4: FLOW
+L350@P4: (GPM)
+L351@P4: PRECIP
+L352@P4: (IN/H)
+L353@P4: PRECIP
+L354@P4: (IN/H)
+L355@P4: 25 1.5 33 1.12 0.20 0.23
+L356@P4: 2.0 35 1.50 0.24 0.27
+L357@P4: 2.5 35 1.81 0.28 0.33
+L358@P4: 3.0 36 2.26 0.34 0.39
+L359@P4: 4.0 36 2.91 0.43 0.49
+L360@P4: 5.0 37 3.72 0.52 0.66
+L361@P4: 6.0 37 4.25 0.60 0.69
+L362@P4: 8.0 33 5.90 1.26 1.50
+L363@P4: 35 1.5 34 1.35 0.22 0.26
+L364@P4: 2.0 36 1.81 0.27 0.31
+L365@P4: 2.5 37 2.17 0.31 0.35
+L366@P4: 3.0 38 2.71 0.36 0.41
+L367@P4: 4.0 40 3.50 0.42 0.49
+L368@P4: 5.0 41 4.47 0.51 0.59
+L369@P4: 6.0 43 5.23 0.54 0.63
+L370@P4: 8.0 41 7.06 0.94 1.10
+L371@P4: 45 1.5 35 1.54 0.24 0.28
+L372@P4: 2.0 37 2.07 0.29 0.34
+L373@P4: 2.5 37 2.51 0.35 0.41
+L374@P4: 3.0 39 3.09 0.37 0.43
+L375@P4: 4.0 42 4.01 0.44 0.51
+L376@P4: 5.0 43 5.09 0.48 0.56
+L377@P4: 6.0 44 6.01 0.55 0.63
+L378@P4: 8.0 44 8.03 0.92 1.06
+L379@P4: 55–75 1.5 35 1.59 0.25 0.29
+L380@P4: 2.0 37 2.14 0.30 0.35
+L381@P4: 2.5 37 2.60 0.37 0.42
+L382@P4: 3.0 39 3.20 0.39 0.44
+L383@P4: 4.0 42 4.15 0.45 0.52
+L384@P4: 5.0 43 5.27 0.50 0.58
+L385@P4: 6.0 44 6.22 0.57 0.65
+L386@P4: 8.0 44 8.31 0.72 0.84
+L387@P4: Precipitation rates based on half-circle operation
+L388@P4: ■ Square spacing based on 50% diameter of throw
+L389@P4: ▲Triangular spacing based on 50% diameter of throw
+L390@P4: Performance data collected in zero wind conditions
+L391@P4: Performance data derived from tests that conform with ASAE
+L392@P4: Standards; ASAE S398.1.
+L393@P4: 5000 SERIES WITH PRS STANDARD ANGLE
+L394@P4: RAIN CURTAIN™ NOZZLE PERFORMANCE (METRIC)
+L395@P4: ■ ▲ PRESSURE
+L396@P4: (BAR)
+L397@P4: NOZZLE RADIUS
+L398@P4: (M)
+L399@P4: FLOW
+L400@P4: (M3/H)
+L401@P4: FLOW
+L402@P4: (L/M)
+L403@P4: PRECIP
+L404@P4: (MM/H)
+L405@P4: PRECIP
+L406@P4: (MM/H)
+L407@P4: 1.7 1.5 10.1 0.25 4.2 5 6
+L408@P4: 2.0 10.7 0.34 5.4 6 7
+L409@P4: 2.5 10.7 0.41 6.6 7 8
+L410@P4: 3.0 11.0 0.51 8.4 8 10
+L411@P4: 4.0 11.3 0.66 10.8 10 12
+L412@P4: 5.0 11.9 0.84 13.8 12 14
+L413@P4: 6.0 11.9 0.97 16.2 14 16
+L414@P4: 8.0 11.0 1.34 22.2 22 26
+L415@P4: 2.0 1.5 10.2 0.28 4.8 5 6
+L416@P4: 2.0 10.8 0.36 6.0 6 7
+L417@P4: 2.5 10.9 0.44 7.2 7 9
+L418@P4: 3.0 11.2 0.55 9.0 9 10
+L419@P4: 4.0 11.6 0.71 12.0 11 13
+L420@P4: 5.0 12.1 0.91 15.0 13 15
+L421@P4: 6.0 12.4 1.05 17.4 15 17
+

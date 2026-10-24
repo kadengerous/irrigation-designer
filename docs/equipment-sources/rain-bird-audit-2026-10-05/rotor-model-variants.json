@@ -1,0 +1,106 @@
+{
+  "3500": {
+    "sourceUrl": "https://www.rainbird.com/products/3500-series-rotor-sprinklers",
+    "models": [
+      "3504-PC",
+      "3504-PC-SAM",
+      "3500-S-PC-SAM"
+    ],
+    "note": "SAM holds 2.1 m. The shrub model is explicitly listed but not treated as a pop-up-height choice."
+  },
+  "5000": {
+    "sourceUrl": "https://www.rainbird.com/products/5000-series",
+    "note": "Listed factory nozzle bundles use the same standard nozzle rack. SAM, PRS, SS and NP remain distinct mechanical options. Full-circle models are not interchangeable with reversing PC arc limits. No new rotor catalog items are proposed for these options.",
+    "models": [
+      "5000SPCSAM",
+      "5000+SPCSAM",
+      "5000+SPCSAMNP",
+      "5000+SPCSAMR",
+      "5000+SPCSAMRN",
+      "5004PC",
+      "5004PC20",
+      "5004PC30",
+      "5004PCSAM",
+      "5004PCSAM20",
+      "5004PCNP",
+      "5004+PC",
+      "5004+PC20",
+      "5004+PC30",
+      "5004+PCSAM",
+      "5004+PCR",
+      "5004+PCSAMR",
+      "5004+PCSAMR20",
+      "5004+PCSAMR30",
+      "5004+PCSAMRNP",
+      "5004+PCSAMRSS",
+      "5004+PCSAMRNS",
+      "5004FC",
+      "5004+FC",
+      "5004+FCSAM",
+      "5004+FCSAMR",
+      "5004+FCSAMRSS",
+      "5006PC",
+      "5006PC30",
+      "5006+PC",
+      "5006+PCSAM",
+      "5006+PCSAMNP",
+      "5006+PCSAMR",
+      "5006+PCSAMRNP",
+      "5006+PCSAMRSS",
+      "5006+PCSAMRNS",
+      "5012+PCSAMR",
+      "5012+PCSAMRNP"
+    ]
+  },
+  "6504": {
+    "sourceUrl": "https://www.rainbird.com/products/falcon-6504-series",
+    "models": [
+      "6504-PC",
+      "6504-PC-NP",
+      "6504-PC-SS",
+      "6504-PC-SS-NP",
+      "6504-FC",
+      "6504-FC-NP",
+      "6504-FC-SS",
+      "6504-FC-SS-NP"
+    ],
+    "note": "Standard-speed PC/FC rows audited; high-speed tables are distinct and not imported."
+  },
+  "8005": {
+    "sourceUrl": "https://www.rainbird.com/products/8005-series",
+    "models": [
+      "8005",
+      "8005-NP",
+      "8005-SS",
+      "8005-NP-SS"
+    ],
+    "note": "All combine 50\u2013330 degree reversing part circle with 360 degree non-reversing full circle. NP uses purple cover; SS uses stainless-steel covered riser."
+  },
+  "1800": {
+    "sourceUrl": "https://www.rainbird.com/products/1800-series-spray-sprinkler-bodies",
+    "models": [
+      "1802",
+      "1804",
+      "1806",
+      "1812",
+      "1804-PRS",
+      "1806-PRS",
+      "1812-PRS",
+      "1804-P45",
+      "1806-P45",
+      "1812-P45",
+      "1804-SAM",
+      "1806-SAM",
+      "1812-SAM",
+      "1804-SAM-PRS",
+      "1806-SAM-PRS",
+      "1812-SAM-PRS",
+      "1804-SAM-P45",
+      "1806-SAM-P45",
+      "1812-SAM-P45",
+      "1802-PRS",
+      "1803-PRS"
+    ],
+    "note": "21 explicitly listed bodies, including newly proposed 1802-PRS and 1803-PRS."
+  }
+}

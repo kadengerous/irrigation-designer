@@ -1,0 +1,3068 @@
+[
+  {
+    "id": "k-rain:RN100-ADJ-90-210",
+    "modelId": "RN100-ADJ-90-210",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 15,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN100-ADJ-210-270",
+    "modelId": "RN100-ADJ-210-270",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 10,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN100-FIX360",
+    "modelId": "RN100-FIX360",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 5,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN200-ADJ-90-210",
+    "modelId": "RN200-ADJ-90-210",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 15,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN200-ADJ-210-270",
+    "modelId": "RN200-ADJ-210-270",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 10,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN200-FIX360",
+    "modelId": "RN200-FIX360",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 5,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN300-ADJ-90-210",
+    "modelId": "RN300-ADJ-90-210",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 15,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN300-ADJ-210-270",
+    "modelId": "RN300-ADJ-210-270",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 10,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN300-FIX360",
+    "modelId": "RN300-FIX360",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 5,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Pressure-specific radii govern performance, even where greater than the nominal advertised family range. Metric and US current tables corroborate them; no radius clamping or generic reduction percentage is inferred."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RNS-RES-515",
+    "modelId": "RNS-RES-515",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 5,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RNS-LES-515",
+    "modelId": "RNS-LES-515",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 5,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RNS-SS-530",
+    "modelId": "RNS-SS-530",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 5,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 40,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN100-ADJ",
+    "modelId": "RN100-ADJ",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 9,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Dated 2026 catalog p42 governs the 2.1 bar recommendation and up-to-30% radius adjustment; 2.8 bar on the undated family webpage is retained as superseded/alternate advice. Current p43 precipitation supersedes older brochure values."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 43,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN200-ADJ",
+    "modelId": "RN200-ADJ",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 9,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Dated 2026 catalog p42 governs the 2.1 bar recommendation and up-to-30% radius adjustment; 2.8 bar on the undated family webpage is retained as superseded/alternate advice. Current p43 precipitation supersedes older brochure values."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 43,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN300-ADJ",
+    "modelId": "RN300-ADJ",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 9,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 1,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Dated 2026 catalog p42 governs the 2.1 bar recommendation and up-to-30% radius adjustment; 2.8 bar on the undated family webpage is retained as superseded/alternate advice. Current p43 precipitation supersedes older brochure values."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 43,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF6",
+    "modelId": "KVF6",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 1,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "Partially unavailable; disputed cells null"
+    },
+    "decisions": [
+      "1 disputed precipitation cells are intentionally null in active data. Original printed values and precise reasons remain in field-audit.json; sound flow/radius rows are retained."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 44,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF8",
+    "modelId": "KVF8",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 44,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF10",
+    "modelId": "KVF10",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 44,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF12",
+    "modelId": "KVF12",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 45,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF15",
+    "modelId": "KVF15",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 45,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF17",
+    "modelId": "KVF17",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 45,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV8",
+    "modelId": "KV8",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 46,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV10",
+    "modelId": "KV10",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 46,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV12",
+    "modelId": "KV12",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 46,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV15",
+    "modelId": "KV15",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 47,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV17",
+    "modelId": "KV17",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 16,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 47,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-8Q",
+    "modelId": "FN-8Q",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-8H",
+    "modelId": "FN-8H",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-8TQ",
+    "modelId": "FN-8TQ",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-8F",
+    "modelId": "FN-8F",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-10Q",
+    "modelId": "FN-10Q",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-10H",
+    "modelId": "FN-10H",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-10TQ",
+    "modelId": "FN-10TQ",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-10F",
+    "modelId": "FN-10F",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-12Q",
+    "modelId": "FN-12Q",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 3,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Corrected three flow cells from the official fixed-nozzle brochure, corroborated by current catalog US GPM; retained current metric radius, pressure and precipitation. FN-12F 1.7 bar radius 3.4 m is also corroborated by brochure 11 ft; current US 12 ft is a separate typo."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-12H",
+    "modelId": "FN-12H",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 3,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Corrected three flow cells from the official fixed-nozzle brochure, corroborated by current catalog US GPM; retained current metric radius, pressure and precipitation. FN-12F 1.7 bar radius 3.4 m is also corroborated by brochure 11 ft; current US 12 ft is a separate typo."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-12TQ",
+    "modelId": "FN-12TQ",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 3,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Corrected three flow cells from the official fixed-nozzle brochure, corroborated by current catalog US GPM; retained current metric radius, pressure and precipitation. FN-12F 1.7 bar radius 3.4 m is also corroborated by brochure 11 ft; current US 12 ft is a separate typo."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-12F",
+    "modelId": "FN-12F",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 3,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Corrected three flow cells from the official fixed-nozzle brochure, corroborated by current catalog US GPM; retained current metric radius, pressure and precipitation. FN-12F 1.7 bar radius 3.4 m is also corroborated by brochure 11 ft; current US 12 ft is a separate typo."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15Q",
+    "modelId": "FN-15Q",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15H",
+    "modelId": "FN-15H",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15TQ",
+    "modelId": "FN-15TQ",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15F",
+    "modelId": "FN-15F",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 3,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 48,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P12Q",
+    "modelId": "P12Q",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 4,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Needs Review",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Different older pressure sequence"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P12H",
+    "modelId": "P12H",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 4,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Needs Review",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Different older pressure sequence"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P12TQ",
+    "modelId": "P12TQ",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 4,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Needs Review",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Different older pressure sequence"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P12F",
+    "modelId": "P12F",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 4,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Needs Review",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Different older pressure sequence"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15Q",
+    "modelId": "P15Q",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 4,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Independent table and model specification check passed."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15H",
+    "modelId": "P15H",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 4,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Needs Review",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Metric 2.8/3.4 bar corresponds to US 30/40 PSI in the same rows. A prior brochure has different hydraulics. No verified current correction selected."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "pressureBar",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "Metric 2.8/3.4 bar corresponds to US 30/40 PSI in the same rows. A prior brochure has different hydraulics. No verified current correction selected.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15TQ",
+    "modelId": "P15TQ",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 4,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Needs Review",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "At first pressure metric 3.4 m conflicts with 13 ft (approximately 4.0 m); no independent matching current hydraulic table resolves it."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          0
+        ],
+        "reason": "At first pressure metric 3.4 m conflicts with 13 ft (approximately 4.0 m); no independent matching current hydraulic table resolves it.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15F",
+    "modelId": "P15F",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 4,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Needs Review",
+      "radius": "Needs Review",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "First metric radius 3.4 m conflicts with 13 ft.",
+      "Metric 2.8/3.4 bar conflicts with US 30/40 PSI."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          0
+        ],
+        "reason": "First metric radius 3.4 m conflicts with 13 ft.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          }
+        ]
+      },
+      {
+        "field": "pressureBar",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "Metric 2.8/3.4 bar conflicts with US 30/40 PSI.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15CS",
+    "modelId": "P15CS",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 2,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified.",
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15CS",
+    "modelId": "FN-15CS",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 2,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified.",
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15ES",
+    "modelId": "P15ES",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 2,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified.",
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15ES",
+    "modelId": "FN-15ES",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 2,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified.",
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15SS",
+    "modelId": "P15SS",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 2,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified.",
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15SS",
+    "modelId": "FN-15SS",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 2,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified.",
+      "Use stripPerformance dimensions; radiusM equals strip length for schema compatibility and arcDeg 180 is an internal sentinel."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15HL",
+    "modelId": "P15HL",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 2,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Needs Review",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified.",
+      "Second Low dimensions 1.5 x 9.8 m come from official brochure p2; current female FN-5HL table label is resolved by FN-15HL model list and current product page. Exact curved footprint remains unknown.",
+      "Published dimensions and centered origin are verified, but the upper schematic has no exact curve definition. At 2.0 bar High 4.6 x 9.8 m is not an exact radius-4.6 m semicircle. No circle or ellipse is asserted; footprint remains unsupported."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "footprint",
+        "reason": "Published dimensions and centered origin are verified, but the upper schematic has no exact curve definition. At 2.0 bar High 4.6 x 9.8 m is not an exact radius-4.6 m semicircle. No circle or ellipse is asserted; footprint remains unsupported.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Diagram and dimensions"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Missing second Low dimensions 1.5 x 9.8 m"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15HL",
+    "modelId": "FN-15HL",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 2,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Needs Review",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "The dedicated current metric table is authoritative for this metric catalog: use the explicitly printed 1.5 and 2.0 bar design points. The linked official metric brochure repeats both pressures, dimensions and flows; US 20/30 PSI labels are retained as a source-unit convention warning, not used to recalculate these points. Family recommendation is 2.1 bar; UI default 2.0 bar stays inside the actual table domain. No extrapolation beyond 2.0 bar is verified.",
+      "Second Low dimensions 1.5 x 9.8 m come from official brochure p2; current female FN-5HL table label is resolved by FN-15HL model list and current product page. Exact curved footprint remains unknown.",
+      "Published dimensions and centered origin are verified, but the upper schematic has no exact curve definition. At 2.0 bar High 4.6 x 9.8 m is not an exact radius-4.6 m semicircle. No circle or ellipse is asserted; footprint remains unsupported."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "footprint",
+        "reason": "Published dimensions and centered origin are verified, but the upper schematic has no exact curve definition. At 2.0 bar High 4.6 x 9.8 m is not an exact radius-4.6 m semicircle. No circle or ellipse is asserted; footprint remains unsupported.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Diagram and dimensions"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Missing second Low dimensions 1.5 x 9.8 m"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 49,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:MiniPro",
+    "modelId": "MiniPro",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 15,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 7,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RPS50",
+    "modelId": "RPS50",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 15,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 8,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RPS75",
+    "modelId": "RPS75",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 48,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 7,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Seven repeated high-pressure flow cells corrected using official Rev.12 instructions, corroborated by current US performance; all 48 pressure/radius/flow rows now verified.",
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 11,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RPS75-PR",
+    "modelId": "RPS75-PR",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 48,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 96,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "Partially unavailable; disputed cells null"
+    },
+    "decisions": [
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope.",
+      "96 disputed precipitation cells are intentionally null in active data. Original printed values and precise reasons remain in field-audit.json; sound flow/radius rows are retained."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 11,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RPS75i",
+    "modelId": "RPS75i",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 54,
+    "reductionRowsChecked": 54,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 5,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "Partially unavailable; disputed cells null"
+    },
+    "decisions": [
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope.",
+      "Preserve independently rounded metric -30% table endpoints. Small US/metric differences caused by whole-foot/whole-meter radii and 0.1 GPM rounding are resolved; no formula-generated endpoint substituted. No 50% flow table is added.",
+      "5 disputed precipitation cells are intentionally null in active data. Original printed values and precise reasons remain in field-audit.json; sound flow/radius rows are retained."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 15,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RPS75i-PR",
+    "modelId": "RPS75i-PR",
+    "previousStatus": "Needs Review",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 54,
+    "reductionRowsChecked": 54,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 5,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "Partially unavailable; disputed cells null"
+    },
+    "decisions": [
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope.",
+      "Preserve independently rounded metric -30% table endpoints. Small US/metric differences caused by whole-foot/whole-meter radii and 0.1 GPM rounding are resolved; no formula-generated endpoint substituted. No 50% flow table is added.",
+      "Use metric base triangle precipitation: US low-angle triangle column repeats square numbers, while metric contains the appropriate distinct triangular values. Reduced precipitation exceptions are separately null.",
+      "5 disputed precipitation cells are intentionally null in active data. Original printed values and precise reasons remain in field-audit.json; sound flow/radius rows are retained."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 15,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RPS-Select",
+    "modelId": "RPS-Select",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 20,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Needs Review",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope.",
+      "At 2.8 bar #1/#3 metric radius 10.4/12.2 m conflicts with 37/41 ft. The linked brochure repeats the same conflict, so it does not resolve it."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          12
+        ],
+        "reason": "At 2.8 bar #1/#3 metric radius 10.4/12.2 m conflicts with 37/41 ft. The linked brochure repeats the same conflict, so it does not resolve it.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 17,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps%20select/rps%20select%20product%20brochure.pdf",
+            "page": 2,
+            "role": "Repeats conflict"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 17,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:ProPlus",
+    "modelId": "ProPlus",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "Verified",
+    "baseRowsChecked": 52,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Verified",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 19,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:SuperPro",
+    "modelId": "SuperPro",
+    "previousStatus": "Needs Review",
+    "status": "Needs Review",
+    "hydraulicVerificationStatus": "Needs Review",
+    "baseRowsChecked": 54,
+    "reductionRowsChecked": 54,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 1,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "Verified",
+      "bodyDimensionsAndThreads": "not-applicable",
+      "pressure": "Verified",
+      "radius": "Needs Review",
+      "flow": "Verified",
+      "footprint": "Verified",
+      "precipitation": "Partially unavailable; disputed cells null"
+    },
+    "decisions": [
+      "2.8 bar is an application default within the published recommended range. Arc 40–360 degrees, inlet, trajectories, actual pop-up heights and nozzle rack checked against current model pages; pressure-specific table governs hydraulic radius envelope.",
+      "Preserve independently rounded metric -30% table endpoints. Small US/metric differences caused by whole-foot/whole-meter radii and 0.1 GPM rounding are resolved; no formula-generated endpoint substituted. No 50% flow table is added.",
+      "1 disputed precipitation cells are intentionally null in active data. Original printed values and precise reasons remain in field-audit.json; sound flow/radius rows are retained.",
+      "Standard #3 at 2.1 bar metric 10.6 m conflicts with current US 33 ft; earlier brochures use materially different table editions.",
+      "Reduced metric radii differ materially from current US; #6/#8 at 4.8 bar also do not fit stated 30% within rounding. Do not replace them with an assumed 0.7 multiplier."
+    ],
+    "unresolvedIssues": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          16
+        ],
+        "reason": "Standard #3 at 2.1 bar metric 10.6 m conflicts with current US 33 ft; earlier brochures use materially different table editions.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 21,
+            "role": "US table"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 22,
+            "role": "Metric table"
+          }
+        ]
+      },
+      {
+        "field": "reductionPerformance.radiusM",
+        "flatRowIndices": [
+          16,
+          32,
+          37
+        ],
+        "reason": "Reduced metric radii differ materially from current US; #6/#8 at 4.8 bar also do not fit stated 30% within rounding. Do not replace them with an assumed 0.7 multiplier.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 21,
+            "role": "US reduced table"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 22,
+            "role": "Metric reduced table"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 22,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78002",
+    "modelId": "78002",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78003",
+    "modelId": "78003",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78004",
+    "modelId": "78004",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78004-PR30",
+    "modelId": "78004-PR30",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. Regulator setpoint and SKU option confirmed on p31."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 31,
+        "role": "Regulator options"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78004-PR40",
+    "modelId": "78004-PR40",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. Regulator setpoint and SKU option confirmed on p31."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 31,
+        "role": "Regulator options"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78006",
+    "modelId": "78006",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78006-PR30",
+    "modelId": "78006-PR30",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. Regulator setpoint and SKU option confirmed on p31."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 31,
+        "role": "Regulator options"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78006-PR40",
+    "modelId": "78006-PR40",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. Regulator setpoint and SKU option confirmed on p31."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 31,
+        "role": "Regulator options"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78012",
+    "modelId": "78012",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78012-PR30",
+    "modelId": "78012-PR30",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. Regulator setpoint and SKU option confirmed on p31."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 31,
+        "role": "Regulator options"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:78012-PR40",
+    "modelId": "78012-PR40",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. Regulator setpoint and SKU option confirmed on p31."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 30,
+        "role": "Primary metric performance/specifications"
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 31,
+        "role": "Regulator options"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:NP2",
+    "modelId": "NP2",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 32,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:NP4",
+    "modelId": "NP4",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 32,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:73001",
+    "modelId": "73001",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 33,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:74001",
+    "modelId": "74001",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 33,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:76001",
+    "modelId": "76001",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 33,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:71201",
+    "modelId": "71201",
+    "previousStatus": "Verified",
+    "status": "Verified",
+    "hydraulicVerificationStatus": "not-applicable",
+    "baseRowsChecked": 0,
+    "reductionRowsChecked": 0,
+    "allOriginalRowsMatchedSource": true,
+    "correctedNumericCells": 0,
+    "unavailablePrecipitationCells": 0,
+    "fieldStatus": {
+      "modelIdentity": "Verified",
+      "arcAndMounting": "not-applicable",
+      "bodyDimensionsAndThreads": "Verified",
+      "pressure": "Verified",
+      "radius": "not-applicable",
+      "flow": "not-applicable",
+      "footprint": "not-applicable",
+      "precipitation": "As published or intentionally unavailable"
+    },
+    "decisions": [
+      "Actual riser height, 1/2-inch female NPT inlet, body/nozzle thread compatibility and operating pressure range rechecked against 2026 fast facts. Nominal inch size is retained separately. The 2.1 bar display default is not a manufacturer recommendation for the bare body."
+    ],
+    "unresolvedIssues": [],
+    "sources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "page": 33,
+        "role": "Primary metric performance/specifications"
+      }
+    ]
+  }
+]

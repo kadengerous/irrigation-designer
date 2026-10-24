@@ -1,0 +1,37 @@
+K-RAIN VERIFICATION AUDIT — 2026-10-04
+
+All 84 catalog records were reviewed, including all 51 previously Verified records. The 33 former Needs Review records are now: 22 resolved, 11 still Needs Review. Final total: 73 Verified and 11 Needs Review; no newly flagged models. Of the 11, nine retain active hydraulic conflicts and two retain only an unsupported exact footprint. Status Verified here means the active numerical fields are supported; intentionally unavailable precipitation remains null rather than implied to be verified.
+
+Independent re-extraction matched every original base row (764) and reduction row (162) to the 2026 source. Seventeen body records were checked for actual riser height, inlet, accepted nozzle thread and regulator options. All 28 source PDFs were re-downloaded and matched the prior SHA256 hashes. Source text and rendered corrective tables are saved under sources/, text/ and visual/.
+
+WHAT CHANGED
+- Five RN range flags resolved: pressure-specific tables govern the actual radius; nominal family ranges do not invalidate documented pressure-specific results.
+- Three Fully Adjustable RN flags resolved using dated catalog p42 for the 2.1 bar recommendation and 30% radius-adjustment statement. RN300-ADJ at 360 degrees / 3.5 bar corrected from 8.83 to 8.53 m, directly printed in the companion brochure and corroborated by current US 28 ft.
+- Twelve FN-12 flow cells corrected using the companion metric brochure, corroborated by current US GPM. FN-12F at 1.7 bar retains current metric radius 3.4 m: companion 11 ft / 3.4 m supports it, whereas current US 12 ft does not. There is no blanket preference for the entire US table.
+- Seven RPS75 high-pressure flow cells corrected from visible metric tables in official setting instructions Rev.12, corroborated by current US. For low-angle #6 at 4.8 bar, 32.6 L/min is supported by current 8.6 GPM, despite the instruction sheet's own 8.3 GPM typo. Hidden overlapping PDF text was not used.
+- RPS75-PR, RPS75i and RPS75i-PR retain verified pressure/radius/flow. Conflicting precipitation cells are null. Current metric base triangular rates in RPS75i-PR are retained because its US low-angle triangle column incorrectly repeats the square column.
+- Six ordinary fixed strip records use the explicitly published metric 1.5 and 2.0 bar design points. The official companion metric brochure repeats them. Their approximate US 20/30 PSI labels remain a source convention warning; no pressure conversion silently replaces the metric points. Their UI default becomes 2.0 bar, explicitly marked as a default; the family recommendation 2.1 bar is preserved separately. No extrapolation above 2.0 bar is verified.
+- One newly found KVF6 square precipitation inconsistency is null; its pressure/radius/flow remain verified. Total withheld precipitation cells: 108 across five models. These are intentionally missing values, not repaired or invented rates.
+
+UNRESOLVED ACTIVE HYDRAULICS — 9 MODELS
+P12Q, P12H, P12TQ, P12F: higher-pressure radius columns conflict; a companion document uses a different pressure sequence.
+P15H: two pressure labels conflict. P15TQ: first radius conflicts. P15F: first radius and two pressure labels conflict.
+RPS-Select: #1 and #3 radius at 2.8 bar conflict; companion brochure repeats the inconsistency.
+SuperPro: #3 base radius at 2.1 bar and several reduced-radius endpoints conflict. No assumed 0.7-radius formula replaces printed points.
+All rows remain present and hydraulicVerificationStatus is Needs Review. Removing rows would incorrectly allow interpolation across disputed points.
+
+UNSUPPORTED EXACT FOOTPRINT — 2 MODELS
+P15HL and FN-15HL retain Needs Review, hydraulicVerificationStatus Verified, placementSupported false. Published high/low dimensions, flow and centered seam origin are supported. The upper curve is not specified exactly, and 4.6 x 9.8 m is not a radius-4.6 m semicircle. No ellipse or circle has been invented. The second lower rectangle, omitted in current catalog, is directly documented as 1.5 x 9.8 m in the official brochure.
+
+OUTSIDE THE 84 RECORDS
+KV5 remains unavailable for hydraulic placement. Its current official product page verifies model identity, 5-foot designation, male nozzle thread and 30 PSI recommendation. No performance table was found on that page, catalog pp46–47 or the linked KV brochure. It remains excluded; this is not a 85th reviewed catalog item.
+
+INTEGRATION
+Use catalog-items.json. model-audit.json gives one result per each of 84 records. field-audit.json preserves all 20 corrected original hydraulic values, all 108 withheld precipitation values, unresolved cells and exact source links. Preserve hydraulicVerificationStatus and nullable precipitation semantics. No flow/radius rows were deleted; no synthetic hydraulic rows or exact high-low boundaries were added. Corrections are documented corroborated field selections, not manufacturer-issued errata. Revision and ISO labels were not used to infer PDF publication dates.
+
+PRIMARY SOURCES
+2026 catalog: https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf
+Fixed metric companion, p2: https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf
+Fully Adjustable companion, p2: https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/fully%20adjustable%20rotary%20nozzle%20product%20brochure.pdf
+RPS75 setting instructions, visible bottom tables: https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf
+KV5 listing: https://www.krain.com/kv-nozzles/variable-arc-male-nozzle-5-kv5

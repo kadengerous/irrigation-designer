@@ -1,0 +1,180 @@
+[
+  {
+    "id": "rain-bird:HE-VAN-8",
+    "set": {
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "rMin": 1.1400000000000001,
+      "radiusAdjustmentSourceUrl": "https://www.rainbird.com/media/4680",
+      "radiusAdjustmentVerifiedOn": "2026-10-05"
+    },
+    "reason": "HE-VAN tech-spec page 1 explicitly allows up to 25% reduction. No flow-versus-reduced-radius equation is published; reduced flow stays unknown."
+  },
+  {
+    "id": "rain-bird:HE-VAN-10",
+    "set": {
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "rMin": 1.5975,
+      "radiusAdjustmentSourceUrl": "https://www.rainbird.com/media/4680",
+      "radiusAdjustmentVerifiedOn": "2026-10-05"
+    },
+    "reason": "HE-VAN tech-spec page 1 explicitly allows up to 25% reduction. No flow-versus-reduced-radius equation is published; reduced flow stays unknown."
+  },
+  {
+    "id": "rain-bird:HE-VAN-12",
+    "set": {
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "rMin": 2.0250000000000004,
+      "radiusAdjustmentSourceUrl": "https://www.rainbird.com/media/4680",
+      "radiusAdjustmentVerifiedOn": "2026-10-05"
+    },
+    "reason": "HE-VAN tech-spec page 1 explicitly allows up to 25% reduction. No flow-versus-reduced-radius equation is published; reduced flow stays unknown."
+  },
+  {
+    "id": "rain-bird:HE-VAN-15",
+    "set": {
+      "radiusAdjustment": {
+        "minimumRatio": 0.75,
+        "flowPolicy": "unknown"
+      },
+      "rMin": 2.55,
+      "radiusAdjustmentSourceUrl": "https://www.rainbird.com/media/4680",
+      "radiusAdjustmentVerifiedOn": "2026-10-05"
+    },
+    "reason": "HE-VAN tech-spec page 1 explicitly allows up to 25% reduction. No flow-versus-reduced-radius equation is published; reduced flow stays unknown."
+  },
+  {
+    "id": "rain-bird:R-VAN14",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  },
+  {
+    "id": "rain-bird:R-VAN18",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  },
+  {
+    "id": "rain-bird:R-VAN24",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  },
+  {
+    "id": "rain-bird:R-VAN18-360",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  },
+  {
+    "id": "rain-bird:R-VAN14-360",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  },
+  {
+    "id": "rain-bird:R-VAN24-360",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  },
+  {
+    "id": "rain-bird:R-VAN-SST",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  },
+  {
+    "id": "rain-bird:R-VAN-LCS",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  },
+  {
+    "id": "rain-bird:R-VAN-RCS",
+    "set": {
+      "excludedBodySkus": [
+        "1802",
+        "1802-PRS",
+        "1803",
+        "1803-PRS"
+      ],
+      "bodyExclusionSourceUrl": "https://store.rainbird.com/sprinklers/rotary-nozzles.html?product_list_mode=list",
+      "bodyExclusionVerifiedOn": "2026-10-05"
+    },
+    "reason": "Official store lists explicit 1802/1803 exclusion for every one of the 9 R-VAN models. PRS suffixes are same base 2/3-inch body variants; applying base-model exclusion to them is a stated compatibility inference. Keep compatible family IDs for 4/6/12-inch bodies."
+  }
+]

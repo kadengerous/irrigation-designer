@@ -1,0 +1,313 @@
+ (https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf)
+citeturn457view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 100; Source: open({"ref_id":"turn453view0","lineno":1160}); Total lines: 6106
+L1039@P17: n Arc Adjustment Range: 40° to Continuous 360°
+L1040@P17: n Flow Range: 0.5 – 10.0 GPM (1,9 – 37,8 LPM)
+L1041@P17: n Operating Pressure Range: 20 – 100 PSI (1,4 – 6,9 bar)
+L1042@P17: n Recommended Pressure Range: 30 – 70 PSI (2,1 – 4,8 bar)
+L1043@P17: n Precipitation Rate: 0.12 – 0.88 in/hr (3 – 22 mm/hr)
+L1044@P17: (depending on spacing and nozzle used)
+L1045@P17: n Radius: 22' – 50' (6,7 – 15,2 m)
+L1046@P17: n Nozzle Trajectory: 26°
+L1047@P17: n Low Angle Nozzle Trajectory: 12°
+L1048@P17: n Standard and Low Angle Nozzles Included
+L1049@P17: Model
+L1050@P17: 11003 ProPlus®
+L1051@P17: Accessories
+L1052@P17: See page 26-27
+L1053@P17: Fast Facts
+L1054@P17: ALL INLET: 3/4” (1,9 CM) FEMALE THREAD NPT
+L1055@P17: 4" Retracted height: 7 1/2” (19 cm)
+L1056@P17: Riser height: 4 1/4” (10,8 cm)
+L1057@P17: How to Specify with Options
+L1058@P17: MODELS OPTIONS
+L1059@P17: 11003 -CV u Check Valve
+L1060@P17: -LA u Low angle Nozzle
+L1061@P17: -NN u No Nozzle
+L1062@P17: -RCW u Reclaimed Water
+L1063@P17-18: Examples: 11003-RCW-CVkrain.com 19
+L1064@P18: *All precipitation rates calculated for 180° operation. For the precipitation rate for a 360° sprinkler, divide by 2.
+L1065@P18: Performance Data - U.S.
+L1066@P18: NO ADJUSTMENT
+L1067@P18: NOZZLE
+L1068@P18: PRESSURE RADIUS FLOW PRECIP in/hr
+L1069@P18: PSI FEET GPM n p #0.5 30 28 0.5 0.12 0.14
+L1070@P18: 40 29 0.6 0.14 0.16
+L1071@P18: 50 29 0.7 0.16 0.19
+L1072@P18: 60 30 0.8 0.17 0.20
+L1073@P18: #0.75 30 29 0.7 0.16 0.19
+L1074@P18: 40 30 0.8 0.17 0.20
+L1075@P18: 50 31 0.9 0.18 0.21
+L1076@P18: 60 32 1.0 0.19 0.22
+L1077@P18: #1.0 30 32 1.3 0.24 0.28
+L1078@P18: 40 33 1.5 0.27 0.31
+L1079@P18: 50 34 1.6 0.27 0.31
+L1080@P18: 60 35 1.8 0.28 0.33
+L1081@P18: #2.0 30 37 2.4 0.34 0.39
+L1082@P18: 40 40 2.5 0.30 0.35
+L1083@P18: 50 42 3.0 0.33 0.38
+L1084@P18: 60 43 3.3 0.34 0.40
+L1085@P18: #2.5 30 38 2.5 0.33 0.38
+L1086@P18: Pre- 40 39 2.8 0.35 0.41
+L1087@P18: Installed 50 40 3.2 0.39 0.44
+L1088@P18: 60 41 3.5 0.40 0.46
+L1089@P18: #3.0 30 38 3.6 0.48 0.55
+L1090@P18: 40 39 4.2 0.53 0.61
+L1091@P18: 50 41 4.6 0.53 0.61
+L1092@P18: 60 42 5.0 0.55 0.63
+L1093@P18: #4.0 30 43 4.4 0.46 0.53
+L1094@P18: 40 44 5.1 0.51 0.59
+L1095@P18: 50 46 5.6 0.51 0.59
+L1096@P18: 60 49 5.9 0.47 0.55
+L1097@P18: #6.0 40 45 5.9 0.56 0.65
+L1098@P18: 50 46 6.0 0.55 0.63
+L1099@P18: 60 48 6.3 0.53 0.61
+L1100@P18: 70 49 6.7 0.54 0.62
+L1101@P18: #8.0 40 42 8 0.87 1.01
+L1102@P18: 50 45 8.5 0.81 0.93
+L1103@P18: 60 49 9.5 0.76 0.88
+L1104@P18: 70 50 10 0.77 0.89
+L1105@P18: Performance Data - Metric
+L1106@P18: NO ADJUSTMENT
+L1107@P18: NOZZLE
+L1108@P18: PRESSURE RADIUS FLOW PRECIP mm/hr
+L1109@P18: BAR METER L/M n p #0.5 2,1 8,5 1,9 3 4
+L1110@P18: 2,8 8,8 2,3 3 4
+L1111@P18: 3,4 8,8 2,6 4 5
+L1112@P18: 4,1 9,1 3,0 4 5
+L1113@P18: #0.75 2,1 8,8 2,6 4 5
+L1114@P18: 2,8 9,1 3,0 4 5
+L1115@P18: 3,4 9,4 3,4 5 5
+L1116@P18: 4,1 9,8 3,8 5 6
+L1117@P18: #1.0 2,1 9,8 4,9 6 7
+L1118@P18: 2,8 10,1 5,7 7 8
+L1119@P18: 3,4 10,4 6,1 7 8
+L1120@P18: 4,1 10,7 6,8 7 8
+L1121@P18: #2.0 2,1 11,3 9,1 9 10
+L1122@P18: 2,8 12,2 9,5 8 9
+L1123@P18: 3,4 12,8 11,4 8 10
+L1124@P18: 4,1 13,1 12,5 9 10
+L1125@P18: #2.5 2,1 11,6 9,5 8 10
+L1126@P18: Pre- 2,8 11,9 10,6 9 10
+L1127@P18: Installed 3,4 12,2 12,1 10 11
+L1128@P18: 4,1 12,5 13,2 10 12
+L1129@P18: #3.0 2,1 11,6 13,6 12 14
+L1130@P18: 2,8 11,9 15,9 14 16
+L1131@P18: 3,4 12,5 17,4 13 15
+L1132@P18: 4,1 12,8 18,9 14 16
+L1133@P18: #4.0 2,1 13,1 16,7 12 13
+L1134@P18: 2,8 13,4 19,3 13 15
+L1135@P18: 3,4 14,0 21,2 13 15
+L1136@P18: 4,1 14,9 22,3 12 14
+L1137@P18: #6.0 2,8 13,7 22,3 14 16
+L1138@P18: 3,4 14,0 22,7 14 16
+L1139@P18: 4,1 14,6 23,8 13 15
+L1140@P18: 4,8 14,9 25,4 14 16
+L1141@P18: #8.0 2,8 12,8 30,3 22 26
+L1142@P18: 3,4 13,7 32,2 21 24
+L1143@P18: 4,1 14,9 36,0 19 22
+L1144@P18: 4,8 15,2 37,9 20 23
+L1145@P18: Low Angle Performance Data - U.S.
+L1146@P18: NO ADJUSTMENT
+L1147@P18: NOZZLE
+L1148@P18: PRESSURE RADIUS FLOW PRECIP in/hr
+L1149@P18: PSI FEET GPM n p #1.0 30 22 1.2 0.48 0.55
+L1150@P18: 40 24 1.7 0.57 0.66
+L1151@P18: 50 26 1.8 0.51 0.59
+L1152@P18: 60 28 2.0 0.49 0.57
+L1153@P18: #3.0 30 29 3.0 0.69 0.79
+L1154@P18: 40 32 3.1 0.58 0.67
+L1155@P18: 50 35 3.5 0.55 0.64
+L1156@P18: 60 37 3.8 0.53 0.62
+L1157@P18: #4.0 30 31 3.4 0.68 0.79
+L1158@P18: 40 34 3.9 0.65 0.75
+L1159@P18: 50 37 4.4 0.62 0.71
+L1160@P18: 60 38 4.7 0.63 0.72
+L1161@P18: #6.0 40 38 6.5 0.87 1.00
+L1162@P18: 50 40 7.3 0.88 1.01
+L1163@P18: 60 42 8.0 0.87 1.01
+L1164@P18: 70 44 8.6 0.86 0.99
+L1165@P18: Low Angle Performance Data - Metric
+L1166@P18: NO ADJUSTMENT
+L1167@P18: NOZZLE
+L1168@P18: PRESSURE RADIUS FLOW PRECIP mm/hr
+L1169@P18: PSI FEET GPM n p #1.0 2,1 6,7 4,5 12 14
+L1170@P18: 2,8 7,3 6,4 14 17
+L1171@P18: 3,4 7,9 6,8 13 15
+L1172@P18: 4,1 8,5 7,6 12 14
+L1173@P18: #3.0 2,1 8,8 11,4 17 20
+L1174@P18: 2,8 9,8 11,7 15 17
+L1175@P18: 3,4 10,7 13,2 14 16
+L1176@P18: 4,1 11,3 14,4 14 16
+L1177@P18: #4.0 2,1 9,4 12,9 17 20
+L1178@P18: 2,8 10,4 14,8 17 19
+L1179@P18: 3,4 11,3 16,7 16 18
+L1180@P18: 4,1 11,6 17,8 16 18
+L1181@P18: #6.0 2,8 11,6 24,6 22 25
+L1182@P18: 3,4 12,2 27,6 22 26
+L1183@P18: 4,1 12,8 30,3 22 26
+L1184@P18-19: 4,8 13,4 32,6 22 2520 Down Here. Doing. It. Right.
+L1185@P19: SuperPro®
+L1186@P19: Features
+L1187@P19: n Patented Intelligent Flow Technology®
+L1188@P19:  – Reduce distance and
+L1189@P19: water flow simultaneously and proportionately
+L1190@P19: n Patented easy arc set – Simplified setting wet or dry. Water
+L1191@P19: flow can be turned off or adjusted in the popped-up position.
+L1192@P19: n	Adjustable or continuous rotation – Provides a full
+L1193@P19: range of adjustment from 40° to continuous 360°
+L1194@P19: n	Patented arc set degree markings – Clearly indicates
+L1195@P19: current watering pattern, simplifies arc set adjustment
+L1196@P19: n	Arc memory clutch – Prevents internal gear damage
+L1197@P19: and returns rotor to its prior setting automatically if
+L1198@P19: nozzle turret is forced out of adjustment
+L1199@P19: n Patented reversing mechanism – Ensures continuous
+L1200@P19: reverse and return
+L1201@P19: n Ratcheting riser – Allows for easy adjustment of your
+L1202@P19: left starting position with a simple turn of the riser
+L1203@P19: n Rubber cover – Seals out dirt and increases durability
+L1204@P19: n Includes 5 Free Check Valve Assemblies Per Box
+L1205@P19: n Rugged stainless steel spring – 302 stainless steel
+L1206@P19: spring extends the life of the rotor
+L1207@P19: Specifications
+L1208@P19: n Arc adjustment range: 40° to continuous 360°
+L1209@P19: n Flow range: 0.8 – 11.1 GPM (3,0 – 42,0 LPM)
+L1210@P19: n Operating Pressure Range: 20 – 100 PSI (1,4 – 6,9 bar)
+L1211@P19: n Recommended Pressure Range: 30 – 70 PSI (2,1 – 4,8 bar)
+L1212@P19: n Precipitation rate: 0.21 – 1.50 in/hr (5 – 38 mm/hr)
+L1213@P19: (depending on spacing and nozzle used)
+L1214@P19: n Radius: 26' – 46' (7,9 – 14,0 m)
+L1215@P19: n Nozzle trajectory: 26°
+L1216@P19: n Low angle nozzle trajectory: 11°
+L1217@P19: n Standard and low angle nozzles included
+L1218@P19: Models
+L1219@P19: 10003 SuperPro
+L1220@P19: 10003-HP SuperPro High Pop
+L1221@P19: All the best features in one rotor including Intelligent Flow Technology®.
+L1222@P19: Accessories
+L1223@P19: See page 26-27
+L1224@P19: Fast Facts
+L1225@P19: ALL INLET: 3/4” (1,9 CM) FEMALE THREAD NPT
+L1226@P19: Standard Retracted height: 7 1/2" (19,0 cm)
+L1227@P19: Riser height: 4 3/4" (12,1 cm)
+L1228@P19: High pop Retracted height: 17 (43,2 cm)
+L1229@P19: Riser height: 11 1/2" (29,2 cm)
+L1230@P19-20: Shrub Height: 7 3/4" (19,7 cm)krain.com 21
+L1231@P20: Intelligent Flow
+L1232@P20: Technology®
+L1233@P20: *All precipitation rates calculated for 180° operation.
+L1234@P20: For the precipitation rate for a 360° sprinkler, divide
+L1235@P20: Performance Data - U.S.
+L1236@P20: NO ADJUSTMENT -30% ADJUSTMENT
+L1237@P20: NOZZLE
+L1238@P20: PRESSURE RADIUS FLOW PRECIP in/hr RADIUS FLOW PRECIP in/hr
+L1239@P20: PSI FEET GPM n p FEET GPM n p #1.0 30 29 0.9 0.21 0.24 20 0.6 0.29 0.34
+L1240@P20: 40 29 1.0 0.23 0.26 20 0.7 0.33 0.38
+L1241@P20: 50 30 1.1 0.24 0.27 21 0.8 0.34 0.39
+L1242@P20: 60 32 1.2 0.23 0.26 22 0.8 0.32 0.37
+L1243@P20: #1.5 30 33 1.3 0.23 0.27 23 0.9 0.33 0.38
+L1244@P20: 40 35 1.5 0.24 0.27 25 1.1 0.34 0.39
+L1245@P20: 50 37 1.7 0.24 0.28 26 1.2 0.34 0.39
+L1246@P20: 60 38 1.9 0.25 0.29 27 1.3 0.36 0.42
+L1247@P20: #2.0 30 33 1.4 0.25 0.29 23 1.0 0.35 0.41
+L1248@P20: 40 36 1.7 0.25 0.29 25 1.2 0.36 0.42
+L1249@P20: 50 37 2.0 0.28 0.32 26 1.4 0.40 0.46
+L1250@P20: 60 37 2.3 0.32 0.37 26 1.6 0.46 0.53
+L1251@P20: #2.5 30 35 1.9 0.30 0.34 25 1.3 0.43 0.49
+L1252@P20: Pre- 40 36 2.2 0.33 0.38 25 1.5 0.47 0.54
+L1253@P20: Installed 50 37 2.6 0.37 0.42 26 1.8 0.52 0.60
+L1254@P20: 60 38 2.9 0.39 0.45 27 2.0 0.55 0.64
+L1255@P20: #3.0 30 33 2.3 0.41 0.47 23 1.6 0.58 0.67
+L1256@P20: 40 34 2.7 0.45 0.52 24 1.9 0.64 0.74
+L1257@P20: 50 36 3.1 0.46 0.53 25 2.2 0.66 0.76
+L1258@P20: 60 38 3.4 0.45 0.52 27 2.4 0.65 0.75
+L1259@P20: #4.0 30 33 3.1 0.55 0.63 23 2.2 0.78 0.90
+L1260@P20: 40 34 3.7 0.62 0.71 24 2.6 0.88 1.02
+L1261@P20: 50 38 4.2 0.56 0.65 27 2.9 0.80 0.92
+L1262@P20: 60 39 4.6 0.58 0.67 27 3.2 0.83 0.96
+L1263@P20: #5.0 30 35 3.8 0.60 0.69 25 2.7 0.85 0.99
+L1264@P20: 40 37 4.6 0.65 0.75 26 3.2 0.92 1.07
+L1265@P20: 50 40 5.3 0.64 0.74 28 3.7 0.91 1.05
+L1266@P20: 60 42 5.8 0.63 0.73 29 4.1 0.90 1.04
+L1267@P20: #6.0 30 35 4.5 0.71 0.82 25 3.2 1.01 1.17
+L1268@P20: 40 40 5.3 0.64 0.74 28 3.7 0.91 1.05
+L1269@P20: 50 41 6.0 0.69 0.79 29 4.2 0.98 1.13
+L1270@P20: 60 42 6.7 0.73 0.84 29 4.7 1.04 1.21
+L1271@P20: 70 44 7.4 0.74 0.85 31 5.2 1.05 1.21
+L1272@P20: #8.0 30 35 5.9 0.93 1.07 25 4.1 1.32 1.53
+L1273@P20: 40 40 7.0 0.84 0.97 28 4.9 1.20 1.39
+L1274@P20: 50 42 8.0 0.87 1.01 29 5.6 1.25 1.44
+L1275@P20: 60 45 8.8 0.84 0.97 32 6.2 1.20 1.38
+L1276@P20: 70 45 9.6 0.91 1.05 32 6.7 1.30 1.51
+L1277@P20: Low Angle Performance Data - U.S.
+L1278@P20: NO ADJUSTMENT -30% ADJUSTMENT
+L1279@P20: NOZZLE
+L1280@P20: PRESSURE RADIUS FLOW PRECIP in/hr RADIUS FLOW PRECIP in/hr
+L1281@P20: PSI FEET GPM n p FEET GPM n p
+L1282@P20: #1.0 30 25 0.9 0.28 0.32 18 0.6 0.40 0.46
+L1283@P20: 40 26 1.0 0.28 0.33 18 0.7 0.41 0.47
+L1284@P20: 50 27 1.1 0.29 0.34 19 0.8 0.41 0.48
+L1285@P20: 60 28 1.2 0.29 0.34 20 0.8 0.42 0.49
+L1286@P20: #1.5 30 27 1.0 0.26 0.30 19 0.7 0.38 0.44
+L1287@P20: 40 29 1.2 0.27 0.32 20 0.8 0.39 0.45
+L1288@P20: 50 27 1.3 0.34 0.40 19 0.9 0.49 0.57
+L1289@P20: 60 28 1.5 0.37 0.43 20 1.1 0.53 0.61
+L1290@P20: #2.0 30 29 1.6 0.37 0.42 20 1.1 0.52 0.60
+L1291@P20: 40 32 1.9 0.36 0.41 22 1.3 0.51 0.59
+L1292@P20: 50 33 2.1 0.37 0.43 23 1.5 0.53 0.61
+L1293@P20: 60 33 2.4 0.42 0.49 23 1.7 0.61 0.70
+L1294@P20: #3 30 29 2.2 0.50 0.58 20 1.5 0.72 0.83
+L1295@P20: 40 33 2.7 0.48 0.55 23 1.9 0.68 0.79
+L1296@P20: 50 34 3.0 0.50 0.58 24 2.1 0.71 0.82
+L1297@P20: 60 36 3.3 0.49 0.57 25 2.3 0.70 0.81
+L1298@P20: How to Specify with Options
+L1299@P20: MODELS OPTIONS
+L1300@P20: 10003 -CV u Check Valve
+L1301@P20: 10003-HP -NN u No Nozzle
+L1302@P20: 10003-SH -RCW u Reclaimed Water Use
+L1303@P20: -OS u On-site Wastewater
+L1304@P20: Examples: 10003-RCW-CV
+L1305@P20: n Reduces distance and
+L1306@P20: flow rate simultaneously
+L1307@P20: and proportionately
+L1308@P20: n Provides full on/off control
+L1309@P20-21: WATCH VIDEO22 Down Here. Doing. It. Right.
+L1310@P21: SuperPro®
+L1311@P21: *All precipitation rates calculated for 180° operation.
+L1312@P21: For the precipitation rate for a 360° sprinkler, divide by 2.
+L1313@P21: Performance Data - Metric
+L1314@P21: NO ADJUSTMENT -30% ADJUSTMENT
+L1315@P21: NOZZLE
+L1316@P21: PRESSURE RADIUS FLOW PRECIP mm/hr RADIUS FLOW PRECIP mm/hr
+L1317@P21: BAR METER L/M n p METER L/M n p
+L1318@P21: #1,0 2,1 8,8 3,4 5 6 6,2 2,4 7 9
+L1319@P21: 2,8 8,8 3,8 6 7 6,2 2,6 8 10
+L1320@P21: 3,4 9,1 4,2 6 7 6,4 2,9 9 10
+L1321@P21: 4,1 9,8 4,5 6 7 6,9 3,2 8 9
+L1322@P21: #1,5 2,1 10,1 4,9 6 7 7,1 3,4 8 10
+L1323@P21: 2,8 10,7 5,7 6 7 7,5 4,0 9 10
+L1324@P21: 3,4 11,3 6,4 6 7 7,9 4,5 9 10
+L1325@P21: 4,1 11,6 7,2 6 7 8,1 5,0 9 11
+L1326@P21: #2,0 2,1 10,1 5,3 6 7 7,1 3,7 9 10
+L1327@P21: 2,8 11,0 6,4 6 7 7,7 4,5 9 11
+L1328@P21: 3,4 11,3 7,6 7 8 7,9 5,3 10 12
+L1329@P21: 4,1 11,3 8,7 8 9 7,9 6,1 12 14
+L1330@P21: #2,5 2,1 10,7 7,2 8 9 7,5 5,0 11 13
+L1331@P21: Pre- 2,8 11,0 8,3 8 10 7,7 5,8 12 14
+L1332@P21: Installed 3,4 11,3 9,8 9 11 7,9 6,9 13 15
+L1333@P21: 4,1 11,6 11,0 10 11 8,1 7,7 14 16
+L1334@P21: #3,0 2,1 10,6 8,7 10 12 7,4 6,1 15 17
+L1335@P21: 2,8 10,4 10,2 11 13 7,3 7,2 16 19
+L1336@P21: 3,4 11,0 11,7 12 14 7,7 8,2 17 19
+L1337@P21: 4,1 11,6 12,9 12 13 8,1 9,0 16 19
+L1338@P21: #4,0 2,1 10,1 11,7 14 16 7,0 8,2 20 23
+L1339@P21: 2,8 10,4 14,0 16 18 7,3 9,8 22 26
+L1340@P21: 3,4 11,6 15,9 14 16 8,1 11,1 20 23
+L1341@P21: 4,1 11,9 17,4 15 17 8,3 12,2 21 24
+L1342@P21: #5,0 2,1 10,7 14,4 15 18 7,5 10,1 22 28
+L1343@P21: 2,8 11,3 17,4 16 19 7,9 12,2 23 27
+L1344@P21: 3,4 12,2 20,1 16 19 8,5 14,0 23 27
+L1345@P21: 4,1 12,8 22,0 16 19 9,0 15,4 23 27
+L1346@P21: #6,0 2,1 10,7 17,0 18 21 7,5 11,9 26 30
+L1347@P21: 2,8 12,2 20,1 16 19 8,5 14,0 23 27
+L1348@P21: 3,4 12,5 22,7 17 20 8,7 15,9 25 29
+

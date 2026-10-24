@@ -1,0 +1,2599 @@
+{
+  "verifiedOn": "2026-10-10",
+  "status": "final",
+  "performancePatches": [],
+  "modelPatches": [
+    {
+      "id": "toro:PSN5-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN5T-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN5T-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN8T-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN8T-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN10T-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN10T-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN12T-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN12T-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-60",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-60",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-T",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-T",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-150",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-150",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-TT",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-TT",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial rows converted with exact units. Source selected on 2026-10-06: current Toro product page links PSN-SS-CHARTS26-ONLY (PDF created 2026-05-08) and the 26-1045-IRC model list (created 2026-05-12), which explicitly lists this SKU. This newer dedicated source takes precedence over the 2026 catalogue (PDF created 2025-11-12, modified 2025-11-19) and 25-1045/legacy charts (created 2024-11-11). At 30 psi the selected chart publishes 2.31 gpm / 15.0 ft; older PSN+ tables publish 1.94 gpm / 14.1 ft and also differ at 40 and 50 psi. No manufacturer erratum or physical product revision is claimed. Use only the selected 20–50 psi measured domain; do not merge older 60–70 psi rows. Interpolation remains an estimate. Radius-reduction flow remains unknown; do not transfer the O-model rule. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "radiusAdjustment": {
+          "minimumRatio": 0.75,
+          "flowPolicy": "unknown"
+        },
+        "dataNote": "Published imperial rows converted with exact units. Source selected on 2026-10-06: current Toro product page links PSN-SS-CHARTS26-ONLY (PDF created 2026-05-08) and the 26-1045-IRC model list (created 2026-05-12), which explicitly lists this SKU. This newer dedicated source takes precedence over the 2026 catalogue (PDF created 2025-11-12, modified 2025-11-19) and 25-1045/legacy charts (created 2024-11-11). At 30 psi the selected chart publishes 2.31 gpm / 15.0 ft; older PSN+ tables publish 1.94 gpm / 14.1 ft and also differ at 40 and 50 psi. No manufacturer erratum or physical product revision is claimed. Use only the selected 20–50 psi measured domain; do not merge older 60–70 psi rows. Interpolation remains an estimate. Radius-reduction flow remains unknown; do not transfer the O-model rule. Toro Australia PSN+ specification (checked 2026-10-10) permits maximum 25% radius reduction. Reduced-radius discharge is unpublished; do not transfer the legacy O-model matched-precipitation reduction law. Regional webpage pressure/PCD descriptions are not used to replace the current US measured table. Reduction source: https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN15T-F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh source recheck plus documented PSN+ mechanical radius reduction; hydraulics at reduced radius remain unknown.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+        "https://www.toroirrigationsolutions.com.au/homeowner/psn-series-nozzles/"
+      ]
+    },
+    {
+      "id": "toro:PSN4X30-SST",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X30-SST",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X30T-SST",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X30T-SST",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X15-LCS",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X15-LCS",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X15T-LCS",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X15T-LCS",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X15-RCS",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X15-RCS",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X15T-RCS",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X15T-RCS",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X18-SST",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X18-SST",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X18T-SST",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X18T-SST",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X9-LCS",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X9-LCS",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X9T-LCS",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X9T-LCS",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X9-RCS",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X9-RCS",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    },
+    {
+      "id": "toro:PSN4X9T-RCS",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzlePatches": [
+        {
+          "id": "PSN4X9T-RCS",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ],
+      "reason": "Fresh current chart and model/color table recheck.",
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536"
+      ]
+    }
+  ],
+  "behaviorRecommendations": [
+    {
+      "id": "psn-radius-bound",
+      "models": "all 90 circular PSN models",
+      "recommendation": "Use same-pressure published radius times minimumRatio (.75) as lower geometric bound; the nominal item rMin is a native-table minimum, not a screw-stop floor. Reduced flow stays unknown."
+    },
+    {
+      "id": "psn-strips",
+      "models": "all 12 PSN strip models",
+      "recommendation": "Keep manual rectangular placement and pressure-specific width/length; never treat schema arcDeg=180 as a sector or inferred rotor."
+    }
+  ]
+}

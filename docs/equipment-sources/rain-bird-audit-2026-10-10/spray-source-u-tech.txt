@@ -1,0 +1,347 @@
+ (https://www.rainbird.com/sites/default/files/media/documents/2023-11/u-series_tech_spec_d37038j_-_rev11-7-2023.pdf)
+citeturn376view0 [wordlim: 200] Crawled: 4 days ago; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://www.rainbird.com/sites/default/files/media/documents/2023-11/u-series_tech_spec_d37038j_-_rev11-7-2023.pdf","lineno":null}); Total lines: 344
+L0@P0: The U-Series nozzle is the first plastic nozzle
+L1@P0: with a second orifice for close-in watering and
+L2@P0: more uniform water distribution**. Its unique
+L3@P0: design uses 30% less water* than conventional
+L4@P0: spray nozzles. U-Series Nozzles shorten run
+L5@P0: times, save money and water, and reduce
+L6@P0: waste.
+L7@P0: Features
+L8@P0: • Additional orifice for close-in watering.
+L9@P0: Minimizes dry spots around spray heads
+L10@P0: • Low scheduling coefficient for efficient
+L11@P0: watering**
+L12@P0: • Matched precipitation rate between sets
+L13@P0: and matched flow (gpm, m3
+L14@P0: /h and l/s) and
+L15@P0: precipitation rates with 1800 Series MPR
+L16@P0: nozzles
+L17@P0: • Greater design and installation flexibility.
+L18@P0: U-Series nozzles feature complete fixed arc
+L19@P0: sets in 8’, 10’, 12’, and 15’ radius options
+L20@P0: • Fine mesh screen protects bottom orifice
+L21@P0: from debris
+L22@P0: • Stainless steel adjustment screw to adjust
+L23@P0: flow and radius
+L24@P0: • Five year trade warranty
+L25@P0: • Fits all Rain Bird sprinklers and shrub adapters
+L26@P0: Operating Range
+L27@P0: • Spacing: 5 to 15 feet (1,8 to 4,6)
+L28@P0: • Pressure: 15 to 30 psi (1 to 2,1 bar)
+L29@P0: • Optimum pressure: 30 psi (2,1 bar)
+L30@P0: Models
+L31@P0: • U-8Q: 8-foot quarter-circle pattern nozzle
+L32@P0: • U-8T: 8-foot one-third-circle pattern nozzle
+L33@P0: • U-8H: 8-foot half-circle pattern nozzle
+L34@P0: • U-8F: 8-foot full-circle pattern nozzle
+L35@P0: • U-10Q: 10-foot quarter-circle pattern nozzles
+L36@P0: • U-10T: 10-foot one-third-circle pattern nozzle
+L37@P0: • U-10H: 10-foot half-circle pattern nozzle
+L38@P0: • U-10F: 10-foot full-circle pattern nozzle
+L39@P0: • U-12Q: 12-foot quarter-circle pattern nozzle
+L40@P0: • U-12T: 12-foot one-third-circle pattern nozzle
+L41@P0: • U-12H: 12-foot half-circle pattern nozzle
+L42@P0: • U-12TT: 12-foot two-thirds-circle pattern
+L43@P0: nozzle
+L44@P0: • U-12TQ: 12-foot three-quarter-circle pattern
+L45@P0: nozzle
+L46@P0: • U-12F: 12-foot full-circle pattern nozzle
+L47@P0: • U-15Q: 15-foot quarter-circle pattern nozzle
+L48@P0: • U-15T: 15-foot one-third-circle pattern nozzle
+L49@P0: • U-15H: 15-foot half-circle pattern nozzle
+L50@P0: • U-15TT: 15-foot two-thirds-circle pattern
+L51@P0: nozzle
+L52@P0: • U-15TQ: 15-foot three-quarter-circle pattern
+L53@P0: nozzle
+L54@P0: • U-15F: 15-foot full-circle pattern nozzle
+L55@P0: * When U-Series dual-orifice nozzles are installed instead of
+L56@P0: standard nozzles on every spray head in the zone. Results may
+L57@P0: vary based on site-specific conditions such as sprinkler spacing,
+L58@P0: wind, temperature, soil and grass type.
+L59@P0: ** Scheduling Coefficient (SC) measures the efficiency of spray
+L60@P0: heads. SC measures how much more you must water your
+L61@P0: ENTIRE area for the driest sections to receive sufficient water.
+L62@P0: The lower the SC, the better the spray heads distribute water.
+L63@P0: Tech Spec
+L64@P0: How To Specify
+L65@P0: 1804 - U12H
+L66@P0: Model
+L67@P0: 1804: 4” (10.2 cm) pop-up height
+L68@P0: Nozzle Series/Pattern
+L69@P0: U12H: 12 Series U-Series nozzle
+L70@P0: with half circle pattern
+L71@P0: Plastic U-Series Nozzles
+L72@P0: Use 30% Less Water*
+L73@P0: Competitor A and B nozzles fail to provide efficient close-in watering which results in a higher
+L74@P0: scheduling coefficient
+L75@P0: Going Head-to-Head Against the Competition
+L76@P0: U-Series
+L77@P0: Water flowing from both orifices results in a
+L78@P0: lower scheduling coefficient. This efficient design
+L79@P0: conserves water, saves money and reduces waste
+L80@P0-1: Competitor A Competitor Bwww.rainbird.com
+L81@P1: Plastic U-Series Nozzles Tech Spec
+L82@P1: Note: All U-Series nozzles tested on 4" (10.2 cm) pop-ups
+L83@P1: ■ Square spacing based on 50% diameter of throw
+L84@P1: ▲ Triangular spacing based on 50% diameter of throw
+L85@P1: Performance data taken in zero wind conditions
+L86@P1: Radius refers to recommended product spacing. Actual radii along arc may vary
+L87@P1: 10° Trajectory
+L88@P1: Nozzle Pressure Radius Flow Precip Precip
+L89@P1: psi ft. gpm In/h In/h
+L90@P1: U-8F 15 5 0.74 2.07 2.39
+L91@P1: 20 6 0.86 2.01 2.32
+L92@P1: 25 7 0.96 1.62 1.87
+L93@P1: 30 8 1.05 1.58 1.83
+L94@P1: U-8H 15 5 0.37 2.07 2.39
+L95@P1: 20 6 0.42 2.01 2.32
+L96@P1: 25 7 0.47 1.62 1.87
+L97@P1: 30 8 0.52 1.58 1.83
+L98@P1: U-8T 15 5 0.25 2.07 2.39
+L99@P1: 20 6 0.29 2.01 2.32
+L100@P1: 25 7 0.32 1.62 1.87
+L101@P1: 30 8 0.35 1.58 1.83
+L102@P1: U-8Q 15 5 0.18 2.07 2.39
+L103@P1: 20 6 0.21 2.01 2.32
+L104@P1: 25 7 0.24 1.62 1.87
+L105@P1: 30 8 0.26 1.58 1.83
+L106@P1: U8 Series
+L107@P1: 10° Trajectory
+L108@P1: Nozzle Pressure Radius Flow Flow Precip Precip
+L109@P1: bar m m3⁄h l/m mm/h mm/h
+L110@P1: U-8F 1.0 1.7 0.16 2.8 52 60
+L111@P1: 1.5 2.1 0.20 3.4 47 55
+L112@P1: 2.0 2.4 0.23 3.9 41 48
+L113@P1: 2.1 2.4 0.24 4.0 40 46
+L114@P1: U-8H 1.0 1.7 0.08 1.4 52 60
+L115@P1: 1.5 2.1 0.10 1.7 47 55
+L116@P1: 2.0 2.4 0.12 1.9 41 48
+L117@P1: 2.1 2.4 0.12 2.0 40 46
+L118@P1: U-8T 1.0 1.7 0.05 0.9 52 60
+L119@P1: 1.5 2.1 0.07 1.1 47 55
+L120@P1: 2.0 2.4 0.08 1.3 41 48
+L121@P1: 2.1 2.4 0.08 1.3 40 46
+L122@P1: U-8Q 1.0 1.7 0.04 0.7 52 60
+L123@P1: 1.5 2.1 0.05 0.8 47 55
+L124@P1: 2.0 2.4 0.06 1.0 41 48
+L125@P1: 2.1 2.4 0.06 1.0 40 46
+L126@P1: U8 Series METRIC
+L127@P1: 12° Trajectory
+L128@P1: Nozzle Pressure Radius Flow Precip Precip
+L129@P1: psi ft. gpm In/h In/h
+L130@P1: U-10F 15 7 1.16 2.07 2.39
+L131@P1: 20 8 1.34 2.01 2.32
+L132@P1: 25 9 1.50 1.62 1.87
+L133@P1: 30 10 1.64 1.58 1.83
+L134@P1: U-10H 15 7 0.58 2.07 2.39
+L135@P1: 20 8 0.67 2.01 2.32
+L136@P1: 25 9 0.75 1.62 1.87
+L137@P1: 30 10 0.82 1.58 1.83
+L138@P1: U-10T 15 7 0.39 2.07 2.39
+L139@P1: 20 8 0.45 2.01 2.32
+L140@P1: 25 9 0.50 1.62 1.87
+L141@P1: 30 10 0.55 1.58 1.83
+L142@P1: U-10Q 15 7 0.29 2.07 2.39
+L143@P1: 20 8 0.33 2.01 2.32
+L144@P1: 25 9 0.37 1.62 1.87
+L145@P1: 30 10 0.41 1.58 1.83
+L146@P1: U10 Series
+L147@P1: 12° Trajectory
+L148@P1: Nozzle Pressure Radius Flow Flow Precip Precip
+L149@P1: bar m m3⁄h l/m mm/h mm/h
+L150@P1: U-10F 1.0 2.1 0.26 4.4 52 60
+L151@P1: 1.5 2.6 0.30 5.3 47 55
+L152@P1: 2.0 3.0 0.34 6.1 41 48
+L153@P1: 2.1 3.1 0.37 6.2 40 46
+L154@P1: U-10H 1.0 2.1 0.13 2.2 52 60
+L155@P1: 1.5 2.6 0.15 2.6 47 55
+L156@P1: 2.0 3.0 0.17 3.1 41 48
+L157@P1: 2.1 3.1 0.19 3.1 40 46
+L158@P1: U-10T 1.0 2.1 0.09 1.5 52 60
+L159@P1: 1.5 2.6 0.10 1.8 47 55
+L160@P1: 2.0 3.0 0.11 2.0 41 48
+L161@P1: 2.1 3.1 0.12 2.1 40 46
+L162@P1: U-10Q 1.0 2.1 0.07 1.1 52 60
+L163@P1: 1.5 2.6 0.08 1.3 47 55
+L164@P1: 2.0 3.0 0.08 1.5 41 48
+L165@P1: 2.1 3.1 0.09 1.6 40 46
+L166@P1: U10 Series METRIC
+L167@P1: ■ ▲ ■ ▲
+L168@P1-2: ■ ▲ ■ ▲www.rainbird.com
+L169@P2: Tech Spec Plastic U-Series Nozzles
+L170@P2: 23° Trajectory Nozzle Pressure Radius Flow Precip Precip
+L171@P2: psi ft. gpm In/h In/h
+L172@P2: U-12F 15 9 1.80 2.14 2.47
+L173@P2: 20 10 2.10 2.02 2.34
+L174@P2: 25 11 2.40 1.91 2.21
+L175@P2: 30 12 2.60 1.74 2.01
+L176@P2: U-12TQ 15 9 1.35 2.14 2.47
+L177@P2: 20 10 1.58 2.02 2.34
+L178@P2: 25 11 1.80 1.91 2.21
+L179@P2: 30 12 1.95 1.74 2.01
+L180@P2: U-12TT 15 9 1.20 2.14 2.47
+L181@P2: 20 10 1.40 2.02 2.34
+L182@P2: 25 11 1.60 1.91 2.21
+L183@P2: 30 12 1.74 1.74 2.01
+L184@P2: U-12H 15 9 0.90 2.14 2.47
+L185@P2: 20 10 1.05 2.02 2.34
+L186@P2: 25 11 1.20 1.91 2.21
+L187@P2: 30 12 1.30 1.74 2.01
+L188@P2: U-12T 15 9 0.60 2.14 2.47
+L189@P2: 20 10 0.70 2.02 2.34
+L190@P2: 25 11 0.80 1.91 2.21
+L191@P2: 30 12 0.87 1.74 2.01
+L192@P2: U-12Q 15 9 0.45 2.14 2.47
+L193@P2: 20 10 0.53 2.02 2.34
+L194@P2: 25 11 0.60 1.91 2.21
+L195@P2: 30 12 0.65 1.74 2.01
+L196@P2: U12 Series
+L197@P2: 23° Trajectory
+L198@P2: 		 	 	 ■ ▲
+L199@P2: Nozzle Pressure Radius Flow Flow Precip Precip
+L200@P2: bar m m3⁄h l/m mm/h mm/h
+L201@P2: U-12F 1.0 2.7 0.40 6.8 55 63
+L202@P2: 1.5 3.2 0.48 8.3 47 54
+L203@P2: 2.0 3.6 0.59 9.7 46 53
+L204@P2: 2.1 3.7 0.60 9.8 44 51
+L205@P2: U-12TQ 1.0 2.7 0.30 5.1 55 63
+L206@P2: 1.5 3.2 0.36 6.3 47 54
+L207@P2: 2.0 3.6 0.45 7.3 46 53
+L208@P2: 2.1 3.7 0.45 7.4 44 51
+L209@P2: U-12TT 1.0 2.7 0.26 4.5 55 63
+L210@P2: 1.5 3.2 0.32 5.6 47 54
+L211@P2: 2.0 3.6 0.40 6.5 46 53
+L212@P2: 2.1 3.7 0.40 6.6 44 51
+L213@P2: U-12H 1.0 2.7 0.20 3.4 55 63
+L214@P2: 1.5 3.2 0.24 4.2 47 54
+L215@P2: 2.0 3.6 0.30 4.8 46 53
+L216@P2: 2.1 3.7 0.30 4.9 44 51
+L217@P2: U-12T 1.0 2.7 0.13 2.3 55 63
+L218@P2: 1.5 3.2 0.16 2.8 47 54
+L219@P2: 2.0 3.6 0.20 3.2 46 53
+L220@P2: 2.1 3.7 0.20 3.3 44 51
+L221@P2: U-12Q 1.0 2.7 0.10 1.7 55 63
+L222@P2: 1.5 3.2 0.12 2.1 47 54
+L223@P2: 2.0 3.6 0.15 2.4 46 53
+L224@P2: 2.1 3.7 0.15 2.5 44 51
+L225@P2: U12 Series METRIC
+L226@P2: ■ ▲
+L227@P2: 23° Trajectory
+L228@P2: 		 	 	 ■ ▲
+L229@P2: Nozzle Pressure Radius Flow Precip Precip
+L230@P2: psi ft. gpm In/h In/h
+L231@P2: U-15F 15 11 2.60 2.07 2.39
+L232@P2: 20 12 3.00 2.01 2.32
+L233@P2: 25 14 3.30 1.62 1.87
+L234@P2: 30 15 3.70 1.58 1.83
+L235@P2: U-15TQ 15 11 1.95 2.07 2.39
+L236@P2: 20 12 2.25 2.01 2.32
+L237@P2: 25 14 2.48 1.62 1.87
+L238@P2: 30 15 2.78 1.58 1.83
+L239@P2: U-15TT 15 11 1.74 2.07 2.39
+L240@P2: 20 12 2.01 2.01 2.32
+L241@P2: 25 14 2.21 1.62 1.87
+L242@P2: 30 15 2.48 1.58 1.83
+L243@P2: U-15H 15 11 1.30 2.07 2.39
+L244@P2: 20 12 1.50 2.01 2.32
+L245@P2: 25 14 1.65 1.62 1.87
+L246@P2: 30 15 1.85 1.58 1.83
+L247@P2: U-15T 15 11 0.87 2.07 2.39
+L248@P2: 20 12 1.00 2.01 2.32
+L249@P2: 25 14 1.10 1.62 1.87
+L250@P2: 30 15 1.23 1.58 1.83
+L251@P2: U-15Q 15 11 0.65 2.07 2.39
+L252@P2: 20 12 0.75 2.01 2.32
+L253@P2: 25 14 0.82 1.62 1.87
+L254@P2: 30 15 0.92 1.58 1.83
+L255@P2: U15 Series
+L256@P2: 23° Trajectory
+L257@P2: 		 	 	 ■ ▲
+L258@P2: Nozzle Pressure Radius Flow Flow Precip Precip
+L259@P2: bar m m3⁄h l/m mm/h mm/h
+L260@P2: U-15F 1.0 3.4 0.60 9.8 52 60
+L261@P2: 1.5 3.9 0.72 11.8 47 55
+L262@P2: 2.0 4.5 0.84 13.7 41 48
+L263@P2: 2.1 4.6 0.84 14.0 40 46
+L264@P2: U-15TQ 1.0 3.4 0.45 7.4 52 60
+L265@P2: 1.5 3.9 0.54 8.8 47 55
+L266@P2: 2.0 4.5 0.63 10.3 41 48
+L267@P2: 2.1 4.6 0.63 10.5 40 46
+L268@P2: U-15TT 1.0 3.4 0.40 6.6 52 60
+L269@P2: 1.5 3.9 0.48 7.9 47 55
+L270@P2: 2.0 4.5 0.55 9.2 41 48
+L271@P2: 2.1 4.6 0.56 9.4 40 46
+L272@P2: U-15H 1.0 3.4 0.30 4.9 52 60
+L273@P2: 1.5 3.9 0.36 5.9 47 55
+L274@P2: 2.0 4.5 0.42 6.9 41 48
+L275@P2: 2.1 4.6 0.42 7.0 40 46
+L276@P2: U-15T 1.0 3.4 0.20 3.3 52 60
+L277@P2: 1.5 3.9 0.24 3.9 47 55
+L278@P2: 2.0 4.5 0.28 4.6 41 48
+L279@P2: 2.1 4.6 0.28 4.7 40 46
+L280@P2: U-15Q 1.0 3.4 0.15 2.5 52 60
+L281@P2: 1.5 3.9 0.18 2.9 47 55
+L282@P2: 2.0 4.5 0.21 3.4 41 48
+L283@P2: 2.1 4.6 0.21 3.5 40 46
+L284@P2-3: U15 Series METRICD37038J
+L285@P3: Rain Bird Corporation
+L286@P3: 6991 E. Southpoint Road
+L287@P3: Tucson, AZ 85756
+L288@P3: Phone: (520) 741-6100
+L289@P3: Fax: (520) 741-6522
+L290@P3: Rain Bird Technical Services
+L291@P3: (800) RAINBIRD (1-800-724-6247)
+L292@P3: (U.S. and Canada)
+L293@P3: Rain Bird Corporation
+L294@P3: 970 West Sierra Madre Avenue
+L295@P3: Azusa, CA 91702
+L296@P3: Phone: (626) 812-3400
+L297@P3: Fax: (626) 812-3411
+L298@P3: Specification Hotline
+L299@P3: 800-458-3005 (U.S. and Canada)
+L300@P3: Rain Bird International, Inc.
+L301@P3: 1000 West Sierra Madre Ave.
+L302@P3: Azusa, CA 91702
+L303@P3: Phone: (626) 963-9311
+L304@P3: Fax: (626) 852-7343
+L305@P3: The Intelligent Use of Water™
+L306@P3: www.rainbird.com
+L307@P3: TM Registered Trademark of Rain Bird Corporation
+L308@P3: © 2011 Rain Bird Corporation 4/11
+L309@P3: Specifications
+L310@P3: The nozzle shall have a fixed arc of ________
+L311@P3: degrees (______ circle) and shall be capable of
+L312@P3: covering a _______ feet radius (FT. RAD.)/(meter) at ________ pounds per square inch (psi)/
+L313@P3: (Bars) with a discharge rate of _______ gallons
+L314@P3: per minute, (GPM)/(m3/h, l/s). The angle of
+L315@P3: trajectory shall be _______ degrees.
+L316@P3: The nozzle shall have dual orifices for both inclose watering and standard pattern watering.
+L317@P3: The lower orifice shall be a labyrinth type orifice
+L318@P3: to assure correct distribution of water close to
+L319@P3: the spray head.
+L320@P3: The nozzle shall be constructed of UV-resistant
+L321@P3: plastic. The radius adjustment screw shall be of
+L322@P3: stainless steel.
+L323@P3: The part-circle nozzle shall accept the blue finer
+L324@P3: mesh screen and the full-circle nozzle shall
+L325@P3: accept the 1800 Series filter screen to protect
+L326@P3: nozzles against clogging and to allow for radius
+L327@P3: adjustment.
+L328@P3: The nozzle shall have a precipitation rate
+L329@P3: matched with other 1800 Series MPR nozzles.
+L330@P3: The nozzle shall be as manufactured by
+L331@P3: Rain Bird Corporation, Azusa, California.
+L332@P3: Rain Bird® U-Series Nozzles produce spray
+L333@P3: patterns from two orifices to form a continuous
+L334@P3: water stream. The result is that gaps in coverage
+L335@P3: are eliminated so the entire watering area is
+L336@P3: more uniformly covered.
+L337@P3: ( Based on tests conducted at the Rain Bird Product
+L338@P3: Research Center. Tests conducted on Rain Bird and
+L339@P3: principal competitors’ part-circle nozzles)
+L340@P3: U-Series nozzles offer better, more uniform water distribution. Water
+L341@P3: flowing from both orifices combines to form a continuous water
+L342@P3: stream. Eliminates gaps for more uniform coverage throughout the
+L343@P3: entire watering area
+

@@ -1,0 +1,1442 @@
+[
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.2,
+    "calculatedDiagnostic": 0.20328282828282826,
+    "roundingEnvelope": [
+      0.19640231677433725,
+      0.2104970414201183
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.23,
+    "calculatedDiagnostic": 0.23473079126143875,
+    "roundingEnvelope": [
+      0.22678586091825956,
+      0.24306104705505024
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.23,
+    "calculatedDiagnostic": 0.22980103806228372,
+    "roundingEnvelope": [
+      0.22237975215290906,
+      0.23756961461349962
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.27,
+    "calculatedDiagnostic": 0.26535138237062994,
+    "roundingEnvelope": [
+      0.25678201953560864,
+      0.27432176189675933
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.25,
+    "calculatedDiagnostic": 0.24985714285714286,
+    "roundingEnvelope": [
+      0.2421047411227931,
+      0.2579605124973745
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.29,
+    "calculatedDiagnostic": 0.2885101773750445,
+    "roundingEnvelope": [
+      0.27955847491865854,
+      0.29786714266130604
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.27,
+    "calculatedDiagnostic": 0.2734285714285714,
+    "roundingEnvelope": [
+      0.26501686173378297,
+      0.2822201218231464
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.32,
+    "calculatedDiagnostic": 0.3157281186368411,
+    "roundingEnvelope": [
+      0.3060151129235789,
+      0.3258797266106451
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.28,
+    "calculatedDiagnostic": 0.2792438271604938,
+    "roundingEnvelope": [
+      0.27092325014073937,
+      0.2879289823447728
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.32,
+    "calculatedDiagnostic": 0.3224429975613049,
+    "roundingEnvelope": [
+      0.3128352227969684,
+      0.33247175092849923
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.23,
+    "calculatedDiagnostic": 0.22785714285714287,
+    "roundingEnvelope": [
+      0.22072009521920255,
+      0.23531821045998738
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.26,
+    "calculatedDiagnostic": 0.26310676553070095,
+    "roundingEnvelope": [
+      0.2548656127807329,
+      0.2717220643085895
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.27,
+    "calculatedDiagnostic": 0.2673611111111111,
+    "roundingEnvelope": [
+      0.2593638581347345,
+      0.27570918468557826
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.31,
+    "calculatedDiagnostic": 0.30872201894167495,
+    "roundingEnvelope": [
+      0.2994875866242978,
+      0.31836154399254174
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.3,
+    "calculatedDiagnostic": 0.29810080350620893,
+    "roundingEnvelope": [
+      0.28952000000000006,
+      0.3070463501595046
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.34,
+    "calculatedDiagnostic": 0.34421715829990696,
+    "roundingEnvelope": [
+      0.33430889987156104,
+      0.3545465858365642
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.32,
+    "calculatedDiagnostic": 0.3234112490869247,
+    "roundingEnvelope": [
+      0.31416,
+      0.3330549821730155
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.37,
+    "calculatedDiagnostic": 0.3734431434385782,
+    "roundingEnvelope": [
+      0.3627607211372257,
+      0.38457876722507306
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.36,
+    "calculatedDiagnostic": 0.3627830533235939,
+    "roundingEnvelope": [
+      0.3524888888888889,
+      0.3735128541940327
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.42,
+    "calculatedDiagnostic": 0.41890578698762265,
+    "roundingEnvelope": [
+      0.4070191097727042,
+      0.43129549382942045
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.28,
+    "calculatedDiagnostic": 0.275,
+    "roundingEnvelope": [
+      0.2665443364411823,
+      0.28383742911153115
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.32,
+    "calculatedDiagnostic": 0.3175426480542942,
+    "roundingEnvelope": [
+      0.3077788887905736,
+      0.3277472322072677
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.33,
+    "calculatedDiagnostic": 0.3267746913580247,
+    "roundingEnvelope": [
+      0.31716081816475894,
+      0.3368081729815513
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.38,
+    "calculatedDiagnostic": 0.37732691203982494,
+    "roundingEnvelope": [
+      0.3662257674876511,
+      0.3889125786723294
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.36,
+    "calculatedDiagnostic": 0.35856464572680785,
+    "roundingEnvelope": [
+      0.3483822222222222,
+      0.3691780821917808
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.41,
+    "calculatedDiagnostic": 0.41403478946451067,
+    "roundingEnvelope": [
+      0.4022771395617601,
+      0.4262901302646689
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.39,
+    "calculatedDiagnostic": 0.393718042366691,
+    "roundingEnvelope": [
+      0.38260444444444447,
+      0.40530118221054606
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.45,
+    "calculatedDiagnostic": 0.4546264354904431,
+    "roundingEnvelope": [
+      0.4417935579862945,
+      0.4680014933042647
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.43,
+    "calculatedDiagnostic": 0.42887143900657415,
+    "roundingEnvelope": [
+      0.4168266666666667,
+      0.4414242822293113
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.5",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.5,
+    "calculatedDiagnostic": 0.4952180815163756,
+    "roundingEnvelope": [
+      0.4813099764108289,
+      0.5097128563438605
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.33,
+    "calculatedDiagnostic": 0.3267746913580247,
+    "roundingEnvelope": [
+      0.31716081816475894,
+      0.3368081729815513
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.38,
+    "calculatedDiagnostic": 0.37732691203982494,
+    "roundingEnvelope": [
+      0.3662257674876511,
+      0.3889125786723294
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.35,
+    "calculatedDiagnostic": 0.346606648199446,
+    "roundingEnvelope": [
+      0.33701298701298704,
+      0.35659555555555555
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.4,
+    "calculatedDiagnostic": 0.4002268832817282,
+    "roundingEnvelope": [
+      0.3891490775446959,
+      0.41176107998364836
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.37,
+    "calculatedDiagnostic": 0.366953125,
+    "roundingEnvelope": [
+      0.35736168267032464,
+      0.376918763018747
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.42,
+    "calculatedDiagnostic": 0.4237209709974488,
+    "roundingEnvelope": [
+      0.4126457273755392,
+      0.4352282985829887
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.42,
+    "calculatedDiagnostic": 0.4235,
+    "roundingEnvelope": [
+      0.41252095717116294,
+      0.43490626502163116
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.49,
+    "calculatedDiagnostic": 0.48901567800361306,
+    "roundingEnvelope": [
+      0.47633817133826606,
+      0.502186498364987
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.46,
+    "calculatedDiagnostic": 0.4571875,
+    "roundingEnvelope": [
+      0.4453818015546411,
+      0.4694520108956898
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.53,
+    "calculatedDiagnostic": 0.5279146523902641,
+    "roundingEnvelope": [
+      0.5142826060394651,
+      0.5420764897244753
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.41,
+    "calculatedDiagnostic": 0.4148100803506209,
+    "roundingEnvelope": [
+      0.4031377777777778,
+      0.4269750422218052
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.48,
+    "calculatedDiagnostic": 0.4789814231060026,
+    "roundingEnvelope": [
+      0.46550340904101517,
+      0.4930283111280222
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.43,
+    "calculatedDiagnostic": 0.427109375,
+    "roundingEnvelope": [
+      0.4160417619265356,
+      0.43860759493670887
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.49,
+    "calculatedDiagnostic": 0.49318342525932574,
+    "roundingEnvelope": [
+      0.4804036464848231,
+      0.5064604260106464
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.45,
+    "calculatedDiagnostic": 0.44742063492063483,
+    "roundingEnvelope": [
+      0.43642214532871965,
+      0.45882566410219183
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.52,
+    "calculatedDiagnostic": 0.5166368480248437,
+    "roundingEnvelope": [
+      0.5039368861717006,
+      0.5298062413610186
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.49,
+    "calculatedDiagnostic": 0.48561507936507936,
+    "roundingEnvelope": [
+      0.4737231833910035,
+      0.4979460008709537
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.56,
+    "calculatedDiagnostic": 0.5607399935879401,
+    "roundingEnvelope": [
+      0.5470084149043247,
+      0.5749785152894855
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.5,
+    "calculatedDiagnostic": 0.5049351000540833,
+    "roundingEnvelope": [
+      0.4928854538248117,
+      0.5174186851211072
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "4.0",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.58,
+    "calculatedDiagnostic": 0.5830488318790312,
+    "roundingEnvelope": [
+      0.5691350988908118,
+      0.597463634276827
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.47,
+    "calculatedDiagnostic": 0.47460552268244577,
+    "roundingEnvelope": [
+      0.4620493510655344,
+      0.48766233766233763
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.55,
+    "calculatedDiagnostic": 0.5480272525591863,
+    "roundingEnvelope": [
+      0.5335286344331565,
+      0.5631039638459857
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.52,
+    "calculatedDiagnostic": 0.515318262938727,
+    "roundingEnvelope": [
+      0.5024168965016693,
+      0.5287075140984606
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.6,
+    "calculatedDiagnostic": 0.5950382756520088,
+    "roundingEnvelope": [
+      0.5801410608813103,
+      0.6104988511746483
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.53,
+    "calculatedDiagnostic": 0.5309626825310978,
+    "roundingEnvelope": [
+      0.5183181397806843,
+      0.5440622837370241
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.61,
+    "calculatedDiagnostic": 0.6131028953779503,
+    "roundingEnvelope": [
+      0.5985022350564884,
+      0.628229011942987
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.55,
+    "calculatedDiagnostic": 0.546604938271605,
+    "roundingEnvelope": [
+      0.5341927303465764,
+      0.5594432521146321
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.63,
+    "calculatedDiagnostic": 0.6311650165029798,
+    "roundingEnvelope": [
+      0.6168326333294742,
+      0.6459894244094051
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.58,
+    "calculatedDiagnostic": 0.5798765432098766,
+    "roundingEnvelope": [
+      0.5667371090448013,
+      0.5934667339982325
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "5.0",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.67,
+    "calculatedDiagnostic": 0.6695837566379439,
+    "roundingEnvelope": [
+      0.6544116449335328,
+      0.6852763572579352
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.53,
+    "calculatedDiagnostic": 0.5315581854043393,
+    "roundingEnvelope": [
+      0.5175692997917001,
+      0.5461038961038961
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.61,
+    "calculatedDiagnostic": 0.6137905228662887,
+    "roundingEnvelope": [
+      0.5976375491180485,
+      0.6305864628421758
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.54,
+    "calculatedDiagnostic": 0.5413737155219037,
+    "roundingEnvelope": [
+      0.5284912141630335,
+      0.554719723183391
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.63,
+    "calculatedDiagnostic": 0.6251245207775181,
+    "roundingEnvelope": [
+      0.6102490895227591,
+      0.6405351630094511
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.55,
+    "calculatedDiagnostic": 0.5503898865784499,
+    "roundingEnvelope": [
+      0.5381720430107526,
+      0.5630177514792899
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.64,
+    "calculatedDiagnostic": 0.6355354983506314,
+    "roundingEnvelope": [
+      0.6214275478051778,
+      0.6501169007502118
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.58,
+    "calculatedDiagnostic": 0.5795043005885016,
+    "roundingEnvelope": [
+      0.5669418282548477,
+      0.5924788992947162
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.67,
+    "calculatedDiagnostic": 0.6691539278826344,
+    "roundingEnvelope": [
+      0.6546480343155899,
+      0.6841357039939553
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.61,
+    "calculatedDiagnostic": 0.6057400173611112,
+    "roundingEnvelope": [
+      0.5929057285577638,
+      0.6189861495844876
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "6.0",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.7,
+    "calculatedDiagnostic": 0.6994483241647323,
+    "roundingEnvelope": [
+      0.6846285639737923,
+      0.7147436401745079
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.85,
+    "calculatedDiagnostic": 0.8540702160493827,
+    "roundingEnvelope": [
+      0.8301088384312253,
+      0.8790616941083119
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.99,
+    "calculatedDiagnostic": 0.986195338285906,
+    "roundingEnvelope": [
+      0.9585271226499111,
+      1.0150530114554448
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.74,
+    "calculatedDiagnostic": 0.7391833423472147,
+    "roundingEnvelope": [
+      0.7217796274276654,
+      0.7572110726643598
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.85,
+    "calculatedDiagnostic": 0.8535354033693036,
+    "roundingEnvelope": [
+      0.8334393243819009,
+      0.874352033272267
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.7,
+    "calculatedDiagnostic": 0.7015052059755547,
+    "roundingEnvelope": [
+      0.686387811634349,
+      0.7171175858480751
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.81,
+    "calculatedDiagnostic": 0.8100284390158208,
+    "roundingEnvelope": [
+      0.7925723756311392,
+      0.8280560624600015
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.75,
+    "calculatedDiagnostic": 0.7477756076388888,
+    "roundingEnvelope": [
+      0.7320278456796683,
+      0.764027700831025
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.86,
+    "calculatedDiagnostic": 0.863456896727497,
+    "roundingEnvelope": [
+      0.8452729475149168,
+      0.8822231974862464
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.75,
+    "calculatedDiagnostic": 0.7468999999999999,
+    "roundingEnvelope": [
+      0.7318057053230074,
+      0.7624579124579125
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "8.0",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.86,
+    "calculatedDiagnostic": 0.862445832115463,
+    "roundingEnvelope": [
+      0.8450164419254846,
+      0.8804105620066719
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.23,
+    "calculatedDiagnostic": 0.22791999999999998,
+    "roundingEnvelope": [
+      0.21758938869665514,
+      0.23892128279883382
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.26,
+    "calculatedDiagnostic": 0.263179346707399,
+    "roundingEnvelope": [
+      0.25125058427363994,
+      0.2758825338780749
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.23,
+    "calculatedDiagnostic": 0.2308035714285714,
+    "roundingEnvelope": [
+      0.22159125884887657,
+      0.24054545454545453
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.27,
+    "calculatedDiagnostic": 0.2665090081884255,
+    "roundingEnvelope": [
+      0.25587154589293387,
+      0.2777579658683182
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.25,
+    "calculatedDiagnostic": 0.25044642857142857,
+    "roundingEnvelope": [
+      0.24055093875038475,
+      0.26090909090909087
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.29,
+    "calculatedDiagnostic": 0.2891906259065894,
+    "roundingEnvelope": [
+      0.2777642984827037,
+      0.30127186774076836
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.26,
+    "calculatedDiagnostic": 0.26093935790725326,
+    "roundingEnvelope": [
+      0.2510629129560471,
+      0.27136041859033544
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.3,
+    "calculatedDiagnostic": 0.3013068170598416,
+    "roundingEnvelope": [
+      0.2899024807574108,
+      0.3133400214410794
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.29,
+    "calculatedDiagnostic": 0.2861177170035672,
+    "roundingEnvelope": [
+      0.27539500143636886,
+      0.29742997845490915
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.0LA",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.33,
+    "calculatedDiagnostic": 0.3303802818638614,
+    "roundingEnvelope": [
+      0.31799875642552994,
+      0.3434425562520128
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.29,
+    "calculatedDiagnostic": 0.2904663923182442,
+    "roundingEnvelope": [
+      0.27872727272727277,
+      0.3029013883944464
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.34,
+    "calculatedDiagnostic": 0.33540169959095556,
+    "roundingEnvelope": [
+      0.3218465318791624,
+      0.3497603962548901
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.29,
+    "calculatedDiagnostic": 0.28875,
+    "roundingEnvelope": [
+      0.2783257188927708,
+      0.29972708991669056
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.33,
+    "calculatedDiagnostic": 0.33341978045700893,
+    "roundingEnvelope": [
+      0.32138285745027473,
+      0.34609503209364895
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.3,
+    "calculatedDiagnostic": 0.304474505723205,
+    "roundingEnvelope": [
+      0.29391534391534396,
+      0.3155737704918033
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.35,
+    "calculatedDiagnostic": 0.3515768756813414,
+    "roundingEnvelope": [
+      0.3393842058569706,
+      0.36439320268525566
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.35,
+    "calculatedDiagnostic": 0.3505463059313215,
+    "roundingEnvelope": [
+      0.3385361552028219,
+      0.36316850309056703
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.4,
+    "calculatedDiagnostic": 0.4047760081857548,
+    "roundingEnvelope": [
+      0.3909078806735403,
+      0.4193508660410647
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.38,
+    "calculatedDiagnostic": 0.38059313215400625,
+    "roundingEnvelope": [
+      0.367636684303351,
+      0.3942085460897608
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "1.5LA",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.44,
+    "calculatedDiagnostic": 0.4394710946016767,
+    "roundingEnvelope": [
+      0.4245102772930424,
+      0.45519282040354886
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.32,
+    "calculatedDiagnostic": 0.32045184304399527,
+    "roundingEnvelope": [
+      0.30857512209135307,
+      0.332979378270237
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.37,
+    "calculatedDiagnostic": 0.3700259156875248,
+    "roundingEnvelope": [
+      0.3563118596093287,
+      0.38449146735783113
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.34,
+    "calculatedDiagnostic": 0.34453694068678464,
+    "roundingEnvelope": [
+      0.33271604938271604,
+      0.3569604944907283
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.4,
+    "calculatedDiagnostic": 0.3978369909025705,
+    "roundingEnvelope": [
+      0.3841874013496399,
+      0.4121824751685679
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.39,
+    "calculatedDiagnostic": 0.38537597656249994,
+    "roundingEnvelope": [
+      0.372698224852071,
+      0.3986772486772486
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.45,
+    "calculatedDiagnostic": 0.44499384761514854,
+    "roundingEnvelope": [
+      0.4303548408896778,
+      0.4603528336871777
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.4,
+    "calculatedDiagnostic": 0.3977272727272727,
+    "roundingEnvelope": [
+      0.3850857652038316,
+      0.4109704142011834
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.46,
+    "calculatedDiagnostic": 0.45925589594629324,
+    "roundingEnvelope": [
+      0.4446587404030504,
+      0.4745477585360505
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.43,
+    "calculatedDiagnostic": 0.4330808080808081,
+    "roundingEnvelope": [
+      0.419391846736467,
+      0.4474201183431953
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "2.0LA",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.5,
+    "calculatedDiagnostic": 0.5000786422526305,
+    "roundingEnvelope": [
+      0.4842719912184671,
+      0.5166362515325961
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 25.0,
+    "field": "precipSquareInH",
+    "published": 0.5,
+    "calculatedDiagnostic": 0.5035671819262784,
+    "roundingEnvelope": [
+      0.4855357655846022,
+      0.5225761772853186
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 25.0,
+    "field": "precipTriangleInH",
+    "published": 0.58,
+    "calculatedDiagnostic": 0.5814692960803962,
+    "roundingEnvelope": [
+      0.5606484099229223,
+      0.6034189932555286
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 35.0,
+    "field": "precipSquareInH",
+    "published": 0.46,
+    "calculatedDiagnostic": 0.4595959595959596,
+    "roundingEnvelope": [
+      0.44512140788594345,
+      0.4747573964497041
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 35.0,
+    "field": "precipTriangleInH",
+    "published": 0.53,
+    "calculatedDiagnostic": 0.5306957019823834,
+    "roundingEnvelope": [
+      0.5139819293300294,
+      0.5482026212800052
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 45.0,
+    "field": "precipSquareInH",
+    "published": 0.51,
+    "calculatedDiagnostic": 0.507893598615917,
+    "roundingEnvelope": [
+      0.4924700693131695,
+      0.5240253954110047
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 45.0,
+    "field": "precipTriangleInH",
+    "published": 0.59,
+    "calculatedDiagnostic": 0.5864650117611749,
+    "roundingEnvelope": [
+      0.5686554541715843,
+      0.6050924062054873
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 55.0,
+    "field": "precipSquareInH",
+    "published": 0.51,
+    "calculatedDiagnostic": 0.5050154320987654,
+    "roundingEnvelope": [
+      0.4905516982548321,
+      0.5201051378694703
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 55.0,
+    "field": "precipTriangleInH",
+    "published": 0.58,
+    "calculatedDiagnostic": 0.5831415913342749,
+    "roundingEnvelope": [
+      0.5664403100777108,
+      0.6005656827116923
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 65.0,
+    "field": "precipSquareInH",
+    "published": 0.55,
+    "calculatedDiagnostic": 0.5495756172839507,
+    "roundingEnvelope": [
+      0.5338994182773503,
+      0.5659293790914501
+    ],
+    "consistentWithinPrintedPrecision": true
+  },
+  {
+    "nozzleId": "3.0LA",
+    "pressurePsi": 65.0,
+    "field": "precipTriangleInH",
+    "published": 0.63,
+    "calculatedDiagnostic": 0.6345952611578874,
+    "roundingEnvelope": [
+      0.6164939457252258,
+      0.653478958721533
+    ],
+    "consistentWithinPrintedPrecision": true
+  }
+]

@@ -1,0 +1,176 @@
+{
+  "checkedOn": "2026-10-10",
+  "sources": [
+    {
+      "file": "rotor-source-catalog-0000.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "05ce2da79dbc7cc5e6ceca676ab736a1a01af27270f0d0b7e8bf0ab866e73243",
+      "bytes": 18072
+    },
+    {
+      "file": "rotor-source-catalog-0400.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "46935be90132278d8ebd1982da76f7abb4cf7e385b90f6fa520bbab2944f8ac6",
+      "bytes": 13808
+    },
+    {
+      "file": "rotor-source-catalog-0780.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "8db4181ffb1dbafa665ee5a98156b42d4c21e5b1fda554a2ee91f06ede0f2d93",
+      "bytes": 12427
+    },
+    {
+      "file": "rotor-source-catalog-1010.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "c1b90d11aeefcc852a51ddc687933e96378c1b17f050e1b56217a8e965211768",
+      "bytes": 15044
+    },
+    {
+      "file": "rotor-source-catalog-1160.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "8bc8eb09551cd04d859332a9628dca01f189d9532a1d46a3661aaefd6f33756c",
+      "bytes": 13337
+    },
+    {
+      "file": "rotor-source-catalog-1370.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "3b449fe3d7698fb9d87362a765c6ae0bfa6fe407d4821faf7c4f4c173362159f",
+      "bytes": 13661
+    },
+    {
+      "file": "rotor-source-catalog-1540.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "09084992b3581e7be161b06ffb5dd3bdfa14474bc911f65fdb5981f93032e9b3",
+      "bytes": 15817
+    },
+    {
+      "file": "rotor-source-catalog-680.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "aa8b82d55501f518f6f1ecd34f1a987f9b38303e74ea469419747f7494bed8ef",
+      "bytes": 12683
+    },
+    {
+      "file": "rotor-source-faq.txt",
+      "url": "https://www.krain.com/faqs",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "36470a2c4ddd23abb8c08c5ca8a4cf4c79cbeaef55207b783d2f3cf025f6b435",
+      "bytes": 34034
+    },
+    {
+      "file": "rotor-source-minipro-instructions.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/rotors/minipro/minipro%20setting%20instructions.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "516570e1e7b263bdce0fb9b4872510b08f49bd5ecfcf8c8dd7ad40c14a635033",
+      "bytes": 5717
+    },
+    {
+      "file": "rotor-source-nozzle-racks.txt",
+      "url": "https://www.krain.com/nozzle-racks/",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "41a6231d3c5ef856bf11fc37ac10fd392d53da3181a658059edb57f614dc09e1",
+      "bytes": 9338
+    },
+    {
+      "file": "rotor-source-proplus-brochure.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/rotors/proplus/proplus%20product%20brochure.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "a8ba331e9d5b0d8dd69162cdb2d306d0a30e103a88246da8d93ce81615ab9a26",
+      "bytes": 6435
+    },
+    {
+      "file": "rotor-source-rps-select-brochure.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps%20select/rps%20select%20product%20brochure.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "5f34dd291eddf1ccb7ed1b5f2e12780b76227beb65f7de98e2b99a81223efa83",
+      "bytes": 5255
+    },
+    {
+      "file": "rotor-source-rps75-instructions.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "bfe276e72b0d2de133c93395429108910e79d34e1e909a93dffef5ccc539b16c",
+      "bytes": 10672
+    },
+    {
+      "file": "rotor-source-rps75i-brochure.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75i/rps75i%20product%20brochure.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "10e35b39614622603696b07ade8ad4f9143eeb329ac41befa816367100770bd1",
+      "bytes": 3813
+    },
+    {
+      "file": "rotor-source-superpro-brochure.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/rotors/superpro/superpro%20product%20brochure.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "3ea549b77bf3d6e9e5d40fda2a864ef7e1c767b9ca684202988125a6d739d0ff",
+      "bytes": 6548
+    },
+    {
+      "file": "rotor-source-written-minipro.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/minipro%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "f69dd361207efeefaf1fb22c5780f0b550dbb4242ff5e42d9c78238696537550",
+      "bytes": 4022
+    },
+    {
+      "file": "rotor-source-written-rps-select.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps%20select%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "214e4a560cdfb72e640006012812dcf68736359bdb2c869b74a41163365e27f9",
+      "bytes": 3827
+    },
+    {
+      "file": "rotor-source-written-rps50.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps50%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "7a308483cef467a976db5dcb2b322b570d1ccd154d4b423afd56a90c3c7a587f",
+      "bytes": 3943
+    },
+    {
+      "file": "rotor-source-written-rps75.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "4b9d7f46ec186e9beeeadc836df25834ba584cccf0f6c0c8fea71989ca8aa1e2",
+      "bytes": 4185
+    },
+    {
+      "file": "rotor-source-written-rps75i.txt",
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75i%20gear%20drive%20rotor%20product%20specifications.pdf",
+      "retrievedOn": "2026-10-10",
+      "method": "native web official source extraction",
+      "sha256": "9bb94c16fff3616f8bbd35868c6659f04a9e46368aba81084ccd4d650c0b3874",
+      "bytes": 4299
+    }
+  ],
+  "catalogueScope": "2026 catalogue PDF pages5–26 including all current rotor rows and nozzle rack colors. Native extracts merged by original source line; no gap through line1581.",
+  "precedence": "2026 model/performance pages govern numeric rows and operating limits; current linked written specs corroborate mechanism. Older brochures may describe prior nozzle generations. RPS75 seven corrected flows additionally require currentUS corroboration with Rev12 metric manual.",
+  "limits": "Native extraction has explicit column-separator repairs preserved in rotor-source-rows.json. No CLI network or browser was used. Old downloaded files are not represented as fresh network evidence."
+}

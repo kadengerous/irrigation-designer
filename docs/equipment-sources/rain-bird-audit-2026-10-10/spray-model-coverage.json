@@ -1,0 +1,2607 @@
+{
+  "verifiedOn": "2026-10-10",
+  "summary": {
+    "activeModels": 58,
+    "deprecatedModels": 1,
+    "totalModels": 59,
+    "storedRows": 370,
+    "freshComparedRows": 370,
+    "matchingRows": 370,
+    "numericCorrections": 0,
+    "hydraulicallyWithheldSmallSQRows": 4,
+    "withheldLargeSQPrecipitationRows": 4,
+    "sourceUnits": {
+      "metric": 336,
+      "US": 34
+    },
+    "freshTextColorModels": 44,
+    "retainedPriorVisualColorModels": 15
+  },
+  "models": [
+    {
+      "id": "rain-bird:HE-VAN-8",
+      "modelId": "HE-VAN-8",
+      "series": "HE-VAN",
+      "family": "he",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:HE-VAN-8",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 proportional Q90*arc/90 is an explicitly calculated MPR-based estimate, not a published measurement. No radius reduction is implied by this sector estimate.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "HE-VAN-8",
+        "colorName": "green",
+        "color": "#269653",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:HE-VAN-10",
+      "modelId": "HE-VAN-10",
+      "series": "HE-VAN",
+      "family": "he",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:HE-VAN-10",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 proportional Q90*arc/90 is an explicitly calculated MPR-based estimate, not a published measurement. No radius reduction is implied by this sector estimate.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "HE-VAN-10",
+        "colorName": "blue",
+        "color": "#2b69b5",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:HE-VAN-12",
+      "modelId": "HE-VAN-12",
+      "series": "HE-VAN",
+      "family": "he",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:HE-VAN-12",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 proportional Q90*arc/90 is an explicitly calculated MPR-based estimate, not a published measurement. No radius reduction is implied by this sector estimate.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "HE-VAN-12",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:HE-VAN-15",
+      "modelId": "HE-VAN-15",
+      "series": "HE-VAN",
+      "family": "he",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:HE-VAN-15",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 proportional Q90*arc/90 is an explicitly calculated MPR-based estimate, not a published measurement. No radius reduction is implied by this sector estimate.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "HE-VAN-15",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2024-02/2024_rain_bird_golf_catalog.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:4-VAN",
+      "modelId": "4-VAN",
+      "series": "VAN",
+      "family": "spray",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 330,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:4-VAN",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 mechanical geometry is supported, but proportional discharge lacks a verified MPR basis. Keep flow unknown; distinguish this from an invalid mechanical angle.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "4-VAN",
+        "colorName": "yellow",
+        "color": "#ebcb30",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:6-VAN",
+      "modelId": "6-VAN",
+      "series": "VAN",
+      "family": "spray",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 330,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:6-VAN",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 mechanical geometry is supported, but proportional discharge lacks a verified MPR basis. Keep flow unknown; distinguish this from an invalid mechanical angle.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "6-VAN",
+        "colorName": "orange",
+        "color": "#eb7837",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:8-VAN",
+      "modelId": "8-VAN",
+      "series": "VAN",
+      "family": "spray",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 330,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:8-VAN",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 mechanical geometry is supported, but proportional discharge lacks a verified MPR basis. Keep flow unknown; distinguish this from an invalid mechanical angle.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "8-VAN",
+        "colorName": "green",
+        "color": "#269653",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:10-VAN",
+      "modelId": "10-VAN",
+      "series": "VAN",
+      "family": "spray",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:10-VAN",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 mechanical geometry is supported, but proportional discharge lacks a verified MPR basis. Keep flow unknown; distinguish this from an invalid mechanical angle.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "10-VAN",
+        "colorName": "blue",
+        "color": "#2b69b5",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:12-VAN",
+      "modelId": "12-VAN",
+      "series": "VAN",
+      "family": "spray",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:12-VAN",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 proportional Q90*arc/90 is an explicitly calculated MPR-based estimate, not a published measurement. No radius reduction is implied by this sector estimate.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "12-VAN",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15-VAN",
+      "modelId": "15-VAN",
+      "series": "VAN",
+      "family": "spray",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15-VAN",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 proportional Q90*arc/90 is an explicitly calculated MPR-based estimate, not a published measurement. No radius reduction is implied by this sector estimate.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "15-VAN",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:18-VAN",
+      "modelId": "18-VAN",
+      "series": "VAN",
+      "family": "spray",
+      "category": "spray",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 16,
+      "matchedRows": 16,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 16
+      },
+      "arcMin": 0,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:18-VAN",
+          "hydraulicVerificationStatus": null,
+          "rows": 16
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Mechanical arc starts at zero; zero is shutoff, not a placeable irrigated sector. Published flow rows start at90 degrees.",
+        "Below90 proportional Q90*arc/90 is an explicitly calculated MPR-based estimate, not a published measurement. No radius reduction is implied by this sector estimate.",
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "18-VAN",
+        "colorName": "tan",
+        "color": "#c89f73",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-8F",
+      "modelId": "U-8F",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-8F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-8F",
+        "colorName": "green",
+        "color": "#269653",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-8H",
+      "modelId": "U-8H",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-8H",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-8H",
+        "colorName": "green",
+        "color": "#269653",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-8Q",
+      "modelId": "U-8Q",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-8Q",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-8Q",
+        "colorName": "green",
+        "color": "#269653",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-10F",
+      "modelId": "U-10F",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-10F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-10F",
+        "colorName": "blue",
+        "color": "#2b69b5",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-10H",
+      "modelId": "U-10H",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-10H",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-10H",
+        "colorName": "blue",
+        "color": "#2b69b5",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-10Q",
+      "modelId": "U-10Q",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-10Q",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-10Q",
+        "colorName": "blue",
+        "color": "#2b69b5",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-12F",
+      "modelId": "U-12F",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-12F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-12F",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-12H",
+      "modelId": "U-12H",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-12H",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-12H",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-12Q",
+      "modelId": "U-12Q",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-12Q",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-12Q",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-15F",
+      "modelId": "U-15F",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-15F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-15F",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-15H",
+      "modelId": "U-15H",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-15H",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-15H",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:U-15Q",
+      "modelId": "U-15Q",
+      "series": "U-Series",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:U-15Q",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Screw adjusts flow/radius, but no quantitative reduction limit verified. Table radius is recommended product spacing; actual throw along arc may vary."
+      ],
+      "colorEvidence": {
+        "modelId": "U-15Q",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-06/r461-071678-22_2022cat_full_fin_web-1.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:5F",
+      "modelId": "5F",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:5F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "5F",
+        "colorName": "red",
+        "color": "#d13c37",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:5H",
+      "modelId": "5H",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "US": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1.0342135939767465,
+        2.068427187953493
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:5H",
+          "hydraulicVerificationStatus": "Verified",
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "5H",
+        "colorName": "red",
+        "color": "#d13c37",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:5Q",
+      "modelId": "5Q",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "US": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1.0342135939767465,
+        2.068427187953493
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:5Q",
+          "hydraulicVerificationStatus": "Verified",
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "5Q",
+        "colorName": "red",
+        "color": "#d13c37",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:8F",
+      "modelId": "8F",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:8F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "8F",
+        "colorName": "green",
+        "color": "#269653",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:8H",
+      "modelId": "8H",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:8H",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "8H",
+        "colorName": "green",
+        "color": "#269653",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:8Q",
+      "modelId": "8Q",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:8Q",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "8Q",
+        "colorName": "green",
+        "color": "#269653",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:10F",
+      "modelId": "10F",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:10F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "10F",
+        "colorName": "blue",
+        "color": "#2b69b5",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:10H",
+      "modelId": "10H",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "US": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1.0342135939767465,
+        2.068427187953493
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:10H",
+          "hydraulicVerificationStatus": "Verified",
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "10H",
+        "colorName": "blue",
+        "color": "#2b69b5",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:10Q",
+      "modelId": "10Q",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "US": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1.0342135939767465,
+        2.068427187953493
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:10Q",
+          "hydraulicVerificationStatus": "Verified",
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "10Q",
+        "colorName": "blue",
+        "color": "#2b69b5",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:12F",
+      "modelId": "12F",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:12F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "12F",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:12H",
+      "modelId": "12H",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:12H",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "12H",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:12Q",
+      "modelId": "12Q",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:12Q",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "12Q",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15F",
+      "modelId": "15F",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15F",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "15F",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15H",
+      "modelId": "15H",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15H",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "15H",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15Q",
+      "modelId": "15Q",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15Q",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "15Q",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:5F-B",
+      "modelId": "5F-B",
+      "series": "MPR",
+      "family": "stream",
+      "category": "bubbler",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:5F-B",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Discrete streams; uniformly wetted footprint/width unpublished.",
+      "limitations": [
+        "Retain placementSupported false until dimensioned stream geometry is supported. Constant table flow is at adjusted1.5m radius, not a pressure-compensation guarantee."
+      ],
+      "colorEvidence": {
+        "modelId": "5F-B",
+        "colorName": "gray",
+        "color": "#8c9499",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:5H-B",
+      "modelId": "5H-B",
+      "series": "MPR",
+      "family": "stream",
+      "category": "bubbler",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:5H-B",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Discrete streams; uniformly wetted footprint/width unpublished.",
+      "limitations": [
+        "Retain placementSupported false until dimensioned stream geometry is supported. Constant table flow is at adjusted1.5m radius, not a pressure-compensation guarantee."
+      ],
+      "colorEvidence": {
+        "modelId": "5H-B",
+        "colorName": "gray",
+        "color": "#8c9499",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:5Q-B",
+      "modelId": "5Q-B",
+      "series": "MPR",
+      "family": "stream",
+      "category": "bubbler",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:5Q-B",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Discrete streams; uniformly wetted footprint/width unpublished.",
+      "limitations": [
+        "Retain placementSupported false until dimensioned stream geometry is supported. Constant table flow is at adjusted1.5m radius, not a pressure-compensation guarantee."
+      ],
+      "colorEvidence": {
+        "modelId": "5Q-B",
+        "colorName": "gray",
+        "color": "#8c9499",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:5CST-B",
+      "modelId": "5CST-B",
+      "series": "MPR",
+      "family": "stream",
+      "category": "bubbler",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:5CST-B",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Discrete streams; uniformly wetted footprint/width unpublished.",
+      "limitations": [
+        "Retain placementSupported false until dimensioned stream geometry is supported. Constant table flow is at adjusted1.5m radius, not a pressure-compensation guarantee."
+      ],
+      "colorEvidence": {
+        "modelId": "5CST-B",
+        "colorName": "gray",
+        "color": "#8c9499",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15EST",
+      "modelId": "15EST",
+      "series": "MPR",
+      "family": "prostrip",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15EST",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Published pressure-specific width/length rectangle; not a circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor.",
+        "No published square/triangular precipitation. Existing arc180 is internal orientation metadata. Fresh text rechecks dimensions; diagram-origin orientation retained from earlier visual audit, not freshly visually certified."
+      ],
+      "colorEvidence": {
+        "modelId": "15EST",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15CST",
+      "modelId": "15CST",
+      "series": "MPR",
+      "family": "prostrip",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15CST",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Published pressure-specific width/length rectangle; not a circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor.",
+        "No published square/triangular precipitation. Existing arc180 is internal orientation metadata. Fresh text rechecks dimensions; diagram-origin orientation retained from earlier visual audit, not freshly visually certified."
+      ],
+      "colorEvidence": {
+        "modelId": "15CST",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15RCS",
+      "modelId": "15RCS",
+      "series": "MPR",
+      "family": "prostrip",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15RCS",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Published pressure-specific width/length rectangle; not a circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor.",
+        "No published square/triangular precipitation. Existing arc180 is internal orientation metadata. Fresh text rechecks dimensions; diagram-origin orientation retained from earlier visual audit, not freshly visually certified."
+      ],
+      "colorEvidence": {
+        "modelId": "15RCS",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15LCS",
+      "modelId": "15LCS",
+      "series": "MPR",
+      "family": "prostrip",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15LCS",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Published pressure-specific width/length rectangle; not a circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor.",
+        "No published square/triangular precipitation. Existing arc180 is internal orientation metadata. Fresh text rechecks dimensions; diagram-origin orientation retained from earlier visual audit, not freshly visually certified."
+      ],
+      "colorEvidence": {
+        "modelId": "15LCS",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:15SST",
+      "modelId": "15SST",
+      "series": "MPR",
+      "family": "prostrip",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:15SST",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Published pressure-specific width/length rectangle; not a circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor.",
+        "No published square/triangular precipitation. Existing arc180 is internal orientation metadata. Fresh text rechecks dimensions; diagram-origin orientation retained from earlier visual audit, not freshly visually certified."
+      ],
+      "colorEvidence": {
+        "modelId": "15SST",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:9SST",
+      "modelId": "9SST",
+      "series": "MPR",
+      "family": "prostrip",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:9SST",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Published pressure-specific width/length rectangle; not a circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor.",
+        "No published square/triangular precipitation. Existing arc180 is internal orientation metadata. Fresh text rechecks dimensions; diagram-origin orientation retained from earlier visual audit, not freshly visually certified."
+      ],
+      "colorEvidence": {
+        "modelId": "9SST",
+        "colorName": "gray",
+        "color": "#8c9499",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:8H-FLT",
+      "modelId": "8H-FLT",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 180,
+      "arcMax": 180,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:8H-FLT",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "8H-FLT",
+        "colorName": "gray",
+        "color": "#8c9499",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:8Q-FLT",
+      "modelId": "8Q-FLT",
+      "series": "MPR",
+      "family": "fixed",
+      "category": "fixed",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 4,
+      "matchedRows": 4,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+      "sourceUnits": {
+        "metric": 4
+      },
+      "arcMin": 90,
+      "arcMax": 90,
+      "pressureBar": [
+        1,
+        2.1
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:8Q-FLT",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Verified published circular sector.",
+      "limitations": [
+        "Up to25% radius reduction is documented; no reduced-radius flow table or formula found. Preserve flowPolicy unknown. Strip dimensions must not be scaled by an invented common factor."
+      ],
+      "colorEvidence": {
+        "modelId": "8Q-FLT",
+        "colorName": "gray",
+        "color": "#8c9499",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "top identification ring",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:SQ-3QTR",
+      "modelId": "SQ-3QTR",
+      "series": "SQ Series",
+      "family": "fixed",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 8,
+      "matchedRows": 8,
+      "sourceUrl": "https://www.rainbird.com/media/13442",
+      "sourceUnits": {
+        "US": 8
+      },
+      "arcMin": 270.0,
+      "arcMax": 270.0,
+      "pressureBar": [
+        1.378951458635662,
+        3.4473786465891547
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:SQ-3QTR:throw-0.8",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        },
+        {
+          "id": "rain-bird:SQ-3QTR:throw-1.2",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Square-derived fraction: quarter corner, half side-offset, three-quarter square, or centered full square. Never circular sector.",
+      "limitations": [
+        "Two discrete throw settings; never interpolate between settings. Published geometry/performance at6-inch/~0.15m mounting height; no generic body-height scaling.",
+        "Pressure-compensating label does not replace pressure-specific flow table. Application rate is without overlap, not square/triangle grid precipitation."
+      ],
+      "colorEvidence": {
+        "modelId": "SQ-3QTR",
+        "colorName": "gray",
+        "color": "#8c9499",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-02/d41409_2022_intl_turf_catalog_v6.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "bottom insert",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:SQ-FUL",
+      "modelId": "SQ-FUL",
+      "series": "SQ Series",
+      "family": "fixed",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 8,
+      "matchedRows": 8,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf",
+      "sourceUnits": {
+        "metric": 8
+      },
+      "arcMin": 360,
+      "arcMax": 360,
+      "pressureBar": [
+        1.4,
+        3.5
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:SQ-FUL:throw-0.8",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        },
+        {
+          "id": "rain-bird:SQ-FUL:throw-1.2",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Square-derived fraction: quarter corner, half side-offset, three-quarter square, or centered full square. Never circular sector.",
+      "limitations": [
+        "Two discrete throw settings; never interpolate between settings. Published geometry/performance at6-inch/~0.15m mounting height; no generic body-height scaling.",
+        "Pressure-compensating label does not replace pressure-specific flow table. Application rate is without overlap, not square/triangle grid precipitation."
+      ],
+      "colorEvidence": {
+        "modelId": "SQ-FUL",
+        "colorName": "red",
+        "color": "#d13c37",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-02/d41409_2022_intl_turf_catalog_v6.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "bottom insert",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:SQ-HLF",
+      "modelId": "SQ-HLF",
+      "series": "SQ Series",
+      "family": "fixed",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Needs Review",
+      "performanceRows": 8,
+      "matchedRows": 8,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf",
+      "sourceUnits": {
+        "metric": 4,
+        "US": 4
+      },
+      "arcMin": 180.0,
+      "arcMax": 180.0,
+      "pressureBar": [
+        1.378951458635662,
+        3.4473786465891547
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:SQ-HLF:throw-0.8",
+          "hydraulicVerificationStatus": "Needs Review",
+          "rows": 4
+        },
+        {
+          "id": "rain-bird:SQ-HLF:throw-1.2",
+          "hydraulicVerificationStatus": "Verified",
+          "rows": 4
+        }
+      ],
+      "geometry": "Square-derived fraction: quarter corner, half side-offset, three-quarter square, or centered full square. Never circular sector.",
+      "limitations": [
+        "Two discrete throw settings; never interpolate between settings. Published geometry/performance at6-inch/~0.15m mounting height; no generic body-height scaling.",
+        "Pressure-compensating label does not replace pressure-specific flow table. Application rate is without overlap, not square/triangle grid precipitation.",
+        "Four small-setting flows remain Needs Review. Large-setting US flow is usable; four large-setting no-overlap precipitation cells remain withheld. Hydraulic review must not suppress verified square geometry."
+      ],
+      "colorEvidence": {
+        "modelId": "SQ-HLF",
+        "colorName": "brown",
+        "color": "#8b5e3c",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-02/d41409_2022_intl_turf_catalog_v6.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "bottom insert",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:SQ-QTR",
+      "modelId": "SQ-QTR",
+      "series": "SQ Series",
+      "family": "fixed",
+      "category": "specialty",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 8,
+      "matchedRows": 8,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf",
+      "sourceUnits": {
+        "metric": 8
+      },
+      "arcMin": 90.0,
+      "arcMax": 90.0,
+      "pressureBar": [
+        1.4,
+        3.5
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:SQ-QTR:throw-0.8",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        },
+        {
+          "id": "rain-bird:SQ-QTR:throw-1.2",
+          "hydraulicVerificationStatus": null,
+          "rows": 4
+        }
+      ],
+      "geometry": "Square-derived fraction: quarter corner, half side-offset, three-quarter square, or centered full square. Never circular sector.",
+      "limitations": [
+        "Two discrete throw settings; never interpolate between settings. Published geometry/performance at6-inch/~0.15m mounting height; no generic body-height scaling.",
+        "Pressure-compensating label does not replace pressure-specific flow table. Application rate is without overlap, not square/triangle grid precipitation."
+      ],
+      "colorEvidence": {
+        "modelId": "SQ-QTR",
+        "colorName": "purple",
+        "color": "#78589a",
+        "hexIsApproximation": true,
+        "status": "Fresh official text corroborates published color name",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-02/d41409_2022_intl_turf_catalog_v6.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "bottom insert",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:1300A-F",
+      "modelId": "1300A-F",
+      "series": "1300 Series",
+      "family": "bubbler",
+      "category": "bubbler",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 6,
+      "matchedRows": 6,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+      "sourceUnits": {
+        "US": 6
+      },
+      "arcMin": 0,
+      "arcMax": 0,
+      "pressureBar": [
+        0.689475729317831,
+        4.136854375906986
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:1300A-F",
+          "hydraulicVerificationStatus": "Verified",
+          "rows": 6
+        }
+      ],
+      "geometry": "Point/local application with unknown dimensioned wetted footprint. Arc0/radius0 are placeholders, not physical shutoff/zero throw.",
+      "limitations": [
+        "Published0.3–0.9m is spacing, not verified coverage radius. No depth-based runtime without an independently specified irrigated area.",
+        "Screw adjustment changes discharge and can close outlet. Table describes published test configuration; arbitrary screw-setting discharge is not modeled. Do not label table flow as immutable."
+      ],
+      "colorEvidence": {
+        "modelId": "1300A-F",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "housing",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:1401",
+      "modelId": "1401",
+      "series": "1400 Series",
+      "family": "bubbler",
+      "category": "bubbler",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 0,
+      "matchedRows": 0,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+      "sourceUnits": {},
+      "arcMin": 0,
+      "arcMax": 0,
+      "pressureBar": [
+        1.4,
+        6.2
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:1401",
+          "hydraulicVerificationStatus": null,
+          "rows": 0
+        }
+      ],
+      "geometry": "Point/local application with unknown dimensioned wetted footprint. Arc0/radius0 are placeholders, not physical shutoff/zero throw.",
+      "limitations": [
+        "Published0.3–0.9m is spacing, not verified coverage radius. No depth-based runtime without an independently specified irrigated area."
+      ],
+      "colorEvidence": {
+        "modelId": "1401",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "housing",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:1402",
+      "modelId": "1402",
+      "series": "1400 Series",
+      "family": "bubbler",
+      "category": "bubbler",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 0,
+      "matchedRows": 0,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+      "sourceUnits": {},
+      "arcMin": 0,
+      "arcMax": 0,
+      "pressureBar": [
+        1.4,
+        6.2
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:1402",
+          "hydraulicVerificationStatus": null,
+          "rows": 0
+        }
+      ],
+      "geometry": "Point/local application with unknown dimensioned wetted footprint. Arc0/radius0 are placeholders, not physical shutoff/zero throw.",
+      "limitations": [
+        "Published0.3–0.9m is spacing, not verified coverage radius. No depth-based runtime without an independently specified irrigated area."
+      ],
+      "colorEvidence": {
+        "modelId": "1402",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "housing",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:1404",
+      "modelId": "1404",
+      "series": "1400 Series",
+      "family": "bubbler",
+      "category": "bubbler",
+      "active": true,
+      "verificationStatus": "Verified",
+      "performanceRows": 0,
+      "matchedRows": 0,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+      "sourceUnits": {},
+      "arcMin": 0,
+      "arcMax": 0,
+      "pressureBar": [
+        1.4,
+        6.2
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:1404",
+          "hydraulicVerificationStatus": null,
+          "rows": 0
+        }
+      ],
+      "geometry": "Point/local application with unknown dimensioned wetted footprint. Arc0/radius0 are placeholders, not physical shutoff/zero throw.",
+      "limitations": [
+        "Published0.3–0.9m is spacing, not verified coverage radius. No depth-based runtime without an independently specified irrigated area."
+      ],
+      "colorEvidence": {
+        "modelId": "1404",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "housing",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    },
+    {
+      "id": "rain-bird:1408",
+      "modelId": "1408",
+      "series": "1400 Series",
+      "family": "bubbler",
+      "category": "bubbler",
+      "active": false,
+      "verificationStatus": "Deprecated",
+      "performanceRows": 0,
+      "matchedRows": 0,
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+      "sourceUnits": {},
+      "arcMin": 0,
+      "arcMax": 0,
+      "pressureBar": [
+        1.4,
+        6.2
+      ],
+      "selectedNozzleStatus": [
+        {
+          "id": "rain-bird:1408",
+          "hydraulicVerificationStatus": null,
+          "rows": 0
+        }
+      ],
+      "geometry": "Point/local application with unknown dimensioned wetted footprint. Arc0/radius0 are placeholders, not physical shutoff/zero throw.",
+      "limitations": [
+        "Published0.3–0.9m is spacing, not verified coverage radius. No depth-based runtime without an independently specified irrigated area.",
+        "Preserve Deprecated. Still appears in older/current-linked2021 specification but omitted from current model listing; no new explicit discontinuation notice retrieved."
+      ],
+      "colorEvidence": {
+        "modelId": "1408",
+        "colorName": "black",
+        "color": "#1f2937",
+        "hexIsApproximation": true,
+        "status": "Retain prior manufacturer-photo evidence; no fresh pixel verification",
+        "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+        "priorVerificationDate": "2026-10-05",
+        "coloredPart": "housing",
+        "notes": "No manufacturer RGB specification; appearance must not determine hydraulic compatibility."
+      }
+    }
+  ]
+}

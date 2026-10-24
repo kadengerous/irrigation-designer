@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "localFile": "/private/tmp/irri-krain-research/2026-product-catalog-english.pdf",
+    "family": "product-catalog",
+    "label": "",
+    "sha256": "2055f3f861c1767d18223b3724b619bb7bdbf457ce51c5508b0f1dfbe65c8af9",
+    "bytes": 7708982,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/rotary%20nozzles/rotary%20nozzle%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-research/rotary-nozzle-product-brochure.pdf",
+    "family": "rotary-nozzles",
+    "label": "Rotary Nozzle Product Brochure",
+    "sha256": "697423a7849f1a9c6643816d853bfb0149185863e512f589d382481e6ea5f0f9",
+    "bytes": 461910,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/rotary%20nozzles/02-24-rotary%20nozzle_salessheet%20-%20metric_r.pdf",
+    "localFile": "/private/tmp/irri-krain-research/02-24-rotary-nozzle_salessheet---metric_r.pdf",
+    "family": "rotary-nozzles",
+    "label": "Metric Performance Data",
+    "sha256": "ee6ae63ca56fb43b3b893e4e1b882c46526c9d8ffc5f8131986a7dc3da420cbb",
+    "bytes": 462716,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/fully%20adjustable%20rotary%20nozzle%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-research/fully-adjustable-rotary-nozzle-product-brochure.pdf",
+    "family": "fully-adjustable-rotary-nozzles",
+    "label": "Fully Adjustable Rotary Nozzle Product Brochure",
+    "sha256": "eed7ab9e4299754382ab772adecef4057bc5b57b310817d577905ab2ffc0b568",
+    "bytes": 242846,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/rn100-adj%20rotary%20nozzle%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-research/rn100-adj-rotary-nozzle-instructions.pdf",
+    "family": "fully-adjustable-rotary-nozzles",
+    "label": "RN100-ADJ",
+    "sha256": "2c2c317f52418e21f167c9bb656f007d699aa46415475e77841f6f48b13cb734",
+    "bytes": 300396,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/rn200-adj%20rotary%20nozzle%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-research/rn200-adj-rotary-nozzle-instructions.pdf",
+    "family": "fully-adjustable-rotary-nozzles",
+    "label": "RN200-ADJ",
+    "sha256": "2ab4cd8b0ef24123e9e701e264d45aa16297fb612d6c61340a7e1a2ca6ba47c5",
+    "bytes": 285310,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/rn300-adj%20rotary%20nozzle%20instructions.pdf",
+    "localFile": "/private/tmp/irri-krain-research/rn300-adj-rotary-nozzle-instructions.pdf",
+    "family": "fully-adjustable-rotary-nozzles",
+    "label": "RN300-ADJ",
+    "sha256": "086050342094eaa2780a3077fc167bdaa6494fcd8aff843044361f6042f9fa09",
+    "bytes": 307852,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/kvf%20nozzles/kvf%20nozzle%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-research/kvf-nozzle-product-brochure.pdf",
+    "family": "kvf-nozzles",
+    "label": "KVF Nozzle Product Brochure",
+    "sha256": "8fc1826414249504d737c2067f99e5b54ee60033cf7593bfc8dfc49784ae3f36",
+    "bytes": 2356292,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/kv%20nozzles/kv%20nozzle%20product%20brochure.pdf",
+    "localFile": "/private/tmp/irri-krain-research/kv-nozzle-product-brochure.pdf",
+    "family": "kv-nozzles",
+    "label": "KV Nozzle Product Brochure",
+    "sha256": "2ee7a3da17f113a1e2c9360cd163fb2a72be08d06dc543f5f19a8bb63c392203",
+    "bytes": 137211,
+    "verifiedOn": "2026-10-04"
+  },
+  {
+    "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+    "localFile": "/private/tmp/irri-krain-research/fixed-nozzle-performance-data.pdf",
+    "family": "fixed-nozzles",
+    "label": "Fixed Nozzle Product Brochure",
+    "sha256": "350487e4a420ffa027d407e4e80e6e2af6d26cbb1dc6a27cca81c01e251510f9",
+    "bytes": 187032,
+    "verifiedOn": "2026-10-04"
+  }
+]

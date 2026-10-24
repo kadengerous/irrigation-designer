@@ -1,0 +1,442 @@
+[
+  {
+    "id": "tree-golden-fan",
+    "category": "tree",
+    "defaultDiameterM": 7
+  },
+  {
+    "id": "tree-golden-cloud",
+    "category": "tree",
+    "defaultDiameterM": 6
+  },
+  {
+    "id": "tree-lemon-column",
+    "category": "tree",
+    "defaultDiameterM": 3
+  },
+  {
+    "id": "tree-amber-lace",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "tree-lime-umbrella",
+    "category": "tree",
+    "defaultDiameterM": 8
+  },
+  {
+    "id": "tree-fern-canopy",
+    "category": "tree",
+    "defaultDiameterM": 7
+  },
+  {
+    "id": "tree-silver-weeping",
+    "category": "tree",
+    "defaultDiameterM": 7
+  },
+  {
+    "id": "tree-green-weeping",
+    "category": "tree",
+    "defaultDiameterM": 8
+  },
+  {
+    "id": "tree-golden-weeping",
+    "category": "tree",
+    "defaultDiameterM": 6
+  },
+  {
+    "id": "tree-blue-spruce",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "tree-silver-fir",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "tree-dark-fir",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "tree-open-pine",
+    "category": "tree",
+    "defaultDiameterM": 7
+  },
+  {
+    "id": "tree-stone-pine",
+    "category": "tree",
+    "defaultDiameterM": 8
+  },
+  {
+    "id": "tree-soft-larch",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "tree-copper-oak",
+    "category": "tree",
+    "defaultDiameterM": 7
+  },
+  {
+    "id": "tree-purple-lace",
+    "category": "tree",
+    "defaultDiameterM": 4
+  },
+  {
+    "id": "tree-white-blossom",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "tree-pink-blossom",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "tree-rounded-holly",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "tree-aspen-light",
+    "category": "tree",
+    "defaultDiameterM": 6
+  },
+  {
+    "id": "tree-palm-fan",
+    "category": "tree",
+    "defaultDiameterM": 5
+  },
+  {
+    "id": "shrub-thuja-globe",
+    "category": "shrub",
+    "defaultDiameterM": 1.5
+  },
+  {
+    "id": "shrub-thuja-gold",
+    "category": "shrub",
+    "defaultDiameterM": 1.5
+  },
+  {
+    "id": "shrub-thuja-column",
+    "category": "shrub",
+    "defaultDiameterM": 1.2
+  },
+  {
+    "id": "shrub-thuja-feather",
+    "category": "shrub",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "shrub-juniper-blue",
+    "category": "shrub",
+    "defaultDiameterM": 2.5
+  },
+  {
+    "id": "shrub-juniper-gold",
+    "category": "shrub",
+    "defaultDiameterM": 2.5
+  },
+  {
+    "id": "shrub-hedge-dark-long",
+    "category": "shrub",
+    "defaultDiameterM": 4
+  },
+  {
+    "id": "shrub-hedge-golden-long",
+    "category": "shrub",
+    "defaultDiameterM": 4
+  },
+  {
+    "id": "shrub-hedge-mixed-long",
+    "category": "shrub",
+    "defaultDiameterM": 4
+  },
+  {
+    "id": "shrub-boxwood-square",
+    "category": "shrub",
+    "defaultDiameterM": 1.5
+  },
+  {
+    "id": "shrub-hedge-thuja",
+    "category": "shrub",
+    "defaultDiameterM": 4
+  },
+  {
+    "id": "shrub-hedge-silver",
+    "category": "shrub",
+    "defaultDiameterM": 4
+  },
+  {
+    "id": "shrub-boxwood-round",
+    "category": "shrub",
+    "defaultDiameterM": 1.5
+  },
+  {
+    "id": "shrub-spirea-foam",
+    "category": "shrub",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "shrub-flower-coral",
+    "category": "shrub",
+    "defaultDiameterM": 1.8
+  },
+  {
+    "id": "shrub-hydrangea-blue",
+    "category": "shrub",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "shrub-fern-mound",
+    "category": "shrub",
+    "defaultDiameterM": 1.5
+  },
+  {
+    "id": "shrub-purple-spikes",
+    "category": "shrub",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "shrub-silver-cushion",
+    "category": "shrub",
+    "defaultDiameterM": 1.5
+  },
+  {
+    "id": "shrub-variegated-large",
+    "category": "shrub",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "flower-ivory-ribbon",
+    "category": "flower",
+    "defaultDiameterM": 3
+  },
+  {
+    "id": "flower-sun-checker",
+    "category": "flower",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "flower-ruby-border",
+    "category": "flower",
+    "defaultDiameterM": 3
+  },
+  {
+    "id": "flower-blush-square",
+    "category": "flower",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "flower-blue-crescent",
+    "category": "flower",
+    "defaultDiameterM": 2.5
+  },
+  {
+    "id": "flower-violet-ribbon",
+    "category": "flower",
+    "defaultDiameterM": 3
+  },
+  {
+    "id": "flower-coral-checker",
+    "category": "flower",
+    "defaultDiameterM": 2.5
+  },
+  {
+    "id": "flower-gold-edge",
+    "category": "flower",
+    "defaultDiameterM": 3.5
+  },
+  {
+    "id": "flower-snow-square",
+    "category": "flower",
+    "defaultDiameterM": 1.8
+  },
+  {
+    "id": "flower-rose-crescent",
+    "category": "flower",
+    "defaultDiameterM": 2.4
+  },
+  {
+    "id": "flower-meadow-strip",
+    "category": "flower",
+    "defaultDiameterM": 3
+  },
+  {
+    "id": "flower-scarlet-square",
+    "category": "flower",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "flower-lilac-border",
+    "category": "flower",
+    "defaultDiameterM": 3.5
+  },
+  {
+    "id": "flower-lemon-crescent",
+    "category": "flower",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "flower-tricolor-square",
+    "category": "flower",
+    "defaultDiameterM": 2.4
+  },
+  {
+    "id": "flower-pearl-border",
+    "category": "flower",
+    "defaultDiameterM": 3
+  },
+  {
+    "id": "flower-sunset-strip",
+    "category": "flower",
+    "defaultDiameterM": 3.2
+  },
+  {
+    "id": "flower-indigo-square",
+    "category": "flower",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "flower-pastel-checker",
+    "category": "flower",
+    "defaultDiameterM": 2.5
+  },
+  {
+    "id": "flower-crimson-crescent",
+    "category": "flower",
+    "defaultDiameterM": 2.2
+  },
+  {
+    "id": "flower-white-blue-strip",
+    "category": "flower",
+    "defaultDiameterM": 3.5
+  },
+  {
+    "id": "flower-cerise-island",
+    "category": "flower",
+    "defaultDiameterM": 1.8
+  },
+  {
+    "id": "grass-silver-fountain",
+    "category": "grass",
+    "defaultDiameterM": 1.3
+  },
+  {
+    "id": "grass-copper-whorl",
+    "category": "grass",
+    "defaultDiameterM": 1.1
+  },
+  {
+    "id": "grass-blue-needle",
+    "category": "grass",
+    "defaultDiameterM": 0.8
+  },
+  {
+    "id": "grass-lime-fan",
+    "category": "grass",
+    "defaultDiameterM": 1.2
+  },
+  {
+    "id": "grass-bronze-row",
+    "category": "grass",
+    "defaultDiameterM": 3
+  },
+  {
+    "id": "grass-ivory-stripe",
+    "category": "grass",
+    "defaultDiameterM": 1.4
+  },
+  {
+    "id": "grass-amber-feather",
+    "category": "grass",
+    "defaultDiameterM": 1.5
+  },
+  {
+    "id": "grass-sea-mist",
+    "category": "grass",
+    "defaultDiameterM": 1.3
+  },
+  {
+    "id": "grass-ruby-tips",
+    "category": "grass",
+    "defaultDiameterM": 1
+  },
+  {
+    "id": "grass-golden-comb",
+    "category": "grass",
+    "defaultDiameterM": 2.4
+  },
+  {
+    "id": "grass-pearl-plumes",
+    "category": "grass",
+    "defaultDiameterM": 1.6
+  },
+  {
+    "id": "grass-forest-sedge",
+    "category": "grass",
+    "defaultDiameterM": 1.2
+  },
+  {
+    "id": "grass-blue-row",
+    "category": "grass",
+    "defaultDiameterM": 3
+  },
+  {
+    "id": "grass-honey-curls",
+    "category": "grass",
+    "defaultDiameterM": 1
+  },
+  {
+    "id": "grass-moon-fan",
+    "category": "grass",
+    "defaultDiameterM": 1.4
+  },
+  {
+    "id": "grass-pink-haze",
+    "category": "grass",
+    "defaultDiameterM": 1.6
+  },
+  {
+    "id": "grass-olive-square",
+    "category": "grass",
+    "defaultDiameterM": 2
+  },
+  {
+    "id": "grass-zebra-arch",
+    "category": "grass",
+    "defaultDiameterM": 1.6
+  },
+  {
+    "id": "grass-cinnamon-cloud",
+    "category": "grass",
+    "defaultDiameterM": 1.4
+  },
+  {
+    "id": "grass-spring-border",
+    "category": "grass",
+    "defaultDiameterM": 3.5
+  },
+  {
+    "id": "grass-steel-star",
+    "category": "grass",
+    "defaultDiameterM": 1.1
+  },
+  {
+    "id": "grass-champagne-tuft",
+    "category": "grass",
+    "defaultDiameterM": 1.5
+  },
+  {
+    "id": "grass-copper-crescent",
+    "category": "grass",
+    "defaultDiameterM": 2.5
+  },
+  {
+    "id": "grass-variegated-square",
+    "category": "grass",
+    "defaultDiameterM": 2.2
+  }
+]

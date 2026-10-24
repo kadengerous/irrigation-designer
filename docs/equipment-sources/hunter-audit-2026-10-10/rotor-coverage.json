@@ -1,0 +1,2368 @@
+{
+  "checkedOn": "2026-10-10",
+  "auditedHead": "78f89a7d94396de843dde1466ef0caff5cfd5f59",
+  "activeModels": 23,
+  "archivedModels": 2,
+  "storedRows": 755,
+  "checkedRows": 755,
+  "rowDiscrepancies": 0,
+  "models": [
+    {
+      "id": "PGJ",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/pgj",
+      "includedNozzles": 8,
+      "storedRows": 24,
+      "checkedRows": 24,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 2.1,
+      "recommendedPressureMax": 3.4,
+      "storedRadiusBounds": [
+        4.2672,
+        10.3632
+      ],
+      "sourceFile": "rotor-source-pgj.txt",
+      "tableRadiusBounds": [
+        4.2672,
+        10.3632
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        2.1,
+        3.4
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Verified maximum reduction 25%",
+        "minimumRatio": 0.75,
+        "sourceUrl": "https://www.hunterirrigation.com/rotor-frequently-asked-questions",
+        "flowPolicyEvidence": "No universal unchanged-flow guarantee found. Preserve current unchanged-discharge model only as explicitly labelled assumption, not as a manufacturer measurement."
+      }
+    },
+    {
+      "id": "SRM",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/srm",
+      "includedNozzles": 8,
+      "storedRows": 24,
+      "checkedRows": 24,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 2.1,
+      "recommendedPressureMax": 3.4,
+      "storedRadiusBounds": [
+        4.2672,
+        10.3632
+      ],
+      "sourceFile": "rotor-source-srm.txt",
+      "tableRadiusBounds": [
+        4.2672,
+        10.3632
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        2.1,
+        3.4
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Verified maximum reduction 25%",
+        "minimumRatio": 0.75,
+        "sourceUrl": "https://www.hunterirrigation.com/rotor-frequently-asked-questions",
+        "flowPolicyEvidence": "No universal unchanged-flow guarantee found. Preserve current unchanged-discharge model only as explicitly labelled assumption, not as a manufacturer measurement."
+      }
+    },
+    {
+      "id": "PGP-ADJ",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/pgp-adj",
+      "includedNozzles": 12,
+      "storedRows": 48,
+      "checkedRows": 48,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.7,
+      "recommendedPressureMax": 4.8,
+      "storedRadiusBounds": [
+        8.5344,
+        15.8496
+      ],
+      "sourceFile": "rotor-source-pgp-adj.txt",
+      "tableRadiusBounds": [
+        8.5344,
+        15.8496
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        2.1,
+        4.8
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Verified maximum reduction 25%",
+        "minimumRatio": 0.75,
+        "sourceUrl": "https://www.hunterirrigation.com/rotor-frequently-asked-questions",
+        "flowPolicyEvidence": "No universal unchanged-flow guarantee found. Preserve current unchanged-discharge model only as explicitly labelled assumption, not as a manufacturer measurement."
+      }
+    },
+    {
+      "id": "PGP-ULTRA",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-20",
+      "includedNozzles": 8,
+      "storedRows": 40,
+      "checkedRows": 40,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.7,
+      "recommendedPressureMax": 4.5,
+      "storedRadiusBounds": [
+        8.8392,
+        14.0208
+      ],
+      "sourceFile": "rotor-source-i20.txt",
+      "tableRadiusBounds": [
+        8.8392,
+        14.0208
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        1.7,
+        4.5
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Verified maximum reduction 25%",
+        "minimumRatio": 0.75,
+        "sourceUrl": "https://www.hunterirrigation.com/rotor-frequently-asked-questions",
+        "flowPolicyEvidence": "No universal unchanged-flow guarantee found. Preserve current unchanged-discharge model only as explicitly labelled assumption, not as a manufacturer measurement."
+      }
+    },
+    {
+      "id": "I-20",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-20",
+      "includedNozzles": 8,
+      "storedRows": 40,
+      "checkedRows": 40,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.7,
+      "recommendedPressureMax": 4.5,
+      "storedRadiusBounds": [
+        8.8392,
+        14.0208
+      ],
+      "sourceFile": "rotor-source-i20.txt",
+      "tableRadiusBounds": [
+        8.8392,
+        14.0208
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        1.7,
+        4.5
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Verified maximum reduction 25%",
+        "minimumRatio": 0.75,
+        "sourceUrl": "https://www.hunterirrigation.com/rotor-frequently-asked-questions",
+        "flowPolicyEvidence": "No universal unchanged-flow guarantee found. Preserve current unchanged-discharge model only as explicitly labelled assumption, not as a manufacturer measurement."
+      }
+    },
+    {
+      "id": "I-25",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-25",
+      "includedNozzles": 11,
+      "storedRows": 44,
+      "checkedRows": 44,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 2.8,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        12.192,
+        21.6408
+      ],
+      "sourceFile": "rotor-source-i25.txt",
+      "tableRadiusBounds": [
+        12.192,
+        21.6408
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        2.8,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Adjustment screw documented, numerical limit not established",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/en-metric/support/commercial-rotors-i-25-adjust"
+      }
+    },
+    {
+      "id": "I-40",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-40",
+      "includedNozzles": 6,
+      "storedRows": 23,
+      "checkedRows": 23,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 2.8,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        13.4112,
+        21.0312
+      ],
+      "sourceFile": "rotor-source-i40.txt",
+      "tableRadiusBounds": [
+        13.4112,
+        21.0312
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        2.8,
+        6.2
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Adjustment screw documented, numerical limit not established",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust"
+      }
+    },
+    {
+      "id": "I-40-ON",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-40",
+      "includedNozzles": 6,
+      "storedRows": 24,
+      "checkedRows": 24,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 360,
+      "arcMax": 360,
+      "recommendedPressureMin": 2.8,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        15.8496,
+        23.1648
+      ],
+      "sourceFile": "rotor-source-i40.txt",
+      "tableRadiusBounds": [
+        15.8496,
+        23.1648
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        3.4,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Adjustment screw documented, numerical limit not established",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust"
+      }
+    },
+    {
+      "id": "I-50",
+      "active": false,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "includedNozzles": 6,
+      "storedRows": 0,
+      "checkedRows": 0,
+      "radiusAtPressureVerified": false,
+      "flowAtPressureVerified": false,
+      "publishedPrecipitationVerified": false,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.7,
+      "recommendedPressureMax": 4.5,
+      "storedRadiusBounds": [
+        13.7,
+        24.7
+      ],
+      "sourceFile": "rotor-source-i50.txt",
+      "arcStatus": "Archived: I-50 source specifies 60\u2013360, current 50 is stale; I-50-ON full-circle remains correct.",
+      "status": "Keep Deprecated; no calculation rows added"
+    },
+    {
+      "id": "I-50-ON",
+      "active": false,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "includedNozzles": 6,
+      "storedRows": 0,
+      "checkedRows": 0,
+      "radiusAtPressureVerified": false,
+      "flowAtPressureVerified": false,
+      "publishedPrecipitationVerified": false,
+      "arcMin": 360,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.7,
+      "recommendedPressureMax": 4.5,
+      "storedRadiusBounds": [
+        13.7,
+        24.7
+      ],
+      "sourceFile": "rotor-source-i50.txt",
+      "arcStatus": "Archived: I-50 source specifies 60\u2013360, current 50 is stale; I-50-ON full-circle remains correct.",
+      "status": "Keep Deprecated; no calculation rows added"
+    },
+    {
+      "id": "I-80",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-80",
+      "includedNozzles": 7,
+      "storedRows": 32,
+      "checkedRows": 32,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 70,
+      "arcMax": 360,
+      "recommendedPressureMin": 3.4,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        19.812,
+        28.6512
+      ],
+      "sourceFile": "rotor-source-i80.txt",
+      "tableRadiusBounds": [
+        19.812,
+        28.6512
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        3.4,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Explicitly prohibited for an individual nozzle",
+        "minimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2023-09/rc-099-ic-i-80-us-web.pdf"
+      }
+    },
+    {
+      "id": "I-80-ON",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-80",
+      "includedNozzles": 7,
+      "storedRows": 32,
+      "checkedRows": 32,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 360,
+      "arcMax": 360,
+      "recommendedPressureMin": 4.5,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        19.2024,
+        29.5656
+      ],
+      "sourceFile": "rotor-source-i80.txt",
+      "tableRadiusBounds": [
+        19.2024,
+        29.5656
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        3.4,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Explicitly prohibited for an individual nozzle",
+        "minimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2023-09/rc-099-ic-i-80-us-web.pdf"
+      }
+    },
+    {
+      "id": "I-90",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-90",
+      "includedNozzles": 8,
+      "storedRows": 35,
+      "checkedRows": 35,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 5.5,
+      "recommendedPressureMax": 8.3,
+      "storedRadiusBounds": [
+        20.1168,
+        29.5656
+      ],
+      "sourceFile": "rotor-source-i90.txt",
+      "tableRadiusBounds": [
+        20.1168,
+        29.5656
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        5.5,
+        8.3
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-90"
+      }
+    },
+    {
+      "id": "I-90-36V",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-90",
+      "includedNozzles": 8,
+      "storedRows": 35,
+      "checkedRows": 35,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 360,
+      "arcMax": 360,
+      "recommendedPressureMin": 5.5,
+      "recommendedPressureMax": 8.3,
+      "storedRadiusBounds": [
+        22.2504,
+        31.3944
+      ],
+      "sourceFile": "rotor-source-i90.txt",
+      "tableRadiusBounds": [
+        22.2504,
+        31.3944
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        5.5,
+        8.3
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-90"
+      }
+    },
+    {
+      "id": "I-20-SS",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-20",
+      "includedNozzles": 8,
+      "storedRows": 40,
+      "checkedRows": 40,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 1.7,
+      "recommendedPressureMax": 4.5,
+      "storedRadiusBounds": [
+        8.8392,
+        14.0208
+      ],
+      "sourceFile": "rotor-source-i20.txt",
+      "tableRadiusBounds": [
+        8.8392,
+        14.0208
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        1.7,
+        4.5
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Verified maximum reduction 25%",
+        "minimumRatio": 0.75,
+        "sourceUrl": "https://www.hunterirrigation.com/rotor-frequently-asked-questions",
+        "flowPolicyEvidence": "No universal unchanged-flow guarantee found. Preserve current unchanged-discharge model only as explicitly labelled assumption, not as a manufacturer measurement."
+      }
+    },
+    {
+      "id": "I-25-SS",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-25",
+      "includedNozzles": 11,
+      "storedRows": 44,
+      "checkedRows": 44,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 2.8,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        12.192,
+        21.6408
+      ],
+      "sourceFile": "rotor-source-i25.txt",
+      "tableRadiusBounds": [
+        12.192,
+        21.6408
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        2.8,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Adjustment screw documented, numerical limit not established",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/en-metric/support/commercial-rotors-i-25-adjust"
+      }
+    },
+    {
+      "id": "I-40-SS",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-40",
+      "includedNozzles": 6,
+      "storedRows": 23,
+      "checkedRows": 23,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 2.8,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        13.4112,
+        21.0312
+      ],
+      "sourceFile": "rotor-source-i40.txt",
+      "tableRadiusBounds": [
+        13.4112,
+        21.0312
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        2.8,
+        6.2
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Adjustment screw documented, numerical limit not established",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust"
+      }
+    },
+    {
+      "id": "I-80-SS",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-80",
+      "includedNozzles": 7,
+      "storedRows": 32,
+      "checkedRows": 32,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 70,
+      "arcMax": 360,
+      "recommendedPressureMin": 3.4,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        19.812,
+        28.6512
+      ],
+      "sourceFile": "rotor-source-i80.txt",
+      "tableRadiusBounds": [
+        19.812,
+        28.6512
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        3.4,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "Explicitly prohibited for an individual nozzle",
+        "minimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2023-09/rc-099-ic-i-80-us-web.pdf"
+      }
+    },
+    {
+      "id": "G-70-B",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-70-b",
+      "includedNozzles": 6,
+      "storedRows": 29,
+      "checkedRows": 29,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 360,
+      "arcMax": 360,
+      "recommendedPressureMin": 3.4,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        16.1544,
+        22.86
+      ],
+      "sourceFile": "rotor-source-g70.txt",
+      "tableRadiusBounds": [
+        16.1544,
+        22.86
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        3.4,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-70-b"
+      }
+    },
+    {
+      "id": "G-75-B",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-75-b",
+      "includedNozzles": 9,
+      "storedRows": 44,
+      "checkedRows": 44,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 50,
+      "arcMax": 360,
+      "recommendedPressureMin": 2.8,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        14.3256,
+        21.6408
+      ],
+      "sourceFile": "rotor-source-g75.txt",
+      "tableRadiusBounds": [
+        14.3256,
+        21.6408
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        2.8,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-75-b"
+      }
+    },
+    {
+      "id": "G-80-B",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-80-b",
+      "includedNozzles": 10,
+      "storedRows": 47,
+      "checkedRows": 47,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 360,
+      "arcMax": 360,
+      "recommendedPressureMin": 3.4,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        14.9352,
+        29.5656
+      ],
+      "sourceFile": "rotor-source-g80.txt",
+      "tableRadiusBounds": [
+        14.9352,
+        29.5656
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        3.4,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-80-b"
+      }
+    },
+    {
+      "id": "G-85-B",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-85-b",
+      "includedNozzles": 12,
+      "storedRows": 53,
+      "checkedRows": 53,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 60,
+      "arcMax": 360,
+      "recommendedPressureMin": 3.4,
+      "recommendedPressureMax": 6.9,
+      "storedRadiusBounds": [
+        11.2776,
+        28.6512
+      ],
+      "sourceFile": "rotor-source-g85.txt",
+      "tableRadiusBounds": [
+        11.2776,
+        28.6512
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        3.4,
+        6.9
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-85-b"
+      }
+    },
+    {
+      "id": "ST-90",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90",
+      "includedNozzles": 2,
+      "storedRows": 6,
+      "checkedRows": 6,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 6.9,
+      "recommendedPressureMax": 8.3,
+      "storedRadiusBounds": [
+        31.3944,
+        36.576
+      ],
+      "sourceFile": "rotor-source-st90.txt",
+      "tableRadiusBounds": [
+        31.3944,
+        36.576
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        6.9,
+        8.3
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90"
+      }
+    },
+    {
+      "id": "STG-900",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90",
+      "includedNozzles": 2,
+      "storedRows": 6,
+      "checkedRows": 6,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 6.9,
+      "recommendedPressureMax": 8.3,
+      "storedRadiusBounds": [
+        31.3944,
+        36.576
+      ],
+      "sourceFile": "rotor-source-st90.txt",
+      "tableRadiusBounds": [
+        31.3944,
+        36.576
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        6.9,
+        8.3
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90"
+      }
+    },
+    {
+      "id": "ST-1600",
+      "active": true,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-1600",
+      "includedNozzles": 6,
+      "storedRows": 30,
+      "checkedRows": 30,
+      "radiusAtPressureVerified": true,
+      "flowAtPressureVerified": true,
+      "publishedPrecipitationVerified": true,
+      "arcMin": 40,
+      "arcMax": 360,
+      "recommendedPressureMin": 4,
+      "recommendedPressureMax": 8,
+      "storedRadiusBounds": [
+        32.5,
+        50.3
+      ],
+      "sourceFile": "rotor-source-st1600.txt",
+      "tableRadiusBounds": [
+        32.5,
+        50.3
+      ],
+      "radiusBoundsMatchIncludedRows": true,
+      "tablePressureBounds": [
+        4,
+        8
+      ],
+      "arcStatus": "Verified against model-specific product specifications",
+      "radiusReduction": {
+        "status": "No continuous reduction allowance established for included standard nozzle configuration",
+        "supportedContinuousMinimumRatio": null,
+        "conservativeRuntimeMinimumRatio": 1,
+        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-1600"
+      }
+    }
+  ],
+  "sprayBodies": [
+    {
+      "id": "PSU-02",
+      "seriesId": "PS-ULTRA",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/ps-ultra",
+      "popUpMm": 50,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1.4,
+      "operatingPressureMax": 4.8,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PSU-04",
+      "seriesId": "PS-ULTRA",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/ps-ultra",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1.4,
+      "operatingPressureMax": 4.8,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PSU-06",
+      "seriesId": "PS-ULTRA",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/ps-ultra/psu-06",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1.4,
+      "operatingPressureMax": 4.8,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-00",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 0,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-00-R",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 0,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-02",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 50,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-03",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 75,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-CV-R",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-CV",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-CV-R",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-SI",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": true,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-CV",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-CV-R",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-SI",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": true,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-CV",
+      "seriesId": "PRO-SPRAY",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/pro-spraytm/pros-04-cv",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": null,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-00-PRS30",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 0,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-00-PRS30-R",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 0,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-03-PRS30",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 75,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS30",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS30-CV",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS30-CV-F",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS30-CV-R",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS30-CV-F-R",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS30",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS30-CV",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS30-CV-R",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS30-CV-F",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS30-CV-F-R",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-SI-PRS30",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": true,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS30",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS30-CV",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS30-CV-R",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS30-CV-F",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS30-CV-F-R",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-SI-PRS30",
+      "seriesId": "PRS30",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.1,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": true,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-00-PRS40",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 0,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-00-PRS40-R",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 0,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-03-PRS40",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 75,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS40",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS40-CV",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS40-CV-R",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS40-CV-F",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-04-PRS40-CV-F-R",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 100,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS40",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS40-CV",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS40-CV-R",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS40-CV-F",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-PRS40-CV-F-R",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-06-SI-PRS40",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 150,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": true,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS40",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS40-CV",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS40-CV-R",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": false,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS40-CV-F",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-PRS40-CV-F-R",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": true,
+        "sideInlet": false,
+        "floGuard": true,
+        "reclaimed": true
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    },
+    {
+      "id": "PROS-12-SI-PRS40",
+      "seriesId": "PRS40",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "popUpMm": 300,
+      "inlet": "1/2 inch female",
+      "nozzleInterface": "male riser accepting female-threaded nozzles",
+      "regulatedPressureBar": 2.8,
+      "operatingPressureMin": 1,
+      "operatingPressureMax": 7,
+      "features": {
+        "checkValve": false,
+        "sideInlet": true,
+        "floGuard": false,
+        "reclaimed": false
+      },
+      "status": "Verified",
+      "evidence": "Exact model table or individual model page plus family operating specification; PSU-02 and PSU-06 individual dimensions verified. No discrepancy found."
+    }
+  ],
+  "rotorMountingOptions": [
+    {
+      "ids": [
+        "PGJ"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 0,
+          "sku": "PGJ-00"
+        },
+        {
+          "mm": 100,
+          "sku": "PGJ-04"
+        },
+        {
+          "mm": 150,
+          "sku": "PGJ-06"
+        },
+        {
+          "mm": 300,
+          "sku": "PGJ-12"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/pgj",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "SRM"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "SRM-04"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/srm",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "PGP-ADJ"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "PGP-ADJ"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/pgp-adj",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "PGP-ULTRA"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 0,
+          "sku": "PGP-00"
+        },
+        {
+          "mm": 100,
+          "sku": "PGP-04"
+        },
+        {
+          "mm": 150,
+          "sku": "PGP-06"
+        },
+        {
+          "mm": 300,
+          "sku": "PGP-12-CV"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/pgpr-ultra",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-20"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 0,
+          "sku": "I-20-00"
+        },
+        {
+          "mm": 100,
+          "sku": "I-20-04"
+        },
+        {
+          "mm": 150,
+          "sku": "I-20-06"
+        },
+        {
+          "mm": 300,
+          "sku": "I-20-12"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-20",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-20-SS"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-20-04-SS"
+        },
+        {
+          "mm": 150,
+          "sku": "I-20-06-SS"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-20",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-25"
+      ],
+      "defaultMm": 150,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-25-04"
+        },
+        {
+          "mm": 150,
+          "sku": "I-25-06"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-25",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-25-SS"
+      ],
+      "defaultMm": 150,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-25-04-SS"
+        },
+        {
+          "mm": 150,
+          "sku": "I-25-06-SS"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-25",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-40",
+        "I-40-SS"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-40-04-SS"
+        },
+        {
+          "mm": 150,
+          "sku": "I-40-06-SS"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-40",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-40-ON"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-40-04-SS-ON"
+        },
+        {
+          "mm": 150,
+          "sku": "I-40-06-SS-ON"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-40",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-80",
+        "I-80-SS"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-80-04-SS-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-80",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-80-ON"
+      ],
+      "defaultMm": 100,
+      "options": [
+        {
+          "mm": 100,
+          "sku": "I-80-04-SS-ON-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-80",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-90"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "I-90-ADV-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-90",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "I-90-36V"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "I-90-36V-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-90",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "G-70-B"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "G-70-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-70-b",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "G-75-B"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "G-75-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-75-b",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "G-80-B"
+      ],
+      "defaultMm": 80,
+      "options": [
+        {
+          "mm": 80,
+          "sku": "G-80-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-80-b",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "G-85-B"
+      ],
+      "defaultMm": 95,
+      "options": [
+        {
+          "mm": 95,
+          "sku": "G-85-B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/golf-rotors/g-85-b",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "ST-90"
+      ],
+      "defaultMm": 76.2,
+      "options": [
+        {
+          "mm": 76.2,
+          "sku": "ST-90"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "STG-900"
+      ],
+      "defaultMm": 76.2,
+      "options": [
+        {
+          "mm": 76.2,
+          "sku": "STG-900"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/stg-900",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    },
+    {
+      "ids": [
+        "ST-1600"
+      ],
+      "defaultMm": 130,
+      "options": [
+        {
+          "mm": 130,
+          "sku": "ST-1600B"
+        }
+      ],
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/st-1600",
+      "status": "Verified nominal model and pop-up options",
+      "note": "Metric nominal dimensions used, not an invented precision conversion. Plastic/stainless aliases may share a currently stainless-only body; no pressure-regulated PRB options are present."
+    }
+  ],
+  "caveats": [
+    "Included racks only. Optional high-flow, low-angle, short-radius or MPR racks absent from the app are not catalog defects.",
+    "US tables are authoritative for stored rotor rows, using the catalog existing nominal one-decimal bar labels. These are not new metric-grid measurements and not exact PSI conversions.",
+    "Metric ST-1600 canonical flowM3H is recomputed from published L/min. The manufacturer rounded m3/h column differs by <=0.05, requiring no correction.",
+    "I-80-ON source operating specification says 65\u2013100 PSI, but its nozzle 23 table also includes 50/60 PSI. Keep existing 4.5 bar minimum; the two lower source rows must remain excluded from operating calculations.",
+    "I-90 standard and low-angle orientations are distinct. The published 15% low-angle radius adjustment does not authorize a continuous radius-reduction slider.",
+    "STG-900 metric page contains odd Yd/in-hr headings and a swing-joint minimum of 7 bar; stored table instead matches the official shared ST-90/STG-900 US chart. Do not mix inlet swing-joint pressure and nozzle-table pressure.",
+    "I-50 and I-50-ON are officially discontinued. Archive metadata differs; empty calculation tables remain intentional."
+  ]
+}

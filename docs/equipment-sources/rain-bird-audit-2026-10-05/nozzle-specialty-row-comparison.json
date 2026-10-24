@@ -1,0 +1,280 @@
+[
+  {
+    "modelId": "SQ-QTR",
+    "nozzleId": "rain-bird:SQ-QTR:throw-0.8",
+    "pressureBar": 1.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-QTR",
+    "nozzleId": "rain-bird:SQ-QTR:throw-0.8",
+    "pressureBar": 2.1,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-QTR",
+    "nozzleId": "rain-bird:SQ-QTR:throw-0.8",
+    "pressureBar": 2.8,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-QTR",
+    "nozzleId": "rain-bird:SQ-QTR:throw-0.8",
+    "pressureBar": 3.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-HLF",
+    "nozzleId": "rain-bird:SQ-HLF:throw-0.8",
+    "pressureBar": 1.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-HLF",
+    "nozzleId": "rain-bird:SQ-HLF:throw-0.8",
+    "pressureBar": 2.1,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-HLF",
+    "nozzleId": "rain-bird:SQ-HLF:throw-0.8",
+    "pressureBar": 2.8,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-HLF",
+    "nozzleId": "rain-bird:SQ-HLF:throw-0.8",
+    "pressureBar": 3.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-3QTR",
+    "nozzleId": "rain-bird:SQ-3QTR:throw-0.8",
+    "pressureBar": 1.378951458635662,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-3QTR",
+    "nozzleId": "rain-bird:SQ-3QTR:throw-0.8",
+    "pressureBar": 2.068427187953493,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-3QTR",
+    "nozzleId": "rain-bird:SQ-3QTR:throw-0.8",
+    "pressureBar": 2.757902917271324,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-3QTR",
+    "nozzleId": "rain-bird:SQ-3QTR:throw-0.8",
+    "pressureBar": 3.4473786465891547,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-FUL",
+    "nozzleId": "rain-bird:SQ-FUL:throw-0.8",
+    "pressureBar": 1.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-FUL",
+    "nozzleId": "rain-bird:SQ-FUL:throw-0.8",
+    "pressureBar": 2.1,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-FUL",
+    "nozzleId": "rain-bird:SQ-FUL:throw-0.8",
+    "pressureBar": 2.8,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-FUL",
+    "nozzleId": "rain-bird:SQ-FUL:throw-0.8",
+    "pressureBar": 3.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-QTR",
+    "nozzleId": "rain-bird:SQ-QTR:throw-1.2",
+    "pressureBar": 1.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-QTR",
+    "nozzleId": "rain-bird:SQ-QTR:throw-1.2",
+    "pressureBar": 2.1,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-QTR",
+    "nozzleId": "rain-bird:SQ-QTR:throw-1.2",
+    "pressureBar": 2.8,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-QTR",
+    "nozzleId": "rain-bird:SQ-QTR:throw-1.2",
+    "pressureBar": 3.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-HLF",
+    "nozzleId": "rain-bird:SQ-HLF:throw-1.2",
+    "pressureBar": 1.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-HLF",
+    "nozzleId": "rain-bird:SQ-HLF:throw-1.2",
+    "pressureBar": 2.1,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-HLF",
+    "nozzleId": "rain-bird:SQ-HLF:throw-1.2",
+    "pressureBar": 2.8,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-HLF",
+    "nozzleId": "rain-bird:SQ-HLF:throw-1.2",
+    "pressureBar": 3.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-3QTR",
+    "nozzleId": "rain-bird:SQ-3QTR:throw-1.2",
+    "pressureBar": 1.378951458635662,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-3QTR",
+    "nozzleId": "rain-bird:SQ-3QTR:throw-1.2",
+    "pressureBar": 2.068427187953493,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-3QTR",
+    "nozzleId": "rain-bird:SQ-3QTR:throw-1.2",
+    "pressureBar": 2.757902917271324,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-3QTR",
+    "nozzleId": "rain-bird:SQ-3QTR:throw-1.2",
+    "pressureBar": 3.4473786465891547,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-FUL",
+    "nozzleId": "rain-bird:SQ-FUL:throw-1.2",
+    "pressureBar": 1.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-FUL",
+    "nozzleId": "rain-bird:SQ-FUL:throw-1.2",
+    "pressureBar": 2.1,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-FUL",
+    "nozzleId": "rain-bird:SQ-FUL:throw-1.2",
+    "pressureBar": 2.8,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "SQ-FUL",
+    "nozzleId": "rain-bird:SQ-FUL:throw-1.2",
+    "pressureBar": 3.4,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 0.7,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 1.0,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 1.5,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 2.0,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 2.5,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 3.0,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 3.5,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 4.0,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "1300A-F",
+    "pressureBar": 4.1,
+    "result": "match",
+    "differences": {}
+  }
+]

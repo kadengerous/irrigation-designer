@@ -1,0 +1,431 @@
+I-80 | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/rotors/i-80)
+citeturn295view0 [wordlim: 200] Crawled: 6 days ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/rotors/i-80","lineno":140}); Total lines: 1111
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite0†USA English L16:   * cite9†English Metric L17:   * cite10†Español L18:   * cite11†Italiano L19: 
+L20:   * cite12†Français L21:   * cite13†Português L22:   * cite14†Deutsch L23:   * cite15†Türkçe L24: 
+L25:   * cite16†Polski L26:   * cite17†Русский L27:   * cite18†العربية L28:   * cite19†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: 
+L36: cite20†Image: Thumbnail L37: 
+L38: cite21†Image: Specification builder chart. L39: # I-80
+L40: 
+L41: The highly versatile and efficient I-80 Rotor is the first commercial sports turf rotor with no-dig Total-Top-Serviceability.
+L42: 
+L43: Radius 63' to 97'
+L44: 
+L45: Flow 20.2 to 59.6 GPM
+L46: 
+L47: Inlet Size 1½" NPT
+L48: 
+L49: Product Line
+L50: 
+L51: Rotors
+L52: 
+L53:   * Strong Planetary Gear Drive for long-lasting reliability
+L54:   * Total-Top-Service (TTS) Design
+L55:   * Complete Arc Adjustment from 70° to a non-reversing 360°
+L56:   * Dual trajectory color-coded nozzles
+L57:   * cite22†Models L58:   * cite23†Specs L59:   * cite24†Videos L60:   * cite25†Features L61:   * cite26†Charts L62:   * cite27†Documents L63:   * cite28†CAD Details L64:   * cite29†Support L65:   * cite30†Photos L66:   * cite31†Related L67: ## Models
+L68: 
+L69: Model  | Description  | Add to List
+L70: --- | --- | ---
+L71: cite32†I-80-04-SS | I-80 Rotor, 4" pop-up, adjustable from 70° to 360°, 1½" inlet, stainless steel riser, check valve, seven nozzles (23-53) included  | cite33†+ L72: cite34†I-80-04-SS-ON | I-80 Rotor, 4", full-circle, 1½" inlet, stainless steel riser, check valve, opposing nozzle, seven nozzles (23-53) included  | cite33†+ L73: 
+L74: Showing 1 - 2 of 2
+L75: 
+L76: ## User-installed options
+L77: ### User-Installed Options
+L78: 
+L79: Model  | Description  | Add to List
+L80: --- | --- | ---
+L81: cite35†450105 | Upper snap Ring assembly (purple) for TTS-800 and G-800 Series Golf Rotors  | cite33†+ L82: cite36†959300SP | I-80 Rubber Cover Kit  | cite33†+ L83: cite37†959400SP | I-80 Turf Cup Kit  | cite33†+ L84: ### HSJ Swing Joints
+L85: Model  | Description  | Add to List
+L86: --- | --- | ---
+L87: cite38†HSJ-3-3-2-2-12 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, single top-out, 12" lay arm  | cite33†+ L88: cite39†HSJ-3-3-2-2-18 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male NPT outlet, single top-out, 18" lay arm  | cite33†+ L89: cite40†HSJ-3-3-2-4-12 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, triple top-out, 12" lay arm  | cite33†+ L90: cite41†HSJ-3-3-2-4-18 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, triple top-out, 18" lay arm  | cite33†+ L91: cite38†HSJ-3-3-2-2-12 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, single top-out, 12" lay arm  | cite33†+ L92: cite39†HSJ-3-3-2-2-18 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male NPT outlet, single top-out, 18" lay arm  | cite33†+ L93: cite40†HSJ-3-3-2-4-12 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, triple top-out, 12" lay arm  | cite33†+ L94: cite41†HSJ-3-3-2-4-18 | HSJ Swing Joint, heavy-duty, 1½" diameter, 1½" male NPT inlet, 1½" male NPT outlet, triple top-out, 18" lay arm  | cite33†+ L95: cite42†HSJ-1-3-2-2-12 | HSJ Swing Joint, heavy-duty, 1" diameter, 1" male NPT inlet, 1" male NPT outlet, single top-out, 12" lay arm  | cite33†+ L96: cite43†HSJ-3-M-0-2-12 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male Acme inlet, 1½" male Acme outlet, single top-out, 12" lay arm  | cite33†+ L97: cite44†HSJ-3-3-0-2-12 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male Acme outlet, single top-out, 12" lay arm  | cite33†+ L98: cite45†HSJ-3-6-0-2-12 | HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male BSP inlet, 1½" male Acme outlet, single top-out, 12" lay arm  | cite33†+ L99: ### Tools
+L100: 
+L101: Model  | Description  | Add to List
+L102: --- | --- | ---
+L103: cite46†251000SP | Snap Ring Tool  | cite33†+ L104: cite47†319100SP | T-Handle Tool: VIH selector, nozzle insertion, lift-up, and arc adjustment  | cite33†+ L105: cite48†382800SP | Arc Adjustment/Riser Hold-up Tool for I-80, G-85-B, and G-885 Rotors  | cite33†+ L106: 
+L107: cite49†Image: I-80 L108: 
+L109: [Input]
+L110: 
+L111: I-80
+L112: 
+L113: I-80
+L114: 
+L115: Ordering Number [Input]
+L116: 
+L117: [Input] [Input]
+L118: 
+L119: Qty [Input]
+L120: 
+L121: Notes [Input: Add a note...]
+L122: 
+L123: [Button: Add to list]
+L124: 
+L125: User installed options
+L126: 
+L127: [Input]
+L128: #### Product added to list
+L129: 
+L130: The following product was added to ""
+L131: 
+L132: QTY
+L133: 
+L134: cite50†Review your list L135: 
+L136: cite33†Continue L137: 
+L138: [Input] [Input]
+L139: 
+L140: ## Create a new My List.
+L141: 
+L142: ## Log in to access this feature
+L143: 
+L144: Log in using your Hunter Account
+L145: 
+L146: Username [Input]
+L147: 
+L148: Password [Input]
+L149: 
+L150: [Input] [Input] [Input]
+L151: 
+L152: [Button: Sign In]
+L153: 
+L154: cite51†Contact your local distributor for product availability and ordering. L155: ## Specifications
+L156: 
+L157: Operating Specifications
+L158: 
+L159:   * I-80
+L160:     * Standard 22.5° nozzle choices: 7
+L161:     * Radius: 65' to 94'
+L162:     * Flow: 20.2 to 59.6 GPM
+L163:     * Pressure range: 50 to 100 PSI
+L164:   * I-80-ON
+L165:     * Standard 22.5° nozzle choices: 7
+L166:     * Radius: 63' to 97'
+L167:     * Flow: 21.6 to 58.5 GPM
+L168:     * Pressure range: 65 to 100 PSI
+L169:   * All I-80 Rotors are pressure-rated at 150 PSI
+L170:   * Warranty period: 5 years
+L171: 
+L172: User-Installed Options
+L173:   * Turf Cup Kit P/N: 959400SP
+L174:     * No-dig servicing of riser assembly
+L175:     * No-dig arc adjustments
+L176:     * Quick-release turf cup assembly
+L177:     * Threads in cup lock/retain the turf
+L178:   * Reclaimed water ID P/N: 450105
+L179:   * Rubber Cover Kit P/N: 959300SP
+L180:   * cite52†HSJ prefabricated PVC Swing Joints†www.hunterindustries.com L181:     * HSJ-3-3-2-2-12 HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male NPT outlet, single top-out, 12" lay arm
+L182:     * HSJ-3-3-2-2-18 HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male NPT outlet, single top-out, 18" lay arm
+L183:     * HSJ-3-3-2-4-12 HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male NPT outlet, triple top-out, 18" lay arm
+L184:     * HSJ-3-3-2-4-18 HSJ Swing Joint, 1½" heavy-duty swing joint, 1½" male NPT inlet, 1½" male NPT outlet, triple top-out, 12" lay arm
+L185: * * *
+L186: 
+L187: cite53† Download Product Spec Sheet L188: 
+L189: cite54†  Download Written Specifications (in English) L190: ## Videos
+L191: 
+L192: Rotor T-Handle Pull Up Tool
+L193: 
+L194: The T-Handle Rotor Adjustment Tool is just one of a full range of convenient service tools and auxiliary items for irrigation systems that save time
+L195: 
+L196: How your rotor invoice can help you win big prizes!
+L197: 
+L198: Check out “hunter.info/rr26” for more great prizes! Buy Hunter rotors or upload your invoice or design plans to get entries to win.
+L199: 
+L200: Buy Rotors. Win BIG. Here’s How.
+L201: 
+L202: Behind the Scenes: Hunter Rotor Manufacturing
+L203: Take a walk through the Hunter manufacturing floor with Gregg Roesink and see what goes into every rotor.
+L204: 
+L205: Sports Turf Irrigation Solutions
+L206: 
+L207: Hunter Industries presents a webinar on Sports Turf Irrigation Solutions
+L208: 
+L209: cite55†All Product Videos L210: ## Features
+L211: 
+L212: The I-80 Rotor is the most technologically advanced commercial rotor available. Engineered for sports turf and large park applications, the I-80 provides an ultra-robust, dirt-tolerant gear drive that offers the highest torque output of any rotor in the commercial arena.
+L213: The I-80 features a wide range of highly efficient, dual trajectory, wind-fighting nozzles. Exclusive to the commercial rotor market, the I-80 provides Total-Top-Serviceability (TTS) via its integrated, surface-mounted snap ring. This no-dig solution makes maintenance quick and easy.
+L214: #### Key Benefits
+L215: 
+L216: Exclusive Total-Top-Service (TTS) design provides convenient no-dig servicing
+L217: 
+L218: Exclusive PressurePort™ Technology creates exceptional nozzle uniformity
+L219: 
+L220: Forward-facing triple nozzles (I-80) or opposing triple nozzles (I-80-ON) create uniform nozzle profiles in part-and full-circle applications
+L221: 
+L222: QuickCheck™ Arc Mechanism (I-80) for fast arc adjustment and review of the arc setting
+L223: 
+L224: QuickSet-360 Arc Mechanism (I-80) converts adjustable arc rotor to full-circle in an instant
+L225: Part- and full-circle in one model provides flexible installation options and reduces inventory (I-80)
+L226: 
+L227: Ratcheting stainless steel riser allows setting of right-side fixed arc alignment to the landscape without rotor disassembly
+L228: 
+L229: Drain check valve prevents low-head drainage (up to 5' of elevation)
+L230: ## Charts
+L231: ### I-80 Nozzle Performance Data
+L232: 
+L233: I-80 Nozzle Performance Data* cite56†View Nozzles L234: ---
+L235: Nozzle Set  | Pressure  | Radius  | Flow  | Precip in/hr
+L236:    | PSI  | ft  | GPM  | cite57†Image | cite58†Image L237: Orange
+L238: cite59†Image†www.hunterindustries.com L239: 803603  | cite60†Image†www.hunterindustries.com L240: 23 Green  | Lt. Green
+L241: cite61†Image†www.hunterindustries.com L242: 315313  | 50  | 65  | 20.2  | 0.46  | 0.53
+L243: 60  | 66  | 22.1  | 0.49  | 0.56
+L244: 65  | 67  | 23.9  | 0.51  | 0.59
+L245: 70  | 67  | 24.2  | 0.52  | 0.60
+L246: ⬤  | ⬤  | 80  | 69  | 25.9  | 0.52  | 0.60
+L247: Orange
+L248: cite59†Image†www.hunterindustries.com L249: 803603  | cite62†Image†www.hunterindustries.com L250: 25 Blue  | Lt. Green
+L251: cite61†Image†www.hunterindustries.com L252: 315313  | 65  | 71  | 28.3  | 0.54  | 0.62
+L253: 70  | 72  | 29.3  | 0.54  | 0.63
+L254: 80  | 73  | 31.5  | 0.57  | 0.66
+L255: 90  | 74  | 33.4  | 0.59  | 0.68
+L256: ⬤  | ⬤  | 100  | 75  | 35.4  | 0.61  | 0.70
+L257: Orange
+L258: cite59†Image†www.hunterindustries.com L259: 803603  | cite63†Image†www.hunterindustries.com L260: 33 Gray  | Lt. Green
+L261: cite61†Image†www.hunterindustries.com L262: 315313  | 65  | 72  | 30.6  | 0.57  | 0.66
+L263: 70  | 73  | 31.6  | 0.57  | 0.66
+L264: 80  | 75  | 33.9  | 0.58  | 0.67
+L265: 90  | 77  | 35.8  | 0.58  | 0.67
+L266: ⬤  | ⬤  | 100  | 79  | 37.9  | 0.58  | 0.67
+L267: Orange
+L268: cite59†Image†www.hunterindustries.com L269: 803603  | cite64†Image†www.hunterindustries.com L270: 38 Red  | Lt. Green
+L271: cite61†Image†www.hunterindustries.com L272: 315313  | 65  | 76  | 34.9  | 0.58  | 0.67
+L273: 70  | 78  | 36.2  | 0.57  | 0.66
+L274: 80  | 80  | 39.1  | 0.59  | 0.68
+L275: 90  | 82  | 41.2  | 0.59  | 0.68
+L276: ⬤  | ⬤  | 100  | 84  | 43.5  | 0.59  | 0.69
+L277: Orange
+L278: cite59†Image†www.hunterindustries.com L279: 803603  | cite65†Image†www.hunterindustries.com L280: 43 Dk. Brown  | Lt. Green
+L281: cite61†Image†www.hunterindustries.com L282: 315313  | -  | -  | -  | -  | -
+L283: 70  | 81  | 41.2  | 0.60  | 0.70
+L284: 80  | 83  | 43.5  | 0.61  | 0.70
+L285: 90  | 86  | 46.2  | 0.60  | 0.69
+L286: ⬤  | ⬤  | 100  | 89  | 48.7  | 0.59  | 0.68
+L287: Orange
+L288: cite59†Image†www.hunterindustries.com L289: 803603  | cite66†Image†www.hunterindustries.com L290: 48 Dk. Green  | Lt. Green
+L291: cite61†Image†www.hunterindustries.com L292: 315313  | -  | -  | -  | -  | -
+L293: 70  | 83  | 46.3  | 0.65  | 0.75
+L294: 80  | 85  | 48.4  | 0.64  | 0.74
+L295: 90  | 89  | 51.7  | 0.63  | 0.73
+L296: ⬤  | ⬤  | 100  | 91  | 54.5  | 0.63  | 0.73
+L297: Orange
+L298: cite59†Image†www.hunterindustries.com L299: 803603  | cite67†Image†www.hunterindustries.com L300: 53 Dk. Blue  | Lt. Green
+L301: cite61†Image†www.hunterindustries.com L302: 315313  | -  | -  | -  | -  | -
+L303: 70  | 87  | 50.7  | 0.64  | 0.74
+L304: 80  | 89  | 53.1  | 0.65  | 0.75
+L305: 90  | 92  | 56.4  | 0.64  | 0.74
+L306: ⬤  | ⬤  | 100  | 94  | 59.6  | 0.65  | 0.75
+L307: ⬤ = Nozzle plug P/N 315300 installed in the front side of the nozzle housing.
+L308: 
+L309: *Complies to ASAE standard. All precipitation rates calculated for 360 degree operation. For the precipitation rate for a 180 degree sprinkler, multiply by 2. All triangular rates are equilateral.
+L310: ### I-80-ON Nozzle Performance Data
+L311: 
+L312: I-80-ON Nozzle Performance Data* cite68†View Nozzle L313: ---
+L314: Nozzle Set  | Pressure  | Radius  | Flow  | Precip in/hr
+L315:    | PSI  | ft  | GPM  | cite57†Image | cite58†Image L316: ⬤  |    | ⬤  | 50  | 63  | 21.6  | 0.52  | 0.60
+L317: Tan
+L318: cite69†Image†www.hunterindustries.com L319: 803611  | cite60†Image†www.hunterindustries.com L320: 23
+L321: Green  | Lt. Blue
+L322: cite70†Image†www.hunterindustries.com L323: 315311  | 60  | 65  | 23  | 0.52  | 0.61
+L324: 65  | 66  | 24  | 0.53  | 0.61
+L325: 70  | 67  | 24.9  | 0.53  | 0.62
+L326: 80  | 68  | 26.6  | 0.55  | 0.64
+L327: ⬤  |    | ⬤  | 65  | 71  | 28.6  | 0.55  | 0.63
+L328: Tan
+L329: cite69†Image†www.hunterindustries.com L330: 803611  | cite62†Image†www.hunterindustries.com L331: 25
+L332: Blue  | Lt. Blue
+L333: cite70†Image†www.hunterindustries.com L334: 315311  | 70  | 73  | 29.7  | 0.54  | 0.62
+L335: 80  | 74  | 31.7  | 0.56  | 0.64
+L336: 90  | 75  | 33.7  | 0.58  | 0.67
+L337: 100  | 77  | 35.8  | 0.58  | 0.67
+L338: ⬤  |    | ⬤  | 65  | 74  | 30.9  | 0.54  | 0.63
+L339: Tan
+L340: cite69†Image†www.hunterindustries.com L341: 803611  | cite63†Image†www.hunterindustries.com L342: 33
+L343: Gray  | Lt. Blue
+L344: cite70†Image†www.hunterindustries.com L345: 315311  | 70  | 75  | 32.0  | 0.55  | 0.63
+L346: 80  | 77  | 34.2  | 0.56  | 0.64
+L347: 90  | 79  | 36.2  | 0.56  | 0.64
+L348: 100  | 81  | 38.2  | 0.56  | 0.65
+L349: ⬤  |    | ⬤  | 65  | 77  | 35.1  | 0.57  | 0.66
+L350: Tan
+L351: cite69†Image†www.hunterindustries.com L352: 803611  | cite64†Image†www.hunterindustries.com L353: 38
+L354: Red  | Lt. Blue
+L355: cite70†Image†www.hunterindustries.com L356: 315311  | 70  | 79  | 36.6  | 0.56  | 0.65
+L357: 80  | 82  | 38.9  | 0.56  | 0.64
+L358: 90  | 84  | 41.3  | 0.56  | 0.65
+L359: 100  | 87  | 43.6  | 0.55  | 0.64
+L360: ⬤  |    | ⬤  | -  | -  | -  | -  | -
+L361: Tan
+L362: cite69†Image†www.hunterindustries.com L363: 803611  | cite65†Image†www.hunterindustries.com L364: 43
+L365: Dk. Brown  | Lt. Blue
+L366: cite70†Image†www.hunterindustries.com L367: 315311  | 70  | 83  | 41.3  | 0.58  | 0.67
+L368: 80  | 85  | 43.6  | 0.58  | 0.67
+L369: 90  | 87  | 46.3  | 0.59  | 0.68
+L370: 100  | 89  | 48.8  | 0.59  | 0.68
+L371: ⬤  |    | ⬤  | -  | -  | -  | -  | -
+L372: Tan
+L373: cite69†Image†www.hunterindustries.com L374: 803611  | cite66†Image†www.hunterindustries.com L375: 48
+L376: Dk. Green  | Lt. Blue
+L377: cite70†Image†www.hunterindustries.com L378: 315311  | 70  | 90  | 46.9  | 0.56  | 0.64
+L379: 80  | 92  | 48.9  | 0.56  | 0.64
+L380: 90  | 94  | 50.5  | 0.55  | 0.63
+L381: 100  | 96  | 53.5  | 0.56  | 0.65
+L382: ⬤  |    | ⬤  | -  | -  | -  | -  | -
+L383: Tan
+L384: cite69†Image†www.hunterindustries.com L385: 803611  | cite67†Image†www.hunterindustries.com L386: 53
+L387: Dk. Blue  | Lt. Blue
+L388: cite70†Image†www.hunterindustries.com L389: 315311  | 70  | 91  | 49.8  | 0.58  | 0.67
+L390: 80  | 93  | 52.2  | 0.58  | 0.67
+L391: 90  | 95  | 55.5  | 0.59  | 0.68
+L392: 100  | 97  | 58.5  | 0.60  | 0.69
+L393: ⬤ = Nozzle plug P/N 315300 installed in the front side of the nozzle housing.
+L394: 
+L395: *Complies to ASAE standard. All precipitation rates calculated for 360 degree operation. For the precipitation rate for a 180 degree sprinkler, multiply by 2. All triangular rates are equilateral.
+L396: ## Documents
+L397: ### Select Type
+L398: 
+L399:   * All Documents
+L400:   * Manuals
+L401:   * Marketing
+L402:   * Specifications
+L403:   * Replacement Parts
+L404: 
+L405: I-80 Installation and Adjustment Instructions
+L406: 
+L407: cite33†Select Language  L408: 
+L409: CAD - I-80 Rotor
+L410: 
+L411: cite33†Select Format  L412: 
+L413: CAD - I-80 Rotor with Turf Cup
+L414: 
+L415: cite33†Select Format  L416: 
+L417: CAD - I-80 Rotor with Rubber Cover
+L418: 
+L419: cite33†Select Format  L420: 
+L421: I-80 Written Specifications
+L422: 
+L423: cite71†Download   L424: 
+L425: I-80 Replacement Parts List
+L426: 
+L427: cite72†Download   L428: 
+L429: I-80 Competitive Advantage Sheet
+L430: 
+L431: cite33†Select Language  L432: 
+L433: LEED Guide - Construction
+L434: cite33†Select Language  L435: 
+L436: LEED Guide - Multi-Family
+L437: 
+L438: cite33†Select Language  L439: 
+L440: LEED Guide - Single Family
+L441: 
+L442: cite33†Select Language  L443: 
+L444: Environmental Product Declaration (Rotors)
+L445: 
+L446: cite73†Download   L447: 
+L448: cite33†Show all documents L449: ## CAD Installation Details
+L450: 
+L451: I-80 Rotor  | cite74†DWG | cite75†DXF | cite76†PDF |
+L452: I-80 Rotor with Rubber Cover  | cite74†DWG | cite75†DXF | cite77†PDF |
+L453: I-80 Rotor with Turf Cup  | cite74†DWG | cite75†DXF | cite78†PDF |
+L454: 
+L455: ## CAD Installation Details
+L456: 
+L457: CAD - I-80 Rotor
+L458: 
+L459: cite33†Select Format  L460: 
+L461: CAD - I-80 Rotor with Rubber Cover
+L462: 
+L463: cite33†Select Format  L464: 
+L465: CAD - I-80 Rotor with Turf Cup
+L466: 
+L467: cite33†Select Format  L468: 
+L469: ## Support
+L470: 
+L471: ## cite79†Commercial Rotors L472: 
+L473: ### Installation
+L474: 
+L475: ### Rotor Adjustments
+L476: 
+L477: ### Stator Adjustment
+L478: ### Turf Cup Kit
+L479: 
+L480: ### FAQs
+L481: 
+L482: ### Troubleshooting
+L483: 
+L484: ### Replacement Guides
+L485: 
+L486: ## Photos
+L487: 
+L488: ## Application Photos
+L489: 
+L490: cite33†Image L491: 
+L492: cite80†Image L493: 
+L494: Title:
+L495: 
+L496: I-80
+L497: 
+L498: File:
+L499: 
+L500: i-80_lafc_245_rt.jpg
+L501: 
+L502: Classification:
+L503: 
+L504: Application
+L505: 
+L506: Product Line:
+L507: 
+L508: Rotors
+L509: 
+L510: Products:
+L511: 
+L512: cite81†I-80 L513: 
+L514: Keywords:
+L515: 
+L516: product
+L517: 
+L518: ,
+L519: 
+L520: rotor
+L521: 
+L522: ,
+L523: 
+L524: sports turf
+L525: 
+L526: ,
+L527: 
+L528: stadium
+L529: 
+L530: ,
+L531: 
+L532: location
+L533: 
+L534: ,
+L535: 
+L536: I-80
+L537: 
+L538: ,
+L539: 
+L540: LAFC
+L541: 
+L542: ,
+L543: 
+L544: Los Angeles Football Club
+L545: 
+L546: cite82†Image Page L547: 
+L548: * * *
+L549: 
+L550: #### Download Image
+L551: 
+L552: cite83†Medium cite84†Original L553: 
+L554: By clicking download, you agree to our cite33†terms and conditions .
+L555: ### Photo Usage Disclaimer
+

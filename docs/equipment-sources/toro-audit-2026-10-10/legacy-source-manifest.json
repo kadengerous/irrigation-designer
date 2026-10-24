@@ -1,0 +1,47 @@
+{
+  "auditedOn": "2026-10-10",
+  "sources": [
+    {
+      "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+      "status": "fresh-web-readable",
+      "edition": "25-1045-IRC",
+      "pagesUsed": [
+        1,
+        3,
+        6,
+        7,
+        8
+      ],
+      "physicalRowsCompared": 204
+    },
+    {
+      "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+      "status": "fresh-web-readable",
+      "actualEdition": 2026,
+      "pagesUsed": [
+        7,
+        8
+      ],
+      "listedModelsVerified": 102
+    },
+    {
+      "url": "https://media.toro.com/CatalogDocuments/Product%20Literature/psn_ss.pdf",
+      "status": "fresh-web-readable",
+      "edition": "13-1045-IRC",
+      "use": "Explicit 25% reduction, maintained precipitation and between-radius-family matching; do not replace newer table cells with this edition."
+    },
+    {
+      "url": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "status": "web-parser-size-limit",
+      "reportedBytes": 13068709,
+      "use": "Retained existing primary provenance; this turn did not claim a fresh full-2026-catalog row comparison."
+    },
+    {
+      "url": "https://specifier.toro.com/cads/nozzles/precision_series_nozzles.doc",
+      "status": "fresh-web-parser-unsupported-application-msword",
+      "cachedFile": "/private/tmp/irri-toro-audit-20261006/o-bid-spec.doc",
+      "cachedSha256": "eceeda968f3c2f76ab9fd5b9e859fea2e3880169b04b0a201637f9b583d05fb4",
+      "use": "Undated existing local official document specifies original designated radius; older cached evidence, not a fresh retrieved revision."
+    }
+  ]
+}

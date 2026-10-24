@@ -1,0 +1,56 @@
+{
+  "verifiedOn": "2026-10-10",
+  "manufacturer": "Rain Bird",
+  "sourceBaselineCommit": "66521e1513368c86cf15134c3b9008bb27a80a95",
+  "scope": {
+    "catalogRecords": 96,
+    "bodies": 21,
+    "nonBodyModels": 75,
+    "placeableModels": 70,
+    "performanceRows": 1135,
+    "spraySpecialBubblerRows": 370,
+    "rotorRows": 567,
+    "rvanRows": 198
+  },
+  "freshSources": [
+    "spray-source-manifest.json",
+    "rotor-source-manifest.json",
+    "rvan-audit.md"
+  ],
+  "evidence": [
+    "spray-row-checks.json",
+    "rotor-row-checks.json",
+    "rvan-row-comparison.json",
+    "rvan-group-coverage.json"
+  ],
+  "applied": [
+    "HE-VAN and 12/15/18-VAN below90 degree sectors use explicitly labelled proportional matched-precipitation flow estimates at supported pressure.",
+    "4/6/8/10-VAN below90 degree geometry uses equal-pressure reference throw only when every published sector agrees. Flow remains unknown; this is not a measured manufacturer row.",
+    "Manual pressure and simulation respect Rain Bird spray-body operating limits and regulator output caps.",
+    "Automatic selection requires35psi/50psi inlet before relying on nominal PRS30/P45 outlet; otherwise an eligible plain body is used.",
+    "Nominal30psi chart equivalents share one MPR compatibility pressure key independent of direct or regulated supply; arbitrary nearby pressures remain distinct.",
+    "All Rain Bird simulation footprints check current nozzle/pressure/arc/radius. SQ-HLF retains independently verified geometry and field-level hydraulic exclusions.",
+    "5004+PCR retains inlet-indexed PRS plateau; pressure label clarifies inlet basis in library, inspector and automatic panel across20locales.",
+    "8additional conflicting rotor precipitation cells withheld, with calculated display values explicitly labelled. Source radius/flow preserved.",
+    "R-VAN absolute reduced-radius floors explicit; nominal strip-length metadata uses recommended3.1bar.",
+    "Saved model definitions and old project geometry retained; unsupported configurations reviewed rather than silently recalculated."
+  ],
+  "preservedLimitations": [
+    "Reduced-radius Rain Bird discharge remains unknown where no quantitative curve is published.",
+    "SQ-HLF small-setting discharge and disputed no-overlap rates remain unavailable.",
+    "Four stream-bubbler nozzle models remain unavailable for placement without verified footprint geometry;1408 remains archived.",
+    "No newly claimed official hex-color standard; prior visual color evidence dates preserved.",
+    "Optional numerical corner-strip arc normalization was not applied; official rectangular footprint and manual-only behavior retained.",
+    "Browser visual verification unavailable because prior automatic approval review blocked browser access; no alternate browser/network route used."
+  ],
+  "validation": {
+    "manualTableRows": 1119,
+    "automaticRadiusEndpoints": 1951,
+    "excludedByOperatingDomainInManualAudit": 0,
+    "focusedAndRegressionTestsPassed": 120,
+    "typecheck": "passed",
+    "rendering": "SSR panels across20locales; Konva drawing callbacks, simulated particles and actual pointer handlers; not a browser screenshot check",
+    "build": "performed by Sites source workflow after this report"
+  },
+  "countsNote": "1135source rows include16 rows of four non-placeable stream bubblers. 1119manual rows cover all currently placeable tabulated models. Pressure-compensated1400 bubblers have no fabricated tabular rows."
+}

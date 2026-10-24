@@ -1,0 +1,307 @@
+{
+  "status": "final",
+  "verifiedOn": "2026-10-10",
+  "performancePatches": [
+    {
+      "modelId": "8A-HE",
+      "nozzleId": "8A-HE",
+      "rowIndex": 19,
+      "match": {
+        "arcDeg": 360,
+        "pressureBar": 2.8
+      },
+      "set": {
+        "flowLMin": 5.148160026,
+        "flowM3H": 0.308889602
+      },
+      "before": {
+        "flowLMin": 4.769619,
+        "flowM3H": 0.2861771
+      },
+      "source": {
+        "modelId": "8A-HE",
+        "arcDeg": 360,
+        "pressurePsi": 40,
+        "radiusFt": 9.0,
+        "flowGpm": 1.36,
+        "precipSquareInHr": 1.62,
+        "precipTriangleInHr": 1.87,
+        "sourcePage": 1,
+        "sourceLine": 74
+      },
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "reason": "Current product-page-linked US cut sheet corroborates the same US pressure/radius grid but corrects product-page HTML cells; retain one coherent customary-unit grid converted to SI."
+    },
+    {
+      "modelId": "10A-HE",
+      "nozzleId": "10A-HE",
+      "rowIndex": 10,
+      "match": {
+        "arcDeg": 270,
+        "pressureBar": 1.4
+      },
+      "set": {
+        "precipTriangleMmH": 48.768
+      },
+      "before": {
+        "precipTriangleMmH": 50.038
+      },
+      "source": {
+        "modelId": "10A-HE",
+        "arcDeg": 270,
+        "pressurePsi": 20,
+        "radiusFt": 9.0,
+        "flowGpm": 1.05,
+        "precipSquareInHr": 1.66,
+        "precipTriangleInHr": 1.92,
+        "sourcePage": 1,
+        "sourceLine": 97
+      },
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "reason": "Current product-page-linked US cut sheet corroborates the same US pressure/radius grid but corrects product-page HTML cells; retain one coherent customary-unit grid converted to SI."
+    },
+    {
+      "modelId": "10A-HE",
+      "nozzleId": "10A-HE",
+      "rowIndex": 11,
+      "match": {
+        "arcDeg": 270,
+        "pressureBar": 1.7
+      },
+      "set": {
+        "precipTriangleMmH": 54.102
+      },
+      "before": {
+        "precipTriangleMmH": 56.388
+      },
+      "source": {
+        "modelId": "10A-HE",
+        "arcDeg": 270,
+        "pressurePsi": 25,
+        "radiusFt": 9.0,
+        "flowGpm": 1.17,
+        "precipSquareInHr": 1.85,
+        "precipTriangleInHr": 2.13,
+        "sourcePage": 1,
+        "sourceLine": 98
+      },
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "reason": "Current product-page-linked US cut sheet corroborates the same US pressure/radius grid but corrects product-page HTML cells; retain one coherent customary-unit grid converted to SI."
+    },
+    {
+      "modelId": "17A-HE",
+      "nozzleId": "17A-HE",
+      "rowIndex": 19,
+      "match": {
+        "arcDeg": 360,
+        "pressureBar": 2.8
+      },
+      "set": {
+        "precipTriangleMmH": 51.816
+      },
+      "before": {
+        "precipTriangleMmH": null
+      },
+      "source": {
+        "modelId": "17A-HE",
+        "arcDeg": 360,
+        "pressurePsi": 40,
+        "radiusFt": 17.0,
+        "flowGpm": 5.3,
+        "precipSquareInHr": 1.77,
+        "precipTriangleInHr": 2.04,
+        "sourcePage": 2,
+        "sourceLine": 217
+      },
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "reason": "Current product-page-linked US cut sheet corroborates the same US pressure/radius grid but corrects product-page HTML cells; retain one coherent customary-unit grid converted to SI."
+    }
+  ],
+  "modelPatches": [
+    {
+      "modelId": "MSBN-25Q",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    },
+    {
+      "modelId": "MSBN-50Q",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    },
+    {
+      "modelId": "MSBN-50H",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    },
+    {
+      "modelId": "MSBN-10H",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    },
+    {
+      "modelId": "MSBN-10F",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    },
+    {
+      "modelId": "MSBN-20F",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    },
+    {
+      "modelId": "MSBN-25V",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    },
+    {
+      "modelId": "MSBN-50V",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    },
+    {
+      "modelId": "5-CST-B",
+      "set": {
+        "coverageKind": "streams"
+      },
+      "reason": "Official multi-stream / dual-stream pattern; do not award uniformly irrigated sector area. Retain published flow and throw.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1
+    }
+  ],
+  "policyRecommendations": [
+    {
+      "families": [
+        "spray",
+        "he",
+        "fixed",
+        "short"
+      ],
+      "minimumRadius": "Selected published-pressure radiusM multiplied by 0.75",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/support/spray-nozzle-radius-adjustment",
+      "reducedFlow": "Preserve unchanged-discharge interpolation as an explicit modelling assumption. No manufacturer reduced-radius flow curve or constant-discharge guarantee was verified."
+    },
+    {
+      "family": "spray",
+      "mechanicalArcDeg": [
+        0,
+        360
+      ],
+      "flowTableArcDeg": [
+        45,
+        90,
+        120,
+        180,
+        240,
+        270,
+        360
+      ],
+      "unpublishedFlowArcDeg": [
+        1,
+        44
+      ],
+      "recommendation": "No proportional flow extrapolation or automatic selection below 45 degrees. 45–89 permits bounded interpolation. Zero is shutoff.",
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2026-05/RC-244-SS-Nozzles-ProAdj-US.pdf"
+    },
+    {
+      "family": "he",
+      "mechanicalArcDeg": [
+        0,
+        360
+      ],
+      "flowTableArcDeg": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "estimateArcDeg": [
+        1,
+        89
+      ],
+      "recommendation": "Preserve labelled Q90 multiplied by arc/90 estimate supported by matched precipitation. It is not a manufacturer performance row.",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-high-efficiency-nozzles"
+    },
+    {
+      "family": "bubbler",
+      "recommendation": "Do not generalize the spray 25% screw-adjustment rule to stream or flood bubblers."
+    },
+    {
+      "family": "short",
+      "recommendation": "Existing precipBasis single is correct. Future atomic schema cleanup may move no-overlap precipitation out of precipSquareMmH, with flow/display adaptation. No standalone patch."
+    },
+    {
+      "family": "prostrip",
+      "recommendation": "Retain pressure-specific rectangles and manual selection. No invented square/triangle precipitation or proportional dimension scaling."
+    }
+  ],
+  "bodyHeightLimitations": [
+    {
+      "modelId": "MSBN-25V",
+      "baselineBodyModelId": "PROS-04",
+      "baselinePopUpIn": 4,
+      "baselineRadiusFt": 1.5,
+      "baselineRadiusM": 0.4572,
+      "publishedAlternatePopUpIn": 6,
+      "publishedAlternateRadiusFt": 2,
+      "publishedAlternateRadiusM": 0.6096,
+      "flowGpm": 0.25,
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1,
+      "evidenceLines": [
+        53,
+        75
+      ],
+      "implementation": "Document nominal PROS-04 baseline and explicit 6-inch exception; no height curve and no assertion that every compatible body height has separately verified throw."
+    },
+    {
+      "modelId": "MSBN-50V",
+      "baselineBodyModelId": "PROS-04",
+      "baselinePopUpIn": 4,
+      "baselineRadiusFt": 2.5,
+      "baselineRadiusM": 0.762,
+      "publishedAlternatePopUpIn": 6,
+      "publishedAlternateRadiusFt": 3,
+      "publishedAlternateRadiusM": 0.9144,
+      "flowGpm": 0.5,
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "sourcePage": 1,
+      "evidenceLines": [
+        53,
+        75
+      ],
+      "implementation": "Document nominal PROS-04 baseline and explicit 6-inch exception; no height curve and no assertion that every compatible body height has separately verified throw."
+    }
+  ]
+}

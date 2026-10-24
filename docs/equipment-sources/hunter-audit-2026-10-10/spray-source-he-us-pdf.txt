@@ -1,0 +1,247 @@
+ (https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf)
+citeturn312view0 [wordlim: 200] Crawled: 5 days ago; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"turn291view0","lineno":null}); Total lines: 244
+L0@P0: Visit hunterindustries.com
+L1@P0: NOZZLES
+L2@P0: PRO HIGH-EFFICIENCY NOZZLES
+L3@P0: KEY BENEFITS
+L4@P0: • High-efficiency performance from a high-uniformity spray pattern
+L5@P0: • Matched precipitation of 1.6 in/hr from 8' to 17' across the 0°-360°
+L6@P0: adjustable arc range
+L7@P0: • Smooth spray pattern with well-defined edges for targeted
+L8@P0: landscape irrigation
+L9@P0: • Color-coded with natural hues to blend with the landscape and provide
+L10@P0: easy field identification
+L11@P0: ADDITIONAL FEATURES
+L12@P0: • Simple arc adjustment using the easy-grip nozzle top
+L13@P0: • Thick nozzle top offers long-lasting durability against equipment damage
+L14@P0: • Fast installation with clear identification of spray pattern edges
+L15@P0: OPERATING SPECIFICATIONS
+L16@P0: • Recommended operating pressure: 30 PSI
+L17@P0: • Pair with Pro-Spray® PRS30 Sprinkler Bodies for pressure regulation to
+L18@P0: 30 PSI
+L19@P0: • Warranty period: 2 years
+L20@P0: Arc Pressure
+L21@P0: PSI
+L22@P0: 90° 20
+L23@P0: 25
+L24@P0: 30
+L25@P0: 35
+L26@P0: 40
+L27@P0: 180° 20
+L28@P0: 25
+L29@P0: 30
+L30@P0: 35
+L31@P0: 40
+L32@P0: 270° 20
+L33@P0: 25
+L34@P0: 30
+L35@P0: 35
+L36@P0: 40
+L37@P0: 360° 20
+L38@P0: 25
+L39@P0: 30
+L40@P0: 35
+L41@P0: 40
+L42@P0: 8A-HE
+L43@P0:  Olive
+L44@P0: Green
+L45@P0: 8' radius
+L46@P0: Adjustable from
+L47@P0: 0° to 360°
+L48@P0: Trajectory: 20°
+L49@P0: Radius
+L50@P0: ft.
+L51@P0: Flow
+L52@P0: GPM
+L53@P0: Precip in/hr
+L54@P0: 
+L55@P0: 7 0.23 1.81 2.09
+L56@P0: 7 0.27 2.12 2.45
+L57@P0: 8 0.28 1.68 1.95
+L58@P0: 8 0.32 1.93 2.22
+L59@P0: 9 0.35 1.66 1.92
+L60@P0: 7 0.44 1.71 1.97
+L61@P0: 7 0.49 1.93 2.22
+L62@P0: 8 0.55 1.65 1.90
+L63@P0: 8 0.63 1.88 2.17
+L64@P0: 9 0.68 1.62 1.87
+L65@P0: 7 0.65 1.71 1.97
+L66@P0: 7 0.74 1.93 2.22
+L67@P0: 8 0.82 1.65 1.90
+L68@P0: 8 0.94 1.88 2.17
+L69@P0: 9 1.02 1.62 1.87
+L70@P0: 7 0.87 1.71 1.97
+L71@P0: 7 0.98 1.93 2.22
+L72@P0: 8 1.10 1.65 1.90
+L73@P0: 8 1.25 1.88 2.17
+L74@P0: 9 1.36 1.62 1.87
+L75@P0: 10A-HE
+L76@P0:  Dark Blue
+L77@P0: 10' radius
+L78@P0: Adjustable from
+L79@P0: 0° to 360°
+L80@P0: Trajectory: 25°
+L81@P0: Radius
+L82@P0: ft.
+L83@P0: Flow
+L84@P0: GPM
+L85@P0: Precip in/hr
+L86@P0: 
+L87@P0: 9 0.36 1.71 1.98
+L88@P0: 9 0.41 1.95 2.25
+L89@P0: 10 0.44 1.69 1.96
+L90@P0: 10 0.48 1.85 2.13
+L91@P0: 10 0.51 1.96 2.27
+L92@P0: 9 0.70 1.66 1.92
+L93@P0: 9 0.78 1.85 2.13
+L94@P0: 10 0.86 1.65 1.90
+L95@P0: 10 0.93 1.79 2.07
+L96@P0: 10 1.00 1.93 2.22
+L97@P0: 9 1.05 1.66 1.92
+L98@P0: 9 1.17 1.85 2.13
+L99@P0: 10 1.28 1.65 1.90
+L100@P0: 10 1.40 1.79 2.07
+L101@P0: 10 1.50 1.93 2.22
+L102@P0: 9 1.40 1.66 1.92
+L103@P0: 9 1.55 1.85 2.13
+L104@P0: 10 1.71 1.65 1.90
+L105@P0: 10 1.86 1.79 2.07
+L106@P0: 10 2.00 1.93 2.22
+L107@P0: PRO HIGH-EFFICIENCY NOZZLES PERFORMANCE DATA
+L108@P0: 8A-HE Nozzle
+L109@P0: Radius: 8'
+L110@P0: 12A-HE Nozzle
+L111@P0: Radius: 12'
+L112@P0: 10A-HE Nozzle
+L113@P0: Radius: 10'
+L114@P0: 15A-HE Nozzle
+L115@P0: Radius: 15'
+L116@P0: 17A-HE Nozzle
+L117@P0: Radius: 17'
+L118@P0: Pro High-Efficiency Nozzles provide increased efficiency for spray systems
+L119@P0: through high uniformity from the spray pattern at a matched precipitation
+L120@P0-1: rate across the line. Visit hunterindustries.com RESIDENTIAL & COMMERCIAL IRRIGATION | Built on Innovation®
+L121@P1: NOZZLES
+L122@P1: 12A-HE
+L123@P1:  Brown
+L124@P1: 12' radius
+L125@P1: Adjustable from
+L126@P1: 0° to 360°
+L127@P1: Trajectory: 25°
+L128@P1: Radius
+L129@P1: ft.
+L130@P1: Flow
+L131@P1: GPM
+L132@P1: Precip in/hr
+L133@P1: 
+L134@P1: 11 0.53 1.69 1.95
+L135@P1: 11 0.59 1.88 2.17
+L136@P1: 12 0.63 1.68 1.95
+L137@P1: 12 0.70 1.87 2.16
+L138@P1: 12 0.75 2.01 2.32
+L139@P1: 11 1.03 1.63 1.88
+L140@P1: 11 1.12 1.78 2.06
+L141@P1: 12 1.22 1.63 1.88
+L142@P1: 12 1.33 1.78 2.05
+L143@P1: 12 1.46 1.95 2.25
+L144@P1: 11 1.54 1.63 1.88
+L145@P1: 11 1.68 1.78 2.06
+L146@P1: 12 1.83 1.63 1.88
+L147@P1: 12 2.00 1.78 2.05
+L148@P1: 12 2.19 1.95 2.25
+L149@P1: 11 2.05 1.63 1.88
+L150@P1: 11 2.24 1.78 2.06
+L151@P1: 12 2.44 1.63 1.88
+L152@P1: 12 2.66 1.78 2.05
+L153@P1: 12 2.92 1.95 2.25
+L154@P1: 15A-HE
+L155@P1:  Black
+L156@P1: 15' radius
+L157@P1: Adjustable from
+L158@P1: 0° to 360°
+L159@P1: Trajectory: 25°
+L160@P1: Radius
+L161@P1: ft.
+L162@P1: Flow
+L163@P1: GPM
+L164@P1: Precip in/hr
+L165@P1: 
+L166@P1: 14 0.78 1.53 1.77
+L167@P1: 14 0.88 1.73 2.00
+L168@P1: 15 0.96 1.64 1.90
+L169@P1: 15 1.07 1.83 2.11
+L170@P1: 15 1.13 1.93 2.23
+L171@P1: 14 1.53 1.50 1.73
+L172@P1: 14 1.69 1.66 1.91
+L173@P1: 15 1.87 1.60 1.85
+L174@P1: 15 2.05 1.75 2.03
+L175@P1: 15 2.22 1.90 2.19
+L176@P1: 14 2.29 1.50 1.73
+L177@P1: 14 2.53 1.66 1.91
+L178@P1: 15 2.81 1.60 1.85
+L179@P1: 15 3.08 1.75 2.03
+L180@P1: 15 3.33 1.90 2.19
+L181@P1: 14 3.05 1.50 1.73
+L182@P1: 14 3.37 1.66 1.91
+L183@P1: 15 3.74 1.60 1.85
+L184@P1: 15 4.10 1.75 2.03
+L185@P1: 15 4.43 1.90 2.19
+L186@P1: 17A-HE
+L187@P1:  Gray
+L188@P1: 17' radius
+L189@P1: Adjustable from
+L190@P1: 0° to 360°
+L191@P1: Trajectory: 25°
+L192@P1: Radius
+L193@P1: ft.
+L194@P1: Flow
+L195@P1: GPM
+L196@P1: Precip in/hr
+L197@P1: 
+L198@P1: 16 0.95 1.43 1.66
+L199@P1: 16 1.07 1.60 1.85
+L200@P1: 17 1.24 1.65 1.91
+L201@P1: 17 1.29 1.72 1.99
+L202@P1: 17 1.39 1.85 2.13
+L203@P1: 16 1.77 1.33 1.53
+L204@P1: 16 2.04 1.53 1.77
+L205@P1: 17 2.36 1.57 1.82
+L206@P1: 17 2.47 1.64 1.90
+L207@P1: 17 2.65 1.77 2.04
+L208@P1: 16 2.65 1.33 1.53
+L209@P1: 16 3.05 1.53 1.77
+L210@P1: 17 3.54 1.57 1.82
+L211@P1: 17 3.70 1.64 1.90
+L212@P1: 17 3.98 1.77 2.04
+L213@P1: 16 3.53 1.33 1.53
+L214@P1: 16 4.07 1.53 1.77
+L215@P1: 17 4.72 1.57 1.82
+L216@P1: 17 4.93 1.64 1.90
+L217@P1: 17 5.30 1.77 2.04
+L218@P1: Bold = Recommended pressure
+L219@P1: Note: The Pro-Spray PRS30 Sprinkler Body’s built-in pressure regulator controls output to a maximum of 30 PSI.
+L220@P1: Adjusting the radius reduction screw may be required to achieve catalog radius and flow.
+L221@P1: Arc Pressure
+L222@P1: PSI
+L223@P1: 90° 20
+L224@P1: 25
+L225@P1: 30
+L226@P1: 35
+L227@P1: 40
+L228@P1: 180° 20
+L229@P1: 25
+L230@P1: 30
+L231@P1: 35
+L232@P1: 40
+L233@P1: 270° 20
+L234@P1: 25
+L235@P1: 30
+L236@P1: 35
+L237@P1: 40
+L238@P1: 360° 20
+L239@P1: 25
+L240@P1: 30
+L241@P1: 35
+L242@P1: 40
+L243@P1: PRO HIGH-EFFICIENCY NOZZLES PERFORMANCE DATA
+

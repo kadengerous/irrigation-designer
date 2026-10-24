@@ -1,0 +1,229 @@
+ (https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf)
+citeturn365view0 [wordlim: 200] Crawled: 3 days ago; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"turn361view2","lineno":null}); Total lines: 226
+
+L0@P0: www.rainbird.com/sprays
+L1@P0: www.rainbird.com 25
+L2@P0: Spray & Rotary Nozzles
+L3@P0: Spray Nozzles
+L4@P0: U-Series Nozzles
+L5@P0: 12° Trajectory n s
+L6@P0: Nozzle
+L7@P0: Pressure
+L8@P0: psi
+L9@P0: Radius
+L10@P0: ft.
+L11@P0: Flow
+L12@P0: gpm
+L13@P0: Precip
+L14@P0: In/h
+L15@P0: Precip
+L16@P0: In/h
+L17@P0: U-10F 15 7 1.16 2.07 2.39
+L18@P0: 20 8 1.34 2.01 2.32
+L19@P0: 25 9 1.50 1.62 1.87
+L20@P0: 30 10 1.64 1.58 1.83
+L21@P0: U-10H 15 7 0.58 2.07 2.39
+L22@P0: 20 8 0.67 2.01 2.32
+L23@P0: 25 9 0.75 1.62 1.87
+L24@P0: 30 10 0.82 1.58 1.83
+L25@P0: U-10Q 15 7 0.29 2.07 2.39
+L26@P0: 20 8 0.33 2.01 2.32
+L27@P0: 25 9 0.37 1.62 1.87
+L28@P0: 30 10 0.41 1.58 1.83
+L29@P0: 12° Trajectory n s
+L30@P0: Nozzle
+L31@P0: Pressure
+L32@P0: bar
+L33@P0: Radius
+L34@P0: m
+L35@P0: Flow
+L36@P0: m3
+L37@P0: /h
+L38@P0: Flow
+L39@P0: l/m
+L40@P0: Precip
+L41@P0: mm/h
+L42@P0: Precip
+L43@P0: mm/h
+L44@P0: U-10F 1.0 2.1 0.26 4.4 52 60
+L45@P0: 1.5 2.6 0.30 5.3 47 55
+L46@P0: 2.0 3.0 0.34 6.1 41 48
+L47@P0: 2.1 3.1 0.37 6.2 40 46
+L48@P0: U-10H 1.0 2.1 0.13 2.2 52 60
+L49@P0: 1.5 2.6 0.15 2.6 47 55
+L50@P0: 2.0 3.0 0.17 3.1 41 48
+L51@P0: 2.1 3.1 0.19 3.1 40 46
+L52@P0: U-10Q 1.0 2.1 0.07 1.1 52 60
+L53@P0: 1.5 2.6 0.08 1.3 47 55
+L54@P0: 2.0 3.0 0.08 1.5 41 48
+L55@P0: 2.1 3.1 0.09 1.6 40 46
+L56@P0: U10 Series U10 Series METRIC
+L57@P0: Note: All U-Series nozzles tested on 4" (10.2 cm) pop-ups
+L58@P0: n Square spacing based on 50% diameter of throw
+L59@P0: s Triangular spacing based on 50% diameter of throw
+L60@P0: Performance data taken in zero wind conditions
+L61@P0: Radius refers to recommended product spacing. Actual radii along arc may vary
+L62@P0: 10° Trajectory n s
+L63@P0: Nozzle
+L64@P0: Pressure
+L65@P0: psi
+L66@P0: Radius
+L67@P0: ft.
+L68@P0: Flow
+L69@P0: gpm
+L70@P0: Precip
+L71@P0: In/h
+L72@P0: Precip
+L73@P0: In/h
+L74@P0: U-8F 15 5 0.74 2.85 3.29
+L75@P0: 20 6 0.86 2.30 2.66
+L76@P0: 25 7 0.96 1.89 2.18
+L77@P0: 30 8 1.05 1.58 1.83
+L78@P0: U8H 15 5 0.37 2.85 3.29
+L79@P0: 20 6 0.42 2.25 2.59
+L80@P0: 25 7 0.47 1.85 2.13
+L81@P0: 30 8 0.52 1.58 1.83
+L82@P0: U8Q 15 5 0.18 2.77 3.20
+L83@P0: 20 6 0.21 2.25 2.59
+L84@P0: 25 7 0.24 1.89 2.18
+L85@P0: 30 8 0.26 1.58 1.83
+L86@P0: 10° Trajectory n s
+L87@P0: Nozzle
+L88@P0: Pressure
+L89@P0: bar
+L90@P0: Radius
+L91@P0: m
+L92@P0: Flow
+L93@P0: m3
+L94@P0: /h
+L95@P0: Flow
+L96@P0: l/m
+L97@P0: Precip
+L98@P0: mm/h
+L99@P0: Precip
+L100@P0: mm/h
+L101@P0: U-8F 1.0 1.7 0.16 2.8 72 84
+L102@P0: 1.5 2.1 0.20 3.4 58 68
+L103@P0: 2.0 2.4 0.23 3.9 48 55
+L104@P0: 2.1 2.4 0.24 4.0 40 46
+L105@P0: U-8H 1.0 1.7 0.08 1.4 72 84
+L106@P0: 1.5 2.1 0.10 1.7 57 66
+L107@P0: 2.0 2.4 0.12 1.9 47 54
+L108@P0: 2.1 2.4 0.12 2.0 40 46
+L109@P0: U-8Q 1.0 1.7 0.04 0.7 70 81
+L110@P0: 1.5 2.1 0.05 0.8 57 66
+L111@P0: 2.0 2.4 0.06 1.0 48 55
+L112@P0: 2.1 2.4 0.06 1.0 40 46
+L113@P0-1: U8 Series U8 Series METRIC26 The Intelligent Use of Water.™
+L114@P1: Spray & Rotary Nozzles
+L115@P1: Note: All U-Series nozzles tested on 4" (10.2 cm) pop-ups
+L116@P1: n Square spacing based on 50% diameter of throw
+L117@P1: s Triangular spacing based on 50% diameter of throw
+L118@P1: Performance data taken in zero wind conditions
+L119@P1: Radius refers to recommended product spacing. Actual radii along arc may vary
+L120@P1: 23° Trajectory n s
+L121@P1: Nozzle
+L122@P1: Pressure
+L123@P1: psi
+L124@P1: Radius
+L125@P1: ft.
+L126@P1: Flow
+L127@P1: gpm
+L128@P1: Precip
+L129@P1: In/h
+L130@P1: Precip
+L131@P1: In/h
+L132@P1: U-12F 15 9 1.80 2.14 2.47
+L133@P1: 20 10 2.10 2.02 2.34
+L134@P1: 25 11 2.40 1.91 2.21
+L135@P1: 30 12 2.60 1.74 2.01
+L136@P1: U-12H 15 9 0.90 2.14 2.47
+L137@P1: 20 10 1.05 2.02 2.34
+L138@P1: 25 11 1.20 1.91 2.21
+L139@P1: 30 12 1.30 1.74 2.01
+L140@P1: U-12Q 15 9 0.45 2.14 2.47
+L141@P1: 20 10 0.53 2.02 2.34
+L142@P1: 25 11 0.60 1.91 2.21
+L143@P1: 30 12 0.65 1.74 2.01
+L144@P1: 23° Trajectory n s
+L145@P1: Nozzle
+L146@P1: Pressure
+L147@P1: bar
+L148@P1: Radius
+L149@P1: m
+L150@P1: Flow
+L151@P1: m3
+L152@P1: /h
+L153@P1: Flow
+L154@P1: l/m
+L155@P1: Precip
+L156@P1: mm/h
+L157@P1: Precip
+L158@P1: mm/h
+L159@P1: U-12F 1.0 2.7 0.40 6.8 55 63
+L160@P1: 1.5 3.2 0.48 8.3 47 54
+L161@P1: 2.0 3.6 0.59 9.7 46 53
+L162@P1: 2.1 3.7 0.60 9.8 44 51
+L163@P1: U-12H 1.0 2.7 0.20 3.4 55 63
+L164@P1: 1.5 3.2 0.24 4.2 47 54
+L165@P1: 2.0 3.6 0.30 4.8 46 53
+L166@P1: 2.1 3.7 0.30 4.9 44 51
+L167@P1: U-12Q 1.0 2.7 0.10 1.7 55 63
+L168@P1: 1.5 3.2 0.12 2.1 47 54
+L169@P1: 2.0 3.6 0.15 2.4 46 53
+L170@P1: 2.1 3.7 0.15 2.5 44 51
+L171@P1: U12 Series U12 Series METRIC
+L172@P1: 23° Trajectory n s
+L173@P1: Nozzle
+L174@P1: Pressure
+L175@P1: psi
+L176@P1: Radius
+L177@P1: ft.
+L178@P1: Flow
+L179@P1: gpm
+L180@P1: Precip
+L181@P1: In/h
+L182@P1: Precip
+L183@P1: In/h
+L184@P1: U-15F 15 11 2.60 2.07 2.39
+L185@P1: 20 12 3.00 2.01 2.32
+L186@P1: 25 14 3.30 1.62 1.87
+L187@P1: 30 15 3.70 1.58 1.83
+L188@P1: U-15H 15 11 1.30 2.07 2.39
+L189@P1: 20 12 1.50 2.01 2.32
+L190@P1: 25 14 1.65 1.62 1.87
+L191@P1: 30 15 1.85 1.58 1.83
+L192@P1: U-15Q 15 11 0.65 2.07 2.39
+L193@P1: 20 12 0.75 2.01 2.32
+L194@P1: 25 14 0.82 1.62 1.87
+L195@P1: 30 15 0.92 1.58 1.83
+L196@P1: 23° Trajectory n s
+L197@P1: Nozzle
+L198@P1: Pressure
+L199@P1: bar
+L200@P1: Radius
+L201@P1: m
+L202@P1: Flow
+L203@P1: m3
+L204@P1: /h
+L205@P1: Flow
+L206@P1: l/m
+L207@P1: Precip
+L208@P1: mm/h
+L209@P1: Precip
+L210@P1: mm/h
+L211@P1: U-15F 1.0 3.4 0.60 9.8 52 60
+L212@P1: 1.5 3.9 0.72 11.8 47 55
+L213@P1: 2.0 4.5 0.84 13.7 41 48
+L214@P1: 2.1 4.6 0.84 14.0 40 46
+L215@P1: U-15H 1.0 3.4 0.30 4.9 52 60
+L216@P1: 1.5 3.9 0.36 5.9 47 55
+L217@P1: 2.0 4.5 0.42 6.9 41 48
+L218@P1: 2.1 4.6 0.42 7.0 40 46
+L219@P1: U-15Q 1.0 3.4 0.15 2.5 52 60
+L220@P1: 1.5 3.9 0.18 2.9 47 55
+L221@P1: 2.0 4.5 0.21 3.4 41 48
+L222@P1: 2.1 4.6 0.21 3.5 40 46
+L223@P1: U15 Series U15 Series METRIC
+L224@P1: Spray Nozzles
+L225@P1: U-Series Nozzles

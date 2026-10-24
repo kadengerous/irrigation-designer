@@ -1,0 +1,162 @@
+LIT-085 Irrigation Notes: Reduced Sprinkler Radius (https://www.hunterirrigation.com/sites/default/files/tech_irrigation_notes_reduced_sprinkler_radius.pdf)
+citeturn342view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://www.hunterirrigation.com/sites/default/files/tech_irrigation_notes_reduced_sprinkler_radius.pdf","lineno":null}); Total lines: 159
+L0@P0: Irrigation Notes
+L1@P0: Reduced Sprinkler Radius
+L2@P0: Occasionally someone will
+L3@P0: complain that the Hunter PGP
+L4@P0: sprinkler does not apply
+L5@P0: enough water near the head,
+L6@P0: and they adjust the diffuser pin
+L7@P0: into the nozzle stream to remedy “the problem.” This is particularly true with impactsprinkler installers who are accustomed to the area next to
+L8@P0: the head being soaked when
+L9@P0: they diffuse the spray. Tests at
+L10@P0: the Hunter facility revealed
+L11@P0: that an impact sprinkler with a
+L12@P0: 5/32 nozzle reduced to a thirtyfoot radius produced a precipitation rate near the head of
+L13@P0: over 5 inches per hour. In most
+L14@P0: soil conditions this would cause
+L15@P0: close-in puddling. In addition
+L16@P0: to dramatically increasing the
+L17@P0: precipitation rate at the head,
+L18@P0: reducing the radius has a negative effect on performance and
+L19@P0: decreases the efficiency of the
+L20@P0: system.
+L21@P0: PGP with #7 Nozzle
+L22@P0: Let’s look at what actually
+L23@P0: occurs. The performance chart
+L24@P0: for the Hunter PGP states that
+L25@P0: at 50 psi, the No. 7 nozzle has a
+L26@P0: radius of 42 feet. Looking at the
+L27@P0: distribution profile for this configuration (shown in Figure 1a),
+L28@P0: we see that the radius of throw
+L29@P0: is in fact 42 feet. Note that the
+L30@P0: amount of water distributed
+L31@P0: next to the head is about 0.10
+L32@P0: inches per hour. With the nozzle
+L33@P0: undiffused, the scheduling coefficient (Figure 1b) is under 1.5
+L34@P0: for spacings from thirty-two to
+L35@P0: forty-six feet.
+L36@P0: Now we’ll look at a distribution analysis plot (densigram)
+L37@P0: for this head, spaced at 45 feet
+L38@P0: (Figure 2). Notice that the
+L39@P0: scheduling coefficient is 1.43
+L40@P0: — still under 1.5. But as you
+L41@P0: can see, the driest area is next
+L42@P0: to the head.
+L43@P0: FIGURE 1a
+L44@P0: FIGURE 1b
+L45@P0: FIGURE 2
+L46@P0-1: PGP with #7 NozzleRadius Reduced
+L47@P1: The common belief is that if
+L48@P1: the spray is diffused, the water
+L49@P1: from the extreme end of the
+L50@P1: pattern will be transferred so it
+L51@P1: is applied next to the sprinkler
+L52@P1: head. Figure 3 is a distribution
+L53@P1: profile for the same head. With
+L54@P1: the radius reduced to 30 feet,
+L55@P1: this chart shows that the common belief is inaccurate.
+L56@P1: There is minimal increase in
+L57@P1: the application rate in the area
+L58@P1: within 10 feet of the head. But
+L59@P1: in the area 10 feet to 20 feet
+L60@P1: from the head, the application
+L61@P1: rate has doubled. (This is the
+L62@P1: reason for the large green rings
+L63@P1: produced by a great many irrigation systems.)
+L64@P1:  Notice also that the scheduling coefficient has increased
+L65@P1: (Figure 4). In this case, there
+L66@P1: would be severe stressing in the
+L67@P1: areas between the heads.
+L68@P1: The normal practice to eliminate the stress is to increase the
+L69@P1: nozzle size to increase the application rate, and diffuse the
+L70@P1: spray to ensure enough water
+L71@P1: next to the head.
+L72@P1: FIGURE 3
+L73@P1: PGP with #7 Nozzle - Radius Reduced
+L74@P1: FIGURE 4
+L75@P1: A Guide to the Charts
+L76@P1: In a distribution profile (Figure 1a), the sprinkler is located on the left side.
+L77@P1: Catchment cans are placed in a straight row in two foot increments. The sprinkler is
+L78@P1: then allowed to operate as it normally would under field conditions for a predetermined amount of time. At the completion of the test, the water in the catch cans is
+L79@P1: measured and the results are plotted on the chart. This is the actual amount of water
+L80@P1: that falls in the catch cans (distribution uniformity, or DU).
+L81@P1: The scheduling coefficient (SC) is shown on the cart in Figure 1b. The SC measures
+L82@P1: the uniformity of the application of water by the sprinkler. It is a measure of how much
+L83@P1: water falls into one catch can as it relates to the amount falling into the rest of the cans.
+L84@P1: A perfect SC of 1.0 states that all catchments fill to the same level.
+L85@P1: You can see in the graphs in Figures 1 and 5 that the nozzles that have not been
+L86@P1-2: reduced have a nearly perfect SC.PGP with #9 Nozzle
+L87@P2: First look at the distribution
+L88@P2: profile in Figure 5 for the PGP
+L89@P2: with a larger (No. 9) nozzle at
+L90@P2: 50 psi. Notice the plateau/
+L91@P2: wedge shape. This profile indicates very uniform coverage
+L92@P2: throughout this spacing range.
+L93@P2: As you can see, at a 45-foot
+L94@P2: spacing the over-all precipitation rate is increased from 0.14
+L95@P2: inches per hour for the No. 7
+L96@P2: nozzle, to 0.25 inches per hour
+L97@P2: for the No. 9 nozzle.
+L98@P2: PGP with #9 Nozzle
+L99@P2: FIGURE 5
+L100@P2: FIGURE 6
+L101@P2: Another view of the water distribution patterns of a zone or zones of sprinklers is
+L102@P2: shown in the densigram (Figure 2, for example). Here, the watering pattern is
+L103@P2: represented by the darker areas. The white areas represent the areas with the least
+L104@P2: amount of water. Sprinklers are placed so that the spray patterns overlap and produce
+L105@P2: a more uniform distribution (Figures 2 and 6). The densigram illustrates that reducing
+L106@P2: the radius to try to increase the precipitation near the head will actually result in
+L107@P2: reducing the overall performance of the sprinklers (Figures 4 and 8).
+L108@P2: The uniformity coefficient (CU) and the SC are stated on the densigram. A CU of
+L109@P2: 100% would represent a perfectly uniform distribution of water. A CU of 80% to 90%
+L110@P2-3: for a working system is considered high.Hunter Industries Incorporated • The Irrigation Innovators P/N 700275
+L111@P3: 1940 Diamond St. • San Marcos, California 92069 • U.S.A. • TEL: (1) 760-744-5240 • FAX: (1) 760-744-7461 LIT-085.PDF 6/97
+L112@P3: Radius Reduced
+L113@P3: In Figure 7 the distribution profile is for the larger, No. 9 nozzle
+L114@P3: with a diffused spray. The amount
+L115@P3: of water has doubled next to the
+L116@P3: head, but the application rate in the
+L117@P3: middle of the range has also increased. The amount of water applied at the “hump” is two to three
+L118@P3: times the amount applied in the area
+L119@P3: next to the head.
+L120@P3: As Figure 8 makes immediately
+L121@P3: apparent, this is a disaster. We have
+L122@P3: green circles, each with a radius of
+L123@P3: 20 feet, and all areas between these
+L124@P3: circles receive little or no water.
+L125@P3: Summary
+L126@P3: Hunter nozzle sets have been
+L127@P3: designed for optimum performance
+L128@P3: when installed “head to head.” With
+L129@P3: the PGP sprinklers, the fine mist
+L130@P3: from the secondary orifices supplies
+L131@P3: more than enough water in the area
+L132@P3: close to the heads, especially if it is
+L133@P3: supplemented with some of the
+L134@P3: range spray from the adjacent heads.
+L135@P3: Additionally, the performance of
+L136@P3: the nozzles tends to be better in the
+L137@P3: middle of the recommended pressure range.
+L138@P3: Use the nozzle closest to the radius of throw you need and do not
+L139@P3: diffuse it unless reduced radius is
+L140@P3: required to keep water away from
+L141@P3: hardscape areas. If there is a coverage problem, do not assume that a
+L142@P3: new or different nozzle will solve
+L143@P3: the problem.
+L144@P3: If the system is designed for headto-head coverage and the range
+L145@P3: spray is not reaching the adjacent
+L146@P3: sprinkler, the probable cause is not
+L147@P3: the nozzle that was supplied.
+L148@P3: Look for other sources of the
+L149@P3: problem, such as pressure (too high
+L150@P3: or too low), heads that are not
+L151@P3: perpendicular to the turf, damaged
+L152@P3: nozzles, leaks in the system, and
+L153@P3: nozzles not installed properly.
+L154@P3: Check these prior to changing or
+L155@P3: adjusting the nozzles.
+L156@P3: FIGURE 3
+L157@P3: PGP with #7 Nozzle - Radius Reduced
+L158@P3: FIGURE 4
+

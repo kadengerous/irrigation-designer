@@ -1,0 +1,53 @@
+[
+  {
+    "family": "3500",
+    "bodyColor": "Black",
+    "standardCoverColor": "Black",
+    "nozzleTreeColor": "Blue",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42378_3500_rotor_tech_spec.pdf",
+    "page": 1
+  },
+  {
+    "family": "5000",
+    "bodyColor": "Black",
+    "standardCoverColor": "Black",
+    "nozzleTreeColor": "Blue",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+    "page": 1
+  },
+  {
+    "family": "5000 Plus",
+    "bodyColor": "Black",
+    "standardCoverColor": "Green",
+    "nozzleTreeColor": "Blue",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-12/d42380_5000_series_rotor_tech_spec.pdf",
+    "page": 2,
+    "note": "Plus is explicitly The Green Top. PRS identification is separate: a white ring on the casing is shown in the same page. Do not color the nozzle green."
+  },
+  {
+    "family": "Falcon6504",
+    "bodyColor": "Black",
+    "standardCoverColor": "Black",
+    "nonPotableCoverColor": "Purple",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42381_6504_rotor_tech_spec.pdf",
+    "page": 1
+  },
+  {
+    "family": "8005",
+    "bodyColor": "Black",
+    "standardCoverColor": "Black",
+    "nonPotableCoverColor": "Purple",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2023-11/d42406-_8005_rotor_tech_spec-web.pdf",
+    "page": 1,
+    "note": "Current 2023 specification explicitly says black. Older 2018 specification describing green is not used."
+  },
+  {
+    "family": "1800",
+    "bodyColor": "Black",
+    "standardCoverColor": "Black",
+    "flushPlugColor": "Orange",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/1800-series-tech-spec.pdf",
+    "page": 1,
+    "note": "Orange is the removable Pop-Top flush plug. Cap markings distinguish SAM, PRS30, PRS45 and combinations; no unsupported permanent cap-color coding is inferred."
+  }
+]

@@ -1,0 +1,383 @@
+ (https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf)
+citeturn455view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 100; Source: open({"ref_id":"turn453view0","lineno":400}); Total lines: 6106
+L281@P7: 50 33 3.8 0.67 0.78
+L282@P7: Performance Data - Metric
+L283@P7: NOZZLE
+L284@P7: PRESSURE RADIUS FLOW PRECIP mm/hr
+L285@P7: BAR METERS L/M n p #0.75 2,1 5,5 3,0 12 14
+L286@P7: 2,8 5,8 3,0 11 13
+L287@P7: 3,4 6,1 3,4 11 13
+L288@P7: #1.0 2,1 7,9 3,4 7 8
+L289@P7: 2,8 8,2 4,5 8 9
+L290@P7: 3,4 8,2 4,9 9 10
+L291@P7: #1.5 2,1 8,2 5,7 10 12
+L292@P7: PreInstalled2,8 8,2 6,8 12 14
+L293@P7: 3,4 8,5 7,6 12 14
+L294@P7: #2.0 2,1 8,8 7,6 12 13
+L295@P7: 2,8 9,1 8,7 12 14
+L296@P7: 3,4 9,4 10,2 14 16
+L297@P7: #3.0 2,1 9,8 11,4 14 17
+L298@P7: 2,8 10,1 12,9 15 18
+L299@P7-8: 3,4 10,1 14,4 17 20krain.com 9
+L300@P8: RPS™ 75
+L301@P8: Features
+L302@P8: n Right Position Start
+L303@P8: n Patented Reversing Mechanism – Continuous
+L304@P8: reverse and return
+L305@P8: n Full and Part Circle Rotation – Provides a full
+L306@P8: range of adjustment from 40° to 360°
+L307@P8: n Non-flushing Wiper Seal – Reduces leaks caused
+L308@P8: by debris trapped under seal
+L309@P8: n 3/4" (1,9 cm) Inlet – Replaces all standard rotors
+L310@P8: n Rubber Cover – Seals out dirt and increases durability
+L311@P8: n Wide Selection of Nozzles – Including standard
+L312@P8: and low angle for flexibility in system design
+L313@P8: n Includes 5 Free Check Valve Assemblies Per Box
+L314@P8: n Universal Riser Assembly – Fits into existing
+L315@P8: Hunter®
+L316@P8:  PGP® and PGP® Ultra cans
+L317@P8: n Pressure Regulated – 45 PSI available (6" only)
+L318@P8: Specifications
+L319@P8: n Arc Adjustment Range: 40° – 360°
+L320@P8: n Flow Range: 0.7 – 8.3 GPM (2,6 – 31 LPM)
+L321@P8: n Operating Pressure Range: 20 – 100 PSI (1,4 – 6,9 bar)
+L322@P8: n Recommended Pressure RRange: 30 – 70 PSI (2,1 – 4,8 bar)
+L323@P8: n Precipitation Rate: .16 – 1.0 in/hr (4 – 25,4 mm/hr)
+L324@P8: (depending on spacing and nozzle used)
+L325@P8: n Radius: 22' – 51' (6,7 – 15,5 m)
+L326@P8: n Nozzle Trajectory: 26°
+L327@P8: n Low Angle Nozzle Trajectory: 11°
+L328@P8: n 8 Standard and 4 Low Angle Nozzles Included
+L329@P8: Accessories
+L330@P8: See page 26-27
+L331@P8: Sets the standard for 3/4" gear-driven rotors.
+L332@P8: Easy Arc Setting
+L333@P8: Arc Selection: 40° to 360°
+L334@P8: Adjust from right start
+L335@P8: Fast Facts
+L336@P8: ALL INLET: 3/4” (1,9 CM) FEMALE THREAD NPT
+L337@P8: 4" Retracted height: 7 3/8" (19,7 cm)
+L338@P8: Riser height: 4 3/8" (11,1 cm)
+L339@P8: 6" Retracted height: 9 1/2" (24,1 cm)
+L340@P8: Riser height: 6 3/8" (16,2 cm)
+L341@P8-9: Shrub Height: 7 1/2" (19,1 cm)10 Down Here. Doing. It. Right.
+L342@P9: RPS™ 75
+L343@P9: *All precipitation rates calculated for 180° operation. For the precipitation rate for a 360° sprinkler, divide by 2.
+L344@P9: Models
+L345@P9: RPS75 RPS™ 75 Rotor
+L346@P9: RPS75-360 RPS™ 75 Rotor, 360°
+L347@P9: RPS75-SH RPS™ 75 Rotor, Shrub
+L348@P9: RPS75-360-SH RPS™ 75 Rotor, 360°, Shrub
+L349@P9: RPS75-6INCH RPS™ 75 Rotor 6" (15,2 cm)
+L350@P9: How to Specify with Options
+L351@P9: MODELS OPTIONS
+L352@P9: RPS75 -SS u Stainless Steel
+L353@P9: RPS75-360 -CV u Check Valve
+L354@P9: RPS75-SH -NN u No Nozzle
+L355@P9: RPS75-360-SH -RCW u Reclaimed Water Use
+L356@P9: RPS75-6inch -PR u Pressure Regulation (6”only)
+L357@P9: Examples: RPS75-SS, RPS75-360-RCW-CV
+L358@P9: Performance Data - U.S.
+L359@P9: NOZZLE
+L360@P9: PRESSURE RADIUS FLOW PRECIP in/hr
+L361@P9: PSI FEET GPM n p #.75 30 29 0.7 0.16 0.19
+L362@P9: 40 30 0.8 0.17 0.20
+L363@P9: 50 30 0.9 0.19 0.22
+L364@P9: 60 31 1.0 0.20 0.23
+L365@P9: #1.0 30 30 0.9 0.19 0.22
+L366@P9: 40 31 1.0 0.20 0.23
+L367@P9: 50 31 1.2 0.24 0.28
+L368@P9: 60 32 1.3 0.24 0.28
+L369@P9: #1.5 30 32 1.2 0.23 0.26
+L370@P9: 40 33 1.4 0.25 0.29
+L371@P9: 50 34 1.6 0.27 0.31
+L372@P9: 60 34 1.8 0.30 0.35
+L373@P9: #2.0 30 34 1.6 0.27 0.31
+L374@P9: 40 36 1.8 0.27 0.31
+L375@P9: 50 38 2.0 0.27 0.31
+L376@P9: 60 38 2.2 0.29 0.34
+L377@P9: #3.0
+L378@P9: PreInstalled
+L379@P9: 30 36 2.0 0.30 0.34
+L380@P9: 40 38 2.4 0.32 0.37
+L381@P9: 50 40 2.7 0.32 0.38
+L382@P9: 60 40 2.9 0.35 0.40
+L383@P9: #4.0 30 36 2.6 0.39 0.45
+L384@P9: 40 40 3.0 0.36 0.42
+L385@P9: 50 42 3.4 0.37 0.43
+L386@P9: 60 42 3.7 0.40 0.47
+L387@P9: #6.0 40 38 4.2 0.56 0.65
+L388@P9: 50 43 4.9 0.51 0.59
+L389@P9: 60 46 5.5 0.50 0.58
+L390@P9: 70 47 6.0 0.52 0.60
+L391@P9: #8.0 40 45 6.0 0.57 0.66
+L392@P9: 50 48 6.8 0.57 0.66
+L393@P9: 60 49 7.6 0.61 0.70
+L394@P9: 70 51 8.2 0.61 0.70
+L395@P9: PR Performance Data - U.S.
+L396@P9: NOZZLE
+L397@P9: PRESSURE RADIUS FLOW PRECIP in/hr
+L398@P9: PSI FEET GPM n p #.75 30 29 0.7 0.16 0.19
+L399@P9: 40 30 0.8 0.17 0.20
+L400@P9: 50 30 0.9 0.19 0.22
+L401@P9: 60 30 0.9 0.19 0.22
+L402@P9: #1.0 30 30 0.9 0.19 0.22
+L403@P9: 40 31 1.0 0.20 0.23
+L404@P9: 50 31 1.2 0.24 0.28
+L405@P9: 60 31 1.2 0.24 0.28
+L406@P9: #1.5 30 32 1.2 0.23 0.26
+L407@P9: 40 33 1.4 0.25 0.29
+L408@P9: 50 34 1.6 0.27 0.31
+L409@P9: 60 34 1.6 0.27 0.31
+L410@P9: #2.0 30 34 1.6 0.27 0.31
+L411@P9: 40 36 1.8 0.27 0.31
+L412@P9: 50 38 2.0 0.27 0.31
+L413@P9: 60 38 2.0 0.27 0.31
+L414@P9: #3.0
+L415@P9: PreInstalled
+L416@P9: 30 36 2.0 0.30 0.34
+L417@P9: 40 38 2.4 0.32 0.37
+L418@P9: 50 40 2.7 0.32 0.38
+L419@P9: 60 40 2.7 0.32 0.38
+L420@P9: #4.0 30 36 2.6 0.39 0.45
+L421@P9: 40 40 3.0 0.36 0.42
+L422@P9: 50 42 3.4 0.37 0.43
+L423@P9: 60 42 3.4 0.37 0.43
+L424@P9: #6.0 40 38 4.2 0.56 0.65
+L425@P9: 50 43 4.9 0.51 0.59
+L426@P9: 60 43 4.9 0.51 0.59
+L427@P9: 70 43 4.9 0.51 0.59
+L428@P9: #8.0 40 45 6.0 0.57 0.66
+L429@P9: 50 48 6.8 0.57 0.66
+L430@P9: 60 48 6.8 0.57 0.66
+L431@P9: 70 48 6.8 0.57 0.66
+L432@P9: Low Angle Performance Data - U.S.
+L433@P9: NOZZLE
+L434@P9: PRESSURE RADIUS FLOW PRECIP in/hr
+L435@P9: PSI FEET GPM n p #1.0 30 22 1.2 0.48 0.55
+L436@P9: 40 24 1.7 0.57 0.66
+L437@P9: 50 26 1.8 0.51 0.59
+L438@P9: 60 28 2.0 0.49 0.57
+L439@P9: #3.0 30 29 3.0 0.69 0.79
+L440@P9: 40 32 3.1 0.58 0.67
+L441@P9: 50 35 3.5 0.55 0.64
+L442@P9: 60 37 3.8 0.53 0.62
+L443@P9: #4.0 30 31 3.4 0.68 0.79
+L444@P9: 40 34 3.9 0.65 0.75
+L445@P9: 50 37 4.4 0.62 0.71
+L446@P9: 60 38 4.7 0.63 0.72
+L447@P9: #6.0 40 38 6.5 0.87 1.00
+L448@P9: 50 40 7.3 0.88 1.01
+L449@P9: 60 42 8.0 0.87 1.01
+L450@P9: 70 44 8.6 0.86 0.99
+L451@P9: PR Low Angle Performance Data - U.S.
+L452@P9: NOZZLE
+L453@P9: PRESSURE RADIUS FLOW PRECIP in/hr
+L454@P9: PSI FEET GPM n p #1.0 30 22 1.2 0.48 0.55
+L455@P9: 40 24 1.7 0.57 0.66
+L456@P9: 50 26 1.8 0.51 0.59
+L457@P9: 60 26 1.8 0.51 0.59
+L458@P9: #3.0 30 29 3.0 0.69 0.79
+L459@P9: 40 32 3.1 0.58 0.67
+L460@P9: 50 35 3.5 0.55 0.64
+L461@P9: 60 35 3.5 0.55 0.64
+L462@P9: #4.0 30 31 3.4 0.68 0.79
+L463@P9: 40 34 3.9 0.65 0.75
+L464@P9: 50 37 4.4 0.62 0.71
+L465@P9: 60 37 4.4 0.62 0.71
+L466@P9: #6.0 40 38 6.5 0.87 1.00
+L467@P9: 50 40 7.3 0.88 1.01
+L468@P9: 60 40 7.3 0.88 1.01
+L469@P9: 70 40 7.3 0.88 1.01
+L470@P9-10: WATCH VIDEOkrain.com 11
+L471@P10: Performance Data - Metric
+L472@P10: NOZZLE
+L473@P10: PRESSURE RADIUS FLOW PRECIP mm/hr
+L474@P10: BAR METERS L/M n p
+L475@P10: #.75 2,1 8,8 2,6 4 5
+L476@P10: 2,8 9,1 3,0 4 5
+L477@P10: 3,4 9,1 3,4 5 6
+L478@P10: 4,1 9,4 3,8 5 6
+L479@P10: #1.0 2,1 9,1 3,4 5 6
+L480@P10: 2,8 9,4 3,8 5 6
+L481@P10: 3,4 9,4 4,5 6 7
+L482@P10: 4,1 9,8 4,9 6 7
+L483@P10: #1.5 2,1 9,8 4,5 6 7
+L484@P10: 2,8 10,1 5,3 6 7
+L485@P10: 3,4 10,4 6,1 7 8
+L486@P10: 4,1 10,4 6,8 8 9
+L487@P10: #2.0 2,1 10,4 6,1 7 8
+L488@P10: 2,8 11,0 6,8 7 8
+L489@P10: 3,4 11,6 7,6 7 8
+L490@P10: 4,1 11,6 8,3 7 9
+L491@P10: #3.0
+L492@P10: PreInstalled
+L493@P10: 2,1 11,0 7,6 8 9
+L494@P10: 2,8 11,6 9,1 8 9
+L495@P10: 3,4 12,2 10,2 8 10
+L496@P10: 4,1 12,2 11,0 9 10
+L497@P10: #4.0 2,1 11,0 9,8 10 11
+L498@P10: 2,8 12,2 11,4 9 11
+L499@P10: 3,4 12,8 12,9 9 11
+L500@P10: 4,1 12,8 14,0 10 12
+L501@P10: #6.0 2,8 11,6 15,9 14 16
+L502@P10: 3,4 13,1 18,5 13 15
+L503@P10: 4,1 14,0 18,5 13 15
+L504@P10: 4,8 14,3 18,5 13 15
+L505@P10: #8.0 2,8 13,7 22,7 14 17
+L506@P10: 3,4 14,6 25,7 14 17
+L507@P10: 4,1 14,9 25,7 15 18
+L508@P10: 4,8 15,5 25,7 15 18
+L509@P10: PR Performance Data - Metric
+L510@P10: NOZZLE
+L511@P10: PRESSURE RADIUS FLOW PRECIP mm/hr
+L512@P10: BAR METERS L/M n p
+L513@P10: #.75 2,1 8,8 2,7 7 8
+L514@P10: 2,8 9,1 3,0 7 8
+L515@P10: 3,5 9,1 3,4 8 9
+L516@P10: 4,1 9,1 3,4 8 9
+L517@P10: #1.0 2,1 9,1 3,4 8 9
+L518@P10: 2,8 9,4 3,8 8 9
+L519@P10: 3,5 9,4 4,5 10 11
+L520@P10: 4,1 9,4 4,5 10 11
+L521@P10: #1.5 2,1 9,8 4,5 9 11
+L522@P10: 2,8 10,1 5,3 10 12
+L523@P10: 3,5 10,4 6,1 11 13
+L524@P10: 4,1 10,4 6,1 11 13
+L525@P10: #2.0 2,1 10,4 6,1 11 13
+L526@P10: 2,8 11,0 6,8 11 13
+L527@P10: 3,5 11,6 7,6 11 13
+L528@P10: 4,1 11,6 7,6 11 13
+L529@P10: #3.0
+L530@P10: PreInstalled
+L531@P10: 2,1 11,0 7,6 12 14
+L532@P10: 2,8 11,6 9,1 13 15
+L533@P10: 3,5 12,2 10,2 13 15
+L534@P10: 4,1 12,2 10,2 13 15
+L535@P10: #4.0 2,1 11,0 9,9 16 18
+L536@P10: 2,8 12,2 11,4 15 17
+L537@P10: 3,5 12,8 12,9 15 17
+L538@P10: 4,1 12,8 12,9 15 17
+L539@P10: #6.0 2,8 11,6 15,9 23 26
+L540@P10: 3,5 13,1 18,6 21 24
+L541@P10: 4,1 13,1 18,6 21 24
+L542@P10: 4,8 13,1 18,6 21 24
+L543@P10: #8.0 2,8 13,7 22,7 23 27
+L544@P10: 3,5 14,6 25,8 23 27
+L545@P10: 4,1 14,6 25,8 23 27
+L546@P10: 4,8 14,6 25,8 23 27
+L547@P10: Low Angle Performance Data - Metric
+L548@P10: NOZZLE
+L549@P10: PRESSURE RADIUS FLOW PRECIP mm/hr
+L550@P10: BAR METERS L/M n p #1.0 2,1 6,7 4,5 12 14
+L551@P10: 2,8 7,3 6,4 14 17
+L552@P10: 3,4 7,9 6,8 13 15
+L553@P10: 4,1 8,5 7,6 12 14
+L554@P10: #3.0 2,1 8,8 11,4 18 20
+L555@P10: 2,8 9,8 11,7 15 17
+L556@P10: 3,4 10,7 13,2 14 16
+L557@P10: 4,1 11,3 13,2 13 16
+L558@P10: #4.0 2,1 9,4 12,9 17 20
+L559@P10: 2,8 10,4 14,8 17 19
+L560@P10: 3,4 11,3 16,7 16 18
+L561@P10: 4,1 11,6 17,8 16 18
+L562@P10: #6.0 2,8 11,6 24,6 22 25
+L563@P10: 3,4 12,2 27,6 22 26
+L564@P10: 4,1 12,8 27,6 22 26
+L565@P10: 4,8 13,4 27,6 22 25
+L566@P10: PR Low Angle Performance Data - Metric
+L567@P10: NOZZLE
+L568@P10: PRESSURE RADIUS FLOW PRECIP mm/hr
+L569@P10: BAR METERS L/M n p #1.0 2,1 6,7 4,5 19 22
+L570@P10: 2,8 7,3 6,4 23 27
+L571@P10: 3,5 7,9 6,8 21 24
+L572@P10: 4,1 7,9 6,8 21 24
+L573@P10: #3.0 2,1 8,8 11,4 28 32
+L574@P10: 2,8 9,8 11,7 24 27
+L575@P10: 3,5 10,7 13,3 22 26
+L576@P10: 4,1 10,7 13,3 22 26
+L577@P10: #4.0 2,1 9,5 12,9 28 32
+L578@P10: 2,8 10,4 14,8 26 31
+L579@P10: 3,5 11,3 16,7 25 29
+L580@P10: 4,1 11,3 16,7 25 29
+L581@P10: #6.0 2,8 11,6 24,6 35 41
+L582@P10: 3,5 12,2 27,7 36 41
+L583@P10: 4,1 12,2 27,7 36 41
+L584@P10: 4,8 12,2 27,7 36 41
+L585@P10-11: *All precipitation rates calculated for 180° operation. For the precipitation rate for a 360° sprinkler, divide by 2.12 Down Here. Doing. It. Right.
+L586@P11: RPS™ 75i
+L587@P11: With Patented Intelligent Flow Technology®.
+L588@P11: Features
+L589@P11: n Right position start
+L590@P11: n Patented Intelligent Flow Technology®
+L591@P11:  – Reduce distance
+L592@P11: and water flow simultaneously and proportionately
+L593@P11: n Shut off flow from the head
+L594@P11: n Patented Reversing Mechanism – Continuous reverse and
+L595@P11: return
+L596@P11: n Wide Selection of Nozzles – Including standard
+L597@P11: and low angle for flexibility in system design
+L598@P11: n Rugged RPS Family Construction and features
+L599@P11: n Superior Uniformity, Conserves Water, Fewer
+L600@P11: Zones Required
+L601@P11: n Save Time on Every Project — New or retrofit
+L602@P11: n Includes 5 Free Check Valve Assemblies Per Box
+L603@P11: n Universal Riser Assembly – Fits into existing
+L604@P11: Hunter®
+L605@P11:  PGP® and PGP® Ultra cans
+L606@P11: n Pressure Regulated – 45 PSI available (6" only)
+L607@P11: Specifications
+L608@P11: n Arc Adjustment Range: 40° – 360°
+L609@P11: n Flow Range: 0.6 – 9.7 GPM (2,3 – 36,7 LPM)
+L610@P11: n Operating Pressure Range: 20 – 100 PSI (1,4 – 6,9 bar)
+L611@P11: n Recommended Pressure RRange: 30 – 70 PSI (2,1 – 4,8 bar)
+L612@P11: n Precipitation Rate: 0.22 – 1.40 in/hr (6 – 35 mm/hr)
+L613@P11: n Radius: 18' – 48' (5,6 – 14,6 m)
+L614@P11: n Nozzle Trajectory: 26°
+L615@P11: n Low Angle Nozzle Trajectory: 11°
+L616@P11: n Nozzles Included: 8 Standard, 4 Low Angle
+L617@P11: Models
+L618@P11: RPS 75i RPS™ 75i Rotor
+L619@P11: RPS75i-360 RPS™ 75i Rotor, 360°
+L620@P11: RPS75i-SH RPS™ 75i Rotor, Shrub
+L621@P11: RPS75i-360-SH RPS™ 75i Rotor, Shrub, 360°
+L622@P11: RPS75i-6INCH RPS™ 75i Rotor 6" (15,2 cm)
+L623@P11: Accessories
+L624@P11: See page 26-27
+L625@P11: Fast Facts
+L626@P11: ALL INLET: 3/4” (1,9 CM) FEMALE THREAD NPT
+L627@P11: 4" Retracted height: 7 3/8" (19,7 cm)
+L628@P11: Riser height: 4 1/4" (10,8 cm)
+L629@P11: 6" Retracted height: 9 1/2" (24,1 cm)
+L630@P11: Riser height: 6 1/4" (15,9 cm)
+L631@P11-12: Shrub Height: 7 1/2" (19,1 cm)krain.com 13
+L632@P12: ARC
+L633@P12: FLOW
+L634@P12: Intelligent Flow
+L635@P12: Technology®
+L636@P12: n Reduces distance and
+L637@P12: flow rate simultaneously
+L638@P12: and proportionately
+L639@P12: n Provides full on/off control
+L640@P12: How to Specify with Options
+L641@P12: MODELS OPTIONS
+L642@P12: RPS75i -SS u Stainless Steel
+L643@P12: RPS75i-360 -CV u Check Valve
+L644@P12: RPS75i-SH -NN u No Nozzle
+L645@P12: RPS75i-360-SH -RCW u Reclaimed Water Use
+L646@P12: RPS75i-6inch -PR u Pressure Regulation (6”only)
+L647@P12: Examples: RPS75i-NN, RPS75-360-RCW
+L648@P12-13: WATCH VIDEO14 Down Here. Doing. It. Right.
+L649@P13: RPS™ 75i
+L650@P13: PR Performance Data - U.S.
+L651@P13: NO ADJUSTMENT -30% ADJUSTMENT
+L652@P13: NOZZLE
+L653@P13: PRESSURE RADIUS FLOW PRECIP in/hr RADIUS FLOW PRECIP in/hr
+L654@P13: PSI FEET GPM n p FEET GPM n p
+L655@P13: #1.0 30 31 1.1 0.22 0.25 22 0.8 0.31 0.36
+L656@P13: 40 32 1.4 0.26 0.30 22 1.0 0.38 0.43
+L657@P13: 50 33 1.6 0.28 0.33 23 1.1 0.40 0.47
+L658@P13: 60 33 1.6 0.28 0.33 23 1.1 0.40 0.47
+L659@P13: #1.5 30 33 1.5 0.27 0.31 23 1.1 0.38 0.44
+L660@P13: 40 35 1.8 0.28 0.33 25 1.3 0.40 0.47
+

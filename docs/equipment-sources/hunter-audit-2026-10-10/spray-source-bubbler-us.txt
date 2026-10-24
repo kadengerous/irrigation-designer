@@ -1,0 +1,57 @@
+Bubblers & Bubbler Nozzles | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles)
+citeturn279view0 [wordlim: 200] Crawled: 3 days ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles","lineno":null}); Total lines: 1541
+## Charts
+L225: ### Multi-Stream Bubbler Nozzle Performance Data
+L226: Multi-Stream Bubbler Performance Data
+L227: ---
+L228: 
+L229: Arc  |    | Model  | Flow  | Radius
+L230:    |    |    | GPM  | ft
+L231: cite56†Image | •  | MSBN-25V *  | 0.25  | 1.5
+L232: •  | MSBN-50V *  | 0.50  | 2.5
+L233: cite57†Image | •  | MSBN-25Q  | 0.25  | 1.0
+L234: •  | MSBN-50Q  | 0.50  | 1.5
+L235: cite58†Image | •  | MSBN-50H  | 0.50  | 1.0
+L236: •  | MSBN-10H  | 1.00  | 1.5
+L237: cite59†Image | •  | MSBN-10F  | 1.00  | 1.0
+L238: •  | MSBN-20F  | 2.00  | 1.5
+L239: Note: Typical spacing 2 to 4 ft.
+L240: Flows shown for pressures between 15 and 70 PSI.*For a 6" pop-up, the radius is 2' at 0.25 GPM and 3' at 0.50 GPM
+L241: ### PCN / PCB Performance Data
+L242: 
+L243: 
+L244: PCN / PCB Performance Data
+L245: ---
+L246:    | Model  | Flow  | Pattern
+L247:    |    | GPM  | Type
+L248: cite60†Image | 25  | 0.25  | Trickle
+L249: 50  | 0.50  | Trickle
+L250: 10  | 1.00  | Umbrella
+L251: 20  | 2.00  | Umbrella
+L252: Note: Typical spacing 2 to 4 ft.
+L253: Flows shown for pressures between 15 and 70 PSI.
+L254: 
+L255: 
+L256: 
+L257: ### AFB Performance Data
+L258: 
+L259: 
+L260: AFB Performance Data
+L261: ---
+L262:    | Model  | Flow  | Pattern
+L263:    |    | GPM  | Type
+L264: cite60†Image | AFB  | < 2.0  | Trickle / Umbrella
+L265: ### 5-CST-B Bubbler Nozzle Performance Data
+L266: 
+L267: 
+L268: 5-CST-B Bubbler Nozzle Performance Data
+L269: ---
+L270:    | Pressure  | Radius  | Flow
+L271:    | PSI  | ft  | GPM
+L272: cite61†Image | 20  | 5  | 0.30
+L273: 25  | 5  | 0.32
+L274: 30  | 5  | 0.38
+L275: 35  | 5  | 0.40
+L276: 40  | 5  | 0.42
+L277: 
+L278: 

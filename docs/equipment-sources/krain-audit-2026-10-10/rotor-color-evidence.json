@@ -1,0 +1,1262 @@
+[
+  {
+    "itemId": "k-rain:MiniPro",
+    "nozzleId": "k-rain:MiniPro:standard-0.75",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:MiniPro",
+    "nozzleId": "k-rain:MiniPro:standard-1.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:MiniPro",
+    "nozzleId": "k-rain:MiniPro:standard-1.5",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:MiniPro",
+    "nozzleId": "k-rain:MiniPro:standard-2.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:MiniPro",
+    "nozzleId": "k-rain:MiniPro:standard-3.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS50",
+    "nozzleId": "k-rain:RPS50:standard-0.75",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS50",
+    "nozzleId": "k-rain:RPS50:standard-1.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS50",
+    "nozzleId": "k-rain:RPS50:standard-1.5",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS50",
+    "nozzleId": "k-rain:RPS50:standard-2.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS50",
+    "nozzleId": "k-rain:RPS50:standard-3.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-0.75",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-1.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-1.5",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-2.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-3.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-4.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-6.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-8.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:low-angle-1.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:low-angle-3.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:low-angle-4.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:low-angle-6.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-1.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-1.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-2.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-2.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-3.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-4.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-5.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-6.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-8.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:low-angle-1.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:low-angle-1.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:low-angle-2.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:low-angle-3.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-1.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-1.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-2.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-2.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-3.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-4.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-5.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-6.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-8.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:low-angle-1.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:low-angle-1.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:low-angle-2.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:low-angle-3.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS-Select",
+    "nozzleId": "k-rain:RPS-Select:standard-1.0",
+    "colorName": null,
+    "verified": false,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "No verified color coding for four built-in selections; leave unknown.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS-Select",
+    "nozzleId": "k-rain:RPS-Select:standard-2.0",
+    "colorName": null,
+    "verified": false,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "No verified color coding for four built-in selections; leave unknown.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS-Select",
+    "nozzleId": "k-rain:RPS-Select:standard-3.0",
+    "colorName": null,
+    "verified": false,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "No verified color coding for four built-in selections; leave unknown.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:RPS-Select",
+    "nozzleId": "k-rain:RPS-Select:standard-4.0",
+    "colorName": null,
+    "verified": false,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "No verified color coding for four built-in selections; leave unknown.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-0.5",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-0.75",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-1.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-2.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-2.5",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-3.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-4.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-6.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:standard-8.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:low-angle-1.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:low-angle-3.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:low-angle-4.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "nozzleId": "k-rain:ProPlus:low-angle-6.0",
+    "colorName": "Red",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-1.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-1.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-2.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-2.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-3.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-4.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-5.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-6.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-8.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:low-angle-1.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:low-angle-1.5",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:low-angle-2.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:low-angle-3.0",
+    "colorName": "Green",
+    "verified": true,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "sourceLines": [
+      1567,
+      1581
+    ],
+    "reason": "Current catalogue explicitly names nozzle rack color; PR option inherits family rack.",
+    "hexIsApproximation": true
+  }
+]

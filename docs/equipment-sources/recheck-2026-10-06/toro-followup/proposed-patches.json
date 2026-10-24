@@ -1,0 +1,74 @@
+{
+  "checkedOn": "2026-10-06",
+  "format": "Sparse model patches: set fields only; preserve fields are explicit integration constraints.",
+  "patches": [
+    {
+      "id": "toro:PSN15-F",
+      "set": {
+        "verificationStatus": "Verified",
+        "geometryVerificationStatus": "Verified",
+        "verifiedOn": "2026-10-06",
+        "dataNote": "Published imperial rows converted with exact units. Source selected on 2026-10-06: current Toro product page links PSN-SS-CHARTS26-ONLY (PDF created 2026-05-08) and the 26-1045-IRC model list (created 2026-05-12), which explicitly lists this SKU. This newer dedicated source takes precedence over the 2026 catalogue (PDF created 2025-11-12, modified 2025-11-19) and 25-1045/legacy charts (created 2024-11-11). At 30 psi the selected chart publishes 2.31 gpm / 15.0 ft; older PSN+ tables publish 1.94 gpm / 14.1 ft and also differ at 40 and 50 psi. No manufacturer erratum or physical product revision is claimed. Use only the selected 20–50 psi measured domain; do not merge older 60–70 psi rows. Interpolation remains an estimate. Radius-reduction flow remains unknown; do not transfer the O-model rule."
+      },
+      "preserve": [
+        "nozzles",
+        "recommendedPressureMin",
+        "recommendedPressureMax",
+        "operatingPressureMinBar",
+        "operatingPressureMaxBar",
+        "radiusAdjustment",
+        "coverageRule",
+        "coverageRuleId",
+        "precipBasis"
+      ]
+    },
+    {
+      "id": "toro:PSN15T-F",
+      "set": {
+        "verificationStatus": "Verified",
+        "geometryVerificationStatus": "Verified",
+        "verifiedOn": "2026-10-06",
+        "dataNote": "Published imperial rows converted with exact units. Source selected on 2026-10-06: current Toro product page links PSN-SS-CHARTS26-ONLY (PDF created 2026-05-08) and the 26-1045-IRC model list (created 2026-05-12), which explicitly lists this SKU. This newer dedicated source takes precedence over the 2026 catalogue (PDF created 2025-11-12, modified 2025-11-19) and 25-1045/legacy charts (created 2024-11-11). At 30 psi the selected chart publishes 2.31 gpm / 15.0 ft; older PSN+ tables publish 1.94 gpm / 14.1 ft and also differ at 40 and 50 psi. No manufacturer erratum or physical product revision is claimed. Use only the selected 20–50 psi measured domain; do not merge older 60–70 psi rows. Interpolation remains an estimate. Radius-reduction flow remains unknown; do not transfer the O-model rule."
+      },
+      "preserve": [
+        "nozzles",
+        "recommendedPressureMin",
+        "recommendedPressureMax",
+        "operatingPressureMinBar",
+        "operatingPressureMaxBar",
+        "radiusAdjustment",
+        "coverageRule",
+        "coverageRuleId",
+        "precipBasis"
+      ]
+    },
+    {
+      "id": "toro:T5S-RS",
+      "set": {
+        "dataNote": "All 12 nozzle tables retained; published precipitation is based on 180 degrees. Radius reduction up to 25% is documented, but discharge at reduced radius is not; do not invent flow scaling. Recommended 45 psi is not an integrated pressure regulator. High-pop height converted from published 12 inches; shrub is aboveground, 0 pop-up travel. Factory check-valve inclusion remains unverified: 15-1009-IRC (2015) says it is standard on shrub models; the current T5S-RS product page says No but also applies a 5-inch pop-up specification to its shrub model. The current 20-1009-IRC sheet and 2026 catalogue do not resolve inclusion by exact shrub SKU. No dated change notice was found. Preserve CV in unverifiedBodyFeatures, not bodyFeatures; this accessory uncertainty does not invalidate nozzle hydraulics."
+      },
+      "preserve": [
+        "verificationStatus",
+        "bodyFeatures",
+        "unverifiedBodyFeatures",
+        "nozzles",
+        "mountingKind",
+        "popUpMm"
+      ]
+    },
+    {
+      "id": "toro:T5SE-RS",
+      "set": {
+        "dataNote": "All 12 nozzle tables retained; published precipitation is based on 180 degrees. Radius reduction up to 25% is documented, but discharge at reduced radius is not; do not invent flow scaling. Recommended 45 psi is not an integrated pressure regulator. High-pop height converted from published 12 inches; shrub is aboveground, 0 pop-up travel. Factory check-valve inclusion remains unverified: 15-1009-IRC (2015) says it is standard on shrub models; the current T5S-RS product page says No but also applies a 5-inch pop-up specification to its shrub model. The current 20-1009-IRC sheet and 2026 catalogue do not resolve inclusion by exact shrub SKU. No dated change notice was found. Preserve CV in unverifiedBodyFeatures, not bodyFeatures; this accessory uncertainty does not invalidate nozzle hydraulics."
+      },
+      "preserve": [
+        "verificationStatus",
+        "bodyFeatures",
+        "unverifiedBodyFeatures",
+        "nozzles",
+        "mountingKind",
+        "popUpMm"
+      ]
+    }
+  ]
+}

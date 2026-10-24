@@ -1,0 +1,331 @@
+{
+  "checkedOn": "2026-10-10",
+  "metadataPatches": [
+    {
+      "id": "rain-bird:1804-PRS",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 2.413165053,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 35,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1806-PRS",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 2.413165053,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 35,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1812-PRS",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 2.413165053,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 35,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1804-P45",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 3.447378647,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 50,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1806-P45",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 3.447378647,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 50,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1812-P45",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 3.447378647,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 50,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1804-SAM-PRS",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 2.413165053,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 35,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1806-SAM-PRS",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 2.413165053,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 35,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1812-SAM-PRS",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 2.413165053,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 35,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1804-SAM-P45",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 3.447378647,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 50,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1806-SAM-P45",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 3.447378647,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 50,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1812-SAM-P45",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 3.447378647,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 50,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1802-PRS",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 2.413165053,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 35,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:1803-PRS",
+      "field": "nominalRegulationMinInletBar",
+      "old": null,
+      "new": 2.413165053,
+      "sourceUrl": "https://www.rainbird.com/media/13671",
+      "sourcePage": 4,
+      "sourceValue": 35,
+      "sourceUnit": "psi",
+      "reason": "Nominal nozzle pressure is guaranteed only at or above this inlet pressure. Below it the spec allows up to6psi loss; no exact loss curve is published."
+    },
+    {
+      "id": "rain-bird:5004+PCR",
+      "field": "pressureBasis",
+      "old": null,
+      "new": "inlet",
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "reason": "Dedicated PRS performance includes measured low-inlet points and constant3.5–5.2bar plateau. It must not be capped at nominal3.1bar nozzle outlet pressure."
+    }
+  ],
+  "rowPatches": [
+    {
+      "id": "rain-bird:5004-PC",
+      "nozzleId": "rain-bird:5000:6",
+      "pressureBar": 2.0,
+      "field": "precipSquareMmH",
+      "old": 15.0,
+      "new": null,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "sourceAlternativeUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+      "sourceRadiusM": 12.4,
+      "sourceFlowLMin": 17.4,
+      "diagnosticCalculatedMmH": 13.579604578563995,
+      "generousRoundingEnvelopeMmH": [
+        13.238496153287844,
+        13.925814224130868
+      ],
+      "reason": "Published precipitation disagrees with same-row radius/flow and stated180degree operation/50%-diameter spacing, beyond generous rounding. Keep hydraulic row; null only disputed published precipitation. Calculated value is diagnostic, not replacement manufacturer data."
+    },
+    {
+      "id": "rain-bird:5004-PC",
+      "nozzleId": "rain-bird:5000:6",
+      "pressureBar": 2.0,
+      "field": "precipTriangleMmH",
+      "old": 17.0,
+      "new": null,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "sourceAlternativeUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+      "sourceRadiusM": 12.4,
+      "sourceFlowLMin": 17.4,
+      "diagnosticCalculatedMmH": 15.680376717845196,
+      "generousRoundingEnvelopeMmH": [
+        15.286498635533126,
+        16.080145181973354
+      ],
+      "reason": "Published precipitation disagrees with same-row radius/flow and stated180degree operation/50%-diameter spacing, beyond generous rounding. Keep hydraulic row; null only disputed published precipitation. Calculated value is diagnostic, not replacement manufacturer data."
+    },
+    {
+      "id": "rain-bird:5004-PC",
+      "nozzleId": "rain-bird:5000:6",
+      "pressureBar": 3.0,
+      "field": "precipSquareMmH",
+      "old": 13.0,
+      "new": null,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "sourceAlternativeUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+      "sourceRadiusM": 13.4,
+      "sourceFlowLMin": 22.2,
+      "diagnosticCalculatedMmH": 14.836266429048786,
+      "generousRoundingEnvelopeMmH": [
+        14.52716242174652,
+        15.149602322939023
+      ],
+      "reason": "Published precipitation disagrees with same-row radius/flow and stated180degree operation/50%-diameter spacing, beyond generous rounding. Keep hydraulic row; null only disputed published precipitation. Calculated value is diagnostic, not replacement manufacturer data."
+    },
+    {
+      "id": "rain-bird:5004+PC",
+      "nozzleId": "rain-bird:5000:6",
+      "pressureBar": 2.0,
+      "field": "precipSquareMmH",
+      "old": 15.0,
+      "new": null,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "sourceAlternativeUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+      "sourceRadiusM": 12.4,
+      "sourceFlowLMin": 17.4,
+      "diagnosticCalculatedMmH": 13.579604578563995,
+      "generousRoundingEnvelopeMmH": [
+        13.238496153287844,
+        13.925814224130868
+      ],
+      "reason": "Published precipitation disagrees with same-row radius/flow and stated180degree operation/50%-diameter spacing, beyond generous rounding. Keep hydraulic row; null only disputed published precipitation. Calculated value is diagnostic, not replacement manufacturer data."
+    },
+    {
+      "id": "rain-bird:5004+PC",
+      "nozzleId": "rain-bird:5000:6",
+      "pressureBar": 2.0,
+      "field": "precipTriangleMmH",
+      "old": 17.0,
+      "new": null,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "sourceAlternativeUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+      "sourceRadiusM": 12.4,
+      "sourceFlowLMin": 17.4,
+      "diagnosticCalculatedMmH": 15.680376717845196,
+      "generousRoundingEnvelopeMmH": [
+        15.286498635533126,
+        16.080145181973354
+      ],
+      "reason": "Published precipitation disagrees with same-row radius/flow and stated180degree operation/50%-diameter spacing, beyond generous rounding. Keep hydraulic row; null only disputed published precipitation. Calculated value is diagnostic, not replacement manufacturer data."
+    },
+    {
+      "id": "rain-bird:5004+PC",
+      "nozzleId": "rain-bird:5000:6",
+      "pressureBar": 3.0,
+      "field": "precipSquareMmH",
+      "old": 13.0,
+      "new": null,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "sourceAlternativeUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+      "sourceRadiusM": 13.4,
+      "sourceFlowLMin": 22.2,
+      "diagnosticCalculatedMmH": 14.836266429048786,
+      "generousRoundingEnvelopeMmH": [
+        14.52716242174652,
+        15.149602322939023
+      ],
+      "reason": "Published precipitation disagrees with same-row radius/flow and stated180degree operation/50%-diameter spacing, beyond generous rounding. Keep hydraulic row; null only disputed published precipitation. Calculated value is diagnostic, not replacement manufacturer data."
+    },
+    {
+      "id": "rain-bird:5004+PCR",
+      "nozzleId": "rain-bird:5000-PRS:6",
+      "pressureBar": 2.0,
+      "field": "precipSquareMmH",
+      "old": 15.0,
+      "new": null,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 5,
+      "sourceAlternativeUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+      "sourceRadiusM": 12.4,
+      "sourceFlowLMin": 17.4,
+      "diagnosticCalculatedMmH": 13.579604578563995,
+      "generousRoundingEnvelopeMmH": [
+        13.238496153287844,
+        13.925814224130868
+      ],
+      "reason": "Published precipitation disagrees with same-row radius/flow and stated180degree operation/50%-diameter spacing, beyond generous rounding. Keep hydraulic row; null only disputed published precipitation. Calculated value is diagnostic, not replacement manufacturer data."
+    },
+    {
+      "id": "rain-bird:5004+PCR",
+      "nozzleId": "rain-bird:5000-PRS:6",
+      "pressureBar": 2.0,
+      "field": "precipTriangleMmH",
+      "old": 17.0,
+      "new": null,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 5,
+      "sourceAlternativeUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+      "sourceRadiusM": 12.4,
+      "sourceFlowLMin": 17.4,
+      "diagnosticCalculatedMmH": 15.680376717845196,
+      "generousRoundingEnvelopeMmH": [
+        15.286498635533126,
+        16.080145181973354
+      ],
+      "reason": "Published precipitation disagrees with same-row radius/flow and stated180degree operation/50%-diameter spacing, beyond generous rounding. Keep hydraulic row; null only disputed published precipitation. Calculated value is diagnostic, not replacement manufacturer data."
+    }
+  ],
+  "radiusOrFlowPatches": [],
+  "notes": [
+    "All567full-radius rows checked against371freshly extracted official rows.",
+    "Keep5004+PCRdefault2.5bar: applicationdefault,notmanufacturerrecommendedpressure. Optional UXchange3.5bar is firstmetricplateau only.",
+    "Do not change current1800max4.8bar from currentlinkedtechspec based on older generic100psi claims."
+  ]
+}

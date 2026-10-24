@@ -1,0 +1,2876 @@
+{
+  "auditedOn": "2026-10-10",
+  "coverage": [
+    {
+      "id": "MP1000-90",
+      "series": "MP1000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        90,
+        210
+      ],
+      "verifiedArc": [
+        90,
+        210
+      ],
+      "publishedDesignArcs": [
+        90,
+        180,
+        210
+      ],
+      "performanceRows": 18,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP1000-210",
+      "series": "MP1000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        210,
+        270
+      ],
+      "verifiedArc": [
+        210,
+        270
+      ],
+      "publishedDesignArcs": [
+        210,
+        270
+      ],
+      "performanceRows": 12,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP1000-360",
+      "series": "MP1000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        360,
+        360
+      ],
+      "verifiedArc": [
+        360,
+        360
+      ],
+      "publishedDesignArcs": [
+        360
+      ],
+      "performanceRows": 6,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP2000-90",
+      "series": "MP2000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        90,
+        210
+      ],
+      "verifiedArc": [
+        90,
+        210
+      ],
+      "publishedDesignArcs": [
+        90,
+        180,
+        210
+      ],
+      "performanceRows": 18,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 5.4864,
+          "minimumRadiusM": 4.1148,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.1148,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 5.7912,
+          "minimumRadiusM": 4.3434,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.3434,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 6.096,
+          "minimumRadiusM": 4.572,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.572,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 5.1816,
+          "minimumRadiusM": 3.8862,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 5.4864,
+          "minimumRadiusM": 4.1148,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.1148,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 5.7912,
+          "minimumRadiusM": 4.3434,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.3434,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 6.096,
+          "minimumRadiusM": 4.572,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.572,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 5.1816,
+          "minimumRadiusM": 3.8862,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 5.4864,
+          "minimumRadiusM": 4.1148,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.1148,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 5.7912,
+          "minimumRadiusM": 4.3434,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.3434,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 6.096,
+          "minimumRadiusM": 4.572,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.572,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP2000-210",
+      "series": "MP2000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        210,
+        270
+      ],
+      "verifiedArc": [
+        210,
+        270
+      ],
+      "publishedDesignArcs": [
+        210,
+        270
+      ],
+      "performanceRows": 12,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 5.1816,
+          "minimumRadiusM": 3.8862,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 5.4864,
+          "minimumRadiusM": 4.1148,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.1148,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 5.7912,
+          "minimumRadiusM": 4.3434,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.3434,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 6.096,
+          "minimumRadiusM": 4.572,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.572,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 5.1816,
+          "minimumRadiusM": 3.8862,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 5.4864,
+          "minimumRadiusM": 4.1148,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.1148,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 5.7912,
+          "minimumRadiusM": 4.3434,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.3434,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 6.096,
+          "minimumRadiusM": 4.572,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.572,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP2000-360",
+      "series": "MP2000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        360,
+        360
+      ],
+      "verifiedArc": [
+        360,
+        360
+      ],
+      "publishedDesignArcs": [
+        360
+      ],
+      "performanceRows": 6,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 5.1816,
+          "minimumRadiusM": 3.8862,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 5.4864,
+          "minimumRadiusM": 4.1148,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.1148,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 5.7912,
+          "minimumRadiusM": 4.3434,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.3434,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 6.096,
+          "minimumRadiusM": 4.572,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.572,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 6.4008,
+          "minimumRadiusM": 4.8006,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 4,
+          "previousGlobalFloorM": 4.8006,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP3000-90",
+      "series": "MP3000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        90,
+        210
+      ],
+      "verifiedArc": [
+        90,
+        210
+      ],
+      "publishedDesignArcs": [
+        90,
+        180,
+        210
+      ],
+      "performanceRows": 18,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 8.2296,
+          "minimumRadiusM": 6.1722,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 8.5344,
+          "minimumRadiusM": 6.4008,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 8.2296,
+          "minimumRadiusM": 6.1722,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 8.5344,
+          "minimumRadiusM": 6.4008,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 8.2296,
+          "minimumRadiusM": 6.1722,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 8.5344,
+          "minimumRadiusM": 6.4008,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP3000-210",
+      "series": "MP3000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        210,
+        270
+      ],
+      "verifiedArc": [
+        210,
+        270
+      ],
+      "publishedDesignArcs": [
+        210,
+        270
+      ],
+      "performanceRows": 12,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 8.2296,
+          "minimumRadiusM": 6.1722,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 8.5344,
+          "minimumRadiusM": 6.4008,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 8.2296,
+          "minimumRadiusM": 6.1722,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 8.5344,
+          "minimumRadiusM": 6.4008,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP3000-360",
+      "series": "MP3000",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        360,
+        360
+      ],
+      "verifiedArc": [
+        360,
+        360
+      ],
+      "publishedDesignArcs": [
+        360
+      ],
+      "performanceRows": 6,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 8.2296,
+          "minimumRadiusM": 6.1722,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 8.5344,
+          "minimumRadiusM": 6.4008,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.7,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 9.144,
+          "minimumRadiusM": 6.858,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 6.7,
+          "previousGlobalFloorM": 6.858,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP3500-90",
+      "series": "MP3500",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        90,
+        210
+      ],
+      "verifiedArc": [
+        90,
+        210
+      ],
+      "publishedDesignArcs": [
+        90,
+        180,
+        210
+      ],
+      "performanceRows": 18,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 10.3632,
+          "minimumRadiusM": 7.7724,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 10.3632,
+          "minimumRadiusM": 7.7724,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 10.3632,
+          "minimumRadiusM": 7.7724,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 10.3632,
+          "minimumRadiusM": 7.7724,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 10.3632,
+          "minimumRadiusM": 7.7724,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 10.3632,
+          "minimumRadiusM": 7.7724,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 10.668,
+          "minimumRadiusM": 8.001,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 9.4,
+          "previousGlobalFloorM": 9.4,
+          "blockedByPreviousGlobalFloor": true
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP-CORNER",
+      "series": "MP Corner",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        45,
+        105
+      ],
+      "verifiedArc": [
+        45,
+        105
+      ],
+      "publishedDesignArcs": [
+        45,
+        90,
+        105
+      ],
+      "performanceRows": 18,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 45,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 45,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 45,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 45,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 45,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 45,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 105,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 2.7432,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 105,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 105,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 105,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 105,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 105,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP-LCS-515",
+      "series": "MP-LCS-515",
+      "active": true,
+      "coverageKind": "strip",
+      "catalogArc": [
+        90,
+        90
+      ],
+      "verifiedArc": [
+        90,
+        90
+      ],
+      "publishedDesignArcs": [],
+      "performanceRows": 6,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2.1,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [],
+      "disposition": "correct strip arc metadata"
+    },
+    {
+      "id": "MP-RCS-515",
+      "series": "MP-RCS-515",
+      "active": true,
+      "coverageKind": "strip",
+      "catalogArc": [
+        90,
+        90
+      ],
+      "verifiedArc": [
+        90,
+        90
+      ],
+      "publishedDesignArcs": [],
+      "performanceRows": 6,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2.1,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [],
+      "disposition": "correct strip arc metadata"
+    },
+    {
+      "id": "MP-SS-530",
+      "series": "MP-SS-530",
+      "active": true,
+      "coverageKind": "strip",
+      "catalogArc": [
+        180,
+        180
+      ],
+      "verifiedArc": [
+        180,
+        180
+      ],
+      "publishedDesignArcs": [],
+      "performanceRows": 6,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2.1,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP800SR-90",
+      "series": "MP800SR",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        90,
+        210
+      ],
+      "verifiedArc": [
+        90,
+        210
+      ],
+      "publishedDesignArcs": [
+        90,
+        180,
+        210
+      ],
+      "performanceRows": 18,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2.1,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 2.4384,
+          "minimumRadiusM": 1.8288,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 1.8288,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 0.492104
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 2.7432,
+          "minimumRadiusM": 2.1336,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.1336,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 0.567812
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 3.048,
+          "minimumRadiusM": 2.4384,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.4384,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 0.605666
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 3.3528,
+          "minimumRadiusM": 2.4384,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.4384,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 0.681374
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 3.3528,
+          "minimumRadiusM": 2.7432,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 0.719228
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 3.048,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 3.048,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 0.757082
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 2.4384,
+          "minimumRadiusM": 1.8288,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 1.8288,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 0.984207
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 2.7432,
+          "minimumRadiusM": 2.1336,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.1336,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.097769
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 3.048,
+          "minimumRadiusM": 2.4384,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.4384,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.211332
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 3.3528,
+          "minimumRadiusM": 2.4384,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.4384,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.362748
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 3.3528,
+          "minimumRadiusM": 2.7432,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.438456
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 3.048,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 3.048,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.514165
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 2.4384,
+          "minimumRadiusM": 1.8288,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 1.8288,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.135624
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 2.7432,
+          "minimumRadiusM": 2.1336,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.1336,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.28704
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 3.048,
+          "minimumRadiusM": 2.4384,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.4384,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.400602
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 3.048,
+          "minimumRadiusM": 2.4384,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.4384,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.589873
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 3.3528,
+          "minimumRadiusM": 2.7432,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.665581
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 3.048,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 3.048,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.779144
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP800SR-360",
+      "series": "MP800SR",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        360,
+        360
+      ],
+      "verifiedArc": [
+        360,
+        360
+      ],
+      "publishedDesignArcs": [
+        360
+      ],
+      "performanceRows": 6,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2.1,
+        2.5,
+        2.8,
+        3,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 2.4384,
+          "minimumRadiusM": 1.8288,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 1.8288,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.779144
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 2.7432,
+          "minimumRadiusM": 2.1336,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.1336,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 1.968414
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 3.048,
+          "minimumRadiusM": 2.4384,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.4384,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 2.119831
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 3.048,
+          "minimumRadiusM": 2.4384,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.4384,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 2.233393
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 3.3528,
+          "minimumRadiusM": 2.7432,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 2.7432,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 2.384809
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 3.6576,
+          "minimumRadiusM": 3.048,
+          "basis": "published US minimum row",
+          "catalogMarketingMinM": 1.8,
+          "previousGlobalFloorM": 3.048,
+          "blockedByPreviousGlobalFloor": false,
+          "flowAtMinimumLMin": 2.649788
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP815-90",
+      "series": "MP815",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        90,
+        210
+      ],
+      "verifiedArc": [
+        90,
+        210
+      ],
+      "publishedDesignArcs": [
+        90,
+        180,
+        210
+      ],
+      "performanceRows": 18,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2.1,
+        2.5,
+        2.8,
+        3.1,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 90,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 180,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP815-210",
+      "series": "MP815",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        210,
+        270
+      ],
+      "verifiedArc": [
+        210,
+        270
+      ],
+      "publishedDesignArcs": [
+        210,
+        270
+      ],
+      "performanceRows": 12,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2.1,
+        2.5,
+        2.8,
+        3.1,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 210,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 270,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    },
+    {
+      "id": "MP815-360",
+      "series": "MP815",
+      "active": true,
+      "coverageKind": "sector",
+      "catalogArc": [
+        360,
+        360
+      ],
+      "verifiedArc": [
+        360,
+        360
+      ],
+      "publishedDesignArcs": [
+        360
+      ],
+      "performanceRows": 6,
+      "usComparison": {
+        "radiusFlowPrecipAndExplicitMinimums": "all pass",
+        "tolerance": 1e-06
+      },
+      "currentPressureGridBar": [
+        2.1,
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.8
+      ],
+      "metricPressureGridBar": [
+        2.1,
+        2.5,
+        2.8,
+        3.1,
+        3.5,
+        3.8
+      ],
+      "recommendedPressureBar": 2.8,
+      "boundsPolicy": [
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.1,
+          "maximumRadiusM": 3.9624,
+          "minimumRadiusM": 2.9718,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 2.9718,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.4,
+          "maximumRadiusM": 4.2672,
+          "minimumRadiusM": 3.2004,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.2004,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 2.8,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.1,
+          "maximumRadiusM": 4.572,
+          "minimumRadiusM": 3.429,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.429,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.4,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        },
+        {
+          "arcDeg": 360,
+          "pressureBar": 3.8,
+          "maximumRadiusM": 4.8768,
+          "minimumRadiusM": 3.6576,
+          "basis": "design estimate from manufacturer up-to-approximately-25-percent adjustment",
+          "catalogMarketingMinM": 2.5,
+          "previousGlobalFloorM": 3.6576,
+          "blockedByPreviousGlobalFloor": false
+        }
+      ],
+      "disposition": "keep current coherent hydraulic table"
+    }
+  ]
+}

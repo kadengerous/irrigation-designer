@@ -1,0 +1,40 @@
+ (https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75%20gear%20drive%20rotor%20product%20specifications.pdf)
+citeturn480view0 [wordlim: 200] Crawled: last month; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75%20gear%20drive%20rotor%20product%20specifications.pdf","lineno":null}); Total lines: 37
+L0@P0: Product Specifications
+L1@P0: An ISO 9001 Certified Company I Customer Service 1.800.735.7246 I Technical Support 561.844.1002 x129
+L2@P0: RPS75 Gear Drive Rotor / Professional Series Sprinkler
+L3@P0: Model # RPS75, RPS75-CV
+L4@P0: The sprinkler shall be of the gear-driven, rotary type, capable of covering a _______ foot (m) radius at
+L5@P0: _______ PSI (bar;kPa) with a discharge rate of _______ inches per hour (mm/h;l/m). The sprinkler shall be
+L6@P0: available with eight (8) nozzles with a trajectory of 26° discharging from .75 to 8.2 GPM (2.8–31.0 l/m) and
+L7@P0: four (4) low-angle nozzles with a trajectory of 11° discharging from 1.2 to 8.6 GPM (4.5–32.5 l/m). The
+L8@P0: sprinkler shall have radius adjustment capabilities by means of a stainless-steel nozzle retainer and radius
+L9@P0: adjustment screw.
+L10@P0: The sprinkler shall perform as a continuous full circle and as an adjustable part-circle configuration in a single
+L11@P0: unit. The sprinkler shall be minutely adjustable from 40° to 360°. The adjustable unit shall be adjustable in all
+L12@P0: phases of installation (i.e., before installation, after installation while static, and after installation while in
+L13@P0: operation) by turning the sprinkler head riser. The sprinkler shall have a top arc adjustment carried out by the
+L14@P0: rotation of a flat blade screwdriver within the top cover.
+L15@P0: The sprinkler shall have a pressure activated multi-function wiper seal that positively seals against the pop-up
+L16@P0: stem to reduce leaks caused by trapped debris under the wiper seal. The wiper seal shall be capable of sealing
+L17@P0: the sprinkler cap to sprinkler body under normal operating pressures. The sprinkler shall have a rubber cover
+L18@P0: firmly attached to the top of the top of the sprinkler riser to seal dirt and increase product durability. When
+L19@P0: specified, the sprinkler shall have a molded purple rubber cover to indicate the use of non-potable water
+L20@P0: (RPS75-RCW).
+L21@P0: The sprinkler shall have a minimum of 4-inch (10.1 cm) pop-up stroke to bring the rotating nozzle turret into a
+L22@P0: clean environment. Pop-up height as measured from the top of the cap at installation to the middle of the
+L23@P0: nozzle opening shall be _______ inches (cm). The sprinkler shall have an exposed surface diameter after
+L24@P0: installation of _______ inches (cm) and have an overall height of _______ inches (cm). The unit shall have a
+L25@P0: 3/4-inch (1.9 cm) Female National Pipe Thread (FNPT) inlet.
+L26@P0: The body and riser of the sprinkler shall be constructed of corrosion resistant, impact resistant, heavy duty
+L27@P0: ABS. The unit shall have a stainless-steel spring for positive retraction of the riser when irrigation is complete.
+L28@P0-1: The sprinkler shall be serviceable after installation by unscrewing the body cap, removing the riser assembly, Product Specifications
+L29@P1: An ISO 9001 Certified Company I Customer Service 1.800.735.7246 I Technical Support 561.844.1002 x129
+L30@P1: and extracting the inlet filter basket. The inlet filter basket shall protect the drive from clogging and shall be
+L31@P1: removed for cleaning and flushing the system. The sprinkler shall include a universal plastic adjustment tool.
+L32@P1: The sprinkler may be equipped with an optional drain check valve (RPS75-CV) to prevent low head drainage
+L33@P1: and be capable of checking up to 10 feet (3 m) in elevation change. The sprinkler shall also be available with
+L34@P1: no pre-installed nozzle (RPS75-NN).
+L35@P1: The sprinkler shall carry a seven-year trade, exchange warranty.
+L36@P1: The sprinkler shall be manufactured by K-Rain Manufacturing Corporation of Riviera Beach, Florida.
+

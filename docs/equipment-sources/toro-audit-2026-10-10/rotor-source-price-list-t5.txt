@@ -1,0 +1,259 @@
+ (https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf)
+citeturn441view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 27; Source: open({"ref_id":"turn433view1","lineno":700}); Total lines: 1753
+L618@P9: 89-1467 8' MPR Plus, 120° Nozzle with Screen, PC $3.44 A 25 36,000
+L619@P9: 89-1464 8' MPR Plus, 180° Nozzle with Screen, PC $3.44 A 25 36,000
+L620@P9: 89-1461 8' MPR Plus, 240° Nozzle with Screen, PC $3.44 A 25 36,000
+L621@P9: 89-1458 8' MPR Plus, 270° Nozzle with Screen, PC $3.44 A 25 36,000
+L622@P9-10: 6Model Number Description 2026
+L623@P10: List Price
+L624@P10: Discount
+L625@P10: Code
+L626@P10: Bag /
+L627@P10: Case
+L628@P10: Qty.
+L629@P10: Pallet
+L630@P10: Qty.
+L631@P10: 89-1455 8' MPR Plus, 360° Nozzle with Screen, PC $3.44 A 25 36,000
+L632@P10: 89-1488 5' MPR Plus, 90° Nozzle with Screen, PC $3.44 A 25 36,000
+L633@P10: 89-1485 5' MPR Plus, 120° Nozzle with Screen, PC $3.44 A 25 36,000
+L634@P10: 89-1482 5' MPR Plus, 180° Nozzle with Screen, PC $3.44 A 25 36,000
+L635@P10: 89-1479 5' MPR Plus, 240° Nozzle with Screen, PC $3.44 A 25 36,000
+L636@P10: 89-1476 5' MPR Plus, 270° Nozzle with Screen, PC $3.44 A 25 36,000
+L637@P10: 89-1473 5' MPR Plus, 360° Nozzle with Screen, PC $3.44 A 25 36,000
+L638@P10: 89-1503 4-SST-PC Nozzle with Screen, Side Strip, 4' X 30', PC $3.44 A 25 36,000
+L639@P10: 89-1500 4-EST-PC Nozzle with Screen, End Strip, 4' X 15', PC $3.44 A 25 36,000
+L640@P10: 89-1497 4-CST-PC Nozzle with Screen, Center Strip, 4' X 30', PC $3.44 A 25 36,000
+L641@P10: 89-1506 9-SST-PC Nozzle with Screen, Side Strip, 9' X 18', PC $3.44 A 25 36,000
+L642@P10: 89-1509 4-SST-PC Nozzle with Screen, Side Strip, 4' X 18', PC $3.44 A 25 36,000
+L643@P10: 89-1512 2-SST-PC Nozzle with Screen, Side Strip, 2' X 6', PC $3.44 A 25 36,000
+L644@P10: 35-7704 8' Flat Spray, 90° Nozzle with Screen, PC $3.87 A 25 36,000
+L645@P10: 35-7700 8' Flat Spray, 180° Nozzle with Screen, PC $3.87 A 25 36,000
+L646@P10: 35-7698 8' Flat Spray, 360° Nozzle with Screen, PC $3.87 A 25 36,000
+L647@P10: 35-7712 8' Flat Spray, 90° Nozzle with Screen, PC, Low Flow $3.87 A 25 36,000
+L648@P10: 35-7708 8' Flat Spray, 180° Nozzle with Screen, PC, Low Flow $3.87 A 25 36,000
+L649@P10: IRRITROL I-PRO™ SERIES MPR NOZZLES
+L650@P10: IPN-5Q Irritrol Fixed Spray Nozzle, 5' Quarter $1.98 A 25 36,000
+L651@P10: IPN-5T Irritrol Fixed Spray Nozzle, 5' One-Third $1.98 A 25 36,000
+L652@P10: IPN-5H Irritrol Fixed Spray Nozzle, 5' Half $1.98 A 25 36,000
+L653@P10: IPN-5F Irritrol Fixed Spray Nozzle, 5' Full $1.98 A 25 36,000
+L654@P10: IPN-8Q Irritrol Fixed Spray Nozzle, 8' Quarter $1.98 A 25 36,000
+L655@P10: IPN-8T Irritrol Fixed Spray Nozzle, 8' One-Third $1.98 A 25 36,000
+L656@P10: IPN-8H Irritrol Fixed Spray Nozzle, 8' Half $1.98 A 25 36,000
+L657@P10: IPN-8F Irritrol Fixed Spray Nozzle, 8' Full $1.98 A 25 36,000
+L658@P10: IPN-10Q Irritrol Fixed Spray Nozzle, 10' Quarter $1.98 A 25 36,000
+L659@P10: IPN-10T Irritrol Fixed Spray Nozzle, 10' One-Third $1.98 A 25 36,000
+L660@P10: IPN-10H Irritrol Fixed Spray Nozzle, 10' Half $1.98 A 25 36,000
+L661@P10: IPN-10F Irritrol Fixed Spray Nozzle, 10' Full $1.98 A 25 36,000
+L662@P10: IPN-12Q Irritrol Fixed Spray Nozzle, 12' Quarter $1.98 A 25 36,000
+L663@P10: IPN-12T Irritrol Fixed Spray Nozzle, 12' One-Third $1.98 A 25 36,000
+L664@P10: IPN-12H Irritrol Fixed Spray Nozzle, 12' Half $1.98 A 25 36,000
+L665@P10: IPN-12TT Irritrol Fixed Spray Nozzle, 12' Two-Thirds $1.98 A 25 36,000
+L666@P10: IPN-12TQ Irritrol Fixed Spray Nozzle,12' Three-Quarter $1.98 A 25 36,000
+L667@P10: IPN-12F Irritrol Fixed Spray Nozzle, 12' Full $1.98 A 25 36,000
+L668@P10: IPN-15Q Irritrol Fixed Spray Nozzle, 15' Quarter $1.98 A 25 36,000
+L669@P10: IPN-15T Irritrol Fixed Spray Nozzle, 15' One-Third $1.98 A 25 36,000
+L670@P10: IPN-15H Irritrol Fixed Spray Nozzle, 15' Half $1.98 A 25 36,000
+L671@P10: IPN-15TT Irritrol Fixed Spray Nozzle, 15' Two-Thirds $1.98 A 25 36,000
+L672@P10: IPN-15TQ Irritrol Fixed Spray Nozzle,15' Three-Quarter $1.98 A 25 36,000
+L673@P10: IPN-15F Irritrol Fixed Spray Nozzle, 15' Full $1.98 A 25 36,000
+L674@P10: IPN-9CST Irritrol Fixed Spray Nozzle, 4' x 18' Center Strip $2.12 A 25 36,000
+L675@P10: IPN-9SST Irritrol Fixed Spray Nozzle, 4' x 18' Side Strip $2.12 A 25 36,000
+L676@P10: IPN-9EST Irritrol Fixed Spray Nozzle, 4' x 9' End Strip $2.12 A 25 36,000
+L677@P10: IPN-15CST Irritrol Fixed Spray Nozzle, 4' x 30' Center Strip $2.04 A 25 36,000
+L678@P10: IPN-15SST Irritrol Fixed Spray Nozzle, 4' x 30' Side Strip $2.04 A 25 36,000
+L679@P10: IPN-15EST Irritrol Fixed Spray Nozzle, 4' x 15' End Strip $2.04 A 25 36,000
+L680@P10: STREAM SPRAY NOZZLES
+L681@P10: 89-1805 10-SSQ Nozzle with Screen, 10° Trajectory Stream Spray $3.28 A 25 N/A
+L682@P10: 89-1804 10-SSH Nozzle with Screen, 10° Trajectory Stream Spray $3.28 A 25 N/A
+L683@P10: 89-1803 10-SSF Nozzle with Screen, 10° Trajectory Stream Spray $3.28 A 25 N/A
+L684@P10: 89-1547 10-SSQ-PC Nozzle with Screen, 10° Trajectory Stream Spray, PC $3.44 A 25 N/A
+L685@P10: 89-1521 10-SSH-PC Nozzle with Screen, 10° Trajectory Stream Spray, PC $3.44 A 25 N/A
+L686@P10: 89-1519 10-SSF-PC Nozzle with Screen, 10° Trajectory Stream Spray, PC $3.44 A 25 N/A
+L687@P10: 89-1802 35-SSQ Nozzle with Screen, 35° Trajectory Stream Spray $3.28 A 25 N/A
+L688@P10: 89-1801 35-SSH Nozzle with Screen, 35° Trajectory Stream Spray $3.28 A 25 N/A
+L689@P10: 89-1800 35-SSF Nozzle with Screen, 35° Trajectory Stream Spray $3.28 A 25 N/A
+L690@P10: 89-1495 35-SSQ-PC Nozzle with Screen, 35° Trajectory Stream Spray, PC $3.44 A 25 N/A
+L691@P10: 89-1493 35-SSH-PC Nozzle with Screen, 35° Trajectory Stream Spray, PC $3.44 A 25 N/A
+L692@P10: 89-1491 35-SSF-PC Nozzle with Screen, 35° Trajectory Stream Spray, PC $3.44 A 25 N/A
+L693@P10: STREAM BUBBLER NOZZLES
+L694@P10: 10-SBQ-PC3 90° Stream Bubbler Nozzle with Screen, 3 FT Radius, PC $3.40 A 25 N/A
+L695@P10: 10-SBH-PC3 180° Stream Bubbler Nozzle with Screen, 3 FT Radius, PC $3.40 A 25 N/A
+L696@P10: 10-SBF-PC3 360° Stream Bubbler Nozzle with Screen, 3 FT Radius, PC $3.35 A 25 N/A
+L697@P10-11: 7Model Number Description 2026
+L698@P11: List Price
+L699@P11: Discount
+L700@P11: Code
+L701@P11: Bag /
+L702@P11: Case
+L703@P11: Qty.
+L704@P11: Pallet
+L705@P11: Qty.
+L706@P11: 89-7865 90° Stream Bubbler Nozzle with Screen, 2 FT Radius, PC (SB-90-PC2) $3.44 A 25 N/A
+L707@P11: 89-7875 180° Stream Bubbler Nozzle with Screen, 2 FT Radius, PC (SB-180-PC2) $3.44 A 25 N/A
+L708@P11: 89-7877 360° Stream Bubbler Nozzle with Screen, 2 FT Radius, PC (SB-360-PC2) $3.44 A 25 N/A
+L709@P11: 89-7871 180° Stream Bubbler Nozzle with Screen, 2 FT 2-stream CST, PC (SB-2-180-PC2) $3.44 A 25 N/A
+L710@P11: 89-7873 180° Stream Bubbler Nozzle with Screen, 2 FT 4-stream CST, PC (SB-4-180-PC2) $3.44 A 25 N/A
+L711@P11: 89-1806 90° Stream Bubbler Nozzle with Screen (SB-90) $3.28 A 25 N/A
+L712@P11: 89-1807 180° Stream Bubbler Nozzle with Screen (SB-180) $3.28 A 25 N/A
+L713@P11: 89-1808 360° Stream Bubbler Nozzle with Screen (SB-360) $3.28 A 25 N/A
+L714@P11: 89-1809 180° Stream Bubbler Nozzle with Screen, CST (SB-2-180) $3.28 A 25 N/A
+L715@P11: 89-1810 180° Stream Bubbler Nozzle with Screen, CST (SB-4-180) $3.28 A 25 N/A
+L716@P11: FLOOD BUBBLER NOZZLES
+L717@P11: 89-1727 0.25 GPM Flood Bubbler Nozzle with Screen, PC (FB-25-PC) $3.44 A 25 N/A
+L718@P11: 89-1729 0.50 GPM Flood Bubbler Nozzle with Screen, PC (FB-50-PC) $3.44 A 25 N/A
+L719@P11: 89-1731 1.00 GPM Flood Bubbler Nozzle with Screen, PC (FB-100-PC) $3.44 A 25 N/A
+L720@P11: 89-1733 Adjustable Flood Bubbler Nozzle with Screen, 0-2 GPM, PC (FB-200-ADJ-PC) $3.44 A 25 N/A
+L721@P11: 533 Irritrol Adjustable Flood Bubbler $3.61 A 100 N/A
+L722@P11: 533NP Irritrol Adjustable Flood Bubbler, Non-Potable $3.97 A 100 N/A
+L723@P11: 533FS Filter Screen for 533 Bubbler $0.65 B 50 N/A
+L724@P11: TORO VARIABLE ARC NOZZLES (TVAN)
+L725@P11: TVAN8 8' TVAN Variable Arc Nozzle, Toro (Male) Thread $3.38 A 25 36,000
+L726@P11: TVAN10 10' TVAN Variable Arc Nozzle, Toro (Male) Thread $3.38 A 25 36,000
+L727@P11: TVAN12 12' TVAN Variable Arc Nozzle, Toro (Male) Thread $3.38 A 25 36,000
+L728@P11: TVAN15 15' TVAN Variable Arc Nozzle, Toro (Male) Thread $3.38 A 25 36,000
+L729@P11: TVAN17 17' TVAN Variable Arc Nozzle, Toro (Male) Thread $3.38 A 25 36,000
+L730@P11: IRRITROL PRO-VAN SERIES VARIABLE ARC NOZZLES
+L731@P11: PRO-VAN8 8' Nozzle, Adjustable 0-360 Degrees, with Filter Screen $2.70 A 25 36,000
+L732@P11: PRO-VAN10 10' Nozzle, Adjustable 0-360 Degrees, with Filter Screen $2.70 A 25 36,000
+L733@P11: PRO-VAN12 12' Nozzle, Adjustable 0-360 Degrees, with Filter Screen $2.70 A 25 36,000
+L734@P11: PRO-VAN15 15' Nozzle, Adjustable 0-360 Degrees, with Filter Screen $2.70 A 25 36,000
+L735@P11: PRO-VAN17 17' Nozzle, Adjustable 0-360 Degrees, with Filter screen $2.70 A 25 36,000
+L736@P11: 500 SERIES STREAM AND FLOOD BUBBLERS (For use with 1/2" Stationary Risers)
+L737@P11: 511-30 500 Series Quarter Circle Stream Bubbler $3.24 A 25 N/A
+L738@P11: 512-30 500 Series Half Circle Stream Bubbler $3.24 A 25 N/A
+L739@P11: 514-30 500 Series Full Circle Stream Bubbler $3.24 A 25 N/A
+L740@P11: 516-30 500 Series 180-Degree 2-Stream Bubbler $3.24 A 25 N/A
+L741@P11: 514-20 500 Series Universal Flood Bubbler $3.24 A 25 N/A
+L742@P11: SPRAYS ACCESSORIES
+L743@P11: 995-50 Pitot Tube $9.06 A 1 N/A
+L744@P11: 995-51 Pressure Gauge Kit $112.84 A 1 N/A
+L745@P11: 995-01 Flow Gauge $234.00 B 1 N/A
+L746@P11: 995-02 Flushing Adapter $21.14 B 1 N/A
+L747@P11: 995-14 Supply Screen Fitting $29.57 B 1 N/A
+L748@P11: RESIDENTIAL ROTORS
+L749@P11: TORO MINI 8 SERIES, ½" MID-RANGE ROTORS
+L750@P11: MINI8-4P MINI 8 Gear-driven rotor, 4" pop-up height, ½" inlet $28.48 A 25 N/A
+L751@P11: 102-2024 MINI 8 Adjustment Tool $3.40 A 1 N/A
+L752@P11: MINI8-CV MINI 8 Check Valve $2.06 A 1 N/A
+L753@P11: TORO T5 SERIES ¾" ROTORS
+L754@P11: T5P T5 Rotor, 5" Pop-Up $20.90 A 20 720
+L755@P11: T5PCK T5 Rotor, 5" Pop-Up, with Check Valve $22.91 A 20 720
+L756@P11: T5PE T5 Rotor, 5" Pop-Up, Effluent $25.39 A 20 720
+L757@P11: TORO T5 RAPIDSET® SERIES ¾" ROTORS (NO TOOLS ARC ADJUSTMENT)
+L758@P11: T5S-RS T5 RapidSet Series Shrub Rotor $23.54 A 20 720
+L759@P11: T5SE-RS T5 RapidSet Series Shrub Rotor, Effluent $27.98 A 20 720
+L760@P11: T5P-RS-LN T5 RapidSet Series Rotor, 5" Pop-Up, less Nozzle $20.90 A 20 720
+L761@P11: T5P3.0-RS T5 RapidSet Series Rotor, 5" Pop-Up, 3.0 Gallon Nozzle installed $20.91 A 20 720
+L762@P11: T5PCK-RS-LN T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, less Nozzle $22.91 A 20 720
+L763@P11: T5PCK1.5-RS T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, 1.5 Gallon Nozzle installed $22.91 A 20 720
+L764@P11: T5PCK2.0-RS T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, 2.0 Gallon Nozzle installed $22.91 A 20 720
+L765@P11: T5PCK2.5-RS T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, 2.5 Gallon Nozzle installed $22.91 A 20 720
+L766@P11: T5PCK3.0-RS T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, 3.0 Gallon Nozzle installed $22.91 A 20 720
+L767@P11: T5PE-RS-LN T5 RapidSet Series Rotor, 5" Pop-Up, Effluent, less Nozzle $25.39 A 20 720
+L768@P11: T5PE3.0-RS T5 RapidSet Series Rotor, 5" Pop-Up, Effluent, 3.0 Gallon Nozzle installed $25.39 A 20 720
+L769@P11-12: 8Model Number Description 2026
+L770@P12: List Price
+L771@P12: Discount
+L772@P12: Code
+L773@P12: Bag /
+L774@P12: Case
+L775@P12: Qty.
+L776@P12: Pallet
+L777@P12: Qty.
+L778@P12: T5PCKE-RS-LN T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, Effluent, less Nozzle $27.40 A 20 720
+L779@P12: T5PCKE3.0-RS T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, Effluent, 3.0 Gallon Nozzle installed $27.40 A 20 720
+L780@P12: T5HP-RS T5 RapidSet Series Rotor, 12" High-Pop $69.84 A 10 N/A
+L781@P12: T5HPE-RS T5 RapidSet Series Rotor, 12" High-Pop, Effluent $74.32 A 10 N/A
+L782@P12: 102-7712 T5 / T5 RapidSet Rotor Nozzle Tree (20 pack) $81.69 B 1 N/A
+L783@P12: 102-7714 T5 Rotor Check Valve (20 pack) $21.36 B 1 N/A
+L784@P12: 118-6278 (102-6527) T5 / T7 Rotor Adjustment Tool $8.82 B 1 N/A
+L785@P12: TORO T5 RAPIDSET® SERIES STAINLESS STEEL ¾" ROTORS (NO TOOLS ARC ADJUSTMENT)
+L786@P12: T5PSS-RS-LN T5 RapidSet Series Rotor, 5" Pop-Up, Stainless Steel, less Nozzle $46.35 A 20 720
+L787@P12: T5PSS3.0-RS T5 RapidSet Series Rotor, 5" Pop-Up, Stainless Steel, 3.0 Gallon Nozzle installed $46.35 A 20 720
+L788@P12: T5PCKSS-RS-LN T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, Stainless Steel, less Nozzle $48.35 A 20 720
+L789@P12: T5PCKSS3.0-RS T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, Stainless Steel, 3.0 Gallon installed $48.35 A 20 720
+L790@P12: T5PSSE-RS-LN T5 RapidSet Series Rotor, 5" Pop-Up, Stainless Steel, Effluent, less Nozzle $50.78 A 20 720
+L791@P12: T5PSSE3.0-RS T5 RapidSet Series Rotor, 5" Pop-Up, Stainless Steel, Effluent, 3.0 Gallon Nozzle installed $50.78 A 20 720
+L792@P12: T5PCKSSE-RS-LN T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, Stainless Steel, Effluent, less Nozzle $52.79 A 20 720
+L793@P12: T5PCKSSE3.0-RS T5 RapidSet Series Rotor, 5" Pop-Up with Check Valve, Stainless Steel, Effluent, 3.0 Gal. Noz $52.79 A 20 720
+L794@P12: TORO 300 SERIES MULTI-STREAM ROTORS®
+L795@P12: 304-00 Disc, 90° Arc, Bagged $3.76 A 25 N/A
+L796@P12: 305-00 Disc, 112° Arc, Bagged $3.76 A 10 N/A
+L797@P12: 306-00 Disc, 135° Arc, Bagged $3.76 A 10 N/A
+L798@P12: 307-00 Disc, 157° Arc, Bagged $3.76 A 10 N/A
+L799@P12: 308-00 Disc, 180° Arc, Bagged $3.76 A 25 N/A
+L800@P12: 309-00 Disc, 202° Arc, Bagged $3.76 A 10 N/A
+L801@P12: 310-00 Disc, 225° Arc, Bagged $3.76 A 10 N/A
+L802@P12: 312-00 Disc, 270° Arc, Bagged $3.76 A 10 N/A
+L803@P12: 316-00 Disc, 360° Arc, Bagged $3.76 A 25 N/A
+L804@P12: 300-11 Nozzle Assembly-01, Bagged $8.76 A 50 N/A
+L805@P12: 300-12 Nozzle Assembly-02, Bagged $8.76 A 50 N/A
+L806@P12: 300-13 Nozzle Assembly-03, Bagged $8.76 A 50 N/A
+L807@P12: 300-63-1 Nozzle Assembly-63, Bagged $13.34 A 50 N/A
+L808@P12: 300-93-1 Nozzle Assembly-93, Bagged $13.34 A 50 N/A
+L809@P12: 300-21 Nozzle Assembly, Stream Rotor High Pop, SVC-01 $16.63 A 50 N/A
+L810@P12: 300-22 Nozzle Assembly, Stream Rotor High Pop, SVC-02 $16.63 A 50 N/A
+L811@P12: 300-23 Nozzle Assembly, Stream Rotor High Pop, SVC-03 $16.63 A 50 N/A
+L812@P12: 300-15 Omni Nozzle Assembly, Stream Rotor, Adjustable, Bagged $8.76 A 25 N/A
+L813@P12: 300-25 Omni Nozzle Assembly, Stream Rotor, Adjustable, HP, Bagged $16.63 A 25 N/A
+L814@P12: 89-7853 Cover, Nozzle (Use with 300-15) $1.62 B 1 N/A
+L815@P12: 89-7854 Cover, Nozzle (Use with 300-25) $3.66 B 1 N/A
+L816@P12: IRRITROL TITAN™ IMPACT ROTOR
+L817@P12: TITAN Combo ½" or ¾" Impact Rotor $36.62 A 20 600
+L818@P12: TITAN-NP Combo ½" or ¾" Impact Rotor, Non-Potable $37.75 A 20 600
+L819@P12: SWING PIPE & FITTINGS
+L820@P12: SWING PIPE TUBING
+L821@P12: EHF1295-010-D Irritrol Super Blue Flex Pipe, 100' Roll $52.89 A 1 45
+L822@P12: PRE-ASSEMBLED SWING JOINTS
+L823@P12: B-FLEX8-05 8" Super Blue Flex Assembly with ½" x ½" Fittings $3.09 A 50 4,200
+L824@P12: B-FLEX12-05 12" Super Blue Flex Assembly with ½" x ½" Fittings $4.12 A 50 4,200
+L825@P12: B-FLEX8-0575 8" Super Blue Flex Assembly with ½" x ¾" Fittings $3.61 A 50 4,200
+L826@P12: B-FLEX12-0575 12" Super Blue Flex Assembly with ½" x ¾" Fittings $4.64 A 50 4,200
+L827@P12: SPFA-585 ½" threaded x 8" length Super Funny Pipe Swing Joint $2.88 A 100 4,200
+L828@P12: SPFA-5875 ¾" threaded x 8" length Super Funny Pipe Swing Joint $3.86 A 100 4,200
+L829@P12: SPFA-5125 ½" threaded x 12" length Super Funny Pipe Swing Joint $3.86 A 100 4,200
+L830@P12: SPFA-51275 ¾" threaded x 12" length Super Funny Pipe Swing Joint $4.12 A 100 4,200
+L831@P12: SWING PIPE FITTINGS
+L832@P12: 850-20 Barbed Coupling $0.93 A 50 N/A
+L833@P12: 850-31 1/2" Male NPT x Barb Elbow $0.93 A 50 N/A
+L834@P12: 850-32 3/4" Male NPT x Barb Elbow $0.93 A 50 N/A
+L835@P12: 850-34 1/2" Female NPT x Barb Elbow $0.93 A 50 N/A
+L836@P12: 850-35 1/2" Male NPT x Barb Adapter $0.93 A 50 N/A
+L837@P12: 850-36 3/4" Male NPT x Barb Adapter $0.93 A 50 N/A
+L838@P12: 850-37 Barbed Tee $1.55 A 50 N/A
+L839@P12: 850-60 Saddle, 3/4" Female NPT $2.63 A 50 N/A
+L840@P12: 850-61 Saddle, 1" Female NPT $2.63 A 50 N/A
+L841@P12: 850-43 Cut-off Riser, 1/2" x 3" length $1.29 A 50 N/A
+L842@P12: 850-49 Cut-off Riser, 1/2" x 6" length $1.44 A 25 N/A
+L843@P12: 850-62 Sprinkler Riser, 3/4" x 2" length $1.49 A 50 N/A
+L844@P12-13: 9Model Number Description 2026
+L845@P13: List Price
+L846@P13: Discount
+L847@P13: Code
+L848@P13: Bag /
+L849@P13: Case
+L850@P13: Qty.
+L851@P13: Pallet
+L852@P13: Qty.
+L853@P13: 850-63 Sprinkler Riser, 1/2" x 3/4" x 2" length $1.75 A 50 N/A
+L854@P13: FFP-T Barbed Tee $1.13 A 50 N/A
+L855@P13: FFP-C Barbed Coupling $1.13 A 50 N/A
+L856@P13: FFP-50EM 1/2" Male NPT x Barb Elbow $0.82 A 50 N/A
+L857@P13: FFP-75EM 3/4" Male NPT x Barb Elbow $0.82 A 50 N/A
+L858@P13: SPORTS FIELDS & GROUNDS / LARGE COMMERCIAL ROTORS
+L859@P13: TORO TS170 SERIES PISTON-DRIVEN ROTORS
+L860@P13: TS170-02-16 TS170 Rotor, 16 mm, NPT $2,568.82 I 1 N/A
+L861@P13: TS170-02-20 TS170 Rotor, 20 mm, NPT $2,568.82 I 1 N/A
+L862@P13: TS170-02-24 TS170 Rotor, 24 mm, NPT $2,568.82 I 1 N/A
+L863@P13: TS170V-02-16 TS170 Rotor with VIH, 16 mm, NPT $3,302.18 I 1 N/A
+L864@P13: TS170V-02-20 TS170 Rotor with VIH, 20 mm, NPT $3,302.18 I 1 N/A
+L865@P13: TS170V-02-24 TS170 Rotor with VIH, 24 mm, NPT $3,302.18 I 1 N/A
+L866@P13: TS171-02-16 TS170 Rotor with Synthetic Cover, 16 mm, NPT $2,861.34 I 1 N/A
+L867@P13: TS171-02-20 TS170 Rotor with Synthetic Cover, 20 mm, NPT $2,861.34 I 1 N/A
+L868@P13: TS171-02-24 TS170 Rotor with Synthetic Cover, 24 mm, NPT $2,861.34 I 1 N/A
+L869@P13: TS171V-02-16 TS170 Rotor with Synthetic Cover and VIH, 16 mm, NPT $3,596.76 I 1 N/A
+L870@P13: TS171V-02-20 TS170 Rotor with Synthetic Cover and VIH, 20 mm, NPT $3,596.76 I 1 N/A
+L871@P13: TS171V-02-24 TS170 Rotor with Synthetic Cover and VIH, 24 mm, NPT $3,596.76 I 1 N/A
+L872@P13: RB25412 16 mm Nozzle, TS170 $46.20 I 1 N/A
+L873@P13: RB25413 20 mm Nozzle, TS170 $46.20 I 1 N/A
+

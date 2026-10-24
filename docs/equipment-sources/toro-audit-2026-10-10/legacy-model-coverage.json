@@ -1,0 +1,1790 @@
+{
+  "auditedOn": "2026-10-10",
+  "models": [
+    {
+      "id": "toro:O-5-60",
+      "modelId": "O-5-60",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-60",
+      "modelId": "O-T-5-60",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-5-Q",
+      "modelId": "O-5-Q",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-Q",
+      "modelId": "O-T-5-Q",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-5-T",
+      "modelId": "O-5-T",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-T",
+      "modelId": "O-T-5-T",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-5-150",
+      "modelId": "O-5-150",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-150",
+      "modelId": "O-T-5-150",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-5-H",
+      "modelId": "O-5-H",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-H",
+      "modelId": "O-T-5-H",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-5-210",
+      "modelId": "O-5-210",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-210",
+      "modelId": "O-T-5-210",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-5-TT",
+      "modelId": "O-5-TT",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-TT",
+      "modelId": "O-T-5-TT",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "modelId": "O-5-TQ",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-TQ",
+      "modelId": "O-T-5-TQ",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-5-F",
+      "modelId": "O-5-F",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-5-F",
+      "modelId": "O-T-5-F",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Red",
+      "trajectoryDeg": 5,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.143,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-60",
+      "modelId": "O-8-60",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-60",
+      "modelId": "O-T-8-60",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-Q",
+      "modelId": "O-8-Q",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-Q",
+      "modelId": "O-T-8-Q",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-T",
+      "modelId": "O-8-T",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-T",
+      "modelId": "O-T-8-T",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-150",
+      "modelId": "O-8-150",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-150",
+      "modelId": "O-T-8-150",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-H",
+      "modelId": "O-8-H",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-H",
+      "modelId": "O-T-8-H",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-210",
+      "modelId": "O-8-210",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-210",
+      "modelId": "O-T-8-210",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-TT",
+      "modelId": "O-8-TT",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-TT",
+      "modelId": "O-T-8-TT",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "modelId": "O-8-TQ",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-TQ",
+      "modelId": "O-T-8-TQ",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-8-F",
+      "modelId": "O-8-F",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-8-F",
+      "modelId": "O-T-8-F",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Green",
+      "trajectoryDeg": 10,
+      "coverageKind": "sector",
+      "reductionFloorM": 1.8288,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-60",
+      "modelId": "O-10-60",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-60",
+      "modelId": "O-T-10-60",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-Q",
+      "modelId": "O-10-Q",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-Q",
+      "modelId": "O-T-10-Q",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-T",
+      "modelId": "O-10-T",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-T",
+      "modelId": "O-T-10-T",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-150",
+      "modelId": "O-10-150",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-150",
+      "modelId": "O-T-10-150",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-H",
+      "modelId": "O-10-H",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-H",
+      "modelId": "O-T-10-H",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-210",
+      "modelId": "O-10-210",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-210",
+      "modelId": "O-T-10-210",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-TT",
+      "modelId": "O-10-TT",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-TT",
+      "modelId": "O-T-10-TT",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "modelId": "O-10-TQ",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-TQ",
+      "modelId": "O-T-10-TQ",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-10-F",
+      "modelId": "O-10-F",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-10-F",
+      "modelId": "O-T-10-F",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Blue",
+      "trajectoryDeg": 15,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.286,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-60",
+      "modelId": "O-12-60",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-60",
+      "modelId": "O-T-12-60",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-Q",
+      "modelId": "O-12-Q",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-Q",
+      "modelId": "O-T-12-Q",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-T",
+      "modelId": "O-12-T",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-T",
+      "modelId": "O-T-12-T",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-150",
+      "modelId": "O-12-150",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-150",
+      "modelId": "O-T-12-150",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-H",
+      "modelId": "O-12-H",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-H",
+      "modelId": "O-T-12-H",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-210",
+      "modelId": "O-12-210",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-210",
+      "modelId": "O-T-12-210",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-TT",
+      "modelId": "O-12-TT",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-TT",
+      "modelId": "O-T-12-TT",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "modelId": "O-12-TQ",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-TQ",
+      "modelId": "O-T-12-TQ",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-12-F",
+      "modelId": "O-12-F",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-12-F",
+      "modelId": "O-T-12-F",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Brown",
+      "trajectoryDeg": 20,
+      "coverageKind": "sector",
+      "reductionFloorM": 2.7432,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-60",
+      "modelId": "O-15-60",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-60",
+      "modelId": "O-T-15-60",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-Q",
+      "modelId": "O-15-Q",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-Q",
+      "modelId": "O-T-15-Q",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-T",
+      "modelId": "O-15-T",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-T",
+      "modelId": "O-T-15-T",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-150",
+      "modelId": "O-15-150",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-150",
+      "modelId": "O-T-15-150",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-H",
+      "modelId": "O-15-H",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-H",
+      "modelId": "O-T-15-H",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-210",
+      "modelId": "O-15-210",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-210",
+      "modelId": "O-T-15-210",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-TT",
+      "modelId": "O-15-TT",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-TT",
+      "modelId": "O-T-15-TT",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "modelId": "O-15-TQ",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-TQ",
+      "modelId": "O-T-15-TQ",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-15-F",
+      "modelId": "O-15-F",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-T-15-F",
+      "modelId": "O-T-15-F",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Black",
+      "trajectoryDeg": 27,
+      "coverageKind": "sector",
+      "reductionFloorM": 3.429,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": false
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "modelId": "O-4X30-SST",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-T-4X30-SST",
+      "modelId": "O-T-4X30-SST",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "modelId": "O-4X15-LCS",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-T-4X15-LCS",
+      "modelId": "O-T-4X15-LCS",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "modelId": "O-4X15-RCS",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-T-4X15-RCS",
+      "modelId": "O-T-4X15-RCS",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "modelId": "O-4X18-SST",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-T-4X18-SST",
+      "modelId": "O-T-4X18-SST",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "modelId": "O-4X9-LCS",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-T-4X9-LCS",
+      "modelId": "O-T-4X9-LCS",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "modelId": "O-4X9-RCS",
+      "thread": "female",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ],
+      "numericArcIsInternalEnvelope": true
+    },
+    {
+      "id": "toro:O-T-4X9-RCS",
+      "modelId": "O-T-4X9-RCS",
+      "thread": "male",
+      "rowsCompared": 4,
+      "rowDifferences": 0,
+      "metadataDifferences": {},
+      "colorName": "Grey",
+      "trajectoryDeg": 20,
+      "coverageKind": "strip",
+      "reductionFloorM": null,
+      "currentCompatibleBodyFamilyIds": [
+        "toro:570Z"
+      ],
+      "numericArcIsInternalEnvelope": true
+    }
+  ]
+}

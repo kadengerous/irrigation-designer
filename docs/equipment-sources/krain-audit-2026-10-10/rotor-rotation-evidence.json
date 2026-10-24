@@ -1,0 +1,83 @@
+[
+  {
+    "id": "k-rain:MiniPro",
+    "fullCircleRotation": "continuous",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/minipro%20gear%20drive%20rotor%20product%20specifications.pdf",
+    "sourcePage": 1,
+    "evidence": "Written specification explicitly continuous full circle",
+    "pressureRegulatedVariantInference": false,
+    "publicationDate": null
+  },
+  {
+    "id": "k-rain:RPS50",
+    "fullCircleRotation": "unknown",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps50%20gear%20drive%20rotor%20product%20specifications.pdf",
+    "sourcePage": 1,
+    "evidence": "Coverage reaches 360 degrees but exact full-circle mechanism is unspecified",
+    "pressureRegulatedVariantInference": false,
+    "publicationDate": null
+  },
+  {
+    "id": "k-rain:RPS75",
+    "fullCircleRotation": "continuous",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75%20gear%20drive%20rotor%20product%20specifications.pdf",
+    "sourcePage": 1,
+    "evidence": "Written specification explicitly continuous full circle",
+    "pressureRegulatedVariantInference": false,
+    "publicationDate": null
+  },
+  {
+    "id": "k-rain:RPS75-PR",
+    "fullCircleRotation": "continuous",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75%20gear%20drive%20rotor%20product%20specifications.pdf",
+    "sourcePage": 1,
+    "evidence": "Written specification explicitly continuous full circle",
+    "pressureRegulatedVariantInference": true,
+    "publicationDate": null
+  },
+  {
+    "id": "k-rain:RPS75i",
+    "fullCircleRotation": "continuous",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75i%20gear%20drive%20rotor%20product%20specifications.pdf",
+    "sourcePage": 1,
+    "evidence": "Written specification explicitly continuous full circle",
+    "pressureRegulatedVariantInference": false,
+    "publicationDate": null
+  },
+  {
+    "id": "k-rain:RPS75i-PR",
+    "fullCircleRotation": "continuous",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps75i%20gear%20drive%20rotor%20product%20specifications.pdf",
+    "sourcePage": 1,
+    "evidence": "Written specification explicitly continuous full circle",
+    "pressureRegulatedVariantInference": true,
+    "publicationDate": null
+  },
+  {
+    "id": "k-rain:RPS-Select",
+    "fullCircleRotation": "unknown",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rps%20select%20gear%20drive%20rotor%20product%20specifications.pdf",
+    "sourcePage": 1,
+    "evidence": "Coverage reaches 360 degrees but exact full-circle mechanism is unspecified",
+    "pressureRegulatedVariantInference": false,
+    "publicationDate": null
+  },
+  {
+    "id": "k-rain:ProPlus",
+    "fullCircleRotation": "continuous",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 18,
+    "evidence": "Current catalogue explicitly continuous 360 degrees",
+    "pressureRegulatedVariantInference": false,
+    "publicationDate": "2026"
+  },
+  {
+    "id": "k-rain:SuperPro",
+    "fullCircleRotation": "continuous",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 20,
+    "evidence": "Current catalogue explicitly continuous 360 degrees",
+    "pressureRegulatedVariantInference": false,
+    "publicationDate": "2026"
+  }
+]

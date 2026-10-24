@@ -1,0 +1,198 @@
+untitled (https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf)
+citeturn361view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 3; Source: open({"ref_id":"https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf","lineno":null}); Total lines: 195
+
+L0@P0: Spray Nozzles
+L1@P0: www.rainbird.com/sprays
+L2@P0:  The Intelligent Use of Water.™ 39
+L3@P0: Spray Nozzles
+L4@P0: HE-VAN Series Nozzles
+L5@P0: 24° Trajectory
+L6@P0:     Q V
+L7@P0:  Nozzle Pressure Radius Flow Precip Precip
+L8@P0:  psi ft. gpm In/h In/h
+L9@P0: 360° Arc 15 5 0.83 3.19 3.68
+L10@P0:  20 6 0.96 2.56 2.95
+L11@P0:  25 7 1.07 2.10 2.42
+L12@P0:  30 8 1.17 1.76 2.03
+L13@P0: 270° Arc 15 5 0.62 3.19 3.68
+L14@P0:  20 6 0.72 2.56 2.95
+L15@P0:  25 7 0.80 2.10 2.42
+L16@P0:  30 8 0.88 1.76 2.03
+L17@P0: 180° Arc 15 5 0.41 3.19 3.68
+L18@P0:  20 6 0.48 2.56 2.95
+L19@P0:  25 7 0.53 2.10 2.42
+L20@P0:  30 8 0.59 1.76 2.03
+L21@P0: 90° Arc 15 5 0.21 3.19 3.68
+L22@P0:  20 6 0.24 2.56 2.95
+L23@P0:  25 7 0.27 2.10 2.42
+L24@P0:  30 8 0.29 1.76 2.03
+L25@P0: 27° Trajectory
+L26@P0:     Q V
+L27@P0:  Nozzle Pressure Radius Flow Precip Precip
+L28@P0:  psi ft. gpm In/h In/h
+L29@P0: 360° Arc 15 7 1.26 2.48 2.86
+L30@P0:  20 8 1.46 2.19 2.53
+L31@P0:  25 9 1.63 1.94 2.24
+L32@P0:  30 10 1.78 1.72 1.98
+L33@P0: 270° Arc 15 7 0.95 2.48 2.86
+L34@P0:  20 8 1.09 2.19 2.53
+L35@P0:  25 9 1.22 1.94 2.24
+L36@P0:  30 10 1.34 1.72 1.98
+L37@P0: 180° Arc 15 7 0.63 2.48 2.86
+L38@P0:  20 8 0.73 2.19 2.53
+L39@P0:  25 9 0.81 1.94 2.24
+L40@P0:  30 10 0.89 1.72 1.98
+L41@P0: 90° Arc 15 7 0.32 2.48 2.86
+L42@P0:  20 8 0.36 2.19 2.53
+L43@P0:  25 9 0.41 1.94 2.24
+L44@P0:  30 10 0.45 1.72 1.98
+L45@P0: 8 Series HE-VAN
+L46@P0: 10 Series HE-VAN
+L47@P0: 8 Series HE-VAN METRIC
+L48@P0: 10 Series HE-VAN METRIC
+L49@P0: Note: Turning the radius reduction screw may be required to achieve catalog radius
+L50@P0: and flow when the arc is set at less than maximum arc
+L51@P0: Q Square spacing based on 50% diameter of throw
+L52@P0: V Triangular spacing based on 50% diameter of throw
+L53@P0: Performance data taken in zero wind conditions
+L54@P0: 24° Trajectory
+L55@P0:      Q V
+L56@P0: Nozzle Pressure Radius Flow Flow Precip Precip
+L57@P0:  bar m m3⁄h l/m mm/h mm/h
+L58@P0: 360° Arc 1.03 1.52 0.19 3.14 82 95
+L59@P0:  1.38 1.83 0.22 3.62 66 76
+L60@P0:  1.72 2.13 0.25 4.05 54 62
+L61@P0:  2.07 2.44 0.27 4.43 45 52
+L62@P0: 270° Arc 1.03 1.52 0.14 2.35 82 95
+L63@P0:  1.38 1.83 0.16 2.72 66 76
+L64@P0:  1.72 2.13 0.18 3.04 54 62
+L65@P0:  2.07 2.44 0.20 3.33 45 52
+L66@P0: 180° Arc 1.03 1.52 0.10 1.57 82 95
+L67@P0:  1.38 1.83 0.11 1.81 66 76
+L68@P0:  1.72 2.13 0.12 2.02 54 62
+L69@P0:  2.07 2.44 0.13 2.22 45 52
+L70@P0: 90° Arc 1.03 1.52 0.05 0.78 82 95
+L71@P0:  1.38 1.83 0.05 0.91 66 76
+L72@P0:  1.72 2.13 0.06 1.01 54 62
+L73@P0:  2.07 2.44 0.07 1.11 45 52
+L74@P0: 27° Trajectory
+L75@P0:      Q V
+L76@P0: Nozzle Pressure Radius Flow Flow Precip Precip
+L77@P0:  bar m m3⁄h l/m mm/h mm/h
+L78@P0: 360° Arc 1.03 2.13 0.29 4.78 64 74
+L79@P0:  1.38 2.44 0.34 5.52 56 65
+L80@P0:  1.72 2.74 0.37 6.17 50 57
+L81@P0:  2.07 3.05 0.41 6.76 44 51
+L82@P0: 270° Arc 1.03 2.13 0.22 3.59 64 74
+L83@P0:  1.38 2.44 0.25 4.14 56 65
+L84@P0:  1.72 2.74 0.28 4.63 50 57
+L85@P0:  2.07 3.05 0.31 5.07 44 51
+L86@P0: 180° Arc 1.03 2.13 0.15 2.39 64 74
+L87@P0:  1.38 2.44 0.17 2.76 56 65
+L88@P0:  1.72 2.74 0.19 3.09 50 57
+L89@P0:  2.07 3.05 0.21 3.38 44 51
+L90@P0: 90° Arc 1.03 2.13 0.07 1.20 64 74
+L91@P0:  1.38 2.44 0.08 1.38 56 65
+L92@P0:  1.72 2.74 0.09 1.54 50 57
+L93@P0-1:  2.07 3.05 0.10 1.69 44 51Spray Nozzles
+L94@P1: 40 The Intelligent Use of Water.™
+L95@P1: Spray Nozzles
+L96@P1: HE-VAN Series Nozzles
+L97@P1: 23° Trajectory
+L98@P1:     Q V
+L99@P1:  Nozzle Pressure Radius Flow Precip Precip
+L100@P1:  psi ft. gpm In/h In/h
+L101@P1: 360° Arc 15 9 1.67 1.99 2.30
+L102@P1:  20 10 1.93 1.86 2.15
+L103@P1:  25 11 2.16 1.72 1.99
+L104@P1:  30 12 2.37 1.58 1.83
+L105@P1:  270° Arc 15 9 1.25 1.99 2.30
+L106@P1:  20 10 1.45 1.86 2.15
+L107@P1:  25 11 1.62 1.72 1.99
+L108@P1:  30 12 1.77 1.58 1.83
+L109@P1: 180° Arc 15 9 0.84 1.99 2.30
+L110@P1:  20 10 0.97 1.86 2.15
+L111@P1:  25 11 1.08 1.72 1.99
+L112@P1:  30 12 1.18 1.58 1.83
+L113@P1:  90° Arc 15 9 0.42 1.99 2.30
+L114@P1:  20 10 0.48 1.86 2.15
+L115@P1:  25 11 0.54 1.72 1.99
+L116@P1:  30 12 0.59 1.58 1.83
+L117@P1: 12 Series HE-VAN
+L118@P1: 23° Trajectory
+L119@P1:      Q V
+L120@P1: Nozzle Pressure Radius Flow Flow Precip Precip
+L121@P1:  bar m m3⁄h l/m mm/h mm/h
+L122@P1: 360° Arc 1.0 2.7 0.38 6.33 50.5 58.3
+L123@P1:  1.4 3.0 0.44 7.31 47.3 54.6
+L124@P1:  1.7 3.4 0.49 8.18 43.7 50.4
+L125@P1:  2.1 3.7 0.54 8.96 40.2 46.4
+L126@P1:  270° Arc 1.0 2.7 0.28 4.75 50.5 58.3
+L127@P1:  1.4 3.0 0.33 5.48 47.3 54.6
+L128@P1:  1.7 3.4 0.37 6.16 43.7 50.4
+L129@P1:  2.1 3.7 0.40 6.72 40.2 46.4
+L130@P1:  180° Arc 1.0 2.7 0.19 3.17 50.5 58.3
+L131@P1:  1.4 3.0 0.22 3.66 47.3 54.6
+L132@P1:  1.7 3.4 0.25 4.09 43.7 50.4
+L133@P1:  2.1 3.7 0.27 4.48 40.2 46.4
+L134@P1:  90° Arc 1.0 2.7 0.09 1.58 50.5 58.3
+L135@P1:  1.4 3.0 0.11 1.83 47.3 54.6
+L136@P1:  1.7 3.4 0.12 2.04 43.7 50.4
+L137@P1:  2.1 3.7 0.13 2.24 40.2 46.4
+L138@P1: 12 Series HE-VAN METRIC
+L139@P1: Note: Turning the radius reduction screw may be required to achieve catalog radius
+L140@P1: and flow when the arc is set at less than maximum arc
+L141@P1: Q Square spacing based on 50% diameter of throw
+L142@P1: V Triangular spacing based on 50% diameter of throw
+L143@P1-2: Performance data taken in zero wind conditionsSpray Nozzles
+L144@P2: www.rainbird.com/sprays
+L145@P2:  The Intelligent Use of Water.™ 41
+L146@P2: Spray Nozzles
+L147@P2: HE-VAN Series Nozzles
+L148@P2: 25° Trajectory
+L149@P2:     Q V
+L150@P2:  Nozzle Pressure Radius Flow Precip Precip
+L151@P2:  psi ft. gpm In/h In/h
+L152@P2:  360° Arc 15 11 2.62 2.08 2.40
+L153@P2:  20 12 3.02 2.02 2.33
+L154@P2:  25 14 3.38 1.66 1.92
+L155@P2:  30 15 3.70 1.58 1.83
+L156@P2:  270° Arc 15 11 1.96 2.08 2.40
+L157@P2:  20 12 2.27 2.02 2.33
+L158@P2:  25 14 2.53 1.66 1.92
+L159@P2:  30 15 2.78 1.58 1.83
+L160@P2:  180° Arc 15 11 1.31 2.08 2.40
+L161@P2:  20 12 1.51 2.02 2.33
+L162@P2:  25 14 1.69 1.66 1.92
+L163@P2:  30 15 1.85 1.58 1.83
+L164@P2:  90° Arc 15 11 0.65 2.08 2.40
+L165@P2:  20 12 0.76 2.02 2.33
+L166@P2:  25 14 0.84 1.66 1.92
+L167@P2:  30 15 0.93 1.58 1.83
+L168@P2: 15 Series HE-VAN
+L169@P2: 25° Trajectory
+L170@P2:      Q V
+L171@P2: Nozzle Pressure Radius Flow Flow Precip Precip
+L172@P2:  bar m m3⁄h l/m mm/h mm/h
+L173@P2: 360° Arc 1.0 3.4 0.59 9.91 52.9 61.1
+L174@P2:  1.4 3.7 0.69 11.44 51.3 59.3
+L175@P2:  1.7 4.3 0.77 12.79 42.2 48.7
+L176@P2:  2.1 4.6 0.84 14.01 40.2 46.5
+L177@P2:  270° Arc 1.0 3.4 0.45 7.43 52.9 61.1
+L178@P2:  1.4 3.7 0.51 8.58 51.3 59.3
+L179@P2:  1.7 4.3 0.58 9.59 42.2 48.7
+L180@P2:  2.1 4.6 0.63 10.51 40.2 46.5
+L181@P2:  180° Arc 1.0 3.4 0.30 4.95 52.9 61.1
+L182@P2:  1.4 3.7 0.34 5.72 51.3 59.3
+L183@P2:  1.7 4.3 0.38 6.39 42.2 48.7
+L184@P2:  2.1 4.6 0.42 7.00 40.2 46.5
+L185@P2:  90° Arc 1.0 3.4 0.15 2.48 52.9 61.1
+L186@P2:  1.4 3.7 0.17 2.86 51.3 59.3
+L187@P2:  1.7 4.3 0.19 3.20 42.2 48.7
+L188@P2:  2.1 4.6 0.21 3.50 40.2 46.5
+L189@P2: 15 Series HE-VAN METRIC
+L190@P2: Note: Turning the radius reduction screw may be required to achieve catalog radius
+L191@P2: and flow when the arc is set at less than maximum arc
+L192@P2: Q Square spacing based on 50% diameter of throw
+L193@P2: V Triangular spacing based on 50% diameter of throw
+L194@P2: Performance data taken in zero wind conditions

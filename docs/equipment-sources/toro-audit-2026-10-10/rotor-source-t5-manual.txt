@@ -1,0 +1,585 @@
+ (https://www.toro.com/getpub/128192)
+citeturn425view0 [wordlim: 200] Crawled: 5 days ago; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://www.toro.com/getpub/128192","lineno":null}); Total lines: 857
+L0@P0: Adjust spray arc with tool:
+L1@P0: (SPA) Ajustar el arco de riego con la herramienta:
+L2@P0: To adjust spray arc, without tools, using RapidSet™: (SPA) Para ajustar el arco de riego usando RapidSet™:
+L3@P0: Change nozzle/diffuse spray:
+L4@P0: (SPA) Cambio de boquilla/difusor:
+L5@P0: Pull nozzle riser up: (SPA) Tirar hacia arriba del vástago de la boquilla:
+L6@P0: 1 2 3
+L7@P0: 1 2 3
+L8@P0: 4 5 6
+L9@P0: +
+L10@P0: One full turn of tool blade adjusts arc 90°.
+L11@P0: (SPA) Un giro completo de la punta de la herramienta ajusta el arco en 90°.
+L12@P0: 4
+L13@P0: 1
+L14@P0: 2 3
+L15@P0: Click! Click! Click!
+L16@P0: +
+L17@P0: Click! Click! Click!
+L18@P0: +
+L19@P0: +
+L20@P0: 1 2 3
+L21@P0: Fast forward the nozzle turret to the left
+L22@P0: and the right until you encounter resistance.
+L23@P0: Those are turret arc edges.
+L24@P0: (SPA) Girar la torreta de la boquilla a la
+L25@P0: izquierda y luego a la derecha hasta notar
+L26@P0: resistencia. Estos son los bordes del arco de
+L27@P0: riego.
+L28@P0: Set the right edge: Fast forward nozzle to
+L29@P0: right edge. Grasp firmly and turn clockwise to
+L30@P0: the desired right edge position. The entire arc
+L31@P0: shifts. The clicking noise is normal.
+L32@P0: (SPA) Fijar el borde derecho: Girar la torreta
+L33@P0: de la boquilla hasta el borde derecho. Sujetar
+L34@P0: firmemente y girar en sentido horario hasta la
+L35@P0: posición deseada del borde derecho. Se mueve
+L36@P0: el arco entero. Oirá unos clics – esto es normal.
+L37@P0: Set the left edge: Fast forward nozzle turret
+L38@P0: to left edge. Grasp firmly and turn counterclockwise to the desired left edge position
+L39@P0: (270° in this example). The clicking noise is
+L40@P0: normal.
+L41@P0: (SPA) Fijar el borde izquierdo: Girar la torreta
+L42@P0: de la boquilla hasta el borde derecho. Sujetar
+L43@P0: firmemente y girar en sentido antihorario hasta
+L44@P0: la posición deseada del borde izquierdo (270°
+L45@P0: en este ejemplo). Oirá unos clics – esto es
+L46@P0: normal.
+L47@P0: +
+L48@P0: Click! Click! Click!
+L49@P0: +
+L50@P0: To narrow the turret arc, rotate nozzle to
+L51@P0: right edge. Then rotate back towards the left
+L52@P0: edge by the amount of arc reduction desired
+L53@P0: (90° in this example).
+L54@P0: (SPA) Para estrechar el arco de la torreta,
+L55@P0: girar la boquilla hasta el borde derecho. Luego
+L56@P0: girar de nuevo hacia el borde izquierdo una
+L57@P0: distancia equivalente a la reducción de arco
+L58@P0: deseada.
+L59@P0: Grasp nozzle firmly and crank the nozzle
+L60@P0: clockwise back to the right edge. The clicking
+L61@P0: noise is normal. Repeat step 1 to confirm arc is
+L62@P0: the desired angle (180° in this example).
+L63@P0: (SPA) Sujetar la boquilla firmemente y girar
+L64@P0: la boquilla en sentido horario hasta el borde
+L65@P0: derecho. Oirá unos clics – esto es normal.
+L66@P0: Repetir el paso 1 para confirmar que el arco
+L67@P0: tiene el ángulo deseado (180° en este ejemplo).
+L68@P0: 4 5
+L69@P0: To watch a video
+L70@P0: demonstrating this process,
+L71@P0: please go to www.toro.com/
+L72@P0: T5 or watch the video on your
+L73@P0: smartphone using the above
+L74@P0: QR code.
+L75@P0: (SPA)
+L76@P0: Puede ver un vídeo que
+L77@P0: demuestra este proceso en
+L78@P0: www.toro.com/T5, o en su
+L79@P0: smartphone usando el código
+L80@P0: QR arriba.
+L81@P0: Fast forward the
+L82@P0: nozzle turret to the
+L83@P0: left and the right
+L84@P0: until you encounter
+L85@P0: resistance. Those are
+L86@P0: turret arc edges.
+L87@P0: (SPA) Girar la torreta
+L88@P0: de la boquilla a la
+L89@P0: izquierda y luego a la
+L90@P0: derecha hasta notar
+L91@P0: resistencia. Estos son
+L92@P0: los bordes del arco de
+L93@P0: riego.
+L94@P0: T5 Series Rotor
+L95@P0: with RapidSet™
+L96@P0: Aspersor Serie T5
+L97@P0: con RapidSet™
+L98@P0: T5 Series Rotor
+L99@P0: with RapidSet™
+L100@P0: Aspersor Serie T5
+L101@P0: con RapidSet™
+L102@P0: ! (ENG) The T5 rotor with RapidSet™ is
+L103@P0: distinguished by a dark grey turret rubber
+L104@P0: cover that says “T5 RapidSet”. If your T5
+L105@P0: rotor has a black turret rubber cover, DO NOT attempt to use the RapidSet feature.
+L106@P0: ! (SPA) El aspersor T5 con RapidSet™ se identifica por su tapa de torreta de color gris
+L107@P0: oscuro que dice “T5 RapidSet”. Si su aspersor
+L108@P0: T5 tiene la tapa de color negro, NO intente
+L109@P0: usar el sistema RapidSet para ajustarlo.
+L110@P0: 180° arc
+L111@P0: (factory default /
+L112@P0: Pre-ajustado de fabrica)
+L113@P0: fixed left edge
+L114@P0: / borde fijo
+L115@P0: izquierdo
+L116@P0: adjustable
+L117@P0: right edge
+L118@P0: / borde
+L119@P0: derecho
+L120@P0: ajustable
+L121@P0: 180° arc
+L122@P0: (factory default /
+L123@P0: Pre-ajustado de fabrica)
+L124@P0: adjustable left
+L125@P0: edge / borde
+L126@P0: izquierdo
+L127@P0: ajustable
+L128@P0: fixed right
+L129@P0: edge /
+L130@P0: borde fijo
+L131@P0: derecho
+L132@P0: fixed right edge /
+L133@P0: borde fijo derecho
+L134@P0: right edge /
+L135@P0: borde derecho
+L136@P0: left edge /
+L137@P0: borde izquierdo
+L138@P0: 180° arc
+L139@P0: 270° arc
+L140@P0: right edge /
+L141@P0: borde derecho
+L142@P0: new left edge /
+L143@P0: nuevo borde
+L144@P0: izquierdo
+L145@P0: new left edge /
+L146@P0: nuevo borde
+L147@P0: izquierdo
+L148@P0: old left edge /
+L149@P0: viejo borde
+L150@P0: izquierdo
+L151@P0: old left edge /
+L152@P0: viejo borde
+L153@P0: izquierdo left edge /
+L154@P0: borde izquierdo
+L155@P0: 270° arc
+L156@P0: 180° arc
+L157@P0: right edge /
+L158@P0: borde derecho
+L159@P0: stop here /
+L160@P0: parar aquí
+L161@P0: crank back to
+L162@P0: right edge /
+L163@P0: girar de nuevo a
+L164@P0-1: borde derecho(FRA) Réglez le secteur à l’aide de l’outil :
+L165@P1: (ITA) Regolare l’arco di lavoro con l’attrezzo:
+L166@P1: (FRA) Pour régler le secteur au moyen de la fonction RapidSet™: (ITA) Per regolare l’arco di lavoro utilizzando RapidSet™:
+L167@P1: (FRA) Changez la buse/diffusez le jet :
+L168@P1: (ITA) Cambiare ugello/getto a ventaglio:
+L169@P1: (FRA) Soulevez le porte-buse : (ITA) Sollevare il portaugelli:
+L170@P1: 1 2 3
+L171@P1: 4 5 6
+L172@P1: +
+L173@P1: (FRA) Un tour complet de la lame règle le secteur de 90°.
+L174@P1: (ITA) Un giro completo della lama dell’utensile esegue una regolazione
+L175@P1: dell’arco di 90°.
+L176@P1: 4
+L177@P1: 1
+L178@P1: 2 3
+L179@P1: Click! Click! Click!
+L180@P1: +
+L181@P1: Click! Click! Click!
+L182@P1: +
+L183@P1: +
+L184@P1: 1 2 3
+L185@P1: (FRA) Faites rapidement tourner la tourelle
+L186@P1: de buse vers la gauche et vers la droite
+L187@P1: jusqu’à sentir une résistance. Il s’agit des
+L188@P1: limites du secteur de la tourelle.
+L189@P1: (ITA) Fate avanzare rapidamente la torretta
+L190@P1: dell’ugello a sinistra e a destra fino a quando
+L191@P1: non incontrate resistenza. Quelli sono i bordi
+L192@P1: dell’arco della torretta.
+L193@P1: (FRA) Réglez la limite droite : Faites rapidement tourner
+L194@P1: la tourelle de buse jusqu’à la limite droite. Empoignezla fermement et faites-la tourner dans le sens horaire,
+L195@P1: jusqu’à la position souhaitée pour la limite droite. Le
+L196@P1: secteur entier se décale. Le cliquetis audible est normal.
+L197@P1: (ITA) Impostare il bordo destro: fate avanzare
+L198@P1: rapidamente la torreta dell’ugello sul bordo destro.
+L199@P1: Afferrate saldamente e ruotate in senso orario nella
+L200@P1: posizione del bordo destro desiderata. L’intero arco si
+L201@P1: sposta. Il rumore degli scatti è normale.
+L202@P1: (FRA) Réglez la limite gauche : Faites rapidement
+L203@P1: tourner la tourelle de buse jusqu’à la limite gauche.
+L204@P1: Empoignez-la fermement et faites-la tourner dans le
+L205@P1: sens anti-horaire, jusqu’à la position souhaitée pour la
+L206@P1: limite gauche (dans cet exemple, 270°). Le cliquetis
+L207@P1: audible est normal.
+L208@P1: (ITA) Impostare il bordo sinistro: fate avanzare
+L209@P1: rapidamente la torretta dell’ugello sul bordo sinistro.
+L210@P1: Afferrate saldamente e ruotate in senso antiorario nella
+L211@P1: posizione del bordo sinistro desiderata (270° in questo
+L212@P1: esempio). Il rumore degli scatti è normale.
+L213@P1: +
+L214@P1: Click! Click! Click!
+L215@P1: +
+L216@P1: (FRA) Pour diminuer le secteur de la tourelle,
+L217@P1: faites tourner la buse jusqu’à la limite droite.
+L218@P1: Puis faites-la revenir vers la limite gauche du
+L219@P1: même angle que la diminution de secteur
+L220@P1: souhaitée.
+L221@P1: (ITA) Per restringere l’arco della torretta,
+L222@P1: ruotate l’ugello sul bordo destro. Poi ruotate
+L223@P1: indietro verso il bordo sinistro della quantità di
+L224@P1: riduzione dell’arco desiderata.
+L225@P1: (FRA) Empoignez fermement la buse et ramenezla dans le sens horaire jusqu’à la limite droite. Le
+L226@P1: cliquetis audible est normal. Répétez l’étape 1
+L227@P1: pour confirmer que le secteur mesure bien l’angle
+L228@P1: souhaité (dans cet exemple, 180°).
+L229@P1: (ITA) Afferrate saldamente l’ugello e giratelo in
+L230@P1: senso orario indietro sul bordo destro. Il rumore
+L231@P1: degli scatti è normale. Ripetete il passaggio 1 per
+L232@P1: confermare che l’arco si trovi all’angolo desiderato
+L233@P1: (180° in questo esempio).
+L234@P1: 4 5
+L235@P1: (FRA)
+L236@P1: Pour visionner une vidéo
+L237@P1: de démonstration de cette
+L238@P1: procédure, rendez-vous sur www.
+L239@P1: toro.com/T5 ou regardez la vidéo
+L240@P1: sur votre smartphone en vous
+L241@P1: servant du code QR ci-dessus.
+L242@P1: (ITA)
+L243@P1: Per guardare un filmato di
+L244@P1: dimostrazione di questo processo,
+L245@P1: andate al sito www.toro.com/T5
+L246@P1: o guardate il filmato sul vostro
+L247@P1: smartphone utilizzando il codice
+L248@P1: QR sopra.
+L249@P1: (FRA) Faites
+L250@P1: rapidement tourner la
+L251@P1: tourelle de buse vers
+L252@P1: la gauche et vers la
+L253@P1: droite jusqu’à sentir
+L254@P1: une résistance. Il
+L255@P1: s’agit des limites du
+L256@P1: secteur de la tourelle.
+L257@P1: (ITA) Fate avanzare
+L258@P1: rapidamente la
+L259@P1: torretta dell’ugello
+L260@P1: a sinistra e a destra
+L261@P1: fino a quando non
+L262@P1: incontrate resistenza.
+L263@P1: Quelli sono i bordi
+L264@P1: dell’arco della torretta.
+L265@P1: Turbine série T5
+L266@P1: avec RapidSet™
+L267@P1: Rotori Serie T5
+L268@P1: con RapidSet™
+L269@P1: Turbine série T5
+L270@P1: avec RapidSet™
+L271@P1: Rotori Serie T5
+L272@P1: con RapidSet™
+L273@P1: ! (FRA) La turbine T5 avec fonction RapidSet se
+L274@P1: reconnaît à son capuchon de tourelle gris foncé
+L275@P1: avec l’indication “T5 RapidSet”. Si votre turbine
+L276@P1: T5 a un capuchon de tourelle noir, n’essayez
+L277@P1: PAS d’utiliser la fonction RapidSet.
+L278@P1: ! (ITA) Il rotore T5 con RapidSet è contraddistinto dal tappo della torretta di colore grigio scuro
+L279@P1: con scritta “T5 RapidSet”. Se il vostro rotore T5
+L280@P1: è dotato di un tappo della torretta nero, NON
+L281@P1: tentate di utilizzare la funzionalità RapidSet.
+L282@P1: 180° arc
+L283@P1: (défaut /
+L284@P1: predefinito)
+L285@P1: bord gauche fixe
+L286@P1: / bordo fisso a
+L287@P1: sinistra
+L288@P1: bord régla- ble droite
+L289@P1: / bordo
+L290@P1: regolabile
+L291@P1: destra
+L292@P1: 180° arc
+L293@P1: (défaut /
+L294@P1: predefinito)
+L295@P1: bord gauche
+L296@P1: ajustable /
+L297@P1: bordo regola- bile sinistro
+L298@P1: bord droit
+L299@P1: fixe / bordo
+L300@P1: fisso a
+L301@P1: destra bord droit /
+L302@P1: bordo a destra
+L303@P1: bord gauche /
+L304@P1: bordo sinistro
+L305@P1: 180° arc
+L306@P1: 270° arc
+L307@P1: bord droit /
+L308@P1: bordo a destra
+L309@P1: nouveau bord
+L310@P1: gauche /
+L311@P1: nuovo bordo
+L312@P1: sinistro
+L313@P1: ancien bord gauchee /
+L314@P1: vecchio bordo sinistro
+L315@P1: bord gauche /
+L316@P1: bordo sinistro
+L317@P1: 270° arc
+L318@P1: bord droit /
+L319@P1: bordo destro
+L320@P1: arrêtez ici /
+L321@P1: fermarsi qui
+L322@P1: 180° arc
+L323@P1: manivelle retour
+L324@P1: à bord à droite /
+L325@P1: manovella torna
+L326@P1: a bordo destro
+L327@P1: nouveau bord
+L328@P1: gauche /
+L329@P1: nuovo bordo
+L330@P1: sinistro
+L331@P1: bord droit fixe /
+L332@P1: bordo fisso a destra
+L333@P1: ancien bord gauchee /
+L334@P1: vecchio bordo sinistro
+L335@P1-2: 1 2 3(DEU) Stellen Sie den Sprühsektor mit dem Werkzeug ein:
+L336@P2: (POR) Ajustar o arco de pulverização com a ferramenta:
+L337@P2: (DEU) Stellen Sie den Sprühsektor mit RapidSet™ ein: (POR) Para ajustar o arco de pulverização utilizando RapidSet™:
+L338@P2: (DEU) Ändern Sie den Düsen-/Verteilerstrahl:
+L339@P2: (POR) Substituir bico/pulverização difusa:
+L340@P2: 1 2 3
+L341@P2: 4 5 6
+L342@P2: +
+L343@P2: (DEU) Mit einer ganzen Umdrehung der Werkzeugklinge wird der Sektor um
+L344@P2: 90° verstellt.
+L345@P2: (POR) Uma volta completa da lâmina da ferramenta ajusta o arco em 90°.
+L346@P2: 4
+L347@P2: 1
+L348@P2: 2 3
+L349@P2: Click! Click! Click!
+L350@P2: +
+L351@P2: Click! Click! Click!
+L352@P2: +
+L353@P2: +
+L354@P2: 1 2 3
+L355@P2: (DEU) Drehen Sie das Düsendrehkreuz
+L356@P2: schnell nach links und rechts, bis Sie einen
+L357@P2: Widerstand feststellen. Dies sind die Kanten
+L358@P2: des Drehkreuzsektors.
+L359@P2: (POR) Empurrar a cabeça do bico para
+L360@P2: a esquerda e direita rapidamente até
+L361@P2: encontrar resistência. Esses são os limites de
+L362@P2: arco da cabeça.
+L363@P2: (DEU) Einstellen der rechten Kante: Drehen Sie das
+L364@P2: Düsendrehkreuz schnell zur rechten Kante. Fassen
+L365@P2: Sie es fest an und drehen Sie es nach rechts auf die
+L366@P2: gewünschte rechte Kantenstellung. Der ganze Sektor
+L367@P2: wird verlagert. Das Klickgeräusch ist normal.
+L368@P2: (POR) Regular o limite direito: Empurrar a cabeça do
+L369@P2: bico para o limite direito. Agarrar firmemente e rodar
+L370@P2: no sentido dos ponteiros do relógio até à posição
+L371@P2: do limite direito. O arco completo muda. O ruído de
+L372@P2: “cliques” é normal.
+L373@P2: (DEU) Einstellen der linken Kante: Drehen Sie das
+L374@P2: Düsendrehkreuz schnell zur linken Kante. Fassen
+L375@P2: Sie es fest an und drehen Sie es nach links auf
+L376@P2: die gewünschte linke Kantenstellung (in diesem
+L377@P2: Beispiel 270°). Das Klickgeräusch ist normal.
+L378@P2: (POR) Regular o limite esquerdo: Empurrar a
+L379@P2: cabeça do bico para o limite esquerdo. Agarrar
+L380@P2: firmemente e rodar no sentido contrário ao
+L381@P2: dos ponteiros do relógio até à posição do limite
+L382@P2: esquerdo (270° neste exemplo). O ruído de
+L383@P2: “cliques” é normal.
+L384@P2: +
+L385@P2: Click! Click! Click!
+L386@P2: +
+L387@P2: (DEU) Drehen Sie die Düse schnell zur
+L388@P2: rechten Kante, um den Drehkreuzsektor zu
+L389@P2: verkleinern. Drehen Sie sie dann um die
+L390@P2: gewünschte Sektorverkleinerung zurück zur
+L391@P2: linken Kante.
+L392@P2: (POR) Para reduzir o arco da cabeça, rodar
+L393@P2: o bico para o limite direito. Em seguida, rodar
+L394@P2: novamente para o limite esquerdo na distância
+L395@P2: de redução de arco que deseja.
+L396@P2: (DEU) Fassen Sie die Düse fest an und drehen Sie die
+L397@P2: Düse nach rechts zurück bis zur rechten Kante. Das
+L398@P2: Klickgeräusch ist normal. Wiederholen Sie Schritt 1, um zu
+L399@P2: bestätigen, dass der Sektor den gewünschten Winkel hat
+L400@P2: (in diesem Beispiel 180°).
+L401@P2: (POR) Agarrar firmemente o bico e rodá-lo no sentido dos
+L402@P2: ponteiros do relógio até à posição do limite direito. O ruído
+L403@P2: de “cliques” é normal. Repetir o passo 1 para confirmar se
+L404@P2: o arco está no ângulo certo (180° neste exemplo).
+L405@P2: 4 5
+L406@P2: (DEU)
+L407@P2: Ein Video, in dem diese
+L408@P2: Schritte vorgeführt werden,
+L409@P2: finden Sie unter www.toro.
+L410@P2: com/T5 oder schauen Sie das
+L411@P2: Video auf dem Smartphone mit
+L412@P2: dem QR-Code unten an.
+L413@P2: (POR)
+L414@P2: Pode ver um vídeo que
+L415@P2: demonstra este processo em
+L416@P2: www.toro.com/T5 ou no seu
+L417@P2: smartphone utilizando o código
+L418@P2: QR seguinte.
+L419@P2: (DEU) Drehen Sie
+L420@P2: das Düsendrehkreuz
+L421@P2: schnell nach links
+L422@P2: und rechts, bis Sie
+L423@P2: einen Widerstand
+L424@P2: feststellen. Dies
+L425@P2: sind die Kanten des
+L426@P2: Drehkreuzsektors.
+L427@P2: (POR) Empurrar
+L428@P2: a cabeça do bico
+L429@P2: para a esquerda e
+L430@P2: direita rapidamente
+L431@P2: até encontrar
+L432@P2: resistência. Esses
+L433@P2: são os limites de
+L434@P2: arco da cabeça.
+L435@P2: Getrieberegner der Serie T5
+L436@P2: mit RapidSet™
+L437@P2: Rotor da série T5
+L438@P2: com RapidSet™ Getrieberegner der Serie T5
+L439@P2: mit RapidSet™
+L440@P2: Rotor da série T5
+L441@P2: com RapidSet™
+L442@P2: (DEU) Ziehen Sie den Düsenaufsteiger hoch:
+L443@P2: (POR) Empurrar o sistema elevatório do bico para cima:
+L444@P2: ! (DEU) Sie erkennen den T5-Getrieberegner mit
+L445@P2: RapidSet an der dunkelgrauen Drehkreuzgummiabdeckung. Wenn der T5-Getrieberegner eine
+L446@P2: schwarze Drehkreuzkappe hat, Versuchen Sie
+L447@P2: NICHT, das RapidSet-Feature zu verwenden.
+L448@P2: ! (POR) O rotor T5 com RapidSet (regulação
+L449@P2: rápida) distingue-se por uma tampa de borracha
+L450@P2: cinzenta escura que diz « T5 RapidSet ». Se o seu
+L451@P2: rotor tem uma tampa de cabeça preta, NÃO tentar
+L452@P2: utilizar a função de RapidSet (regulação rápida).
+L453@P2: 180°
+L454@P2: (Werkseinstellungen /
+L455@P2: padrão)
+L456@P2: festen linken
+L457@P2: Rand / borda
+L458@P2: esquerda fixo
+L459@P2: einstellbar
+L460@P2: rechten
+L461@P2: Rand /
+L462@P2: borda direita
+L463@P2: ajustável
+L464@P2: 180°
+L465@P2: (Werkseinstellungen /
+L466@P2: padrão)
+L467@P2: einstellbar
+L468@P2: linken Rand /
+L469@P2: borda esquer- da ajustável
+L470@P2: festen rechten
+L471@P2: Rand / borda
+L472@P2: fixa direita
+L473@P2: rechten Rand /
+L474@P2: borda direita
+L475@P2: linken Rand /
+L476@P2: borda esquerda
+L477@P2: 180°
+L478@P2: 270°
+L479@P2: rechten Rand /
+L480@P2: borda direita
+L481@P2: neuen linken Rand /
+L482@P2: nova borda
+L483@P2: esquerda
+L484@P2: alten linken Rand /
+L485@P2: borda velha
+L486@P2: esquerda
+L487@P2: linken Rand /
+L488@P2: borda esquerda
+L489@P2: 270°
+L490@P2: 180°
+L491@P2: rechten Rand /
+L492@P2: borda direita
+L493@P2: hier halten /
+L494@P2: parar por aqui
+L495@P2: Kurbel zurück zum
+L496@P2: rechten Rand /
+L497@P2: manivela de volta
+L498@P2: para a borda direita
+L499@P2: neuen linken Rand /
+L500@P2: nova borda
+L501@P2: esquerda
+L502@P2: alten linken Rand /
+L503@P2: borda velha
+L504@P2: esquerda
+L505@P2: festen rechten Rand
+L506@P2: / borda fixa direita
+L507@P2-3: 1 2 3U.S. Charts
+L508@P3: Pressure – psi
+L509@P3: Radius – Feet
+L510@P3: Flow – GPM
+L511@P3: Precip. Rate – in./hr.
+L512@P3: Metric Charts
+L513@P3: Pressure – Bar
+L514@P3: Radius – Meters
+L515@P3: Flow 1– m³/hr.
+L516@P3: Flow 2– LPM
+L517@P3: Precip. Rate – mm/hr.
+L518@P3: Valori U.S.A.
+L519@P3: Pressione – PSI
+L520@P3: Gittata – Piedi
+L521@P3: Portata – GPM
+L522@P3: Precip. – In./Hr.
+L523@P3: Valori Metrici
+L524@P3: Pressione – Bar
+L525@P3: Gittata – Metri
+L526@P3: Portata 1 – m³/Hr.
+L527@P3: Portata 2 – l/min
+L528@P3: Precip. Rate – mm/hr.
+L529@P3: Note: Precipitation rate based on 50%
+L530@P3: diameter, 1/2-circle operation.
+L531@P3: Nota: Pluviometria calcolata con
+L532@P3: interdistanza pari al 50% del diametro e una
+L533@P3: rotazione di 180°.
+L534@P3: (ENG) Low Angle – U.S.
+L535@P3: (SPA) Ángulo cerrado –
+L536@P3: Sistema inglés
+L537@P3: (FRA) Trajectoire basse –
+L538@P3: Unités américaines
+L539@P3: (ITA) Traiettoria bassa –
+L540@P3: Valori U.S.A.
+L541@P3: (DEU) Flacher Winkel –
+L542@P3: amerikanische Maße
+L543@P3: (POR) Ângulo baixo – EUA
+L544@P3: (ENG) Standard Angle – Metric
+L545@P3: (SPA) Ángulo estándar –
+L546@P3: Sistema métrico
+L547@P3: (FRA) Trajectoire standard –
+L548@P3: Unités métriques
+L549@P3: (ITA) Traiettoria standard –
+L550@P3: Valori metrici
+L551@P3: (DEU) Standardwinkel –
+L552@P3: metrisch
+L553@P3: (POR) Ângulo padrão – Métrico
+L554@P3: (ENG) Standard Angle – U.S.
+L555@P3: (SPA) Ángulo estándar –
+L556@P3: Sistema inglés
+L557@P3: (FRA) Trajectoire standard –
+L558@P3: Unités américaines
+L559@P3: (ITA) Traiettoria standard –
+L560@P3: Valori U.S.A.
+L561@P3: (DEU) Standardwinkel –
+L562@P3: amerikanische Maße
+L563@P3: (POR) Ângulo padrão – EUA
+L564@P3: (ENG) Low Angle – Metric
+L565@P3: (SPA) Ángulo cerrado –
+L566@P3: Sistema métrico
+L567@P3: (FRA) Trajectoire basse –
+L568@P3: Unités métriques
+L569@P3: (ITA) Traiettoria bassa –
+L570@P3: Valori metrici
+L571@P3: (DEU) Flacher Winkel – metrisch
+L572@P3: (POR) Ângulo baixo – Métric
+L573@P3: 25 33 1.15 0.20 0.23
+L574@P3:  35 34 1.38 0.23 0.27
+L575@P3:  45 35 1.59 0.25 0.29
+L576@P3:  55 35 1.74 0.27 0.32
+L577@P3:  65 36 1.88 0.28 0.32
+L578@P3: 1.5
+L579@P3: 25 35 1.45 0.23 0.26
+L580@P3:  35 36 1.80 0.27 0.31
+L581@P3:  45 37 2.12 0.30 0.34
+

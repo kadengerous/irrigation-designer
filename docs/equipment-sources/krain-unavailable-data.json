@@ -1,0 +1,51 @@
+[
+  {
+    "modelId": "KV5",
+    "manufacturerId": "k-rain",
+    "verificationStatus": "Needs Review",
+    "sourceUrl": "https://www.krain.com/kv-nozzles/variable-arc-male-nozzle-5-kv5",
+    "verifiedOn": "2026-10-04",
+    "documented": {
+      "radiusFt": 5,
+      "radiusM": 1.524,
+      "nozzleThread": "male",
+      "compatibleBodyFamilyIds": [
+        "k-rain:K-Spray"
+      ],
+      "recommendedPressurePsi": 30
+    },
+    "missing": [
+      "pressure-radius-flow table",
+      "precipitation table"
+    ],
+    "note": "Official web listing exists; KV5 table absent from currently linked KV brochure and2026 catalog p46-47. Not added to placeable catalog."
+  },
+  {
+    "scope": "Rotary Nozzle Series, Fully Adjustable Rotary Nozzles, KVF, KV, Fixed Pattern Nozzles",
+    "missing": [
+      "published reduced-radius flow table"
+    ],
+    "note": "No numerical hydraulic adjustment rows found. Do not invent endpoint flow."
+  },
+  {
+    "scope": "SuperPro current2026 and RPS75i current2026",
+    "missing": [
+      "current -50% hydraulic rows"
+    ],
+    "note": "Current catalog has -30% data; RPS75i older Rev4 setting sheet has -50% rows retained separately with conflicting pressure metadata. Manufacturer FAQ authorizes up to50% radius/flow adjustment."
+  },
+  {
+    "scope": "RPS75/75i PR models",
+    "missing": [
+      "confirmed corrected metric precipitation"
+    ],
+    "note": "Same-source US/metric discrepancies require manufacturer clarification."
+  },
+  {
+    "scope": "High-low strip geometry",
+    "missing": [
+      "direct schema support for compound semicircle+rectangle"
+    ],
+    "note": "Exact dimensions retained;2high-low items marked placementSupported=false, not approximated as sectors."
+  }
+]

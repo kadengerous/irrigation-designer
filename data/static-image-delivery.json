@@ -1,0 +1,1778 @@
+{
+  "encoding": "lossless WebP",
+  "assets": [
+    {
+      "source": "/catalog/10A-HE.png",
+      "target": "/catalog/10A-HE.webp",
+      "sourceBytes": 444693,
+      "bytes": 284296,
+      "sha256": "41ab7c504772c3a6a1e1d37660f56e1ede5e8f61da57f4ba20d56bcf6de6f221",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/10A.png",
+      "target": "/catalog/10A.webp",
+      "sourceBytes": 588549,
+      "bytes": 386676,
+      "sha256": "0923accbf2f6850b359381fe53085e8c7c166baff32880a47c583ddc3e86feda",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/10F.png",
+      "target": "/catalog/10F.webp",
+      "sourceBytes": 310049,
+      "bytes": 184930,
+      "sha256": "68115c77823b18499cc4542d2e81754670ef6eb75f6c15a7c3cd1fdee3ed3d40",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/10H.png",
+      "target": "/catalog/10H.webp",
+      "sourceBytes": 337030,
+      "bytes": 198916,
+      "sha256": "2a62677c78e03f990290fb53ef970c5f2d6074546fc5169b7bb6696e92e800c8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/10Q.png",
+      "target": "/catalog/10Q.webp",
+      "sourceBytes": 328857,
+      "bytes": 193024,
+      "sha256": "3b5c6775cd4f1ee09e2b5abde14958bb687e83ac5e1b2aff9bcf36a7a1e6dfd7",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/10T.png",
+      "target": "/catalog/10T.webp",
+      "sourceBytes": 326645,
+      "bytes": 194556,
+      "sha256": "08e0d454d9e0f6463ab8c99416a6b8d0dd24d6770cfd1151b2ebf07cc4ac39f9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/12A-HE.png",
+      "target": "/catalog/12A-HE.webp",
+      "sourceBytes": 444653,
+      "bytes": 280708,
+      "sha256": "106dd6508a25009aa6c184a2dcb2663ee39fc8ce9a7e6b86880683d773d5beed",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/12A.png",
+      "target": "/catalog/12A.webp",
+      "sourceBytes": 450643,
+      "bytes": 291546,
+      "sha256": "a92f1e781cea075cf7cd1cad7e743ea4e2925e66b8e45e19331a59ce26ff4dca",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/12F.png",
+      "target": "/catalog/12F.webp",
+      "sourceBytes": 315901,
+      "bytes": 188418,
+      "sha256": "d5de2560cc2026a3e7ad4e5e61e5403d2da4e079cf99ca9eea614fcb0c780e91",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/12H.png",
+      "target": "/catalog/12H.webp",
+      "sourceBytes": 343752,
+      "bytes": 202216,
+      "sha256": "50522bada5b6d4d4d93186af25f2b61a4cf1bb305cf49a2b0beff06d5bc25535",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/12Q.png",
+      "target": "/catalog/12Q.webp",
+      "sourceBytes": 313123,
+      "bytes": 184732,
+      "sha256": "63ad04d94a02409053209079d803c65b3ab7badfa7c4fd9c9e05b4e0eff00457",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/12T.png",
+      "target": "/catalog/12T.webp",
+      "sourceBytes": 324077,
+      "bytes": 193500,
+      "sha256": "6fc64844f7d362bfee9943df30e8fb08e4407ac856fdbd4b9394067ec9dabcfe",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/12TQ.png",
+      "target": "/catalog/12TQ.webp",
+      "sourceBytes": 262833,
+      "bytes": 174054,
+      "sha256": "4753879b223d73d5f6edbbb8e15208fb724f8ae667c79178907a169dcd7e81d7",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/12TT.png",
+      "target": "/catalog/12TT.webp",
+      "sourceBytes": 262833,
+      "bytes": 174054,
+      "sha256": "4753879b223d73d5f6edbbb8e15208fb724f8ae667c79178907a169dcd7e81d7",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/15A-HE.png",
+      "target": "/catalog/15A-HE.webp",
+      "sourceBytes": 412087,
+      "bytes": 256038,
+      "sha256": "43c0fede6c26c705fb3cc83d71642fef12cc44acc76fce901fc2442edc28a7a3",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/15A.png",
+      "target": "/catalog/15A.webp",
+      "sourceBytes": 411067,
+      "bytes": 256790,
+      "sha256": "084770a03d3e5b46f1d8fd8cc9b2b76688695ac69b5a347dab753eac68bf722b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/15F.png",
+      "target": "/catalog/15F.webp",
+      "sourceBytes": 297194,
+      "bytes": 176686,
+      "sha256": "7dad93e5fd69c42c5a60230f8817edd478dc4883389fc88d7d9c9f83de4e483c",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/15H.png",
+      "target": "/catalog/15H.webp",
+      "sourceBytes": 306538,
+      "bytes": 186228,
+      "sha256": "a0ec25324c7a2f5df65b86e953de0157f721640756be4efed2279fe03e03801d",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/15Q.png",
+      "target": "/catalog/15Q.webp",
+      "sourceBytes": 269701,
+      "bytes": 157552,
+      "sha256": "355ef257ffa0883d3381a7e1b6bf498434462dfc8832e539191b0dd4f289bad2",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/15T.png",
+      "target": "/catalog/15T.webp",
+      "sourceBytes": 302335,
+      "bytes": 183420,
+      "sha256": "9e1fd08c1dbd0911a0294f728fb05a66829c77c2071a142b9bd8b59f47216263",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/15TQ.png",
+      "target": "/catalog/15TQ.webp",
+      "sourceBytes": 289521,
+      "bytes": 215466,
+      "sha256": "dc4d30848dae2e119cbd4ec6bcd2ec97adfea0f6866fabece92e17a0f993e9ae",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/15TT.png",
+      "target": "/catalog/15TT.webp",
+      "sourceBytes": 301675,
+      "bytes": 224758,
+      "sha256": "9926945a0a8a1698a98487f639d199b21cf59889f2bdc9704cf37f48ffb633b6",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/17A-HE.png",
+      "target": "/catalog/17A-HE.webp",
+      "sourceBytes": 394887,
+      "bytes": 240508,
+      "sha256": "73371a455a395844d9f728e7cfa4104ac513f059432893de1df8ffa8f59c272b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/17A.png",
+      "target": "/catalog/17A.webp",
+      "sourceBytes": 420137,
+      "bytes": 268674,
+      "sha256": "faff0de286bc2e2a4fd01128abc3a4ec9e33197d08c3f98c66ba344f160cdb1c",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/17F.png",
+      "target": "/catalog/17F.webp",
+      "sourceBytes": 284708,
+      "bytes": 199660,
+      "sha256": "ae6e181b11dc0048be650e38b8ec4df335072b25297071240372cb6b8f94be81",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/17H.png",
+      "target": "/catalog/17H.webp",
+      "sourceBytes": 280934,
+      "bytes": 164148,
+      "sha256": "03ba83c2621ef4419b819ae2a7b3ac4d615dfd593328424e262bf9c9d0812fce",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/17Q.png",
+      "target": "/catalog/17Q.webp",
+      "sourceBytes": 276938,
+      "bytes": 161326,
+      "sha256": "e0ad61c47fa00a062a06a0cc4c3de6993bf9777768f578ab47a56099cb959edd",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/2F.png",
+      "target": "/catalog/2F.webp",
+      "sourceBytes": 245057,
+      "bytes": 170702,
+      "sha256": "4f2ec5403fc8c944063ba2f11caf3cb114e52371322c150356d1ed82d68af1f2",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/2H.png",
+      "target": "/catalog/2H.webp",
+      "sourceBytes": 449766,
+      "bytes": 259056,
+      "sha256": "803497113922dce012880093e2c98ba88d940b2497bcfa08e70a845e01de462a",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/2Q.png",
+      "target": "/catalog/2Q.webp",
+      "sourceBytes": 484939,
+      "bytes": 283542,
+      "sha256": "c8d9e708dff1f5ee56b30a5c6808db9e83a950833e300b7771fe131e7d2e4c73",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/4A.png",
+      "target": "/catalog/4A.webp",
+      "sourceBytes": 503927,
+      "bytes": 328722,
+      "sha256": "7fff688a4875d3008195f804ddfec6a75aa597dc593708dfe77350a945a21978",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/4F.png",
+      "target": "/catalog/4F.webp",
+      "sourceBytes": 246252,
+      "bytes": 170332,
+      "sha256": "7f3deebde4766312829a7d4f96a7187dc704311c7f4c5689152c71c8a7022301",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/4H.png",
+      "target": "/catalog/4H.webp",
+      "sourceBytes": 522132,
+      "bytes": 303252,
+      "sha256": "a9bc42bc86d23de8448d8bff7f2058db60f6419042792535af1c7ea085aac827",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/4Q.png",
+      "target": "/catalog/4Q.webp",
+      "sourceBytes": 543373,
+      "bytes": 313764,
+      "sha256": "e6549fe3ca009fc6d2c6311a318b8fd7f04202b58d300bce909f569cdcee2466",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/5-CST-B.png",
+      "target": "/catalog/5-CST-B.webp",
+      "sourceBytes": 516999,
+      "bytes": 321982,
+      "sha256": "b1f098947e1eb1a6bffb46089c74b5b8ae07c7b886b324ee579045e1ee93d3a2",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/5F.png",
+      "target": "/catalog/5F.webp",
+      "sourceBytes": 319733,
+      "bytes": 190390,
+      "sha256": "194caca02d05ebf183248697545c0c033d064766c8343f11809d0d759042fefe",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/5H.png",
+      "target": "/catalog/5H.webp",
+      "sourceBytes": 336226,
+      "bytes": 198468,
+      "sha256": "a3f84f7f90c686d1f4df5296a2cd3528ca34bca6a49b3ae61d34b6f14f9de134",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/5Q.png",
+      "target": "/catalog/5Q.webp",
+      "sourceBytes": 314024,
+      "bytes": 187016,
+      "sha256": "97dc7a114b497335c1ba49c5531765ed9a7418149e9e66660ffe170d6bbb9b49",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/6A.png",
+      "target": "/catalog/6A.webp",
+      "sourceBytes": 480481,
+      "bytes": 315546,
+      "sha256": "b72586d931509e1c55c0de3fafe44172be1edb7ea54937d991c9d22780675e81",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/6F.png",
+      "target": "/catalog/6F.webp",
+      "sourceBytes": 244974,
+      "bytes": 170058,
+      "sha256": "6ec3394f56bbe6d5429807064203750c1b2cfe0c4bd5721fbe4901425765128d",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/6H.png",
+      "target": "/catalog/6H.webp",
+      "sourceBytes": 486343,
+      "bytes": 275452,
+      "sha256": "967ddf8ffb61e23c5a633cb097fd8e80d1da4994e378579737361fd4a5a676e8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/6Q.png",
+      "target": "/catalog/6Q.webp",
+      "sourceBytes": 488016,
+      "bytes": 274702,
+      "sha256": "f5e0037ebc39d22a5d985173efae66892cf1a0c932a659a1f389bacd3d925f46",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/8A-HE.png",
+      "target": "/catalog/8A-HE.webp",
+      "sourceBytes": 420809,
+      "bytes": 266132,
+      "sha256": "478ff3732ef684d418b0f92913820b0e1577d400eda03630f85db71c40c4c136",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/8A.png",
+      "target": "/catalog/8A.webp",
+      "sourceBytes": 562099,
+      "bytes": 355650,
+      "sha256": "2a920c38283ecb9ebd8ac4903fe9a4cd49b670c694418c43440b9b67857ebb19",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/8F.png",
+      "target": "/catalog/8F.webp",
+      "sourceBytes": 307542,
+      "bytes": 182608,
+      "sha256": "5298a418a8b2dd3cfd2bfa18313d7bd707e4a1ff469019567447d95369a6aab4",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/8H.png",
+      "target": "/catalog/8H.webp",
+      "sourceBytes": 321360,
+      "bytes": 190312,
+      "sha256": "bdd2f644a573f782e295c344eed6a9cdf7bc4f69b973e528d9abe9a5a88474e3",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/8Q.png",
+      "target": "/catalog/8Q.webp",
+      "sourceBytes": 311847,
+      "bytes": 183700,
+      "sha256": "99d487b54a8dfac435292ea73564aee5e062456edc5ea3b0d022bfbbcba1fd82",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/8T.png",
+      "target": "/catalog/8T.webp",
+      "sourceBytes": 325728,
+      "bytes": 194508,
+      "sha256": "4d4cb0886237addc0c2ec8e5771cfec5cdf29b47fd932555ba1fc5c605ffb828",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/AFB.png",
+      "target": "/catalog/AFB.webp",
+      "sourceBytes": 551690,
+      "bytes": 348366,
+      "sha256": "a89136dced36711d9fc5e6c9d42659c1720fdd6e2bebf682bfc73fc99622540e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/body.png",
+      "target": "/catalog/body.webp",
+      "sourceBytes": 118482,
+      "bytes": 86542,
+      "sha256": "bf6379449c05500ca5f160a9be22f019199b0f00000c61957c49cbba02ccc1c9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/CENTER-STRIP.png",
+      "target": "/catalog/CENTER-STRIP.webp",
+      "sourceBytes": 141394,
+      "bytes": 101178,
+      "sha256": "2ca4b3f4757ee878327784a1993681344d9ec1ae1b846377069f366acd9c9e74",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/CS-530.png",
+      "target": "/catalog/CS-530.webp",
+      "sourceBytes": 535277,
+      "bytes": 294894,
+      "sha256": "21669d3dbb0e3a92d0c5fe063d1c5b5a35548e3de68d35a6fe1b3a474ca5b21b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/END-STRIP.png",
+      "target": "/catalog/END-STRIP.webp",
+      "sourceBytes": 135817,
+      "bytes": 95262,
+      "sha256": "e9d580384e92a7095bc0927791f9c57c7b1b1af670a1f2e9c945faed799898da",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/ES-515.png",
+      "target": "/catalog/ES-515.webp",
+      "sourceBytes": 545116,
+      "bytes": 304870,
+      "sha256": "87da4fec3fd4f57917c7833ddb9adffd5acd4b1a08e93ee317c2abc69a16710a",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/G-70-B.png",
+      "target": "/catalog/G-70-B.webp",
+      "sourceBytes": 147162,
+      "bytes": 86130,
+      "sha256": "085fa87c0324d051c08369183d6281a3c3d56ad02d4532ef332c695083b60952",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/G-75-B.png",
+      "target": "/catalog/G-75-B.webp",
+      "sourceBytes": 140853,
+      "bytes": 86504,
+      "sha256": "028456c95760133707471527cc331ae037332b4cacf20306c0bae0b418fe3e2e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/G-80-B.png",
+      "target": "/catalog/G-80-B.webp",
+      "sourceBytes": 128648,
+      "bytes": 75926,
+      "sha256": "214e6fd4a83b97d657e63fd68ad9bf79ba24c0c175ee98e90e556715552bb277",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/G-85-B.png",
+      "target": "/catalog/G-85-B.webp",
+      "sourceBytes": 118276,
+      "bytes": 69540,
+      "sha256": "6ad26cb46e7bf9b2862d62ddb2f67a459d64a181e9da0eaa72ed7d460da5bdc0",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-bubbler.png",
+      "target": "/catalog/group-bubbler.webp",
+      "sourceBytes": 995194,
+      "bytes": 729622,
+      "sha256": "e9bb78b87e4af4080fba44171de6eb5ded7e5be0d9f74d1dd4937e63fb4ec130",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-fixed.png",
+      "target": "/catalog/group-fixed.webp",
+      "sourceBytes": 1177308,
+      "bytes": 781060,
+      "sha256": "7d9e6a07aa449e0a1e1186f8aa778187d41cc9e410c64cc3b9b859b5ab2f4393",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-golf.png",
+      "target": "/catalog/group-golf.webp",
+      "sourceBytes": 124537,
+      "bytes": 77614,
+      "sha256": "2a2d18c7210ea8f31346c8c6348c895db085560274e77d87ad4708493046d089",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-he.png",
+      "target": "/catalog/group-he.webp",
+      "sourceBytes": 460392,
+      "bytes": 301564,
+      "sha256": "a3c1821d61881c3b9e398ba930a003d1063f66fc19bcfc6adc7f841ee175f5e4",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-mp.png",
+      "target": "/catalog/group-mp.webp",
+      "sourceBytes": 281052,
+      "bytes": 200932,
+      "sha256": "a1f92322b23dafdf809d914f845a40c8146ca561c6e713b87f56ab670402f8ba",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-mp800.png",
+      "target": "/catalog/group-mp800.webp",
+      "sourceBytes": 138067,
+      "bytes": 93548,
+      "sha256": "a78854a09fc42f0d15076fa2611ef908641ec5b30abafce5f73485c1bb0405e9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-prostrip.png",
+      "target": "/catalog/group-prostrip.webp",
+      "sourceBytes": 420661,
+      "bytes": 259126,
+      "sha256": "e260fdccb9211cbc0119a9f093c49c74f1d815b6a640afc9ee69c8ff67abdffc",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-short.png",
+      "target": "/catalog/group-short.webp",
+      "sourceBytes": 491560,
+      "bytes": 306410,
+      "sha256": "d9a89a6318d0de5cef1a3359148c1283201a84be33c67976e35a160ae78f9074",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-spray.png",
+      "target": "/catalog/group-spray.webp",
+      "sourceBytes": 223087,
+      "bytes": 154570,
+      "sha256": "5c091cb0f63d4caaa8501e3cc8034c1061f8610894482487b3e12d1a59289a13",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-st.png",
+      "target": "/catalog/group-st.webp",
+      "sourceBytes": 101279,
+      "bytes": 65346,
+      "sha256": "d6bb4cd8c3a19b9b64a1c1cb13b1b4b4e27e0bbe469e94d247de6b59b5be18ca",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/group-strip.png",
+      "target": "/catalog/group-strip.webp",
+      "sourceBytes": 135698,
+      "bytes": 87802,
+      "sha256": "0005050d62de4d10486007395d21859f539d481b95254765607519670925671f",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-20-SS.png",
+      "target": "/catalog/I-20-SS.webp",
+      "sourceBytes": 122423,
+      "bytes": 75192,
+      "sha256": "afaa4248ada6f2f16a297ab4313b6059342367c13a95361e592f34ee901f3f63",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-20.png",
+      "target": "/catalog/I-20.webp",
+      "sourceBytes": 129321,
+      "bytes": 76958,
+      "sha256": "69556730669e7f7dd9a566df122c7ab0e3e08b7c9e68e903152963b7d15cecff",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-25-SS.png",
+      "target": "/catalog/I-25-SS.webp",
+      "sourceBytes": 128247,
+      "bytes": 77824,
+      "sha256": "b623c5a9067a0c55968761dcb4da8a01333fe7ed9706afe6eb7e45176245e6dc",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-25.png",
+      "target": "/catalog/I-25.webp",
+      "sourceBytes": 117553,
+      "bytes": 70258,
+      "sha256": "cebe8d7538965668a25583547ff0381bc283edddc66015d3ab356a1f5b0e10f2",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-40-ON.png",
+      "target": "/catalog/I-40-ON.webp",
+      "sourceBytes": 118443,
+      "bytes": 71212,
+      "sha256": "3a25477ce9154e5b6242a862d91b97bbc62d695068c4998ac5173b5402031e3c",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-40-SS.png",
+      "target": "/catalog/I-40-SS.webp",
+      "sourceBytes": 128571,
+      "bytes": 77820,
+      "sha256": "5a7452f208170dc576aa6d231600f50763f099bd515d94138bc2124dbdde484c",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-40.png",
+      "target": "/catalog/I-40.webp",
+      "sourceBytes": 120317,
+      "bytes": 71580,
+      "sha256": "3a6b32a140a839ad76f4b849253f4ca283c85d2c45a004748650eec288566ed6",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-50-ON.png",
+      "target": "/catalog/I-50-ON.webp",
+      "sourceBytes": 108207,
+      "bytes": 65500,
+      "sha256": "b29c13dd05c3beb94dc7df327b94216713e03e450901a7f337971befc2ccfab5",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-50.png",
+      "target": "/catalog/I-50.webp",
+      "sourceBytes": 115182,
+      "bytes": 70474,
+      "sha256": "6f56fc911bf16413636531cd673fd0ea9ad1d1f6124c94da2a51e8e75342744b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-80-ON.png",
+      "target": "/catalog/I-80-ON.webp",
+      "sourceBytes": 118211,
+      "bytes": 72704,
+      "sha256": "1b8d011d2897296d7c485812cfe70d8602d9943f282980df06c07b243c6077b9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-80-SS.png",
+      "target": "/catalog/I-80-SS.webp",
+      "sourceBytes": 128650,
+      "bytes": 79154,
+      "sha256": "3d019be94de391876419e11d98b07459c36fc5292d551437eeace52abe4f3d36",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-80.png",
+      "target": "/catalog/I-80.webp",
+      "sourceBytes": 119107,
+      "bytes": 73018,
+      "sha256": "431f4c865f3a8d7b4675019b5bebc492f89b5f16cbf0b7cba590e3c63155468d",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-90-36V.png",
+      "target": "/catalog/I-90-36V.webp",
+      "sourceBytes": 128430,
+      "bytes": 78390,
+      "sha256": "b433f2dc39cd99c2ac214ffefe39db53c8410f32cf9573c09eb459722bd01252",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/I-90.png",
+      "target": "/catalog/I-90.webp",
+      "sourceBytes": 125378,
+      "bytes": 75336,
+      "sha256": "dfc33580a9daac82c0af2fa5f81993c62b3adf68858d135068dece2bbc7275bd",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/LCS-515.png",
+      "target": "/catalog/LCS-515.webp",
+      "sourceBytes": 462842,
+      "bytes": 280516,
+      "sha256": "34230876ada93e5af543c449106eca8226a5be2d3fc8e3ca27f74e31e426c7ab",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/LEFT-STRIP.png",
+      "target": "/catalog/LEFT-STRIP.webp",
+      "sourceBytes": 142469,
+      "bytes": 101302,
+      "sha256": "35561604b4347146c5326dbfff015298fdbf675b054233bd6d1b2965c8b6c573",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP-CORNER.png",
+      "target": "/catalog/MP-CORNER.webp",
+      "sourceBytes": 180261,
+      "bytes": 125070,
+      "sha256": "9ec9cf4e17435fbb9639a02e25c6523ee24eb9f0a0514c87b0b567d6570904bd",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP-LCS-515.png",
+      "target": "/catalog/MP-LCS-515.webp",
+      "sourceBytes": 175808,
+      "bytes": 107108,
+      "sha256": "9ac1029cb74a0f0a7890f22dddd35f951c8553ccb8188444b3cb29fe6bf5365b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP-RCS-515.png",
+      "target": "/catalog/MP-RCS-515.webp",
+      "sourceBytes": 236069,
+      "bytes": 149692,
+      "sha256": "7d805bd7748973d90e91b1d493705de3dd5ce86773851912bf325db6946b01ff",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP-SS-530.png",
+      "target": "/catalog/MP-SS-530.webp",
+      "sourceBytes": 249890,
+      "bytes": 159548,
+      "sha256": "9a509fa10ac2998611fd983a3b01b8bdf97b416d26ec5077b4e4807e76ede45c",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/mp.png",
+      "target": "/catalog/mp.webp",
+      "sourceBytes": 1067492,
+      "bytes": 648104,
+      "sha256": "8450ba77980198bdc584773a75c4b55f4791f03a330da024ff52b8714cb1a928",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP1000-210.png",
+      "target": "/catalog/MP1000-210.webp",
+      "sourceBytes": 156827,
+      "bytes": 106936,
+      "sha256": "4f29e314a2139d21c266ea2880c29affa27be6cd99f2e40185573caa2f074d20",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP1000-360.png",
+      "target": "/catalog/MP1000-360.webp",
+      "sourceBytes": 146618,
+      "bytes": 98340,
+      "sha256": "011c626780ca73b584376114ed29ec28271c17a411bbd9e442106bbbcb5d8c3c",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP1000-90.png",
+      "target": "/catalog/MP1000-90.webp",
+      "sourceBytes": 148183,
+      "bytes": 102282,
+      "sha256": "9a1bb982431b33c0151375b7e4386bc6f3e19bf4a6b862bc2d55a9eaf823cff3",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP1000.png",
+      "target": "/catalog/MP1000.webp",
+      "sourceBytes": 148183,
+      "bytes": 102282,
+      "sha256": "9a1bb982431b33c0151375b7e4386bc6f3e19bf4a6b862bc2d55a9eaf823cff3",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP2000-210.png",
+      "target": "/catalog/MP2000-210.webp",
+      "sourceBytes": 158408,
+      "bytes": 107326,
+      "sha256": "89ec51727541fc4c3e78a27e1b3c4b2404f6497970143c21f27e61753e6fa41a",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP2000-360.png",
+      "target": "/catalog/MP2000-360.webp",
+      "sourceBytes": 157124,
+      "bytes": 107094,
+      "sha256": "9d19ef625e2f725f6e9a0f5c37321b7fad26a6416af13f2bdf83d285397b1624",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP2000-90.png",
+      "target": "/catalog/MP2000-90.webp",
+      "sourceBytes": 147064,
+      "bytes": 96928,
+      "sha256": "d5dcb4745f961bc2688df96e8fa982f6c6e9992ed5fdce025080fde22a3a1b12",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP2000.png",
+      "target": "/catalog/MP2000.webp",
+      "sourceBytes": 147064,
+      "bytes": 96928,
+      "sha256": "d5dcb4745f961bc2688df96e8fa982f6c6e9992ed5fdce025080fde22a3a1b12",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP3000-210.png",
+      "target": "/catalog/MP3000-210.webp",
+      "sourceBytes": 195247,
+      "bytes": 130320,
+      "sha256": "b872b4396118d20beb31840282b1d96565ca769cf8e4fac71eba1f6d5a07910a",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP3000-360.png",
+      "target": "/catalog/MP3000-360.webp",
+      "sourceBytes": 179153,
+      "bytes": 118890,
+      "sha256": "53279910f3ecb4208cf7b992594783c763f859582e16bc922e5b5898d3bc5b0f",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP3000-90.png",
+      "target": "/catalog/MP3000-90.webp",
+      "sourceBytes": 176134,
+      "bytes": 119416,
+      "sha256": "b656aee33e85c0477fa70122a6ee1d751ac0db9ff22fce27e2dd27d21743d27d",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP3000.png",
+      "target": "/catalog/MP3000.webp",
+      "sourceBytes": 176134,
+      "bytes": 119416,
+      "sha256": "b656aee33e85c0477fa70122a6ee1d751ac0db9ff22fce27e2dd27d21743d27d",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP3500-90.png",
+      "target": "/catalog/MP3500-90.webp",
+      "sourceBytes": 188184,
+      "bytes": 124482,
+      "sha256": "9c44baf15499f8e60ff4861a3233ee87ec5ad064cd020ced2ec825c4b1c7db9e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP3500.png",
+      "target": "/catalog/MP3500.webp",
+      "sourceBytes": 188184,
+      "bytes": 124482,
+      "sha256": "9c44baf15499f8e60ff4861a3233ee87ec5ad064cd020ced2ec825c4b1c7db9e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP800SR-360.png",
+      "target": "/catalog/MP800SR-360.webp",
+      "sourceBytes": 148036,
+      "bytes": 97466,
+      "sha256": "03168646a82cbbc1254295da7fa7c8dfe7c817fe5fe43d91bcb4b8e329766d2a",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP800SR-90.png",
+      "target": "/catalog/MP800SR-90.webp",
+      "sourceBytes": 197125,
+      "bytes": 138576,
+      "sha256": "4c99da2a6fe1fc22785458d37bb8cdf4e2bbe264371ae8a2d0043bb240d3901b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP800SR.png",
+      "target": "/catalog/MP800SR.webp",
+      "sourceBytes": 197125,
+      "bytes": 138576,
+      "sha256": "4c99da2a6fe1fc22785458d37bb8cdf4e2bbe264371ae8a2d0043bb240d3901b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP815-210.png",
+      "target": "/catalog/MP815-210.webp",
+      "sourceBytes": 175200,
+      "bytes": 118682,
+      "sha256": "143092ef8a1ee460acaefa1093ea1493505103d12bcfa39acbf9e6f7e743c5d8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP815-360.png",
+      "target": "/catalog/MP815-360.webp",
+      "sourceBytes": 154441,
+      "bytes": 102482,
+      "sha256": "dd0314469ff5be989f24ad9396abcb8fcde2e6aa5a92b4d6951acfa1146ef990",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP815-90.png",
+      "target": "/catalog/MP815-90.webp",
+      "sourceBytes": 150919,
+      "bytes": 98568,
+      "sha256": "023bba3c771f55a0116741b84e6a98cec9381a0aa618050fd937b899c34e564b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP815.png",
+      "target": "/catalog/MP815.webp",
+      "sourceBytes": 150919,
+      "bytes": 98568,
+      "sha256": "023bba3c771f55a0116741b84e6a98cec9381a0aa618050fd937b899c34e564b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP820.png",
+      "target": "/catalog/MP820.webp",
+      "sourceBytes": 244462,
+      "bytes": 172454,
+      "sha256": "74355cf31f27bff7e8a45961b27565d5383cd1613bcd16b23bf14d46a95dbb71",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MP830.png",
+      "target": "/catalog/MP830.webp",
+      "sourceBytes": 246504,
+      "bytes": 171566,
+      "sha256": "700e71aa0c0b46a0e20b2bd22e237d41ddbdc54ace3930413ad1ee28336c1192",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MSBN-10F.png",
+      "target": "/catalog/MSBN-10F.webp",
+      "sourceBytes": 420268,
+      "bytes": 294568,
+      "sha256": "1cb433c94147520992961e226922b18c17558aec316952f7d1e477a5da94a784",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MSBN-10H.png",
+      "target": "/catalog/MSBN-10H.webp",
+      "sourceBytes": 403515,
+      "bytes": 282864,
+      "sha256": "8f7a084991c034d30b1b0c97af3627ffc0cb733addd7ee1beb64ba18199dbc19",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MSBN-20F.png",
+      "target": "/catalog/MSBN-20F.webp",
+      "sourceBytes": 418772,
+      "bytes": 302718,
+      "sha256": "401919c37bfb5bd2a4843ae768e90eaa4662d91a8a998ddc1f5be4e9a7c79b99",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MSBN-25Q.png",
+      "target": "/catalog/MSBN-25Q.webp",
+      "sourceBytes": 395422,
+      "bytes": 274096,
+      "sha256": "955c87812889615742f22c5e21814ee800eef53703f8933e8f50b84435c37794",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MSBN-25V.png",
+      "target": "/catalog/MSBN-25V.webp",
+      "sourceBytes": 411539,
+      "bytes": 285182,
+      "sha256": "4435e17bd5c9f0af21548906eefe8fee60b703529ff58144fd4c7a559089a991",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MSBN-50H.png",
+      "target": "/catalog/MSBN-50H.webp",
+      "sourceBytes": 437272,
+      "bytes": 308614,
+      "sha256": "2fd1df8187b8c5b4e6167b6033032967336a2e2955b1e97fa0ca1dc8e344fd74",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MSBN-50Q.png",
+      "target": "/catalog/MSBN-50Q.webp",
+      "sourceBytes": 399608,
+      "bytes": 280108,
+      "sha256": "82855035e1645fa439ffd0c31933e40522f44774d39215e31d4a92f850948afe",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/MSBN-50V.png",
+      "target": "/catalog/MSBN-50V.webp",
+      "sourceBytes": 434032,
+      "bytes": 303630,
+      "sha256": "6352a53fbfe721978492b448cf7ede19fe8f39c3f3b13a21a21873f98c61571e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCB-10-R.png",
+      "target": "/catalog/PCB-10-R.webp",
+      "sourceBytes": 362406,
+      "bytes": 256180,
+      "sha256": "bab6159c06f36eda942f6d559953c0df6ed7156045126a6e023e47c1a13f5653",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCB-10.png",
+      "target": "/catalog/PCB-10.webp",
+      "sourceBytes": 399953,
+      "bytes": 274430,
+      "sha256": "53cc406c8357d2e695572f6424188ec9448f2258bd58f4449cef5bcb4ab391a5",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCB-20-R.png",
+      "target": "/catalog/PCB-20-R.webp",
+      "sourceBytes": 361247,
+      "bytes": 254866,
+      "sha256": "87763a269a90665d2f94c73c1e6efc0d7fa491a089766326d35e27439abf4d90",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCB-20.png",
+      "target": "/catalog/PCB-20.webp",
+      "sourceBytes": 395857,
+      "bytes": 271224,
+      "sha256": "93241a509c567ecefe5c5030912da451b8ff1ffc11c62f97492d68825bc9e485",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCB-25-R.png",
+      "target": "/catalog/PCB-25-R.webp",
+      "sourceBytes": 361804,
+      "bytes": 255152,
+      "sha256": "5f02f78965b8f397094b358a3e2691874f7d56334af2537534707b066eb4b202",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCB-25.png",
+      "target": "/catalog/PCB-25.webp",
+      "sourceBytes": 405717,
+      "bytes": 277890,
+      "sha256": "9a52ef42cf2eef20958d74a407d02b36478a1a79f2c5b8b54f486d50b61ec4db",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCB-50-R.png",
+      "target": "/catalog/PCB-50-R.webp",
+      "sourceBytes": 360567,
+      "bytes": 254052,
+      "sha256": "c70b1c48589e8e21b629cb31821d82ff2d9a690a0bfb616380252eddb502286b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCB-50.png",
+      "target": "/catalog/PCB-50.webp",
+      "sourceBytes": 403535,
+      "bytes": 278122,
+      "sha256": "81fd5092e20d413417e2581c10e6cc37678513426e9638ea97c35a366d1fa0fc",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCN-10.png",
+      "target": "/catalog/PCN-10.webp",
+      "sourceBytes": 402585,
+      "bytes": 273266,
+      "sha256": "9307435c9dd052598960ae60cfcfa35849255d906dbc564cb5b2cb22ccf81065",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCN-20.png",
+      "target": "/catalog/PCN-20.webp",
+      "sourceBytes": 437592,
+      "bytes": 300354,
+      "sha256": "ac56443fc071ab63020e0c564c72973c0451b5be263717f902a73287ce91f06b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCN-25.png",
+      "target": "/catalog/PCN-25.webp",
+      "sourceBytes": 400233,
+      "bytes": 278022,
+      "sha256": "28215405c99e059f1931e2619c1b48b248b8eed0cfb39f37d313eef746e6813b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PCN-50.png",
+      "target": "/catalog/PCN-50.webp",
+      "sourceBytes": 402432,
+      "bytes": 275728,
+      "sha256": "faefb5b0f42d0ddad6af8c1d35b9659e38b92db566b94039ebd1bf528c003221",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PGJ.png",
+      "target": "/catalog/PGJ.webp",
+      "sourceBytes": 118317,
+      "bytes": 71142,
+      "sha256": "25b6220a70b802742fdb1eafe1e107ba6b57b85844c529a9af210784e2360c7a",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PGP-ADJ.png",
+      "target": "/catalog/PGP-ADJ.webp",
+      "sourceBytes": 139408,
+      "bytes": 82872,
+      "sha256": "1621d12e63efb1049225ca4d8110c220f91efa13343d6e7e1bfa5eb6b280cf8d",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PGP-ULTRA.png",
+      "target": "/catalog/PGP-ULTRA.webp",
+      "sourceBytes": 126622,
+      "bytes": 74490,
+      "sha256": "a447ac7a2a64261d9fb6bdbd89c09eea740efaf59fcd0ed038e5990053c9bb61",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/pro-adjustable.png",
+      "target": "/catalog/pro-adjustable.webp",
+      "sourceBytes": 1012081,
+      "bytes": 659138,
+      "sha256": "e068687e832f2f1fddf5f19da7db1143b9752ffe6bd0b96c1385d61d4725dd44",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/pro-he.png",
+      "target": "/catalog/pro-he.webp",
+      "sourceBytes": 896815,
+      "bytes": 477466,
+      "sha256": "94e3bb1456705ed919c2a156392d9cd306dd76acfb61bc6349e021cb6d2dde3e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PRO-SPRAY.png",
+      "target": "/catalog/PRO-SPRAY.webp",
+      "sourceBytes": 118482,
+      "bytes": 86542,
+      "sha256": "bf6379449c05500ca5f160a9be22f019199b0f00000c61957c49cbba02ccc1c9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PRS30.png",
+      "target": "/catalog/PRS30.webp",
+      "sourceBytes": 118482,
+      "bytes": 86542,
+      "sha256": "bf6379449c05500ca5f160a9be22f019199b0f00000c61957c49cbba02ccc1c9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PRS40.png",
+      "target": "/catalog/PRS40.webp",
+      "sourceBytes": 118482,
+      "bytes": 86542,
+      "sha256": "bf6379449c05500ca5f160a9be22f019199b0f00000c61957c49cbba02ccc1c9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/PS-ULTRA.png",
+      "target": "/catalog/PS-ULTRA.webp",
+      "sourceBytes": 118482,
+      "bytes": 86542,
+      "sha256": "bf6379449c05500ca5f160a9be22f019199b0f00000c61957c49cbba02ccc1c9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/RCS-515.png",
+      "target": "/catalog/RCS-515.webp",
+      "sourceBytes": 446246,
+      "bytes": 248156,
+      "sha256": "6ffc6b5304e3e8040f4a9d48e37d3f092441ab9e98b7341e7987cca76a1f58cc",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/RIGHT-STRIP.png",
+      "target": "/catalog/RIGHT-STRIP.webp",
+      "sourceBytes": 142759,
+      "bytes": 101156,
+      "sha256": "17a566b4543130a5ecdbcea762046914ace45063023cc3b21f80cf04cae9072b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/rotor.png",
+      "target": "/catalog/rotor.webp",
+      "sourceBytes": 143454,
+      "bytes": 102552,
+      "sha256": "9fd1d32a912868eb16ae779b1ee7f0b10f943bae2af5a0d87193b9427b457cb8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/rotors.png",
+      "target": "/catalog/rotors.webp",
+      "sourceBytes": 262887,
+      "bytes": 163406,
+      "sha256": "8e59e6a076dd81b20545e22d95b7a5be9a7505a7246450e2bef2aba42fe07912",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/S-16A.png",
+      "target": "/catalog/S-16A.webp",
+      "sourceBytes": 241554,
+      "bytes": 166106,
+      "sha256": "af263757ca47358a51daf290b4eed7fad9106b2e1c31c14c3e6c1d3a18d678f1",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/S-8A.png",
+      "target": "/catalog/S-8A.webp",
+      "sourceBytes": 276504,
+      "bytes": 188348,
+      "sha256": "665c30b76692a5ac48a8a6caeaf5b5fb51e7ed8ffb1bb9cf5468e3d74835b0ff",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/spray.png",
+      "target": "/catalog/spray.webp",
+      "sourceBytes": 223295,
+      "bytes": 155758,
+      "sha256": "98e8499df62f6e0451406059b2ee460469ccbb3221e1a668d682b86f2d43333e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/SRM.png",
+      "target": "/catalog/SRM.webp",
+      "sourceBytes": 166033,
+      "bytes": 97372,
+      "sha256": "cb3db17b70bb1bb131af1e77923ba33f4356a205bce6720e0deb9cb4554c6065",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/SS-530.png",
+      "target": "/catalog/SS-530.webp",
+      "sourceBytes": 504114,
+      "bytes": 280622,
+      "sha256": "d30fc594693405c4052dd22a24c080b94d364eeda0c78e1909d334e266122c25",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/SS-918.png",
+      "target": "/catalog/SS-918.webp",
+      "sourceBytes": 444903,
+      "bytes": 254030,
+      "sha256": "fc2a1cdd966d73c5054772634b676c27d3b61563bbcf816a001aab1176d307d1",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/ST-1600.png",
+      "target": "/catalog/ST-1600.webp",
+      "sourceBytes": 126023,
+      "bytes": 75878,
+      "sha256": "f9c43bb273cbe2bfd24eaa4376f827eea3fa83d40c231418d8e86a3b540d3a53",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/ST-90.png",
+      "target": "/catalog/ST-90.webp",
+      "sourceBytes": 157099,
+      "bytes": 96892,
+      "sha256": "eeb4615b7f46b6e604a9c45498e91b44b80c8b6d418014ca88598d3e56b5c7c6",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/catalog/STG-900.png",
+      "target": "/catalog/STG-900.webp",
+      "sourceBytes": 163614,
+      "bytes": 101188,
+      "sha256": "51cbf1515ded218d81ff45d6e467ec577b27bfae32e94b677d18db52bb9aec9e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/asphalt.png",
+      "target": "/materials/asphalt.webp",
+      "sourceBytes": 314568,
+      "bytes": 239592,
+      "sha256": "b06a3488ff6d8f51a195327fbc4f9443e41b1a7936d00be6cdb5d506585d2b90",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/concrete.png",
+      "target": "/materials/concrete.webp",
+      "sourceBytes": 253356,
+      "bytes": 190246,
+      "sha256": "65e0b8fa649f89045882c308d8c8179728fc5506840a14a89b30cdb0546f8a1a",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/crushed-brick.png",
+      "target": "/materials/crushed-brick.webp",
+      "sourceBytes": 599588,
+      "bytes": 476882,
+      "sha256": "e54fd8866ec20dc6edb2627c952cc8d45427f7c215302017ad37806c49422542",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/decking.png",
+      "target": "/materials/decking.webp",
+      "sourceBytes": 147351,
+      "bytes": 117386,
+      "sha256": "6147671e91225934fed3c015a358844fa0d498ef5136d391d8af1d7e3844e898",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/flagstone.png",
+      "target": "/materials/flagstone.webp",
+      "sourceBytes": 3352045,
+      "bytes": 2336566,
+      "sha256": "2775bbfce9340411e79c6015532843946b1095323dc985d3e3468f6fe858dfa9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/fountain-water.png",
+      "target": "/materials/fountain-water.webp",
+      "sourceBytes": 596725,
+      "bytes": 434492,
+      "sha256": "8483e679b8150d12a79e6ffc71e714a8a85849aeb48161e4c4906c41943aeb1e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/gazebo-wood.png",
+      "target": "/materials/gazebo-wood.webp",
+      "sourceBytes": 432381,
+      "bytes": 327228,
+      "sha256": "158cf5ca558b86973286a32019e43a3ae77d6d5627f5f07b80a47d13e8a51b7f",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/gravel-black.png",
+      "target": "/materials/gravel-black.webp",
+      "sourceBytes": 642895,
+      "bytes": 393678,
+      "sha256": "aff1ae1877ff707894fc2f1b2aea7b2d92d1c05ea1b5b35b40b367e7e24770b8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/gravel-white.png",
+      "target": "/materials/gravel-white.webp",
+      "sourceBytes": 606858,
+      "bytes": 390326,
+      "sha256": "c280ee473f33174d068fdc5558c45d6fe7f13e6d6b7d6ce8d4a6cc5e87ae97b8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/gravel.png",
+      "target": "/materials/gravel.webp",
+      "sourceBytes": 326671,
+      "bytes": 243250,
+      "sha256": "c69c3052adb6fa1843371d746f5cd627ca3a14cb109263b5655b15fbdc13832a",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/greenhouse-bronze.png",
+      "target": "/materials/greenhouse-bronze.webp",
+      "sourceBytes": 214710,
+      "bytes": 173078,
+      "sha256": "460b0ccbe91e6b3030f2eaf5f68c8b2ff3a37489dd0eae1a569a6ab4bdf7d77d",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/greenhouse-film.png",
+      "target": "/materials/greenhouse-film.webp",
+      "sourceBytes": 365605,
+      "bytes": 256194,
+      "sha256": "deb953df13bc7142eb96b362ae90c4ffcd63c29ccc74d8bd1e70e86c3abab791",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/greenhouse-polycarbonate.png",
+      "target": "/materials/greenhouse-polycarbonate.webp",
+      "sourceBytes": 211611,
+      "bytes": 160230,
+      "sha256": "dafde3a0be75e092c492679c9fd54844625ff214f3eb3c579373bccb615e5951",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/greenhouse-timber.png",
+      "target": "/materials/greenhouse-timber.webp",
+      "sourceBytes": 421290,
+      "bytes": 303244,
+      "sha256": "ef7711d4de031767ca01df8ce0f7f7cbcc89f23adf343877eb55539499ff4def",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/greenhouse.png",
+      "target": "/materials/greenhouse.webp",
+      "sourceBytes": 2016890,
+      "bytes": 1550438,
+      "sha256": "3de81d3ab23031270f8814fd44d1860e55d4ba3c3eaaa87969cc57d708f37dfe",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/lake-water.png",
+      "target": "/materials/lake-water.webp",
+      "sourceBytes": 334359,
+      "bytes": 268732,
+      "sha256": "9895cddd958bebd43b6528f27ed35ed7b3cc318b17af36d2da2ffcbc442e9dc1",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/lawn.png",
+      "target": "/materials/lawn.webp",
+      "sourceBytes": 320554,
+      "bytes": 246758,
+      "sha256": "dcf6c82f066208c514e7183bcfe727f9ddac97e931074bbecad024efd259ed29",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/mulch.png",
+      "target": "/materials/mulch.webp",
+      "sourceBytes": 3648530,
+      "bytes": 2647996,
+      "sha256": "139aa5245cc2c23704eda6316bc4047c926fa6177dbbc71e52ab1b41913177c2",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/pavers-beige.png",
+      "target": "/materials/pavers-beige.webp",
+      "sourceBytes": 253202,
+      "bytes": 181580,
+      "sha256": "ba89c6f8eb6254ea8519805c55658f24465dfe26f96806337df17149fdbce3c9",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/pavers-brick.png",
+      "target": "/materials/pavers-brick.webp",
+      "sourceBytes": 279115,
+      "bytes": 196402,
+      "sha256": "f6c62bbbd563039a348950645097e5478d065e654c427783b57376e3d4a2a4ea",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/pavers-gray.png",
+      "target": "/materials/pavers-gray.webp",
+      "sourceBytes": 245052,
+      "bytes": 185660,
+      "sha256": "6c499d4c1a84df07389099b2c423569a62bad0d4c3a2138cdf0f1d066b370045",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/pavilion-metal.png",
+      "target": "/materials/pavilion-metal.webp",
+      "sourceBytes": 256451,
+      "bytes": 197466,
+      "sha256": "2b8964a613dad59c3aef8696e3eeb6e27a46f5cdf1b03d0ba636918120201e2b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/pebbles.png",
+      "target": "/materials/pebbles.webp",
+      "sourceBytes": 3411428,
+      "bytes": 2439122,
+      "sha256": "4e1a77ddc2b7bf27df8925f6fded24d3fe6681a14f9d0be412a6ac574414925b",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/pergola.png",
+      "target": "/materials/pergola.webp",
+      "sourceBytes": 478103,
+      "bytes": 368508,
+      "sha256": "9daaebe187d2aa7a56225768781db1d8abebe8481130585400f05157ba30544e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/pond-water.png",
+      "target": "/materials/pond-water.webp",
+      "sourceBytes": 435460,
+      "bytes": 322556,
+      "sha256": "5d63e013ecc4965e9188dc1552418df521588f51f367fdc9f5a7141255fca9b5",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/pool-water.png",
+      "target": "/materials/pool-water.webp",
+      "sourceBytes": 236995,
+      "bytes": 178112,
+      "sha256": "15fec0da184634387337c24304f9b4947d4e9e26f0fc6df70e4809a1b62057bf",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/reflecting-water.png",
+      "target": "/materials/reflecting-water.webp",
+      "sourceBytes": 293036,
+      "bytes": 234436,
+      "sha256": "d27501a4ee1adb2b8ae1e4f60963c685b4c0fc63f692b6b381d1e82d6c7c0b9d",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/river-water.png",
+      "target": "/materials/river-water.webp",
+      "sourceBytes": 545417,
+      "bytes": 362756,
+      "sha256": "66e0a3cc493b6ca5b4730c8969e667942fa01d80ec84ccd49b9b6c8ea1f4b5eb",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/roof-cedar.png",
+      "target": "/materials/roof-cedar.webp",
+      "sourceBytes": 442590,
+      "bytes": 341126,
+      "sha256": "209c0287e8cc2763f1b98cd7ceb3aee381a7ab4ee3be28b4108d629a1f4a68e8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/roof-metal-tile.png",
+      "target": "/materials/roof-metal-tile.webp",
+      "sourceBytes": 318434,
+      "bytes": 243618,
+      "sha256": "5a74d410d073b045360f09bcf01a24dda103d69626edd1268e490af93937df30",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/roof-metal.png",
+      "target": "/materials/roof-metal.webp",
+      "sourceBytes": 154326,
+      "bytes": 115236,
+      "sha256": "89297af7b62f1880408336e264df4ee357c743c978b31b62fa234090b58ec31c",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/roof-natural-slate.png",
+      "target": "/materials/roof-natural-slate.webp",
+      "sourceBytes": 445292,
+      "bytes": 302586,
+      "sha256": "8f061253fd7a8fedcb12f80df297dd429967bf93b09cabe2438dfaa14b4e0eb1",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/roof-shingle.png",
+      "target": "/materials/roof-shingle.webp",
+      "sourceBytes": 281341,
+      "bytes": 213726,
+      "sha256": "45161425a30bfcd547f8728e52ecbba7caaef8545475c6aba149ce91c504ffa8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/roof-slate.png",
+      "target": "/materials/roof-slate.webp",
+      "sourceBytes": 512516,
+      "bytes": 334054,
+      "sha256": "bacc32758d22e58680bc7b9e5df9bc9ba53f0f50cde5b0c3612c7c73a47ce3bc",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/roof-thatch.png",
+      "target": "/materials/roof-thatch.webp",
+      "sourceBytes": 509938,
+      "bytes": 612034,
+      "sha256": "56872b42b3b6910732644241d98680941b7d296b7244fa9dc64d6c5db2bc24a4",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/roof-tile.png",
+      "target": "/materials/roof-tile.webp",
+      "sourceBytes": 218567,
+      "bytes": 160850,
+      "sha256": "7d45cf56c74dc785ac64b006020b827cefac17081aaeb0efc48d1823ea787f38",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/rubber-surface.png",
+      "target": "/materials/rubber-surface.webp",
+      "sourceBytes": 3710638,
+      "bytes": 2857474,
+      "sha256": "8795ba0be8ee749f7802452fddfd03b4028795fff9fe421388003679a5b81c75",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/sand.png",
+      "target": "/materials/sand.webp",
+      "sourceBytes": 3634300,
+      "bytes": 2694182,
+      "sha256": "f0d25f192c47e8adda6c1b42df8ae02319d932966ec826dd7557341971d987bb",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/sea-water.png",
+      "target": "/materials/sea-water.webp",
+      "sourceBytes": 584186,
+      "bytes": 428830,
+      "sha256": "7fcc8148087b110715935cb70249489a1556a7bd9a0a0e00a8bf3c9d93ca312e",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/soil.png",
+      "target": "/materials/soil.webp",
+      "sourceBytes": 3594765,
+      "bytes": 2579072,
+      "sha256": "dc946b75305e5905ac387a5b3fb58ff1ef787a1229ef22647392566f0d3954c7",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/stream-water.png",
+      "target": "/materials/stream-water.webp",
+      "sourceBytes": 639202,
+      "bytes": 510020,
+      "sha256": "58e7db2f7eff2c1fb3137f9be0e0bd687c6e6b1ed61cc0d8b38164a7260ca245",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    },
+    {
+      "source": "/materials/vegetable-beds.png",
+      "target": "/materials/vegetable-beds.webp",
+      "sourceBytes": 3345239,
+      "bytes": 2460754,
+      "sha256": "097c348ae096cc33c44bd867f2a20bc0dc7f1a900df441a7a4c254ac6affb4d8",
+      "visiblePixelsIdentical": true,
+      "alphaIdentical": true
+    }
+  ]
+}

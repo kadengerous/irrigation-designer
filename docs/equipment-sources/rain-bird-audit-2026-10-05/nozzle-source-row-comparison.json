@@ -1,0 +1,3712 @@
+[
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.03,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.38,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.72,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 2.07,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.03,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.38,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.72,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 2.07,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.03,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.38,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.72,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 2.07,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.03,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.38,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 1.72,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-8",
+    "pressureBar": 2.07,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.03,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.38,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.72,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 2.07,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.03,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.38,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.72,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 2.07,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.03,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.38,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.72,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 2.07,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.03,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.38,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 1.72,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-10",
+    "pressureBar": 2.07,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.4,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.7,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.4,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.7,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.7,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.4,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 1.7,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-12",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.4,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.7,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.4,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.7,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.7,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.4,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 1.7,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "HE-VAN-15",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "4-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "6-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 330,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "18-VAN",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-8Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-10Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-12Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "U-15Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "10Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "12Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15F",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15F",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15F",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15F",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15H",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15H",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15H",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15H",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15Q",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15Q",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15Q",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15Q",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5F-B",
+    "pressureBar": 1.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5F-B",
+    "pressureBar": 1.5,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5F-B",
+    "pressureBar": 2.0,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5F-B",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5H-B",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5H-B",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5H-B",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5H-B",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5Q-B",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5Q-B",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5Q-B",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5Q-B",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5CST-B",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5CST-B",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5CST-B",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "5CST-B",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15EST",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15EST",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15EST",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15EST",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15CST",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15CST",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15CST",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15CST",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15RCS",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15RCS",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15RCS",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15RCS",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15LCS",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15LCS",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15LCS",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15LCS",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15SST",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15SST",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15SST",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "15SST",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "9SST",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "9SST",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "9SST",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "9SST",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8H-FLT",
+    "pressureBar": 1.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8H-FLT",
+    "pressureBar": 1.5,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8H-FLT",
+    "pressureBar": 2.0,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8H-FLT",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8Q-FLT",
+    "pressureBar": 1.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8Q-FLT",
+    "pressureBar": 1.5,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8Q-FLT",
+    "pressureBar": 2.0,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "8Q-FLT",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.1,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.4,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 2.8,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.1,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.4,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14",
+    "pressureBar": 3.8,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.1,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.4,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 2.8,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.1,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.4,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18",
+    "pressureBar": 3.8,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 270,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 240,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 210,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 150,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 120,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 90,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 60,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.1,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.4,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 2.8,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.1,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.4,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24",
+    "pressureBar": 3.8,
+    "arcDeg": 45,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14-360",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14-360",
+    "pressureBar": 2.4,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14-360",
+    "pressureBar": 2.8,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14-360",
+    "pressureBar": 3.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14-360",
+    "pressureBar": 3.4,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN14-360",
+    "pressureBar": 3.8,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18-360",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18-360",
+    "pressureBar": 2.4,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18-360",
+    "pressureBar": 2.8,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18-360",
+    "pressureBar": 3.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18-360",
+    "pressureBar": 3.4,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN18-360",
+    "pressureBar": 3.8,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24-360",
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24-360",
+    "pressureBar": 2.4,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24-360",
+    "pressureBar": 2.8,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24-360",
+    "pressureBar": 3.1,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24-360",
+    "pressureBar": 3.4,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN24-360",
+    "pressureBar": 3.8,
+    "arcDeg": 360,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-LCS",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-LCS",
+    "pressureBar": 2.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-LCS",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-LCS",
+    "pressureBar": 3.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-LCS",
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-LCS",
+    "pressureBar": 3.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-SST",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-SST",
+    "pressureBar": 2.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-SST",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-SST",
+    "pressureBar": 3.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-SST",
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-SST",
+    "pressureBar": 3.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-RCS",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-RCS",
+    "pressureBar": 2.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-RCS",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-RCS",
+    "pressureBar": 3.1,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-RCS",
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  },
+  {
+    "modelId": "R-VAN-RCS",
+    "pressureBar": 3.8,
+    "arcDeg": 180,
+    "result": "match",
+    "differences": {}
+  }
+]

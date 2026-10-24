@@ -1,0 +1,284 @@
+ (https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536)
+citeturn414view0 [wordlim: 200] Crawled: 6 days ago; Content type: application/pdf; Number of pages: 4; Source: click({"ref_id":"turn410view0","id":125}); Total lines: 281
+L0@P0: Toro®
+L1@P0:  Precision™ Series Spray Nozzles are the most efficient spray nozzles available and use 33% less water
+L2@P0: than other nozzles thanks to Toro’s proprietary H2O Chip Technology. With a matched precipitation rate of 1” per
+L3@P0: hour, Precision™ Series Spray Nozzles help irrigation professionals better manage water usage, eliminate runoff,
+L4@P0: and reduce their customers’ water costs. These nozzles are available in a wide variety of arcs and radii, and Toro
+L5@P0: (male) and female threads, making them ideal for both new installations and retrofits of existing systems. In
+L6@P0: addition, the best in class* Precision™ Series Spray Nozzles are also available in the PSN+ configuration, which
+L7@P0: features exclusive Debris Guard™ technology.
+L8@P0: Patented H20 Chip Technology
+L9@P0: Each nozzle contains one or more H2O chips that create a high
+L10@P0: frequency oscillating stream and deliver a precipitation rate of
+L11@P0: 1” per hour – an industry first – while using up to 33% less water
+L12@P0: than a standard MPR nozzle.
+L13@P0: Design and Retrofit Effectiveness
+L14@P0: The lower flow rate of Precision™ Series Spray Nozzles
+L15@P0: maximizes design efficiency and helps reduce overall material
+L16@P0: costs based on the need for fewer valves and controller stations.
+L17@P0: PSN+ Series
+L18@P0: The PSN+ Series line of nozzles feature exclusive Debris Guard
+L19@P0: technology, which keeps external dirt and debris that can cause
+L20@P0: clogging out of nozzle openings.
+L21@P0: Third-Party Performance Validation
+L22@P0: Precision™ Series Spray Nozzles** have been tested and validated
+L23@P0: in the field and at the Center for Irrigation Technology (CIT).
+L24@P0: * Laboratory and third party independent field testing show efficiency to be 15-20% higher than
+L25@P0: competitive nozzles at 15 feet or less.
+L26@P0: ** non PCD and non PSN+ models only
+L27@P0: PRECISION™ SERIES SPRAY NOZZLES
+L28@P0: FEATURES & BENEFITS
+L29@P0: Female-threaded
+L30@P0: Model
+L31@P0: Male-threaded
+L32@P0-1: ModelPRODUCT HIGHLIGHT
+L33@P1: Debris Guard Technology
+L34@P1: The exclusive Debris Guard™ technology addresses the issue of clogging due to suck
+L35@P1: back of external debris . It is not uncommon for spray nozzles to experience some
+L36@P1: amount of suck-back when the irrigation system shuts down. Debris Guard is an
+L37@P1: exclusive anti-siphon device integrated into the nozzle screen that prevents dirt and
+L38@P1: debris from being suctioned into and trapped in the nozzle. This increases the life
+L39@P1: of the nozzle, preserves its irrigation pattern and coverage, and maintains its ability
+L40@P1: to provide long-lasting water efficient results.
+L41@P1: 1" 1” Per Hour Matched Precipitation
+L42@P1: & One-For-One Retrofit
+L43@P1: Perfect when upgrading conventional, higher flow spray nozzles.
+L44@P1: Water Usage Comparison
+L45@P1: 70,000
+L46@P1: 60,000
+L47@P1: 50,000
+L48@P1: 40,000
+L49@P1: 30,000
+L50@P1: 20,000
+L51@P1: 10,000
+L52@P1: 0
+L53@P1: 1 Year 3 Year 5 Year
+L54@P1: Thousand Gallons
+L55@P1: Precision™ Series Spray Nozzles
+L56@P1: Competitive Spray Nozzles
+L57@P1: 7,229
+L58@P1: 11,801
+L59@P1: 21,686
+L60@P1: 35,403 36,143
+L61@P1: 59,006
+L62@P1: Higher Overall Irrigation Efficiency From 5-15 Feet
+L63@P1: Precision™ Series Spray nozzles perform more like a small rotor. The H²0 Chip enables
+L64@P1: the nozzles to achieve distances of throw equivalent to those of conventional spray
+L65@P1: nozzles – but with one-third less flow and higher overall irrigation efficiency.
+L66@P1: Water Use Reduction While Minimizing Run-Off &
+L67@P1: Water Waste
+L68@P1: Precision™ Series Spray Nozzles have proven to save water in the field while reducing
+L69@P1: unnecessary overspray, wasteful run-off and evaporation.
+L70@P1: Nozzle Selection Second To None
+L71@P1: Available in male and female threaded models with radius options between 5’ and 15’,
+L72@P1: and nine different arcs between 60° and 360°, and specialty arcs, such as right and
+L73@P1: left corners, and center strips. All nozzles feature color-coded tops with arc indication
+L74@P1-2: for quick overhead identification in the field.Laboratory and third party independent field testing show efficiency to be 15-20% higher than competitive nozzles.
+L75@P2: Scan this QR Code to View the
+L76@P2: Performance Data Charts
+L77@P2: PRECISION™ SERIES SPRAY NOZZLE MODEL LIST
+L78@P2: 5’ NOZZLE (RED) 8’ NOZZLE (GREEN)
+L79@P2: Male Female Pattern Male Female Pattern
+L80@P2: PSN5T-60
+L81@P2: PSN5T-Q
+L82@P2: PSN5T-T
+L83@P2: PSN5T-150
+L84@P2: PSN5T-H
+L85@P2: PSN5T-210
+L86@P2: PSN5T-TT
+L87@P2: PSN5T-TQ
+L88@P2: PSN5T-F
+L89@P2: PSN5-60
+L90@P2: PSN5-Q
+L91@P2: PSN5-T
+L92@P2: PSN5-150
+L93@P2: PSN5-H
+L94@P2: PSN5-210
+L95@P2: PSN5-TT
+L96@P2: PSN5-TQ
+L97@P2: PSN5-F
+L98@P2: 60° Arc
+L99@P2: 90° Arc
+L100@P2: 120° Arc
+L101@P2: 150° Arc
+L102@P2: 180° Arc
+L103@P2: 210° Arc
+L104@P2: 240° Arc
+L105@P2: 270° Arc
+L106@P2: 360° Arc
+L107@P2: PSN8T-60
+L108@P2: PSN8T-Q
+L109@P2: PSN8T-T
+L110@P2: PSN8T-150
+L111@P2: PSN8T-H
+L112@P2: PSN8T-210
+L113@P2: PSN8T-TT
+L114@P2: PSN8T-TQ
+L115@P2: PSN8T-F
+L116@P2: PSN8-60
+L117@P2: PSN8-Q
+L118@P2: PSN8-T
+L119@P2: PSN8-150
+L120@P2: PSN8-H
+L121@P2: PSN8-210
+L122@P2: PSN8-TT
+L123@P2: PSN8-TQ
+L124@P2: PSN8-F
+L125@P2: 60° Arc
+L126@P2: 90° Arc
+L127@P2: 120° Arc
+L128@P2: 150° Arc
+L129@P2: 180° Arc
+L130@P2: 210° Arc
+L131@P2: 240° Arc
+L132@P2: 270° Arc
+L133@P2: 360° Arc
+L134@P2: 15’ NOZZLE (BLACK) SPECIAL PATTERNS (GREY)
+L135@P2: Male Female Pattern Male Female Pattern
+L136@P2: PSN15T-60
+L137@P2: PSN15T-Q
+L138@P2: PSN15T-T
+L139@P2: PSN15T-150
+L140@P2: PSN15T-H
+L141@P2: PSN15T-210
+L142@P2: PSN15T-TT
+L143@P2: PSN15T-TQ
+L144@P2: PSN15T-F
+L145@P2: PSN15-60
+L146@P2: PSN15-Q
+L147@P2: PSN15-T
+L148@P2: PSN15-150
+L149@P2: PSN15-H
+L150@P2: PSN15-210
+L151@P2: PSN15-TT
+L152@P2: PSN15-TQ
+L153@P2: PSN15-F
+L154@P2: 60° Arc
+L155@P2: 90° Arc
+L156@P2: 120° Arc
+L157@P2: 150° Arc
+L158@P2: 180° Arc
+L159@P2: 210° Arc
+L160@P2: 240° Arc
+L161@P2: 270° Arc
+L162@P2: 360° Arc
+L163@P2: PSN4X9T-RCS
+L164@P2: PSN4X9T-LCS
+L165@P2: PSN4X18T-SST
+L166@P2: PSN4X15T-RCS
+L167@P2: PSN4X15T-LCS
+L168@P2: PSN4X30T-SST
+L169@P2: PSN4X9-RCS
+L170@P2: PSN4X9-LCS
+L171@P2: PSN4X18-SST
+L172@P2: PSN4X15-RCS
+L173@P2: PSN4X15-LCS
+L174@P2: PSN4X30-SST
+L175@P2: Right Corner
+L176@P2: Left Corner
+L177@P2: Side Strip
+L178@P2: Right Corner
+L179@P2: Left Corner
+L180@P2: Side Strip
+L181@P2: 10’ NOZZLE (BLUE) 12’ NOZZLE (BROWN)
+L182@P2: Male Female Pattern Male Female Pattern
+L183@P2: PSN10T-60
+L184@P2: PSN10T-Q
+L185@P2: PSN10T-T
+L186@P2: PSN10T-150
+L187@P2: PSN10T-H
+L188@P2: PSN10T-210
+L189@P2: PSN10T-TT
+L190@P2: PSN10T-TQ
+L191@P2: PSN10T-F
+L192@P2: PSN10-60
+L193@P2: PSN10-Q
+L194@P2: PSN10-T
+L195@P2: PSN10-150
+L196@P2: PSN10-H
+L197@P2: PSN10-210
+L198@P2: PSN10-TT
+L199@P2: PSN10-TQ
+L200@P2: PSN10-F
+L201@P2: 60° Arc
+L202@P2: 90° Arc
+L203@P2: 120° Arc
+L204@P2: 150° Arc
+L205@P2: 180° Arc
+L206@P2: 210° Arc
+L207@P2: 240° Arc
+L208@P2: 270° Arc
+L209@P2: 360° Arc
+L210@P2: PSN12T-60
+L211@P2: PSN12T-Q
+L212@P2: PSN12T-T
+L213@P2: PSN12T-150
+L214@P2: PSN12T-H
+L215@P2: PSN12T-210
+L216@P2: PSN12T-TT
+L217@P2: PSN12T-TQ
+L218@P2: PSN12T-F
+L219@P2: PSN12-60
+L220@P2: PSN12-Q
+L221@P2: PSN12-T
+L222@P2: PSN12-150
+L223@P2: PSN12-H
+L224@P2: PSN12-210
+L225@P2: PSN12-TT
+L226@P2: PSN12-TQ
+L227@P2: PSN12-F
+L228@P2: 60° Arc
+L229@P2: 90° Arc
+L230@P2: 120° Arc
+L231@P2: 150° Arc
+L232@P2: 180° Arc
+L233@P2: 210° Arc
+L234@P2: 240° Arc
+L235@P2: 270° Arc
+L236@P2-3: 360° ArcSPECIFICATIONS
+L237@P3: Operational
+L238@P3: • Radius: 5’-15’
+L239@P3: • Operating pressure range: 20-75 psi
+L240@P3: • Recommended operating pressure: 30 psi
+L241@P3: • Flow Rate: 0.04-2.4 gpm
+L242@P3: • Nozzle trajectory:
+L243@P3:  - 5’: 5°
+L244@P3:  - 8’: 10°
+L245@P3:  - 10’: 15°
+L246@P3:  - 12’: 20°
+L247@P3:  - 15’: 27°
+L248@P3:  - Corner and Side Strips: 20°
+L249@P3: Warranty
+L250@P3: • Two years
+L251@P3: Patented H20 Chip Technology Delivers Improved Uniformity
+L252@P3: Water enters a specially designed chamber within the H2O Chip where the water
+L253@P3: expands and collapses, creating an oscillating effect. Consistent-sized water
+L254@P3: droplets exit the Chip in the designed arc pattern and radius with clean edge
+L255@P3: definition, class-leading distribution uniformity, and reduced water usage.
+L256@P3: Precision™ Series
+L257@P3: Spray Nozzles
+L258@P3: Standard
+L259@P3: Spray Nozzles
+L260@P3: www.toro.com
+L261@P3: The Toro Company • Irrigation Business • 5825 Jasmine St. • Riverside, CA • 92504 • 877-345-8676
+L262@P3: Specifications subject to change without notice. For more information, contact your local Toro distributor. ©2025 The Toro Company. All rights reserved. 26-1045-IRC
+L263@P3: Specifying Information-Precision™ Series Spray Nozzle
+L264@P3: PSNX-XXXX-XXXX
+L265@P3: Nozzle Thread Radius Arc
+L266@P3: PSN X XXXX XXXX
+L267@P3:  PSN T—Toro Male-Threaded Nozzle
+L268@P3: Blank—Female-Threaded Nozzle
+L269@P3: 5—5’ 8—8’ 10—10’
+L270@P3: 12— 12’ 15—15’
+L271@P3: 4X15—4’X15’
+L272@P3: 4X30—4’X30’
+L273@P3: 4X9—4’X9’
+L274@P3: 4X18—4’X18’
+L275@P3: 60—60° Q—90° T—120°
+L276@P3: 150—150° H—180° 210—210°
+L277@P3:  TT—240° TQ—270°
+L278@P3:  F-360º—Full-circle LCS—Left Corner
+L279@P3:  RCS—Right Corner SST—Side Strip
+L280@P3: Example: A female-threaded Precision™ Series Spray with a spray radius of 12’ and a 90° arc would be specified as: PSN12-Q
+

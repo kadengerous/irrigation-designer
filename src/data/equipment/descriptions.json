@@ -1,0 +1,837 @@
+{
+  "reviewedOn": "2026-10-06",
+  "entries": [
+    {
+      "key": "hunterDescription.mpStandard",
+      "modelIds": [
+        "MP1000-90",
+        "MP1000-210",
+        "MP1000-360",
+        "MP2000-90",
+        "MP2000-210",
+        "MP2000-360",
+        "MP3000-90",
+        "MP3000-210",
+        "MP3000-360",
+        "MP3500-90",
+        "MP-CORNER"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/mp-rotator/standard-mp-rotatorr-nozzle"
+      ]
+    },
+    {
+      "key": "hunterDescription.mp800",
+      "modelIds": [
+        "MP800SR-90",
+        "MP800SR-360",
+        "MP815-90",
+        "MP815-210",
+        "MP815-360"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/mp-rotator/standard-mp-rotatorr-nozzle",
+        "https://www.hunterirrigation.com/node/38356",
+        "https://www.hunterirrigation.com/node/434666"
+      ]
+    },
+    {
+      "key": "hunterDescription.mpStrip",
+      "modelIds": [
+        "MP-LCS-515",
+        "MP-RCS-515",
+        "MP-SS-530"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/mp-rotator/mp-rotatorr-strip-nozzle"
+      ]
+    },
+    {
+      "key": "hunterDescription.adjustableSpray",
+      "modelIds": [
+        "4A",
+        "6A",
+        "8A",
+        "10A",
+        "12A",
+        "15A",
+        "17A"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles"
+      ]
+    },
+    {
+      "key": "hunterDescription.highEfficiencySpray",
+      "modelIds": [
+        "8A-HE",
+        "10A-HE",
+        "12A-HE",
+        "15A-HE",
+        "17A-HE"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-high-efficiency-nozzles"
+      ]
+    },
+    {
+      "key": "hunterDescription.fixedSpray",
+      "modelIds": [
+        "5Q",
+        "5H",
+        "5F",
+        "8Q",
+        "8T",
+        "8H",
+        "8F",
+        "10Q",
+        "10T",
+        "10H",
+        "10F",
+        "12Q",
+        "12T",
+        "12H",
+        "12F",
+        "15Q",
+        "15T",
+        "15H",
+        "15F",
+        "17Q",
+        "17H",
+        "CS-530",
+        "ES-515",
+        "LCS-515",
+        "RCS-515",
+        "SS-530",
+        "SS-918"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles"
+      ]
+    },
+    {
+      "key": "hunterDescription.shortSpray",
+      "modelIds": [
+        "2Q",
+        "2H",
+        "4Q",
+        "4H",
+        "6Q",
+        "6H"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles"
+      ]
+    },
+    {
+      "key": "hunterDescription.streamSpray",
+      "modelIds": [
+        "S-8A",
+        "S-16A"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/mp-rotator/standard-mp-rotatorr-nozzle"
+      ]
+    },
+    {
+      "key": "hunterDescription.rotorResidential",
+      "modelIds": [
+        "PGJ",
+        "SRM",
+        "PGP-ADJ",
+        "PGP-ULTRA",
+        "I-20",
+        "I-20-SS"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/rotors/pgj",
+        "https://www.hunterirrigation.com/irrigation-product/rotors/srm",
+        "https://www.hunterirrigation.com/irrigation-product/rotors/pgp-adj",
+        "https://www.hunterirrigation.com/irrigation-product/rotors/pgpr-ultra",
+        "https://www.hunterirrigation.com/irrigation-product/rotors/i-20"
+      ]
+    },
+    {
+      "key": "hunterDescription.rotorLarge",
+      "modelIds": [
+        "I-25",
+        "I-40",
+        "I-50",
+        "I-80",
+        "I-90",
+        "I-90-36V",
+        "I-25-SS",
+        "I-40-SS",
+        "I-80-SS"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/rotors/i-25",
+        "https://www.hunterirrigation.com/irrigation-product/rotors/i-40",
+        "https://www.hunterindustries.com/sites/default/files/00-rc-001-ca-vol38-huntercatalog-em.pdf",
+        "https://www.hunterirrigation.com/irrigation-product/rotors/i-80",
+        "https://www.hunterirrigation.com/irrigation-product/rotors/i-90"
+      ]
+    },
+    {
+      "key": "hunterDescription.rotorOpposed",
+      "modelIds": [
+        "I-40-ON",
+        "I-50-ON",
+        "I-80-ON"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/rotors/i-40",
+        "https://www.hunterindustries.com/sites/default/files/00-rc-001-ca-vol38-huntercatalog-em.pdf",
+        "https://www.hunterirrigation.com/irrigation-product/rotors/i-80"
+      ]
+    },
+    {
+      "key": "hunterDescription.rotorGolf",
+      "modelIds": [
+        "G-70-B",
+        "G-75-B",
+        "G-80-B",
+        "G-85-B"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-70-b",
+        "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-75-b",
+        "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-80-b",
+        "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-85-b"
+      ]
+    },
+    {
+      "key": "hunterDescription.rotorSport",
+      "modelIds": [
+        "ST-90",
+        "STG-900",
+        "ST-1600"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/st-system/st-90",
+        "https://www.hunterirrigation.com/irrigation-product/st-1600"
+      ]
+    },
+    {
+      "key": "hunterDescription.bubblerStreams",
+      "modelIds": [
+        "MSBN-25Q",
+        "MSBN-50Q",
+        "MSBN-50H",
+        "MSBN-10H",
+        "MSBN-10F",
+        "MSBN-20F",
+        "MSBN-25V",
+        "MSBN-50V",
+        "5-CST-B"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles"
+      ]
+    },
+    {
+      "key": "hunterDescription.bubblerCompensated",
+      "modelIds": [
+        "PCN-25",
+        "PCN-50",
+        "PCN-10",
+        "PCN-20",
+        "PCB-25",
+        "PCB-50",
+        "PCB-10",
+        "PCB-20",
+        "PCB-25-R",
+        "PCB-50-R",
+        "PCB-10-R",
+        "PCB-20-R"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles"
+      ]
+    },
+    {
+      "key": "hunterDescription.bubblerAdjustable",
+      "modelIds": [
+        "AFB"
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.heVan",
+      "modelIds": [
+        "rain-bird:HE-VAN-8",
+        "rain-bird:HE-VAN-10",
+        "rain-bird:HE-VAN-12",
+        "rain-bird:HE-VAN-15"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/he-van-high-efficiency-variable-arc-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.van",
+      "modelIds": [
+        "rain-bird:4-VAN",
+        "rain-bird:6-VAN",
+        "rain-bird:8-VAN",
+        "rain-bird:10-VAN",
+        "rain-bird:12-VAN",
+        "rain-bird:15-VAN",
+        "rain-bird:18-VAN"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/van-series-variable-arc-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.uSeries",
+      "modelIds": [
+        "rain-bird:U-8F",
+        "rain-bird:U-10F",
+        "rain-bird:U-12F",
+        "rain-bird:U-15F",
+        "rain-bird:U-8H",
+        "rain-bird:U-10H",
+        "rain-bird:U-12H",
+        "rain-bird:U-15H",
+        "rain-bird:U-8Q",
+        "rain-bird:U-10Q",
+        "rain-bird:U-12Q",
+        "rain-bird:U-15Q"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/u-series-high-efficiency-dual-orifice-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.mpr",
+      "modelIds": [
+        "rain-bird:5F",
+        "rain-bird:8F",
+        "rain-bird:10F",
+        "rain-bird:12F",
+        "rain-bird:15F",
+        "rain-bird:5H",
+        "rain-bird:8H",
+        "rain-bird:10H",
+        "rain-bird:12H",
+        "rain-bird:15H",
+        "rain-bird:5Q",
+        "rain-bird:8Q",
+        "rain-bird:10Q",
+        "rain-bird:12Q",
+        "rain-bird:15Q"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/mpr-series-fixed-pattern-spray-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.flat",
+      "modelIds": [
+        "rain-bird:8H-FLT",
+        "rain-bird:8Q-FLT"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/mpr-series-fixed-pattern-spray-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.strip",
+      "modelIds": [
+        "rain-bird:15EST",
+        "rain-bird:15CST",
+        "rain-bird:15LCS",
+        "rain-bird:15RCS",
+        "rain-bird:15SST",
+        "rain-bird:9SST"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.rvan",
+      "modelIds": [
+        "rain-bird:R-VAN14",
+        "rain-bird:R-VAN18",
+        "rain-bird:R-VAN24",
+        "rain-bird:R-VAN14-360",
+        "rain-bird:R-VAN18-360",
+        "rain-bird:R-VAN24-360"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/r-van-rotary-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.rvanStrip",
+      "modelIds": [
+        "rain-bird:R-VAN-LCS",
+        "rain-bird:R-VAN-RCS",
+        "rain-bird:R-VAN-SST"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/r-van-rotary-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.sq",
+      "modelIds": [
+        "rain-bird:SQ-QTR",
+        "rain-bird:SQ-HLF",
+        "rain-bird:SQ-3QTR",
+        "rain-bird:SQ-FUL"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/sq-series-square-pattern-nozzles"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.bubblerAdjustable",
+      "modelIds": [
+        "rain-bird:1300A-F"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.bubblerCompensated",
+      "modelIds": [
+        "rain-bird:1401",
+        "rain-bird:1402",
+        "rain-bird:1404",
+        "rain-bird:1408"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/1400-series-pressure-compensating-bubbler",
+        "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.streamBubbler",
+      "modelIds": [
+        "rain-bird:5F-B",
+        "rain-bird:5H-B",
+        "rain-bird:5Q-B",
+        "rain-bird:5CST-B"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.rotor3500",
+      "modelIds": [
+        "rain-bird:3504-PC"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/3500-series-rotor-sprinklers"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.rotor5000",
+      "modelIds": [
+        "rain-bird:5004-PC",
+        "rain-bird:5004+PC",
+        "rain-bird:5004+PCR"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/5000-series"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.rotorFalcon",
+      "modelIds": [
+        "rain-bird:6504-PC",
+        "rain-bird:6504-FC"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/falcon-6504-series"
+      ]
+    },
+    {
+      "key": "rainBirdDescription.rotor8005",
+      "modelIds": [
+        "rain-bird:8005"
+      ],
+      "sourceUrls": [
+        "https://www.rainbird.com/products/8005-series"
+      ]
+    },
+    {
+      "key": "equipment.use.rotaryMulti",
+      "modelIds": [
+        "k-rain:RN100-ADJ-90-210",
+        "k-rain:RN100-ADJ-210-270",
+        "k-rain:RN100-FIX360",
+        "k-rain:RN200-ADJ-90-210",
+        "k-rain:RN200-ADJ-210-270",
+        "k-rain:RN200-FIX360",
+        "k-rain:RN300-ADJ-90-210",
+        "k-rain:RN300-ADJ-210-270",
+        "k-rain:RN300-FIX360",
+        "k-rain:RNS-RES-515",
+        "k-rain:RNS-LES-515",
+        "k-rain:RNS-SS-530",
+        "k-rain:RN100-ADJ",
+        "k-rain:RN200-ADJ",
+        "k-rain:RN300-ADJ"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ]
+    },
+    {
+      "key": "equipment.use.adjustableSpray",
+      "modelIds": [
+        "k-rain:KVF6",
+        "k-rain:KVF8",
+        "k-rain:KVF10",
+        "k-rain:KVF12",
+        "k-rain:KVF15",
+        "k-rain:KVF17",
+        "k-rain:KV8",
+        "k-rain:KV10",
+        "k-rain:KV12",
+        "k-rain:KV15",
+        "k-rain:KV17"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ]
+    },
+    {
+      "key": "equipment.use.fixedSpray",
+      "modelIds": [
+        "toro:PSN5-60",
+        "toro:PSN5T-60",
+        "toro:PSN5-Q",
+        "toro:PSN5T-Q",
+        "toro:PSN5-T",
+        "toro:PSN5T-T",
+        "toro:PSN5-150",
+        "toro:PSN5T-150",
+        "toro:PSN5-H",
+        "toro:PSN5T-H",
+        "toro:PSN5-210",
+        "toro:PSN5T-210",
+        "toro:PSN5-TT",
+        "toro:PSN5T-TT",
+        "toro:PSN5-TQ",
+        "toro:PSN5T-TQ",
+        "toro:PSN5-F",
+        "toro:PSN5T-F",
+        "toro:PSN8-60",
+        "toro:PSN8T-60",
+        "toro:PSN8-Q",
+        "toro:PSN8T-Q",
+        "toro:PSN8-T",
+        "toro:PSN8T-T",
+        "toro:PSN8-150",
+        "toro:PSN8T-150",
+        "toro:PSN8-H",
+        "toro:PSN8T-H",
+        "toro:PSN8-210",
+        "toro:PSN8T-210",
+        "toro:PSN8-TT",
+        "toro:PSN8T-TT",
+        "toro:PSN8-TQ",
+        "toro:PSN8T-TQ",
+        "toro:PSN8-F",
+        "toro:PSN8T-F",
+        "toro:PSN10-60",
+        "toro:PSN10T-60",
+        "toro:PSN10-Q",
+        "toro:PSN10T-Q",
+        "toro:PSN10-T",
+        "toro:PSN10T-T",
+        "toro:PSN10-150",
+        "toro:PSN10T-150",
+        "toro:PSN10-H",
+        "toro:PSN10T-H",
+        "toro:PSN10-210",
+        "toro:PSN10T-210",
+        "toro:PSN10-TT",
+        "toro:PSN10T-TT",
+        "toro:PSN10-TQ",
+        "toro:PSN10T-TQ",
+        "toro:PSN10-F",
+        "toro:PSN10T-F",
+        "toro:PSN12-60",
+        "toro:PSN12T-60",
+        "toro:PSN12-Q",
+        "toro:PSN12T-Q",
+        "toro:PSN12-T",
+        "toro:PSN12T-T",
+        "toro:PSN12-150",
+        "toro:PSN12T-150",
+        "toro:PSN12-H",
+        "toro:PSN12T-H",
+        "toro:PSN12-210",
+        "toro:PSN12T-210",
+        "toro:PSN12-TT",
+        "toro:PSN12T-TT",
+        "toro:PSN12-TQ",
+        "toro:PSN12T-TQ",
+        "toro:PSN12-F",
+        "toro:PSN12T-F",
+        "toro:PSN15-60",
+        "toro:PSN15T-60",
+        "toro:PSN15-Q",
+        "toro:PSN15T-Q",
+        "toro:PSN15-T",
+        "toro:PSN15T-T",
+        "toro:PSN15-150",
+        "toro:PSN15T-150",
+        "toro:PSN15-H",
+        "toro:PSN15T-H",
+        "toro:PSN15-210",
+        "toro:PSN15T-210",
+        "toro:PSN15-TT",
+        "toro:PSN15T-TT",
+        "toro:PSN15-TQ",
+        "toro:PSN15T-TQ",
+        "toro:PSN15-F",
+        "toro:PSN15T-F",
+        "toro:O-5-60",
+        "toro:O-T-5-60",
+        "toro:O-5-Q",
+        "toro:O-T-5-Q",
+        "toro:O-5-T",
+        "toro:O-T-5-T",
+        "toro:O-5-150",
+        "toro:O-T-5-150",
+        "toro:O-5-H",
+        "toro:O-T-5-H",
+        "toro:O-5-210",
+        "toro:O-T-5-210",
+        "toro:O-5-TT",
+        "toro:O-T-5-TT",
+        "toro:O-5-TQ",
+        "toro:O-T-5-TQ",
+        "toro:O-5-F",
+        "toro:O-T-5-F",
+        "toro:O-8-60",
+        "toro:O-T-8-60",
+        "toro:O-8-Q",
+        "toro:O-T-8-Q",
+        "toro:O-8-T",
+        "toro:O-T-8-T",
+        "toro:O-8-150",
+        "toro:O-T-8-150",
+        "toro:O-8-H",
+        "toro:O-T-8-H",
+        "toro:O-8-210",
+        "toro:O-T-8-210",
+        "toro:O-8-TT",
+        "toro:O-T-8-TT",
+        "toro:O-8-TQ",
+        "toro:O-T-8-TQ",
+        "toro:O-8-F",
+        "toro:O-T-8-F",
+        "toro:O-10-60",
+        "toro:O-T-10-60",
+        "toro:O-10-Q",
+        "toro:O-T-10-Q",
+        "toro:O-10-T",
+        "toro:O-T-10-T",
+        "toro:O-10-150",
+        "toro:O-T-10-150",
+        "toro:O-10-H",
+        "toro:O-T-10-H",
+        "toro:O-10-210",
+        "toro:O-T-10-210",
+        "toro:O-10-TT",
+        "toro:O-T-10-TT",
+        "toro:O-10-TQ",
+        "toro:O-T-10-TQ",
+        "toro:O-10-F",
+        "toro:O-T-10-F",
+        "toro:O-12-60",
+        "toro:O-T-12-60",
+        "toro:O-12-Q",
+        "toro:O-T-12-Q",
+        "toro:O-12-T",
+        "toro:O-T-12-T",
+        "toro:O-12-150",
+        "toro:O-T-12-150",
+        "toro:O-12-H",
+        "toro:O-T-12-H",
+        "toro:O-12-210",
+        "toro:O-T-12-210",
+        "toro:O-12-TT",
+        "toro:O-T-12-TT",
+        "toro:O-12-TQ",
+        "toro:O-T-12-TQ",
+        "toro:O-12-F",
+        "toro:O-T-12-F",
+        "toro:O-15-60",
+        "toro:O-T-15-60",
+        "toro:O-15-Q",
+        "toro:O-T-15-Q",
+        "toro:O-15-T",
+        "toro:O-T-15-T",
+        "toro:O-15-150",
+        "toro:O-T-15-150",
+        "toro:O-15-H",
+        "toro:O-T-15-H",
+        "toro:O-15-210",
+        "toro:O-T-15-210",
+        "toro:O-15-TT",
+        "toro:O-T-15-TT",
+        "toro:O-15-TQ",
+        "toro:O-T-15-TQ",
+        "toro:O-15-F",
+        "toro:O-T-15-F",
+        "k-rain:FN-8Q",
+        "k-rain:FN-8H",
+        "k-rain:FN-8TQ",
+        "k-rain:FN-8F",
+        "k-rain:FN-10Q",
+        "k-rain:FN-10H",
+        "k-rain:FN-10TQ",
+        "k-rain:FN-10F",
+        "k-rain:FN-12Q",
+        "k-rain:FN-12H",
+        "k-rain:FN-12TQ",
+        "k-rain:FN-12F",
+        "k-rain:FN-15Q",
+        "k-rain:FN-15H",
+        "k-rain:FN-15TQ",
+        "k-rain:FN-15F",
+        "k-rain:P12Q",
+        "k-rain:P12H",
+        "k-rain:P12TQ",
+        "k-rain:P12F",
+        "k-rain:P15Q",
+        "k-rain:P15H",
+        "k-rain:P15TQ",
+        "k-rain:P15F"
+      ],
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ]
+    },
+    {
+      "key": "equipment.use.stripSpray",
+      "modelIds": [
+        "toro:PSN4X30-SST",
+        "toro:PSN4X30T-SST",
+        "toro:PSN4X15-LCS",
+        "toro:PSN4X15T-LCS",
+        "toro:PSN4X15-RCS",
+        "toro:PSN4X15T-RCS",
+        "toro:PSN4X18-SST",
+        "toro:PSN4X18T-SST",
+        "toro:PSN4X9-LCS",
+        "toro:PSN4X9T-LCS",
+        "toro:PSN4X9-RCS",
+        "toro:PSN4X9T-RCS",
+        "toro:O-4X30-SST",
+        "toro:O-T-4X30-SST",
+        "toro:O-4X15-LCS",
+        "toro:O-T-4X15-LCS",
+        "toro:O-4X15-RCS",
+        "toro:O-T-4X15-RCS",
+        "toro:O-4X18-SST",
+        "toro:O-T-4X18-SST",
+        "toro:O-4X9-LCS",
+        "toro:O-T-4X9-LCS",
+        "toro:O-4X9-RCS",
+        "toro:O-T-4X9-RCS",
+        "k-rain:P15CS",
+        "k-rain:FN-15CS",
+        "k-rain:P15ES",
+        "k-rain:FN-15ES",
+        "k-rain:P15SS",
+        "k-rain:FN-15SS"
+      ],
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+        "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ]
+    },
+    {
+      "key": "equipment.use.gearRotor",
+      "modelIds": [
+        "toro:T5P-RS-LN",
+        "toro:T5PE-RS-LN",
+        "toro:T5PCK1.5-RS",
+        "toro:T5PCK2.0-RS",
+        "toro:T5PCK2.5-RS",
+        "toro:T5PCK3.0-RS",
+        "toro:T5HP-RS",
+        "toro:T5HPE-RS",
+        "toro:T5S-RS",
+        "toro:T5SE-RS",
+        "toro:T5PSS3.0-RS",
+        "toro:T5PSSE3.0-RS",
+        "toro:T5PCKSS3.0-RS",
+        "k-rain:MiniPro",
+        "k-rain:RPS50",
+        "k-rain:RPS75",
+        "k-rain:RPS75-PR",
+        "k-rain:RPS75i",
+        "k-rain:RPS75i-PR",
+        "k-rain:ProPlus",
+        "k-rain:SuperPro"
+      ],
+      "sourceUrls": [
+        "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ]
+    },
+    {
+      "key": "equipment.description.kRain.bubblerCompensated",
+      "modelIds": [
+        "k-rain:TB-025",
+        "k-rain:TB-05",
+        "k-rain:TB-10",
+        "k-rain:TB-20"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ],
+      "sourcePage": 50
+    },
+    {
+      "key": "equipment.description.kRain.bubblerAdjustable",
+      "modelIds": [
+        "k-rain:TB-ADJ"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ],
+      "sourcePage": 50
+    },
+    {
+      "key": "equipment.description.kRain.highLow",
+      "modelIds": [
+        "k-rain:P15HL",
+        "k-rain:FN-15HL"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ],
+      "sourcePage": 49
+    },
+    {
+      "key": "equipment.description.kRain.rpsSelect",
+      "modelIds": [
+        "k-rain:RPS-Select"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ],
+      "sourcePage": 16
+    }
+  ]
+}

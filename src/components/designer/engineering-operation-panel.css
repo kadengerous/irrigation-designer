@@ -1,0 +1,5 @@
+.engineering-properties .engineering-operation-zones{min-width:0;margin-block:.625rem;padding:.5rem;border:.0625rem solid var(--color-line);border-radius:.5rem}
+.engineering-operation-zones legend{max-width:100%;padding-inline:.25rem;font-size:.8125rem;font-weight:600;overflow-wrap:break-word}
+.engineering-properties .engineering-operation-zones label.pump-zone-choice{display:flex;flex-direction:row;align-items:center;gap:.5rem;min-height:2.25rem;margin-block:.125rem;cursor:pointer}
+.engineering-operation-zones .pump-zone-choice>input[type="checkbox"]{appearance:auto;box-sizing:border-box;flex:0 0 1.125rem;width:1.125rem;min-width:1.125rem;max-width:1.125rem;height:1.125rem;min-height:1.125rem;max-height:1.125rem;margin:0;padding:0;accent-color:var(--color-btn);cursor:pointer}
+.engineering-operation-zones .pump-zone-choice>span{min-width:0;overflow-wrap:break-word}

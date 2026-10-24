@@ -1,0 +1,3263 @@
+{
+  "summary": {
+    "checkedOn": "2026-10-06",
+    "catalogSha256": "1d2801f9cbf2c58104fdc1d27a4d25e2ec8764f1119c7c17cbd605c43ca04e49",
+    "modelsChecked": 102,
+    "nozzlesChecked": 102,
+    "rowsChecked": 408,
+    "distinctPhysicalRows": 204,
+    "numericDifferences": 0,
+    "rowsPassed": 408,
+    "fieldsPerRow": 8,
+    "notes": [
+      "Both thread options are explicitly listed for each physical pattern; shared performance applies to both.",
+      "Numeric pass means faithful source transcription, not proof of internally consistent manufacturer rounding.",
+      "No public-source-derived replacement is proposed for any anomalous manufacturer number."
+    ],
+    "crossDocumentValidation": {
+      "2025Pages": [
+        6,
+        7
+      ],
+      "2026Pages": [
+        80,
+        81
+      ],
+      "distinctRowsCompared": 204,
+      "matchingDistinctRows": 204,
+      "expandedModelRows": 408,
+      "differences": 0
+    },
+    "newestSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+  },
+  "models": [
+    {
+      "id": "toro:O-5-60",
+      "modelId": "O-5-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-60",
+      "modelId": "O-T-5-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-5-Q",
+      "modelId": "O-5-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-Q",
+      "modelId": "O-T-5-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-5-T",
+      "modelId": "O-5-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-T",
+      "modelId": "O-T-5-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-5-150",
+      "modelId": "O-5-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-150",
+      "modelId": "O-T-5-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-5-H",
+      "modelId": "O-5-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-H",
+      "modelId": "O-T-5-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-5-210",
+      "modelId": "O-5-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-210",
+      "modelId": "O-T-5-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-5-TT",
+      "modelId": "O-5-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-TT",
+      "modelId": "O-T-5-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "modelId": "O-5-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-TQ",
+      "modelId": "O-T-5-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-5-F",
+      "modelId": "O-5-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-T-5-F",
+      "modelId": "O-T-5-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Red",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 5,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 1.524
+    },
+    {
+      "id": "toro:O-8-60",
+      "modelId": "O-8-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-60",
+      "modelId": "O-T-8-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-8-Q",
+      "modelId": "O-8-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-Q",
+      "modelId": "O-T-8-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-8-T",
+      "modelId": "O-8-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-T",
+      "modelId": "O-T-8-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-8-150",
+      "modelId": "O-8-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-150",
+      "modelId": "O-T-8-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-8-H",
+      "modelId": "O-8-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-H",
+      "modelId": "O-T-8-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-8-210",
+      "modelId": "O-8-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-210",
+      "modelId": "O-T-8-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-8-TT",
+      "modelId": "O-8-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-TT",
+      "modelId": "O-T-8-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "modelId": "O-8-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-TQ",
+      "modelId": "O-T-8-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-8-F",
+      "modelId": "O-8-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-T-8-F",
+      "modelId": "O-T-8-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Green",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 10,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 2.4384
+    },
+    {
+      "id": "toro:O-10-60",
+      "modelId": "O-10-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-60",
+      "modelId": "O-T-10-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-10-Q",
+      "modelId": "O-10-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-Q",
+      "modelId": "O-T-10-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-10-T",
+      "modelId": "O-10-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-T",
+      "modelId": "O-T-10-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-10-150",
+      "modelId": "O-10-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-150",
+      "modelId": "O-T-10-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-10-H",
+      "modelId": "O-10-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-H",
+      "modelId": "O-T-10-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-10-210",
+      "modelId": "O-10-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-210",
+      "modelId": "O-T-10-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-10-TT",
+      "modelId": "O-10-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-TT",
+      "modelId": "O-T-10-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "modelId": "O-10-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-TQ",
+      "modelId": "O-T-10-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-10-F",
+      "modelId": "O-10-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-T-10-F",
+      "modelId": "O-T-10-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Blue",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 15,
+      "sourcePages": [
+        3,
+        6,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        80
+      ],
+      "nominalRadiusM": 3.048
+    },
+    {
+      "id": "toro:O-12-60",
+      "modelId": "O-12-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-60",
+      "modelId": "O-T-12-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-12-Q",
+      "modelId": "O-12-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-Q",
+      "modelId": "O-T-12-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-12-T",
+      "modelId": "O-12-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-T",
+      "modelId": "O-T-12-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-12-150",
+      "modelId": "O-12-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-150",
+      "modelId": "O-T-12-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-12-H",
+      "modelId": "O-12-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-H",
+      "modelId": "O-T-12-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-12-210",
+      "modelId": "O-12-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-210",
+      "modelId": "O-T-12-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-12-TT",
+      "modelId": "O-12-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-TT",
+      "modelId": "O-T-12-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "modelId": "O-12-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-TQ",
+      "modelId": "O-T-12-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-12-F",
+      "modelId": "O-12-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-T-12-F",
+      "modelId": "O-T-12-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Brown",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 3.6576000000000004
+    },
+    {
+      "id": "toro:O-15-60",
+      "modelId": "O-15-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-60",
+      "modelId": "O-T-15-60",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-15-Q",
+      "modelId": "O-15-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-Q",
+      "modelId": "O-T-15-Q",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-15-T",
+      "modelId": "O-15-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-T",
+      "modelId": "O-T-15-T",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-15-150",
+      "modelId": "O-15-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-150",
+      "modelId": "O-T-15-150",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-15-H",
+      "modelId": "O-15-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-H",
+      "modelId": "O-T-15-H",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-15-210",
+      "modelId": "O-15-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-210",
+      "modelId": "O-T-15-210",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-15-TT",
+      "modelId": "O-15-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-TT",
+      "modelId": "O-T-15-TT",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "modelId": "O-15-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-TQ",
+      "modelId": "O-T-15-TQ",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-15-F",
+      "modelId": "O-15-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-T-15-F",
+      "modelId": "O-T-15-F",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Black",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "sector",
+      "trajectoryDeg": 27,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit arc and per-pressure radius",
+      "precipitationStatus": "published square and triangle values retained; not recomputed",
+      "radiusReduction": {
+        "minimumRatio": 0.75,
+        "reference": "original designated (nominal) radius",
+        "flowPolicy": "matched-precipitation",
+        "measuredReducedRows": false
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": 4.572
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "modelId": "O-4X30-SST",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-T-4X30-SST",
+      "modelId": "O-T-4X30-SST",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "modelId": "O-4X15-LCS",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-T-4X15-LCS",
+      "modelId": "O-T-4X15-LCS",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "modelId": "O-4X15-RCS",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-T-4X15-RCS",
+      "modelId": "O-T-4X15-RCS",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "modelId": "O-4X18-SST",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-T-4X18-SST",
+      "modelId": "O-T-4X18-SST",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "modelId": "O-4X9-LCS",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-T-4X9-LCS",
+      "modelId": "O-T-4X9-LCS",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "modelId": "O-4X9-RCS",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "female",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    },
+    {
+      "id": "toro:O-T-4X9-RCS",
+      "modelId": "O-T-4X9-RCS",
+      "rowsChecked": 4,
+      "numericStatus": "pass",
+      "colorStatus": "verified-name-only",
+      "colorName": "Grey",
+      "thread": "male",
+      "current2026PriceList": "listed",
+      "deprecationSupported": false,
+      "coverageKind": "strip",
+      "trajectoryDeg": 20,
+      "sourcePages": [
+        3,
+        7,
+        8
+      ],
+      "geometryStatus": "explicit manufacturer diagram and per-pressure dimensions",
+      "precipitationStatus": "published square and triangle values; exact strip spacing basis not stated",
+      "radiusReduction": {
+        "law": "unpublished; no strip resizing inferred"
+      },
+      "metadataNumericStatus": "pass",
+      "source2026Pages": [
+        77,
+        81
+      ],
+      "nominalRadiusM": null
+    }
+  ]
+}

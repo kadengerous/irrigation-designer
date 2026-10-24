@@ -1,0 +1,1072 @@
+[
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 7.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 8.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 7.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 8.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 8.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 9.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 8.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 9.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 8.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 9.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 8.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 9.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 10.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 10.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 9.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 10.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 12.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 11.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 12.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 14.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 15.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 15.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 15.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 16.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 18.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 15.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 17.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 15.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 17.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 15.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 17.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 23.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 26.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 21.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 24.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 21.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 24.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 21.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 24.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 23.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 27.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 23.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 27.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 23.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 27.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 23.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 27.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 19.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 22.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 23.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 27.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 21.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 24.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 21.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 24.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 28.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 32.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 24.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 27.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 22.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 26.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 22.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 26.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 28.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 32.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 26.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 31.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 25.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 29.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 25.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 29.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 35.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 41.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 36.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 41.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 36.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 41.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 36.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 41.0,
+    "sourcePage": 11
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-2.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 7.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-2.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 7.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-2.0",
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 8.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-2.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 8.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "nozzleId": "k-rain:RPS75i:standard-2.5",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 7.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:standard-1.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:low-angle-1.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 10.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:low-angle-1.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 14.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:low-angle-1.0",
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 13.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "nozzleId": "k-rain:RPS75i-PR:low-angle-1.5",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "field": "precipSquareMmH",
+    "publishedRawValue": 14.0,
+    "sourcePage": 15
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-5.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "field": "precipTriangleMmH",
+    "publishedRawValue": 28.0,
+    "sourcePage": 22
+  }
+]

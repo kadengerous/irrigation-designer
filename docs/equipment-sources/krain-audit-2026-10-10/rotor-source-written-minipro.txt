@@ -1,0 +1,37 @@
+ (https://www.krain.com/content/files/images/landingpages/written%20specifications/minipro%20gear%20drive%20rotor%20product%20specifications.pdf)
+citeturn484view0 [wordlim: 200] Crawled: last week; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/written%20specifications/minipro%20gear%20drive%20rotor%20product%20specifications.pdf","lineno":null}); Total lines: 34
+L0@P0:  Product Specifications
+L1@P0: An ISO 9001 Certified Company I Customer Service 1.800.735.7246 I Technical Support 561.844.1002 x129
+L2@P0: MiniPro Gear Drive Rotor / Professional Series Sprinkler
+L3@P0: Model # 13003, 13003-CV, 13003-NN, 13006, 13006-CV, 13012, 13012-CV
+L4@P0: The sprinkler shall be of the gear-driven, rotary type, capable of covering a _______ foot (m) radius at
+L5@P0: _______ PSI (bar;kPa) with a precipitation rate of _______ inches per hour (mm/hour; l/m). The sprinkler shall
+L6@P0: be available with five (5) numerically coded nozzles with a trajectory of 25° discharging from .8 to 3.3 GPM
+L7@P0: (2.8–12.5 l/m). The sprinkler shall have radius adjustment capabilities by means of a stainless-steel nozzle
+L8@P0: retainer and radius adjustment screw.
+L9@P0: The sprinkler shall perform as a continuous full circle and as an adjustable part-circle configuration in a single
+L10@P0: unit. The sprinkler shall be minutely adjustable from 40° to 360°. The sprinkler shall have a top arc adjustment
+L11@P0: carried out by rotation of a flat blade screwdriver within the top cover of the sprinkler. The sprinkler shall have
+L12@P0: an arc indication arrow on the top of the sprinkler displaying the water coverage pattern set. The unit shall be
+L13@P0: adjustable in all phases of installation (i.e., before installation, after installation while static, and after
+L14@P0: installation while in operation) by turning the sprinkler head riser.
+L15@P0: The sprinkler shall have a minimum of 4-inch (10.2 cm) pop-up (13003) stroke to bring the rotating nozzle
+L16@P0: turret into a clean environment. The sprinkler shall also be available as a 6-inch (15.2 cm) pop-up (13006) and
+L17@P0: 12-inch (30.5 cm) pop-up (13012). The 4-inch (10.2 cm) pop-up (13003) shall have an overall height of _______
+L18@P0: inches (cm). The 6-inch (15.2 cm) pop-up (13006) shall have an overall height of _______ inches (cm) and the
+L19@P0: 12-inch (30.5 cm) pop-up (13012) shall have an overall height of _______ inches (cm). The sprinkler shall have
+L20@P0: an exposed surface diameter after installation of _______ inches (cm). The unit shall have a ½-inch Female
+L21@P0: National Pipe Thread (FNPT) inlet, which may replace all standard mini rotors and pop-up sprays.
+L22@P0: The sprinkler shall have a rubber cover firmly attached to the top of the turret. When specified, the sprinkler
+L23@P0: shall have a molded purple twist cap to indicate the use of non-potable water (13003-RCW, 13006-RCW,
+L24@P0: 13012-RCW). The sprinkler may be equipped with an optional drain check valve (13003-CV, 13006-CV, 13012-
+L25@P0: CV) to prevent low head drainage, and be capable of checking up to 10 feet (3 m) in elevation change. The
+L26@P0: sprinkler shall also be available with no pre-installed nozzle (13003-NN, 13006-NN, 13012-NN).
+L27@P0: The sprinkler shall be serviceable after installation by unscrewing the body cap, removing the riser assembly,
+L28@P0-1: and extracting the inlet filter basket.Product Specifications
+L29@P1: An ISO 9001 Certified Company I Customer Service 1.800.735.7246 I Technical Support 561.844.1002 x129
+L30@P1: The body and riser of the sprinkler shall be constructed of corrosion resistant, impact resistant, heavy duty
+L31@P1: ABS. It shall have a stainless-steel spring for positive retraction of the riser when irrigation is complete. The
+L32@P1: sprinkler shall carry a seven-year trade, exchange warranty.
+L33@P1: The sprinkler shall be manufactured by K-Rain Manufacturing Corporation of Riviera Beach, Florida.
+

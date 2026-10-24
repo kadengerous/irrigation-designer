@@ -1,0 +1,267 @@
+ (https://www.rainbird.com/media/4173)
+citeturn385view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.rainbird.com/media/4173","lineno":0}); Total lines: 264
+L0@P0: 46 The Intelligent Use of Water.™
+L1@P0: Rotors
+L2@P0: Installing Rotors with 5000
+L3@P0: series MPR nozzles and Rain
+L4@P0: Bird R-VAN Rotary Nozzles
+L5@P0: in the same zone allows for
+L6@P0: matched precipitation from
+L7@P0: 8’ to 35’ (2.4m to 10.7m)
+L8@P0: 5000 - MPR - 25 - Q
+L9@P0: Model
+L10@P0: Rotor Radius Range
+L11@P0: 25'
+L12@P0: 30'
+L13@P0: 35'
+L14@P0: Pattern
+L15@P0: Q=Quarter
+L16@P0: T=Third
+L17@P0: H=Half
+L18@P0: F=Full
+L19@P0: Nozzle
+L20@P0: Matched Precipitation rate
+L21@P0: 5000 Series MPR Nozzles
+L22@P0: Perfectly Balanced Coverage with the 5000 Series Rotor
+L23@P0: Features
+L24@P0: • Rain Curtain™ nozzles deliver even distribution over the entire radius
+L25@P0: including large wind resistant droplets and gentle close-in watering
+L26@P0: resulting in greener turf using less water
+L27@P0: • Precipitation rate is automatically matched with a uniform radius that
+L28@P0: does not require stream deflection
+L29@P0: • Matched 0.6”/hour precipitation rates enable large and small turf
+L30@P0: areas to be zoned together by mixing rotors and Rain Bird R-VAN
+L31@P0: rotary nozzles
+L32@P0: Models
+L33@P0: • 5000MPRMPK: 5000/5000 Plus Series MPR nozzle tree multi pack- 25’,
+L34@P0: 30’, 35’ radius in Quarter, Third, Half, Full arc
+L35@P0: 5000 Series MPR Nozzles
+L36@P0: Rotors
+L37@P0: 5000 Series MPR Nozzles
+L38@P0: How to Specify
+L39@P0: Nozzle
+L40@P0: Pressure
+L41@P0: psi
+L42@P0: Radius
+L43@P0: ft.
+L44@P0: Flow
+L45@P0: gpm
+L46@P0: n
+L47@P0: Precip
+L48@P0: In/h
+L49@P0: s
+L50@P0: Precip
+L51@P0: In/h
+L52@P0: Quarter 25 23 0.74 0.54 0.62
+L53@P0: 35 24 0.88 0.59 0.68
+L54@P0: 45 25 1.00 0.62 0.71
+L55@P0: 55 25 1.11 0.68 0.79
+L56@P0: 65 25 1.21 0.75 0.86
+L57@P0: Third 25 23 1.00 0.55 0.63
+L58@P0: 35 24 1.21 0.61 0.70
+L59@P0: 45 25 1.38 0.64 0.74
+L60@P0: 55 25 1.53 0.71 0.82
+L61@P0: 65 25 1.67 0.77 0.89
+L62@P0: Half 25 23 1.44 0.52 0.61
+L63@P0: 35 24 1.73 0.58 0.67
+L64@P0: 45 25 1.98 0.61 0.70
+L65@P0: 55 25 2.21 0.68 0.79
+L66@P0: 65 25 2.41 0.74 0.86
+L67@P0: Full 25 23 2.78 0.51 0.58
+L68@P0: 35 24 3.34 0.56 0.64
+L69@P0: 45 25 3.82 0.59 0.68
+L70@P0: 55 25 4.25 0.65 0.76
+L71@P0: 65 25 4.63 0.71 0.82
+L72@P0: Nozzle
+L73@P0: Pressure
+L74@P0: bar
+L75@P0: Radius
+L76@P0: m
+L77@P0: Flow
+L78@P0: m3/h
+L79@P0: Flow
+L80@P0: l/m
+L81@P0: n
+L82@P0: Precip
+L83@P0: mm/h
+L84@P0: s
+L85@P0: Precip
+L86@P0: mm/h
+L87@P0: Quarter 1.7 7.0 0.17 3.0 13.7 15.8
+L88@P0: 2.4 7.3 0.20 3.6 14.9 17.3
+L89@P0: 3.1 7.6 0.23 3.6 15.6 18.1
+L90@P0: 3.8 7.6 0.25 4.2 17.4 20.1
+L91@P0: 4.5 7.6 0.27 4.8 18.9 21.9
+L92@P0: Third 1.7 7.0 0.23 3.6 13.9 16.0
+L93@P0: 2.4 7.3 0.27 4.8 15.4 17.8
+L94@P0: 3.1 7.6 0.31 5.4 16.2 18.7
+L95@P0: 3.8 7.6 0.35 6.0 18.0 20.7
+L96@P0: 4.5 7.6 0.38 6.6 19.6 22.6
+L97@P0: Half 1.7 7.0 0.33 5.4 13.3 15.4
+L98@P0: 2.4 7.3 0.39 6.6 14.7 17.0
+L99@P0: 3.1 7.6 0.45 7.2 15.5 17.9
+L100@P0: 3.8 7.6 0.50 8.4 17.3 20.0
+L101@P0: 4.5 7.6 0.55 9.0 18.9 21.8
+L102@P0: Full 1.7 7.0 0.63 10.8 12.8 14.8
+L103@P0: 2.4 7.3 0.76 12.6 14.2 16.4
+L104@P0: 3.1 7.6 0.87 14.4 14.9 17.3
+L105@P0: 3.8 7.6 0.97 16.2 16.6 19.2
+L106@P0: 4.5 7.6 1.05 17.4 18.1 20.9
+L107@P0: 5000-MPR-25 (Red) 5000-MPR-25 (Red) METRIC
+L108@P0: The average DU(LQ) of the applicable products exceed 0.65 distribution uniformity.
+L109@P0:  Product Type Radius DU(LQ)
+L110@P0:  5000 MPR Rotors 25 - 35 ft. > 0.70
+L111@P0: To view the complete document of compliance for Rain Bird products that have been tested to meet the requirements of the ASABE/ICC 802-2014
+L112@P0: standard and the California MWELO go to: www.rainbird.com/agency/california/MWELO.htm
+L113@P0: 5000 MPR Nozzles meet the requirements of
+L114@P0-1: the ASABE/ICC 802-2014 standardwww.rainbird.com/rotors
+L115@P1: www.rainbird.com 47
+L116@P1: Rotors
+L117@P1: n Square spacing based on 50% diameter of throw
+L118@P1: s Triangular spacing based on 50% diameter of throw
+L119@P1: Performance data collected in zero wind conditions
+L120@P1: Performance data derived from tests that conform with ASABE Standards; ASABE S398.1.
+L121@P1: See page 186 for complete ASABE Test Certification Statement.
+L122@P1: Rotors
+L123@P1: 5000 Series MPR Nozzles
+L124@P1: Nozzle
+L125@P1: Pressure
+L126@P1: psi
+L127@P1: Radius
+L128@P1: ft.
+L129@P1: Flow
+L130@P1: gpm
+L131@P1: n
+L132@P1: Precip
+L133@P1: In/h
+L134@P1: s
+L135@P1: Precip
+L136@P1: In/h
+L137@P1: Quarter 25 29 1.03 0.47 0.54
+L138@P1: 35 30 1.23 0.53 0.61
+L139@P1: 45 30 1.40 0.60 0.69
+L140@P1: 55 30 1.56 0.67 0.77
+L141@P1: 65 30 1.69 0.72 0.83
+L142@P1: Third 25 29 1.34 0.46 0.53
+L143@P1: 35 30 1.62 0.52 0.60
+L144@P1: 45 30 1.85 0.59 0.69
+L145@P1: 55 30 2.06 0.66 0.76
+L146@P1: 65 30 2.24 0.72 0.83
+L147@P1: Half 25 29 2.15 0.49 0.57
+L148@P1: 35 30 2.59 0.55 0.64
+L149@P1: 45 30 2.96 0.63 0.73
+L150@P1: 55 30 3.30 0.71 0.82
+L151@P1: 65 30 3.60 0.77 0.89
+L152@P1: Full 25 29 4.24 0.49 0.56
+L153@P1: 35 30 5.08 0.54 0.63
+L154@P1: 45 30 5.78 0.62 0.71
+L155@P1: 55 30 6.39 0.68 0.79
+L156@P1: 65 30 6.92 0.74 0.85
+L157@P1: Nozzle
+L158@P1: Pressure
+L159@P1: psi
+L160@P1: Radius
+L161@P1: ft.
+L162@P1: Flow
+L163@P1: gpm
+L164@P1: n
+L165@P1: Precip
+L166@P1: In/h
+L167@P1: s
+L168@P1: Precip
+L169@P1: In/h
+L170@P1: Quarter 25 32 1.40 0.53 0.61
+L171@P1: 35 34 1.67 0.56 0.64
+L172@P1: 45 35 1.92 0.60 0.70
+L173@P1: 55 35 2.13 0.67 0.77
+L174@P1: 65 35 2.31 0.73 0.84
+L175@P1: Third 25 32 1.77 0.50 0.58
+L176@P1: 35 34 2.15 0.54 0.62
+L177@P1: 45 35 2.46 0.58 0.67
+L178@P1: 55 35 2.74 0.65 0.75
+L179@P1: 65 35 2.99 0.70 0.81
+L180@P1: Half 25 32 2.75 0.52 0.60
+L181@P1: 35 34 3.33 0.55 0.64
+L182@P1: 45 35 3.81 0.60 0.69
+L183@P1: 55 35 4.23 0.66 0.77
+L184@P1: 65 35 4.62 0.73 0.84
+L185@P1: Full 25 32 5.36 0.50 0.58
+L186@P1: 35 34 6.62 0.55 0.64
+L187@P1: 45 35 7.58 0.60 0.69
+L188@P1: 55 35 8.43 0.66 0.76
+L189@P1: 65 35 9.18 0.72 0.83
+L190@P1: Nozzle
+L191@P1: Pressure
+L192@P1: bar
+L193@P1: Radius
+L194@P1: m
+L195@P1: Flow
+L196@P1: m3/h
+L197@P1: Flow
+L198@P1: l/m
+L199@P1: n
+L200@P1: Precip
+L201@P1: mm/h
+L202@P1: s
+L203@P1: Precip
+L204@P1: mm/h
+L205@P1: Quarter 1.7 8.8 0.23 3.6 12.0 13.8
+L206@P1: 2.4 9.1 0.28 4.8 13.4 15.4
+L207@P1: 3.1 9.1 0.32 5.4 15.2 17.6
+L208@P1: 3.8 9.1 0.35 6.0 17.0 19.6
+L209@P1: 4.5 9.1 0.38 6.6 18.4 21.2
+L210@P1: Third 1.7 8.8 0.30 4.8 11.7 13.5
+L211@P1: 2.4 9.1 0.37 6.0 13.2 15.2
+L212@P1: 3.1 9.1 0.42 7.2 15.1 17.4
+L213@P1: 3.8 9.1 0.47 7.8 16.8 19.4
+L214@P1: 4.5 9.1 0.51 8.4 18.3 21.1
+L215@P1: Half 1.7 8.8 0.49 8.4 12.5 14.4
+L216@P1: 2.4 9.1 0.59 9.6 14.1 16.2
+L217@P1: 3.1 9.1 0.67 11.4 16.1 18.6
+L218@P1: 3.8 9.1 0.75 12.6 17.9 20.7
+L219@P1: 4.5 9.1 0.82 13.8 19.6 22.6
+L220@P1: Full 1.7 8.8 0.96 16.2 12.3 14.2
+L221@P1: 2.4 9.1 1.15 19.2 13.8 15.9
+L222@P1: 3.1 9.1 1.31 21.6 15.7 18.1
+L223@P1: 3.8 9.1 1.45 24.0 17.4 20.0
+L224@P1: 4.5 9.1 1.57 26.4 18.8 21.7
+L225@P1: Nozzle
+L226@P1: Pressure
+L227@P1: bar
+L228@P1: Radius
+L229@P1: m
+L230@P1: Flow
+L231@P1: m3/h
+L232@P1: Flow
+L233@P1: l/m
+L234@P1: n
+L235@P1: Precip
+L236@P1: mm/h
+L237@P1: s
+L238@P1: Precip
+L239@P1: mm/h
+L240@P1: Quarter 1.7 9.8 0.32 5.4 13.4 15.4
+L241@P1: 2.4 10.4 0.38 6.6 14.1 16.3
+L242@P1: 3.1 10.7 0.44 7.2 15.3 17.7
+L243@P1: 3.8 10.7 0.48 7.8 17.0 19.6
+L244@P1: 4.5 10.7 0.52 9.0 18.4 21.3
+L245@P1: Third 1.7 9.8 0.40 6.6 12.7 14.6
+L246@P1: 2.4 10.4 0.49 8.4 13.6 15.8
+L247@P1: 3.1 10.7 0.56 9.6 14.7 17.0
+L248@P1: 3.8 10.7 0.62 10.2 16.4 18.9
+L249@P1: 4.5 10.7 0.68 11.4 17.9 20.7
+L250@P1: Half 1.7 9.8 0.62 10.2 13.1 15.2
+L251@P1: 2.4 10.4 0.76 12.6 14.1 16.3
+L252@P1: 3.1 10.7 0.87 14.4 15.2 17.6
+L253@P1: 3.8 10.7 0.96 16.2 16.9 19.5
+L254@P1: 4.5 10.7 1.05 17.4 18.4 21.3
+L255@P1: Full 1.7 9.8 1.22 20.4 12.8 14.8
+L256@P1: 2.4 10.4 1.50 25.2 14.0 16.2
+L257@P1: 3.1 10.7 1.72 28.8 15.1 17.5
+L258@P1: 3.8 10.7 1.91 31.8 16.8 19.4
+L259@P1: 4.5 10.7 2.09 34.8 18.3 21.2
+L260@P1: 5000-MPR-30 (Green)
+L261@P1: 5000-MPR-35 (Beige)
+L262@P1: 5000-MPR-30 (Green) METRIC
+L263@P1: 5000-MPR-35 (Beige) METRIC
+

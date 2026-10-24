@@ -1,0 +1,25 @@
+.automatic-head-tool{position:absolute;inset:0;z-index:25;pointer-events:none}
+.automatic-head-field{width:100%;height:100%;pointer-events:auto;touch-action:none;cursor:none}
+.automatic-head-field[data-panning="true"]{cursor:grabbing}
+.automatic-head-panel{padding:.75rem;color:var(--color-ink,#24343b);pointer-events:auto;font-size:.75rem;min-width:0}
+.automatic-head-panel header,.automatic-head-panel footer,.automatic-head-panel button{display:flex;align-items:center;gap:.4rem}
+.automatic-head-panel header>button{margin-inline-start:auto}
+.automatic-head-panel p{margin:.55rem 0;line-height:1.45}
+.automatic-head-panel label{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.automatic-head-panel input{width:5rem;min-height:2rem;border:1px solid var(--color-line,#acb9bf);border-radius:.3rem;padding:.25rem;background:var(--color-surface,#fff)}
+.automatic-head-panel footer{flex-wrap:wrap;margin-top:.5rem}
+.automatic-head-panel button{min-height:2rem;border:1px solid var(--color-line,#acb9bf);border-radius:.35rem;padding:.25rem .5rem}
+.automatic-head-panel button:disabled{opacity:.4}
+.automatic-head-values{margin-top:.5rem;font-weight:600}
+.automatic-head-inputs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.auto-head-button,.mobile-categories .auto-head-button{background:#daf4eb!important;color:#14654d!important;border:1px solid #68b89b!important;white-space:nowrap}
+.auto-head-button[aria-pressed=true]{background:#16745b!important;color:#fff!important}
+@media(max-width:639px){.automatic-head-panel{font-size:.6875rem;padding:.5rem;min-width:0}.automatic-head-panel button{min-height:2.5rem}}
+
+[data-auto-head-panel-host]{min-width:0}
+.automatic-head-cancel-hint{font-size:.6875rem;line-height:1.4;color:var(--color-muted,#637078)}
+.automatic-head-result{display:grid;gap:.3rem;margin:.55rem 0;line-height:1.45;font-weight:600;overflow-wrap:anywhere}
+.automatic-head-result-model{color:#0f9f82}
+.automatic-head-result[data-match="false"]{color:#dc2626}
+.app-shell[data-mobile="true"] .landscape-phone-inspector.automatic-phone-inspector{inset-inline-start:auto;inset-inline-end:.5rem;width:min(20rem,calc(100% - 1rem));max-height:45%}
+html[data-workspace-keyboard="true"] .app-shell[data-mobile="true"] .automatic-phone-inspector{position:fixed;top:calc(var(--workspace-visible-top,0px) + .375rem);bottom:auto;max-height:calc(var(--workspace-visible-height,100dvh) - .75rem)}

@@ -1,0 +1,828 @@
+{
+  "checkedOn": "2026-10-10",
+  "scope": "58 active K-Rain nozzle models /404 rows",
+  "numericalRowPatches": [],
+  "preserveCurrentReviewFlags": true,
+  "patches": [
+    {
+      "id": "k-rain:RN100-ADJ-90-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN100-ADJ-90-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN100-ADJ-210-270",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN100-ADJ-210-270",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN100-FIX360",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN100-FIX360",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN200-ADJ-90-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN200-ADJ-90-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN200-ADJ-210-270",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN200-ADJ-210-270",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN200-FIX360",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN200-FIX360",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN300-ADJ-90-210",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN300-ADJ-90-210",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN300-ADJ-210-270",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN300-ADJ-210-270",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN300-FIX360",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN300-FIX360",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RNS-RES-515",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RNS-RES-515",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RNS-LES-515",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RNS-LES-515",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RNS-SS-530",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RNS-SS-530",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN100-ADJ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "dataNote": "Dated 2026 catalog p42 explicitly recommends 30 PSI (2.1 bar) and up-to-30% radius adjustment; the live undated family webpage instead recommends 40 PSI (2.8 bar). This catalog selects the dated catalog recommendation without claiming manufacturer-issued supersession. Current p43 precipitation is retained over the conflicting older brochure metric values. Matched-precipitation reduced-radius or 80–89 degree flow is a calculated estimate, not a published performance row."
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN100-ADJ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN200-ADJ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "dataNote": "Dated 2026 catalog p42 explicitly recommends 30 PSI (2.1 bar) and up-to-30% radius adjustment; the live undated family webpage instead recommends 40 PSI (2.8 bar). This catalog selects the dated catalog recommendation without claiming manufacturer-issued supersession. Current p43 precipitation is retained over the conflicting older brochure metric values. Matched-precipitation reduced-radius or 80–89 degree flow is a calculated estimate, not a published performance row."
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN200-ADJ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:RN300-ADJ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10",
+        "dataNote": "Dated 2026 catalog p42 explicitly recommends 30 PSI (2.1 bar) and up-to-30% radius adjustment; the live undated family webpage instead recommends 40 PSI (2.8 bar). This catalog selects the dated catalog recommendation without claiming manufacturer-issued supersession. Current p43 precipitation is retained over the conflicting older brochure metric values. Matched-precipitation reduced-radius or 80–89 degree flow is a calculated estimate, not a published performance row."
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:RN300-ADJ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KVF6",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KVF6",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KVF8",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KVF8",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KVF10",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KVF10",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KVF12",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KVF12",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KVF15",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KVF15",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KVF17",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KVF17",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KV8",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KV8",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KV10",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KV10",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KV12",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KV12",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KV15",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KV15",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:KV17",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:KV17",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-8Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-8Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-8H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-8H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-8TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-8TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-8F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-8F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-10Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-10Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-10H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-10H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-10TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-10TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-10F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-10F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-12Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-12Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-12H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-12H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-12TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-12TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-12F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-12F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-15Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-15Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-15H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-15H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-15TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-15TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:FN-15F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:FN-15F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P12Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:P12Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P12H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:P12H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P12TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:P12TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P12F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:P12F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P15Q",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:P15Q",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P15H",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:P15H",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P15TQ",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:P15TQ",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P15F",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "colorVerifiedOn": "2026-10-10"
+      },
+      "nozzles": [
+        {
+          "id": "k-rain:P15F",
+          "set": {
+            "colorVerifiedOn": "2026-10-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-rain:P15CS",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "nozzles": []
+    },
+    {
+      "id": "k-rain:FN-15CS",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "nozzles": []
+    },
+    {
+      "id": "k-rain:P15ES",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "nozzles": []
+    },
+    {
+      "id": "k-rain:FN-15ES",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "nozzles": []
+    },
+    {
+      "id": "k-rain:P15SS",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "nozzles": []
+    },
+    {
+      "id": "k-rain:FN-15SS",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "nozzles": []
+    },
+    {
+      "id": "k-rain:P15HL",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "nozzles": []
+    },
+    {
+      "id": "k-rain:FN-15HL",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "nozzles": []
+    }
+  ],
+  "runtimeRecommendations": {
+    "KV_KVF_nominalPressureAliasesBar": {
+      "1.4": 1.38,
+      "2.1": 2.07,
+      "2.8": 2.76,
+      "3.5": 3.45
+    },
+    "fullyAdjustableRN_arc80to89Flow": "Explicitly calculated matched-sector estimate from90deg; never a manufacturer table row. Below80 unsupported.",
+    "KV_KVF_below90Flow": "Unknown. Geometry inference only where every published arc has equal native radius at the pressure and interpolation endpoints; zeroarc invalid.",
+    "radiusFlow": "Only Fully Adjustable RN has documented30% bound; matched flow estimate. No reductionpercentage for other scopedfamilies."
+  }
+}

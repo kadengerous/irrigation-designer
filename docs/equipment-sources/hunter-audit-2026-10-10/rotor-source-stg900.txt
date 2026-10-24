@@ -1,0 +1,277 @@
+STG-900 | Hunter Industries (https://www.hunterirrigation.com/en-metric/irrigation-product/st-system/stg-900)
+citeturn344view0 [wordlim: 200] Crawled: 2 weeks ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/en-metric/irrigation-product/st-system/stg-900","lineno":80}); Total lines: 329
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: Metric
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite0†English L16:   * cite9†Metric L17:   * cite10†Español L18:   * cite11†Italiano L19: 
+L20:   * cite12†Français L21:   * cite13†Português L22:   * cite14†Deutsch L23:   * cite15†Türkçe L24: 
+L25:   * cite16†Polski L26:   * cite17†Русский L27:   * cite18†العربية L28:   * cite19†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: # STG-900
+L36: 
+L37: Top-quality STG-900 long-range rotors are specially designed to extend the life of small-to-midsize synthetic turf sports fields.
+L38: 
+L39: Application Synthetic Sports Turf Fields
+L40: 
+L41: Radius 31.4 to 36.6 m
+L42: 
+L43: Flow 16.9 to 20.9 m³/hr
+L44: 
+L45: Flow 282.0 to 348 l/min
+L46: 
+L47: Inlet Size 40 mm Acme
+L48: 
+L49: Product Line
+L50: 
+L51: ST System
+L52: 
+L53:   * cite20†Models L54:   * cite21†Specs L55:   * cite22†Features L56:   * cite23†Charts L57:   * cite24†Documents L58:   * cite25†Photos L59: ## Models
+L60: 
+L61: Model  | Description  | Add to List
+L62: --- | --- | ---
+L63: cite26†STG-900-73 | Synthetic turf rotor, 7.5 cm pop-up, adjustable from 40° to 360°, plastic riser, 1½" (40 mm) Acme inlet threads, Total-Top-Service Technology, nozzle 73 installed  | cite27†+ L64: cite28†STG-900-83 | Synthetic turf rotor, 8 cm pop-up, adjustable from 40° to 360°, plastic riser, 1½" (40 mm) Acme inlet threads, Total-Top-Service Technology, nozzle 83 installed  | cite27†+ L65: 
+L66: Showing 1 - 2 of 2
+L67: 
+L68: cite29†Image: STG-900 L69: 
+L70: [Input]
+L71: 
+L72: STG-900
+L73: STG-900
+L74: 
+L75: Ordering Number [Input]
+L76: 
+L77: [Input] [Input]
+L78: 
+L79: Qty [Input]
+L80: 
+L81: Notes [Input: Add a note...]
+L82: 
+L83: [Button: Add to list]
+L84: 
+L85: User installed options
+L86: 
+L87: [Input]
+L88: #### Product added to list
+L89: 
+L90: The following product was added to ""
+L91: 
+L92: QTY
+L93: 
+L94: cite30†Review your list L95: 
+L96: cite27†Continue L97: 
+L98: [Input] [Input]
+L99: 
+L100: ## Create a new My List.
+L101: 
+L102: ## Log in to access this feature
+L103: 
+L104: Log in using your Hunter Account
+L105: 
+L106: Username [Input]
+L107: 
+L108: Password [Input]
+L109: 
+L110: [Input] [Input] [Input]
+L111: 
+L112: [Button: Sign In]
+L113: 
+L114: cite31†Contact your local distributor for product availability and ordering. L115: 
+L116: ## Specifications
+L117: ### Operating Specifications
+L118: 
+L119:   * Radius: 31 to 36 meters
+L120:   * Flow: 16.9 to 20.9 m3 /hr; 282 to 348 l/min
+L121:   * Operating pressure range: 6.9 to 8.3 bar; 690 to 830 kPa
+L122:   * Precipitation rate: 35 mm/hr approximately
+L123:   * Warranty period: 5 years for component parts
+L124: 
+L125: ###
+L126: 
+L127: ### User-Installed Options
+L128: 
+L129:   * Rubber Cover Kit STG-900: P/N 473900SP
+L130: 
+L131: * * *
+L132: 
+L133: cite32† Download Product Spec Sheet L134: 
+L135: cite33†  Download Written Specifications (in English) L136: ## Features
+L137: 
+L138: Designed for small-to-midsize synthetic turf field layouts, the STG-900 Rotor offers a radius range of up to 36.6 m. This versatile option can be installed in a vault system within the synthetic field.
+L139: #### Key Benefits
+L140: 
+L141: Flexible arc adjustment from 40° to 360° offers narrow-to-wide coverage
+L142: 
+L143: QuickCheck™ Arc Mechanism lets you verify the arc setting without waiting for the sprinkler to finish its rotation
+L144: 
+L145: Through-the-top arc adjustment allows you to easily set the arc at the sprinkler head
+L146: 
+L147: Water-lubricated gear drive delivers reliable operation without clogging
+L148: 
+L149: User-installed rubber logo cap increases athlete safety on the field
+L150: 
+L151: Nozzle trajectory: 22.5°
+L152: 
+L153: #### Advanced Features
+L154: ### STG-900
+L155: 
+L156: The STG-900 rotor comes standard with through-the-top access to the riser assembly for easy maintenance. This versatile option can also be installed in a vault system within the synthetic field. For added safety, order the user-installed rubber cover kit featuring a cushioned, non-slip surface over the exposed surface of the rotor.
+L157: 
+L158: cite34†Image L159: 
+L160: ## Charts
+L161: ### STG-900 Nozzle Performance Data
+L162: 
+L163: STG-900 Nozzle Performance Data*
+L164: 
+L165: Nozzle  | Pressure
+L166: kPa  | Radius
+L167: Yd.  | Flow
+L168: LPM  | Precip in/hr
+L169: --- | --- | --- | --- | ---
+L170: cite35†Image | cite36†Image L171: --- | ---
+L172: 73•
+L173: Orange  | 689  | 34  | 282  | 1.35  | 1.56
+L174: 758  | 36  | 291  | 1.25  | 1.44
+L175: 827  | 38  | 302  | 1.16  | 1.34
+L176: 83•
+L177: Tan  | 689  | 37  | 318  | 1.29  | 1.49
+L178: 758  | 39  | 333  | 1.26  | 1.46
+L179: 827  | 40  | 348  | 1.23  | 1.42
+L180: Notes:
+L181: All precipitation rates calculated for 180° operation.
+L182: For precipitation rate of 360° sprinkler, divide by 2.
+L183: Requires minimum 7.0 bar; 700 kPa dynamic pressure supplied to swing joint inlet.
+L184: *All radius measurements taken at standard rotation speeds. Slowing rotation to minimum rotation speed will add 3 Yds to radius.
+L185: ## Documents
+L186: 
+L187: ### Select Type
+L188: 
+L189:   * All Documents
+L190:   * Manuals
+L191:   * Marketing
+L192:   * Specifications
+L193:   * Replacement Parts
+L194: 
+L195: STG-900 Replacement Parts List
+L196: 
+L197: cite37†Download   L198: 
+L199: STG-900 Written Specifications
+L200: 
+L201: cite33†Download   L202: 
+L203: Synthetic Turf Systems Brochure
+L204: 
+L205: cite27†Select Language  L206: 
+L207: STG 900 Owners Manual
+L208: 
+L209: cite38†Download   L210: 
+L211: cite27†Show all documents L212: 
+L213: ## Photos
+L214: ## Studio Photos
+L215: 
+L216: cite27†Image L217: 
+L218: cite39†Image L219: 
+L220: Title:
+L221: 
+L222: ST-900
+L223: 
+L224: File:
+L225: 
+L226: stg-900-11_clipped_adj.jpg
+L227: 
+L228: Classification:
+L229: 
+L230: Studio
+L231: 
+L232: Product Line:
+L233: 
+L234: Rotors
+L235: 
+L236: ,
+L237: 
+L238: Product Line:
+L239: 
+L240: ST System
+L241: 
+L242: Products:
+L243: 
+L244: cite40†STG-900 L245: 
+L246: Keywords:
+L247: 
+L248: rotor
+L249: 
+L250: ,
+L251: 
+L252: ST-900
+L253: 
+L254: cite41†Image Page L255: 
+L256: * * *
+L257: 
+L258: #### Download Image
+L259: 
+L260: cite42†Medium cite43†Original L261: 
+L262: By clicking download, you agree to our cite27†terms and conditions .
+L263: ### Photo Usage Disclaimer
+L264: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L265: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L266: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L267: 
+L268: cite27†Image L269: 
+L270: cite44†Image L271: 
+L272: Title:
+L273: 
+L274: ST-900 Rubber Cover
+L275: 
+L276: File:
+L277: 
+L278: stg-900_rubber_cover-12_clipped_adj.jpg
+L279: 
+L280: Classification:
+L281: 
+L282: Studio
+L283: 
+L284: Product Line:
+L285: 
+L286: Rotors
+L287: 
+L288: ,
+L289: 
+L290: Product Line:
+L291: 
+L292: ST System
+L293: 
+L294: Products:
+L295: 
+L296: cite40†STG-900 L297: 
+L298: Keywords:
+L299: 
+L300: rotor
+L301: 
+L302: ,
+L303: 
+L304: ST-900
+L305: 
+L306: ,
+L307: 
+L308: rubber cover
+L309: 
+L310: cite45†Image Page L311: 
+L312: * * *
+L313: #### Download Image
+L314: 
+L315: cite46†Medium cite47†Original L316: 
+L317: By clicking download, you agree to our cite27†terms and conditions .
+L318: ### Photo Usage Disclaimer
+L319: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L320: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L321: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L322: 
+L323:   * cite31†Find a Distributor L324:   * cite48†Contact Sales L325: 
+L326: cite49†Find Hunter L327: 
+L328: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite50†Privacy Policy |
+

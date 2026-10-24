@@ -1,0 +1,41 @@
+[
+  {
+    "modelId": "KV5",
+    "within84ReviewedRecords": false,
+    "status": "Official model exists; hydraulic performance unavailable in checked sources",
+    "sourceUrl": "https://www.krain.com/kv-nozzles/variable-arc-male-nozzle-5-kv5",
+    "verifiedOn": "2026-10-04",
+    "known": {
+      "nominalRadiusFeet": 5,
+      "nozzleThread": "male",
+      "compatibleBodyFamilyIds": [
+        "k-rain:K-Spray"
+      ],
+      "manufacturerRecommendedPressurePsi": 30
+    },
+    "checkedSources": [
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "pages": [
+          46,
+          47
+        ]
+      },
+      {
+        "url": "https://www.krain.com/content/files/images/landingpages/nozzles/kv%20nozzles/kv%20nozzle%20product%20brochure.pdf",
+        "pages": [
+          1,
+          2
+        ]
+      },
+      {
+        "url": "https://www.krain.com/kv-nozzles/variable-arc-male-nozzle-5-kv5"
+      }
+    ],
+    "missing": [
+      "Pressure/radius/flow table",
+      "Precipitation table"
+    ],
+    "decision": "Do not invent a hydraulic curve; remains outside the 84 catalog records."
+  }
+]

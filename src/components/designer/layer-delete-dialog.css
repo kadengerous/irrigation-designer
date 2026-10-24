@@ -1,0 +1,10 @@
+.layer-delete-overlay {position:fixed;inset:0;z-index:200;background:rgb(17 37 55 / 32%);}
+.layer-delete-dialog {position:fixed;inset-block-start:50%;inset-inline-start:50%;transform:translate(-50%,-50%);z-index:201;width:min(24rem,calc(100vw - 2rem));max-height:calc(100dvh - 2rem);overflow:auto;padding:1.25rem;border:0.0625rem solid var(--color-line);border-radius:0.75rem;background:var(--color-surface,#fff);color:var(--color-ink,#203346);box-shadow:0 0.75rem 3rem #0003;}
+.layer-delete-dialog[dir=rtl] {transform:translate(50%,-50%);}
+.layer-delete-dialog h2 {margin:0;font-size:1.125rem;font-weight:600;line-height:1.4;}
+.layer-delete-dialog p {margin:0.75rem 0 1rem;font-size:0.9375rem;line-height:1.5;overflow-wrap:anywhere;}
+.layer-delete-actions {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.625rem;}
+.layer-delete-actions button {min-width:0;min-height:2.75rem;height:auto;padding:0.5rem 0.75rem;font-size:0.9375rem;line-height:1.4;white-space:normal;overflow-wrap:anywhere;}
+.layer-delete-actions svg {width:1.125rem;height:1.125rem;flex:none;}
+.layer-delete-dialog .layer-delete-confirm:hover:not(:disabled) {background:#941b1b!important;}
+.layer-delete-dialog .layer-delete-confirm:focus-visible {outline:0.125rem solid #b42323;outline-offset:0.1875rem;}

@@ -1,0 +1,358 @@
+{
+  "corrections": [
+    {
+      "modelId": "FN-12Q",
+      "nozzleId": "k-rain:FN-12Q",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "pressureBar": 1.4,
+      "arcDeg": 90,
+      "field": "flowLMin",
+      "before": 1.51,
+      "after": 2.0,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12Q",
+      "nozzleId": "k-rain:FN-12Q",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "pressureBar": 1.7,
+      "arcDeg": 90,
+      "field": "flowLMin",
+      "before": 1.7,
+      "after": 2.3,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12Q",
+      "nozzleId": "k-rain:FN-12Q",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "pressureBar": 2.1,
+      "arcDeg": 90,
+      "field": "flowLMin",
+      "before": 2.27,
+      "after": 2.5,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12H",
+      "nozzleId": "k-rain:FN-12H",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "pressureBar": 1.4,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 2.27,
+      "after": 4.0,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12H",
+      "nozzleId": "k-rain:FN-12H",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "pressureBar": 1.7,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 3.03,
+      "after": 4.5,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12H",
+      "nozzleId": "k-rain:FN-12H",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 3.79,
+      "after": 4.9,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12TQ",
+      "nozzleId": "k-rain:FN-12TQ",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "pressureBar": 1.4,
+      "arcDeg": 270,
+      "field": "flowLMin",
+      "before": 3.6,
+      "after": 6.0,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12TQ",
+      "nozzleId": "k-rain:FN-12TQ",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "pressureBar": 1.7,
+      "arcDeg": 270,
+      "field": "flowLMin",
+      "before": 3.79,
+      "after": 6.8,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12TQ",
+      "nozzleId": "k-rain:FN-12TQ",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "pressureBar": 2.1,
+      "arcDeg": 270,
+      "field": "flowLMin",
+      "before": 4.92,
+      "after": 7.4,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12F",
+      "nozzleId": "k-rain:FN-12F",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "pressureBar": 1.4,
+      "arcDeg": 360,
+      "field": "flowLMin",
+      "before": 6.06,
+      "after": 7.9,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12F",
+      "nozzleId": "k-rain:FN-12F",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "pressureBar": 1.7,
+      "arcDeg": 360,
+      "field": "flowLMin",
+      "before": 6.81,
+      "after": 9.1,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12F",
+      "nozzleId": "k-rain:FN-12F",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "pressureBar": 2.1,
+      "arcDeg": 360,
+      "field": "flowLMin",
+      "before": 7.95,
+      "after": 9.8,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "RN300-ADJ",
+      "nozzleId": "k-rain:RN300-ADJ",
+      "rowIndex": 8,
+      "flatRowIndex": 8,
+      "pressureBar": 3.5,
+      "arcDeg": 360,
+      "field": "radiusM",
+      "before": 8.83,
+      "after": 8.53,
+      "reason": "Official fully-adjustable brochure prints 8.53 m at 360 degrees and 50 PSI, matching current catalog 28 ft; current metric 8.83 m is not used.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/fully%20adjustable%20rotary%20nozzle%20product%20brochure.pdf",
+          "page": 2,
+          "role": "Selected metric radius"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 43,
+          "role": "Current US 28 ft corroboration"
+        }
+      ]
+    }
+  ],
+  "unavailablePrecipitation": [
+    {
+      "modelId": "KVF6",
+      "nozzleId": "k-rain:KVF6",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "kind": "base",
+      "pressureBar": 1.72,
+      "arcDeg": 90,
+      "field": "precipSquareMmH",
+      "publishedValue": 156.0,
+      "runtimeValue": null,
+      "reason": "Printed square 156 mm/h and triangular 194 mm/h cannot be paired under integer rounding; US 6.16/7.65 shows the same anomaly. Pressure, radius and flow agree across units. Leave square rate unavailable.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 44,
+          "role": "Both current unit tables"
+        }
+      ]
+    }
+  ],
+  "retainedFieldDecisions": [
+    {
+      "modelId": "FN-12F",
+      "field": "radiusM",
+      "pressureBar": 1.7,
+      "retainedValue": 3.4,
+      "rejectedCurrentUsValueFeet": 12,
+      "reason": "Current metric 3.4 m and official brochure 11 ft / 3.4 m corroborate one another. The current US radius is not selected; no blanket US-table precedence is used.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2
+        }
+      ]
+    }
+  ]
+}

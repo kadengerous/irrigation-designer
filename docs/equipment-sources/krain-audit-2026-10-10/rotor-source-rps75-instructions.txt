@@ -1,0 +1,242 @@
+10-20_RPS75_InstSht_1page (https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf)
+citeturn467view0 [wordlim: 200] Crawled: 2 days ago; Content type: application/pdf; Number of pages: 1; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf","lineno":null}); Total lines: 239
+L0@P0: CHANGING A NOZZLE
+L1@P0:  1. REMOVING THE NOZZLE RETENTION SCREW
+L2@P0: Use the hex (B) end of the Key to remove the nozzle retention screw by turning
+L3@P0: counter-clockwise to remove or clockwise to re-install.
+L4@P0:  2. PULL UP THE RISER
+L5@P0: Insert the (A) end of the Key in the keyhole (L) on the top of the nozzle turret (I)
+L6@P0: and turn the key 1/4 turn to insure that the key does not slip out of the keyhole
+L7@P0: when you pull it up. Firmly pull up the entire spring-loaded riser to access the
+L8@P0: nozzle socket (G). Hold riser assembly with one hand.
+L9@P0:  3. REMOVING THE NOZZLE
+L10@P0: With nozzle retention screw removed, the nozzle may be removed by pulling
+L11@P0: outward on the nozzle prongs (D) with a pair of needle-nose pliers.
+L12@P0:  4. INSTALLING A NOZZLE
+L13@P0: Press the desired nozzle (C) into the nozzle socket (G). Make sure the nozzle
+L14@P0: number is visible and the nozzle “prongs” (D) are up. Then, re-install the nozzle
+L15@P0: retention screw (F). NOTE: The nozzle retention screw is also a break-up screw,
+L16@P0: used to adjust the distance of the spray.
+L17@P0: SETTING THE ARC ADJUSTMENT
+L18@P0: NOTE: The RPS75
+L19@P0: adjustable left stop.
+L20@P0:  1. POSITIONING NOZZLE TURRET TO ITS “RIGHT START”
+L21@P0: (I). Rotate the turret counterclockwise to the left stop to complete any interrupted rotation cycle. Rotate the nozzle
+L22@P0: must be held in this position for arc adjustments. The right start does not change.
+L23@P0:  2. ADJUSTING THE RIGHT (FIXED) SIDE OF ARC
+L24@P0: If the right side of the arc is not properly aligned, the sprinkler may spray in areas
+L25@P0: not intended for watering such as driveways or adjacent properties. The right side
+L26@P0: arc can easily be realigned.
+L27@P0: OPTION 1: REPOSITION CAN ON THE FITTING
+L28@P0: Turn the sprinkler can (K)
+L29@P0: This may require temporary removal of the soil around the sprinkler to allow you to
+L30@P0: grip the sprinkler can.
+L31@P0: OPTION 2: REMOVE INTERNAL RISER ASSEMBLY AND REPOSITION
+L32@P0: Unscrew the top
+L33@P0: OPTION 3: MANUALLY RAISE RISER AND REPOSITION
+L34@P0: Insert the Key into the keyhole (L) and pull up on the riser. Using your hand, turn the
+L35@P0: riser to reposition the right start.
+L36@P0:  (H) counter-clockwise and remove the internal riser assembly
+L37@P0: from the can. Once removed with nozzle turret (I) at its right start, reposition the
+L38@P0: riser assembly so that nozzle arrow points to the desired start position. Replace
+L39@P0: the riser assembly back in the can and screw on the top. At this point you have
+L40@P0: realigned the right arc stop, and you can adjust the left arc to an appropriate setting.
+L41@P0:  3. ADJUSTING THE LEFT (VARIABLE) SIDE OF THE ARC
+L42@P0: INCREASING THE ARC
+L43@P0: Insert the (A) end of the Key into the arc set adjustment slot (M).
+L44@P0: While holding the nozzle turret (I) at the right start, turn the Key clockwise.
+L45@P0: Each full 360° turn of the Key will increase the arc 90°. Adjust to any arc
+L46@P0: between 40° and 360°. The Key will stop turning, or there will be ratcheting
+L47@P0: noise, when the maximum arc of 360° has been reached.
+L48@P0: DECREASING THE ARC
+L49@P0: Insert the (A) end of the Key into the arc set adjustment slot (M). While
+L50@P0: holding the nozzle turret (I) at the right start, turn the Key counter-clockwise.
+L51@P0: Each full 360° turn of the Key will decrease the arc 90°. Adjust to any arc
+L52@P0: between 40° and 360°. The Key will stop turning, or there will be a ratcheting
+L53@P0: noise, when the minimum arc of 40° has been reached.
+L54@P0: SPRINKLER INSTALLATION
+L55@P0:  1. INSTALL AND BURY
+L56@P0: Do not use pipe dope. Thread the sprinkler on the pipe. Bury the sprinkler
+L57@P0: NOTE: Gear driven sprinklers and pop-up
+L58@P0: sprays should not be installed on the same watering zone.
+L59@P0:  2. INSPECTING THE FILTER
+L60@P0: Unscrew the top (H) and lift the complete sprinkler assembly (J) out of
+L61@P0: the can (K)
+L62@P0: and can be easily pulled out, cleaned and re-installed.
+L63@P0:  3. WINTERIZATION TIPS
+L64@P0: When using an air compressor to remove water
+L65@P0: from the system please note the following:
+L66@P0: a. Do not exceed 30 PSI.
+L67@P0: b. Always introduce air into the system gradually to avoid
+L68@P0: air pressure surges. Sudden release of compressed air
+L69@P0: into the sprinkler can cause damage.
+L70@P0: c. Each zone should run no longer than 1 minute on air.
+L71@P0: Sprinklers turn 10 to 12 time faster on air than on water.
+L72@P0: Over spinning rotors on air can cause damage to the
+L73@P0: internal components.
+L74@P0: RPS®75 Gear Driven Sprinkler Setting Instructions
+L75@P0: NOTE: The RPS 75 is factory preset with a 180° arc setting, and includes a pre-installed #3 nozzle.
+L76@P0: E Key in Keyhole
+L77@P0: I
+L78@P0: Nozzle
+L79@P0: Turret
+L80@P0: F Nozzle
+L81@P0: Retention
+L82@P0: Screw
+L83@P0: H Top
+L84@P0: G Nozzle
+L85@P0: Socket
+L86@P0: J Sprinkler
+L87@P0: Assembly
+L88@P0: K
+L89@P0: Can
+L90@P0: M
+L91@P0: Arc Set
+L92@P0: Adjustment
+L93@P0: L Keyhole F Nozzle
+L94@P0: Retention
+L95@P0: Screw
+L96@P0: I Nozzle Turret STANDARD NOZZLE PERFORMAN
+L97@P0: METRI
+L98@P0: Pressure Radiu
+L99@P0: KPa Bars Meters
+L100@P0: 206 2.1 11.0
+L101@P0: 275 2.8 11.6
+L102@P0: 344 3.4 12.2
+L103@P0: 413 4.1 12.2
+L104@P0: 206 2.1 8.5
+L105@P0: 275 2.8 8.8
+L106@P0: 344 3.4 8.8
+L107@P0: 413 4.1 9.1
+L108@P0: 206 2.1 8.8
+L109@P0: 275 2.8 9.1
+L110@P0: 344 3.4 9.1
+L111@P0: 413 4.1 9.4
+L112@P0: 206 2.1 9.1
+L113@P0: 275 2.8 9.4
+L114@P0: 344 3.4 9.4
+L115@P0: 413 4.1 9.8
+L116@P0: 206 2.1 9.8
+L117@P0: 275 2.8 10.1
+L118@P0: 344 3.4 10.4
+L119@P0: 413 4.1 10.4
+L120@P0: 206 2.1 11.0
+L121@P0: 275 2.8 12.2
+L122@P0: 344 3.4 12.8
+L123@P0: 413 4.1 12.8
+L124@P0: 206 2.1 11.6
+L125@P0: 275 2.8 13.1
+L126@P0: 344 3.4 14.0
+L127@P0: 413 4.1 14.3
+L128@P0: 275 2.8 13.7
+L129@P0: 344 3.4 14.6
+L130@P0: 413 4.1 14.9
+L131@P0: 482 4.8 15.5
+L132@P0: U.S.
+L133@P0: Nozzle Pressure Radius Flow
+L134@P0: PSI Ft. GPM
+L135@P0: #3 30 36' 2.0
+L136@P0: 40 38' 2.4
+L137@P0: 50 40' 2.7
+L138@P0: 60 40' 2.9
+L139@P0: #0.5 30 28' 0.5
+L140@P0: 40 29' 0.6
+L141@P0: 50 29' 0.7
+L142@P0: 60 30' 0.8
+L143@P0: #0.75 30 29' 0.7
+L144@P0: 40 30' 0.8
+L145@P0: 50 30' 0.9
+L146@P0: 60 31' 1.0
+L147@P0: #1 30 30' 0.9
+L148@P0: 40 31' 1.0
+L149@P0: 50 31' 1.2
+L150@P0: 60 32' 1.3
+L151@P0: #2 30 32' 1.2
+L152@P0: 40 33' 1.4
+L153@P0: 50 34' 1.6
+L154@P0: 60 34' 1.8
+L155@P0: #4 30 36' 2.6
+L156@P0: 40 40' 3.0
+L157@P0: 50 42' 3.4
+L158@P0: 60 42' 3.7
+L159@P0: #6 30 38' 4.2
+L160@P0: 40 43' 4.9
+L161@P0: 50 46' 5.5
+L162@P0: 60 47' 6.0
+L163@P0: #8 40 45' 6.0
+L164@P0: 50 48' 6.8
+L165@P0: 60 49' 7.6
+L166@P0: 70 51' 8.2
+L167@P0: B
+L168@P0: A
+L169@P0:  RPS75 Key
+L170@P0: C Nozzle
+L171@P0: D Nozzle
+L172@P0: Prongs
+L173@P0: K-RAIN MANUFACTURING CORP.
+L174@P0: 1640 Australian Avenue
+L175@P0: Riviera Beach, FL 33404 USA
+L176@P0: PH: 561.844.1002 / 1.800.735.7246
+L177@P0: FAX: 561.842.9493
+L178@P0: www.krain.com
+L179@P0: © K-RAIN Manufacturing Corp.
+L180@P0: Part Number: 16005103 Rev. 12
+L181@P0: Performance Data
+L182@P0: NOZZLE PRESSURE RADIUS FLOW RATE PRECIP in/hr mm/hr
+L183@P0: PSI kPa Bars Ft. M. GPM L/M M3/H ■ ▲ ■ ▲
+L184@P0: #0.75 30 206 2.1 29 8.8 0.7 2.6 0.16 0.16 0.19 4 5
+L185@P0: 40 275 2.8 30 9.1 0.8 3.0 0.18 0.17 0.20 4 5
+L186@P0: 50 344 3.4 30 9.1 0.9 3.4 0.20 0.19 0.22 5 6
+L187@P0: 60 413 4.1 31 9.4 1.0 3.8 0.23 0.20 0.23 5 6
+L188@P0: #1.0 30 206 2.1 30 9.1 0.9 3.4 0.20 0.19 0.22 5 6
+L189@P0: 40 275 2.8 31 9.4 1.0 3.8 0.23 0.20 0.23 5 6
+L190@P0: 50 344 3.4 31 9.4 1.2 4.5 0.27 0.24 0.28 6 7
+L191@P0: 60 413 4.1 32 9.8 1.3 4.9 0.30 0.24 0.28 6 7
+L192@P0: #1.5 30 206 2.1 32 9.8 1.2 4.5 0.27 0.23 0.26 5 6
+L193@P0: 40 275 2.8 33 10.1 1.4 5.3 0.32 0.25 0.29 6 7
+L194@P0: 50 344 3.4 34 10.4 1.6 6.1 0.36 0.27 0.31 7 8
+L195@P0: 60 413 4.1 34 10.4 1.8 6.8 0.41 0.30 0.35 7 9
+L196@P0: #2.0 30 206 2.1 34 10.4 1.6 6.1 0.36 0.27 0.31 7 8
+L197@P0: 40 275 2.8 36 11.0 1.8 6.8 0.41 0.27 0.31 7 8
+L198@P0: 50 344 3.4 38 11.6 2.0 7.6 0.45 0.27 0.31 7 8
+L199@P0: 60 413 4.1 38 11.6 2.2 8.3 0.50 0.29 0.34 7 9
+L200@P0: #3.0 30 206 2.1 36 11.0 2.0 7.6 0.45 0.30 0.34 7 9
+L201@P0: 40 275 2.8 38 11.6 2.4 9.1 0.55 0.32 0.37 8 9
+L202@P0: 50 344 3.4 40 12.2 2.7 10.2 0.61 0.32 0.38 8 10
+L203@P0: 60 413 4.1 40 12.2 2.9 11.0 0.66 0.35 0.40 9 10
+L204@P0: #4.0 30 206 2.1 36 11.0 2.6 9.8 0.59 0.39 0.45 10 11
+L205@P0: 40 275 2.8 40 12.2 3.0 11.4 0.68 0.36 0.42 9 11
+L206@P0: 50 344 3.4 42 12.8 3.4 12.9 0.77 0.37 0.43 9 11
+L207@P0: 60 413 4.1 42 12.8 3.7 14.0 0.84 0.40 0.47 9 12
+L208@P0: #6.0 40 275 2.8 38 11.6 4.2 15.9 0.91 0.56 0.65 14 16
+L209@P0: 50 344 3.4 43 13.1 4.9 18.5 1.11 0.51 0.59 13 15
+L210@P0: 60 413 4.1 46 14.0 5.5 20.8 1.25 0.50 0.58 13 15
+L211@P0: 70 482 4.8 47 14.3 6.0 22.7 1.36 0.52 0.60 13 15
+L212@P0: #8.0 40 275 2.8 45 13.7 6.0 22.7 1.36 0.57 0.66 14 17
+L213@P0: 50 344 3.4 48 14.6 6.8 25.7 1.54 0.57 0.66 14 17
+L214@P0: 60 413 4.1 49 14.9 7.6 28.8 1.73 0.61 0.70 15 18
+L215@P0: 70 482 4.8 51 15.5 8.2 31.0 1.86 0.61 0.70 15 18
+L216@P0: Low Angle Performance Data
+L217@P0: NOZZLE PRESSURE RADIUS FLOW RATE PRECIP in/hr mm/hr
+L218@P0: PSI kPa Bars Ft. M. GPM L/M M3
+L219@P0: /H ■ ▲ ■ ▲
+L220@P0: #1.0 30 207 2.1 22 6.7 1.2 4.5 .34 0.48 0.55 12 14
+L221@P0: 40 275 2.8 24 7.3 1.7 6.4 .39 0.57 0.66 14 17
+L222@P0: 50 344 3.4 26 7.9 1.8 6.8 .41 0.51 0.59 13 15
+L223@P0: 60 413 4.1 28 8.5 2.0 7.6 .46 0.49 0.57 13 14
+L224@P0: #3.0 30 207 2.1 29 8.8 3.0 11.4 .68 0.69 0.79 18 20
+L225@P0: 40 275 2.8 32 9.8 3.1 11.7 .71 0.58 0.67 15 17
+L226@P0: 50 344 3.4 35 10.7 3.5 13.2 .80 0.55 0.64 14 16
+L227@P0: 60 413 4.1 37 11.3 3.8 14.4 .87 0.53 0.62 13 16
+L228@P0: #4.0 30 207 2.1 31 9.4 3.4 12.9 .78 0.68 0.79 17 20
+L229@P0: 40 275 2.8 34 10.4 3.9 14.8 .89 0.65 0.75 16 19
+L230@P0: 50 344 3.4 37 11.3 4.4 16.7 1.00 0.62 0.71 16 18
+L231@P0: 60 413 4.1 38 11.6 4.7 17.8 1.07 0.63 0.72 16 18
+L232@P0: #6.0 40 275 2.8 38 11.6 6.5 24.6 1.68 0.87 1.00 22 25
+L233@P0: 50 344 3.4 40 12.2 7.3 27.6 1.66 0.88 1.01 22 25
+L234@P0: 60 413 4.1 42 12.8 8.0 30.3 1.82 0.87 1.01 22 26
+L235@P0: 70 482 4.8 44 13.4 8.3 32.6 1.96 0.86 0.99 22 25
+L236@P0: *All precipitation rates calculated for 180° operation.
+L237@P0:  For the precipitation rate for a 360° sprinkler, divide by 2.
+L238@P0: Preinstalled
+

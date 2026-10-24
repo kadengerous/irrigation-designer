@@ -1,0 +1,33 @@
+{
+  "checkedOn": "2026-10-10",
+  "totalStoredRotorRows": 755,
+  "rowsInsideCurrentOperatingDomain": 753,
+  "rowsOutsideCurrentOperatingDomain": 2,
+  "exceptions": [
+    {
+      "id": "I-80-ON",
+      "nozzleId": "i80-23",
+      "pressureBar": 3.4,
+      "sourcePressurePsi": 50
+    },
+    {
+      "id": "I-80-ON",
+      "nozzleId": "i80-23",
+      "pressureBar": 4.1,
+      "sourcePressurePsi": 60
+    }
+  ],
+  "sourceEnvelope": {
+    "id": "I-80-ON",
+    "minimumPsi": 65,
+    "maximumPsi": 100,
+    "storedNominalMinimumBar": 4.5,
+    "sourceUrls": [
+      "https://www.hunterirrigation.com/irrigation-product/rotors/i-80",
+      "https://www.hunterirrigation.com/sites/default/files/2023-09/RC-099-SS-I80-US.pdf"
+    ]
+  },
+  "status": "Unresolved source inconsistency between published performance rows and model operating specification",
+  "recommendation": "Retain raw performance rows as accurately transcribed evidence, but retain the conservative 4.5 bar minimum operating domain. No defensible metadata expansion from this conflict alone. All other stored rotor rows are within current model bounds.",
+  "testRecommendation": "Audit raw rows independently of runtime operating lookup. Assert runtime rejects these two pressure points; test all 753 in-domain rows exactly at their own pressure. Never silently clamp a pressure and compare the returned row against the requested lower-pressure source point."
+}

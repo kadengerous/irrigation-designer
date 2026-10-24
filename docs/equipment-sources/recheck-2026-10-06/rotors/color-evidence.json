@@ -1,0 +1,228 @@
+[
+  {
+    "itemId": "k-rain:MiniPro",
+    "kind": "nozzle",
+    "verified": true,
+    "colorName": "Red",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "Explicit named red/green rack and published rack photos; color applies to all nozzle sizes on that rack, not a size-specific code.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:RPS50",
+    "kind": "nozzle",
+    "verified": true,
+    "colorName": "Red",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "Explicit named red/green rack and published rack photos; color applies to all nozzle sizes on that rack, not a size-specific code.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "kind": "nozzle",
+    "verified": true,
+    "colorName": "Red",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "Explicit named red/green rack and published rack photos; color applies to all nozzle sizes on that rack, not a size-specific code.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:RPS75-PR",
+    "kind": "nozzle",
+    "verified": true,
+    "colorName": "Red",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "Explicit named red/green rack and published rack photos; color applies to all nozzle sizes on that rack, not a size-specific code.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:RPS75i",
+    "kind": "nozzle",
+    "verified": true,
+    "colorName": "Green",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "Explicit named red/green rack and published rack photos; color applies to all nozzle sizes on that rack, not a size-specific code.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:RPS75i-PR",
+    "kind": "nozzle",
+    "verified": true,
+    "colorName": "Green",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "Explicit named red/green rack and published rack photos; color applies to all nozzle sizes on that rack, not a size-specific code.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:RPS-Select",
+    "kind": "nozzle",
+    "verified": false,
+    "colorName": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "No official size-specific color code for the four built-in selector positions found. Keep unknown.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:ProPlus",
+    "kind": "nozzle",
+    "verified": true,
+    "colorName": "Red",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "Explicit named red/green rack and published rack photos; color applies to all nozzle sizes on that rack, not a size-specific code.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "kind": "nozzle",
+    "verified": true,
+    "colorName": "Green",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 26,
+    "evidence": "Explicit named red/green rack and published rack photos; color applies to all nozzle sizes on that rack, not a size-specific code.",
+    "hexMeaning": "UI approximation, not a manufacturer spectral/hex specification."
+  },
+  {
+    "itemId": "k-rain:78002",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78003",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78004",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78004-PR30",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78004-PR40",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78006",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78006-PR30",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78006-PR40",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78012",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78012-PR30",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:78012-PR40",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 30,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:NP2",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 32,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:NP4",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 32,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:73001",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 33,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:74001",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 33,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:76001",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 33,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  },
+  {
+    "itemId": "k-rain:71201",
+    "kind": "cap/body appearance",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 33,
+    "evidence": "Official photographs show a black external cap/body and blue shipping flush cap. Do not describe blue flush cap as an operational nozzle color. No model-specific manufacturer color coding is asserted; existing neutral rendering may be retained.",
+    "verifiedNozzleColor": false
+  }
+]

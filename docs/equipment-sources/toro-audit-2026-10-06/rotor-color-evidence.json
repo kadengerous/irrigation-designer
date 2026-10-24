@@ -1,0 +1,568 @@
+{
+  "summary": {
+    "modelsAudited": 53,
+    "rotorModels": 13,
+    "bodyModels": 40,
+    "nozzleVariantsPerRotor": 12,
+    "uniquePerformanceRows": 60,
+    "catalogPerformanceRowsChecked": 780,
+    "numericCellsChecked": 6240,
+    "matchingPerformanceRows": 780,
+    "mismatchingPerformanceRows": 0,
+    "publishedPrecipitationCells": 1560,
+    "missingPrecipitationCells": 0,
+    "lowPressureBodiesCorrected": 7,
+    "defaultRadiusCorrections": 3,
+    "shrubAccessoryConflicts": 2,
+    "hydraulicConflicts": 0,
+    "unknownNozzleColorsDistinct": 12,
+    "verifiedRotorCapColors": 13,
+    "verifiedBodyCapColors": 40
+  },
+  "evidence": [
+    {
+      "itemId": "toro:T5P-RS-LN",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5PE-RS-LN",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Lavender",
+      "displayHex": "#dcccec",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "page": 2,
+      "evidence": "Lavender non-potable rubber cover stated in bid spec",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5PCK1.5-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5PCK2.0-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5PCK2.5-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5PCK3.0-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5HP-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5HPE-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Lavender",
+      "displayHex": "#dcccec",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "page": 2,
+      "evidence": "Lavender non-potable rubber cover stated in bid spec",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5S-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5SE-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Lavender",
+      "displayHex": "#dcccec",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "page": 2,
+      "evidence": "Lavender non-potable rubber cover stated in bid spec",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5PSS3.0-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5PSSE3.0-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Lavender",
+      "displayHex": "#dcccec",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "page": 2,
+      "evidence": "Lavender non-potable rubber cover stated in bid spec",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:T5PCKSS3.0-RS",
+      "scope": "turret cap, not interchangeable nozzle",
+      "colorName": "Dark gray",
+      "displayHex": "#707070",
+      "hexStatus": "approximate display swatch, not manufacturer color standard",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "page": 1,
+      "evidence": "RapidSet dark grey turret rubber cover explicitly stated in instructions",
+      "nozzleColors": "unknown for all 12 inserts; no per-size color code published in reviewed official sources"
+    },
+    {
+      "itemId": "toro:570Z-2P",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-2LP",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-3P",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-3LP",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4P",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4LP",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6P",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6LP",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6SI",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6LPSI",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12P",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12LP",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12SI",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12LPSI",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4P-COM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6P-COM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12P-COM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4P-PRX",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6P-PRX",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6SI-PRX",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12P-PRX",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12SI-PRX",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4P-PRXCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6P-PRXCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12P-PRXCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-3P-PR",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4P-PR",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6P-PR",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12P-PR",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4P-PRCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6P-PRCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12P-PRCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4P-XF",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6P-XF",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6SI-XF",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12P-XF",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12SI-XF",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-4P-XFCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-6P-XFCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    },
+    {
+      "itemId": "toro:570Z-12P-XFCOM",
+      "scope": "black body/cap; red shipping flush plug is not installed nozzle color",
+      "colorName": "Black",
+      "displayHex": "#303030",
+      "hexStatus": "approximate display swatch",
+      "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+      "page": 69,
+      "evidence": "Visually inspected representative 570Z/LP, XF, PR, PRX product images on 2026 catalog p69; black caps with optional white printed feature markings, red flush plugs."
+    }
+  ],
+  "nozzleConclusion": "Unknown; do not use cap colors as if per-size nozzle color codes. Item cap colors may label plan/card identification only."
+}

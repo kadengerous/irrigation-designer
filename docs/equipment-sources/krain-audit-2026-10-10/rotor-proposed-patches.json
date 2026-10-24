@@ -1,0 +1,116 @@
+{
+  "checkedOn": "2026-10-10",
+  "patches": [
+    {
+      "id": "k-rain:RPS75-PR",
+      "field": "pressureBasis",
+      "old": null,
+      "new": "inlet",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "reason": "Dedicated PR table publishes inlet pressures above the nominal 45 psi regulator with plateau radius/flow; pressure cannot be nozzle outlet pressure. Preserve actual table pressure domain and label inlet. This is explicit table interpretation, not a manufacturer erratum."
+    },
+    {
+      "id": "k-rain:RPS75i-PR",
+      "field": "pressureBasis",
+      "old": null,
+      "new": "inlet",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePages": [
+        14,
+        15
+      ],
+      "reason": "Dedicated PR table publishes inlet pressures above the nominal 45 psi regulator with plateau radius/flow; pressure cannot be nozzle outlet pressure. Preserve actual table pressure domain and label inlet. This is explicit table interpretation, not a manufacturer erratum."
+    },
+    {
+      "id": "k-rain:RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-1.5",
+      "collection": "nozzles.performance",
+      "rowIndex": 2,
+      "pressureBar": 3.4,
+      "field": "precipSquareMmH",
+      "old": 7,
+      "new": null,
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePages": [
+        14,
+        15
+      ],
+      "sourceLines": [
+        725,
+        789
+      ],
+      "reason": "Current metric square7 versus current US0.31in/h=7.874mm/h; even printed hydraulic rounding gives7.84–8.09mm/h under the matching square head-to-head diagnostic. Keep pressure/radius/flow/triangle; do not invent corrected manufacturer value8."
+    }
+  ],
+  "requiredChanges": 3,
+  "numericReplacements": 0,
+  "notes": [
+    "Snapshot hydraulics remain unchanged by research; root owns catalogue/runtime integration.",
+    "Do not mark entire standard #6 or #8 nozzle unverified: only the disputed -30% endpoint at4.8bar.",
+    "Retain all six existing reviewed points: three base and three reduced. Counts remain 357 verified base and 159 verified reduced points.",
+    "Retain107 currently null precipitation fields; add1 isolated null (108 total).",
+    "Keep reduced flow unknown except verified exact -30% rows; no synthetic .5/.7 or other linear flow law.",
+    "The table heading PR Low Angle under SuperPro is a copied heading; no SuperPro regulator option/plateau is documented. Do not create a PR SuperPro model from that heading."
+  ],
+  "confirmedExistingFlags": [
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-6.0",
+      "collection": "reductionPerformance",
+      "rowIndex": 32,
+      "pressureBar": 4.8,
+      "reductionPercent": 30,
+      "field": "verificationStatus",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePages": [
+        21,
+        22
+      ],
+      "sourceLines": [
+        1271,
+        1350
+      ],
+      "competingValues": {
+        "metricRadiusM": 9.8,
+        "USradiusFeet": 31,
+        "USradiusConvertedM": 9.4488
+      },
+      "reason": "Reduced-radius unit disagreement exceeds combined one-decimal-metre and whole-foot rounding; reported precipitation also conflicts with metric radius. No authoritative replacement found. Retain raw row but exclude this reduced endpoint and interpolation across it. Full-radius counterpart remains verified.",
+      "currentValue": "Needs Review",
+      "decision": "Retain existing flag; confirmed both in audit snapshot and HEAD",
+      "baselineHead": "7231506d1a7d236c986ea5c00bcb41d7d35a8f31"
+    },
+    {
+      "id": "k-rain:SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-8.0",
+      "collection": "reductionPerformance",
+      "rowIndex": 37,
+      "pressureBar": 4.8,
+      "reductionPercent": 30,
+      "field": "verificationStatus",
+      "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "sourcePages": [
+        21,
+        22
+      ],
+      "sourceLines": [
+        1276,
+        1355
+      ],
+      "competingValues": {
+        "metricRadiusM": 10.7,
+        "USradiusFeet": 32,
+        "USradiusConvertedM": 9.7536
+      },
+      "reason": "Reduced-radius unit disagreement exceeds combined one-decimal-metre and whole-foot rounding; reported precipitation also conflicts with metric radius. No authoritative replacement found. Retain raw row but exclude this reduced endpoint and interpolation across it. Full-radius counterpart remains verified.",
+      "currentValue": "Needs Review",
+      "decision": "Retain existing flag; confirmed both in audit snapshot and HEAD",
+      "baselineHead": "7231506d1a7d236c986ea5c00bcb41d7d35a8f31"
+    }
+  ],
+  "classificationCorrection": "Two SuperPro reduced flags were incorrectly described as new in the initial audit narrative. HEAD and the original saved row audit both already contain Needs Review; no change to either flag is proposed."
+}

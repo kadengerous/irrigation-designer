@@ -1,0 +1,453 @@
+I-50 | Hunter Industries (https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50)
+citeturn345view0 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50","lineno":80}); Total lines: 1457
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: Metric
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite9†English L16:   * cite9†Metric L17:   * cite9†Español L18:   * cite9†Italiano L19: 
+L20:   * cite9†Français L21:   * cite9†Português L22:   * cite9†Deutsch L23:   * cite9†Türkçe L24: 
+L25:   * cite9†Polski L26:   * cite9†Русский L27:   * cite9†العربية L28:   * cite9†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: # I-50
+L36: 
+L37: The high-torque I-50 rotor is engineered to thrive in difficult water-quality conditions within large turf projects.
+L38: 
+L39: Radius 13.1 to 23.2 m
+L40: 
+L41: Flow 1.63 to 6.84 m³/hr; 27.2 to 114.1 l/min
+L42: 
+L43: Product Line
+L44: 
+L45: Discontinued Models
+L46: 
+L47:   * cite10†Models L48:   * cite11†Specs L49:   * cite12†Features L50:   * cite13†Charts L51:   * cite14†Documents L52:   * cite15†CAD Details L53:   * cite16†Support L54:   * cite17†Photos L55:   * cite18†Related L56: 
+L57: ## Models
+L58: 
+L59: ## User-installed options
+L60: ### User-Installed Options
+L61: 
+L62: Model  | Description  | Add to List
+L63: --- | --- | ---
+L64: cite19†TURF-CUP-KIT-I-40 | Turf Cup Kit for I-40 Rotors, fits adjustable and opposing nozzle models  | cite9†+ L65: 
+L66: cite20†Image: I-50 L67: 
+L68: [Input]
+L69: 
+L70: I-50
+L71: 
+L72: I-50
+L73: 
+L74: Ordering Number [Input]
+L75: 
+L76: [Input] [Input]
+L77: 
+L78: Qty [Input]
+L79: 
+L80: Notes [Input: Add a note...]
+L81: 
+L82: [Button: Add to list]
+L83: 
+L84: User installed options
+L85: 
+L86: [Input]
+L87: 
+L88: #### Product added to list
+L89: 
+L90: The following product was added to ""
+L91: 
+L92: QTY
+L93: 
+L94: cite21†Review your list L95: 
+L96: cite9†Continue L97: 
+L98: [Input] [Input]
+L99: ## Create a new My List.
+L100: 
+L101: ## Log in to access this feature
+L102: 
+L103: Log in using your Hunter Account
+L104: 
+L105: Username [Input]
+L106: 
+L107: Password [Input]
+L108: 
+L109: [Input] [Input] [Input]
+L110: 
+L111: [Button: Sign In]
+L112: 
+L113: cite22†Contact your local distributor for product availability and ordering. L114: 
+L115: ## Specifications
+L116: ### Operating Specifications
+L117: 
+L118:   * Nozzle choices: 12
+L119:   * Radius I-50: 13.1 to 21.3 m
+L120:   * Radius I-50-ON: 15.2 to 23.2 m
+L121:   * Flow I-50: 1.63 to 6.84 m^{3}/hr; 27.2 to 114.1 l/min
+L122:   * Flow I-50-ON: 2.75 to 7.76 m^{3}/hr; 45.8 to 129.4 l/min
+L123:   * Recommended pressure range: 2.5 to 7.0 bar; 250 to 700 kPa
+L124:   * Operating pressure range: 2.5 to 7.0 bar; 250 to 700 kPa
+L125:   * Precipitation rate: 15 mm/hr approximately
+L126:   * Nozzle trajectory: standard = 25°
+L127:   * Warranty period: 5 years
+L128: ### Factory-Installed Options
+L129: 
+L130:   * Reclaimed water ID
+L131: 
+L132: ### User-Installed Options
+L133: 
+L134:   * HSJ-1 prefabricated 1" (25 mm) PVC swing joint
+L135: 
+L136: * * *
+L137: 
+L138: cite23† Download Product Spec Sheet L139: ## Features
+L140: 
+L141: The I-50 large turf rotor is built to conquer the most demanding conditions. The powerful internal drive mechanism and versatile arc adjustment style are derived from Hunter’s time-proven golf rotors, so you can ensure top performance in any application.
+L142: The I-50 has a durable, stainless steel riser and colour-coded nozzles to simplify maintenance and identification in the field. The rotor pushes past the challenges of poor water quality and harsh soil conditions by stopping internal and external debris infiltration that can cause other rotors to perform less than their very best.
+L143: To prevent non-rotation, the robust planetary gear drive of the I-50 offers the highest torque output on the market. In addition, the long-lasting, reliable drive mechanism prevents failures that could create maintenance delays.
+L144: #### Key Benefits
+L145: 
+L146: Extra-strong, non-strippable, planetary gear drive mechanism is reliable and durable in harsh water conditions
+L147: 
+L148: Tool-free, part- and full-circle arc adjustment mechanism makes fast, easy installation and reduces inventory (60° to 360°)
+L149: 
+L150: Colour-coded nozzles make identification easy
+L151: 
+L152: Available opposing nozzle model for even watering in full-circle applications (I-50-ON model)
+L153: 
+L154: Drain check valve prevents low-head drainage (up to 4.5 m of elevation)
+L155: 
+L156: ## Charts
+L157: ### I-50 Nozzle Performance Data
+L158: 
+L159: I-50 Nozzle Performance Data cite24†View Nozzle L160: ---
+L161: Nozzle  | Pressure  | Radius  | Flow  | Precip mm/hr
+L162:    | bar  | kPa  | m  | m³/hr  | l/min  | cite25†Image | cite26†Image L163: 8 • Lt. Brown  | 2.5  | 250  | 13.1  | 1.63  | 27.2  | 19  | 22
+L164: 3.0  | 300  | 13.4  | 1.80  | 30.0  | 20  | 23
+L165: 3.5  | 350  | 13.7  | 1.94  | 32.3  | 21  | 24
+L166: 4.0  | 400  | 14.0  | 2.06  | 34.4  | 21  | 24
+L167: 4.5  | 450  | 14.0  | 2.18  | 36.3  | 22  | 26
+L168: 5.0  | 500  | 14.3  | 2.29  | 38.2  | 22  | 26
+L169: 5.5  | 550  | 14.6  | 2.41  | 40.2  | 23  | 26
+L170: 10 • Lt. Green  | 3.0  | 300  | 14.6  | 2.20  | 36.6  | 21  | 24
+L171: 3.5  | 350  | 14.9  | 2.37  | 39.4  | 21  | 24
+L172: 4.0  | 400  | 15.2  | 2.52  | 42.0  | 22  | 25
+L173: 4.5  | 450  | 15.5  | 2.67  | 44.5  | 22  | 25
+L174: 5.0  | 500  | 15.5  | 2.81  | 46.8  | 23  | 27
+L175: 5.5  | 550  | 15.8  | 2.96  | 49.3  | 24  | 27
+L176: 6.0  | 600  | 16.2  | 3.08  | 51.4  | 24  | 27
+L177: 13 • Lt. Blue  | 3.0  | 300  | 14.9  | 2.36  | 39.4  | 21  | 24
+L178: 3.5  | 350  | 15.2  | 2.55  | 42.6  | 22  | 25
+L179: 4.0  | 400  | 15.5  | 2.73  | 45.5  | 23  | 26
+L180: 4.5  | 450  | 15.5  | 2.90  | 48.3  | 24  | 28
+L181: 5.0  | 500  | 15.8  | 3.06  | 51.0  | 24  | 28
+L182: 5.5  | 550  | 16.2  | 3.23  | 53.9  | 25  | 29
+L183: 6.0  | 600  | 16.5  | 3.38  | 56.3  | 25  | 29
+L184: 15 • Grey  | 3.0  | 300  | 16.2  | 2.93  | 48.8  | 22  | 26
+L185: 3.5  | 350  | 16.5  | 3.19  | 53.2  | 24  | 27
+L186: 4.0  | 400  | 16.8  | 3.44  | 57.3  | 24  | 28
+L187: 4.5  | 450  | 17.1  | 3.67  | 61.2  | 25  | 29
+L188: 5.0  | 500  | 17.4  | 3.89  | 64.9  | 26  | 30
+L189: 5.5  | 550  | 18.0  | 4.14  | 68.9  | 26  | 30
+L190: 6.0  | 600  | 18.3  | 4.34  | 72.4  | 26  | 30
+L191: 6.2  | 650  | 18.3  | 4.43  | 73.8  | 26  | 31
+L192: 23 • Dk. Green  | 3.5  | 350  | 18.6  | 4.48  | 74.6  | 26  | 30
+L193: 4.0  | 400  | 18.9  | 4.76  | 79.4  | 27  | 31
+L194: 4.5  | 450  | 19.2  | 5.03  | 83.9  | 27  | 32
+L195: 5.0  | 500  | 19.5  | 5.29  | 88.1  | 28  | 32
+L196: 5.5  | 550  | 19.8  | 5.56  | 92.7  | 28  | 33
+L197: 6.0  | 600  | 20.1  | 5.79  | 96.5  | 29  | 33
+L198: 6.2  | 620  | 20.1  | 5.89  | 98.1  | 29  | 34
+L199: 6.5  | 650  | 20.1  | 6.01  | 100.2  | 30  | 34
+L200: 6.9  | 690  | 20.4  | 6.19  | 103.2  | 30  | 34
+L201: 25 • Dk. Blue  | 3.5  | 350  | 19.8  | 4.98  | 83.0  | 25  | 29
+L202: 4.0  | 400  | 20.1  | 5.33  | 88.7  | 26  | 30
+L203: 4.5  | 450  | 20.4  | 5.65  | 94.2  | 27  | 31
+L204: 5.0  | 500  | 20.7  | 5.96  | 99.3  | 28  | 32
+L205: 5.5  | 550  | 21.0  | 6.29  | 104.9  | 28  | 33
+L206: 6.0  | 600  | 21.0  | 6.57  | 109.6  | 30  | 34
+L207: 6.2  | 620  | 21.0  | 6.69  | 111.5  | 30  | 35
+L208: 6.5  | 650  | 21.3  | 6.84  | 114.1  | 30  | 35
+L209: 6.9  | 690  | 21.3  | 7.07  | 117.8  | 31  | 36
+L210: Notes:
+L211: All precipitation rates calculated for 180° operation. For the precipitation rate for a 360° sprinkler, divide by 2.
+L212: ### I-50 Dual Opposing Nozzle Performance Data
+L213: 
+L214: I-50 Dual Opposing Nozzle
+L215: Performance Data cite27†View Nozzle L216: ---
+L217: Nozzle  | Pressure  | Radius  | Flow  | Precip mm/hr
+L218:    | bar  | kPa  | m  | m³/hr  | l/min  | cite25†Image | cite26†Image L219: 15 • Grey  | 3.0  | 300  | 15.2  | 2.75  | 45.8  | 12  | 14
+L220: 3.5  | 350  | 15.8  | 2.91  | 48.5  | 12  | 13
+L221: 4.0  | 400  | 16.2  | 3.06  | 51.0  | 12  | 14
+L222: 4.5  | 450  | 16.8  | 3.20  | 53.3  | 11  | 13
+L223: 5.0  | 500  | 17.1  | 3.32  | 55.4  | 11  | 13
+L224: 5.5  | 550  | 17.4  | 3.46  | 57.7  | 11  | 13
+L225: 6.0  | 600  | 17.7  | 3.58  | 59.6  | 11  | 13
+L226: 6.2  | 620  | 17.7  | 3.62  | 60.4  | 12  | 13
+L227: 18 • Red  | 3.0  | 300  | 17.4  | 2.90  | 48.3  | 10  | 11
+L228: 3.5  | 350  | 17.7  | 3.15  | 52.5  | 10  | 12
+L229: 4.0  | 400  | 18.0  | 3.38  | 56.4  | 10  | 12
+L230: 4.5  | 450  | 18.0  | 3.61  | 60.1  | 11  | 13
+L231: 5.0  | 500  | 18.3  | 3.82  | 63.7  | 11  | 13
+L232: 5.5  | 550  | 18.9  | 4.05  | 67.5  | 11  | 13
+L233: 6.0  | 600  | 19.2  | 4.25  | 70.8  | 12  | 13
+L234: 6.2  | 620  | 19.2  | 4.33  | 72.1  | 12  | 14
+L235: 6.5  | 650  | 19.5  | 4.43  | 73.9  | 12  | 13
+L236: 20 • Dk. Brown  | 3.5  | 350  | 18.3  | 3.98  | 66.2  | 12  | 14
+L237: 4.0  | 400  | 18.9  | 4.26  | 71.1  | 12  | 14
+L238: 4.5  | 450  | 19.2  | 4.54  | 75.6  | 12  | 14
+L239: 5.0  | 500  | 19.5  | 4.80  | 80.0  | 13  | 15
+L240: 5.5  | 550  | 20.1  | 5.08  | 84.7  | 13  | 15
+L241: 6.0  | 600  | 19.8  | 5.32  | 88.7  | 14  | 16
+L242: 6.2  | 620  | 19.8  | 5.42  | 90.4  | 14  | 16
+L243: 6.5  | 650  | 20.1  | 5.55  | 92.5  | 14  | 16
+L244: 6.9  | 690  | 20.1  | 5.74  | 95.7  | 14  | 16
+L245: 23 • Dk. Green  | 3.5  | 350  | 18.9  | 4.23  | 70.6  | 12  | 14
+L246: 4.0  | 400  | 19.5  | 4.55  | 75.8  | 12  | 14
+L247: 4.5  | 450  | 19.8  | 4.85  | 80.8  | 12  | 14
+L248: 5.0  | 500  | 20.1  | 5.14  | 85.6  | 13  | 15
+L249: 5.5  | 550  | 20.4  | 5.45  | 90.8  | 13  | 15
+L250: 6.0  | 600  | 20.7  | 5.71  | 95.1  | 13  | 15
+L251: 6.2  | 620  | 20.7  | 5.82  | 97.0  | 14  | 16
+L252: 6.5  | 650  | 20.7  | 5.96  | 99.4  | 14  | 16
+L253: 6.9  | 690  | 21.0  | 6.17  | 102.9  | 14  | 16
+L254: 25 • Dk. Blue  | 3.5  | 350  | 19.5  | 4.60  | 76.7  | 12  | 14
+L255: 4.0  | 400  | 20.1  | 4.92  | 82.1  | 12  | 14
+L256: 4.5  | 450  | 20.4  | 5.23  | 87.2  | 13  | 14
+L257: 5.0  | 500  | 20.7  | 5.52  | 92.0  | 13  | 15
+L258: 5.5  | 550  | 21.0  | 5.84  | 97.3  | 13  | 15
+L259: 6.0  | 600  | 21.3  | 6.10  | 101.7  | 13  | 15
+L260: 6.2  | 620  | 21.3  | 6.22  | 103.6  | 14  | 16
+L261: 6.5  | 650  | 21.3  | 6.36  | 106.0  | 14  | 16
+L262: 6.9  | 690  | 21.6  | 6.57  | 109.5  | 14  | 16
+L263: 28 • Black  | 3.5  | 350  | 19.8  | 5.73  | 95.5  | 15  | 17
+L264: 4.0  | 400  | 20.4  | 6.07  | 101.1  | 15  | 17
+L265: 4.5  | 450  | 21.0  | 6.38  | 106.4  | 14  | 17
+L266: 5.0  | 500  | 21.3  | 6.68  | 111.3  | 15  | 17
+L267: 5.5  | 550  | 21.9  | 7.00  | 116.7  | 15  | 17
+L268: 6.0  | 600  | 22.3  | 7.27  | 121.1  | 15  | 17
+L269: 6.2  | 620  | 22.3  | 7.38  | 122.9  | 15  | 17
+L270: 6.5  | 650  | 22.6  | 7.52  | 125.3  | 15  | 17
+L271: 6.9  | 690  | 23.2  | 7.73  | 128.8  | 14  | 17
+L272: Note:
+L273: All precipitation rates calculated for 360° operation.
+L274: ## Documents
+L275: ### Select Type
+L276: 
+L277:   * All Documents
+L278:   * Manuals
+L279:   * Marketing
+L280:   * Specifications
+L281:   * Replacement Parts
+L282: 
+L283: I-50 Installation Instructions
+L284: 
+L285: cite28†Download   L286: 
+L287: I-50 Cut Sheet
+L288: 
+L289: cite9†Select Language  L290: 
+L291: cite29†USA   L292: 
+L293: cite30†Metric   L294: 
+L295: cite31†Spanish   L296: 
+L297: cite32†Italian   L298: 
+L299: cite33†French   L300: 
+L301: cite34†Portuguese - Brazil   L302: 
+L303: cite35†German   L304: 
+L305: cite36†Turkish   L306: 
+L307: cite37†Polish   L308: 
+L309: cite38†Russian   L310: 
+L311: cite39†Arabic   L312: 
+L313: I-50 Replacement Parts List
+L314: 
+L315: cite40†Download   L316: 
+L317: CAD - I-50-06 pop-up rotor with rigid swing arm (HSJ) and stabilizer flange
+L318: 
+L319: cite9†Select Format  L320: CAD - I-50-06 pop-up rotor with rigid swing arm
+L321: 
+L322: cite9†Select Format  L323: 
+L324: I-50-06 pop-up rotor with rigid swing arm and stabilizer flange
+L325: 
+L326: cite9†Select Format  L327: 
+L328: I-50-06 pop-up rotor with rigid swing arm (HSJ)
+L329: 
+L330: cite9†Select Format  L331: 
+L332: I-50 Written Specifications
+L333: 
+L334: cite41†Download   L335: 
+L336: cite9†Show all documents L337: ## CAD Installation Details
+L338: 
+L339: I-50-06 pop-up rotor with rigid swing arm  | cite42†DWG | cite43†DXF | cite44†PDF |
+L340: I-50-06 pop-up rotor with rigid swing arm (HSJ) and stabilizer flange  | cite42†DWG | cite43†DXF | cite45†PDF |
+L341: I-50-06 pop-up rotor with rigid swing arm (HSJ)  | cite42†DWG | cite43†DXF | cite46†PDF |
+L342: I-50-06 pop-up rotor with rigid swing arm and stabilizer flange  | cite42†DWG | cite43†DXF | cite47†PDF |
+L343: ## CAD Installation Details
+L344: 
+L345: CAD - I-50-06 pop-up rotor with rigid swing arm
+L346: 
+L347: cite9†Select Format  L348: 
+L349: CAD - I-50-06 pop-up rotor with rigid swing arm (HSJ) and stabilizer flange
+L350: 
+L351: cite9†Select Format  L352: 
+L353: I-50-06 pop-up rotor with rigid swing arm (HSJ)
+L354: 
+L355: cite9†Select Format  L356: 
+L357: I-50-06 pop-up rotor with rigid swing arm and stabilizer flange
+L358: 
+L359: cite9†Select Format  L360: 
+L361: ## Support
+L362: 
+L363: ## cite48†I-50 ROTOR SUPPORT L364: 
+L365: ### Installation
+L366: 
+L367: ### Arc Adjustments
+L368: 
+L369: ### Radius Adjustment
+L370: 
+L371: ### Precipitation Rate Adjustment
+L372: 
+L373: ### Nozzle Installation
+L374: ## Photos
+L375: 
+L376: ## Application Photos
+L377: 
+L378: cite9†Image L379: 
+L380: cite49†Image L381: 
+L382: File:
+L383: 
+L384: I-50-TC_107_RT.jpg
+L385: 
+L386: Classification:
+L387: 
+L388: Action Shot
+L389: 
+L390: Product Line:
+L391: 
+L392: Rotors
+L393: 
+L394: Products:
+L395: 
+L396: cite50†I-50 L397: 
+L398: Keywords:
+L399: 
+L400: product
+L401: 
+L402: ,
+L403: 
+L404: rotor
+L405: 
+L406: ,
+L407: 
+L408: I-50
+L409: 
+L410: ,
+L411: 
+L412: turf cup
+L413: 
+L414: cite51†Image Page L415: 
+L416: * * *
+L417: 
+L418: #### Download Image
+L419: 
+L420: cite52†Medium cite53†Original L421: 
+L422: By clicking download, you agree to our cite9†terms and conditions .
+L423: ### Photo Usage Disclaimer
+L424: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L425: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L426: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L427: 
+L428: cite9†Image L429: 
+L430: cite54†Image L431: 
+L432: File:
+L433: 
+L434: I-50-TC_103_RT.jpg
+L435: 
+L436: Classification:
+L437: 
+L438: Action Shot
+L439: 
+L440: Product Line:
+L441: 
+L442: Rotors
+L443: 
+L444: Products:
+L445: 
+L446: cite50†I-50 L447: 
+L448: Keywords:
+L449: 
+L450: product
+L451: 
+L452: ,
+L453: 
+L454: rotor
+L455: 
+L456: ,
+L457: 
+L458: I-50
+L459: 
+L460: ,
+L461: 
+L462: turf cup
+L463: 
+L464: cite55†Image Page L465: 
+L466: * * *
+L467: #### Download Image
+L468: 
+L469: cite56†Medium cite57†Original L470: 
+L471: By clicking download, you agree to our cite9†terms and conditions .
+L472: ### Photo Usage Disclaimer
+L473: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L474: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L475: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L476: 
+L477: cite9†Image L478: 
+L479: cite58†Image L480: 
+L481: File:
+L482: 
+L483: I-50-R_106_RT.jpg
+L484: 
+L485: Classification:
+L486: 
+L487: Action Shot
+L488: 
+L489: Product Line:
+L490: 
+L491: Rotors
+L492: 
+L493: Products:
+L494: 
+L495: cite50†I-50 L496: 
+L497: Keywords:
+L498: 
+L499: product
+L500: 
+L501: ,
+L502: 
+L503: rotor
+L504: 
+L505: ,
+L506: 
+L507: I-50
+L508: 
+L509: ,
+L510: 
+L511: reclaimed
+L512: 
+L513: cite59†Image Page L514: 
+L515: * * *
+L516: #### Download Image
+L517: 
+L518: cite60†Medium cite61†Original L519: 
+L520: By clicking download, you agree to our cite9†terms and conditions .
+L521: ### Photo Usage Disclaimer
+L522: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L523: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L524: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L525: 
+L526: cite9†Image L527: 
+L528: cite62†Image L529: 
+L530: File:
+L531: 
+

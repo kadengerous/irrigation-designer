@@ -1,0 +1,2403 @@
+{
+  "checkedOn": "2026-10-06",
+  "patchSemantics": "set is shallow model merge; nozzlePatches match nozzle id and shallow merge set. No hydraulic values modified.",
+  "patches": [
+    {
+      "id": "toro:O-5-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-5-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-5-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-5-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-5-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-5-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-5-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-5-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-5-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-5-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-5-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-8-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-8-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-8-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-8-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. Non-monotonic source values are retained because the 2025 and 2026 O tables agree; no erratum or same-model replacement was found.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. Non-monotonic source values are retained because the 2025 and 2026 O tables agree; no erratum or same-model replacement was found."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-10-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-10-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-10-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-10-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. Non-monotonic source values are retained because the 2025 and 2026 O tables agree; no erratum or same-model replacement was found.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. Non-monotonic source values are retained because the 2025 and 2026 O tables agree; no erratum or same-model replacement was found."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-12-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-12-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-12-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-12-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-60",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-60",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-Q",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-Q",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-T",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-T",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-150",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-150",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-H",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-H",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-210",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-210",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-TT",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-TT",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-TQ",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-TQ",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-15-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-15-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-15-F",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-15-F",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-4X30-SST",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-4X30-SST",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-4X30-SST",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-4X15-LCS",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-4X15-LCS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-4X15-LCS",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-4X15-RCS",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-4X15-RCS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-4X15-RCS",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-4X18-SST",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-4X18-SST",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-4X18-SST",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-4X9-LCS",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-4X9-LCS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-4X9-LCS",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates.",
+        "mountingSourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf"
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-4X9-RCS",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    },
+    {
+      "id": "toro:O-T-4X9-RCS",
+      "set": {
+        "verifiedOn": "2026-10-06",
+        "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "colorVerifiedOn": "2026-10-06",
+        "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "sourceDocument": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "catalogVersion": "26-1020-DB ResCom/Irritrol Catalog; 2026; O-model tables pp 80-81",
+        "coverageRuleSource": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+        "dataNote": "Published imperial table converted with exact units; interpolation is separate from measured rows. O-model performance table independently confirmed in the 2026 catalog, kept distinct from PSN/PSN+ identifiers. radiusM is schema-required along-strip extent only; rectangle and origin are authoritative. arcDeg=180 is schema placeholder and is not a spray-sector claim. Published square/triangle rates are layout-specific; exact spacing is not stated. Do not treat them as single-head or no-overlap rates."
+      },
+      "nozzlePatches": [
+        {
+          "id": "O-T-4X9-RCS",
+          "set": {
+            "colorSourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+            "colorVerifiedOn": "2026-10-06",
+            "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx"
+          }
+        }
+      ]
+    }
+  ]
+}

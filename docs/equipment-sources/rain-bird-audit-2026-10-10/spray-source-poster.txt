@@ -1,0 +1,216 @@
+ (https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf)
+citeturn375view0 [wordlim: 200] Crawled: last week; Content type: application/pdf; Number of pages: 1; Source: open({"ref_id":"turn372view0","lineno":null}); Total lines: 213
+L0@P0: Variable Arc
+L1@P0: 4VAN
+L2@P0: Radius: 4’ (1.2 m)
+L3@P0: Arc: 0° - 330°
+L4@P0: 6VAN
+L5@P0: Radius: 6’ (1.8 m)
+L6@P0: Arc: 0° - 330°
+L7@P0: 8VAN
+L8@P0: Radius: 8’ (2.4 m)
+L9@P0: Arc: 0° - 360°
+L10@P0: 10VAN
+L11@P0: Radius: 10’ (3.0 m)
+L12@P0: Arc: 0° - 360°
+L13@P0: 12VAN
+L14@P0: Radius: 12’ (3.7 m)
+L15@P0: Arc: 0° - 360°
+L16@P0: 18VAN
+L17@P0: Radius: 18’ (5.5 m)
+L18@P0: Arc: 0° - 360°
+L19@P0: 15VAN
+L20@P0: Radius: 15’ (4.6 m)
+L21@P0: Arc: 0° - 360°
+L22@P0: Fixed Arc
+L23@P0: 5F
+L24@P0: Radius: 5’ (1.5 m)
+L25@P0: Arc: 360°
+L26@P0: 5H
+L27@P0: Radius: 5’ (1.5 m)
+L28@P0: Arc: 180°
+L29@P0: 5Q
+L30@P0: Radius: 5’ (1.5 m)
+L31@P0: Arc: 90°
+L32@P0: 8F
+L33@P0: Radius: 8’ (2.4 m)
+L34@P0: Arc: 360°
+L35@P0: 8H
+L36@P0: Radius: 8’ (2.4 m)
+L37@P0: Arc: 180°
+L38@P0: 8Q
+L39@P0: Radius: 8’ (2.4 m)
+L40@P0: Arc: 90°
+L41@P0: 10F
+L42@P0: Radius: 10’ (3.0 m)
+L43@P0: Arc: 360°
+L44@P0: 10H
+L45@P0: Radius: 10’ (3.0 m)
+L46@P0: Arc: 180°
+L47@P0: 10Q
+L48@P0: Radius: 10’ (3.0 m)
+L49@P0: Arc: 90°
+L50@P0: 12F
+L51@P0: Radius: 12’ (3.7 m)
+L52@P0: Arc: 360°
+L53@P0: 12H
+L54@P0: Radius: 12’ (3.7 m)
+L55@P0: Arc: 180°
+L56@P0: 12Q
+L57@P0: Radius: 12’ (3.7 m)
+L58@P0: Arc: 90°
+L59@P0: 15F
+L60@P0: Radius: 15’ (4.6 m)
+L61@P0: Arc: 360°
+L62@P0: 15H
+L63@P0: Radius: 15’ (4.6 m)
+L64@P0: Arc: 180°
+L65@P0: 15Q
+L66@P0: Radius: 15’ (4.6 m)
+L67@P0: Arc: 90°
+L68@P0: 15EST
+L69@P0:  Throw: 4’ x 15’
+L70@P0: (1.2 m x 4.6 m)
+L71@P0: 15CST
+L72@P0:  Throw: 4’ x 30’
+L73@P0: (1.2 m x 9.2 m)
+L74@P0: 15SST
+L75@P0:  Throw: 4’ x 30’
+L76@P0: (1.2 m x 9.2 m)
+L77@P0: 15LCS
+L78@P0:  Throw: 4’ x 15’
+L79@P0: (1.2 m x 4.6 m)
+L80@P0: 15RCS
+L81@P0:  Throw: 4’ x 15’
+L82@P0: (1.2 m x 4.6 m)
+L83@P0: 9SST
+L84@P0:  Throw: 9’ x 18’
+L85@P0: (2.7 m x 5.5 m)
+L86@P0: 5FB
+L87@P0: Flow: 1.5 gpm
+L88@P0: (5.7 l/m)
+L89@P0: 5HB
+L90@P0: Flow: 1.0 gpm
+L91@P0: (3.8 l/m)
+L92@P0: 5QB
+L93@P0: Flow: 0.5 gpm
+L94@P0: (1.9 l/m)
+L95@P0: 5CSTB
+L96@P0: Flow: 0.5 gpm
+L97@P0: (1.9 l/m)
+L98@P0: 8HFLT
+L99@P0: Radius: 8’ (2.4 m)
+L100@P0: Arc: 180°
+L101@P0: 8QFLT
+L102@P0: Radius: 8’ (2.4 m)
+L103@P0: Arc: 90°
+L104@P0: SQFUL
+L105@P0: Throw: 5’ x 5’ (or) 8’ x 8’
+L106@P0: 1.5 m x 1.5 m (or) 2.4 m x 2.4 m
+L107@P0: SQHLF
+L108@P0: Throw: 2.5’ x 5’ (or) 4 ‘x 8’
+L109@P0: 0.75 m x 1.5 m (or) 1.2 m x 2.4 m
+L110@P0: SQQTR
+L111@P0: Throw: 2.5’ x 2.5’ (or) 4’ x 4’
+L112@P0: 0.75 m x 0.75 m (or) 1.2 m x 1.2 m
+L113@P0: Standard Spray Nozzles
+L114@P0: The Industry’s Benchmark
+L115@P0: VAN Series
+L116@P0: MPR Series
+L117@P0: Variable Arc Fixed Arc
+L118@P0: HE-VAN-8
+L119@P0: Radius: 8’ (2.4 m)
+L120@P0: Arc: 0° - 360°
+L121@P0: HE-VAN-10
+L122@P0: Radius: 10’ (3.0 m)
+L123@P0: Arc: 0° - 360°
+L124@P0: HE-VAN-12
+L125@P0: Radius: 12’ (3.7 m)
+L126@P0: Arc: 0° - 360°
+L127@P0: HE-VAN-15
+L128@P0: Radius: 15’ (4.6 m)
+L129@P0: Arc: 0° - 360°
+L130@P0: U8F
+L131@P0: Radius: 8’ (2.4 m)
+L132@P0: Arc: 360°
+L133@P0: U12F
+L134@P0: Radius: 12’ (3.7 m)
+L135@P0: Arc: 360°
+L136@P0: U10F
+L137@P0: Radius: 10’ (3.0 m)
+L138@P0: Arc: 360°
+L139@P0: U15F
+L140@P0: Radius: 15’ (4.6 m)
+L141@P0: Arc: 360°
+L142@P0: U8H
+L143@P0: Radius: 8’ (2.4 m)
+L144@P0: Arc: 180°
+L145@P0: U12H
+L146@P0: Radius: 12’ (3.7 m)
+L147@P0: Arc: 180°
+L148@P0: U10H
+L149@P0: Radius: 10’ (3.0 m)
+L150@P0: Arc: 180°
+L151@P0: U15H
+L152@P0: Radius: 15’ (4.6 m)
+L153@P0: Arc: 180°
+L154@P0: U8Q
+L155@P0: Radius: 8’ (2.4 m)
+L156@P0: Arc: 90°
+L157@P0: U12Q
+L158@P0: Radius: 12’ (3.7 m)
+L159@P0: Arc: 90°
+L160@P0: U10Q
+L161@P0: Radius: 10’ (3.0 m)
+L162@P0: Arc: 90°
+L163@P0: U15Q
+L164@P0: Radius: 15’ (4.6 m)
+L165@P0: Arc: 90°
+L166@P0: High-Efficiency Spray Nozzles
+L167@P0: 30+% Water Savings
+L168@P0: U-Series
+L169@P0: HE-VAN Series
+L170@P0: 8' to 14' (2.4m to 4.6m) 13' to 18' (4.0m to 5.5m) 17' to 24' (5.2m to 7.3m) Strip Nozzles
+L171@P0: R-VAN14
+L172@P0: Radius: 8’ to 14’
+L173@P0: (2.4m to 4.6m)
+L174@P0: Arc: 45° - 270°
+L175@P0: R-VAN18
+L176@P0: Radius: 13’ to 18’
+L177@P0: (4.0m to 5.5m)
+L178@P0: Arc: 45° - 270°
+L179@P0: R-VAN24
+L180@P0: Radius: 17’ to 24’
+L181@P0: (5.2m to 7.3m)
+L182@P0: Arc: 45° - 270°
+L183@P0: R-VAN-LCS
+L184@P0: 5’ x 15’ (1.5 x 4.6m)
+L185@P0: Left Corner Strip
+L186@P0: Arc: 45° - 270°
+L187@P0: R-VAN14-360
+L188@P0: Radius: 8’ to 14’
+L189@P0: (2.4m to 4.6m)
+L190@P0: Arc: 360°
+L191@P0: R-VAN18-360
+L192@P0: Radius: 13’ to 18’
+L193@P0: (4.0m to 5.5m)
+L194@P0: Arc: 360°
+L195@P0: R-VAN24-360
+L196@P0: Radius: 17’ to 24’
+L197@P0: (5.2m to 7.3m)
+L198@P0: Arc: 360°
+L199@P0: R-VAN-RCS
+L200@P0: 5’ x 15’ (1.5 x 4.6m)
+L201@P0: Right Corner Strip
+L202@P0: Arc: 45° - 270°
+L203@P0: R-VAN-SST
+L204@P0: 5’ x 30’ (1.5 x 9.1m)
+L205@P0: Side Strip
+L206@P0: Arc: 360°
+L207@P0: High Efficiency Rotary Nozzles
+L208@P0: 30%+ Water Savings R-VAN Nozzles
+L209@P0: Rain Bird Spray Nozzles
+L210@P0: ® Registered trademark of Rain Bird Corporation © 2019 Rain Bird Corporation 4/19 D41505
+L211@P0: SQ Series
+L212@P0: Spray Nozzles Poster - Distributor.indd 1 4/30/19 5:48 PM
+

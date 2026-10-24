@@ -1,0 +1,693 @@
+{
+  "auditedOn": "2026-10-10",
+  "applicationCatalog": "src/data/hunter-catalog.json",
+  "scope": {
+    "models": 19,
+    "sectorModels": 16,
+    "stripModels": 3,
+    "performanceRows": 222
+  },
+  "confirmedPatches": [
+    {
+      "id": "MP-LCS-515",
+      "classification": "confirmed metadata correction",
+      "source": "https://www.hunterirrigation.com/support/mp-rotatorr-nozzle-adjustment",
+      "corroboration": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "reason": "Hunter factory arc is 90 degrees for Left/Right Corner Strip. Preserve rectangular geometry, hydraulic values and coverageKind=strip. Do not enable sector-based automatic placement.",
+      "changes": [
+        {
+          "path": "arcMin",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "arcMax",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/0/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/1/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/2/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/3/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/4/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/5/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-10-10",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP-RCS-515",
+      "classification": "confirmed metadata correction",
+      "source": "https://www.hunterirrigation.com/support/mp-rotatorr-nozzle-adjustment",
+      "corroboration": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "reason": "Hunter factory arc is 90 degrees for Left/Right Corner Strip. Preserve rectangular geometry, hydraulic values and coverageKind=strip. Do not enable sector-based automatic placement.",
+      "changes": [
+        {
+          "path": "arcMin",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "arcMax",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/0/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/1/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/2/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/3/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/4/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "nozzles/0/performance/5/arcDeg",
+          "old": 180,
+          "new": 90
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-10-10",
+          "new": "2026-10-10"
+        }
+      ]
+    }
+  ],
+  "optionalTrajectoryMetadataPatches": [
+    {
+      "id": "MP1000-90",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 20
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 20°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP1000-210",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 20
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 20°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP1000-360",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 20
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 20°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP2000-90",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 26
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 26°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP2000-210",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 26
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 26°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP2000-360",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 26
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 26°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP3000-90",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 26
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 26°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP3000-210",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 26
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 26°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP3000-360",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 26
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 26°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP3500-90",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 26
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 26°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP-CORNER",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 14
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 14°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP-LCS-515",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 16
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-10-10",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP-RCS-515",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 16
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-10-10",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP-SS-530",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 16
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP800SR-90",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 18
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 18°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP800SR-360",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 18
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 18°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP815-90",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 15
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 15°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP815-210",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 15
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 15°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "id": "MP815-360",
+      "classification": "optional factual documentation improvement",
+      "source": "https://www.hunterirrigation.com/sites/default/files/2024-08/LIT-461-RevJ-DG-MPR-EM-web_0.pdf",
+      "sourceLocation": "printed page 4, trajectory table at 2.8 bar",
+      "reason": "Hunter publishes a nominal trajectory at design pressure; multiple streams need not share this angle. Do not reinterpret this as a single-jet trajectory.",
+      "changes": [
+        {
+          "path": "nozzles/0/trajectoryDeg",
+          "old": null,
+          "new": 15
+        },
+        {
+          "path": "trajectoryNote",
+          "old": "Многоструйная; единый угол не указан",
+          "new": "Табличная траектория при 2,8 бар: 15°; многоструйная форсунка."
+        },
+        {
+          "path": "verifiedOn",
+          "old": "2026-09-18",
+          "new": "2026-10-10"
+        }
+      ]
+    }
+  ],
+  "reverificationOnly": [
+    {
+      "id": "MP1000-90",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP1000-210",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP1000-360",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP2000-90",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP2000-210",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP2000-360",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP3000-90",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP3000-210",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP3000-360",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP3500-90",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP-CORNER",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP-LCS-515",
+      "oldVerifiedOn": "2026-10-10",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP-RCS-515",
+      "oldVerifiedOn": "2026-10-10",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP-SS-530",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP800SR-90",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP800SR-360",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP815-90",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP815-210",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    },
+    {
+      "id": "MP815-360",
+      "oldVerifiedOn": "2026-09-18",
+      "newVerifiedOn": "2026-10-10",
+      "reason": "complete active table compared against current official US data"
+    }
+  ],
+  "hydraulicReplacementDecision": "No wholesale or geometry-only metric replacement proposed: US tables pass in full; metric variants conflict. Keep radius, flow and precipitation from one verified source family.",
+  "sharedAlgorithmRecommendation": {
+    "source": "https://www.hunterirrigation.com/support/mp-rotatorr-nozzle-adjustment",
+    "sourceProduct": "https://www.hunterirrigation.com/en-metric/irrigation-product/mp-rotator/standard-mp-rotator-nozzle",
+    "old": "row.radiusMinM ?? max(item.rMin, row.radiusM * 0.75)",
+    "new": "published row.radiusMinM when present; otherwise row.radiusM * 0.75 as a manufacturer-backed design adjustment estimate, without unrelated marketing rMin clamp",
+    "limits": [
+      "pressure stays bounded by the selected source table",
+      "all arcs stay within the real SKU mechanical range",
+      "MP800SR explicit min-radius and min-flow rows override generic ratio",
+      "up to approximately 25% is not a guarantee of an exactly measured field throw",
+      "do not invent flow/precipitation for missing Corner precipitation or strip layouts"
+    ]
+  }
+}

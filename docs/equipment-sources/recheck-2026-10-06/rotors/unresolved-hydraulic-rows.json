@@ -1,0 +1,120 @@
+[
+  {
+    "itemId": "k-rain:RPS-Select",
+    "nozzleId": "k-rain:RPS-Select:standard-1.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "fields": [
+      "radiusM"
+    ],
+    "metricPublishedRadiusM": 10.4,
+    "usPublishedRadiusFt": 37,
+    "usConvertedRadiusM": 11.2776,
+    "resolution": "Unresolved; preserve source cells and gate this row plus pressure interpolation adjacent to it. Do not bridge excluded points.",
+    "reason": "Official current table, linked brochure and setting manual repeat the same unit discrepancy.",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePages": [
+      17
+    ]
+  },
+  {
+    "itemId": "k-rain:RPS-Select",
+    "nozzleId": "k-rain:RPS-Select:standard-3.0",
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "kind": "base",
+    "fields": [
+      "radiusM"
+    ],
+    "metricPublishedRadiusM": 12.2,
+    "usPublishedRadiusFt": 41,
+    "usConvertedRadiusM": 12.4968,
+    "resolution": "Unresolved; preserve source cells and gate this row plus pressure interpolation adjacent to it. Do not bridge excluded points.",
+    "reason": "Official current table, linked brochure and setting manual repeat the same unit discrepancy.",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePages": [
+      17
+    ]
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-3.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "base",
+    "fields": [
+      "radiusM"
+    ],
+    "metricPublishedRadiusM": 10.6,
+    "usPublishedRadiusFt": 33,
+    "usConvertedRadiusM": 10.0584,
+    "resolution": "Unresolved; preserve source cells and gate this row plus pressure interpolation adjacent to it. Do not bridge excluded points.",
+    "reason": "Older linked brochure and instruction table have materially different baseline performance; do not substitute a cell from a different edition.",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePages": [
+      21,
+      22
+    ]
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-3.0",
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "fields": [
+      "radiusM"
+    ],
+    "metricPublishedRadiusM": 7.4,
+    "usPublishedRadiusFt": 23,
+    "usConvertedRadiusM": 7.0104,
+    "resolution": "Unresolved; preserve source cells and gate this row plus pressure interpolation adjacent to it. Do not bridge excluded points.",
+    "reason": "Linked full-radius row is also disputed; current reduced metric and US cells conflict.",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePages": [
+      21,
+      22
+    ]
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-6.0",
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "fields": [
+      "radiusM"
+    ],
+    "metricPublishedRadiusM": 9.8,
+    "usPublishedRadiusFt": 31,
+    "usConvertedRadiusM": 9.4488,
+    "resolution": "Unresolved; preserve source cells and gate this row plus pressure interpolation adjacent to it. Do not bridge excluded points.",
+    "reason": "Current metric and US reduced cells conflict; stated 30% reduction does not justify overwriting with a calculated radius.",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePages": [
+      21,
+      22
+    ]
+  },
+  {
+    "itemId": "k-rain:SuperPro",
+    "nozzleId": "k-rain:SuperPro:standard-8.0",
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "kind": "reduced",
+    "fields": [
+      "radiusM"
+    ],
+    "metricPublishedRadiusM": 10.7,
+    "usPublishedRadiusFt": 32,
+    "usConvertedRadiusM": 9.7536,
+    "resolution": "Unresolved; preserve source cells and gate this row plus pressure interpolation adjacent to it. Do not bridge excluded points.",
+    "reason": "Current metric and US reduced cells conflict; stated 30% reduction does not justify overwriting with a calculated radius.",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePages": [
+      21,
+      22
+    ]
+  }
+]

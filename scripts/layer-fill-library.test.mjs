@@ -1,0 +1,107 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { createServer } from 'vite';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+
+test('open material library follows selection, preserves other layers, and supports undo', async () => {
+  const server = await createServer({ server: { middlewareMode: true, hmr: false } });
+  let store, previous, library;
+  try {
+    ({ useProject: store } = await server.ssrLoadModule('/src/lib/project-store.ts'));
+    previous = store.getState();
+    library = await server.ssrLoadModule('/src/lib/layer-fill-library.ts');
+    const { emptyProject } = await server.ssrLoadModule('/src/lib/project-types.ts');
+    const { emptyDrawing } = await server.ssrLoadModule('/src/lib/cad/types.ts');
+    const { addRect, toPolygons } = await server.ssrLoadModule('/src/lib/cad/engine.ts');
+    let drawing = addRect(emptyDrawing(), { x: 0, y: 0 }, { x: 10, y: 6 }, 'building');
+    drawing = addRect(drawing, { x: 20, y: 0 }, { x: 30, y: 6 }, 'building');
+    const [a, b] = Object.keys(drawing.faces);
+    store.setState({ project: { ...emptyProject(), drawing, polygons: toPolygons(drawing) }, past: [], future: [],
+      selectedPolyId: null, selectedPolyIds: [], groupMemberId: null, groupMemberGroupId: null, cadEditId: null });
+    const { LayerFillLibrary } = await server.ssrLoadModule('/src/components/designer/mobile-workspace.tsx');
+    const renderLibrary = () => {
+      Object.assign(store.getInitialState(), store.getState());
+      Object.assign(library.useLayerFillLibrary.getInitialState(), library.useLayerFillLibrary.getState());
+      return renderToStaticMarkup(createElement(LayerFillLibrary));
+    };
+    library.openLayerFillLibrary(a);
+    let markup = renderLibrary();
+    assert.equal((markup.match(/class="material-category"/g) || []).length, 5);
+    assert.equal((markup.match(/class="material-swatch-image"/g) || []).length, 40);
+    library.applyLibraryFill('texture:roof-cedar');
+    assert.equal(store.getState().project.drawing.faces[a].fill, 'texture:roof-cedar');
+    store.getState().selectPoly(b);
+    assert.equal(library.activeFillFace().id, b);
+    assert.notEqual(renderLibrary(), markup, 'the library heading must follow selection');
+    library.applyLibraryFill('texture:lake-water');
+    library.applyLibraryOrientation(90);
+    let state = store.getState();
+    assert.equal(state.selectedPolyId, b, 'applying must never reselect the opener');
+    assert.equal(state.project.drawing.faces[b].fill, 'texture:lake-water');
+    assert.equal(state.project.drawing.faces[b].textureRotation, 90);
+    assert.equal(state.project.drawing.faces[a].fill, 'texture:roof-cedar');
+    assert.notEqual(state.project.drawing.faces[a].textureRotation, 90);
+    assert.equal(library.useLayerFillLibrary.getState().open, true);
+    store.getState().undo();
+    assert.notEqual(store.getState().project.drawing.faces[b].textureRotation, 90);
+    store.getState().undo();
+    assert.notEqual(store.getState().project.drawing.faces[b].fill, 'texture:lake-water');
+    store.getState().redo();
+    assert.equal(store.getState().project.drawing.faces[b].fill, 'texture:lake-water');
+    store.getState().selectPoly(null);
+    const unchanged = store.getState().project;
+    library.applyLibraryFill('#ffffff');
+    assert.equal(store.getState().project, unchanged, 'no selection must not repaint the old layer');
+    assert.equal(library.useLayerFillLibrary.getState().open, true);
+    store.getState().selectPoly(a);
+    store.getState().selectPoly(b, true);
+    assert.equal(library.activeFillFace(), null, 'ambiguous selection must not repaint one arbitrary layer');
+    store.getState().selectPoly(b);
+    state = store.getState();
+    const locked = { ...state.project.drawing, faces: { ...state.project.drawing.faces, [b]: { ...state.project.drawing.faces[b], locked: true } } };
+    store.setState({ project: { ...state.project, drawing: locked } });
+    library.applyLibraryFill('#000000');
+    library.applyLibraryOrientation(90);
+    assert.equal(store.getState().project.drawing, locked);
+    // Group-member choices only affect the active leaf.
+    const grouped = { ...locked, faces: Object.fromEntries(Object.entries(locked.faces).map(([id, face]) => [id, { ...face, locked: false, layerId: 'test-group' }])) };
+    store.setState({ project: { ...store.getState().project, drawing: grouped } });
+    library.openLayerFillLibrary(a);
+    library.applyLibraryFill('texture:sea-water');
+    assert.equal(store.getState().project.drawing.faces[a].fill, 'texture:sea-water');
+    assert.equal(store.getState().project.drawing.faces[b].fill, 'texture:lake-water');
+    library.openLayerFillLibrary(b);
+    library.applyLibraryFill('texture:pergola');
+    assert.equal(store.getState().project.drawing.faces[b].fill, 'texture:pergola');
+    assert.equal(store.getState().project.drawing.faces[a].fill, 'texture:sea-water');
+    store.getState().setTool('draw');
+    library.openLayerFillLibrary(a);
+    store.getState().deactivateDrawing();
+    assert.equal(library.useLayerFillLibrary.getState().open,false,'turning Plan off closes the material library');
+    assert.equal(store.getState().workspaceSection,null);
+    assert.equal(store.getState().project.drawing.faces[a].fill,'texture:sea-water');
+    store.getState().setTool('draw');library.openLayerFillLibrary(a);
+    store.getState().setCatalogOpen(true);
+    assert.equal(library.useLayerFillLibrary.getState().open,false,'switching sections closes the material library');
+
+    const merge=store.persist.getOptions().merge,saved=store.getState().project;
+    const restored=merge({project:JSON.parse(JSON.stringify(saved)),workspaceSection:null,tool:'draw'},store.getState());
+    assert.equal(restored.workspaceSection,'plan','a reopened drawing activates the Plan tab');
+    assert.equal(restored.tool,'draw');assert.equal(restored.drawSub,'none');
+    assert.equal(restored.selectedPolyId,null);
+    const blank=merge({project:emptyProject()},store.getState());
+    assert.equal(blank.workspaceSection,null,'blank projects keep their initial neutral state');
+    assert.equal(blank.tool,null);
+    const {catalogHeadDefaults}=await server.ssrLoadModule('/src/lib/flow.ts');
+    const {itemById}=await server.ssrLoadModule('/src/lib/hunter-catalog.ts');
+    const irrigated={...saved,heads:[{...catalogHeadDefaults(itemById('MP1000-360')),id:'resume-head',catalogId:'MP1000-360',x:1,y:1,zone:1}]};
+    const irrigation=merge({project:irrigated},store.getState());
+    assert.equal(irrigation.workspaceSection,'irrigation','existing irrigation projects still reopen in Irrigation');
+    assert.equal(irrigation.catalogOpen,true);assert.equal(irrigation.project.heads.length,1);
+  } finally {
+    if (store && previous) store.setState(previous);
+    library?.useLayerFillLibrary.setState({ open: false });
+    await server.close();
+  }
+});

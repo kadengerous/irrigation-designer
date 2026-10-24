@@ -1,0 +1,39 @@
+ (https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_7005-8005.pdf)
+citeturn407view0 [wordlim: 200] Crawled: last week; Content type: application/pdf; Number of pages: 1; Source: open({"ref_id":"https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_7005-8005.pdf","lineno":null}); Total lines: 36
+L0@P0: Page
+L1@P0: 1 of 1
+L2@P0: TO BUY GENUINE RAIN BIRD PARTS, CONTACT YOUR LOCAL DISTRIBUTOR OR VISIT OUR ONLINE STORE AT WWW.RAINBIRD.COM
+L3@P0: Part/Full Circle Rotor
+L4@P0: 7005 / 8005 Rotors
+L5@P0: Note: Part numbers enclosed in brackets ( ) are not available individually, but may be sold in assemblies or kits.
+L6@P0: 1
+L7@P0: 2
+L8@P0: 3
+L9@P0: 4 5
+L10@P0: 4
+L11@P0: Ref. Part Description Qty 7005 8005
+L12@P0: INTERNAL ASSEMBLY
+L13@P0: 1 Radius Adjustment Screw 1 (231491-S) (231491-S)
+L14@P0: 2 Filter Screen w/SAM Assy 1 250127 250127
+L15@P0: CASE
+L16@P0: 3 Case - NPT 1 250128-01 250128-01
+L17@P0: 3 Case - BSP 1 250128-02 250128-02
+L18@P0: NOZZLES
+L19@P0: 4 Nozzle - #4 (Black) 1 B81600-04 –
+L20@P0: 4 Nozzle - #6 (Lt Blue) 1 B81600-06 –
+L21@P0: 4 Nozzle - #8 (Dk Green) 1 B81600-08 B81600-08
+L22@P0: 4 Nozzle - #10 (Gray) 1 B81600-10 B81600-10
+L23@P0: 4 Nozzle - #12 (Beige) 1 B81600-12 B81600-12
+L24@P0: 4 Nozzle - #14 (Lt Green) 1 B81600-14 B81600-14
+L25@P0: 4 Nozzle - #16 (Dk Brown) 1 B81600-16 B81600-16
+L26@P0: 4 Nozzle - #18 (Dk Blue) 1 B81600-18 B81600-18
+L27@P0: 4 Nozzle - #20 (Red) 1 – B81600-20
+L28@P0: 4 Nozzle - #22 (Yellow) 1 – B81600-22
+L29@P0: 4 Nozzle - #24 (Orange) 1 – B81600-24
+L30@P0: 4 Nozzle - #26 (White) 1 – B81600-26
+L31@P0: 5 Third Port Nozzle 1 231777 231777
+L32@P0: ACCESSORIES
+L33@P0: 6 Pull-up Tool/Screwdriver (not shown) 1 Y05100 Y05100
+L34@P0: Rain Curtain™ Nozzles
+L35@P0: Catalog Number 416
+

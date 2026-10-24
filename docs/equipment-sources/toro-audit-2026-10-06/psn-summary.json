@@ -1,0 +1,30 @@
+{
+  "auditedOn": "2026-10-06",
+  "models": 102,
+  "uniquePatterns": 51,
+  "performanceRows": 408,
+  "uniqueSourceRows": 204,
+  "circularModels": 90,
+  "stripModels": 12,
+  "rowTranscriptionMismatches": 0,
+  "modelFieldMismatches": 0,
+  "colorNameMismatches": 0,
+  "all102ModelsPresentInCurrentPriceList": true,
+  "currentVsDedicatedCommonRows": 45,
+  "commonRowsAgree": 42,
+  "commonRowsDisagree": 3,
+  "variantRowsDisagree": 6,
+  "unresolvedModels": [
+    "toro:PSN15-F",
+    "toro:PSN15T-F"
+  ],
+  "numericalPatches": 0,
+  "sourceUrls": [
+    "https://cdn.thetorocompany.com/api/assetstorage/623_0a983555-fa05-4587-b85c-a7a2c67a0e4e",
+    "https://cdn.thetorocompany.com/api/assetstorage/623_40a88c26-9e2a-4212-918c-b86a065f0536",
+    "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Literature/26-1020-DB-ResCom-Irritrol-Catalog.ashx",
+    "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx"
+  ],
+  "current2026CatalogueCommonRowsCompared": 45,
+  "current2026CatalogueCommonRowsDisagree": 3
+}

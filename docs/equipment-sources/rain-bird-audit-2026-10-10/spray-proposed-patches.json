@@ -1,0 +1,78 @@
+{
+  "verifiedOn": "2026-10-10",
+  "status": "final",
+  "performancePatches": [],
+  "modelPatches": [
+    {
+      "id": "rain-bird:SQ-HLF",
+      "modelId": "SQ-HLF",
+      "set": {
+        "geometryVerificationStatus": "Verified"
+      },
+      "reason": "Half-square side-offset geometry is independently established; small-setting flow conflict must not invalidate geometry. Keep top-level Needs Review and per-nozzle hydraulic gates.",
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf",
+      "sourcePage": 2
+    }
+  ],
+  "behaviorRecommendations": [
+    {
+      "id": "matched-small-sectors",
+      "modelIds": [
+        "HE-VAN-8",
+        "HE-VAN-10",
+        "HE-VAN-12",
+        "HE-VAN-15",
+        "12-VAN",
+        "15-VAN",
+        "18-VAN"
+      ],
+      "arcDegExclusive": [
+        0,
+        90
+      ],
+      "flowEstimate": "Q90 at same pressure multiplied by arcDeg/90",
+      "status": "Calculated estimate supported by mechanical range and matched precipitation claim, not manufacturer row",
+      "sourceUrls": [
+        "https://www.rainbird.com/products/he-van-high-efficiency-variable-arc-nozzles",
+        "https://www.rainbird.com/products/van-series-variable-arc-nozzles"
+      ],
+      "requirements": [
+        "Label sectorEstimated/interpolated.",
+        "Do not extrapolate pressure outside selected row grid.",
+        "Retain unknown flow after radius reduction.",
+        "Do not infer compatibility at arbitrary pressures/radii from manufacturer recommended-pressure matching."
+      ]
+    },
+    {
+      "id": "van-geometry-with-unknown-flow",
+      "modelIds": [
+        "4-VAN",
+        "6-VAN",
+        "8-VAN",
+        "10-VAN"
+      ],
+      "arcDegExclusive": [
+        0,
+        90
+      ],
+      "recommendation": "Preserve supported mechanical angle. Nominal same-pressure radius may use the reference sector because all published arcs share radius; keep flow unknown and flag hydraulic verification. This is a geometry interpretation, not a measured small-sector row.",
+      "sourceUrl": "https://www.rainbird.com/products/van-series-variable-arc-nozzles"
+    },
+    {
+      "id": "sq-preserve-field-level-gates",
+      "modelIds": [
+        "SQ-HLF"
+      ],
+      "recommendation": "Allow separately verified geometry and large-setting flow even for saved snapshots lacking a newer geometry flag only when identity/settings match the independently verified square model; do not unblock the small-setting flow."
+    },
+    {
+      "id": "radius-reduction",
+      "recommendation": "Existing sector rMin values already equal0.75 times smallest full-radius row; no current Rain Bird floor defect. Preserve unknown reduced flow. Do not borrow25% for U-Series, SQ or bubblers."
+    }
+  ],
+  "unchangedFindings": [
+    "All370 stored rows match fresh selected source tuples.",
+    "Retain previous complete US-grid selections for5H,5Q,10H,10Q,1300A-F,SQ-3QTR andSQ-HLF large; manufacturer conflicts remain.",
+    "No blanketing of verification status or manufacturer color dates."
+  ]
+}

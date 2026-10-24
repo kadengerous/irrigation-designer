@@ -1,0 +1,6948 @@
+{
+  "auditedOn": "2026-10-10",
+  "sourceUrl": "https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Spray-Head-Nozzles/Precision-Spray-Nozzles/16-1045-PSN-Sell-Sheet.ashx",
+  "physicalRows": 204,
+  "modelRows": 408,
+  "models": 102,
+  "numericDifferences": 0,
+  "metadataDifferences": 0,
+  "stripRows": 48,
+  "rows": [
+    {
+      "id": "toro:O-5-60",
+      "modelSuffix": "5-60",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.151416,
+        "flowM3H": 0.009085,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 1.43256
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-60",
+      "modelSuffix": "5-60",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.151416,
+        "flowM3H": 0.009085,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-60",
+      "modelSuffix": "5-60",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.151416,
+        "flowM3H": 0.009085,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-60",
+      "modelSuffix": "5-60",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.189271,
+        "flowM3H": 0.011356,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 60,
+        "radiusM": 1.61544
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-60",
+      "modelSuffix": "5-60",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.151416,
+        "flowM3H": 0.009085,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 1.43256
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-60",
+      "modelSuffix": "5-60",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.151416,
+        "flowM3H": 0.009085,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-60",
+      "modelSuffix": "5-60",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.151416,
+        "flowM3H": 0.009085,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-60",
+      "modelSuffix": "5-60",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.189271,
+        "flowM3H": 0.011356,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 60,
+        "radiusM": 1.61544
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-Q",
+      "modelSuffix": "5-Q",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.227125,
+        "flowM3H": 0.013627,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 1.40208
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-Q",
+      "modelSuffix": "5-Q",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.227125,
+        "flowM3H": 0.013627,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-Q",
+      "modelSuffix": "5-Q",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.264979,
+        "flowM3H": 0.015899,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-Q",
+      "modelSuffix": "5-Q",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.264979,
+        "flowM3H": 0.015899,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-Q",
+      "modelSuffix": "5-Q",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.227125,
+        "flowM3H": 0.013627,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 1.40208
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-Q",
+      "modelSuffix": "5-Q",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.227125,
+        "flowM3H": 0.013627,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-Q",
+      "modelSuffix": "5-Q",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.264979,
+        "flowM3H": 0.015899,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-Q",
+      "modelSuffix": "5-Q",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.264979,
+        "flowM3H": 0.015899,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-T",
+      "modelSuffix": "5-T",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.264979,
+        "flowM3H": 0.015899,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 1.34112
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-T",
+      "modelSuffix": "5-T",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.340687,
+        "flowM3H": 0.020441,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-T",
+      "modelSuffix": "5-T",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.340687,
+        "flowM3H": 0.020441,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 1.58496
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-T",
+      "modelSuffix": "5-T",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.378541,
+        "flowM3H": 0.022712,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 1.64592
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-T",
+      "modelSuffix": "5-T",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.264979,
+        "flowM3H": 0.015899,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 1.34112
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-T",
+      "modelSuffix": "5-T",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.340687,
+        "flowM3H": 0.020441,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-T",
+      "modelSuffix": "5-T",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.340687,
+        "flowM3H": 0.020441,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 1.58496
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-T",
+      "modelSuffix": "5-T",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.378541,
+        "flowM3H": 0.022712,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 1.64592
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-150",
+      "modelSuffix": "5-150",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.264979,
+        "flowM3H": 0.015899,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 1.2192
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-150",
+      "modelSuffix": "5-150",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.416395,
+        "flowM3H": 0.024984,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-150",
+      "modelSuffix": "5-150",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.454249,
+        "flowM3H": 0.027255,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 1.58496
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-150",
+      "modelSuffix": "5-150",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.492104,
+        "flowM3H": 0.029526,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 1.64592
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-150",
+      "modelSuffix": "5-150",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.264979,
+        "flowM3H": 0.015899,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 1.2192
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-150",
+      "modelSuffix": "5-150",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.416395,
+        "flowM3H": 0.024984,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-150",
+      "modelSuffix": "5-150",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.454249,
+        "flowM3H": 0.027255,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 1.58496
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-150",
+      "modelSuffix": "5-150",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.492104,
+        "flowM3H": 0.029526,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 1.64592
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-H",
+      "modelSuffix": "5-H",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.378541,
+        "flowM3H": 0.022712,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 1.34112
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-H",
+      "modelSuffix": "5-H",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.492104,
+        "flowM3H": 0.029526,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-H",
+      "modelSuffix": "5-H",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.529958,
+        "flowM3H": 0.031797,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 1.55448
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-H",
+      "modelSuffix": "5-H",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.529958,
+        "flowM3H": 0.031797,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 1.58496
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-H",
+      "modelSuffix": "5-H",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.378541,
+        "flowM3H": 0.022712,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 1.34112
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-H",
+      "modelSuffix": "5-H",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.492104,
+        "flowM3H": 0.029526,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-H",
+      "modelSuffix": "5-H",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.529958,
+        "flowM3H": 0.031797,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 1.55448
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-H",
+      "modelSuffix": "5-H",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.529958,
+        "flowM3H": 0.031797,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 1.58496
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-210",
+      "modelSuffix": "5-210",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.378541,
+        "flowM3H": 0.022712,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 1.34112
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-210",
+      "modelSuffix": "5-210",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.567812,
+        "flowM3H": 0.034069,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 1.58496
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-210",
+      "modelSuffix": "5-210",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.605666,
+        "flowM3H": 0.03634,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 1.61544
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-210",
+      "modelSuffix": "5-210",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 1.6764
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-210",
+      "modelSuffix": "5-210",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.378541,
+        "flowM3H": 0.022712,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 1.34112
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-210",
+      "modelSuffix": "5-210",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.567812,
+        "flowM3H": 0.034069,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 1.58496
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-210",
+      "modelSuffix": "5-210",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.605666,
+        "flowM3H": 0.03634,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 1.61544
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-210",
+      "modelSuffix": "5-210",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 1.6764
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-TT",
+      "modelSuffix": "5-TT",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.529958,
+        "flowM3H": 0.031797,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 240,
+        "radiusM": 1.31064
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-TT",
+      "modelSuffix": "5-TT",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-TT",
+      "modelSuffix": "5-TT",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-TT",
+      "modelSuffix": "5-TT",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 240,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-TT",
+      "modelSuffix": "5-TT",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.529958,
+        "flowM3H": 0.031797,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 240,
+        "radiusM": 1.31064
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-TT",
+      "modelSuffix": "5-TT",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-TT",
+      "modelSuffix": "5-TT",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-TT",
+      "modelSuffix": "5-TT",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 240,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "modelSuffix": "5-TQ",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.567812,
+        "flowM3H": 0.034069,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 1.31064
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "modelSuffix": "5-TQ",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "modelSuffix": "5-TQ",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.794936,
+        "flowM3H": 0.047696,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "modelSuffix": "5-TQ",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.832791,
+        "flowM3H": 0.049967,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 270,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-TQ",
+      "modelSuffix": "5-TQ",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.567812,
+        "flowM3H": 0.034069,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 1.31064
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-TQ",
+      "modelSuffix": "5-TQ",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-TQ",
+      "modelSuffix": "5-TQ",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.794936,
+        "flowM3H": 0.047696,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-TQ",
+      "modelSuffix": "5-TQ",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.832791,
+        "flowM3H": 0.049967,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 270,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-F",
+      "modelSuffix": "5-F",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 1.2192
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-F",
+      "modelSuffix": "5-F",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-F",
+      "modelSuffix": "5-F",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-5-F",
+      "modelSuffix": "5-F",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-F",
+      "modelSuffix": "5-F",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 1.2192
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-F",
+      "modelSuffix": "5-F",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-F",
+      "modelSuffix": "5-F",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-5-F",
+      "modelSuffix": "5-F",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 1.524
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-60",
+      "modelSuffix": "8-60",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.378541,
+        "flowM3H": 0.022712,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 2.31648
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-60",
+      "modelSuffix": "8-60",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.416395,
+        "flowM3H": 0.024984,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 60,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-60",
+      "modelSuffix": "8-60",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.454249,
+        "flowM3H": 0.027255,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 2.46888
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-60",
+      "modelSuffix": "8-60",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.492104,
+        "flowM3H": 0.029526,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 60,
+        "radiusM": 2.52984
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-60",
+      "modelSuffix": "8-60",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.378541,
+        "flowM3H": 0.022712,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 2.31648
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-60",
+      "modelSuffix": "8-60",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.416395,
+        "flowM3H": 0.024984,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 60,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-60",
+      "modelSuffix": "8-60",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.454249,
+        "flowM3H": 0.027255,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 2.46888
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-60",
+      "modelSuffix": "8-60",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.492104,
+        "flowM3H": 0.029526,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 60,
+        "radiusM": 2.52984
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-Q",
+      "modelSuffix": "8-Q",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.529958,
+        "flowM3H": 0.031797,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 90,
+        "radiusM": 2.1336
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-Q",
+      "modelSuffix": "8-Q",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-Q",
+      "modelSuffix": "8-Q",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 2.49936
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-Q",
+      "modelSuffix": "8-Q",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 2.56032
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-Q",
+      "modelSuffix": "8-Q",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.529958,
+        "flowM3H": 0.031797,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 90,
+        "radiusM": 2.1336
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-Q",
+      "modelSuffix": "8-Q",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-Q",
+      "modelSuffix": "8-Q",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 2.49936
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-Q",
+      "modelSuffix": "8-Q",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 2.56032
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-T",
+      "modelSuffix": "8-T",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 2.31648
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-T",
+      "modelSuffix": "8-T",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.832791,
+        "flowM3H": 0.049967,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-T",
+      "modelSuffix": "8-T",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.870645,
+        "flowM3H": 0.052239,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 2.49936
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-T",
+      "modelSuffix": "8-T",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.908499,
+        "flowM3H": 0.05451,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 2.52984
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-T",
+      "modelSuffix": "8-T",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 2.31648
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-T",
+      "modelSuffix": "8-T",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.832791,
+        "flowM3H": 0.049967,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-T",
+      "modelSuffix": "8-T",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.870645,
+        "flowM3H": 0.052239,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 2.49936
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-T",
+      "modelSuffix": "8-T",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.908499,
+        "flowM3H": 0.05451,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 2.52984
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-150",
+      "modelSuffix": "8-150",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.946353,
+        "flowM3H": 0.056781,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 2.286
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-150",
+      "modelSuffix": "8-150",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.022061,
+        "flowM3H": 0.061324,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-150",
+      "modelSuffix": "8-150",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.059915,
+        "flowM3H": 0.063595,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 2.46888
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-150",
+      "modelSuffix": "8-150",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.097769,
+        "flowM3H": 0.065866,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 2.49936
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-150",
+      "modelSuffix": "8-150",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.946353,
+        "flowM3H": 0.056781,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 2.286
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-150",
+      "modelSuffix": "8-150",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.022061,
+        "flowM3H": 0.061324,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-150",
+      "modelSuffix": "8-150",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.059915,
+        "flowM3H": 0.063595,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 2.46888
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-150",
+      "modelSuffix": "8-150",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.097769,
+        "flowM3H": 0.065866,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 2.49936
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-H",
+      "modelSuffix": "8-H",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.1336
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-H",
+      "modelSuffix": "8-H",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.249186,
+        "flowM3H": 0.074951,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-H",
+      "modelSuffix": "8-H",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-H",
+      "modelSuffix": "8-H",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-H",
+      "modelSuffix": "8-H",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.1336
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-H",
+      "modelSuffix": "8-H",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.249186,
+        "flowM3H": 0.074951,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-H",
+      "modelSuffix": "8-H",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-H",
+      "modelSuffix": "8-H",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-210",
+      "modelSuffix": "8-210",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.249186,
+        "flowM3H": 0.074951,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.31648
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-210",
+      "modelSuffix": "8-210",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.362748,
+        "flowM3H": 0.081765,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-210",
+      "modelSuffix": "8-210",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.400602,
+        "flowM3H": 0.084036,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.46888
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-210",
+      "modelSuffix": "8-210",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.438456,
+        "flowM3H": 0.086307,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.49936
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-210",
+      "modelSuffix": "8-210",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.249186,
+        "flowM3H": 0.074951,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.31648
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-210",
+      "modelSuffix": "8-210",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.362748,
+        "flowM3H": 0.081765,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-210",
+      "modelSuffix": "8-210",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.400602,
+        "flowM3H": 0.084036,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.46888
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-210",
+      "modelSuffix": "8-210",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.438456,
+        "flowM3H": 0.086307,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.49936
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-TT",
+      "modelSuffix": "8-TT",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 2.1336
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-TT",
+      "modelSuffix": "8-TT",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.665581,
+        "flowM3H": 0.099935,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-TT",
+      "modelSuffix": "8-TT",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.741289,
+        "flowM3H": 0.104477,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-TT",
+      "modelSuffix": "8-TT",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.741289,
+        "flowM3H": 0.104477,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-TT",
+      "modelSuffix": "8-TT",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 2.1336
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-TT",
+      "modelSuffix": "8-TT",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.665581,
+        "flowM3H": 0.099935,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-TT",
+      "modelSuffix": "8-TT",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.741289,
+        "flowM3H": 0.104477,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-TT",
+      "modelSuffix": "8-TT",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.741289,
+        "flowM3H": 0.104477,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "modelSuffix": "8-TQ",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.552019,
+        "flowM3H": 0.093121,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 2.19456
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "modelSuffix": "8-TQ",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.854852,
+        "flowM3H": 0.111291,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "modelSuffix": "8-TQ",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.044122,
+        "flowM3H": 0.122647,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "modelSuffix": "8-TQ",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.081976,
+        "flowM3H": 0.124919,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-TQ",
+      "modelSuffix": "8-TQ",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.552019,
+        "flowM3H": 0.093121,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 2.19456
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-TQ",
+      "modelSuffix": "8-TQ",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.854852,
+        "flowM3H": 0.111291,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-TQ",
+      "modelSuffix": "8-TQ",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.044122,
+        "flowM3H": 0.122647,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-TQ",
+      "modelSuffix": "8-TQ",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.081976,
+        "flowM3H": 0.124919,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-F",
+      "modelSuffix": "8-F",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.081976,
+        "flowM3H": 0.124919,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 2.1336
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-F",
+      "modelSuffix": "8-F",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.498372,
+        "flowM3H": 0.149902,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-F",
+      "modelSuffix": "8-F",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.57408,
+        "flowM3H": 0.154445,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-8-F",
+      "modelSuffix": "8-F",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.687642,
+        "flowM3H": 0.161259,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-F",
+      "modelSuffix": "8-F",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.081976,
+        "flowM3H": 0.124919,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 2.1336
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-F",
+      "modelSuffix": "8-F",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.498372,
+        "flowM3H": 0.149902,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-F",
+      "modelSuffix": "8-F",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.57408,
+        "flowM3H": 0.154445,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-8-F",
+      "modelSuffix": "8-F",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.687642,
+        "flowM3H": 0.161259,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 2.4384
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-60",
+      "modelSuffix": "10-60",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.605666,
+        "flowM3H": 0.03634,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 2.8956
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-60",
+      "modelSuffix": "10-60",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 60,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-60",
+      "modelSuffix": "10-60",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-60",
+      "modelSuffix": "10-60",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 60,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-60",
+      "modelSuffix": "10-60",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.605666,
+        "flowM3H": 0.03634,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 2.8956
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-60",
+      "modelSuffix": "10-60",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.64352,
+        "flowM3H": 0.038611,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 60,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-60",
+      "modelSuffix": "10-60",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-60",
+      "modelSuffix": "10-60",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 60,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-Q",
+      "modelSuffix": "10-Q",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 2.8956
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-Q",
+      "modelSuffix": "10-Q",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.870645,
+        "flowM3H": 0.052239,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-Q",
+      "modelSuffix": "10-Q",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.059915,
+        "flowM3H": 0.063595,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.10896
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-Q",
+      "modelSuffix": "10-Q",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.059915,
+        "flowM3H": 0.063595,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-Q",
+      "modelSuffix": "10-Q",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 2.8956
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-Q",
+      "modelSuffix": "10-Q",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.870645,
+        "flowM3H": 0.052239,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-Q",
+      "modelSuffix": "10-Q",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.059915,
+        "flowM3H": 0.063595,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.10896
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-Q",
+      "modelSuffix": "10-Q",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.059915,
+        "flowM3H": 0.063595,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-T",
+      "modelSuffix": "10-T",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.173478,
+        "flowM3H": 0.070409,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 2.8956
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-T",
+      "modelSuffix": "10-T",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-T",
+      "modelSuffix": "10-T",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.362748,
+        "flowM3H": 0.081765,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-T",
+      "modelSuffix": "10-T",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.400602,
+        "flowM3H": 0.084036,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-T",
+      "modelSuffix": "10-T",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.173478,
+        "flowM3H": 0.070409,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 2.8956
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-T",
+      "modelSuffix": "10-T",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-T",
+      "modelSuffix": "10-T",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.362748,
+        "flowM3H": 0.081765,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-T",
+      "modelSuffix": "10-T",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.400602,
+        "flowM3H": 0.084036,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-150",
+      "modelSuffix": "10-150",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.552019,
+        "flowM3H": 0.093121,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 2.98704
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-150",
+      "modelSuffix": "10-150",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.627727,
+        "flowM3H": 0.097664,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-150",
+      "modelSuffix": "10-150",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.665581,
+        "flowM3H": 0.099935,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.10896
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-150",
+      "modelSuffix": "10-150",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.741289,
+        "flowM3H": 0.104477,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-150",
+      "modelSuffix": "10-150",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.552019,
+        "flowM3H": 0.093121,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 2.98704
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-150",
+      "modelSuffix": "10-150",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.627727,
+        "flowM3H": 0.097664,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-150",
+      "modelSuffix": "10-150",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.665581,
+        "flowM3H": 0.099935,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.10896
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-150",
+      "modelSuffix": "10-150",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.741289,
+        "flowM3H": 0.104477,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-H",
+      "modelSuffix": "10-H",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.816998,
+        "flowM3H": 0.10902,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.95656
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-H",
+      "modelSuffix": "10-H",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.93056,
+        "flowM3H": 0.115834,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-H",
+      "modelSuffix": "10-H",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.081976,
+        "flowM3H": 0.124919,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-H",
+      "modelSuffix": "10-H",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.119831,
+        "flowM3H": 0.12719,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-H",
+      "modelSuffix": "10-H",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.816998,
+        "flowM3H": 0.10902,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.95656
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-H",
+      "modelSuffix": "10-H",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.93056,
+        "flowM3H": 0.115834,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-H",
+      "modelSuffix": "10-H",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.081976,
+        "flowM3H": 0.124919,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-H",
+      "modelSuffix": "10-H",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.119831,
+        "flowM3H": 0.12719,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-210",
+      "modelSuffix": "10-210",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.119831,
+        "flowM3H": 0.12719,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.98704
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-210",
+      "modelSuffix": "10-210",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.195539,
+        "flowM3H": 0.131732,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-210",
+      "modelSuffix": "10-210",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.271247,
+        "flowM3H": 0.136275,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-210",
+      "modelSuffix": "10-210",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.346955,
+        "flowM3H": 0.140817,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 3.2004
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-210",
+      "modelSuffix": "10-210",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.119831,
+        "flowM3H": 0.12719,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 2.98704
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-210",
+      "modelSuffix": "10-210",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.195539,
+        "flowM3H": 0.131732,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-210",
+      "modelSuffix": "10-210",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.271247,
+        "flowM3H": 0.136275,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-210",
+      "modelSuffix": "10-210",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.346955,
+        "flowM3H": 0.140817,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 3.2004
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-TT",
+      "modelSuffix": "10-TT",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.384809,
+        "flowM3H": 0.143089,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 2.92608
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-TT",
+      "modelSuffix": "10-TT",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.611934,
+        "flowM3H": 0.156716,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-TT",
+      "modelSuffix": "10-TT",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.763351,
+        "flowM3H": 0.165801,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-TT",
+      "modelSuffix": "10-TT",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.801205,
+        "flowM3H": 0.168072,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-TT",
+      "modelSuffix": "10-TT",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.384809,
+        "flowM3H": 0.143089,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 2.92608
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-TT",
+      "modelSuffix": "10-TT",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.611934,
+        "flowM3H": 0.156716,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-TT",
+      "modelSuffix": "10-TT",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.763351,
+        "flowM3H": 0.165801,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-TT",
+      "modelSuffix": "10-TT",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.801205,
+        "flowM3H": 0.168072,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "modelSuffix": "10-TQ",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.687642,
+        "flowM3H": 0.161259,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 2.8956
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "modelSuffix": "10-TQ",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.990475,
+        "flowM3H": 0.179429,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "modelSuffix": "10-TQ",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.179746,
+        "flowM3H": 0.190785,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "modelSuffix": "10-TQ",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.255454,
+        "flowM3H": 0.195327,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-TQ",
+      "modelSuffix": "10-TQ",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.687642,
+        "flowM3H": 0.161259,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 2.8956
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-TQ",
+      "modelSuffix": "10-TQ",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.990475,
+        "flowM3H": 0.179429,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-TQ",
+      "modelSuffix": "10-TQ",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.179746,
+        "flowM3H": 0.190785,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-TQ",
+      "modelSuffix": "10-TQ",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.255454,
+        "flowM3H": 0.195327,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-F",
+      "modelSuffix": "10-F",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 3.596141,
+        "flowM3H": 0.215768,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 2.92608
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-F",
+      "modelSuffix": "10-F",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 3.898974,
+        "flowM3H": 0.233938,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-F",
+      "modelSuffix": "10-F",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 4.088245,
+        "flowM3H": 0.245295,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-10-F",
+      "modelSuffix": "10-F",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 4.239661,
+        "flowM3H": 0.25438,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-F",
+      "modelSuffix": "10-F",
+      "sourcePage": 6,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 3.596141,
+        "flowM3H": 0.215768,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 2.92608
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-F",
+      "modelSuffix": "10-F",
+      "sourcePage": 6,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 3.898974,
+        "flowM3H": 0.233938,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.048
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-F",
+      "modelSuffix": "10-F",
+      "sourcePage": 6,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 4.088245,
+        "flowM3H": 0.245295,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.13944
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-10-F",
+      "modelSuffix": "10-F",
+      "sourcePage": 6,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 4.239661,
+        "flowM3H": 0.25438,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 3.16992
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-60",
+      "modelSuffix": "12-60",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.908499,
+        "flowM3H": 0.05451,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 3.5052
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-60",
+      "modelSuffix": "12-60",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.946353,
+        "flowM3H": 0.056781,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-60",
+      "modelSuffix": "12-60",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 3.68808
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-60",
+      "modelSuffix": "12-60",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.059915,
+        "flowM3H": 0.063595,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 60,
+        "radiusM": 3.71856
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-60",
+      "modelSuffix": "12-60",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.908499,
+        "flowM3H": 0.05451,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 3.5052
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-60",
+      "modelSuffix": "12-60",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.946353,
+        "flowM3H": 0.056781,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-60",
+      "modelSuffix": "12-60",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.984207,
+        "flowM3H": 0.059052,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 3.68808
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-60",
+      "modelSuffix": "12-60",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.059915,
+        "flowM3H": 0.063595,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 60,
+        "radiusM": 3.71856
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-Q",
+      "modelSuffix": "12-Q",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-Q",
+      "modelSuffix": "12-Q",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.400602,
+        "flowM3H": 0.084036,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 3.68808
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-Q",
+      "modelSuffix": "12-Q",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.476311,
+        "flowM3H": 0.088579,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.47472
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-Q",
+      "modelSuffix": "12-Q",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.476311,
+        "flowM3H": 0.088579,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-Q",
+      "modelSuffix": "12-Q",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-Q",
+      "modelSuffix": "12-Q",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.400602,
+        "flowM3H": 0.084036,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 3.68808
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-Q",
+      "modelSuffix": "12-Q",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.476311,
+        "flowM3H": 0.088579,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 3.47472
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-Q",
+      "modelSuffix": "12-Q",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.476311,
+        "flowM3H": 0.088579,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-T",
+      "modelSuffix": "12-T",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.741289,
+        "flowM3H": 0.104477,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 3.5052
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-T",
+      "modelSuffix": "12-T",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.854852,
+        "flowM3H": 0.111291,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-T",
+      "modelSuffix": "12-T",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.93056,
+        "flowM3H": 0.115834,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 3.71856
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-T",
+      "modelSuffix": "12-T",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.968414,
+        "flowM3H": 0.118105,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-T",
+      "modelSuffix": "12-T",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.741289,
+        "flowM3H": 0.104477,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 3.5052
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-T",
+      "modelSuffix": "12-T",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.854852,
+        "flowM3H": 0.111291,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-T",
+      "modelSuffix": "12-T",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.93056,
+        "flowM3H": 0.115834,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 3.71856
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-T",
+      "modelSuffix": "12-T",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.968414,
+        "flowM3H": 0.118105,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-150",
+      "modelSuffix": "12-150",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.271247,
+        "flowM3H": 0.136275,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 3.53568
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-150",
+      "modelSuffix": "12-150",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.346955,
+        "flowM3H": 0.140817,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-150",
+      "modelSuffix": "12-150",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.384809,
+        "flowM3H": 0.143089,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.71856
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-150",
+      "modelSuffix": "12-150",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.422664,
+        "flowM3H": 0.14536,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-150",
+      "modelSuffix": "12-150",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.271247,
+        "flowM3H": 0.136275,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 3.53568
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-150",
+      "modelSuffix": "12-150",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.346955,
+        "flowM3H": 0.140817,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-150",
+      "modelSuffix": "12-150",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.384809,
+        "flowM3H": 0.143089,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.71856
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-150",
+      "modelSuffix": "12-150",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.422664,
+        "flowM3H": 0.14536,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 150,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-H",
+      "modelSuffix": "12-H",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.649788,
+        "flowM3H": 0.158987,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.5052
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-H",
+      "modelSuffix": "12-H",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.801205,
+        "flowM3H": 0.168072,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-H",
+      "modelSuffix": "12-H",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.990475,
+        "flowM3H": 0.179429,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-H",
+      "modelSuffix": "12-H",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.028329,
+        "flowM3H": 0.1817,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.77952
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-H",
+      "modelSuffix": "12-H",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.649788,
+        "flowM3H": 0.158987,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.5052
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-H",
+      "modelSuffix": "12-H",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.801205,
+        "flowM3H": 0.168072,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-H",
+      "modelSuffix": "12-H",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.990475,
+        "flowM3H": 0.179429,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-H",
+      "modelSuffix": "12-H",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.028329,
+        "flowM3H": 0.1817,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 3.77952
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-210",
+      "modelSuffix": "12-210",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.876913,
+        "flowM3H": 0.172615,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 3.53568
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-210",
+      "modelSuffix": "12-210",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 3.104038,
+        "flowM3H": 0.186242,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-210",
+      "modelSuffix": "12-210",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.179746,
+        "flowM3H": 0.190785,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-210",
+      "modelSuffix": "12-210",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.2176,
+        "flowM3H": 0.193056,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 3.77952
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-210",
+      "modelSuffix": "12-210",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.876913,
+        "flowM3H": 0.172615,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 3.53568
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-210",
+      "modelSuffix": "12-210",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 3.104038,
+        "flowM3H": 0.186242,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-210",
+      "modelSuffix": "12-210",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.179746,
+        "flowM3H": 0.190785,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-210",
+      "modelSuffix": "12-210",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.2176,
+        "flowM3H": 0.193056,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 3.77952
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-TT",
+      "modelSuffix": "12-TT",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 3.406871,
+        "flowM3H": 0.204412,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 3.47472
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-TT",
+      "modelSuffix": "12-TT",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 3.747558,
+        "flowM3H": 0.224853,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-TT",
+      "modelSuffix": "12-TT",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.936828,
+        "flowM3H": 0.23621,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-TT",
+      "modelSuffix": "12-TT",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.974682,
+        "flowM3H": 0.238481,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.77952
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-TT",
+      "modelSuffix": "12-TT",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 3.406871,
+        "flowM3H": 0.204412,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 3.47472
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-TT",
+      "modelSuffix": "12-TT",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 3.747558,
+        "flowM3H": 0.224853,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-TT",
+      "modelSuffix": "12-TT",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.936828,
+        "flowM3H": 0.23621,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-TT",
+      "modelSuffix": "12-TT",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.974682,
+        "flowM3H": 0.238481,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 3.77952
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "modelSuffix": "12-TQ",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 3.974682,
+        "flowM3H": 0.238481,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 3.47472
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "modelSuffix": "12-TQ",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 4.353224,
+        "flowM3H": 0.261193,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "modelSuffix": "12-TQ",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 4.50464,
+        "flowM3H": 0.270278,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 3.71856
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "modelSuffix": "12-TQ",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 4.618202,
+        "flowM3H": 0.277092,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-TQ",
+      "modelSuffix": "12-TQ",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 3.974682,
+        "flowM3H": 0.238481,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 3.47472
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-TQ",
+      "modelSuffix": "12-TQ",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 4.353224,
+        "flowM3H": 0.261193,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-TQ",
+      "modelSuffix": "12-TQ",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 4.50464,
+        "flowM3H": 0.270278,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 3.71856
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-TQ",
+      "modelSuffix": "12-TQ",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 4.618202,
+        "flowM3H": 0.277092,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 3.74904
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-F",
+      "modelSuffix": "12-F",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 5.110306,
+        "flowM3H": 0.306618,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.5052
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-F",
+      "modelSuffix": "12-F",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 5.602409,
+        "flowM3H": 0.336145,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-F",
+      "modelSuffix": "12-F",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 6.018805,
+        "flowM3H": 0.361128,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.77952
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-12-F",
+      "modelSuffix": "12-F",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 6.056659,
+        "flowM3H": 0.3634,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.81
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-F",
+      "modelSuffix": "12-F",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 5.110306,
+        "flowM3H": 0.306618,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.5052
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-F",
+      "modelSuffix": "12-F",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 5.602409,
+        "flowM3H": 0.336145,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.6576
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-F",
+      "modelSuffix": "12-F",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 6.018805,
+        "flowM3H": 0.361128,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.77952
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-12-F",
+      "modelSuffix": "12-F",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 6.056659,
+        "flowM3H": 0.3634,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 3.81
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-60",
+      "modelSuffix": "15-60",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.324894,
+        "flowM3H": 0.079494,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 4.2672
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-60",
+      "modelSuffix": "15-60",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.476311,
+        "flowM3H": 0.088579,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-60",
+      "modelSuffix": "15-60",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.514165,
+        "flowM3H": 0.09085,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 4.60248
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-60",
+      "modelSuffix": "15-60",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.589873,
+        "flowM3H": 0.095392,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-60",
+      "modelSuffix": "15-60",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.324894,
+        "flowM3H": 0.079494,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 4.2672
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-60",
+      "modelSuffix": "15-60",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.476311,
+        "flowM3H": 0.088579,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-60",
+      "modelSuffix": "15-60",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.514165,
+        "flowM3H": 0.09085,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 4.60248
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-60",
+      "modelSuffix": "15-60",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.589873,
+        "flowM3H": 0.095392,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 60,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-Q",
+      "modelSuffix": "15-Q",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.006268,
+        "flowM3H": 0.120376,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 4.32816
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-Q",
+      "modelSuffix": "15-Q",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.195539,
+        "flowM3H": 0.131732,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-Q",
+      "modelSuffix": "15-Q",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.271247,
+        "flowM3H": 0.136275,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 4.60248
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-Q",
+      "modelSuffix": "15-Q",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.309101,
+        "flowM3H": 0.138546,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-Q",
+      "modelSuffix": "15-Q",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.006268,
+        "flowM3H": 0.120376,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 4.32816
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-Q",
+      "modelSuffix": "15-Q",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.195539,
+        "flowM3H": 0.131732,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 90,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-Q",
+      "modelSuffix": "15-Q",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.271247,
+        "flowM3H": 0.136275,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 4.60248
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-Q",
+      "modelSuffix": "15-Q",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.309101,
+        "flowM3H": 0.138546,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 90,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-T",
+      "modelSuffix": "15-T",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.725496,
+        "flowM3H": 0.16353,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 4.35864
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-T",
+      "modelSuffix": "15-T",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.914767,
+        "flowM3H": 0.174886,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-T",
+      "modelSuffix": "15-T",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.066184,
+        "flowM3H": 0.183971,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-T",
+      "modelSuffix": "15-T",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.104038,
+        "flowM3H": 0.186242,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 4.69392
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-T",
+      "modelSuffix": "15-T",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.725496,
+        "flowM3H": 0.16353,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 4.35864
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-T",
+      "modelSuffix": "15-T",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.914767,
+        "flowM3H": 0.174886,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 120,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-T",
+      "modelSuffix": "15-T",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.066184,
+        "flowM3H": 0.183971,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-T",
+      "modelSuffix": "15-T",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 3.104038,
+        "flowM3H": 0.186242,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 120,
+        "radiusM": 4.69392
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-150",
+      "modelSuffix": "15-150",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 3.482579,
+        "flowM3H": 0.208955,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 4.48056
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-150",
+      "modelSuffix": "15-150",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 3.633995,
+        "flowM3H": 0.21804,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-150",
+      "modelSuffix": "15-150",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.785412,
+        "flowM3H": 0.227125,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 4.63296
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-150",
+      "modelSuffix": "15-150",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 4.163953,
+        "flowM3H": 0.249837,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 150,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-150",
+      "modelSuffix": "15-150",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 3.482579,
+        "flowM3H": 0.208955,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 4.48056
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-150",
+      "modelSuffix": "15-150",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 3.633995,
+        "flowM3H": 0.21804,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-150",
+      "modelSuffix": "15-150",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 3.785412,
+        "flowM3H": 0.227125,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 150,
+        "radiusM": 4.63296
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-150",
+      "modelSuffix": "15-150",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 4.163953,
+        "flowM3H": 0.249837,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 150,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-H",
+      "modelSuffix": "15-H",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 4.163953,
+        "flowM3H": 0.249837,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-H",
+      "modelSuffix": "15-H",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 4.391078,
+        "flowM3H": 0.263465,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-H",
+      "modelSuffix": "15-H",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 4.731765,
+        "flowM3H": 0.283906,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.69392
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-H",
+      "modelSuffix": "15-H",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 4.845327,
+        "flowM3H": 0.29072,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.7244
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-H",
+      "modelSuffix": "15-H",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 4.163953,
+        "flowM3H": 0.249837,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-H",
+      "modelSuffix": "15-H",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 4.391078,
+        "flowM3H": 0.263465,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-H",
+      "modelSuffix": "15-H",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 4.731765,
+        "flowM3H": 0.283906,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.69392
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-H",
+      "modelSuffix": "15-H",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 4.845327,
+        "flowM3H": 0.29072,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.7244
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-210",
+      "modelSuffix": "15-210",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 4.353224,
+        "flowM3H": 0.261193,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-210",
+      "modelSuffix": "15-210",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 4.542494,
+        "flowM3H": 0.27255,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-210",
+      "modelSuffix": "15-210",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 4.921035,
+        "flowM3H": 0.295262,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 4.7244
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-210",
+      "modelSuffix": "15-210",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 5.299576,
+        "flowM3H": 0.317975,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 4.75488
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-210",
+      "modelSuffix": "15-210",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 4.353224,
+        "flowM3H": 0.261193,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-210",
+      "modelSuffix": "15-210",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 4.542494,
+        "flowM3H": 0.27255,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-210",
+      "modelSuffix": "15-210",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 4.921035,
+        "flowM3H": 0.295262,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 210,
+        "radiusM": 4.7244
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-210",
+      "modelSuffix": "15-210",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 5.299576,
+        "flowM3H": 0.317975,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 210,
+        "radiusM": 4.75488
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-TT",
+      "modelSuffix": "15-TT",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 5.488847,
+        "flowM3H": 0.329331,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-TT",
+      "modelSuffix": "15-TT",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 5.829534,
+        "flowM3H": 0.349772,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-TT",
+      "modelSuffix": "15-TT",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 5.980951,
+        "flowM3H": 0.358857,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 4.63296
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-TT",
+      "modelSuffix": "15-TT",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 6.094513,
+        "flowM3H": 0.365671,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-TT",
+      "modelSuffix": "15-TT",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 5.488847,
+        "flowM3H": 0.329331,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 240,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-TT",
+      "modelSuffix": "15-TT",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 5.829534,
+        "flowM3H": 0.349772,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-TT",
+      "modelSuffix": "15-TT",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 5.980951,
+        "flowM3H": 0.358857,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 4.63296
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-TT",
+      "modelSuffix": "15-TT",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 6.094513,
+        "flowM3H": 0.365671,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 240,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "modelSuffix": "15-TQ",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 6.510908,
+        "flowM3H": 0.390654,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "modelSuffix": "15-TQ",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 6.738033,
+        "flowM3H": 0.404282,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "modelSuffix": "15-TQ",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 6.889449,
+        "flowM3H": 0.413367,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "modelSuffix": "15-TQ",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 7.192282,
+        "flowM3H": 0.431537,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-TQ",
+      "modelSuffix": "15-TQ",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 6.510908,
+        "flowM3H": 0.390654,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-TQ",
+      "modelSuffix": "15-TQ",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 6.738033,
+        "flowM3H": 0.404282,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 270,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-TQ",
+      "modelSuffix": "15-TQ",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 6.889449,
+        "flowM3H": 0.413367,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-TQ",
+      "modelSuffix": "15-TQ",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 7.192282,
+        "flowM3H": 0.431537,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 270,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-F",
+      "modelSuffix": "15-F",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 8.327906,
+        "flowM3H": 0.499674,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-F",
+      "modelSuffix": "15-F",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 8.744301,
+        "flowM3H": 0.524658,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-F",
+      "modelSuffix": "15-F",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 8.895718,
+        "flowM3H": 0.533743,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 4.63296
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-15-F",
+      "modelSuffix": "15-F",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 9.084988,
+        "flowM3H": 0.545099,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-F",
+      "modelSuffix": "15-F",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 8.327906,
+        "flowM3H": 0.499674,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 360,
+        "radiusM": 4.4196
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-F",
+      "modelSuffix": "15-F",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 8.744301,
+        "flowM3H": 0.524658,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-F",
+      "modelSuffix": "15-F",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 8.895718,
+        "flowM3H": 0.533743,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 4.63296
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-15-F",
+      "modelSuffix": "15-F",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 9.084988,
+        "flowM3H": 0.545099,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 360,
+        "radiusM": 4.66344
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "modelSuffix": "4X30-SST",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.346955,
+        "flowM3H": 0.140817,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 4.2672
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "modelSuffix": "4X30-SST",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.498372,
+        "flowM3H": 0.149902,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "modelSuffix": "4X30-SST",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.536226,
+        "flowM3H": 0.152174,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "modelSuffix": "4X30-SST",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.57408,
+        "flowM3H": 0.154445,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X30-SST",
+      "modelSuffix": "4X30-SST",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 2.346955,
+        "flowM3H": 0.140817,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 4.2672
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X30-SST",
+      "modelSuffix": "4X30-SST",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 2.498372,
+        "flowM3H": 0.149902,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X30-SST",
+      "modelSuffix": "4X30-SST",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 2.536226,
+        "flowM3H": 0.152174,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X30-SST",
+      "modelSuffix": "4X30-SST",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 2.57408,
+        "flowM3H": 0.154445,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "modelSuffix": "4X15-LCS",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.211332,
+        "flowM3H": 0.07268,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "modelSuffix": "4X15-LCS",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.249186,
+        "flowM3H": 0.074951,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "modelSuffix": "4X15-LCS",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "modelSuffix": "4X15-LCS",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X15-LCS",
+      "modelSuffix": "4X15-LCS",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.211332,
+        "flowM3H": 0.07268,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X15-LCS",
+      "modelSuffix": "4X15-LCS",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.249186,
+        "flowM3H": 0.074951,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X15-LCS",
+      "modelSuffix": "4X15-LCS",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X15-LCS",
+      "modelSuffix": "4X15-LCS",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "modelSuffix": "4X15-RCS",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.211332,
+        "flowM3H": 0.07268,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "modelSuffix": "4X15-RCS",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.249186,
+        "flowM3H": 0.074951,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "modelSuffix": "4X15-RCS",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "modelSuffix": "4X15-RCS",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X15-RCS",
+      "modelSuffix": "4X15-RCS",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.211332,
+        "flowM3H": 0.07268,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X15-RCS",
+      "modelSuffix": "4X15-RCS",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.249186,
+        "flowM3H": 0.074951,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X15-RCS",
+      "modelSuffix": "4X15-RCS",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X15-RCS",
+      "modelSuffix": "4X15-RCS",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.28704,
+        "flowM3H": 0.077222,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 33.02,
+        "arcDeg": 180,
+        "radiusM": 4.572
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "modelSuffix": "4X18-SST",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.362748,
+        "flowM3H": 0.081765,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "modelSuffix": "4X18-SST",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.400602,
+        "flowM3H": 0.084036,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "modelSuffix": "4X18-SST",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.438456,
+        "flowM3H": 0.086307,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "modelSuffix": "4X18-SST",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.438456,
+        "flowM3H": 0.086307,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X18-SST",
+      "modelSuffix": "4X18-SST",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 1.362748,
+        "flowM3H": 0.081765,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X18-SST",
+      "modelSuffix": "4X18-SST",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 1.400602,
+        "flowM3H": 0.084036,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X18-SST",
+      "modelSuffix": "4X18-SST",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 1.438456,
+        "flowM3H": 0.086307,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X18-SST",
+      "modelSuffix": "4X18-SST",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 1.438456,
+        "flowM3H": 0.086307,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "modelSuffix": "4X9-LCS",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "modelSuffix": "4X9-LCS",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "modelSuffix": "4X9-LCS",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "modelSuffix": "4X9-LCS",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X9-LCS",
+      "modelSuffix": "4X9-LCS",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X9-LCS",
+      "modelSuffix": "4X9-LCS",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X9-LCS",
+      "modelSuffix": "4X9-LCS",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X9-LCS",
+      "modelSuffix": "4X9-LCS",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 27.94,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "modelSuffix": "4X9-RCS",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "modelSuffix": "4X9-RCS",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "modelSuffix": "4X9-RCS",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "modelSuffix": "4X9-RCS",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X9-RCS",
+      "modelSuffix": "4X9-RCS",
+      "sourcePage": 7,
+      "rowIndex": 0,
+      "expected": {
+        "pressureBar": 1.378951,
+        "pressureKPa": 137.895146,
+        "flowLMin": 0.681374,
+        "flowM3H": 0.040882,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X9-RCS",
+      "modelSuffix": "4X9-RCS",
+      "sourcePage": 7,
+      "rowIndex": 1,
+      "expected": {
+        "pressureBar": 2.068427,
+        "pressureKPa": 206.842719,
+        "flowLMin": 0.719228,
+        "flowM3H": 0.043154,
+        "precipSquareMmH": 25.4,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X9-RCS",
+      "modelSuffix": "4X9-RCS",
+      "sourcePage": 7,
+      "rowIndex": 2,
+      "expected": {
+        "pressureBar": 2.757903,
+        "pressureKPa": 275.790292,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    },
+    {
+      "id": "toro:O-T-4X9-RCS",
+      "modelSuffix": "4X9-RCS",
+      "sourcePage": 7,
+      "rowIndex": 3,
+      "expected": {
+        "pressureBar": 3.447379,
+        "pressureKPa": 344.737865,
+        "flowLMin": 0.757082,
+        "flowM3H": 0.045425,
+        "precipSquareMmH": 27.94,
+        "precipTriangleMmH": 30.48,
+        "arcDeg": 180,
+        "radiusM": 2.7432
+      },
+      "differences": {}
+    }
+  ]
+}

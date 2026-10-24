@@ -1,0 +1,126 @@
+(https://www.hunterirrigation.com/sites/default/files/2026-05/RC-244-SS-Nozzles-ProAdj-US.pdf)
+citeturn314view0 [wordlim: 200] Crawled: 5 days ago; Content type: application/pdf; Number of pages: 1; Source: click({"ref_id":"turn276view0","id":53}); Total lines: 124
+L0@P0: NOZZLES
+L1@P0: 4A
+L2@P0: Radius: 4'
+L3@P0: 6A
+L4@P0: Radius: 6'
+L5@P0: KEY BENEFITS
+L6@P0: • Adjustable from 0° to 360° for maximum
+L7@P0: design flexibility
+L8@P0: • Easy-grip top for simple adjustment
+L9@P0: • Strong edges for a defined pattern with
+L10@P0: better wind resistance
+L11@P0: • Large water droplets minimize misting with
+L12@P0: better uniformity
+L13@P0: ADDITIONAL FEATURES
+L14@P0: • Even distribution results in better coverage
+L15@P0: • Color-coded for easy field identification
+L16@P0: OPERATING SPECIFICATIONS
+L17@P0: • Recommended operating pressure: 30 PSI
+L18@P0: • Pair with Pro-Spray® PRS30 pop-up for
+L19@P0: pressure regulation to 30 PSI
+L20@P0: • Warranty period: 2 years
+L21@P0: PRO ADJUSTABLE NOZZLES
+L22@P0: Choose Pro Adjustable Nozzles for adjustable-arc, short-radius needs.
+L23@P0: 4A
+L24@P0:  Lt. Green
+L25@P0: 4' radius
+L26@P0: Adjustable from
+L27@P0: 0° to 360°
+L28@P0: Trajectory: 0°
+L29@P0: Arc Pressure
+L30@P0: PSI
+L31@P0: Radius
+L32@P0: ft
+L33@P0: Flow
+L34@P0: GPM
+L35@P0: Precip in/hr
+L36@P0: 
+L37@P0: 45° 20 3 0.10 7.29 8.42
+L38@P0: 25 3 0.11 7.12 8.22
+L39@P0: 30 4 0.13 6.26 7.22
+L40@P0: 35 4 0.14 6.11 7.06
+L41@P0: 40 4 0.16 6.36 7.35
+L42@P0: 90° 20 3 0.19 6.93 8.00
+L43@P0: 25 3 0.20 6.47 7.47
+L44@P0: 30 4 0.22 5.29 6.11
+L45@P0: 35 4 0.24 5.24 6.05
+L46@P0: 40 4 0.25 4.97 5.74
+L47@P0: 120° 20 3 0.28 7.65 8.84
+L48@P0: 25 3 0.30 7.28 8.40
+L49@P0: 30 4 0.34 6.14 7.09
+L50@P0: 35 4 0.36 5.81 6.71
+L51@P0: 40 4 0.37 5.52 6.37
+L52@P0: 180° 20 3 0.34 6.20 7.16
+L53@P0: 25 3 0.38 6.15 7.10
+L54@P0: 30 4 0.45 5.41 6.25
+L55@P0: 35 4 0.46 5.02 5.80
+L56@P0: 40 4 0.48 4.77 5.51
+L57@P0: 240° 20 3 0.58 7.93 9.15
+L58@P0: 25 3 0.62 7.52 8.68
+L59@P0: 30 4 0.68 6.14 7.09
+L60@P0: 35 4 0.74 6.06 6.99
+L61@P0: 40 4 0.80 5.97 6.89
+L62@P0: 270° 20 3 0.62 7.53 8.70
+L63@P0: 25 3 0.66 7.12 8.22
+L64@P0: 30 4 0.73 5.86 6.76
+L65@P0: 35 4 0.78 5.67 6.55
+L66@P0: 40 4 0.84 5.57 6.43
+L67@P0: 360° 20 3 0.66 6.01 6.94
+L68@P0: 25 3 0.72 5.82 6.72
+L69@P0: 30 4 0.80 4.81 5.56
+L70@P0: 35 4 0.86 4.69 5.42
+L71@P0: 40 4 0.90 4.47 5.17
+L72@P0: PRO ADJUSTABLE NOZZLE PERFORMANCE DATA
+L73@P0: Bold = Recommended pressure
+L74@P0: Note: The Pro-Spray PRS30’s built-in pressure regulator controls output to a maximum of 30 PSI.
+L75@P0: Adjusting the radius reduction screw may be required to achieve catalog radius and flow.
+L76@P0: 6A
+L77@P0:  Lt. Blue
+L78@P0: 6' radius
+L79@P0: Adjustable from
+L80@P0: 0° to 360°
+L81@P0: Trajectory: 0°
+L82@P0: Radius
+L83@P0: ft
+L84@P0: Flow
+L85@P0: GPM
+L86@P0: Precip in/hr
+L87@P0: 
+L88@P0: 5 0.15 4.19 4.84
+L89@P0: 5 0.17 4.36 5.03
+L90@P0: 6 0.18 3.85 4.45
+L91@P0: 6 0.18 3.55 4.10
+L92@P0: 6 0.19 3.57 4.12
+L93@P0: 5 0.30 4.19 4.84
+L94@P0: 5 0.34 4.49 5.18
+L95@P0: 6 0.37 3.96 4.57
+L96@P0: 6 0.38 3.75 4.32
+L97@P0: 6 0.40 3.76 4.34
+L98@P0: 5 0.37 3.88 4.48
+L99@P0: 5 0.38 3.76 4.35
+L100@P0: 6 0.44 3.53 4.08
+L101@P0: 6 0.46 3.40 3.93
+L102@P0: 6 0.48 3.38 3.91
+L103@P0: 5 0.50 3.49 4.03
+L104@P0: 5 0.54 3.56 4.12
+L105@P0: 6 0.60 3.21 3.70
+L106@P0: 6 0.64 3.15 3.64
+L107@P0: 6 0.68 3.20 3.69
+L108@P0: 5 0.73 3.82 4.42
+L109@P0: 5 0.78 3.86 4.46
+L110@P0: 6 0.88 3.53 4.08
+L111@P0: 6 0.92 3.40 3.93
+L112@P0: 6 1.02 3.60 4.15
+L113@P0: 5 0.88 4.10 4.73
+L114@P0: 5 0.98 4.31 4.98
+L115@P0: 6 1.10 3.92 4.53
+L116@P0: 6 1.15 3.78 4.36
+L117@P0: 6 1.20 3.76 4.34
+L118@P0: 5 1.05 3.67 4.23
+L119@P0: 5 1.10 3.63 4.19
+L120@P0: 6 1.26 3.37 3.89
+L121@P0: 6 1.30 3.20 3.70
+L122@P0: 6 1.40 3.29 3.80
+L123@P0: LANDSCAPE IRRIGATION | Built on Innovation®

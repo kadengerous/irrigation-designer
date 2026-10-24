@@ -1,0 +1,1748 @@
+[
+  {
+    "modelId": "R-VAN14",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "sector",
+    "rMin": 2.4,
+    "rMax": 4.6,
+    "arcMin": 45,
+    "arcMax": 270,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 270,
+        "radiusM": 4,
+        "flowLMin": 3.18,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 270,
+        "radiusM": 4,
+        "flowLMin": 3.29,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 270,
+        "radiusM": 4.3,
+        "flowLMin": 3.48,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 270,
+        "radiusM": 4.3,
+        "flowLMin": 3.56,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 270,
+        "radiusM": 4.6,
+        "flowLMin": 4.2,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 270,
+        "radiusM": 4.6,
+        "flowLMin": 4.43,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 240,
+        "radiusM": 4,
+        "flowLMin": 2.82,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 240,
+        "radiusM": 4,
+        "flowLMin": 2.93,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 240,
+        "radiusM": 4.3,
+        "flowLMin": 3.1,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 240,
+        "radiusM": 4.3,
+        "flowLMin": 3.16,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 240,
+        "radiusM": 4.6,
+        "flowLMin": 3.73,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 240,
+        "radiusM": 4.6,
+        "flowLMin": 3.94,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 210,
+        "radiusM": 4,
+        "flowLMin": 2.46,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 210,
+        "radiusM": 4,
+        "flowLMin": 2.57,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 210,
+        "radiusM": 4.3,
+        "flowLMin": 2.73,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 210,
+        "radiusM": 4.3,
+        "flowLMin": 2.76,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 210,
+        "radiusM": 4.6,
+        "flowLMin": 3.26,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 210,
+        "radiusM": 4.6,
+        "flowLMin": 3.44,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 180,
+        "radiusM": 4,
+        "flowLMin": 2.12,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 180,
+        "radiusM": 4,
+        "flowLMin": 2.2,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 180,
+        "radiusM": 4.3,
+        "flowLMin": 2.31,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 180,
+        "radiusM": 4.3,
+        "flowLMin": 2.38,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 180,
+        "radiusM": 4.6,
+        "flowLMin": 2.8,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 180,
+        "radiusM": 4.6,
+        "flowLMin": 2.95,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 150,
+        "radiusM": 4,
+        "flowLMin": 1.77,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 150,
+        "radiusM": 4,
+        "flowLMin": 1.83,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 150,
+        "radiusM": 4.3,
+        "flowLMin": 1.96,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 150,
+        "radiusM": 4.3,
+        "flowLMin": 2.02,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 150,
+        "radiusM": 4.6,
+        "flowLMin": 2.33,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 150,
+        "radiusM": 4.6,
+        "flowLMin": 2.46,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 120,
+        "radiusM": 4,
+        "flowLMin": 1.41,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 120,
+        "radiusM": 4,
+        "flowLMin": 1.46,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 120,
+        "radiusM": 4.3,
+        "flowLMin": 1.56,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 120,
+        "radiusM": 4.3,
+        "flowLMin": 1.62,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 120,
+        "radiusM": 4.6,
+        "flowLMin": 1.87,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 120,
+        "radiusM": 4.6,
+        "flowLMin": 1.97,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 90,
+        "radiusM": 4,
+        "flowLMin": 1.06,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 90,
+        "radiusM": 4,
+        "flowLMin": 1.1,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 90,
+        "radiusM": 4.3,
+        "flowLMin": 1.17,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 90,
+        "radiusM": 4.3,
+        "flowLMin": 1.21,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 90,
+        "radiusM": 4.6,
+        "flowLMin": 1.4,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 90,
+        "radiusM": 4.6,
+        "flowLMin": 1.48,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 60,
+        "radiusM": 4,
+        "flowLMin": 0.71,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 60,
+        "radiusM": 4,
+        "flowLMin": 0.73,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 60,
+        "radiusM": 4.3,
+        "flowLMin": 0.78,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 60,
+        "radiusM": 4.3,
+        "flowLMin": 0.81,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 60,
+        "radiusM": 4.6,
+        "flowLMin": 0.93,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 60,
+        "radiusM": 4.6,
+        "flowLMin": 0.98,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 45,
+        "radiusM": 4,
+        "flowLMin": 0.53,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 45,
+        "radiusM": 4,
+        "flowLMin": 0.55,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 45,
+        "radiusM": 4.3,
+        "flowLMin": 0.59,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 45,
+        "radiusM": 4.3,
+        "flowLMin": 0.61,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 45,
+        "radiusM": 4.6,
+        "flowLMin": 0.7,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 45,
+        "radiusM": 4.6,
+        "flowLMin": 0.74,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      }
+    ]
+  },
+  {
+    "modelId": "R-VAN18",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "sector",
+    "rMin": 4,
+    "rMax": 5.5,
+    "arcMin": 45,
+    "arcMax": 270,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 270,
+        "radiusM": 4.9,
+        "flowLMin": 4.77,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 270,
+        "radiusM": 4.9,
+        "flowLMin": 5.11,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 270,
+        "radiusM": 5.2,
+        "flowLMin": 5.38,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 270,
+        "radiusM": 5.2,
+        "flowLMin": 5.72,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 270,
+        "radiusM": 5.5,
+        "flowLMin": 5.94,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 270,
+        "radiusM": 5.5,
+        "flowLMin": 6.13,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 240,
+        "radiusM": 4.9,
+        "flowLMin": 4.24,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 240,
+        "radiusM": 4.9,
+        "flowLMin": 4.54,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 240,
+        "radiusM": 5.2,
+        "flowLMin": 4.77,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 240,
+        "radiusM": 5.2,
+        "flowLMin": 5.07,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 240,
+        "radiusM": 5.5,
+        "flowLMin": 5.28,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 240,
+        "radiusM": 5.5,
+        "flowLMin": 5.45,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 210,
+        "radiusM": 4.9,
+        "flowLMin": 3.71,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 210,
+        "radiusM": 4.9,
+        "flowLMin": 3.97,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 210,
+        "radiusM": 5.2,
+        "flowLMin": 4.16,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 210,
+        "radiusM": 5.2,
+        "flowLMin": 4.43,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 210,
+        "radiusM": 5.5,
+        "flowLMin": 4.62,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 210,
+        "radiusM": 5.5,
+        "flowLMin": 4.77,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 180,
+        "radiusM": 4.9,
+        "flowLMin": 3.22,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 180,
+        "radiusM": 4.9,
+        "flowLMin": 3.44,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 180,
+        "radiusM": 5.2,
+        "flowLMin": 3.71,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 180,
+        "radiusM": 5.2,
+        "flowLMin": 3.82,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 180,
+        "radiusM": 5.5,
+        "flowLMin": 4.05,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 180,
+        "radiusM": 5.5,
+        "flowLMin": 4.13,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 150,
+        "radiusM": 4.9,
+        "flowLMin": 2.68,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 150,
+        "radiusM": 4.9,
+        "flowLMin": 2.87,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 150,
+        "radiusM": 5.2,
+        "flowLMin": 3.09,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 150,
+        "radiusM": 5.2,
+        "flowLMin": 3.19,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 150,
+        "radiusM": 5.5,
+        "flowLMin": 3.38,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 150,
+        "radiusM": 5.5,
+        "flowLMin": 3.44,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 120,
+        "radiusM": 4.9,
+        "flowLMin": 2.15,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 120,
+        "radiusM": 4.9,
+        "flowLMin": 2.3,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 120,
+        "radiusM": 5.2,
+        "flowLMin": 2.47,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 120,
+        "radiusM": 5.2,
+        "flowLMin": 2.55,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 120,
+        "radiusM": 5.5,
+        "flowLMin": 2.7,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 120,
+        "radiusM": 5.5,
+        "flowLMin": 2.75,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 90,
+        "radiusM": 4.9,
+        "flowLMin": 1.59,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 90,
+        "radiusM": 4.9,
+        "flowLMin": 1.78,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 90,
+        "radiusM": 5.2,
+        "flowLMin": 1.89,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 90,
+        "radiusM": 5.2,
+        "flowLMin": 1.89,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 90,
+        "radiusM": 5.5,
+        "flowLMin": 2.04,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 90,
+        "radiusM": 5.5,
+        "flowLMin": 2.2,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 60,
+        "radiusM": 4.9,
+        "flowLMin": 1.06,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 60,
+        "radiusM": 4.9,
+        "flowLMin": 1.19,
+        "precipSquareMmH": 18,
+        "precipTriangleMmH": 21
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 60,
+        "radiusM": 5.2,
+        "flowLMin": 1.26,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 60,
+        "radiusM": 5.2,
+        "flowLMin": 1.26,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 60,
+        "radiusM": 5.5,
+        "flowLMin": 1.36,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 60,
+        "radiusM": 5.5,
+        "flowLMin": 1.46,
+        "precipSquareMmH": 18,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 45,
+        "radiusM": 4.9,
+        "flowLMin": 0.79,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 45,
+        "radiusM": 4.9,
+        "flowLMin": 0.89,
+        "precipSquareMmH": 18,
+        "precipTriangleMmH": 21
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 45,
+        "radiusM": 5.2,
+        "flowLMin": 0.95,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 45,
+        "radiusM": 5.2,
+        "flowLMin": 0.95,
+        "precipSquareMmH": 17,
+        "precipTriangleMmH": 20
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 45,
+        "radiusM": 5.5,
+        "flowLMin": 1.02,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 45,
+        "radiusM": 5.5,
+        "flowLMin": 1.1,
+        "precipSquareMmH": 18,
+        "precipTriangleMmH": 20
+      }
+    ]
+  },
+  {
+    "modelId": "R-VAN24",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "sector",
+    "rMin": 5.2,
+    "rMax": 7.3,
+    "arcMin": 45,
+    "arcMax": 270,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 270,
+        "radiusM": 5.8,
+        "flowLMin": 6.81,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 270,
+        "radiusM": 6.1,
+        "flowLMin": 7.38,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 270,
+        "radiusM": 6.7,
+        "flowLMin": 8.74,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 270,
+        "radiusM": 7,
+        "flowLMin": 9.54,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 270,
+        "radiusM": 7.3,
+        "flowLMin": 10.67,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 270,
+        "radiusM": 7.3,
+        "flowLMin": 10.9,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 240,
+        "radiusM": 5.8,
+        "flowLMin": 6.06,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 240,
+        "radiusM": 6.1,
+        "flowLMin": 6.57,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 240,
+        "radiusM": 6.7,
+        "flowLMin": 7.78,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 240,
+        "radiusM": 7,
+        "flowLMin": 8.48,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 240,
+        "radiusM": 7.3,
+        "flowLMin": 9.48,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 240,
+        "radiusM": 7.3,
+        "flowLMin": 9.69,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 210,
+        "radiusM": 5.8,
+        "flowLMin": 5.3,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 210,
+        "radiusM": 6.1,
+        "flowLMin": 5.75,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 210,
+        "radiusM": 6.7,
+        "flowLMin": 6.81,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 210,
+        "radiusM": 7,
+        "flowLMin": 7.42,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 210,
+        "radiusM": 7.3,
+        "flowLMin": 8.29,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 210,
+        "radiusM": 7.3,
+        "flowLMin": 8.48,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 180,
+        "radiusM": 5.8,
+        "flowLMin": 4.54,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 180,
+        "radiusM": 6.1,
+        "flowLMin": 4.92,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 180,
+        "radiusM": 6.7,
+        "flowLMin": 5.83,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 180,
+        "radiusM": 7,
+        "flowLMin": 6.36,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 180,
+        "radiusM": 7.3,
+        "flowLMin": 7.12,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 180,
+        "radiusM": 7.3,
+        "flowLMin": 7.27,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 150,
+        "radiusM": 5.8,
+        "flowLMin": 3.79,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 150,
+        "radiusM": 6.1,
+        "flowLMin": 4.1,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 150,
+        "radiusM": 6.7,
+        "flowLMin": 4.86,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 150,
+        "radiusM": 7,
+        "flowLMin": 5.3,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 150,
+        "radiusM": 7.3,
+        "flowLMin": 5.93,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 150,
+        "radiusM": 7.3,
+        "flowLMin": 6.06,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 120,
+        "radiusM": 5.8,
+        "flowLMin": 3.03,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 120,
+        "radiusM": 6.1,
+        "flowLMin": 3.28,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 120,
+        "radiusM": 6.7,
+        "flowLMin": 3.89,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 120,
+        "radiusM": 7,
+        "flowLMin": 4.24,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 120,
+        "radiusM": 7.3,
+        "flowLMin": 4.74,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 120,
+        "radiusM": 7.3,
+        "flowLMin": 4.85,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 90,
+        "radiusM": 5.8,
+        "flowLMin": 2.27,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 90,
+        "radiusM": 6.1,
+        "flowLMin": 2.46,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 90,
+        "radiusM": 6.7,
+        "flowLMin": 2.91,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 90,
+        "radiusM": 7,
+        "flowLMin": 3.18,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 90,
+        "radiusM": 7.3,
+        "flowLMin": 3.56,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 90,
+        "radiusM": 7.3,
+        "flowLMin": 3.63,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 60,
+        "radiusM": 5.8,
+        "flowLMin": 1.51,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 60,
+        "radiusM": 6.1,
+        "flowLMin": 1.64,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 60,
+        "radiusM": 6.7,
+        "flowLMin": 1.94,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 60,
+        "radiusM": 7,
+        "flowLMin": 2.12,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 60,
+        "radiusM": 7.3,
+        "flowLMin": 2.37,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 60,
+        "radiusM": 7.3,
+        "flowLMin": 2.42,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 45,
+        "radiusM": 5.8,
+        "flowLMin": 1.14,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 45,
+        "radiusM": 6.1,
+        "flowLMin": 1.23,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 45,
+        "radiusM": 6.7,
+        "flowLMin": 1.46,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 45,
+        "radiusM": 7,
+        "flowLMin": 1.59,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 45,
+        "radiusM": 7.3,
+        "flowLMin": 1.78,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 45,
+        "radiusM": 7.3,
+        "flowLMin": 1.82,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      }
+    ]
+  },
+  {
+    "modelId": "R-VAN18-360",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "sector",
+    "rMin": 4,
+    "rMax": 5.5,
+    "arcMin": 360,
+    "arcMax": 360,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 360,
+        "radiusM": 4.9,
+        "flowLMin": 6.25,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 360,
+        "radiusM": 4.9,
+        "flowLMin": 6.32,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 360,
+        "radiusM": 5.2,
+        "flowLMin": 6.81,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 360,
+        "radiusM": 5.2,
+        "flowLMin": 7,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 360,
+        "radiusM": 5.5,
+        "flowLMin": 7.76,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 360,
+        "radiusM": 5.5,
+        "flowLMin": 7.99,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      }
+    ]
+  },
+  {
+    "modelId": "R-VAN14-360",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "sector",
+    "rMin": 2.4,
+    "rMax": 4.6,
+    "arcMin": 360,
+    "arcMax": 360,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 360,
+        "radiusM": 4,
+        "flowLMin": 4.16,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 360,
+        "radiusM": 4,
+        "flowLMin": 4.24,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 360,
+        "radiusM": 4.3,
+        "flowLMin": 4.62,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 360,
+        "radiusM": 4.3,
+        "flowLMin": 4.81,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 360,
+        "radiusM": 4.6,
+        "flowLMin": 5.34,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 360,
+        "radiusM": 4.6,
+        "flowLMin": 5.49,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      }
+    ]
+  },
+  {
+    "modelId": "R-VAN24-360",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "sector",
+    "rMin": 5.2,
+    "rMax": 7.3,
+    "arcMin": 360,
+    "arcMax": 360,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": 360,
+        "radiusM": 5.8,
+        "flowLMin": 8.9,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": 360,
+        "radiusM": 6.1,
+        "flowLMin": 9.54,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": 360,
+        "radiusM": 6.7,
+        "flowLMin": 11.85,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": 360,
+        "radiusM": 7,
+        "flowLMin": 13.17,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 19
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": 360,
+        "radiusM": 7.3,
+        "flowLMin": 13.67,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 18
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": 360,
+        "radiusM": 7.3,
+        "flowLMin": 14.16,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 18
+      }
+    ]
+  },
+  {
+    "modelId": "R-VAN-SST",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "strip",
+    "rMin": null,
+    "rMax": null,
+    "arcMin": null,
+    "arcMax": null,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": null,
+        "widthM": 1.2,
+        "lengthM": 8.5,
+        "flowLMin": 1.36,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 9.1,
+        "flowLMin": 1.67,
+        "precipSquareMmH": 14,
+        "precipTriangleMmH": 14
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 9.1,
+        "flowLMin": 1.74,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 15
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 9.1,
+        "flowLMin": 1.82,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 9.1,
+        "flowLMin": 1.89,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": null,
+        "widthM": 1.8,
+        "lengthM": 9.8,
+        "flowLMin": 2.12,
+        "precipSquareMmH": 14,
+        "precipTriangleMmH": 14
+      }
+    ]
+  },
+  {
+    "modelId": "R-VAN-LCS",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "strip",
+    "rMin": null,
+    "rMax": null,
+    "arcMin": null,
+    "arcMax": null,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": null,
+        "widthM": 1.2,
+        "lengthM": 4.3,
+        "flowLMin": 0.68,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 4.6,
+        "flowLMin": 0.83,
+        "precipSquareMmH": 14,
+        "precipTriangleMmH": 14
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 4.6,
+        "flowLMin": 0.87,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 15
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 4.6,
+        "flowLMin": 0.91,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 4.6,
+        "flowLMin": 0.95,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": null,
+        "widthM": 1.8,
+        "lengthM": 4.9,
+        "flowLMin": 1.06,
+        "precipSquareMmH": 14,
+        "precipTriangleMmH": 14
+      }
+    ]
+  },
+  {
+    "modelId": "R-VAN-RCS",
+    "manufacturerId": "rain-bird",
+    "series": "R-VAN",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "sourceVersion": "07/24 D42102; official upload 2025-10",
+    "verifiedOn": "2026-10-10",
+    "verificationStatus": "Verified",
+    "pattern": "strip",
+    "rMin": null,
+    "rMax": null,
+    "arcMin": null,
+    "arcMax": null,
+    "performance": [
+      {
+        "pressureBar": 2.1,
+        "arcDeg": null,
+        "widthM": 1.2,
+        "lengthM": 4.3,
+        "flowLMin": 0.68,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 2.4,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 4.6,
+        "flowLMin": 0.83,
+        "precipSquareMmH": 14,
+        "precipTriangleMmH": 14
+      },
+      {
+        "pressureBar": 2.8,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 4.6,
+        "flowLMin": 0.87,
+        "precipSquareMmH": 15,
+        "precipTriangleMmH": 15
+      },
+      {
+        "pressureBar": 3.1,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 4.6,
+        "flowLMin": 0.91,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 3.4,
+        "arcDeg": null,
+        "widthM": 1.5,
+        "lengthM": 4.6,
+        "flowLMin": 0.95,
+        "precipSquareMmH": 16,
+        "precipTriangleMmH": 16
+      },
+      {
+        "pressureBar": 3.8,
+        "arcDeg": null,
+        "widthM": 1.8,
+        "lengthM": 4.9,
+        "flowLMin": 1.06,
+        "precipSquareMmH": 14,
+        "precipTriangleMmH": 14
+      }
+    ]
+  }
+]

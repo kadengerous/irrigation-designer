@@ -1,0 +1,1220 @@
+{
+  "sourceRows": [
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 20,
+      "radiusFt": 7.0,
+      "flowGpm": 0.23,
+      "precipSquareInHr": 1.81,
+      "precipTriangleInHr": 2.09,
+      "sourcePage": 1,
+      "sourceLine": 55
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 25,
+      "radiusFt": 7.0,
+      "flowGpm": 0.27,
+      "precipSquareInHr": 2.12,
+      "precipTriangleInHr": 2.45,
+      "sourcePage": 1,
+      "sourceLine": 56
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 30,
+      "radiusFt": 8.0,
+      "flowGpm": 0.28,
+      "precipSquareInHr": 1.68,
+      "precipTriangleInHr": 1.95,
+      "sourcePage": 1,
+      "sourceLine": 57
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 35,
+      "radiusFt": 8.0,
+      "flowGpm": 0.32,
+      "precipSquareInHr": 1.93,
+      "precipTriangleInHr": 2.22,
+      "sourcePage": 1,
+      "sourceLine": 58
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 40,
+      "radiusFt": 9.0,
+      "flowGpm": 0.35,
+      "precipSquareInHr": 1.66,
+      "precipTriangleInHr": 1.92,
+      "sourcePage": 1,
+      "sourceLine": 59
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 20,
+      "radiusFt": 7.0,
+      "flowGpm": 0.44,
+      "precipSquareInHr": 1.71,
+      "precipTriangleInHr": 1.97,
+      "sourcePage": 1,
+      "sourceLine": 60
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 25,
+      "radiusFt": 7.0,
+      "flowGpm": 0.49,
+      "precipSquareInHr": 1.93,
+      "precipTriangleInHr": 2.22,
+      "sourcePage": 1,
+      "sourceLine": 61
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 30,
+      "radiusFt": 8.0,
+      "flowGpm": 0.55,
+      "precipSquareInHr": 1.65,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 1,
+      "sourceLine": 62
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 35,
+      "radiusFt": 8.0,
+      "flowGpm": 0.63,
+      "precipSquareInHr": 1.88,
+      "precipTriangleInHr": 2.17,
+      "sourcePage": 1,
+      "sourceLine": 63
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 40,
+      "radiusFt": 9.0,
+      "flowGpm": 0.68,
+      "precipSquareInHr": 1.62,
+      "precipTriangleInHr": 1.87,
+      "sourcePage": 1,
+      "sourceLine": 64
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 20,
+      "radiusFt": 7.0,
+      "flowGpm": 0.65,
+      "precipSquareInHr": 1.71,
+      "precipTriangleInHr": 1.97,
+      "sourcePage": 1,
+      "sourceLine": 65
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 25,
+      "radiusFt": 7.0,
+      "flowGpm": 0.74,
+      "precipSquareInHr": 1.93,
+      "precipTriangleInHr": 2.22,
+      "sourcePage": 1,
+      "sourceLine": 66
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 30,
+      "radiusFt": 8.0,
+      "flowGpm": 0.82,
+      "precipSquareInHr": 1.65,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 1,
+      "sourceLine": 67
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 35,
+      "radiusFt": 8.0,
+      "flowGpm": 0.94,
+      "precipSquareInHr": 1.88,
+      "precipTriangleInHr": 2.17,
+      "sourcePage": 1,
+      "sourceLine": 68
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 40,
+      "radiusFt": 9.0,
+      "flowGpm": 1.02,
+      "precipSquareInHr": 1.62,
+      "precipTriangleInHr": 1.87,
+      "sourcePage": 1,
+      "sourceLine": 69
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 20,
+      "radiusFt": 7.0,
+      "flowGpm": 0.87,
+      "precipSquareInHr": 1.71,
+      "precipTriangleInHr": 1.97,
+      "sourcePage": 1,
+      "sourceLine": 70
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 25,
+      "radiusFt": 7.0,
+      "flowGpm": 0.98,
+      "precipSquareInHr": 1.93,
+      "precipTriangleInHr": 2.22,
+      "sourcePage": 1,
+      "sourceLine": 71
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 30,
+      "radiusFt": 8.0,
+      "flowGpm": 1.1,
+      "precipSquareInHr": 1.65,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 1,
+      "sourceLine": 72
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 35,
+      "radiusFt": 8.0,
+      "flowGpm": 1.25,
+      "precipSquareInHr": 1.88,
+      "precipTriangleInHr": 2.17,
+      "sourcePage": 1,
+      "sourceLine": 73
+    },
+    {
+      "modelId": "8A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 40,
+      "radiusFt": 9.0,
+      "flowGpm": 1.36,
+      "precipSquareInHr": 1.62,
+      "precipTriangleInHr": 1.87,
+      "sourcePage": 1,
+      "sourceLine": 74
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 20,
+      "radiusFt": 9.0,
+      "flowGpm": 0.36,
+      "precipSquareInHr": 1.71,
+      "precipTriangleInHr": 1.98,
+      "sourcePage": 1,
+      "sourceLine": 87
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 25,
+      "radiusFt": 9.0,
+      "flowGpm": 0.41,
+      "precipSquareInHr": 1.95,
+      "precipTriangleInHr": 2.25,
+      "sourcePage": 1,
+      "sourceLine": 88
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 30,
+      "radiusFt": 10.0,
+      "flowGpm": 0.44,
+      "precipSquareInHr": 1.69,
+      "precipTriangleInHr": 1.96,
+      "sourcePage": 1,
+      "sourceLine": 89
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 35,
+      "radiusFt": 10.0,
+      "flowGpm": 0.48,
+      "precipSquareInHr": 1.85,
+      "precipTriangleInHr": 2.13,
+      "sourcePage": 1,
+      "sourceLine": 90
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 40,
+      "radiusFt": 10.0,
+      "flowGpm": 0.51,
+      "precipSquareInHr": 1.96,
+      "precipTriangleInHr": 2.27,
+      "sourcePage": 1,
+      "sourceLine": 91
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 20,
+      "radiusFt": 9.0,
+      "flowGpm": 0.7,
+      "precipSquareInHr": 1.66,
+      "precipTriangleInHr": 1.92,
+      "sourcePage": 1,
+      "sourceLine": 92
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 25,
+      "radiusFt": 9.0,
+      "flowGpm": 0.78,
+      "precipSquareInHr": 1.85,
+      "precipTriangleInHr": 2.13,
+      "sourcePage": 1,
+      "sourceLine": 93
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 30,
+      "radiusFt": 10.0,
+      "flowGpm": 0.86,
+      "precipSquareInHr": 1.65,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 1,
+      "sourceLine": 94
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 35,
+      "radiusFt": 10.0,
+      "flowGpm": 0.93,
+      "precipSquareInHr": 1.79,
+      "precipTriangleInHr": 2.07,
+      "sourcePage": 1,
+      "sourceLine": 95
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 40,
+      "radiusFt": 10.0,
+      "flowGpm": 1.0,
+      "precipSquareInHr": 1.93,
+      "precipTriangleInHr": 2.22,
+      "sourcePage": 1,
+      "sourceLine": 96
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 20,
+      "radiusFt": 9.0,
+      "flowGpm": 1.05,
+      "precipSquareInHr": 1.66,
+      "precipTriangleInHr": 1.92,
+      "sourcePage": 1,
+      "sourceLine": 97
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 25,
+      "radiusFt": 9.0,
+      "flowGpm": 1.17,
+      "precipSquareInHr": 1.85,
+      "precipTriangleInHr": 2.13,
+      "sourcePage": 1,
+      "sourceLine": 98
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 30,
+      "radiusFt": 10.0,
+      "flowGpm": 1.28,
+      "precipSquareInHr": 1.65,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 1,
+      "sourceLine": 99
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 35,
+      "radiusFt": 10.0,
+      "flowGpm": 1.4,
+      "precipSquareInHr": 1.79,
+      "precipTriangleInHr": 2.07,
+      "sourcePage": 1,
+      "sourceLine": 100
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 40,
+      "radiusFt": 10.0,
+      "flowGpm": 1.5,
+      "precipSquareInHr": 1.93,
+      "precipTriangleInHr": 2.22,
+      "sourcePage": 1,
+      "sourceLine": 101
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 20,
+      "radiusFt": 9.0,
+      "flowGpm": 1.4,
+      "precipSquareInHr": 1.66,
+      "precipTriangleInHr": 1.92,
+      "sourcePage": 1,
+      "sourceLine": 102
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 25,
+      "radiusFt": 9.0,
+      "flowGpm": 1.55,
+      "precipSquareInHr": 1.85,
+      "precipTriangleInHr": 2.13,
+      "sourcePage": 1,
+      "sourceLine": 103
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 30,
+      "radiusFt": 10.0,
+      "flowGpm": 1.71,
+      "precipSquareInHr": 1.65,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 1,
+      "sourceLine": 104
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 35,
+      "radiusFt": 10.0,
+      "flowGpm": 1.86,
+      "precipSquareInHr": 1.79,
+      "precipTriangleInHr": 2.07,
+      "sourcePage": 1,
+      "sourceLine": 105
+    },
+    {
+      "modelId": "10A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 40,
+      "radiusFt": 10.0,
+      "flowGpm": 2.0,
+      "precipSquareInHr": 1.93,
+      "precipTriangleInHr": 2.22,
+      "sourcePage": 1,
+      "sourceLine": 106
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 20,
+      "radiusFt": 11.0,
+      "flowGpm": 0.53,
+      "precipSquareInHr": 1.69,
+      "precipTriangleInHr": 1.95,
+      "sourcePage": 2,
+      "sourceLine": 134
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 25,
+      "radiusFt": 11.0,
+      "flowGpm": 0.59,
+      "precipSquareInHr": 1.88,
+      "precipTriangleInHr": 2.17,
+      "sourcePage": 2,
+      "sourceLine": 135
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 30,
+      "radiusFt": 12.0,
+      "flowGpm": 0.63,
+      "precipSquareInHr": 1.68,
+      "precipTriangleInHr": 1.95,
+      "sourcePage": 2,
+      "sourceLine": 136
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 35,
+      "radiusFt": 12.0,
+      "flowGpm": 0.7,
+      "precipSquareInHr": 1.87,
+      "precipTriangleInHr": 2.16,
+      "sourcePage": 2,
+      "sourceLine": 137
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 40,
+      "radiusFt": 12.0,
+      "flowGpm": 0.75,
+      "precipSquareInHr": 2.01,
+      "precipTriangleInHr": 2.32,
+      "sourcePage": 2,
+      "sourceLine": 138
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 20,
+      "radiusFt": 11.0,
+      "flowGpm": 1.03,
+      "precipSquareInHr": 1.63,
+      "precipTriangleInHr": 1.88,
+      "sourcePage": 2,
+      "sourceLine": 139
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 25,
+      "radiusFt": 11.0,
+      "flowGpm": 1.12,
+      "precipSquareInHr": 1.78,
+      "precipTriangleInHr": 2.06,
+      "sourcePage": 2,
+      "sourceLine": 140
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 30,
+      "radiusFt": 12.0,
+      "flowGpm": 1.22,
+      "precipSquareInHr": 1.63,
+      "precipTriangleInHr": 1.88,
+      "sourcePage": 2,
+      "sourceLine": 141
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 35,
+      "radiusFt": 12.0,
+      "flowGpm": 1.33,
+      "precipSquareInHr": 1.78,
+      "precipTriangleInHr": 2.05,
+      "sourcePage": 2,
+      "sourceLine": 142
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 40,
+      "radiusFt": 12.0,
+      "flowGpm": 1.46,
+      "precipSquareInHr": 1.95,
+      "precipTriangleInHr": 2.25,
+      "sourcePage": 2,
+      "sourceLine": 143
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 20,
+      "radiusFt": 11.0,
+      "flowGpm": 1.54,
+      "precipSquareInHr": 1.63,
+      "precipTriangleInHr": 1.88,
+      "sourcePage": 2,
+      "sourceLine": 144
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 25,
+      "radiusFt": 11.0,
+      "flowGpm": 1.68,
+      "precipSquareInHr": 1.78,
+      "precipTriangleInHr": 2.06,
+      "sourcePage": 2,
+      "sourceLine": 145
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 30,
+      "radiusFt": 12.0,
+      "flowGpm": 1.83,
+      "precipSquareInHr": 1.63,
+      "precipTriangleInHr": 1.88,
+      "sourcePage": 2,
+      "sourceLine": 146
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 35,
+      "radiusFt": 12.0,
+      "flowGpm": 2.0,
+      "precipSquareInHr": 1.78,
+      "precipTriangleInHr": 2.05,
+      "sourcePage": 2,
+      "sourceLine": 147
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 40,
+      "radiusFt": 12.0,
+      "flowGpm": 2.19,
+      "precipSquareInHr": 1.95,
+      "precipTriangleInHr": 2.25,
+      "sourcePage": 2,
+      "sourceLine": 148
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 20,
+      "radiusFt": 11.0,
+      "flowGpm": 2.05,
+      "precipSquareInHr": 1.63,
+      "precipTriangleInHr": 1.88,
+      "sourcePage": 2,
+      "sourceLine": 149
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 25,
+      "radiusFt": 11.0,
+      "flowGpm": 2.24,
+      "precipSquareInHr": 1.78,
+      "precipTriangleInHr": 2.06,
+      "sourcePage": 2,
+      "sourceLine": 150
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 30,
+      "radiusFt": 12.0,
+      "flowGpm": 2.44,
+      "precipSquareInHr": 1.63,
+      "precipTriangleInHr": 1.88,
+      "sourcePage": 2,
+      "sourceLine": 151
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 35,
+      "radiusFt": 12.0,
+      "flowGpm": 2.66,
+      "precipSquareInHr": 1.78,
+      "precipTriangleInHr": 2.05,
+      "sourcePage": 2,
+      "sourceLine": 152
+    },
+    {
+      "modelId": "12A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 40,
+      "radiusFt": 12.0,
+      "flowGpm": 2.92,
+      "precipSquareInHr": 1.95,
+      "precipTriangleInHr": 2.25,
+      "sourcePage": 2,
+      "sourceLine": 153
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 20,
+      "radiusFt": 14.0,
+      "flowGpm": 0.78,
+      "precipSquareInHr": 1.53,
+      "precipTriangleInHr": 1.77,
+      "sourcePage": 2,
+      "sourceLine": 166
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 25,
+      "radiusFt": 14.0,
+      "flowGpm": 0.88,
+      "precipSquareInHr": 1.73,
+      "precipTriangleInHr": 2.0,
+      "sourcePage": 2,
+      "sourceLine": 167
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 30,
+      "radiusFt": 15.0,
+      "flowGpm": 0.96,
+      "precipSquareInHr": 1.64,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 2,
+      "sourceLine": 168
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 35,
+      "radiusFt": 15.0,
+      "flowGpm": 1.07,
+      "precipSquareInHr": 1.83,
+      "precipTriangleInHr": 2.11,
+      "sourcePage": 2,
+      "sourceLine": 169
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 40,
+      "radiusFt": 15.0,
+      "flowGpm": 1.13,
+      "precipSquareInHr": 1.93,
+      "precipTriangleInHr": 2.23,
+      "sourcePage": 2,
+      "sourceLine": 170
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 20,
+      "radiusFt": 14.0,
+      "flowGpm": 1.53,
+      "precipSquareInHr": 1.5,
+      "precipTriangleInHr": 1.73,
+      "sourcePage": 2,
+      "sourceLine": 171
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 25,
+      "radiusFt": 14.0,
+      "flowGpm": 1.69,
+      "precipSquareInHr": 1.66,
+      "precipTriangleInHr": 1.91,
+      "sourcePage": 2,
+      "sourceLine": 172
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 30,
+      "radiusFt": 15.0,
+      "flowGpm": 1.87,
+      "precipSquareInHr": 1.6,
+      "precipTriangleInHr": 1.85,
+      "sourcePage": 2,
+      "sourceLine": 173
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 35,
+      "radiusFt": 15.0,
+      "flowGpm": 2.05,
+      "precipSquareInHr": 1.75,
+      "precipTriangleInHr": 2.03,
+      "sourcePage": 2,
+      "sourceLine": 174
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 40,
+      "radiusFt": 15.0,
+      "flowGpm": 2.22,
+      "precipSquareInHr": 1.9,
+      "precipTriangleInHr": 2.19,
+      "sourcePage": 2,
+      "sourceLine": 175
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 20,
+      "radiusFt": 14.0,
+      "flowGpm": 2.29,
+      "precipSquareInHr": 1.5,
+      "precipTriangleInHr": 1.73,
+      "sourcePage": 2,
+      "sourceLine": 176
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 25,
+      "radiusFt": 14.0,
+      "flowGpm": 2.53,
+      "precipSquareInHr": 1.66,
+      "precipTriangleInHr": 1.91,
+      "sourcePage": 2,
+      "sourceLine": 177
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 30,
+      "radiusFt": 15.0,
+      "flowGpm": 2.81,
+      "precipSquareInHr": 1.6,
+      "precipTriangleInHr": 1.85,
+      "sourcePage": 2,
+      "sourceLine": 178
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 35,
+      "radiusFt": 15.0,
+      "flowGpm": 3.08,
+      "precipSquareInHr": 1.75,
+      "precipTriangleInHr": 2.03,
+      "sourcePage": 2,
+      "sourceLine": 179
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 40,
+      "radiusFt": 15.0,
+      "flowGpm": 3.33,
+      "precipSquareInHr": 1.9,
+      "precipTriangleInHr": 2.19,
+      "sourcePage": 2,
+      "sourceLine": 180
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 20,
+      "radiusFt": 14.0,
+      "flowGpm": 3.05,
+      "precipSquareInHr": 1.5,
+      "precipTriangleInHr": 1.73,
+      "sourcePage": 2,
+      "sourceLine": 181
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 25,
+      "radiusFt": 14.0,
+      "flowGpm": 3.37,
+      "precipSquareInHr": 1.66,
+      "precipTriangleInHr": 1.91,
+      "sourcePage": 2,
+      "sourceLine": 182
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 30,
+      "radiusFt": 15.0,
+      "flowGpm": 3.74,
+      "precipSquareInHr": 1.6,
+      "precipTriangleInHr": 1.85,
+      "sourcePage": 2,
+      "sourceLine": 183
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 35,
+      "radiusFt": 15.0,
+      "flowGpm": 4.1,
+      "precipSquareInHr": 1.75,
+      "precipTriangleInHr": 2.03,
+      "sourcePage": 2,
+      "sourceLine": 184
+    },
+    {
+      "modelId": "15A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 40,
+      "radiusFt": 15.0,
+      "flowGpm": 4.43,
+      "precipSquareInHr": 1.9,
+      "precipTriangleInHr": 2.19,
+      "sourcePage": 2,
+      "sourceLine": 185
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 20,
+      "radiusFt": 16.0,
+      "flowGpm": 0.95,
+      "precipSquareInHr": 1.43,
+      "precipTriangleInHr": 1.66,
+      "sourcePage": 2,
+      "sourceLine": 198
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 25,
+      "radiusFt": 16.0,
+      "flowGpm": 1.07,
+      "precipSquareInHr": 1.6,
+      "precipTriangleInHr": 1.85,
+      "sourcePage": 2,
+      "sourceLine": 199
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 30,
+      "radiusFt": 17.0,
+      "flowGpm": 1.24,
+      "precipSquareInHr": 1.65,
+      "precipTriangleInHr": 1.91,
+      "sourcePage": 2,
+      "sourceLine": 200
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 35,
+      "radiusFt": 17.0,
+      "flowGpm": 1.29,
+      "precipSquareInHr": 1.72,
+      "precipTriangleInHr": 1.99,
+      "sourcePage": 2,
+      "sourceLine": 201
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 90,
+      "pressurePsi": 40,
+      "radiusFt": 17.0,
+      "flowGpm": 1.39,
+      "precipSquareInHr": 1.85,
+      "precipTriangleInHr": 2.13,
+      "sourcePage": 2,
+      "sourceLine": 202
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 20,
+      "radiusFt": 16.0,
+      "flowGpm": 1.77,
+      "precipSquareInHr": 1.33,
+      "precipTriangleInHr": 1.53,
+      "sourcePage": 2,
+      "sourceLine": 203
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 25,
+      "radiusFt": 16.0,
+      "flowGpm": 2.04,
+      "precipSquareInHr": 1.53,
+      "precipTriangleInHr": 1.77,
+      "sourcePage": 2,
+      "sourceLine": 204
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 30,
+      "radiusFt": 17.0,
+      "flowGpm": 2.36,
+      "precipSquareInHr": 1.57,
+      "precipTriangleInHr": 1.82,
+      "sourcePage": 2,
+      "sourceLine": 205
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 35,
+      "radiusFt": 17.0,
+      "flowGpm": 2.47,
+      "precipSquareInHr": 1.64,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 2,
+      "sourceLine": 206
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 180,
+      "pressurePsi": 40,
+      "radiusFt": 17.0,
+      "flowGpm": 2.65,
+      "precipSquareInHr": 1.77,
+      "precipTriangleInHr": 2.04,
+      "sourcePage": 2,
+      "sourceLine": 207
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 20,
+      "radiusFt": 16.0,
+      "flowGpm": 2.65,
+      "precipSquareInHr": 1.33,
+      "precipTriangleInHr": 1.53,
+      "sourcePage": 2,
+      "sourceLine": 208
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 25,
+      "radiusFt": 16.0,
+      "flowGpm": 3.05,
+      "precipSquareInHr": 1.53,
+      "precipTriangleInHr": 1.77,
+      "sourcePage": 2,
+      "sourceLine": 209
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 30,
+      "radiusFt": 17.0,
+      "flowGpm": 3.54,
+      "precipSquareInHr": 1.57,
+      "precipTriangleInHr": 1.82,
+      "sourcePage": 2,
+      "sourceLine": 210
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 35,
+      "radiusFt": 17.0,
+      "flowGpm": 3.7,
+      "precipSquareInHr": 1.64,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 2,
+      "sourceLine": 211
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 270,
+      "pressurePsi": 40,
+      "radiusFt": 17.0,
+      "flowGpm": 3.98,
+      "precipSquareInHr": 1.77,
+      "precipTriangleInHr": 2.04,
+      "sourcePage": 2,
+      "sourceLine": 212
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 20,
+      "radiusFt": 16.0,
+      "flowGpm": 3.53,
+      "precipSquareInHr": 1.33,
+      "precipTriangleInHr": 1.53,
+      "sourcePage": 2,
+      "sourceLine": 213
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 25,
+      "radiusFt": 16.0,
+      "flowGpm": 4.07,
+      "precipSquareInHr": 1.53,
+      "precipTriangleInHr": 1.77,
+      "sourcePage": 2,
+      "sourceLine": 214
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 30,
+      "radiusFt": 17.0,
+      "flowGpm": 4.72,
+      "precipSquareInHr": 1.57,
+      "precipTriangleInHr": 1.82,
+      "sourcePage": 2,
+      "sourceLine": 215
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 35,
+      "radiusFt": 17.0,
+      "flowGpm": 4.93,
+      "precipSquareInHr": 1.64,
+      "precipTriangleInHr": 1.9,
+      "sourcePage": 2,
+      "sourceLine": 216
+    },
+    {
+      "modelId": "17A-HE",
+      "arcDeg": 360,
+      "pressurePsi": 40,
+      "radiusFt": 17.0,
+      "flowGpm": 5.3,
+      "precipSquareInHr": 1.77,
+      "precipTriangleInHr": 2.04,
+      "sourcePage": 2,
+      "sourceLine": 217
+    }
+  ],
+  "patches": [
+    {
+      "modelId": "8A-HE",
+      "nozzleId": "8A-HE",
+      "rowIndex": 19,
+      "match": {
+        "arcDeg": 360,
+        "pressureBar": 2.8
+      },
+      "set": {
+        "flowLMin": 5.148160026,
+        "flowM3H": 0.308889602
+      },
+      "before": {
+        "flowLMin": 4.769619,
+        "flowM3H": 0.2861771
+      },
+      "source": {
+        "modelId": "8A-HE",
+        "arcDeg": 360,
+        "pressurePsi": 40,
+        "radiusFt": 9.0,
+        "flowGpm": 1.36,
+        "precipSquareInHr": 1.62,
+        "precipTriangleInHr": 1.87,
+        "sourcePage": 1,
+        "sourceLine": 74
+      },
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "reason": "Current product-page-linked US cut sheet corroborates the same US pressure/radius grid but corrects product-page HTML cells; retain one coherent customary-unit grid converted to SI."
+    },
+    {
+      "modelId": "10A-HE",
+      "nozzleId": "10A-HE",
+      "rowIndex": 10,
+      "match": {
+        "arcDeg": 270,
+        "pressureBar": 1.4
+      },
+      "set": {
+        "precipTriangleMmH": 48.768
+      },
+      "before": {
+        "precipTriangleMmH": 50.038
+      },
+      "source": {
+        "modelId": "10A-HE",
+        "arcDeg": 270,
+        "pressurePsi": 20,
+        "radiusFt": 9.0,
+        "flowGpm": 1.05,
+        "precipSquareInHr": 1.66,
+        "precipTriangleInHr": 1.92,
+        "sourcePage": 1,
+        "sourceLine": 97
+      },
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "reason": "Current product-page-linked US cut sheet corroborates the same US pressure/radius grid but corrects product-page HTML cells; retain one coherent customary-unit grid converted to SI."
+    },
+    {
+      "modelId": "10A-HE",
+      "nozzleId": "10A-HE",
+      "rowIndex": 11,
+      "match": {
+        "arcDeg": 270,
+        "pressureBar": 1.7
+      },
+      "set": {
+        "precipTriangleMmH": 54.102
+      },
+      "before": {
+        "precipTriangleMmH": 56.388
+      },
+      "source": {
+        "modelId": "10A-HE",
+        "arcDeg": 270,
+        "pressurePsi": 25,
+        "radiusFt": 9.0,
+        "flowGpm": 1.17,
+        "precipSquareInHr": 1.85,
+        "precipTriangleInHr": 2.13,
+        "sourcePage": 1,
+        "sourceLine": 98
+      },
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "reason": "Current product-page-linked US cut sheet corroborates the same US pressure/radius grid but corrects product-page HTML cells; retain one coherent customary-unit grid converted to SI."
+    },
+    {
+      "modelId": "17A-HE",
+      "nozzleId": "17A-HE",
+      "rowIndex": 19,
+      "match": {
+        "arcDeg": 360,
+        "pressureBar": 2.8
+      },
+      "set": {
+        "precipTriangleMmH": 51.816
+      },
+      "before": {
+        "precipTriangleMmH": null
+      },
+      "source": {
+        "modelId": "17A-HE",
+        "arcDeg": 360,
+        "pressurePsi": 40,
+        "radiusFt": 17.0,
+        "flowGpm": 5.3,
+        "precipSquareInHr": 1.77,
+        "precipTriangleInHr": 2.04,
+        "sourcePage": 2,
+        "sourceLine": 217
+      },
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "reason": "Current product-page-linked US cut sheet corroborates the same US pressure/radius grid but corrects product-page HTML cells; retain one coherent customary-unit grid converted to SI."
+    }
+  ]
+}

@@ -1,0 +1,999 @@
+{
+  "note": "Decorative variants; dimensions are editable placement defaults, not botanical or product specifications.",
+  "assets": [
+    {
+      "id": "tree-golden-fan",
+      "category": "tree",
+      "source": "public/plants/tree-golden-fan.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: golden broad spreading crown with many irregular clusters of small fan-shaped yellow leaves, branching lacy silhouette. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-golden-cloud",
+      "category": "tree",
+      "source": "public/plants/tree-golden-cloud.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: wide cloud-like crown with separated rounded billowing lobes of tiny butter-yellow oval leaves, dense and softly lobed. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-lemon-column",
+      "category": "tree",
+      "source": "public/plants/tree-lemon-column.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: compact columnar deciduous tree seen directly from above, tight small roughly circular crown of upright densely layered lemon-yellow narrow leaves. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-amber-lace",
+      "category": "tree",
+      "source": "public/plants/tree-amber-lace.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: irregular spreading lace crown of deeply dissected palmate amber-orange fine leaves, visible delicate branching and airy holes. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-lime-umbrella",
+      "category": "tree",
+      "source": "public/plants/tree-lime-umbrella.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: large low umbrella crown of fine compound lime-green feathery leaflets in layered radiating flat sprays, asymmetric spreading shape. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-fern-canopy",
+      "category": "tree",
+      "source": "public/plants/tree-fern-canopy.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: fernlike deciduous crown made of long bipinnate delicate fern-leaf sprays radiating in irregular spreading tiers, fresh green foliage. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-silver-weeping",
+      "category": "tree",
+      "source": "public/plants/tree-silver-weeping.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: weeping tree crown overhead, flowing curved trailing sprays of long narrow silvery sage leaves, loose fountain-shaped canopy perimeter. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-green-weeping",
+      "category": "tree",
+      "source": "public/plants/tree-green-weeping.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: broad weeping canopy overhead with fine long willowlike bright green leaves on curving cascading radial branches, wispy perimeter. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-golden-weeping",
+      "category": "tree",
+      "source": "public/plants/tree-golden-weeping.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: golden weeping crown, numerous long drooping slender branches bending radially outward bearing tiny yellow-green narrow leaves, airy fringe. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-blue-spruce",
+      "category": "tree",
+      "source": "public/plants/tree-blue-spruce.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: blue spruce-like crown, sharp radial starburst branch tiers covered in short stiff powder-blue needles, clearly central apex seen overhead. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-silver-fir",
+      "category": "tree",
+      "source": "public/plants/tree-silver-fir.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: fir-like crown with elegantly flattened combs of silver-green short needles, dense radial layered branches and soft scalloped boundary. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-dark-fir",
+      "category": "tree",
+      "source": "public/plants/tree-dark-fir.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: dark fir-like dense crown with flat glossy deep forest-green needle sprays and distinct broad radial tiered branches, central point seen from above. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-open-pine",
+      "category": "tree",
+      "source": "public/plants/tree-open-pine.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: open irregular pine-like crown with separated rounded tufts of long slender needles at the ends of gnarled visible branching, translucent spaces. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-stone-pine",
+      "category": "tree",
+      "source": "public/plants/tree-stone-pine.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: wide flattened umbrella pine-like crown with dense broad irregular plates of long emerald needle bundles, sprawling asymmetric rounded perimeter. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-soft-larch",
+      "category": "tree",
+      "source": "public/plants/tree-soft-larch.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: delicate larch-like tree crown with fine soft light-green needle tufts along fine radiating twig branches, transparent airy canopy. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-copper-oak",
+      "category": "tree",
+      "source": "public/plants/tree-copper-oak.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: broad irregular crown with richly textured large lobed copper-russet leaves interspersed olive green, robust multi-lobed spreading form. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-purple-lace",
+      "category": "tree",
+      "source": "public/plants/tree-purple-lace.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: delicate finely cut purple-maroon palmate leaves on horizontal radiating branching, open lacy small tree canopy with complex pointed outline. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-white-blossom",
+      "category": "tree",
+      "source": "public/plants/tree-white-blossom.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: rounded but irregular tree crown of numerous small white blossom clusters with fresh green leaf gaps and delicate branching, flowering ornamental. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-pink-blossom",
+      "category": "tree",
+      "source": "public/plants/tree-pink-blossom.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: spreading airy tree crown laden with soft rose-pink blossom clusters on dark fine branches with sparse young leaves, uneven natural outline. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-rounded-holly",
+      "category": "tree",
+      "source": "public/plants/tree-rounded-holly.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: dense rounded crown with thick broad dark glossy evergreen leaves with clear highlights, naturally undulating outline and occasional pale new growth. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-aspen-light",
+      "category": "tree",
+      "source": "public/plants/tree-aspen-light.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: airy irregular crown with small round pale-green fluttering leaves on delicate branching, many subtle gaps and separated crown lobes. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "tree-palm-fan",
+      "category": "tree",
+      "source": "public/plants/tree-palm-fan.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: palm-like crown from directly above, long petioles radiating from hidden center with large pleated fan-shaped blue-green fronds forming an irregular star. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-thuja-globe",
+      "category": "shrub",
+      "source": "public/plants/shrub-thuja-globe.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: dense compact spherical thuja-like shrub viewed from above, intricate flattened scalloped emerald-green scale foliage sprays. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-thuja-gold",
+      "category": "shrub",
+      "source": "public/plants/shrub-thuja-gold.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: compact golden thuja-like shrub with finely layered flattened fan sprays of golden lime scale foliage, slightly irregular rounded crown. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-thuja-column",
+      "category": "shrub",
+      "source": "public/plants/shrub-thuja-column.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: narrow columnar thuja-like shrub viewed strictly overhead, small compact dense radial crown of dark green flat scale-foliage fans, tiny central tip. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-thuja-feather",
+      "category": "shrub",
+      "source": "public/plants/shrub-thuja-feather.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: loosely spreading thuja-like shrub with long airy feathery scale-foliage sprays, pale green tips and irregular branching star-shaped outline. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-juniper-blue",
+      "category": "shrub",
+      "source": "public/plants/shrub-juniper-blue.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: low spreading juniper-like shrub with irregular horizontal limbs bearing tiny sharp silvery-blue needles, rugged asymmetrical shape. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-juniper-gold",
+      "category": "shrub",
+      "source": "public/plants/shrub-juniper-gold.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: low wide spreading conifer shrub with long arching branches of scale needles dark green inside and yellow golden tips, irregular lobed crown. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-hedge-dark-long",
+      "category": "shrub",
+      "source": "public/plants/shrub-hedge-dark-long.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: ONE continuous clipped hedge section seen exactly overhead, genuine long narrow RECTANGULAR footprint 4:1 ratio, straight parallel sides and square ends, densely packed tiny dark glossy leaves, subtle uneven leaf surface. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-hedge-golden-long",
+      "category": "shrub",
+      "source": "public/plants/shrub-hedge-golden-long.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: ONE clipped golden hedge section seen exactly overhead, true long horizontal RECTANGULAR footprint 4:1 ratio with straight sides and square corners, tiny densely clipped yellow leaves, organic leaf detail. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-hedge-mixed-long",
+      "category": "shrub",
+      "source": "public/plants/shrub-hedge-mixed-long.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: ONE continuous mixed foliage clipped hedge section overhead, true elongated RECTANGULAR footprint 4:1 ratio, straight sides squared ends, interwoven patches of green small leaves and burgundy and golden foliage, not separate bushes. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-boxwood-square",
+      "category": "shrub",
+      "source": "public/plants/shrub-boxwood-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: one strictly square clipped boxwood-like shrub overhead, genuine SQUARE footprint with four straight edges and square corners, very dense tiny round emerald glossy leaves, textured natural surface. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-hedge-thuja",
+      "category": "shrub",
+      "source": "public/plants/shrub-hedge-thuja.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: one continuous clipped thuja-like hedge section strictly overhead, long RECTANGULAR footprint 3:1 ratio with straight sides square ends, tightly interlocking dense fan-shaped dark emerald scale foliage. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-hedge-silver",
+      "category": "shrub",
+      "source": "public/plants/shrub-hedge-silver.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: one long clipped silvery hedge section strictly overhead, genuine RECTANGULAR footprint 4:1 ratio straight edges squared ends, small velvety silver-gray leaves densely interwoven. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-boxwood-round",
+      "category": "shrub",
+      "source": "public/plants/shrub-boxwood-round.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: precisely circular clipped ornamental shrub overhead, fine grain dense tiny round rich green glossy leaves, subtle darker center pockets and tidy rounded circumference. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-spirea-foam",
+      "category": "shrub",
+      "source": "public/plants/shrub-spirea-foam.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: natural spreading shrub with arching slender branches bearing dense tiny white flower foam clusters and small green leaves, open uneven fountain outline. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-flower-coral",
+      "category": "shrub",
+      "source": "public/plants/shrub-flower-coral.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: loose multi-lobed shrub crown bearing clusters of coral red small flowers among larger matte medium-green elliptical leaves, irregular canopy. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-hydrangea-blue",
+      "category": "shrub",
+      "source": "public/plants/shrub-hydrangea-blue.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: shrub canopy overhead with several large distinct rounded blue-lilac hydrangea-like clustered flower heads above broad quilted deep green leaves, natural irregular edge. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-fern-mound",
+      "category": "shrub",
+      "source": "public/plants/shrub-fern-mound.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: low decorative shrub with highly divided fernlike fine chartreuse leaves on many arching branching sprays, lacy wide irregular mound viewed directly overhead. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-purple-spikes",
+      "category": "shrub",
+      "source": "public/plants/shrub-purple-spikes.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: airy shrub overhead with slender pointed violet flower panicles distributed on radiating gray-green narrow-leaf branches, visible individual tapered flower spikes. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-silver-cushion",
+      "category": "shrub",
+      "source": "public/plants/shrub-silver-cushion.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: dense compact silvery cushion shrub overhead, hundreds of tiny velvety deeply divided silver-gray leaves, softly lobed perimeter, no flowers. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "shrub-variegated-large",
+      "category": "shrub",
+      "source": "public/plants/shrub-variegated-large.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated decorative landscape-plan plant PNG. Subject: rounded irregular shrub canopy of distinct large leathery oval leaves dark green centered and broad ivory cream margins, layered individual large leaf clusters. Strict vertical overhead orthographic view looking directly down at plant crown, no side perspective. Professional botanical collage render matching detailed natural garden-plan cutouts, fine irregular leaf clusters, subtle internal shadows, dimensional foliage. Entire plant inside canvas with 7% transparent margin; fills canvas. Transparent alpha background. No soil, ground, pot, trunk side view, text, grid, border, watermark. One individual plant asset, not a collection or contact sheet."
+    },
+    {
+      "id": "flower-ivory-ribbon",
+      "category": "flower",
+      "source": "public/plants/flower-ivory-ribbon.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A long narrow rectangular flowerbed strip, 5:1 footprint, dense tiny ivory five-petal flowers and fernlike foliage in two straight ranks."
+    },
+    {
+      "id": "flower-sun-checker",
+      "category": "flower",
+      "source": "public/plants/flower-sun-checker.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A square formal flowerbed, 3 by 3 checker pattern of dense golden-yellow daisy flowers alternating with white tiny flowers, crisp square planted silhouette."
+    },
+    {
+      "id": "flower-ruby-border",
+      "category": "flower",
+      "source": "public/plants/flower-ruby-border.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A straight narrow rectangular border 4:1 footprint, rich ruby red layered pompon blooms in three staggered rows with glossy small dark leaves."
+    },
+    {
+      "id": "flower-blush-square",
+      "category": "flower",
+      "source": "public/plants/flower-blush-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A square planted carpet of blush pink small star-shaped flowers, darker pink buds, tiny rounded green leaves, clear squared corners."
+    },
+    {
+      "id": "flower-blue-crescent",
+      "category": "flower",
+      "source": "public/plants/flower-blue-crescent.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A gracefully curved crescent-shaped planting of small sky-blue flowers with white eyes and delicate gray-green leaves, open transparent concave center."
+    },
+    {
+      "id": "flower-violet-ribbon",
+      "category": "flower",
+      "source": "public/plants/flower-violet-ribbon.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A long rectangular band 5:1 footprint of violet narrow-petal flowers and small lime leaves, closely planted staggered clusters."
+    },
+    {
+      "id": "flower-coral-checker",
+      "category": "flower",
+      "source": "public/plants/flower-coral-checker.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A square formal 4 by 4 checkerboard planting of coral-pink and creamy yellow cup flowers, dense low foliage, strongly square silhouette."
+    },
+    {
+      "id": "flower-gold-edge",
+      "category": "flower",
+      "source": "public/plants/flower-gold-edge.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A narrow straight 6:1 rectangular flower border, small bright golden double flowers interspersed with tiny orange buds and feathery leaves."
+    },
+    {
+      "id": "flower-snow-square",
+      "category": "flower",
+      "source": "public/plants/flower-snow-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A square dense planting of snowy white tiny cross-shaped flowers above a thick dark small-leaf cushion, formally squared planted edges."
+    },
+    {
+      "id": "flower-rose-crescent",
+      "category": "flower",
+      "source": "public/plants/flower-rose-crescent.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A broad crescent bed of magenta and pale pink rounded flower clusters with crinkled green leaves, distinct concave inner curve."
+    },
+    {
+      "id": "flower-meadow-strip",
+      "category": "flower",
+      "source": "public/plants/flower-meadow-strip.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A rectangular 4:1 flowerbed strip with natural intermingled tiny blue, white, yellow and pink meadowlike blooms, varied finely cut leaves, straight overall edges."
+    },
+    {
+      "id": "flower-scarlet-square",
+      "category": "flower",
+      "source": "public/plants/flower-scarlet-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A square arranged dense carpet of scarlet five-petal blooms with dark central eyes, broad bronze-green leaves, squared corners."
+    },
+    {
+      "id": "flower-lilac-border",
+      "category": "flower",
+      "source": "public/plants/flower-lilac-border.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A long narrow 5:1 rectangular border of pale lilac clustered starry flowers and airy gray green narrow foliage, little transparent gaps."
+    },
+    {
+      "id": "flower-lemon-crescent",
+      "category": "flower",
+      "source": "public/plants/flower-lemon-crescent.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A slim arc-shaped crescent grouping of lemon yellow daisy blooms, cream buds and serrated green leaves, deeply concave silhouette."
+    },
+    {
+      "id": "flower-tricolor-square",
+      "category": "flower",
+      "source": "public/plants/flower-tricolor-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A formal square flower carpet organized as three distinct parallel planted bands of deep blue, snowy white and cherry red tiny blossoms, lush foliage."
+    },
+    {
+      "id": "flower-pearl-border",
+      "category": "flower",
+      "source": "public/plants/flower-pearl-border.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A straight 4:1 rectangular planting of large pearl-white layered flowers in two ranks surrounded by smaller white buds and waxy dark leaves."
+    },
+    {
+      "id": "flower-sunset-strip",
+      "category": "flower",
+      "source": "public/plants/flower-sunset-strip.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A long narrow rectangular flowerbed with alternating irregular masses of orange, crimson and golden small rosette blooms, fine dense foliage."
+    },
+    {
+      "id": "flower-indigo-square",
+      "category": "flower",
+      "source": "public/plants/flower-indigo-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A square dense carpet of deep indigo pinwheel flowers mixed with tiny lavender stars, narrow pointed green leaves, formal rectangular corners."
+    },
+    {
+      "id": "flower-pastel-checker",
+      "category": "flower",
+      "source": "public/plants/flower-pastel-checker.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A square formal checker patch with 2 by 2 broad quadrants of pale pink, butter yellow, light blue and white small flowers, distinct planted color blocks."
+    },
+    {
+      "id": "flower-crimson-crescent",
+      "category": "flower",
+      "source": "public/plants/flower-crimson-crescent.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A compact broad crescent of crimson ruffled flowers dotted with tiny ivory blooms and rounded green leaves, open transparent inner curve."
+    },
+    {
+      "id": "flower-white-blue-strip",
+      "category": "flower",
+      "source": "public/plants/flower-white-blue-strip.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A 5:1 narrow straight rectangular border with blue tiny flowers forming center stripe and white daisies along both long edges, dense fine foliage."
+    },
+    {
+      "id": "flower-cerise-island",
+      "category": "flower",
+      "source": "public/plants/flower-cerise-island.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: An asymmetric kidney-shaped flower grouping with cerise double blooms, pale pink tiny flowers and intricate feathery green foliage, strong sculptural plant silhouette."
+    },
+    {
+      "id": "grass-silver-fountain",
+      "category": "grass",
+      "source": "public/plants/grass-silver-fountain.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: One radiating tuft of exceptionally fine silver-green grass blades arching evenly outward into a soft airy fountain crown, sparse tan threadlike seed stems."
+    },
+    {
+      "id": "grass-copper-whorl",
+      "category": "grass",
+      "source": "public/plants/grass-copper-whorl.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: One dense whorled tussock of curled copper and olive hair-fine sedge-like blades spiraling outward, uneven airy filament tips."
+    },
+    {
+      "id": "grass-blue-needle",
+      "category": "grass",
+      "source": "public/plants/grass-blue-needle.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A compact dense radial dome of short stiff icy blue needle-thin grass blades with clear spiky perimeter and darker blue-green center."
+    },
+    {
+      "id": "grass-lime-fan",
+      "category": "grass",
+      "source": "public/plants/grass-lime-fan.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A broad layered fan-shaped clump of flat bright lime ribbonlike grass blades, gracefully folding and overlapping, asymmetric foliage spread."
+    },
+    {
+      "id": "grass-bronze-row",
+      "category": "grass",
+      "source": "public/plants/grass-bronze-row.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A long narrow 5:1 rectangular row of five overlapping copper bronze fine-leaved tussocks, repeated small radiating crowns visibly interlocking."
+    },
+    {
+      "id": "grass-ivory-stripe",
+      "category": "grass",
+      "source": "public/plants/grass-ivory-stripe.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A full radiating tussock of broad arching grass leaves with vivid ivory longitudinal stripes and deep green edges, some curled tips."
+    },
+    {
+      "id": "grass-amber-feather",
+      "category": "grass",
+      "source": "public/plants/grass-amber-feather.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A loose radial clump of golden narrow blades with many small fine airy amber feathery panicles radiating around the crown."
+    },
+    {
+      "id": "grass-sea-mist",
+      "category": "grass",
+      "source": "public/plants/grass-sea-mist.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: An open asymmetric tussock of long soft blue-green arching filaments, silver wispy seed heads and transparent gaps between sparse blades."
+    },
+    {
+      "id": "grass-ruby-tips",
+      "category": "grass",
+      "source": "public/plants/grass-ruby-tips.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A sharply radiating compact grass clump, stiff green basal blades transitioning naturally to wine-red tips, tapered irregular starburst silhouette."
+    },
+    {
+      "id": "grass-golden-comb",
+      "category": "grass",
+      "source": "public/plants/grass-golden-comb.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A rectangular 3:1 grouping of dense upright-looking narrow gold blades seen as top-down radiating small crowns in two staggered ranks, comb-like fine texture."
+    },
+    {
+      "id": "grass-pearl-plumes",
+      "category": "grass",
+      "source": "public/plants/grass-pearl-plumes.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A green fine-bladed radial crown topped with many short pearl-colored fluffy bottlebrush plumes, varied natural outward orientations seen from overhead."
+    },
+    {
+      "id": "grass-forest-sedge",
+      "category": "grass",
+      "source": "public/plants/grass-forest-sedge.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A dark forest-green low spreading sedge-like clump with broad smooth curved ribbon leaves, sparse yellow-green leaf veins and a loose irregular perimeter."
+    },
+    {
+      "id": "grass-blue-row",
+      "category": "grass",
+      "source": "public/plants/grass-blue-row.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A long narrow rectangular 5:1 strip made of six short dense icy-blue spiky grass tussocks, distinct interlocking starburst centers."
+    },
+    {
+      "id": "grass-honey-curls",
+      "category": "grass",
+      "source": "public/plants/grass-honey-curls.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: An airy small clump of honey-gold long narrow leaves with pronounced looping curled ends, olive center and scattered dry straw strands."
+    },
+    {
+      "id": "grass-moon-fan",
+      "category": "grass",
+      "source": "public/plants/grass-moon-fan.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A broad asymmetric fan of silver-white striped long flat grass blades emerging from three adjacent centers, deep green shadowed folds."
+    },
+    {
+      "id": "grass-pink-haze",
+      "category": "grass",
+      "source": "public/plants/grass-pink-haze.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A delicate green radiating grass tuft covered by extremely fine open branching seed panicles tinted dusky rose, airy translucent texture."
+    },
+    {
+      "id": "grass-olive-square",
+      "category": "grass",
+      "source": "public/plants/grass-olive-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A formally square arrangement of nine small olive-green fine-bladed grass tussocks in 3 by 3 pattern, overall straight edges with natural filament tips."
+    },
+    {
+      "id": "grass-zebra-arch",
+      "category": "grass",
+      "source": "public/plants/grass-zebra-arch.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A luxuriant radial crown of arching dark green flat grass leaves with many irregular pale yellow transverse bands, widely splayed curling blades."
+    },
+    {
+      "id": "grass-cinnamon-cloud",
+      "category": "grass",
+      "source": "public/plants/grass-cinnamon-cloud.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A soft asymmetrical mound of copper-brown hairfine grass filaments and cinnamon feathery seed sprays, thin green blades near dense center."
+    },
+    {
+      "id": "grass-spring-border",
+      "category": "grass",
+      "source": "public/plants/grass-spring-border.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A narrow 6:1 rectangular grass border of vivid spring-green soft cascading blades with creamy fine edges, seven overlapping little crowns."
+    },
+    {
+      "id": "grass-steel-star",
+      "category": "grass",
+      "source": "public/plants/grass-steel-star.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: One unusually geometric loose starburst grass tuft of long stiff steel-blue blades separated by transparent gaps, silver centers and only a few dry seed stems."
+    },
+    {
+      "id": "grass-champagne-tuft",
+      "category": "grass",
+      "source": "public/plants/grass-champagne-tuft.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: An elegant radial tussock of narrow champagne-gold and sage leaves with a ring of short silky cream plume tips, loose natural organic crown."
+    },
+    {
+      "id": "grass-copper-crescent",
+      "category": "grass",
+      "source": "public/plants/grass-copper-crescent.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A curved crescent planting of several interlocking small fine copper-orange sedge-like crowns, clear concave transparent inner edge."
+    },
+    {
+      "id": "grass-variegated-square",
+      "category": "grass",
+      "source": "public/plants/grass-variegated-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: professional landscape-plan botanical cutout. Create ONE distinct detailed realistic decorative plant grouping seen strictly orthographic 90-degree top-down, with fine natural botanical texture, individual leaves and petals, soft internal shading. The entire grouping is contained with transparent margin. TRUE alpha transparent background, including gaps between leaves. No ground, lawn, soil, pot, planter, paving, outline, text, watermark, side or oblique view. Not a sheet or collage. Subject: A square carpet of low variegated green and cream fine ribbon grass, four by four closely grouped small arching crowns, distinct formal square footprint."
+    },
+    {
+      "id": "light-copper-hex",
+      "category": "lighting",
+      "source": "public/landscape/light-copper-hex.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a hexagonal copper lantern, six triangular patinated copper roof facets, small central finial, amber glass glimpsed evenly around perimeter. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-mushroom",
+      "category": "lighting",
+      "source": "public/landscape/light-mushroom.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a low garden light with broad flat mushroom-shaped bronze cap, concentric brushed metal detail and narrow warm diffuser rim. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-halo-ring",
+      "category": "lighting",
+      "source": "public/landscape/light-halo-ring.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a sculptural horizontal luminous halo ring light, slim graphite outer ring, frosted warm white annulus, genuinely empty transparent center. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-solar-tile",
+      "category": "lighting",
+      "source": "public/landscape/light-solar-tile.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a square flush solar light tile, dark blue square photovoltaic center divided into neat cells, warm frosted narrow light strips at four edges, steel border. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-linear-recessed",
+      "category": "lighting",
+      "source": "public/landscape/light-linear-recessed.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a long narrow rectangular recessed landscape strip light, brushed steel surround with end screws and one frosted warm white glass strip running vertically. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-double-head",
+      "category": "lighting",
+      "source": "public/landscape/light-double-head.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a compact double-headed garden light in plan, two separate oval graphite lamp caps side by side connected by short metal bridge, slim warm diffuser rims. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-louver-square",
+      "category": "lighting",
+      "source": "public/landscape/light-louver-square.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a square graphite louvered outdoor lamp, five broad parallel dark metal louvers over warm diffuser, compact square footprint. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-stone-lamp",
+      "category": "lighting",
+      "source": "public/landscape/light-stone-lamp.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a Japanese style compact stone garden lantern seen only from overhead, softly weathered granite rounded square pagoda roof with subtle carved stone seams and small central stone knob. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-perforated-cube",
+      "category": "lighting",
+      "source": "public/landscape/light-perforated-cube.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a square cube garden luminaire seen directly from above, bronze metal top with fine circular perforations glowing warm amber, crisp square perimeter. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-wood-slats",
+      "category": "lighting",
+      "source": "public/landscape/light-wood-slats.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a contemporary square teak slat lantern directly overhead, slim parallel warm wood slats across top with ivory light visible between slats and dark metal corner fasteners. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-triangular",
+      "category": "lighting",
+      "source": "public/landscape/light-triangular.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a triangular recessed path marker with rounded triangle brushed steel frame and frosted warm luminous triangular center. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-oval-bulkhead",
+      "category": "lighting",
+      "source": "public/landscape/light-oval-bulkhead.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: an oval marine style outdoor bulkhead light viewed top down, dark bronze cage with three transverse ribs over ribbed opal glass oval diffuser. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-wall-wedge",
+      "category": "lighting",
+      "source": "public/landscape/light-wall-wedge.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a compact wedge-shaped outdoor wall lamp footprint viewed exactly vertically, dark graphite trapezoidal top, subtly lit narrow front edge, no wall. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-wall-tube",
+      "category": "lighting",
+      "source": "public/landscape/light-wall-tube.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a compact cylindrical up-down outdoor wall lamp in top view as elongated brushed aluminum capsule with dark central mount and warm glass lenses at both short ends, no wall. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-pebble",
+      "category": "lighting",
+      "source": "public/landscape/light-pebble.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a single organic asymmetrical smooth frosted ivory pebble-shaped garden light, subtle translucent warm glow and softly modeled surface. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-lotus",
+      "category": "lighting",
+      "source": "public/landscape/light-lotus.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a sculptural lotus shaped garden luminaire from straight above, three layers of copper petal shapes surrounding small frosted warm white central lamp, radial floral design. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-grid-tile",
+      "category": "lighting",
+      "source": "public/landscape/light-grid-tile.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a square recessed garden light with sturdy cast iron nine-cell grid over textured warm amber glass, four corner screws. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-cross-marker",
+      "category": "lighting",
+      "source": "public/landscape/light-cross-marker.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a square dark brushed steel path marker with a thin luminous warm white cross precisely inlaid across its top face. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-spot-adjustable",
+      "category": "lighting",
+      "source": "public/landscape/light-spot-adjustable.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a small adjustable garden spotlight in direct overhead plan, graphite short barrel with amber glass front lens, U-shaped mounting bracket and small round base visible underneath. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-bamboo",
+      "category": "lighting",
+      "source": "public/landscape/light-bamboo.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a round woven bamboo garden lantern directly overhead, natural narrow bamboo radial lattice over frosted ivory diffuser, circular rim and tiny central brass detail. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-pyramid",
+      "category": "lighting",
+      "source": "public/landscape/light-pyramid.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a square pyramid garden light viewed vertically down at its four frosted amber glass triangular facets divided by slim charcoal metal ribs meeting at center. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "light-cage-round",
+      "category": "lighting",
+      "source": "public/landscape/light-cage-round.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a round black iron cage lantern in overhead plan, concentric metal hoops and radial thin spokes surrounding a warm frosted circular central light. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "hammock-timber",
+      "category": "furniture",
+      "source": "public/landscape/hammock-timber.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a garden hammock on a curved laminated timber freestanding frame, ivory woven fabric hammock stretched lengthwise vertically, suspension ropes at both ends and four compact timber feet, empty and neatly arranged. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "table-picnic-attached",
+      "category": "furniture",
+      "source": "public/landscape/table-picnic-attached.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a rectangular teak picnic table with two attached parallel benches, overhead plan reveals wood grain tabletop centered vertically and benches left and right, dark metal connecting frame barely visible beneath, no objects on table. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "bench-semicircle",
+      "category": "furniture",
+      "source": "public/landscape/bench-semicircle.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: isolated decorative object sprite for professional landscape design plan. Subject: a single semicircular curved teak garden bench, wide half-ring seat made of many radial wood slats, thin curved backrest along outer arc, dark subtle support details, hollow inner semicircle completely transparent. Strict orthographic 90-degree top-down overhead camera, no perspective or side view. Professional realistic illustrated material textures, crisp detailed edges, restrained natural colors, subtle surface depth and minimal contained shadow. Single complete object centered, largest dimension filling 85% canvas. True transparent alpha background, transparent holes. No ground, floor, vegetation, scenery, labels, text, border, watermark or multiple objects. Square canvas."
+    },
+    {
+      "id": "waterbowl-rectangular",
+      "category": "decor",
+      "source": "public/landscape/waterbowl-rectangular.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. A shallow rectangular pale limestone water bowl, narrow stone rim enclosing still blue-green water and subtle ripples."
+    },
+    {
+      "id": "sculpture-arch",
+      "category": "decor",
+      "source": "public/landscape/sculpture-arch.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. A modern minimalist freestanding stone arch sculpture seen strictly from directly above: elongated pale stone top beam, rounded ends, narrow rectangular footprint; no visible front arch opening."
+    },
+    {
+      "id": "planter-amphora",
+      "category": "decor",
+      "source": "public/landscape/planter-amphora.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Terracotta amphora planter viewed directly into its circular mouth, two small handles symmetric left and right, earthy soil and a small silvery herb plant."
+    },
+    {
+      "id": "planter-hexagonal",
+      "category": "decor",
+      "source": "public/landscape/planter-hexagonal.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Regular hexagonal charcoal concrete planter, dark soil and compact green ornamental foliage, crisp hexagonal rim."
+    },
+    {
+      "id": "planter-oval",
+      "category": "decor",
+      "source": "public/landscape/planter-oval.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Long oval white stone planter, narrow oval rim and soil planted with a neat row of small lavender bushes."
+    },
+    {
+      "id": "composition-succulents",
+      "category": "decor",
+      "source": "public/landscape/composition-succulents.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Compact organic island composition of five pale natural stones and several distinct green succulent rosettes in a small contained oval gravel bed. No surrounding ground."
+    },
+    {
+      "id": "fountain-octagonal",
+      "category": "decor",
+      "source": "public/landscape/fountain-octagonal.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Octagonal pale limestone fountain basin with eight straight sides, clear turquoise water and a tiny central bubbling jet."
+    },
+    {
+      "id": "rock-slate",
+      "category": "decor",
+      "source": "public/landscape/rock-slate.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Three clustered flat angular slate boulders in layered charcoal gray, irregular natural outlines, subtle mineral texture."
+    },
+    {
+      "id": "figure-frog",
+      "category": "decor",
+      "source": "public/landscape/figure-frog.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Small weathered bronze garden frog sculpture viewed exactly from above, rounded body, head and four splayed feet, muted green patina."
+    },
+    {
+      "id": "composition-lantern",
+      "category": "decor",
+      "source": "public/landscape/composition-lantern.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Traditional small Japanese stone garden lantern seen vertically from above, square pagoda roof with gently flared corners and small central stone finial, gray granite texture."
+    },
+    {
+      "id": "planter-trough",
+      "category": "decor",
+      "source": "public/landscape/planter-trough.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Long narrow rectangular natural timber trough planter filled with soil and evenly spaced small green herbs, visible timber rim and corner joints."
+    },
+    {
+      "id": "sundial-stone",
+      "category": "decor",
+      "source": "public/landscape/sundial-stone.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Round pale stone sundial disk with slim bronze triangular gnomon seen from directly above, subtle radial incised lines only, absolutely no letters or numerals."
+    },
+    {
+      "id": "kitchen-u",
+      "category": "equipment",
+      "source": "public/landscape/kitchen-u.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. U-shaped pale stone countertop outdoor kitchen, three joined counter arms enclosing transparent open center, inset stainless sink on left and closed steel grill on upper arm. Correction: Edit target: supplied image. Correct camera only to EXACTLY vertical 90-degree orthographic architectural plan projection. NO vertical front faces, NO cabinet doors, NO visible legs, NO elevation, NO perspective. Show only uppermost horizontal surfaces as if camera directly overhead at infinite distance. Preserve object identity, materials and arrangement. For U kitchen, true squared U countertop with straight parallel arms, open central void entirely transparent. Remove all background glow, haze or shadow, alpha=0 outside silhouette, flat transparent cutout. No text or ground."
+    },
+    {
+      "id": "kitchen-island",
+      "category": "equipment",
+      "source": "public/landscape/kitchen-island.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Freestanding rectangular outdoor kitchen island, gray stone worktop with inset stainless steel sink and closed built-in grill, all from directly above. Correction: Edit target original island image. Transform this rectangular outdoor kitchen island to strict orthographic top-down architectural plan view. Keep its ONE SOLID RECTANGULAR footprint: gray stone rectangular slab with sink at left and closed stainless grill at right. No arms, no cutout, no U or L shape. Only upper horizontal surfaces visible; remove ALL front cabinet fascia/doors, vertical surfaces, legs. Genuine clean transparent background outside rectangle. Preserve materials. No background halo, glow, ground, text."
+    },
+    {
+      "id": "bbq-ceramic",
+      "category": "equipment",
+      "source": "public/landscape/bbq-ceramic.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Deep green ceramic kamado grill with closed round dimpled lid, centered black top vent and small horizontal wood handle at front edge."
+    },
+    {
+      "id": "pizza-oven",
+      "category": "equipment",
+      "source": "public/landscape/pizza-oven.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Outdoor pizza oven seen strictly vertically from above: terracotta circular dome on square pale masonry base, small front landing slab and dark circular chimney cap."
+    },
+    {
+      "id": "smoker-barrel",
+      "category": "equipment",
+      "source": "public/landscape/smoker-barrel.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Horizontal black steel barrel smoker seen directly from above, long rounded closed barrel lid, short side firebox, narrow handle and small circular chimney cap. Correction: Edit target: supplied image. Correct camera only to EXACTLY vertical 90-degree orthographic architectural plan projection. NO vertical front faces, NO cabinet doors, NO visible legs, NO elevation, NO perspective. Show only uppermost horizontal surfaces as if camera directly overhead at infinite distance. Preserve object identity, materials and arrangement. For U kitchen, true squared U countertop with straight parallel arms, open central void entirely transparent. Remove all background glow, haze or shadow, alpha=0 outside silhouette, flat transparent cutout. No text or ground."
+    },
+    {
+      "id": "brazier-round-brick",
+      "category": "equipment",
+      "source": "public/landscape/brazier-round-brick.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Circular red brick brazier with concentric brick rim and black circular grill grate over dark charcoal, strict overhead."
+    },
+    {
+      "id": "firepit-tripod",
+      "category": "equipment",
+      "source": "public/landscape/firepit-tripod.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Round dark steel fire bowl with logs inside, three slender steel tripod rods meeting over center visible from directly above, no flames or smoke."
+    },
+    {
+      "id": "firepit-corten",
+      "category": "equipment",
+      "source": "public/landscape/firepit-corten.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Broad shallow circular rust-orange corten steel fire bowl with several dark firewood logs inside, richly mottled weathered steel rim, no flames."
+    },
+    {
+      "id": "sink-outdoor",
+      "category": "equipment",
+      "source": "public/landscape/sink-outdoor.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Compact standalone rectangular stainless steel outdoor sink unit, brushed metal worktop surrounding deep rectangular basin, drain and curved tap visible overhead."
+    },
+    {
+      "id": "fridge-outdoor",
+      "category": "equipment",
+      "source": "public/landscape/fridge-outdoor.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Compact outdoor refrigerator viewed straight down: rectangular brushed stainless top, slim dark rear ventilation strip and small door handle at front edge, no visible upright facade."
+    },
+    {
+      "id": "bbq-wheeled",
+      "category": "equipment",
+      "source": "public/landscape/bbq-wheeled.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Rectangular stainless gas barbecue cart viewed straight down, closed central grill hood and black side shelves left and right, small wheel ends tucked at corners. Correction: Edit target: supplied image. Correct camera only to EXACTLY vertical 90-degree orthographic architectural plan projection. NO vertical front faces, NO cabinet doors, NO visible legs, NO elevation, NO perspective. Show only uppermost horizontal surfaces as if camera directly overhead at infinite distance. Preserve object identity, materials and arrangement. For U kitchen, true squared U countertop with straight parallel arms, open central void entirely transparent. Remove all background glow, haze or shadow, alpha=0 outside silhouette, flat transparent cutout. No text or ground."
+    },
+    {
+      "id": "composter-small",
+      "category": "equipment",
+      "source": "public/landscape/composter-small.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Square dark forest-green garden compost bin seen directly from above, ribbed plastic closed lid with small central recessed handle and corner vents."
+    },
+    {
+      "id": "rain-barrel",
+      "category": "equipment",
+      "source": "public/landscape/rain-barrel.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Round wood-stave rainwater barrel seen directly from above, circular wood lid with small dark inlet screen off center and thin galvanized metal hoop around edge."
+    },
+    {
+      "id": "generator-cabinet",
+      "category": "equipment",
+      "source": "public/landscape/generator-cabinet.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Outdoor backup generator cabinet viewed vertically from above, light gray rectangular metal top with parallel ventilation slats and subtle panel seams, no branding."
+    },
+    {
+      "id": "irrigation-cabinet",
+      "category": "equipment",
+      "source": "public/landscape/irrigation-cabinet.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Weatherproof irrigation control cabinet viewed directly from above: slim rectangular light gray metal roof with raised lip and two dark cable conduits just at rear edge, no front view."
+    },
+    {
+      "id": "hose-reel",
+      "category": "equipment",
+      "source": "public/landscape/hose-reel.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Compact garden hose reel seen vertically from above, neatly coiled dark green hose between two charcoal side plates, small crank handle on right, realistic utilitarian materials."
+    },
+    {
+      "id": "potting-bench",
+      "category": "equipment",
+      "source": "public/landscape/potting-bench.png",
+      "generator": "built-in imagegen",
+      "prompt": "Use case: stylized-concept. Asset: single isolated landscape architecture plan object, finely detailed realistic-material illustration. Strict orthographic overhead camera exactly 90 degrees downward; horizontal top surfaces only, never perspective/isometric/side view. Entire object centered with generous transparent margin, no ground, no paving, no surrounding scene, no cast shadow outside silhouette, no text, labels, branding or watermark. Genuine alpha-transparent background. Rectangular natural cedar garden potting bench seen exactly overhead, slatted wooden worktop with inset dark planting tray at one end and tiny hand trowel resting flat."
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+Frequently Asked Questions for Irrigation Products (https://www.krain.com/faqs)
+citeturn464view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.krain.com/faqs","lineno":null}); Total lines: 405
+L0: cite0†GTM†www.googletagmanager.com cite1†PiwikPro†sana-commerce.containers.piwik.pro L1: 
+L2: For full functionality of this site it is necessary to enable JavaScript.
+L3: Here are the
+L4: cite2†instructions how to enable JavaScript in your web browser†www.enable-javascript.com .
+L5: 
+L6: [Input: Product name or item number...]
+L7: 
+L8: When search results are available use up and down arrows to review and enter to select. Touch device users explore by touch.
+L9: 
+L10: [Input: Product name or item number...]
+L11: When search results are available use up and down arrows to review and enter to select. Touch device users explore by touch.
+L12: 
+L13: cite3†Login L14: 
+L15: QUESTIONS? CALL US 800-735-7246
+L16: 
+L17: cite4†CUSTOMER SERVICE L18: 
+L19: Login
+L20: 
+L21: cite3†Login L22: 
+L23: [Input: Product name or item number...]
+L24: 
+L25: When search results are available use up and down arrows to review and enter to select. Touch device users explore by touch.
+L26: 
+L27:   * cite5†Products L28: 
+L29: [Button: Expand: Products]
+L30:     * cite6†Rotors L31:       * cite7†MiniPro L32:       * cite8†RPS 50 L33:       * cite9†RPS 75 L34:       * cite10†RPS 75i L35:       * cite11†RPS Select L36:       * cite12†ProPlus L37:       * cite13†SuperPro L38:       * cite14†ProSport L39:     * cite15†Sprays L40:       * cite16†Pro-S Sprays L41:       * cite17†NP Sprays L42:       * cite18†K-Sprays L43:     * cite19†Nozzles L44:       * cite20†Rotary Nozzle Series L45:       * cite21†Fully Adjustable Rotary Nozzles L46:       * cite22†KVF Nozzles L47:       * cite23†KV Nozzles L48:       * cite24†Fixed Pattern Nozzles L49:     * cite25†Electric Valves L50:       * cite26†ProSeries 100 L51:       * cite27†ProSeries 150 L52:       * cite28†ProSeries 200 L53:     * cite29†Irrigation Controllers L54:       * cite30†SiteMaster L55:       * cite31†PRO-EX3 L56:       * cite32†PRO-LC L57:       * cite33†K-RAIN BLUE L58:       * cite34†PRO EX 2.0 L59:       * cite35†RPS 46 L60:       * cite36†Rain Sensor L61:       * cite37†Single Station L62:       * cite38†PRO-TAP 100 L63:     * cite39†Bubblers L64:     * cite40†Drip Irrigation L65:     * cite41†Pump Start Relays L66:     * cite42†Indexing Valves L67:       * cite43†4000 Series L68:       * cite44†6000 Series L69:     * cite45†Reclaimed Water L70:     * cite46†Impact Sprinkler L71:     * cite47†Accessories & Parts L72:       * cite48†4000 Series Indexing Valve Parts L73:       * cite49†6000 Series Indexing Valve Parts L74:       * cite50†Nozzle Racks L75:   * cite51†Catalog L76:   * cite52†Manuals L77: [Button: Expand: Manuals]
+L78: 
+L79:     * cite53†Irrigation Manuals L80:     * cite54†Videos L81:   * cite55†About L82: 
+L83: [Button: Expand: About]
+L84: 
+L85:     * cite56†News & Press Releases L86:     * cite57†Warranty L87:     * cite58†International L88:     * cite59†ISO Certification L89:     * cite60†Trade Shows L90:   * cite61†Premier Contractor†premier.krain.com L91:   * cite62†Find a Distributor L92:   * cite63†For Pros L93: 
+L94: [Button: Expand: For Pros]
+L95:     * cite64†Blog L96:     * cite65†Custom Products L97:     * cite66†Design and Resources L98:       * cite67†CAD Detail Drawings L99:       * cite68†Sport Field Designs L100:       * cite69†Written Specifications L101:     * cite70†Distributor Ordering Portal†www.krainorder.com L102:     * cite71†Mobile Apps L103:     * cite45†RCW Products L104:   * cite72†For Homeowners L105: 
+L106: [Button: Expand: For Homeowners]
+L107:     * cite73†Water Calculator L108:     * cite47†Parts and Accessories L109:     * cite74†Find a Local Contractor L110:     * cite75†Find a Retail Location L111:     * cite76†Buy Products Online L112:     * cite77†Water Saving Rebates L113:     * cite64†Blog L114:     * cite78†FAQs L115: 
+L116: cite79†product(s) L117: # Frequently Asked Questions
+L118: 
+L119: * * *
+L120: 
+L121: ## Controllers and Timers
+L122: 
+L123: ### What kind of controller do I need?
+L124: 
+L125: Four considerations:
+L126: 
+L127:   1. Will it be located indoor or outdoor?
+L128:   2. How many zones do you have? You’ll need a minimum of that number of stations on your controller.
+L129:   3. How many programs (watering schedules) do you want? Select a timer with at least three programs
+L130:   4. How many start times do you want? You’ll need at least three start times for a typical residential system
+L131: ### What if my controller does not turn ON in the manual mode?
+L132: 
+L133: That means no power is getting to the controller. First be sure that the controller is properly wired as per the Electrical Circuit and Connection Diagram. Also check your circuit breaker.
+L134: ### What if my controller fails to operate properly in automatic (AUTO) mode?
+L135: 1.  This may be due to the Daywheel not being properly programmed. Check the Setting and Operation instructions for programming the Daywheel.
+L136: 2. Your Auto-Off-On knob may not be set properly
+L137: Be sure to turn the Auto-Off-On knob to AUTO position.
+L138: 3.  The switch may need adjusting. Remove the controller face from its enclosure after disconnecting power to the unit. The switch adjustment screw is located on the switch cover. A clicking of the switch should be heard when the switch arm is slowly pulled back at the halfway point between the edge of the time dial and the far edge of the timing pin. With a small screwdriver, tighten the screw clockwise to cause the switch to active sooner.
+L139: If the switch is activating sooner than desired, turn the adjustment screw counterclockwise slightly.
+L140: 4.  The switch contacts or relay may be worn out.
+L141: Replace switch or relay (refer to parts list) ensuring that the controller is properly rewired. (Note: A nut driver tool is available to assist in removing black retainer nuts.)
+L142: ### What do you recommend if my controller won't turn OFF?
+L143: 1.  If your switch is activated, ensure that wires do not push against the switch or relay. Check that wires leading to the switch are not pulled out.
+L144: 2. Your controller may be improperly wired. Check the Electrical Circuit and Connection Diagram and make sure that the input wires are not wired directly to load.
+L145: 3.  A switch adjustment may be needed for proper automatic operation. Make the needed switch point adjustment as outlined in the last question on AUTO MODE. (See below)
+L146: 4.   The switch knob may not be in the OFF position. Be sure to turn the Auto-Off-On switch to OFF.
+L147: ### What do I do if my controller fails to keep proper time?
+L148: 1.  There may be no power or improper voltage going to the motor. If so, check the Electrical Circuit and Connection Diagram or proper connection of power to controller. Check voltage supply to ensure voltage to motor is 120 or 240 volts as specified for model type.
+L149: 2.  Your clock motor may be turning but the time dial is not turning. The drive gear located behind the time dial may be broken. If so, remove the time dial and inspect the drive gear. Install a new drive gear noting "this side out." Reinstall the time dial and be sure it turns freely clockwise.
+L150: ## Indexing Valves
+L151: ### What are indexing valves?
+L152: Indexing valves are mechanical valves that change from one outlet to the next each time the water flow is stopped and started so they will work if controlled manually with a hand valve, automatically with an electric control valve or if used with a pump that has the means to start and stop the flow of water.
+L153: Ideally the valve should be installed at the highest point of the system and as close as possible to the water source, if the valve cannot be installed at the highest point check valves will need to be installed on outlets that have zone lines higher than the valve to prevent back flow stopping the valve from cycling.
+L154: The need for the valve to be installed as close as possible to the water source is to prevent the valve from skipping through zones as the supply line fills purging air before reaching working pressure.
+L155: The 6000 series valve has a built-in atmospheric vacuum breaker (AVB) that vents the valve to the atmosphere upon shut down to aid in the valve draining so as to cycle to the next zone, the 4000 series valve does not have an AVB so even though the valves will usually work without one if needed due to problems with the valve draining one can be added on the supply line before the valve.
+L156: When installing the valves care should be taken to not let glue drip inside the valve and damage the interior, and when gluing PVC into the outlets or inlet no glue, cleaner or primer should be used in the sockets of the valve. The best method is to use purple primer and clear glue on the PVC only as the valve itself is not PVC but constructed of ABS plastic and a chemical reaction occurs between the two plastics when glue is applied to ABS that causes the PVC to be pushed back out of the socket.
+L157: Once pushed into the socket with the valve “right side up” the pipe should be held in for 15 seconds to allow the glue to set. The glue joints should be allowed to set for a minimum of 2 hours before testing the valve.
+L158: ### Why does water come out of multiple zones /outlets at once?
+L159: There is a minimum amount of water required at the valve to push the rubber disc inside the valve down firmly enough to seal off the outlets other than the one in use. As equipped from the factory a 4000 series valve will have a “Standard Stem and Disc Assembly” that requires 10 gallons per minute (GPM) to operate. The 6000 series indexing valve will have Stem and Disc that requires 15 GPM.
+L160: If the flow falls below these numbers it can be from a worn diaphragm on the electric control valve if so equipped. After turning off the water supply and disassembling the valve if you find that the diaphragm shows signs of wear and or cracking it should be replaced as this will prevent the valve from opening fully causing low flow.
+L161: On pump fed systems clogged intake filters/well screens or canal baskets can result in low flow. Also check the pump impeller for debris as this can drastically reduce the output of the pump.
+L162: Check to see if there is a main line filter clogged that could be the cause of the problem.
+L163: In some cases, on city water fed systems worn water meters can put out less water over time, disconnect the supply line from the valve and do a simple flow test by seeing how many times the line fills a 5-gallon bucket in one minute time to get an idea of your GPM that is available. If the system worked fine at one time and all other causes have been eliminated contact the local water department to see what input they might have about replaced the water meter.
+L164: On systems where the amount of GPM the valve requires equipped with a Standard Stem and Disc is not possible there are Light Stem and Disc Assemblies available. The Light Stem and Disc for the 4000 series will reduce the needed flow down to 6 GPM and the 6000 series valve has both a Light and Extra Light Stem and Disc available with the Light model reducing the needed flow down to 10 GPM and the Extra Light reducing it to 6 GPM.
+L165: ### Why does my indexing valve skip over zones?
+L166: If you have a pump fed system there may be suction leaks on the pump intake line causing the pump to “surge“ or not keep a steady flow of water needed to keep the valves disc depressed and on one zone. Diagnosing, locating and repairing a suction leak may require professional assistance.
+L167: Or if the pump is located more than a few feet from the water source the disc inside the valve may pop up and down skipping zones as the supply line fills purging air. Move the indexing valve closer to the water source, the electric control valve or pump closer to the indexing valve or pressurize the supply line.
+L168: Also, if the valve is not installed at the highest point of the system there may be back flow entering the valve after shut down which will cause the disc to skip as it is pushed against this back flow by water coming through the inlet during start up. Install a check valve on any outlet that has zone piping higher than the valve.
+L169: ### Should unused outlets be “capped off”?
+L170: 
+L171: Yes.  Cap off unused outlets to prevent debris/animals from entering the valve when it is off, leave a 6” piece of pipe with a cap on its end to allow for future expansion of the system.
+L172: ### Can the number of active outlets on an indexing valve be changed?
+L173: Yes, by changing the “Cam” a valve can be made to skip over outlets to change the number of active outlets /zones. The Cam is a small circular piece held in place by 2 screws on top the 4000 and inside the top of the 6000 valves.
+L174: 4 outlet 4000 series indexing valves can be Cammed for 2, 3, and 4 zones, 6 outlet 4000 valves can be Cammed for 2, 3, 4, 5 or 6 zones.
+L175: 4 outlet 6000 series indexing valves can be Cammed for 2, 3 or 4 zones however the 6 outlet 6000 valve can only be Cammed for 5 or 6 zones.
+L176: ## Installation
+L177: 
+L178: ### Can I use a rotor and a spray in the same zone?
+L179: 
+L180: No. Large and small area sprinklers should not be used in the same zone due to different water amounts.
+L181: 
+L182: ### What is the right pipe for my system?
+L183: 
+L184: Generally speaking, PVC (Polyvinyl Chloride) or Poly (Polyethylene) pipe are used in non-freezing climates. In freezing climates, Poly should be used. Always check your local codes.
+L185: ### How many sprinklers can I put on one zone?
+L186: The number of sprinklers per zone depends on your home’s water flow (GPM) and water pressure (PSI). Let’s say your water supply provides 10 GPM and 50 PSI. The number of sprinklers per zone now depends on how much water each sprinkler sprays at your pressure. Here’s an example calculation: Let’s say the sprinkler you have chosen to use sprays 3 GPM at 50 PSI. The total number of heads that can be used per zone would be three. 3 GPM x 3 sprinklers = 9 GPM in the zone.
+L187: In this example, the water supply is 10 GPM and the zone calculation came to 9 GPM (using the three sprinklers). This is because you should not design to maximum water availability. If you design to maximum availability, then system performance drops when water is being used elsewhere at the same time -- such as a shower, laundry, etc.
+L188: ### Can I dig under sidewalks to install my system?
+L189: 
+L190: Yes, by attaching a power nozzle to the pipe end so you can "jet" under the sidewalk.
+L191: 
+L192: ### How deep should the trenches be to install my sprinkler pipe?
+L193: 
+L194: Bury your sprinkler pipe 6 to 12 inches below ground surface taking into account the height of the fitting, the length of the rise and the height of the sprinkler head.
+L195: 
+L196: ## Nozzles
+L197: ### What is a rotary nozzle?
+L198: K-rain rotary nozzles have multiple streams of water that rotate and are for use with K-rain Pro-S spray bodies and others that accept female thread nozzles. The benefits of rotary nozzles include water savings through higher efficiency due to slower application rate preventing waste from run off, less wind drift from reduced atomization and the ability to run more nozzles with less line pressure than conventional spray nozzles.
+L199: Rotary nozzles can also be used on the same zone as gear drive rotors as they have the same precipitation rate.
+L200: ### How do I install and adjust a rotary nozzle?
+L201: 1. To install a rotary nozzle, insert the nozzle in the top of the riser turning clockwise until snug.
+L202: 2. To adjust the nozzle, turn on the water and with the nozzle spraying away from you turn the LOWER part of the pop-up riser in any direction needed to get the Left Fixed Side of the water streams to start in the desired location. Next place the orange nozzle adjustment tool over the top of the nozzle and while pushing down lightly turn to change the Adjustable Right Stop/Start. Turn the tool clockwise to increase the arc and counter clockwise to decrease the arc.
+L203: 3. At the base of the nozzle there is a band/ring that matches the color of the nozzle top, this is the flow control that is used for radius adjustment. The flow control should be all the way clockwise from the factory which is the fully open position, turning the flow control ring counter clockwise will decrease the arc, ¼ turn counter clockwise is the fully restricted position/ shortest radius.
+L204: ### Why should I change nozzles on a gear drive rotor?
+L205: 
+L206: Nozzles should be changed to equalize the rate of water application.
+L207: 
+L208: ## Pump Start Relays
+L209: ### How do I install a Pump Start Relay?
+L210: 1.  Make sure the power to pump and controller is turned off
+L211: 2.  The incoming power attaches to the top terminals of the relay
+L212: 3.  The outgoing power to the pump attaches to the bottom terminals of the relay
+L213: 4.  Then see that the power source from the timer’s pump start/ master valve and common terminals connect to the red wires on the relay. There is no polarity to the coil wires.
+L214: (#4 is for a relay with a 24-volt coil. If your system uses a higher 110- or 220-volt control voltage to the relay you must use a relay with a coil voltage that matches your controller/timer’s output)
+L215: ### My Pump Start Relay is chattering and I just installed it. What do I do?
+L216: 
+L217: 1.  The Pump Start Relay may be too far away from the controller and/or the wire size between the controller and the relay’s coil is too small. Increase the wire size (#14 gauge for runs over 15 feet) and see if that solves the problem.
+L218: 2. Or your controller’s transformer may be too small to pull the relay contacts in. It may be necessary to increase the transformer size on the controller.
+L219: ### My previously quiet Pump Start Relay is now buzzing loudly while in operation. What do I do?
+L220: 
+L221: The Relay should be replaced. A Pump Start Relay is a magnetically activated switch. Over time the magnetic contact points oxidize making them ineffective at pulling the high voltage contacts together and buzzing can result in high moisture and or high salt atmospheres will accelerate this wear process resulting in a shorter service life.
+L222: 
+L223: ## Rotors
+L224: ### What if a gear drive rotor isn’t turning?
+L225: 
+L226: If your sprinkler isn't turning properly, try cleaning the filter. If sand or debris gets into the rotors gear drive it will wear out prematurely and at this point the entire head will need to be replaced.
+L227: ### How do I adjust an RPS75?
+L228: RPS75 adjusts from a fixed right position meaning that for whatever arc (pattern) the head is set the right start/stop position can only be changed by either turning the whole head or by twisting the base of the pop up riser below the rotating turret. All adjustments can be made wet or dry with a white plastic RPS key.
+L229: 1.  If the head is to be installed at a 360-degree full circle arc setting see the section at the bottom, all other arc settings are as follows:
+L230: Before installation holding the head in one hand place the palm of your other hand flat on the top center turret of the head. With a twisting motion turn this center turret clockwise all the way to the right (it may be necessary to first turn counter clockwise all the way to the left then back to the right). Notice the position of the arrow at the EDGE of the turret. This is the fixed “Right Start” position.
+L231: The sprinkler will begin spraying from this position (the nozzle is below the arrow) and rotate counter clockwise until it reaches the Left Adjustable Stop-Return Point.
+L232: 2.  Install the head by turning it clockwise onto the fitting in the ground, stop turning when the head is “snug” (don’t over tighten) on the fitting and the nozzle arrow at the edge of the top turret is at or near the point where it is desired for the fixed Right Start to begin watering from.
+L233: 3.   To adjust the arc (pattern) with the water off insert the “T” shaped end of the white plastic RPS key into the hole in the rubber cover on top the turret marked “ARC” at the 9 o’clock position relative to the nozzle arrow being the 12 o’clock position. K-rain rotors are preset at the factory to a 90-degree (1/4 circle) arc setting, if this is the setting needed leave the key in the arc adjustment dial for fine tuning and precede to step # 4.
+L234: To change the arc from the preset 90-degree setting, with the water off turning the key 1 complete turn will increase the arc by 25% so 1 turn equals 180 degrees (1/2 circle) 2 turns 270 degrees (3/4 circle) at 3 turns you will hit a stop or hear a “clicking” noise and the arc is then set to a full circle 360-degree setting.
+L235: 4.  For final adjustments turn the water on and when the riser pops up notice the top turret turning, either wait for the turret to reach its right stop automatically or after the turret reaches the left stop and reverses you can manually turn it to its right stop. If the right stop is in need of adjustment twist the riser BELOW THE TURRET to get the fixed right start to the desired position.
+L236: Twisting the riser counter clockwise may loosen the head from the fitting in the ground so even if the riser needs to be moved a few degrees counter clockwise it is best to turn the riser fully clockwise to get to the position needed. The ratchet assembly inside the head will make a “clicking” sound when the riser is turned and this is normal.
+L237: 5. Finally, to adjust the radius (distance) of the stream insert the metal hex shaped end of the RPS key into the hole in the raised arrow above the nozzle. With water on turn the key clockwise to reduce the radius up to 25% and break up the water stream for fallout of droplets providing close in coverage around the head. The nozzle screw should not be turned more than 3 complete turns from the factory preset position or the screw will thread completely through the hole and be lost in the stream.
+L238: FOR 360 DEGREE/FULL CIRCLE RPS75 INSTALLATION
+L239: To change the arc (pattern) from the factory preset 90-degree setting insert the “T” shaped end of the white plastic RPS key into the hole in the rubber cover on top the turret marked “ARC” at the 9 o’clock position relative to the nozzle arrow being the 12 o’clock position. Turn the key three complete turns clockwise or until you hit a stop or hear a “clicking” sound.
+L240: Install the head by threading it clockwise onto the fitting in the ground, it is not necessary to over tighten or use Teflon tape. Next refer to step 5 above after turning the water on to adjust the radius (distance). If you have an RPS75i refer to the last paragraph in step 5 above to adjust the flow control.
+L241: ### How do I adjust an RPS75i?
+L242: On the RPS75i model rotor there is also a flow control that can be used in addition to or independently from the nozzle retention/break up screw described in the adjustment above. The flow control is located at the 5 o’clock position in relation to the nozzle arrow’s 12 o’clock position, insert the “T” shaped end of the RPS key into the hole over the flow control.
+L243: Turning the key clockwise will reduce the flow and distance proportionately up to 50% however can be used to adjust the distance below 50% with the fully counter clockwise position being off/no flow. The riser will still pop up but no water will come out with the flow control off.
+L244: ### How do I replace nozzles for gear drive rotor heads?
+L245:  All K-rain rotors have a variety of nozzles available to deliver the right amount of water needed for your turf and landscaping needs. Each nozzle puts out a different amount of water measured in gallons per minute or GPM for short. Nozzles come in 2 different trajectories which change the angle of the water stream relative to the ground, they are referred to as STANDARD angle and LOW angle nozzles.
+L246: All the nozzles have the same basic shape of the water stream before the nozzle retention/break up screw (located above the nozzle) is used to “fan out” or widen the stream while also reducing the radius (distance) and providing more fallout of water droplets for better close in coverage around the head.
+L247: The ¾” inlet full size rotors have a 2.5 GPM STANDARD angle nozzle pre-installed at the factory except for “RCW” models which have a 2.5 GPM LOW angle nozzle installed. The ½” inlet “mini” rotors have a 1.5 GPM STANDARD angle nozzle pre-installed however at the request of some retailers the K1 model may have a larger 2.5 GPM standard nozzle.
+L248: The main reasons the various size/GPM nozzles exist are so that you can:
+L249: 1. Reduce or increase the amount of water applied in relation to a given area's soil /plant /turf type and the rate at which the area absorbs or drains the water.
+L250: 2.  Adjust the precipitation rate of the heads, which is the amount of water applied by the nozzle during a given amount of time.
+L251: The reason precipitation rates are typically adjusted is because as the radius of a rotor's coverage is increased or decreased the same amount of water is being spread over a larger or smaller area. This frequently results in too little water being applied around larger arc heads and too much water around smaller arc heads.
+L252: The solution to this uneven watering is to increase or decrease the nozzle size used as the head's arcs are increased or decreased.
+L253:  An example of rotors (K2 Smartset/K2 Pro) with nozzles installed to match their precipitation rate with their arcs would be:
+L254: Arc setting           Nozzle#        Pressure(PSI)   Flow(GPM)
+L255: 90 degrees                 1                      40                      1.5
+L256: 180 Degrees              2.5                   40                      2.5
+L257: 270 Degrees              3                      40                       4.2
+L258: 360 degrees              4                      40                       5.1
+L259: ### How do I change the rotor nozzle?
+L260: To remove and install nozzles you will need a pair of needle nose pliers and either an RPS key, K-key or small flat blade screwdriver (depending on the model of head being serviced).
+L261:  For changing nozzles on RPS75i, Super Pro and K2 Pro, turn the water on then use the K-key or RPS key to turn the flow control all the way counter clockwise so that the riser popped up with no water coming out of the nozzle. Then skip step #1 and proceed to step #2.
+L262: 1. Insert the K-key or RPS key in the pull up slot on top the head. In relation to the arrow above the nozzle being located at 12 o’clock the pull up slot can be found at the 11 o’clock position on RPS75, the 6 o’clock position on K2, K2 Pro, K8000, Super Pro and Pro Plus and the 3 o’clock position on the smaller “mini” rotors (K1, Mini Pro, and RPS50).
+L263: Once inserted into the pull up slot twist the key ¼ turn to prevent it from pulling out of the slot then pull upwards. Hold the lower part of the riser and squeeze to prevent it from retracting back into the body. (A riser clip part # P54065 is available to hold the riser partially out of the body on ¾” rotors)
+L264: 2. Use the end of the K-key or the metal hex shaped end of the RPS key depending on which model you have and loosen the nozzle retention screw located in the center of the nozzle arrow, if your head has a rubber cover push the key through the hole in the center of the arrow. Turn the screw counter clockwise until it is no longer in front of the nozzle, it is not necessary to completely remove the screw.
+L265: 3. To remove the old nozzle, use a pair of needle nose pliers to grab one of the tabs that go on either side of the nozzle retention screw if the nozzle is RED or grab the pull-out tab to the right of the nozzle orifice on GREEN nozzles and pull the nozzle out of the socket. A K-key can also be used to remove the nozzle by inserting the end of the key into the small rectangular slot at the top or side of RED nozzles then pushing the key to one side and pulling out.
+L266: 4. Install a new nozzle by pushing it into the socket with the 2 retention tabs pointing up if the nozzle is RED or with the pull-out tab to the left on GREEN nozzles. The socket is angled up slightly so it is necessary to push down at an angle with the thumb to get the nozzle fully seated.
+L267: After the nozzle is in all the way make any final adjustments needed to make sure the tabs that go on either side of the nozzle retention screw are at the top by moving the nozzle into place with needle nose pliers or a K-key.
+L268:  5. Turn the nozzle retention screw clockwise until it is in front of the nozzle and in between the 2 tabs at the top of the nozzle. Turn on the water and make any adjustments necessary to adjust the radius.
+L269: ### Can a gear drive rotor head be adjusted with the water running?
+L270: 
+L271: All adjustments can be done with the water running.
+L272: ### How do I adjust gear drive rotors?
+L273: See the separate section for RPS75 and Rps75i adjustment, all others are as follows:
+L274: K-rain rotor heads have adjustable arcs to cover any pattern from 40 degrees to 360 degrees of rotation. The heads can be adjusted either dry before installation or wet with the water running. All adjustments except pulling the riser up with the water off which requires a K-key can be done with a medium size flat blade screw driver or a K-key if available.
+L275: Adjustment with water off:
+L276: 1.   If the head is to be used in a full circle 360-degree arc setting insert a K-key or medium flat blade screw driver into the slot of the arc adjustment dial in the TOP CENTER OF the turret. Turn the dial all the way clockwise until the arrow is pointing at 360 then proceed to step #3.
+L277: For other arc settings hold the head in one hand and place the palm of your other hand flat on the top center turret of the head. With a twisting motion turn this center turret counter clockwise all the way to the left (it may be necessary to first turn clockwise all the way to the right then back to the left). Notice the position of the arrow at the EDGE of the turret. This is the fixed “Left Start” position.
+L278: The sprinkler will begin spraying from this position (the nozzle is below the arrow) and rotate clockwise until it reaches the right Adjustable Stop-Return Point.
+L279: 2.   All K-rain rotor heads come from the factory preset to 90 degrees if this is the arc (pattern) you need then proceed to step #3.
+L280: To adjust the right Stop/Return insert the K-key or medium flat blade screw driver in the arc adjustment arrow in the TOP CENTER of the turret. While holding the turret in place by pressing down with one thumb turn the dial to your desired stop point/ degree setting.  IMPORTANT: DO NOT TURN ARROW PAST THE 40 SETTING OR PAST THE 360 SETTING.
+L281: 3.  Install the head by turning it clockwise onto the fitting in the ground, before the head is “snug” on the fitting check the left stop on the turret to make sure it is still in its left start position. If it has moved during the install process rotate it back to its far-left position with your finger tips or the palm of your hand and then continue turning the head clockwise stopping when the arrow is at or near the spot it is desired for the arc to begin spraying from.
+L282: Note: The head should be installed hand tight on the fitting in the ground, overtightening or Teflon tape is not necessary.
+L283: 4.   To make the final adjustments turn on the water and after the riser pops up twist the LOWER PART of the riser BELOW THE TURRET to make any adjustments needed to get the left start position where desired. The lower riser can be turned in any direction needed to make this adjustment. And the rotating turret can be manually turned in the same direction it is rotating automatically to speed up the adjustment process.
+L284: 5.   To adjust the radius (distance) of the stream and/or to break up the water stream to provide more fallout of droplets for close in watering next to the head:
+L285: With the water still running insert a K-key or flat blade screw driver into the slotted nozzle retention screw that is above the nozzle. Turn the screw clockwise to reduce the radius and “fan” the stream out to a wider pattern for more water near the head.
+L286: NOTE: Using the nozzle retention screw can reduce the radius by up to 25% however be careful not to turn the screw more than 3 complete turns clockwise from the preset factory position or it will thread completely through the hole and be lost in the water stream.
+

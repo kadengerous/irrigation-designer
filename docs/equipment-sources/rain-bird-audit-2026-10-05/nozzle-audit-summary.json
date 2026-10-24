@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-05",
+  "scope": "Existing standalone Rain Bird spray/rotary nozzles and bubblers; rotors and bodies audited separately.",
+  "models": 68,
+  "nozzleSelections": 72,
+  "independentlyComparedBaselineRows": 571,
+  "baselineSourceTranscriptionMatches": 571,
+  "nominalCompensatedFlowsChecked": 4,
+  "patchCounts": {
+    "hydraulicModels": 6,
+    "constraints": 13,
+    "colors": 68,
+    "nominalFlows": 4
+  },
+  "metadataNormalizationRequired": false,
+  "metadataRationale": "verifiedOn may remain the earlier actual hydraulic verification date for retained rows. colorVerifiedOn and constraint-specific verified dates are 2026-10-05. Hydraulic replacement models carry 2026-10-05. A blanket date/status bump would obscure field-specific evidence.",
+  "remainingUnknowns": [
+    "SQ-HLF small-setting discharge: conflicting gph/gpm and L/h/L/min in official tables.",
+    "SQ-HLF printed no-overlap precipitation: inconsistent; withheld.",
+    "Stream bubbler continuous wetted geometry/stream angular width: unpublished.",
+    "Flow response to manually reduced radius: unpublished equations; retain unknown policy.",
+    "Precise nozzle thread pitch not established by compatibility statements.",
+    "U-Series quantitative maximum radius reduction: not found; do not borrow 25% from another family."
+  ],
+  "patchApplication": "Patch arrays identify models by id; merge set and nozzlePatches by exact nozzle id. SQ-HLF requires per-nozzle hydraulic gating in all performance queries. Do not rerun build-proposals.py after patches have been applied because original baseline rMin values are read from checkout.",
+  "primarySourcesOnly": true,
+  "status": "Ready for root integration",
+  "report": "audit-report.md",
+  "modelCoverage": "model-audit.json"
+}

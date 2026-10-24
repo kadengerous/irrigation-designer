@@ -1,0 +1,1442 @@
+[
+  {
+    "nozzleId": "1.5",
+    "sourceLine": 54,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 33.0,
+      "flowGpm": 1.15,
+      "precipTriangleInH": 0.23,
+      "precipSquareInH": 0.2,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 10.0584,
+      "flowLMin": 4.353223551599999,
+      "flowM3H": 0.26119341309599997,
+      "precipSquareMmH": 5.08,
+      "precipTriangleMmH": 5.842
+    }
+  },
+  {
+    "nozzleId": "1.5",
+    "sourceLine": 55,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 34.0,
+      "flowGpm": 1.38,
+      "precipTriangleInH": 0.27,
+      "precipSquareInH": 0.23,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 10.3632,
+      "flowLMin": 5.22386826192,
+      "flowM3H": 0.3134320957152,
+      "precipSquareMmH": 5.842,
+      "precipTriangleMmH": 6.858
+    }
+  },
+  {
+    "nozzleId": "1.5",
+    "sourceLine": 56,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 35.0,
+      "flowGpm": 1.59,
+      "precipTriangleInH": 0.29,
+      "precipSquareInH": 0.25,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 10.668000000000001,
+      "flowLMin": 6.01880473656,
+      "flowM3H": 0.3611282841936,
+      "precipSquareMmH": 6.35,
+      "precipTriangleMmH": 7.365999999999999
+    }
+  },
+  {
+    "nozzleId": "1.5",
+    "sourceLine": 57,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 35.0,
+      "flowGpm": 1.74,
+      "precipTriangleInH": 0.32,
+      "precipSquareInH": 0.27,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 10.668000000000001,
+      "flowLMin": 6.58661650416,
+      "flowM3H": 0.3951969902496,
+      "precipSquareMmH": 6.858,
+      "precipTriangleMmH": 8.128
+    }
+  },
+  {
+    "nozzleId": "1.5",
+    "sourceLine": 58,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 36.0,
+      "flowGpm": 1.88,
+      "precipTriangleInH": 0.32,
+      "precipSquareInH": 0.28,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 10.972800000000001,
+      "flowLMin": 7.116574153919999,
+      "flowM3H": 0.42699444923519997,
+      "precipSquareMmH": 7.112,
+      "precipTriangleMmH": 8.128
+    }
+  },
+  {
+    "nozzleId": "2.0",
+    "sourceLine": 60,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 35.0,
+      "flowGpm": 1.45,
+      "precipTriangleInH": 0.26,
+      "precipSquareInH": 0.23,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 10.668000000000001,
+      "flowLMin": 5.4888470868,
+      "flowM3H": 0.329330825208,
+      "precipSquareMmH": 5.842,
+      "precipTriangleMmH": 6.604
+    }
+  },
+  {
+    "nozzleId": "2.0",
+    "sourceLine": 61,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 36.0,
+      "flowGpm": 1.8,
+      "precipTriangleInH": 0.31,
+      "precipSquareInH": 0.27,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 10.972800000000001,
+      "flowLMin": 6.8137412112,
+      "flowM3H": 0.408824472672,
+      "precipSquareMmH": 6.858,
+      "precipTriangleMmH": 7.874
+    }
+  },
+  {
+    "nozzleId": "2.0",
+    "sourceLine": 62,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 37.0,
+      "flowGpm": 2.12,
+      "precipTriangleInH": 0.34,
+      "precipSquareInH": 0.3,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 11.277600000000001,
+      "flowLMin": 8.02507298208,
+      "flowM3H": 0.4815043789247999,
+      "precipSquareMmH": 7.619999999999999,
+      "precipTriangleMmH": 8.636000000000001
+    }
+  },
+  {
+    "nozzleId": "2.0",
+    "sourceLine": 63,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 37.0,
+      "flowGpm": 2.3,
+      "precipTriangleInH": 0.37,
+      "precipSquareInH": 0.32,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 11.277600000000001,
+      "flowLMin": 8.706447103199999,
+      "flowM3H": 0.5223868261919999,
+      "precipSquareMmH": 8.128,
+      "precipTriangleMmH": 9.398
+    }
+  },
+  {
+    "nozzleId": "2.0",
+    "sourceLine": 64,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 37.0,
+      "flowGpm": 2.58,
+      "precipTriangleInH": 0.42,
+      "precipSquareInH": 0.36,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 11.277600000000001,
+      "flowLMin": 9.76636240272,
+      "flowM3H": 0.5859817441632,
+      "precipSquareMmH": 9.143999999999998,
+      "precipTriangleMmH": 10.668
+    }
+  },
+  {
+    "nozzleId": "2.5",
+    "sourceLine": 66,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 35.0,
+      "flowGpm": 1.75,
+      "precipTriangleInH": 0.32,
+      "precipSquareInH": 0.28,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 10.668000000000001,
+      "flowLMin": 6.624470622,
+      "flowM3H": 0.39746823732,
+      "precipSquareMmH": 7.112,
+      "precipTriangleMmH": 8.128
+    }
+  },
+  {
+    "nozzleId": "2.5",
+    "sourceLine": 67,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 36.0,
+      "flowGpm": 2.2,
+      "precipTriangleInH": 0.38,
+      "precipSquareInH": 0.33,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 10.972800000000001,
+      "flowLMin": 8.3279059248,
+      "flowM3H": 0.49967435548799993,
+      "precipSquareMmH": 8.382,
+      "precipTriangleMmH": 9.652
+    }
+  },
+  {
+    "nozzleId": "2.5",
+    "sourceLine": 68,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 37.0,
+      "flowGpm": 2.55,
+      "precipTriangleInH": 0.41,
+      "precipSquareInH": 0.36,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 11.277600000000001,
+      "flowLMin": 9.6528000492,
+      "flowM3H": 0.579168002952,
+      "precipSquareMmH": 9.143999999999998,
+      "precipTriangleMmH": 10.413999999999998
+    }
+  },
+  {
+    "nozzleId": "2.5",
+    "sourceLine": 69,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 37.0,
+      "flowGpm": 2.8,
+      "precipTriangleInH": 0.45,
+      "precipSquareInH": 0.39,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 11.277600000000001,
+      "flowLMin": 10.599152995199999,
+      "flowM3H": 0.6359491797119999,
+      "precipSquareMmH": 9.906,
+      "precipTriangleMmH": 11.43
+    }
+  },
+  {
+    "nozzleId": "2.5",
+    "sourceLine": 70,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 37.0,
+      "flowGpm": 3.05,
+      "precipTriangleInH": 0.5,
+      "precipSquareInH": 0.43,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 11.277600000000001,
+      "flowLMin": 11.545505941199998,
+      "flowM3H": 0.6927303564719999,
+      "precipSquareMmH": 10.921999999999999,
+      "precipTriangleMmH": 12.7
+    }
+  },
+  {
+    "nozzleId": "3.0",
+    "sourceLine": 73,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 36.0,
+      "flowGpm": 2.2,
+      "precipTriangleInH": 0.38,
+      "precipSquareInH": 0.33,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 10.972800000000001,
+      "flowLMin": 8.3279059248,
+      "flowM3H": 0.49967435548799993,
+      "precipSquareMmH": 8.382,
+      "precipTriangleMmH": 9.652
+    }
+  },
+  {
+    "nozzleId": "3.0",
+    "sourceLine": 74,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 38.0,
+      "flowGpm": 2.6,
+      "precipTriangleInH": 0.4,
+      "precipSquareInH": 0.35,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 11.5824,
+      "flowLMin": 9.8420706384,
+      "flowM3H": 0.5905242383039999,
+      "precipSquareMmH": 8.889999999999999,
+      "precipTriangleMmH": 10.16
+    }
+  },
+  {
+    "nozzleId": "3.0",
+    "sourceLine": 75,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 40.0,
+      "flowGpm": 3.05,
+      "precipTriangleInH": 0.42,
+      "precipSquareInH": 0.37,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 12.192,
+      "flowLMin": 11.545505941199998,
+      "flowM3H": 0.6927303564719999,
+      "precipSquareMmH": 9.398,
+      "precipTriangleMmH": 10.668
+    }
+  },
+  {
+    "nozzleId": "3.0",
+    "sourceLine": 76,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 40.0,
+      "flowGpm": 3.52,
+      "precipTriangleInH": 0.49,
+      "precipSquareInH": 0.42,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 12.192,
+      "flowLMin": 13.32464947968,
+      "flowM3H": 0.7994789687807999,
+      "precipSquareMmH": 10.668,
+      "precipTriangleMmH": 12.446
+    }
+  },
+  {
+    "nozzleId": "3.0",
+    "sourceLine": 77,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 40.0,
+      "flowGpm": 3.8,
+      "precipTriangleInH": 0.53,
+      "precipSquareInH": 0.46,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 12.192,
+      "flowLMin": 14.3845647792,
+      "flowM3H": 0.8630738867519999,
+      "precipSquareMmH": 11.684,
+      "precipTriangleMmH": 13.462
+    }
+  },
+  {
+    "nozzleId": "4.0",
+    "sourceLine": 79,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 37.0,
+      "flowGpm": 2.95,
+      "precipTriangleInH": 0.48,
+      "precipSquareInH": 0.41,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 11.277600000000001,
+      "flowLMin": 11.166964762800001,
+      "flowM3H": 0.670017885768,
+      "precipSquareMmH": 10.413999999999998,
+      "precipTriangleMmH": 12.191999999999998
+    }
+  },
+  {
+    "nozzleId": "4.0",
+    "sourceLine": 80,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 40.0,
+      "flowGpm": 3.55,
+      "precipTriangleInH": 0.49,
+      "precipSquareInH": 0.43,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 12.192,
+      "flowLMin": 13.438211833199999,
+      "flowM3H": 0.8062927099919999,
+      "precipSquareMmH": 10.921999999999999,
+      "precipTriangleMmH": 12.446
+    }
+  },
+  {
+    "nozzleId": "4.0",
+    "sourceLine": 81,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 42.0,
+      "flowGpm": 4.1,
+      "precipTriangleInH": 0.52,
+      "precipSquareInH": 0.45,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 12.8016,
+      "flowLMin": 15.520188314399999,
+      "flowM3H": 0.9312112988639999,
+      "precipSquareMmH": 11.43,
+      "precipTriangleMmH": 13.208
+    }
+  },
+  {
+    "nozzleId": "4.0",
+    "sourceLine": 82,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 42.0,
+      "flowGpm": 4.45,
+      "precipTriangleInH": 0.56,
+      "precipSquareInH": 0.49,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 12.8016,
+      "flowLMin": 16.8450824388,
+      "flowM3H": 1.0107049463279998,
+      "precipSquareMmH": 12.446,
+      "precipTriangleMmH": 14.224
+    }
+  },
+  {
+    "nozzleId": "4.0",
+    "sourceLine": 83,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 43.0,
+      "flowGpm": 4.85,
+      "precipTriangleInH": 0.58,
+      "precipSquareInH": 0.5,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 13.1064,
+      "flowLMin": 18.3592471524,
+      "flowM3H": 1.1015548291439998,
+      "precipSquareMmH": 12.7,
+      "precipTriangleMmH": 14.731999999999998
+    }
+  },
+  {
+    "nozzleId": "5.0",
+    "sourceLine": 85,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 39.0,
+      "flowGpm": 3.75,
+      "precipTriangleInH": 0.55,
+      "precipSquareInH": 0.47,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 11.8872,
+      "flowLMin": 14.19529419,
+      "flowM3H": 0.8517176514,
+      "precipSquareMmH": 11.937999999999999,
+      "precipTriangleMmH": 13.97
+    }
+  },
+  {
+    "nozzleId": "5.0",
+    "sourceLine": 86,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 41.0,
+      "flowGpm": 4.5,
+      "precipTriangleInH": 0.6,
+      "precipSquareInH": 0.52,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 12.4968,
+      "flowLMin": 17.034353027999998,
+      "flowM3H": 1.0220611816799998,
+      "precipSquareMmH": 13.208,
+      "precipTriangleMmH": 15.239999999999998
+    }
+  },
+  {
+    "nozzleId": "5.0",
+    "sourceLine": 87,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 43.0,
+      "flowGpm": 5.1,
+      "precipTriangleInH": 0.61,
+      "precipSquareInH": 0.53,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 13.1064,
+      "flowLMin": 19.3056000984,
+      "flowM3H": 1.158336005904,
+      "precipSquareMmH": 13.462,
+      "precipTriangleMmH": 15.493999999999998
+    }
+  },
+  {
+    "nozzleId": "5.0",
+    "sourceLine": 88,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 45.0,
+      "flowGpm": 5.75,
+      "precipTriangleInH": 0.63,
+      "precipSquareInH": 0.55,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 13.716000000000001,
+      "flowLMin": 21.766117758,
+      "flowM3H": 1.30596706548,
+      "precipSquareMmH": 13.97,
+      "precipTriangleMmH": 16.002
+    }
+  },
+  {
+    "nozzleId": "5.0",
+    "sourceLine": 89,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 45.0,
+      "flowGpm": 6.1,
+      "precipTriangleInH": 0.67,
+      "precipSquareInH": 0.58,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 13.716000000000001,
+      "flowLMin": 23.091011882399997,
+      "flowM3H": 1.3854607129439998,
+      "precipSquareMmH": 14.731999999999998,
+      "precipTriangleMmH": 17.018
+    }
+  },
+  {
+    "nozzleId": "6.0",
+    "sourceLine": 91,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 39.0,
+      "flowGpm": 4.2,
+      "precipTriangleInH": 0.61,
+      "precipSquareInH": 0.53,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 11.8872,
+      "flowLMin": 15.8987294928,
+      "flowM3H": 0.953923769568,
+      "precipSquareMmH": 13.462,
+      "precipTriangleMmH": 15.493999999999998
+    }
+  },
+  {
+    "nozzleId": "6.0",
+    "sourceLine": 92,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 43.0,
+      "flowGpm": 5.2,
+      "precipTriangleInH": 0.63,
+      "precipSquareInH": 0.54,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 13.1064,
+      "flowLMin": 19.6841412768,
+      "flowM3H": 1.1810484766079998,
+      "precipSquareMmH": 13.716,
+      "precipTriangleMmH": 16.002
+    }
+  },
+  {
+    "nozzleId": "6.0",
+    "sourceLine": 93,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 46.0,
+      "flowGpm": 6.05,
+      "precipTriangleInH": 0.64,
+      "precipSquareInH": 0.55,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 14.020800000000001,
+      "flowLMin": 22.901741293199997,
+      "flowM3H": 1.3741044775919997,
+      "precipSquareMmH": 13.97,
+      "precipTriangleMmH": 16.256
+    }
+  },
+  {
+    "nozzleId": "6.0",
+    "sourceLine": 94,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 47.0,
+      "flowGpm": 6.65,
+      "precipTriangleInH": 0.67,
+      "precipSquareInH": 0.58,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 14.325600000000001,
+      "flowLMin": 25.172988363600002,
+      "flowM3H": 1.510379301816,
+      "precipSquareMmH": 14.731999999999998,
+      "precipTriangleMmH": 17.018
+    }
+  },
+  {
+    "nozzleId": "6.0",
+    "sourceLine": 95,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 48.0,
+      "flowGpm": 7.25,
+      "precipTriangleInH": 0.7,
+      "precipSquareInH": 0.61,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 14.630400000000002,
+      "flowLMin": 27.444235434,
+      "flowM3H": 1.6466541260399998,
+      "precipSquareMmH": 15.493999999999998,
+      "precipTriangleMmH": 17.779999999999998
+    }
+  },
+  {
+    "nozzleId": "8.0",
+    "sourceLine": 97,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 36.0,
+      "flowGpm": 5.75,
+      "precipTriangleInH": 0.99,
+      "precipSquareInH": 0.85,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 10.972800000000001,
+      "flowLMin": 21.766117758,
+      "flowM3H": 1.30596706548,
+      "precipSquareMmH": 21.59,
+      "precipTriangleMmH": 25.145999999999997
+    }
+  },
+  {
+    "nozzleId": "8.0",
+    "sourceLine": 98,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 43.0,
+      "flowGpm": 7.1,
+      "precipTriangleInH": 0.85,
+      "precipSquareInH": 0.74,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 13.1064,
+      "flowLMin": 26.876423666399997,
+      "flowM3H": 1.6125854199839997,
+      "precipSquareMmH": 18.796,
+      "precipTriangleMmH": 21.59
+    }
+  },
+  {
+    "nozzleId": "8.0",
+    "sourceLine": 99,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 47.0,
+      "flowGpm": 8.05,
+      "precipTriangleInH": 0.81,
+      "precipSquareInH": 0.7,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 14.325600000000001,
+      "flowLMin": 30.472564861200002,
+      "flowM3H": 1.8283538916720001,
+      "precipSquareMmH": 17.779999999999998,
+      "precipTriangleMmH": 20.574
+    }
+  },
+  {
+    "nozzleId": "8.0",
+    "sourceLine": 100,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 48.0,
+      "flowGpm": 8.95,
+      "precipTriangleInH": 0.86,
+      "precipSquareInH": 0.75,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 14.630400000000002,
+      "flowLMin": 33.8794354668,
+      "flowM3H": 2.032766128008,
+      "precipSquareMmH": 19.049999999999997,
+      "precipTriangleMmH": 21.843999999999998
+    }
+  },
+  {
+    "nozzleId": "8.0",
+    "sourceLine": 101,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 50.0,
+      "flowGpm": 9.7,
+      "precipTriangleInH": 0.86,
+      "precipSquareInH": 0.75,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 15.24,
+      "flowLMin": 36.7184943048,
+      "flowM3H": 2.2031096582879997,
+      "precipSquareMmH": 19.049999999999997,
+      "precipTriangleMmH": 21.843999999999998
+    }
+  },
+  {
+    "nozzleId": "1.0LA",
+    "sourceLine": 124,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 25.0,
+      "flowGpm": 0.74,
+      "precipTriangleInH": 0.26,
+      "precipSquareInH": 0.23,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 7.62,
+      "flowLMin": 2.80120472016,
+      "flowM3H": 0.1680722832096,
+      "precipSquareMmH": 5.842,
+      "precipTriangleMmH": 6.604
+    }
+  },
+  {
+    "nozzleId": "1.0LA",
+    "sourceLine": 125,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 28.0,
+      "flowGpm": 0.94,
+      "precipTriangleInH": 0.27,
+      "precipSquareInH": 0.23,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 8.5344,
+      "flowLMin": 3.5582870769599997,
+      "flowM3H": 0.21349722461759998,
+      "precipSquareMmH": 5.842,
+      "precipTriangleMmH": 6.858
+    }
+  },
+  {
+    "nozzleId": "1.0LA",
+    "sourceLine": 126,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 28.0,
+      "flowGpm": 1.02,
+      "precipTriangleInH": 0.29,
+      "precipSquareInH": 0.25,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 8.5344,
+      "flowLMin": 3.86112001968,
+      "flowM3H": 0.23166720118079998,
+      "precipSquareMmH": 6.35,
+      "precipTriangleMmH": 7.365999999999999
+    }
+  },
+  {
+    "nozzleId": "1.0LA",
+    "sourceLine": 127,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 29.0,
+      "flowGpm": 1.14,
+      "precipTriangleInH": 0.3,
+      "precipSquareInH": 0.26,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 8.8392,
+      "flowLMin": 4.31536943376,
+      "flowM3H": 0.2589221660256,
+      "precipSquareMmH": 6.604,
+      "precipTriangleMmH": 7.619999999999999
+    }
+  },
+  {
+    "nozzleId": "1.0LA",
+    "sourceLine": 128,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 29.0,
+      "flowGpm": 1.25,
+      "precipTriangleInH": 0.33,
+      "precipSquareInH": 0.29,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 8.8392,
+      "flowLMin": 4.73176473,
+      "flowM3H": 0.2839058838,
+      "precipSquareMmH": 7.365999999999999,
+      "precipTriangleMmH": 8.382
+    }
+  },
+  {
+    "nozzleId": "1.5LA",
+    "sourceLine": 130,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 27.0,
+      "flowGpm": 1.1,
+      "precipTriangleInH": 0.34,
+      "precipSquareInH": 0.29,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 8.2296,
+      "flowLMin": 4.1639529624,
+      "flowM3H": 0.24983717774399997,
+      "precipSquareMmH": 7.365999999999999,
+      "precipTriangleMmH": 8.636000000000001
+    }
+  },
+  {
+    "nozzleId": "1.5LA",
+    "sourceLine": 131,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 30.0,
+      "flowGpm": 1.35,
+      "precipTriangleInH": 0.33,
+      "precipSquareInH": 0.29,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 9.144,
+      "flowLMin": 5.1103059084,
+      "flowM3H": 0.306618354504,
+      "precipSquareMmH": 7.365999999999999,
+      "precipTriangleMmH": 8.382
+    }
+  },
+  {
+    "nozzleId": "1.5LA",
+    "sourceLine": 132,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 31.0,
+      "flowGpm": 1.52,
+      "precipTriangleInH": 0.35,
+      "precipSquareInH": 0.3,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 9.4488,
+      "flowLMin": 5.75382591168,
+      "flowM3H": 0.34522955470079997,
+      "precipSquareMmH": 7.619999999999999,
+      "precipTriangleMmH": 8.889999999999999
+    }
+  },
+  {
+    "nozzleId": "1.5LA",
+    "sourceLine": 133,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 31.0,
+      "flowGpm": 1.75,
+      "precipTriangleInH": 0.4,
+      "precipSquareInH": 0.35,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 9.4488,
+      "flowLMin": 6.624470622,
+      "flowM3H": 0.39746823732,
+      "precipSquareMmH": 8.889999999999999,
+      "precipTriangleMmH": 10.16
+    }
+  },
+  {
+    "nozzleId": "1.5LA",
+    "sourceLine": 134,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 31.0,
+      "flowGpm": 1.9,
+      "precipTriangleInH": 0.44,
+      "precipSquareInH": 0.38,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 9.4488,
+      "flowLMin": 7.1922823896,
+      "flowM3H": 0.43153694337599996,
+      "precipSquareMmH": 9.652,
+      "precipTriangleMmH": 11.176
+    }
+  },
+  {
+    "nozzleId": "2.0LA",
+    "sourceLine": 136,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 29.0,
+      "flowGpm": 1.4,
+      "precipTriangleInH": 0.37,
+      "precipSquareInH": 0.32,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 8.8392,
+      "flowLMin": 5.2995764975999995,
+      "flowM3H": 0.31797458985599997,
+      "precipSquareMmH": 8.128,
+      "precipTriangleMmH": 9.398
+    }
+  },
+  {
+    "nozzleId": "2.0LA",
+    "sourceLine": 137,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 31.0,
+      "flowGpm": 1.72,
+      "precipTriangleInH": 0.4,
+      "precipSquareInH": 0.34,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 9.4488,
+      "flowLMin": 6.51090826848,
+      "flowM3H": 0.3906544961088,
+      "precipSquareMmH": 8.636000000000001,
+      "precipTriangleMmH": 10.16
+    }
+  },
+  {
+    "nozzleId": "2.0LA",
+    "sourceLine": 138,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 32.0,
+      "flowGpm": 2.05,
+      "precipTriangleInH": 0.45,
+      "precipSquareInH": 0.39,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 9.7536,
+      "flowLMin": 7.760094157199999,
+      "flowM3H": 0.46560564943199995,
+      "precipSquareMmH": 9.906,
+      "precipTriangleMmH": 11.43
+    }
+  },
+  {
+    "nozzleId": "2.0LA",
+    "sourceLine": 139,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 33.0,
+      "flowGpm": 2.25,
+      "precipTriangleInH": 0.46,
+      "precipSquareInH": 0.4,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 10.0584,
+      "flowLMin": 8.517176513999999,
+      "flowM3H": 0.5110305908399999,
+      "precipSquareMmH": 10.16,
+      "precipTriangleMmH": 11.684
+    }
+  },
+  {
+    "nozzleId": "2.0LA",
+    "sourceLine": 140,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 33.0,
+      "flowGpm": 2.45,
+      "precipTriangleInH": 0.5,
+      "precipSquareInH": 0.43,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 10.0584,
+      "flowLMin": 9.2742588708,
+      "flowM3H": 0.556455532248,
+      "precipSquareMmH": 10.921999999999999,
+      "precipTriangleMmH": 12.7
+    }
+  },
+  {
+    "nozzleId": "3.0LA",
+    "sourceLine": 142,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 25.0,
+      "radiusFt": 29.0,
+      "flowGpm": 2.2,
+      "precipTriangleInH": 0.58,
+      "precipSquareInH": 0.5,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 1.7236893232945774,
+      "pressureKPa": 172.36893232945775,
+      "arcDeg": 180,
+      "radiusM": 8.8392,
+      "flowLMin": 8.3279059248,
+      "flowM3H": 0.49967435548799993,
+      "precipSquareMmH": 12.7,
+      "precipTriangleMmH": 14.731999999999998
+    }
+  },
+  {
+    "nozzleId": "3.0LA",
+    "sourceLine": 143,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 35.0,
+      "radiusFt": 33.0,
+      "flowGpm": 2.6,
+      "precipTriangleInH": 0.53,
+      "precipSquareInH": 0.46,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 2.4131650526124084,
+      "pressureKPa": 241.31650526124085,
+      "arcDeg": 180,
+      "radiusM": 10.0584,
+      "flowLMin": 9.8420706384,
+      "flowM3H": 0.5905242383039999,
+      "precipSquareMmH": 11.684,
+      "precipTriangleMmH": 13.462
+    }
+  },
+  {
+    "nozzleId": "3.0LA",
+    "sourceLine": 144,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 45.0,
+      "radiusFt": 34.0,
+      "flowGpm": 3.05,
+      "precipTriangleInH": 0.59,
+      "precipSquareInH": 0.51,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.1026407819302393,
+      "pressureKPa": 310.2640781930239,
+      "arcDeg": 180,
+      "radiusM": 10.3632,
+      "flowLMin": 11.545505941199998,
+      "flowM3H": 0.6927303564719999,
+      "precipSquareMmH": 12.953999999999999,
+      "precipTriangleMmH": 14.985999999999999
+    }
+  },
+  {
+    "nozzleId": "3.0LA",
+    "sourceLine": 145,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 55.0,
+      "radiusFt": 36.0,
+      "flowGpm": 3.4,
+      "precipTriangleInH": 0.58,
+      "precipSquareInH": 0.51,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 3.79211651124807,
+      "pressureKPa": 379.211651124807,
+      "arcDeg": 180,
+      "radiusM": 10.972800000000001,
+      "flowLMin": 12.8704000656,
+      "flowM3H": 0.772224003936,
+      "precipSquareMmH": 12.953999999999999,
+      "precipTriangleMmH": 14.731999999999998
+    }
+  },
+  {
+    "nozzleId": "3.0LA",
+    "sourceLine": 146,
+    "sourcePage": 3,
+    "sourceUrl": "https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25",
+    "source": {
+      "pressurePsi": 65.0,
+      "radiusFt": 36.0,
+      "flowGpm": 3.7,
+      "precipTriangleInH": 0.63,
+      "precipSquareInH": 0.55,
+      "arcDeg": 180
+    },
+    "normalized": {
+      "pressureBar": 4.481592240565901,
+      "pressureKPa": 448.1592240565901,
+      "arcDeg": 180,
+      "radiusM": 10.972800000000001,
+      "flowLMin": 14.0060236008,
+      "flowM3H": 0.840361416048,
+      "precipSquareMmH": 13.97,
+      "precipTriangleMmH": 16.002
+    }
+  }
+]

@@ -1,0 +1,194 @@
+ (https://www.krain.com/content/files/images/landingpages/rotors/superpro/superpro%20product%20brochure.pdf)
+citeturn465view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/rotors/superpro/superpro%20product%20brochure.pdf","lineno":null}); Total lines: 191
+L0@P0: Adjust distance and water flow simultaneously!
+L1@P0: Watch video & find out how.
+L2@P0: n	Patented Intelligent Flow Technology® – Allows
+L3@P0: distance and water flow to be reduced simultaneously
+L4@P0: and proportionately – up to 50%. Superior uniformity.
+L5@P0: Saves water up to 30%.
+L6@P0: n	Patented Easy Arc Set – Simplified arc set allows for
+L7@P0: wet or dry adjustment in seconds.
+L8@P0: n	Adjustable or Continuous Rotation – Provides a full
+L9@P0: range of adjustment from 40° to continuous 360°.
+L10@P0: n	Arc Memory Clutch – Prevents internal gear damage
+L11@P0: and returns rotor to its prior setting automatically if
+L12@P0: nozzle turret is forced out of adjustment.
+L13@P0: n	Time Proven Patented Reversing Mechanism –
+L14@P0: Assures continuous reverse and return…over a 35 year
+L15@P0: history.
+L16@P0: n	Ratcheting Riser – Allows for easy adjustment of your
+L17@P0: left starting position with a simple turn of the riser.
+L18@P0: n	Rubber Cover – Seals out dirt and increases product
+L19@P0: durability.
+L20@P0: n	Optional Check Valve – Prevents low head drainage.
+L21@P0: n	Rugged Stainless Steel Spring – .093 gauge 302
+L22@P0: stainless steel spring extends the life of the rotor.
+L23@P0: Intelligent Flow
+L24@P0: Technology®
+L25@P0-1: with SUPERPRO®Easy Arc Setting
+L26@P1: Arc Selection 40°
+L27@P1: to continuous 360°
+L28@P1: Adjust From Left Start
+L29@P1: Water flow can be turned off during installation or
+L30@P1: adjustment. Riser remains in a popped up position
+L31@P1: for quick nozzle changes.
+L32@P1: Specifications
+L33@P1: n Inlet: 3/4" threaded NPT
+L34@P1: n Arc Adjustment Range: 40° to continuous 360°
+L35@P1: n Flow Range: 1.1 – 11.1 GPM
+L36@P1: n Pressure Rating: 20 – 70 PSI
+L37@P1: n Precipitation Rate: .21 – 1.17 in/hr
+L38@P1: (Depending on spacing and nozzle used)
+L39@P1: n Retracted Height: 7 1/2"
+L40@P1: n Riser Height: 4 1/4"
+L41@P1: n Recommended Spacing: 28' – 44'
+L42@P1: n Radius: 26' – 46'
+L43@P1: n Nozzle Trajectory: 26°
+L44@P1: n Low Angle Nozzle Trajectory: 12°
+L45@P1: n Standard and low angle nozzles included
+L46@P1: 11020001 Rev. 09
+L47@P1: © K-Rain Manufacturing Corporation
+L48@P1: AN ISO 9001 CERTIFIED COMPANY
+L49@P1: Models
+L50@P1: 10003 SUPERPRO®
+L51@P1: Other options add to part number:
+L52@P1: -HP 12" High Pop
+L53@P1: -SH Shrub Head
+L54@P1: -CV Check Valve
+L55@P1: -NN No Nozzle
+L56@P1: -RCW Reclaimed Water Use
+L57@P1: -OS On-site wastewater applications with
+L58@P1: #3 low angle nozzle pre-installed
+L59@P1: How to Specify with Options
+L60@P1: Model Number Description
+L61@P1: 10003 -RCW
+L62@P1: Intelligent Flow
+L63@P1: Technology®
+L64@P1: K-Rain Manufacturing Corp.
+L65@P1: 1640 Australian Avenue
+L66@P1: Riviera Beach, FL 33404 USA
+L67@P1: 561.844.1002
+L68@P1: FAX: 561.842.9493
+L69@P1: 1.800.735.7246 | www.krain.com
+L70@P1: *All precipitation rates calculated for 180° operation.
+L71@P1: For the precipitation rate for a 360° sprinkler, divide by 2.
+L72@P1: Low Angle Performance Data
+L73@P1:  NO ADJUSTMENT
+L74@P1: NOZZLE PRESSURE RADIUS FLOW PRECIP in/hr
+L75@P1: PSI Feet GPM n p
+L76@P1: #1.0 30 26 1.1 .31 .36
+L77@P1: 40 30 1.3 .28 .32
+L78@P1: 50 30 1.4 .30 .35
+L79@P1: 60 30 1.6 .34 .40
+L80@P1: #1.5 30 27 1.4 .37 .43
+L81@P1: 40 28 1.7 .42 .48
+L82@P1: 50 31 1.9 .38 .44
+L83@P1: 60 30 2.1 .45 .52
+L84@P1: #2.0 30 30 2.1 .45 .52
+L85@P1: 40 31 2.4 .48 .56
+L86@P1: 50 33 2.8 .50 .57
+L87@P1: 60 31 3.1 .62 .72
+L88@P1: #3.0 30 32 3.0 .56 .65
+L89@P1: 40 34 3.5 .58 .67
+L90@P1: 50 35 3.9 .61 .71
+L91@P1: 60 35 4.3 .68 .78
+L92@P1:  -30% ADJUSTMENT
+L93@P1: RADIUS FLOW PRECIP in/hr
+L94@P1: Feet GPM n p
+L95@P1: 18 0.8 .44 .51
+L96@P1: 21 0.9 .40 .46
+L97@P1: 21 1.0 .43 .50
+L98@P1: 21 1.1 .49 .57
+L99@P1: 19 1.0 .53 .61
+L100@P1: 20 1.2 .60 .69
+L101@P1: 22 1.3 .54 .63
+L102@P1: 21 1.5 .64 .74
+L103@P1: 21 1.5 .64 .74
+L104@P1: 22 1.7 .69 .80
+L105@P1: 23 2.0 .71 .81
+L106@P1: 22 2.2 .89 1.03
+L107@P1: 22 2.1 .80 .93
+L108@P1: 24 2.5 .83 .96
+L109@P1: 25 2.7 .87 1.01
+L110@P1: 25 3.0 .97 1.11
+L111@P1: Performance Data
+L112@P1:  NO ADJUSTMENT
+L113@P1: NOZZLE PRESSURE RADIUS FLOW PRECIP in/hr
+L114@P1: PSI Feet GPM n p
+L115@P1: #1.0 30 30 1.2 .21 .25
+L116@P1: 40 31 1.3 .23 .27
+L117@P1: 50 31 1.5 .27 .31
+L118@P1: 60 32 1.8 .32 .37
+L119@P1: #1.5 30 36 1.5 .22 .26
+L120@P1: 40 37 1.8 .25 .29
+L121@P1: 50 37 2.0 .28 .32
+L122@P1: 60 38 2.2 .29 .34
+L123@P1: #2.0 30 35 1.8 .28 .33
+L124@P1: 40 35 2.2 .35 .40
+L125@P1: 50 36 2.6 .39 .45
+L126@P1: 60 38 2.9 .39 .45
+L127@P1: #2.5 30 37 2.5 .35 .41
+L128@P1: 40 38 3.0 .40 .46
+L129@P1: 50 40 3.4 .41 .47
+L130@P1: 60 40 3.8 .46 .53
+L131@P1: #3.0 30 36 3.0 .45 .51
+L132@P1: 40 37 3.4 .48 .55
+L133@P1: 50 38 4.0 .53 .62
+L134@P1: 60 41 4.4 .50 .58
+L135@P1: #4.0 30 37 4.0 .56 .65
+L136@P1: 40 39 4.5 .57 .66
+L137@P1: 50 39 5.2 .66 .76
+L138@P1: 60 40 5.6 .67 .78
+L139@P1: #5.0 30 37 4.8 .68 .78
+L140@P1: 40 38 5.6 .75 .86
+L141@P1: 50 41 6.5 .74 .86
+L142@P1: 60 43 7.2 .75 .87
+L143@P1: #6.0 30 40 6.0 .72 .83
+L144@P1: 40 41 6.8 .78 .90
+L145@P1: 50 42 7.5 .82 .95
+L146@P1: 60 44 8.4 .84 .96
+L147@P1: #8.0 30 38 7.9 1.05 1.22
+L148@P1: 40 44 9.2 .92 1.06
+L149@P1: 50 45 10.4 .99 1.14
+L150@P1: 60 46 11.1 1.01 1.17
+L151@P1:  -30% ADJUSTMENT
+L152@P1: RADIUS FLOW PRECIP in/hr
+L153@P1: Feet GPM n p
+L154@P1: 21 0.8 .30 .36
+L155@P1: 22 0.9 .33 .39
+L156@P1: 22 1.1 .39 .44
+L157@P1: 22 1.3 .46 .53
+L158@P1: 25 1.1 .31 .37
+L159@P1: 26 1.3 .36 .41
+L160@P1: 26 1.4 .40 .46
+L161@P1: 27 1.5 .41 .49
+L162@P1: 25 1.3 .40 .47
+L163@P1: 25 1.5 .50 .57
+L164@P1: 25 1.8 .56 .64
+L165@P1: 27 2.0 .56 .64
+L166@P1: 26 1.8 .50 .59
+L167@P1: 27 2.1 .57 .66
+L168@P1: 28 2.4 .59 .67
+L169@P1: 28 2.7 .66 .76
+L170@P1: 25 2.1 .64 .73
+L171@P1: 26 2.4 .69 .79
+L172@P1: 27 2.8 .76 .89
+L173@P1: 29 3.1 .71 .83
+L174@P1: 26 2.8 .80 .93
+L175@P1: 27 3.2 .81 .94
+L176@P1: 27 3.6 .94 1.09
+L177@P1: 28 3.9 .96 1.11
+L178@P1: 26 3.4 .97 1.11
+L179@P1: 27 3.9 1.07 1.23
+L180@P1: 29 4.6 1.06 1.23
+L181@P1: 30 5.0 1.07 1.24
+L182@P1: 28 4.2 1.03 1.19
+L183@P1: 29 4.8 1.11 1.29
+L184@P1: 29 5.3 1.17 1.36
+L185@P1: 31 5.9 1.20 1.37
+L186@P1: 27 5.5 1.50 1.74
+L187@P1: 31 6.4 1.31 1.51
+L188@P1: 32 7.3 1.41 1.63
+L189@P1: 32 7.8 1.44 1.67
+L190@P1: Preinstalled
+

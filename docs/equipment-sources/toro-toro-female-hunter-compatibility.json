@@ -1,0 +1,969 @@
+{
+  "verifiedOn": "2026-10-04",
+  "conclusion": "Toro female-thread Precision Series PSN and O variants can use the existing Hunter spray body families listed below. Male-thread Toro variants remain on the Toro 570Z family. This is a cross-reference from explicit manufacturer compatibility and thread statements, not an inference from pipe inlet size.",
+  "compatibleBodyFamilyIds": [
+    "PS-ULTRA",
+    "PRO-SPRAY",
+    "PRS30",
+    "PRS40"
+  ],
+  "recommendedBodyFamilyId": "PRS30",
+  "recommendationBasis": "Toro detailed spray specification recommends 30 psi; Hunter PRS30 supplies nominal 30 psi. This does not impose a requirement to use a regulated body.",
+  "toroEvidence": [
+    {
+      "url": "https://psn.toro.com/",
+      "scope": "Current PSN family",
+      "evidence": "Toro explicitly includes Hunter among compatible spray-head brands and describes male and female thread choices."
+    },
+    {
+      "url": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+      "sourceVersion": "2026 catalog served under historical filename",
+      "scope": "O-series female thread models",
+      "evidence": "The female-thread O-model heading expressly includes Hunter spray bodies."
+    }
+  ],
+  "hunterEvidence": [
+    {
+      "bodyFamilyId": "PS-ULTRA",
+      "url": "https://www.hunterirrigation.com/sites/default/files/2026-04/RC-244-SS-Sprays-PSUltra-US.pdf",
+      "page": 1,
+      "evidence": "All female-threaded nozzles are compatible. The same page lists PSU-02, PSU-04 and PSU-06."
+    },
+    {
+      "bodyFamilyId": "PRO-SPRAY",
+      "url": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm",
+      "evidence": "The family explicitly accepts industry-standard female nozzles; individual PROS models repeat female-thread acceptance."
+    },
+    {
+      "bodyFamilyId": "PRS30",
+      "url": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs30",
+      "evidence": "All 20 listed PRS30 models explicitly accept female-thread nozzles. PROS-04-PRS30 is listed at 30 psi / rounded 2.1 bar."
+    },
+    {
+      "bodyFamilyId": "PRS40",
+      "url": "https://www.hunterirrigation.com/en-metric/irrigation-product/spray-bodies/pro-spraytm-prs40",
+      "evidence": "All 20 listed PRS40 models explicitly accept female-thread nozzles. PROS-04-PRS40 is listed at 40 psi / rounded 2.8 bar."
+    }
+  ],
+  "schemaNote": "Existing Hunter family identifiers are unnamespaced; use PS-ULTRA, PRO-SPRAY, PRS30, PRS40 exactly. In supplied Toro body data nozzleThread=male means accepted nozzle thread, not male pipe inlet; body inlet is separately female 1/2-inch NPT.",
+  "patches": [
+    {
+      "id": "toro:PSN5-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN5-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN5-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN5-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN5-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN5-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN5-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN5-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN5-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN8-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN10-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN12-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN15-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN4X30-SST",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN4X15-LCS",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN4X15-RCS",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN4X18-SST",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN4X9-LCS",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:PSN4X9-RCS",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-5-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-8-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-10-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-12-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-60",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-Q",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-T",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-150",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-H",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-210",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-TT",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-15-F",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "compatibleBodyFamilyIds": [
+        "PS-ULTRA",
+        "PRO-SPRAY",
+        "PRS30",
+        "PRS40"
+      ]
+    }
+  ]
+}

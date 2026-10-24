@@ -1,0 +1,213 @@
+{
+  "verifiedOn": "2026-10-10",
+  "scope": "Proposed patches only; no shared catalog edits",
+  "keep": [
+    "Body physical pressure maxima7.6/4.8bar unchanged",
+    "TB-ADJ flow remains unknown; status remains Needs Review",
+    "No bubbler area/precipitation or fictional pressure table",
+    "Body generic UI gray and bubbler black appearance retained; fresh web screenshot did not expose image pixels, so no new color verification date",
+    "No unsupported minimum regulation differential",
+    "RN rec2.1 retained against conflicting website2.8; no blanket cross-generation matching guarantee"
+  ],
+  "patches": [
+    {
+      "id": "k-rain:78002",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:78003",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:78004",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:78004-PR30",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10",
+        "nominalRegulationMaxInletBar": 6.9
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/written%20specifications/pro-s%20sprays%20pressure%20regulator%20pr30.pdf"
+    },
+    {
+      "id": "k-rain:78004-PR40",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10",
+        "nominalRegulationMaxInletBar": 6.9
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/written%20specifications/pro-s%20sprays%20pressure%20regulator%20pr40.pdf"
+    },
+    {
+      "id": "k-rain:78006",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:78006-PR30",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10",
+        "nominalRegulationMaxInletBar": 6.9
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/written%20specifications/pro-s%20sprays%20pressure%20regulator%20pr30.pdf"
+    },
+    {
+      "id": "k-rain:78006-PR40",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10",
+        "nominalRegulationMaxInletBar": 6.9
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/written%20specifications/pro-s%20sprays%20pressure%20regulator%20pr40.pdf"
+    },
+    {
+      "id": "k-rain:78012",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:78012-PR30",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10",
+        "nominalRegulationMaxInletBar": 6.9
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/written%20specifications/pro-s%20sprays%20pressure%20regulator%20pr30.pdf"
+    },
+    {
+      "id": "k-rain:78012-PR40",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10",
+        "nominalRegulationMaxInletBar": 6.9
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/written%20specifications/pro-s%20sprays%20pressure%20regulator%20pr40.pdf"
+    },
+    {
+      "id": "k-rain:NP2",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:NP4",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:73001",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:74001",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:76001",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:71201",
+      "set": {
+        "verifiedOn": "2026-10-10",
+        "bodyVerifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh dimensional/interface verification; regulated variants additionally have a model-specific100psi inlet guarantee, distinct from110psi mechanical body range.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:TB-025",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh geometry/pressure/nominal-flow verification; TB-ADJ remains hydraulically unresolved. Color dates intentionally untouched.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:TB-05",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh geometry/pressure/nominal-flow verification; TB-ADJ remains hydraulically unresolved. Color dates intentionally untouched.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:TB-10",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh geometry/pressure/nominal-flow verification; TB-ADJ remains hydraulically unresolved. Color dates intentionally untouched.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:TB-20",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh geometry/pressure/nominal-flow verification; TB-ADJ remains hydraulically unresolved. Color dates intentionally untouched.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    },
+    {
+      "id": "k-rain:TB-ADJ",
+      "set": {
+        "verifiedOn": "2026-10-10"
+      },
+      "reason": "Fresh geometry/pressure/nominal-flow verification; TB-ADJ remains hydraulically unresolved. Color dates intentionally untouched.",
+      "source": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+    }
+  ]
+}

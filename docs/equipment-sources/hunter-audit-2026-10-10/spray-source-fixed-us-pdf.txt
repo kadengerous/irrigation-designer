@@ -1,0 +1,224 @@
+(https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf)
+citeturn314view2 [wordlim: 200] Crawled: last week; Content type: application/pdf; Number of pages: 3; Source: click({"ref_id":"turn275view0","id":69}); Total lines: 222
+L0@P0: Visit hunterindustries.com
+L1@P0: NOZZLES
+L2@P0: KEY BENEFITS
+L3@P0: • Clean edges for a defined pattern with better wind resistance
+L4@P0: • Large water droplets minimize misting with better uniformity
+L5@P0: • Sturdy construction ensures reliable performance
+L6@P0: • Color-coded for easy field identification
+L7@P0: OPERATING SPECIFICATIONS
+L8@P0: • Recommended operating pressure: 30 PSI
+L9@P0: • Pair with Pro-Spray PRS30 Sprinkler Bodies for pressure regulation to 30 PSI
+L10@P0: • Warranty period: 2 years
+L11@P0: PRO FIXED NOZZLES
+L12@P0: PRO FIXED NOZZLES
+L13@P0: ARC 5 8 10 12 15 17
+L14@P0: Q
+L15@P0: T Use 4A/6A
+L16@P0: Nozzle
+L17@P0: Use 17A
+L18@P0: Nozzle
+L19@P0: H
+L20@P0: F Use 17A
+L21@P0: Nozzle
+L22@P0: 5' 8' 10' 12' 15' 17'
+L23@P0: Pro Fixed Nozzles are designed for high accuracy within a variety of
+L24@P0-1: landscape shapes and sizes. Visit hunterindustries.com RESIDENTIAL & COMMERCIAL IRRIGATION | Built on Innovation®
+L25@P1: NOZZLES
+L26@P1: 5
+L27@P1:  Blue
+L28@P1: 5' radius
+L29@P1: Fixed: ¼, ½, Full
+L30@P1: Trajectory: 0°
+L31@P1: Arc Position Pressure
+L32@P1: PSI
+L33@P1: Radius
+L34@P1: ft.
+L35@P1: Flow
+L36@P1: GPM
+L37@P1: Precip in/hr
+L38@P1: 
+L39@P1: 90° Q
+L40@P1: 20 4 0.09 2.25 2.60
+L41@P1: 25 4 0.11 2.54 2.94
+L42@P1: 30 5 0.12 1.80 2.08
+L43@P1: 35 6 0.13 1.36 1.57
+L44@P1: 40 6 0.14 1.46 1.69
+L45@P1: 120° T
+L46@P1: 20
+L47@P1: 25
+L48@P1: 30 Use Hunter 4A or 6A Nozzle
+L49@P1: 35
+L50@P1: 40
+L51@P1: 180° H
+L52@P1: 20 4 0.19 2.25 2.60
+L53@P1: 25 4 0.21 2.54 2.94
+L54@P1: 30 5 0.23 1.80 2.08
+L55@P1: 35 6 0.25 1.36 1.57
+L56@P1: 40 6 0.27 1.46 1.69
+L57@P1: 360° F
+L58@P1: 20 4 0.37 2.25 2.60
+L59@P1: 25 4 0.42 2.54 2.94
+L60@P1: 30 5 0.47 1.80 2.08
+L61@P1: 35 6 0.51 1.36 1.57
+L62@P1: 40 6 0.55 1.46 1.69
+L63@P1: Bold = Recommended pressure
+L64@P1: 8
+L65@P1:  Brown
+L66@P1: 8' radius
+L67@P1: Fixed: ¼, ⅓, ½, Full
+L68@P1: Trajectory: 15°
+L69@P1: Radius
+L70@P1: ft.
+L71@P1: Flow
+L72@P1: GPM
+L73@P1: Precip in/hr
+L74@P1: 
+L75@P1: 7 0.20 1.54 1.78
+L76@P1: 8 0.22 1.33 1.53
+L77@P1: 8 0.24 1.46 1.69
+L78@P1: 9 0.26 1.25 1.45
+L79@P1: 9 0.28 1.34 1.55
+L80@P1: 7 0.26 1.54 1.78
+L81@P1: 8 0.29 1.33 1.53
+L82@P1: 8 0.32 1.46 1.69
+L83@P1: 9 0.35 1.25 1.45
+L84@P1: 9 0.38 1.34 1.55
+L85@P1: 7 0.38 1.49 1.72
+L86@P1: 8 0.43 1.28 1.48
+L87@P1: 8 0.47 1.41 1.63
+L88@P1: 9 0.51 1.21 1.39
+L89@P1: 9 0.54 1.29 1.49
+L90@P1: 7 0.78 1.54 1.78
+L91@P1: 8 0.88 1.33 1.53
+L92@P1: 8 0.97 1.46 1.69
+L93@P1: 9 1.05 1.25 1.45
+L94@P1: 9 1.13 1.34 1.55
+L95@P1: 10
+L96@P1:  Red
+L97@P1: 10' radius
+L98@P1: Fixed: ¼, ⅓, ½, Full
+L99@P1: Trajectory: 15°
+L100@P1: Radius
+L101@P1: ft.
+L102@P1: Flow
+L103@P1: GPM
+L104@P1: Precip in/hr
+L105@P1: 
+L106@P1: 9 0.34 1.63 1.88
+L107@P1: 10 0.39 1.48 1.71
+L108@P1: 10 0.42 1.63 1.89
+L109@P1: 11 0.46 1.47 1.69
+L110@P1: 11 0.49 1.57 1.82
+L111@P1: 9 0.46 1.63 1.88
+L112@P1: 10 0.51 1.48 1.71
+L113@P1: 10 0.57 1.63 1.89
+L114@P1: 11 0.61 1.47 1.69
+L115@P1: 11 0.66 1.57 1.82
+L116@P1: 9 0.70 1.67 1.92
+L117@P1: 10 0.79 1.53 1.76
+L118@P1: 10 0.88 1.69 1.95
+L119@P1: 11 0.95 1.52 1.75
+L120@P1: 11 1.03 1.63 1.89
+L121@P1: 9 1.29 1.53 1.77
+L122@P1: 10 1.45 1.39 1.61
+L123@P1: 10 1.59 1.53 1.76
+L124@P1: 11 1.72 1.37 1.58
+L125@P1: 11 1.84 1.46 1.69
+L126@P1: PRO FIXED NOZZLES PERFORMANCE DATA
+L127@P1-2: Pro Fixed NozzlesVisit hunterindustries.com
+L128@P2: NOZZLES
+L129@P2: 12
+L130@P2:  Green
+L131@P2: 12' radius
+L132@P2: Fixed: ¼, ⅓, ½, ⅔, ¾, Full
+L133@P2: Trajectory: 28°
+L134@P2: Arc Position Pressure
+L135@P2: PSI
+L136@P2: Radius
+L137@P2: ft.
+L138@P2: Flow
+L139@P2: GPM
+L140@P2: Precip in/hr
+L141@P2: 
+L142@P2: 90° Q
+L143@P2: 20 11 0.54 1.71 1.98
+L144@P2: 25 12 0.61 1.62 1.87
+L145@P2: 30 12 0.67 1.78 2.06
+L146@P2: 35 13 0.72 1.65 1.90
+L147@P2: 40 13 0.78 1.77 2.04
+L148@P2: 120° T
+L149@P2: 20 11 0.72 1.71 1.98
+L150@P2: 25 12 0.81 1.62 1.87
+L151@P2: 30 12 0.89 1.78 2.06
+L152@P2: 35 13 0.97 1.65 1.90
+L153@P2: 40 13 1.04 1.77 2.04
+L154@P2: 180° H
+L155@P2: 20 11 1.05 1.67 1.93
+L156@P2: 25 12 1.18 1.58 1.83
+L157@P2: 30 12 1.30 1.74 2.01
+L158@P2: 35 13 1.42 1.61 1.86
+L159@P2: 40 13 1.52 1.73 2.00
+L160@P2: 360° F
+L161@P2: 20 11 2.17 1.72 1.99
+L162@P2: 25 12 2.45 1.63 1.89
+L163@P2: 30 12 2.70 1.80 2.08
+L164@P2: 35 13 2.93 1.67 1.93
+L165@P2: 40 13 3.15 1.80 2.07
+L166@P2: Bold = Recommended pressure
+L167@P2: 15
+L168@P2:  Black
+L169@P2: 15' radius
+L170@P2: Fixed: ¼, ⅓, ½, ⅔, ¾, Full
+L171@P2: Trajectory: 28°
+L172@P2: Radius
+L173@P2: ft.
+L174@P2: Flow
+L175@P2: GPM
+L176@P2: Precip in/hr
+L177@P2: 
+L178@P2: 14 0.78 1.53 1.77
+L179@P2: 15 0.88 1.51 1.74
+L180@P2: 15 0.97 1.67 1.92
+L181@P2: 16 1.06 1.59 1.84
+L182@P2: 17 1.14 1.52 1.75
+L183@P2: 14 1.04 1.53 1.77
+L184@P2: 15 1.17 1.51 1.74
+L185@P2: 15 1.30 1.67 1.92
+L186@P2: 16 1.41 1.59 1.84
+L187@P2: 17 1.52 1.52 1.75
+L188@P2: 14 1.51 1.48 1.71
+L189@P2: 15 1.69 1.45 1.67
+L190@P2: 15 1.86 1.59 1.84
+L191@P2: 16 2.02 1.52 1.75
+L192@P2: 17 2.16 1.44 1.66
+L193@P2: 14 3.04 1.49 1.72
+L194@P2: 15 3.41 1.46 1.69
+L195@P2: 15 3.75 1.61 1.85
+L196@P2: 16 4.07 1.53 1.76
+L197@P2: 17 4.36 1.45 1.68
+L198@P2: 17
+L199@P2:  Gray
+L200@P2: 17' radius
+L201@P2: Fixed: ¼, ½
+L202@P2: Trajectory: 28°
+L203@P2: Radius
+L204@P2: ft.
+L205@P2: Flow
+L206@P2: GPM
+L207@P2: Precip in/hr
+L208@P2: 
+L209@P2: 16 0.93 1.40 1.61
+L210@P2: 17 1.05 1.39 1.61
+L211@P2: 17 1.15 1.54 1.77
+L212@P2: 18 1.25 1.49 1.72
+L213@P2: 19 1.34 1.43 1.65
+L214@P2: Use Hunter 17A Nozzle
+L215@P2: 16 1.91 1.43 1.66
+L216@P2: 17 2.15 1.43 1.65
+L217@P2: 17 2.37 1.58 1.82
+L218@P2: 18 2.57 1.53 1.76
+L219@P2: 19 2.76 1.47 1.70
+L220@P2: Use Hunter 17A Nozzle
+L221@P2: PRO FIXED NOZZLES PERFORMANCE DATA

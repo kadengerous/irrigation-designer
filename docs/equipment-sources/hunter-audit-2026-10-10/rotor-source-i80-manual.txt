@@ -1,0 +1,364 @@
+ (https://www.hunterirrigation.com/sites/default/files/2023-09/rc-099-ic-i-80-us-web.pdf)
+citeturn308view0 [wordlim: 200] Crawled: 2 months ago; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.hunterirrigation.com/sites/default/files/2023-09/rc-099-ic-i-80-us-web.pdf","lineno":null}); Total lines: 361
+L0@P0: INSTALLATION INSTRUCTIONS
+L1@P0: GEAR-DRIVEN I-80 ROTORS
+L2@P0: Figure 2
+L3@P0: Figure 3
+L4@P0: To Increase Arc
+L5@P0: ➊ Use the arc adjustment side of the Hunter
+L6@P0: Wrench or T-Handle Tool (P/N 319100SP),
+L7@P0: and insert it into the pull-up socket on
+L8@P0: the cap, rotating 90º. Next, pull up
+L9@P0: the riser.
+L10@P0: ② Slide the Arc Adjustment Riser Tool
+L11@P0: (P/N 382800SP) onto the gray
+L12@P0: adjustment ring below the nozzle
+L13@P0: turret (Figure 1).
+L14@P0: ➌ While holding the nozzle turret at
+L15@P0: the right stop, turn the riser tool
+L16@P0: counterclockwise.
+L17@P0: ④ Ajust to any arc between 70°
+L18@P0: and 360°. The riser tool will stop
+L19@P0: turning when the maximum arc (360°) is
+L20@P0: reached. When set to 360°, the sprinkler
+L21@P0: will rotate continually counterclockwise.
+L22@P0: To Decrease Arc
+L23@P0: ➊ Use the arc adjustment side of the
+L24@P0: Hunter Wrench or T-Handle Tool
+L25@P0: (P/N 319100SP) and insert it into the
+L26@P0: pull-up socket on the cap, rotating 90º.
+L27@P0: Next, pull up the riser.
+L28@P0: ② Slide the Arc Adjustment Riser Tool
+L29@P0: (P/N 382800SP) onto the gray
+L30@P0: adjustment ring below the nozzle turret
+L31@P0: (Figure 1).
+L32@P0: ➌ While holding the nozzle turret at the
+L33@P0: right stop, turn the riser tool clockwise.
+L34@P0: ④ Adjust to any arc between 70° and 360°.
+L35@P0: The riser tool will stop turning when the
+L36@P0: minimum arc (70°) is reached.
+L37@P0: Figure 1
+L38@P0: Radius Adjustments
+L39@P0: Individual I-80 nozzles cannot be adjusted
+L40@P0: to reduce the radius. To change the radius,
+L41@P0: install a larger or smaller nozzle. Reference
+L42@P0: performance data charts.
+L43@P0: Primary Nozzle Removal and
+L44@P0: Installation
+L45@P0: ➊ Insert the hex-key end of the Hunter
+L46@P0: Wrench into the primary nozzle “arrow”
+L47@P0: located on the top of the rubber cover.
+L48@P0: ② Raise the nozzle-retaining screw by
+L49@P0: turning counterclockwise. Raise the
+L50@P0: screw until it clears the nozzle opening.
+L51@P0: ➌ Using small needle-nose pliers, firmly
+L52@P0: insert the tip of the pliers into the
+L53@P0: opening below the nozzle (Figure 2). This
+L54@P0: action will collapse the nozzle’s retaining
+L55@P0: hook (Figure 3). While gripping the
+L56@P0: nozzle, pull outward to remove.
+L57@P0: ④ Slip the desired nozzle firmly into
+L58@P0: the nozzle socket. Lower the nozzleretaining screw to retain the nozzle.
+L59@P0: Short-Range/Mid-Range Nozzle
+L60@P0: Removal and Installation
+L61@P0: ➊ Reference the I-80 and I-80-ON
+L62@P0: performance charts to determine the
+L63@P0: correct nozzle part number and color.
+L64@P0: ② Use the Nozzle Installation and Removal
+L65@P0: Tool (P/N 803700SP) to service all
+L66@P0: short-range and mid-range nozzles.
+L67@P0: ➌ When facing directly toward the nozzles,
+L68@P0: short-range nozzles are on the left and
+L69@P0: mid-range nozzles are on the right.
+L70@P0: To remove a nozzle, firmly align and
+L71@P0: press the tool against it while turning
+L72@P0: counterclockwise (Figure 4).
+L73@P0: ④ To install the nozzle, engage the tool to
+L74@P0: the nozzle. Then carefully align the nozzle
+L75@P0: to the housing. Use care to prevent crossthreading and turn clockwise (Figure 5).
+L76@P0: ➎ Each short-range and mid-range nozzle
+L77@P0: has an alignment pointer. Turn the nozzle
+L78@P0: clockwise until the pointer is facing the
+L79@P0: 12:00 position (Figure 6).
+L80@P0: I-80 Riser Removal
+L81@P0: All I-80 Rotors have a traditional body
+L82@P0: cap that may be unscrewed to gain riser
+L83@P0: assembly access. To facilitate easy riser
+L84@P0: assembly removal, all I-80 Rotors also
+L85@P0: include a removable snap ring on the body
+L86@P0: cap. To access the riser assembly using the
+L87@P0: snap ring, use the Snap Ring Removal Tool
+L88@P0: (P/N 984400SP).
+L89@P0: ➊ Insert the tool into the snap ring’s
+L90@P0: access point (Figure 7). Press downward,
+L91@P0: slightly twist the tool’s handle, and pull
+L92@P0: upward to remove the snap ring .
+L93@P0: ② Engage the pull-up socket in the riser’s
+L94@P0: logo cap using the Hunter Wrench or
+L95@P0: T-Handle Tool P/N 319100SP. Insert the
+L96@P0: wrench or tool, then rotate 90° and pull
+L97@P0: upward to remove the riser.
+L98@P0: ➌ To install the riser assembly, insert the
+L99@P0: riser into the body. Next install the snap
+L100@P0: ring’s left side. Lastly, press downward in
+L101@P0: a counterclockwise direction.
+L102@P0: Stator Adjustments
+L103@P0: All I-80 Rotors with nozzles 23 through 53
+L104@P0: have a manually adjustable stator to control
+L105@P0: rotation speed (Figure 9).
+L106@P0: When the primary nozzle size is changed,
+L107@P0: the stator must be changed or adjusted to
+L108@P0: match the nozzle in use. To make stator
+L109@P0: adjustments, first remove the riser assembly
+L110@P0: using the instructions below.
+L111@P0: ➊ Remove the riser from the body.
+L112@P0: ② Remove the screen at the base
+L113@P0: of the riser by grabbing, turning
+L114@P0: counterclockwise, and lifting away.
+L115@P0: ➌ Remove the stator assembly and adjust
+L116@P0: by turning the black stator plate until the
+L117@P0: arrow aligns with the nozzle in use
+L118@P0: (Figure 10).
+L119@P0: ④ Install the stator assembly with the black
+L120@P0: stator plate facing the screen. Insert the
+L121@P0: screen and turn clockwise to lock.
+L122@P0: Figure 4
+L123@P0: Figure 6
+L124@P0: Figure 5
+L125@P0: Figure 9
+L126@P0: Figure 10
+L127@P0: I-80 Turf Cup Kit
+L128@P0: A Turf Cup Kit (P/N 959400SP) is a great
+L129@P0: user-installed option for blending a rotor into
+L130@P0: the surrounding field material.
+L131@P0: I-80 Arc Adjustments
+L132@P0: All I-80 adjustable arc rotors are preset to approximately 180°.
+L133@P0: The rotors can be adjusted with water on or off. It is recommended
+L134@P0: that initial arc adjustments be made before installation. Use your
+L135@P0: hand to rotate the nozzle turret counterclockwise to the left stop to
+L136@P0: complete any interrupted rotation cycle. Rotate the nozzle turret
+L137@P0: clockwise to the right stop. This is the fixed side of the arc. The
+L138@P0: nozzle turret must be held in this position for all arc adjustments.
+L139@P0: The ratchet feature allows the right fixed stop to be moved when the
+L140@P0: water is off. To adjust the right fixed arc, pull the riser up, grab the
+L141@P0: riser below the adjustment ring, and rotate the right fixed arc stop to
+L142@P0: the desired landscape alignment.
+L143@P0: Figure 7
+L144@P0:  Opposing nozzle models have no arc adjustments.
+L145@P0: Note
+L146@P0: To remove the snap ring after the Turf Cup Kit has been
+L147@P0: installed, you must unscrew the turf cup.
+L148@P0: Note
+L149@P0: Turf Cup Kit Installation
+L150@P0: ➊ Unscrew the fastener in the middle of
+L151@P0: the cap and remove the cap.
+L152@P0: ② Using the same fastener from the cap,
+L153@P0: screw the retainer on top of the riser.
+L154@P0: Be sure that the pull-up socket and
+L155@P0: nozzle-retaining screw are aligned with
+L156@P0: the retainer openings.
+L157@P0: ➌ Correctly align the cup with the top of
+L158@P0: the riser assembly.
+L159@P0: ④ Locate the protruding vertical indicator
+L160@P0: on the outside of the turf cup’s vertical
+L161@P0: surface near the top.
+L162@P0: ➎ While holding the turf cup over the riser
+L163@P0: assembly, orient the turf cup’s indicator
+L164@P0: mark to the riser’s nozzle-retaining
+L165@P0: screw.
+L166@P0: ➏ While maintaining this orientation,
+L167@P0: place the turf cup onto the top of the
+L168@P0: riser. Then turn quickly clockwise to
+L169@P0: lock the cup in the riser.
+L170@P0: ⑦ Lastly, slide the rubber cover over the
+L171@P0: body cap. Make sure that all retaining
+L172@P0: segments from the rubber cover are
+L173@P0: correctly positioned on the body cap.
+L174@P0: hunter.help/CommercialRotors
+L175@P0: SCAN
+L176@P0: for help
+L177@P0: Turf Cup
+L178@P0-1: RetainerI-80 NOZZLE PERFORMANCE DATA*
+L179@P1: Nozzle Set Pressure
+L180@P1: PSI
+L181@P1: Radius
+L182@P1: ft.
+L183@P1: Flow
+L184@P1:  GPM
+L185@P1: Precip in/hr
+L186@P1: 
+L187@P1: Tan 80 64 22.1 0.52 0.60
+L188@P1: Orange Lt. Green 50 65 20.2 0.46 0.53
+L189@P1: 60 66 22.1 0.49 0.56
+L190@P1: 23 65 67 23.9 0.51 0.59
+L191@P1: 803603 315313 70 67 24.2 0.52 0.60
+L192@P1: Green 80 69 25.9 0.52 0.60
+L193@P1: Orange Lt. Green 65 71 28.3 0.54 0.62
+L194@P1: 70 72 29.3 0.54 0.63
+L195@P1: 25 80 73 31.5 0.57 0.66
+L196@P1: 803603 315313 90 74 33.4 0.59 0.68
+L197@P1: Blue 100 75 35.4 0.61 0.70
+L198@P1: Orange Lt. Green 65 72 30.6 0.57 0.66
+L199@P1: 70 73 31.6 0.57 0.66
+L200@P1: 33 80 75 33.9 0.58 0.67
+L201@P1: 803603 315313 90 77 35.8 0.58 0.67
+L202@P1: Gray 100 79 37.9 0.58 0.67
+L203@P1: Orange Lt. Green 65 76 34.9 0.58 0.67
+L204@P1: 70 78 36.2 0.57 0.66
+L205@P1: 38 80 80 39.1 0.59 0.68
+L206@P1: 803603 315313 90 82 41.2 0.59 0.68
+L207@P1: Red 100 84 43.5 0.59 0.69
+L208@P1: Orange Lt. Green - - - - -
+L209@P1: 70 81 41.2 0.60 0.70
+L210@P1: 43 80 83 43.5 0.61 0.70
+L211@P1: 803603 315313 90 86 46.2 0.60 0.69
+L212@P1: Dk. Brown 100 89 48.7 0.59 0.68
+L213@P1: Orange Lt. Green - - - - -
+L214@P1: 70 83 46.3 0.65 0.75
+L215@P1: 48 80 85 48.4 0.64 0.74
+L216@P1: 803603 315313 90 89 51.7 0.63 0.73
+L217@P1: Dk. Green 100 91 54.5 0.63 0.73
+L218@P1: Orange Lt. Green - - - - -
+L219@P1: 70 87 50.7 0.64 0.74
+L220@P1: 53 80 89 53.1 0.65 0.75
+L221@P1: 803603 315313 90 92 56.4 0.64 0.74
+L222@P1: Dk. Blue 100 94 59.6 0.65 0.75
+L223@P1:  = Indicates installed nozzle plug (P/N 315300)
+L224@P1: * Complies with ASAE standard. All precipitation rates calculated for 360°
+L225@P1: operation. All triangular rates are equilateral.
+L226@P1: I-80 NOZZLES
+L227@P1: PERFORMANCE DATA
+L228@P1: GEAR-DRIVEN I-80 ROTORS
+L229@P1: I-80 NOZZLES
+L230@P1: I-80-ON NOZZLE PERFORMANCE DATA*
+L231@P1: Nozzle Set Pressure
+L232@P1: PSI
+L233@P1: Radius
+L234@P1: ft.
+L235@P1: Flow
+L236@P1:  GPM
+L237@P1: Precip in/hr
+L238@P1: 
+L239@P1: 50 63 21.6 0.52 0.60
+L240@P1: Tan Lt. Blue 60 65 23.0 0.52 0.61
+L241@P1: 23 65 66 24.0 0.53 0.61
+L242@P1: 70 67 24.9 0.53 0.62
+L243@P1: 803611 Green 315311 80 68 26.6 0.55 0.64
+L244@P1: 65 71 28.6 0.55 0.63
+L245@P1: Tan Lt. Blue 70 73 29.7 0.54 0.62
+L246@P1: 25 80 74 31.7 0.56 0.64
+L247@P1: 90 75 33.7 0.58 0.67
+L248@P1: 803611 Blue 315311 100 77 35.8 0.58 0.67
+L249@P1: 65 74 30.9 0.54 0.63
+L250@P1: Tan Lt. Blue 70 75 32.0 0.55 0.63
+L251@P1: 33 80 77 34.2 0.56 0.64
+L252@P1: 90 79 36.2 0.56 0.64
+L253@P1: 803611 Gray 315311 100 81 38.2 0.56 0.65
+L254@P1: 65 77 35.1 0.57 0.66
+L255@P1: Tan Lt. Blue 70 79 36.6 0.56 0.65
+L256@P1: 38 80 82 38.9 0.56 0.64
+L257@P1: 90 84 41.3 0.56 0.65
+L258@P1: 803611 Red 315311 100 87 43.6 0.55 0.64
+L259@P1: - - - - -
+L260@P1: Tan Lt. Blue 70 83 41.3 0.58 0.67
+L261@P1: 43 80 85 43.6 0.58 0.67
+L262@P1: 90 87 46.3 0.59 0.68
+L263@P1: 803611 Dk. Brown 315311 100 89 48.8 0.59 0.68
+L264@P1: - - - - -
+L265@P1: Tan Lt. Blue 70 90 46.9 0.56 0.64
+L266@P1: 48 80 92 48.9 0.56 0.64
+L267@P1: 90 94 50.5 0.55 0.63
+L268@P1: 803611 Dk. Green 315311 100 96 53.5 0.56 0.65
+L269@P1: - - - - -
+L270@P1: Tan Lt. Blue 70 91 49.8 0.58 0.67
+L271@P1: 53 80 93 52.2 0.58 0.67
+L272@P1: 90 95 55.5 0.59 0.68
+L273@P1: 803611 Dk. Blue 315311 100 97 58.5 0.60 0.69
+L274@P1:  = Nozzle plug (P/N 315300) installed in the front side of the nozzle housing.
+L275@P1: I-80-ON NOZZLE PERFORMANCE DATA*
+L276@P1: Nozzle Set Pressure Radius
+L277@P1: m
+L278@P1: Flow Precip mm/hr
+L279@P1:  bar kPa m3
+L280@P1: /hr l/min
+L281@P1: 3.4 344 19.2 4.91 81.8 13.3 15.4
+L282@P1: Tan Lt. Blue 4.1 413 19.8 5.22 87.1 13.3 15.4
+L283@P1: 23 4.5 450 20.1 5.45 90.8 13.5 15.6
+L284@P1: 4.8 482 20.4 5.66 94.3 13.6 15.7
+L285@P1: 803611 Green 315311 5.5 551 20.7 6.04 100.7 14.1 16.2
+L286@P1: 4.5 450 21.6 6.50 108.3 13.9 16.0
+L287@P1: Tan Lt. Blue 4.8 482 22.3 6.75 112.5 13.6 15.7
+L288@P1: 25 5.5 551 22.6 7.19 119.8 14.1 16.3
+L289@P1: 6.2 620 22.9 7.65 127.5 14.6 16.9
+L290@P1: 803611 Blue 315311 6.9 689 23.5 8.12 135.3 14.7 17.0
+L291@P1: 4.5 450 22.6 7.02 117.0 13.8 15.9
+L292@P1: Tan Lt. Blue 4.8 482 22.9 7.27 121.1 13.9 16.1
+L293@P1: 33 5.5 551 23.5 7.77 129.5 14.1 16.3
+L294@P1: 6.2 620 24.1 8.22 137.0 14.2 16.4
+L295@P1: 803611 Grey 315311 6.9 689 24.7 8.68 144.6 14.2 16.4
+L296@P1: 4.5 450 23.5 7.97 132.9 14.5 16.7
+L297@P1: Tan Lt. Blue 4.8 482 24.1 8.31 138.5 14.3 16.6
+L298@P1: 38 5.5 551 25.0 8.84 147.3 14.1 16.3
+L299@P1: 6.2 620 25.6 9.38 156.3 14.3 16.5
+L300@P1: 803611 Red 315311 6.9 689 26.5 9.90 165.0 14.1 16.3
+L301@P1: - - - - - - -
+L302@P1: Tan Lt. Blue 4.8 482 25.3 9.38 156.3 14.7 16.9
+L303@P1: 43 5.5 551 25.9 9.90 165.0 14.8 17.0
+L304@P1: 6.2 620 26.5 10.52 175.3 15.0 17.3
+L305@P1: 803611 Dk. Brown 315311 6.9 689 27.1 11.09 184.7 15.1 17.4
+L306@P1: - - - - - - -
+L307@P1: Tan Lt. Blue 4.8 482 27.4 10.65 177.5 14.2 16.3
+L308@P1: 48 5.5 551 28.0 11.11 185.1 14.1 16.3
+L309@P1: 6.2 620 28.7 11.46 191.0 14.0 16.1
+L310@P1: 803611 Dk. Green 315311 6.9 689 29.3 12.15 202.5 14.2 16.4
+L311@P1: - - - - - - -
+L312@P1: Tan Lt. Blue 4.8 482 27.7 11.31 188.5 14.7 17.0
+L313@P1: 53 5.5 551 28.3 11.86 197.7 14.8 17.0
+L314@P1: 6.2 620 29.0 12.61 210.1 15.0 17.4
+L315@P1: 803611 Dk. Blue 315311 6.9 689 29.6 13.29 221.4 15.2 17.6
+L316@P1: I-80 NOZZLE PERFORMANCE DATA
+L317@P1: Nozzle Set Pressure Radius
+L318@P1: m
+L319@P1: Flow Precip mm/hr
+L320@P1: bar kPa m 3/hr l/min
+L321@P1: Orange Lt. Green 3.4 344 19.8 4.59 76.5 11.7 13.5
+L322@P1: 4.1 413 20.1 5.02 83.7 12.4 14.3
+L323@P1: 23 4.5 450 20.4 5.43 90.5 13.0 15.0
+L324@P1: 803603 315313 4.8 482 20.4 5.50 91.6 13.2 15.2
+L325@P1: Green 5.5 551 21.0 5.88 98.0 13.3 15.4
+L326@P1: Orange Lt. Green 4.5 450 21.6 6.43 107.1 13.7 15.8
+L327@P1: 4.8 482 21.9 6.66 110.9 13.8 16.0
+L328@P1: 25 5.5 551 22.3 7.16 119.2 14.5 16.7
+L329@P1: 803603 315313 6.2 620 22.6 7.59 126.4 14.9 17.2
+L330@P1: Blue 6.9 689 22.9 8.04 134.0 15.4 17.8
+L331@P1: Orange Lt. Green 4.5 450 21.9 6.95 115.8 14.4 16.7
+L332@P1: 4.8 482 22.3 7.18 119.6 14.5 16.7
+L333@P1: 33 5.5 551 22.9 7.70 128.3 14.7 17.0
+L334@P1: 803603 315313 6.2 620 23.5 8.13 135.5 14.8 17.0
+L335@P1: Grey 6.9 689 24.1 8.61 143.5 14.8 17.1
+L336@P1: Orange Lt. Green 4.5 450 23.2 7.93 132.1 14.8 17.1
+L337@P1: 4.8 482 23.8 8.22 137.0 14.5 16.8
+L338@P1: 38 5.5 551 24.4 8.88 148.0 14.9 17.2
+L339@P1: 803603 315313 6.2 620 25.0 9.36 156.0 15.0 17.3
+L340@P1: Red 6.9 689 25.6 9.88 164.7 15.1 17.4
+L341@P1: Orange Lt. Green - - - - - - -
+L342@P1: 4.8 482 24.7 9.36 156.0 15.4 17.7
+L343@P1: 43 5.5 551 25.3 9.88 164.7 15.4 17.8
+L344@P1: 803603 315313 6.2 620 26.2 10.49 174.9 15.3 17.6
+L345@P1: Dk. Brown 6.9 689 27.1 11.06 184.3 15.0 17.4
+L346@P1: Orange Lt. Green - - - - - - -
+L347@P1: 4.8 482 25.3 10.52 175.3 16.4 19.0
+L348@P1: 48 5.5 551 25.9 10.99 183.2 16.4 18.9
+L349@P1: 803603 315313 6.2 620 27.1 11.74 195.7 16.0 18.4
+L350@P1: Dk. Green 6.9 689 27.7 12.38 206.3 16.1 18.6
+L351@P1: Orange Lt. Green - - - - - - -
+L352@P1: 4.8 482 26.5 11.52 191.9 16.4 18.9
+L353@P1: 53 5.5 551 27.1 12.06 201.0 16.4 18.9
+L354@P1: 803603 315313 6.2 620 28.0 12.81 213.5 16.3 18.8
+L355@P1: Dk. Blue 6.9 689 28.7 13.54 225.6 16.5 19.0
+L356@P1:  = Indicates installed nozzle plug (P/N 315300)
+L357@P1:  * Complies with ASAE standard. All precipitation rates calculated for 360°
+L358@P1: operation. All triangular rates are equilateral.
+L359@P1: 
+L360@P1: ©2023 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. RC-099 EN D 6/23
+

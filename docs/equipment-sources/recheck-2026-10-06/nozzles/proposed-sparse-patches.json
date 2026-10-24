@@ -1,0 +1,1281 @@
+[
+  {
+    "id": "k-rain:RN100-ADJ-90-210",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Dark Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN100-ADJ-90-210",
+        "colorName": "Dark Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN100-ADJ-210-270",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Medium Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN100-ADJ-210-270",
+        "colorName": "Medium Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN100-FIX360",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Light Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN100-FIX360",
+        "colorName": "Light Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN200-ADJ-90-210",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Dark Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN200-ADJ-90-210",
+        "colorName": "Dark Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN200-ADJ-210-270",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Medium Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN200-ADJ-210-270",
+        "colorName": "Medium Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN200-FIX360",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Light Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN200-FIX360",
+        "colorName": "Light Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN300-ADJ-90-210",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Dark Gray",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN300-ADJ-90-210",
+        "colorName": "Dark Gray",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN300-ADJ-210-270",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Medium Gray",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN300-ADJ-210-270",
+        "colorName": "Medium Gray",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN300-FIX360",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Light Gray",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN300-FIX360",
+        "colorName": "Light Gray",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RNS-RES-515",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Burnt Orange",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RNS-RES-515",
+        "colorName": "Burnt Orange",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RNS-LES-515",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Olive",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RNS-LES-515",
+        "colorName": "Olive",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RNS-SS-530",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RNS-SS-530",
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN100-ADJ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "rMin": 2.772,
+      "radiusReductionRule": "2026 catalog p42: radius adjustment up to 30%, matched precipitation through patterns and distances. Minimum available radius is 70% of the selected pressure/arc row radius; rMin is the global lower envelope, not a second nominal floor.",
+      "colorName": "Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN100-ADJ",
+        "colorName": "Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN200-ADJ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "rMin": 3.416,
+      "radiusReductionRule": "2026 catalog p42: radius adjustment up to 30%, matched precipitation through patterns and distances. Minimum available radius is 70% of the selected pressure/arc row radius; rMin is the global lower envelope, not a second nominal floor.",
+      "colorName": "Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN200-ADJ",
+        "colorName": "Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:RN300-ADJ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "rMin": 5.544,
+      "radiusReductionRule": "2026 catalog p42: radius adjustment up to 30%, matched precipitation through patterns and distances. Minimum available radius is 70% of the selected pressure/arc row radius; rMin is the global lower envelope, not a second nominal floor.",
+      "colorName": "Red",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:RN300-ADJ",
+        "colorName": "Red",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF6",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Red",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KVF6",
+        "colorName": "Red",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF8",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KVF8",
+        "colorName": "Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF10",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KVF10",
+        "colorName": "Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF12",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KVF12",
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF15",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KVF15",
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KVF17",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Gray",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KVF17",
+        "colorName": "Gray",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV8",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KV8",
+        "colorName": "Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV10",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KV10",
+        "colorName": "Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV12",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KV12",
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV15",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KV15",
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:KV17",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Gray",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:KV17",
+        "colorName": "Gray",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-8Q",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-8Q",
+        "colorName": "Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-8H",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-8H",
+        "colorName": "Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-8TQ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-8TQ",
+        "colorName": "Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-8F",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Green",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-8F",
+        "colorName": "Green",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-10Q",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-10Q",
+        "colorName": "Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-10H",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-10H",
+        "colorName": "Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-10TQ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-10TQ",
+        "colorName": "Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-10F",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Blue",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-10F",
+        "colorName": "Blue",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-12Q",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-12Q",
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-12H",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-12H",
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-12TQ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-12TQ",
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-12F",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-12F",
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15Q",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-15Q",
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15H",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-15H",
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15TQ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-15TQ",
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15F",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-15F",
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P12Q",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "performanceReview": "per-row",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P12Q",
+        "performanceRowPatches": [
+          {
+            "rowIndex": 0,
+            "expectedPressureBar": 1.4,
+            "expectedArcDeg": 90,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 1,
+            "expectedPressureBar": 1.7,
+            "expectedArcDeg": 90,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 2,
+            "expectedPressureBar": 2.1,
+            "expectedArcDeg": 90,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          },
+          {
+            "rowIndex": 3,
+            "expectedPressureBar": 2.8,
+            "expectedArcDeg": 90,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          }
+        ],
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P12H",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "performanceReview": "per-row",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P12H",
+        "performanceRowPatches": [
+          {
+            "rowIndex": 0,
+            "expectedPressureBar": 1.4,
+            "expectedArcDeg": 180,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 1,
+            "expectedPressureBar": 1.7,
+            "expectedArcDeg": 180,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 2,
+            "expectedPressureBar": 2.1,
+            "expectedArcDeg": 180,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          },
+          {
+            "rowIndex": 3,
+            "expectedPressureBar": 2.8,
+            "expectedArcDeg": 180,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          }
+        ],
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P12TQ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "performanceReview": "per-row",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P12TQ",
+        "performanceRowPatches": [
+          {
+            "rowIndex": 0,
+            "expectedPressureBar": 1.4,
+            "expectedArcDeg": 270,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 1,
+            "expectedPressureBar": 1.7,
+            "expectedArcDeg": 270,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 2,
+            "expectedPressureBar": 2.1,
+            "expectedArcDeg": 270,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          },
+          {
+            "rowIndex": 3,
+            "expectedPressureBar": 2.8,
+            "expectedArcDeg": 270,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          }
+        ],
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P12F",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "performanceReview": "per-row",
+      "colorName": "Brown",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P12F",
+        "performanceRowPatches": [
+          {
+            "rowIndex": 0,
+            "expectedPressureBar": 1.4,
+            "expectedArcDeg": 360,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 1,
+            "expectedPressureBar": 1.7,
+            "expectedArcDeg": 360,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 2,
+            "expectedPressureBar": 2.1,
+            "expectedArcDeg": 360,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          },
+          {
+            "rowIndex": 3,
+            "expectedPressureBar": 2.8,
+            "expectedArcDeg": 360,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          }
+        ],
+        "colorName": "Brown",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15Q",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P15Q",
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15H",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "performanceReview": "per-row",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P15H",
+        "performanceRowPatches": [
+          {
+            "rowIndex": 0,
+            "expectedPressureBar": 1.4,
+            "expectedArcDeg": 180,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 1,
+            "expectedPressureBar": 1.7,
+            "expectedArcDeg": 180,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 2,
+            "expectedPressureBar": 2.8,
+            "expectedArcDeg": 180,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          },
+          {
+            "rowIndex": 3,
+            "expectedPressureBar": 3.4,
+            "expectedArcDeg": 180,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          }
+        ],
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15TQ",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "performanceReview": "per-row",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P15TQ",
+        "performanceRowPatches": [
+          {
+            "rowIndex": 0,
+            "expectedPressureBar": 1.4,
+            "expectedArcDeg": 270,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          },
+          {
+            "rowIndex": 1,
+            "expectedPressureBar": 1.7,
+            "expectedArcDeg": 270,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 2,
+            "expectedPressureBar": 2.1,
+            "expectedArcDeg": 270,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 3,
+            "expectedPressureBar": 2.8,
+            "expectedArcDeg": 270,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          }
+        ],
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15F",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "performanceReview": "per-row",
+      "colorName": "Black",
+      "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "colorVerifiedOn": "2026-10-06"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P15F",
+        "performanceRowPatches": [
+          {
+            "rowIndex": 0,
+            "expectedPressureBar": 1.4,
+            "expectedArcDeg": 360,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          },
+          {
+            "rowIndex": 1,
+            "expectedPressureBar": 1.7,
+            "expectedArcDeg": 360,
+            "set": {
+              "verificationStatus": "Verified"
+            }
+          },
+          {
+            "rowIndex": 2,
+            "expectedPressureBar": 2.8,
+            "expectedArcDeg": 360,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          },
+          {
+            "rowIndex": 3,
+            "expectedPressureBar": 3.4,
+            "expectedArcDeg": 360,
+            "set": {
+              "verificationStatus": "Needs Review"
+            }
+          }
+        ],
+        "colorName": "Black",
+        "colorSourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+        "colorVerifiedOn": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15CS",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Unknown",
+      "color": "#64748b"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P15CS",
+        "colorName": "Unknown",
+        "color": "#64748b"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15CS",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Unknown",
+      "color": "#64748b"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-15CS",
+        "colorName": "Unknown",
+        "color": "#64748b"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15ES",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Unknown",
+      "color": "#64748b"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P15ES",
+        "colorName": "Unknown",
+        "color": "#64748b"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15ES",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Unknown",
+      "color": "#64748b"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-15ES",
+        "colorName": "Unknown",
+        "color": "#64748b"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15SS",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Unknown",
+      "color": "#64748b"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P15SS",
+        "colorName": "Unknown",
+        "color": "#64748b"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15SS",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Unknown",
+      "color": "#64748b"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-15SS",
+        "colorName": "Unknown",
+        "color": "#64748b"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:P15HL",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Unknown",
+      "color": "#64748b"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:P15HL",
+        "colorName": "Unknown",
+        "color": "#64748b"
+      }
+    ]
+  },
+  {
+    "id": "k-rain:FN-15HL",
+    "set": {
+      "verifiedOn": "2026-10-06",
+      "catalogVersion": "K-Rain 2026 Product Catalog; re-audit 2026-10-06",
+      "colorName": "Unknown",
+      "color": "#64748b"
+    },
+    "nozzles": [
+      {
+        "id": "k-rain:FN-15HL",
+        "colorName": "Unknown",
+        "color": "#64748b"
+      }
+    ]
+  }
+]

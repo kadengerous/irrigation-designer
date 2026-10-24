@@ -1,0 +1,153 @@
+{
+  "generator": "Built-in image_gen",
+  "purpose": "Generic product cutouts. The live manifold illustration composes a bare header and exactly N branch fittings; solenoid valves are independent component cards and BOM items. Model names and calculated parameters are separate editable text.",
+  "sources": [
+    "https://www.rainbird.com/products/pvc-manifold-system",
+    "https://www.hunterirrigation.com/irrigation-product/valves/1-pgv",
+    "https://www.pentair.com/en-us/home-water-treatment/water-softening-systems/whole-house-water-softeners.html",
+    "https://www.tank-depot.com/water-tanks/"
+  ],
+  "assets": [
+    {
+      "id": "manifold",
+      "file": "public/engineering/assembly/manifold.webp",
+      "prompt": "Use case: product-mockup. Asset type: reusable equipment product cutout for an irrigation assembly editor. Generate ONE realistic fully assembled irrigation zone valve manifold, not a schematic or logo: horizontal black polypropylene distribution header with large threaded union fittings, four parallel black plastic electric irrigation diaphragm valves with visible upright solenoid coils and short electrical wires, four blue compression outlet fittings. Authentic irrigation manifold construction inspired by real Rain Bird PVC manifold systems and Hunter PGV valve assemblies, not a radiant heating brass comb manifold. Front three-quarter product photography view, slightly from above, fully visible and centered with generous transparent margin. Realistic molded plastic, threads, screws, fittings, professional clean studio lighting, high detail readable at small sizes. NO brand marks, NO text, NO labels, NO backdrop, NO floor, no decorative water. Genuine transparent background."
+    },
+    {
+      "id": "tank",
+      "file": "public/engineering/assembly/tank.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete upright 2000 litre blue polyethylene WATER STORAGE TANK, tall cylindrical barrel with molded horizontal reinforcing ribs, domed shoulder, black screw lid on top, a small brass outlet tap near the bottom. NOT a pressurized expansion vessel.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "pump",
+      "file": "public/engineering/assembly/pump.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete horizontal centrifugal surface IRRIGATION WATER PUMP: blue cast iron volute housing, silver stainless pump body, dark blue finned electric motor with junction box above, inlet and outlet threaded pipe stubs, solid mounting feet. No water tank.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "pumpStation",
+      "file": "public/engineering/assembly/pumpStation.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete automatic domestic IRRIGATION BOOSTER PUMP STATION: blue centrifugal electric surface pump mounted atop a horizontal blue diaphragm pressure vessel, brass five-way fitting, small round pressure gauge and black pressure switch, sturdy feet.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "treatment",
+      "file": "public/engineering/assembly/treatment.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete WATER TREATMENT / WATER SOFTENING ASSEMBLY: two tall blue fiberglass media vessels side by side with black automatic backwash control heads, short connected white plumbing with bypass valves, a separate shorter white brine/salt bin with lid. Clearly recognizable multi-vessel filtration equipment, not just abstract bottles.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "filter",
+      "file": "public/engineering/assembly/filter.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete plastic IRRIGATION DISC FILTER: black angled Y-shaped housing with threaded inlet and outlet, large dark cylindrical removable filter bowl with ribbed screw cap, red locking ring, small drain cap. Real manufactured filtration equipment.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "controller",
+      "file": "public/engineering/assembly/controller.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete wall-mounted IRRIGATION CONTROLLER in a light grey rectangular weatherproof cabinet, door open to reveal a small LCD screen, central circular programming selector dial and several tactile buttons, a terminal strip at the bottom. No lettering or logos on cabinet, screen has simple neutral bars, not gibberish text.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "inlet",
+      "file": "public/engineering/assembly/inlet.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete IRRIGATION WATER INLET ASSEMBLY: a short horizontal blue HDPE supply pipe with blue-and-black compression union, brass inline ball shutoff valve with a blue lever and a small round pressure gauge on a brass tee, inlet and outlet pipe ends fully visible.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "well",
+      "file": "public/engineering/assembly/well.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete GARDEN WATER WELL HEAD INSTALLATION above ground: short blue circular well casing pipe with black bolted sanitary well cap, blue compression elbow and small outlet pipe, visible sealed electric cable entry. No deep underground shaft or scenery.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "filterAssembly",
+      "file": "public/engineering/assembly/filterAssembly.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete MULTI-STAGE WATER FILTER ASSEMBLY: three large vertical blue filter housings with black heads mounted under a silver wall bracket, connected by short white pipes, black end union fittings and one small round pressure gauge. Recognizable whole-house filter rack.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "ballValve",
+      "file": "public/engineering/assembly/ballValve.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete BRASS BALL SHUTOFF VALVE: solid brass threaded inline plumbing body, female threaded openings on both ends, clearly visible full-length red lever handle above, crisp metal threading. Single isolated product.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "checkValve",
+      "file": "public/engineering/assembly/checkValve.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete BRASS SPRING CHECK VALVE: heavy cylindrical brass inline plumbing body with hexagonal wrench flats, internal female threads visible at one end, metallic end unions, no lever. Distinct from a ball valve. Single isolated product.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "valve",
+      "file": "public/engineering/assembly/valve.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete BLACK PLASTIC ELECTRIC IRRIGATION SOLENOID VALVE: robust threaded inline diaphragm valve body, visible bonnet screws, vertical cylindrical black solenoid with two short red electrical wires and a manual bleed screw. Authentic irrigation valve construction.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "reducer",
+      "file": "public/engineering/assembly/reducer.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete BRASS WATER PRESSURE REDUCING VALVE: inline threaded brass body with union fittings and a large vertical black spring adjustment cap, small pressure gauge mounted to the side, accurately manufactured valve. Single isolated product.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "regulator",
+      "file": "public/engineering/assembly/regulator.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete BLACK PLASTIC INLINE IRRIGATION PRESSURE REGULATOR: compact cylindrical body with clearly visible threaded inlet and outlet unions, small molded ribbed adjustment cap, recognizably plastic irrigation regulator, distinct from brass reducing valve. Single isolated product.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "relay",
+      "file": "public/engineering/assembly/relay.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete IRRIGATION PUMP START RELAY: grey rectangular weatherproof wall box with door open, visible electric contactor, neatly arranged terminal blocks and short red/black/yellow internal wires, no exposed external loose wires. No lettering or logos.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "rainSensor",
+      "file": "public/engineering/assembly/rainSensor.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete IRRIGATION RAIN SHUTOFF SENSOR: small white and dark grey cylindrical slotted rain sensor with adjustable vent collar and a white L-shaped mounting bracket, a short neatly coiled black signal cable. Real outdoor weather sensor.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "weatherSensor",
+      "file": "public/engineering/assembly/weatherSensor.webp",
+      "prompt": "Use case: product-mockup. Generate ONE complete, realistic irrigation equipment product cutout. Subject: A complete COMPACT IRRIGATION WEATHER STATION: white miniature outdoor weather sensor mounted on a short white mast, black three-cup wind anemometer, white louvered radiation shield, small clear rain gauge cup and a compact solar panel. A real manufactured sensor assembly, not a satellite dish.. Style: photorealistic catalog product photography, front three-quarter view slightly from above, clean studio light, physical materials, correct recognizable manufactured construction, full object fully visible, centered with 12% clear margin. The equipment will be used in an engineering diagram, distinguish its actual shape clearly at small sizes. No text, no letters, no brand marks, no logo, no icons, no diagram, no infographic, no backdrop, no floor, no ambient glow. Genuine transparent alpha background around the object."
+    },
+    {
+      "id": "manifold-header",
+      "file": "public/engineering/assembly/manifold-header.webp",
+      "prompt": "Create ONE realistic product photography cutout of a horizontal black polypropylene irrigation distribution pipe HEADER ONLY, bare cylindrical tube with large threaded union couplings at the left and right ends. Perfect straight-on front elevation, horizontally aligned, symmetric, physically textured black molded plastic. NO branch outlets, NO downward connectors, NO valves, NO solenoids, NO wires, NO text, NO labels, NO logo, no background or floor or glow. Genuine transparent alpha background. Full object centered with generous margin."
+    },
+    {
+      "id": "manifold-outlet",
+      "file": "public/engineering/assembly/manifold-outlet.webp",
+      "prompt": "Create ONE realistic product photography cutout of a single black polypropylene threaded irrigation MANIFOLD TEE BRANCH fitting, perfect straight-on front elevation. A short horizontal cylindrical pipe barrel left-to-right with one vertical downward cylindrical threaded union outlet, a T shape. Dark molded plastic with visible ribs and threading, realistic studio light, fully visible centered object. No valve, NO solenoid, no electrical parts, no wires, no logo or text, no background or floor or glow. Genuine transparent alpha background."
+    }
+  ],
+  "revision465": {
+    "generator": "Built-in ImageGen",
+    "purpose": "Orthographic modular bare manifold and vertically oriented solenoid valve",
+    "assets": [
+      {
+        "id": "manifold-module-v2",
+        "path": "public/engineering/assembly/manifold-module-v2.webp",
+        "prompt": "Use case: product-mockup. Transparent PNG cutout for irrigation engineering schematic. One single bare black polypropylene irrigation manifold T module, perfectly straight orthographic FRONT ELEVATION, horizontal pipe axis left-right, one short threaded outlet pointing vertically DOWN. Horizontal cylindrical header has straight flat cut ends at same height, spans full object width; female union ring each horizontal end. NO perspective, NO valves, NO solenoids, NO wires, no text, no shadow on ground. Restrained photorealistic studio lighting, black polymer with clean gray highlights. Compact proportions: width 3 times header diameter, downward branch 1.3 diameters. One coherent manufactured T fitting. The module will repeat side-by-side as a row to produce any manifold outlet count, so left/right ends exactly aligned."
+      },
+      {
+        "id": "valve-vertical",
+        "path": "public/engineering/assembly/valve-vertical.webp",
+        "prompt": "Use case: product-mockup. Transparent PNG cutout of one black irrigation solenoid valve, front orthographic product photograph, main WATER FLOW AXIS strictly VERTICAL in the image: inlet threaded connection at top and outlet threaded connection at bottom, both on the same vertical centerline. Valve diaphragm body between them, small electrical solenoid offset to right, two short red wires beside it. Realistic clean black polymer texture, metal screws, gray highlights. Compact portrait composition, entire object visible, no ground shadow, no words, no logo, no arrows, no pipes beyond inlet/outlet. For a technical irrigation equipment diagram under a horizontal manifold."
+      }
+    ]
+  },
+  "fieldConnections": {
+    "generator": "Built-in ImageGen",
+    "assets": [
+      {
+        "id": "water-outlet",
+        "path": "public/engineering/assembly/water-outlet.webp",
+        "prompt": "A photorealistic irrigation quick coupling water outlet in its small round underground black plastic housing with green hinged lid opened upward, brass quick-coupler socket clearly visible inside. Isolated product cutout transparent background, three-quarter view, compact clean studio image, no faucet, no text, no logo, no ground or grass."
+      },
+      {
+        "id": "drip-start",
+        "path": "public/engineering/assembly/drip-start.webp",
+        "prompt": "A photorealistic compact drip irrigation start connection kit: black plastic inline disc filter with angled bowl, small pressure regulator and a short 16 mm barbed drip tubing connector with red miniature shutoff lever, arranged as one assembled horizontal unit, realistic manufactured fittings, isolated transparent background, clear three-quarter product view, no text, no logo, no loose pieces."
+      },
+      {
+        "id": "garden-hydrant",
+        "path": "public/engineering/assembly/garden-hydrant.webp",
+        "prompt": "A photorealistic outdoor garden water standpipe hydrant: slim dark gray vertical metal post, one brass hose tap near top with green handle and downward hose connector, rectangular foot plate at bottom. Whole unit visible, portrait composition, isolated transparent background, clean studio product cutout, no fire hydrant, no text, no logo, no ground."
+      },
+      {
+        "id": "valve-box",
+        "path": "public/engineering/assembly/valve-box.webp",
+        "prompt": "A photorealistic rectangular underground irrigation valve box: tapered ribbed black polypropylene body, removable green rectangular lid resting partly open to one side, empty hollow interior clearly visible, no valves inside. Clean three-quarter catalog product image on transparent background, no text, no logo, no soil or grass. Proportions about 50cm long, 35cm wide, 30cm deep."
+      }
+    ]
+  }
+}

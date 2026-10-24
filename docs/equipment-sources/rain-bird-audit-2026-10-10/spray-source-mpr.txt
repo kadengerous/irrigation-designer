@@ -1,0 +1,459 @@
+ (https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf)
+citeturn367view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"turn361view3","lineno":0}); Total lines: 464
+
+L0@P0: 32 The Intelligent Use of Water.™
+L1@P0: Spray & Rotary Nozzles
+L2@P0: Note: All MPR nozzles tested on 4" (10.2 cm) pop-ups
+L3@P0: n Square spacing based on 50% diameter of throw
+L4@P0: s Triangular spacing based on 50% diameter of throw
+L5@P0: Performance data taken in zero wind conditions
+L6@P0: Note: Radius reduction over 25% of the normal throw of the nozzle is not recommended
+L7@P0: Spray Nozzles
+L8@P0: MPR Nozzles
+L9@P0: 10° Trajectory n s
+L10@P0: Nozzle
+L11@P0: Pressure
+L12@P0: psi
+L13@P0: Radius
+L14@P0: ft.
+L15@P0: Flow
+L16@P0: gpm
+L17@P0: Precip
+L18@P0: In/h
+L19@P0: Precip
+L20@P0: In/h
+L21@P0: 8F 15 5 0.74 2.85 3.29
+L22@P0: 20 6 0.86 2.30 2.66
+L23@P0: 25 7 0.96 1.89 2.18
+L24@P0: 30 8 1.05 1.58 1.82
+L25@P0: 8H 15 5 0.37 2.85 3.29
+L26@P0: 20 6 0.42 2.25 2.59
+L27@P0: 25 7 0.47 1.85 2.13
+L28@P0: 30 8 0.52 1.56 1.81
+L29@P0: 8Q 15 5 0.18 2.77 3.20
+L30@P0: 20 6 0.21 2.25 2.59
+L31@P0: 25 7 0.24 1.89 2.18
+L32@P0: 30 8 0.26 1.56 1.81
+L33@P0: 10° Trajectory n s
+L34@P0: Nozzle
+L35@P0: Pressure
+L36@P0: bar
+L37@P0: Radius
+L38@P0: m
+L39@P0: Flow
+L40@P0: m3
+L41@P0: /h
+L42@P0: Flow
+L43@P0: l/m
+L44@P0: Precip
+L45@P0: mm/h
+L46@P0: Precip
+L47@P0: mm/h
+L48@P0: 8F 1.0 1.7 0.16 2.8 72 84
+L49@P0: 1.5 2.1 0.20 3.4 58 68
+L50@P0: 2.0 2.4 0.23 3.9 48 55
+L51@P0: 2.1 2.4 0.24 4.0 40 46
+L52@P0: 8H 1.0 1.7 0.08 1.4 72 84
+L53@P0: 1.5 2.1 0.10 1.7 57 66
+L54@P0: 2.0 2.4 0.12 1.9 47 54
+L55@P0: 2.1 2.4 0.12 2.0 40 46
+L56@P0: 8Q 1.0 1.7 0.04 0.7 70 81
+L57@P0: 1.5 2.1 0.05 0.8 57 66
+L58@P0: 2.0 2.4 0.06 1.0 48 55
+L59@P0: 2.1 2.4 0.06 1.0 40 46
+L60@P0: 8 Series MPR 8 Series MPR METRIC
+L61@P0: 5° Trajectory n s
+L62@P0: Nozzle
+L63@P0: Pressure
+L64@P0: psi
+L65@P0: Radius
+L66@P0: ft.
+L67@P0: Flow
+L68@P0: gpm
+L69@P0: Precip
+L70@P0: In/h
+L71@P0: Precip
+L72@P0: In/h
+L73@P0: 5F 15 3 0.29 3.10 3.58
+L74@P0: 20 4 0.33 1.99 2.29
+L75@P0: 25 4 0.37 2.23 2.57
+L76@P0: 30 5 0.41 1.58 1.83
+L77@P0: 5H 15 3 0.14 3.00 3.46
+L78@P0: 20 4 0.16 1.93 2.22
+L79@P0: 25 4 0.18 2.17 2.50
+L80@P0: 30 5 0.20 1.54 1.78
+L81@P0: 5Q 15 3 0.07 3.00 3.46
+L82@P0: 20 4 0.08 1.93 2.22
+L83@P0: 25 4 0.09 2.17 2.50
+L84@P0: 30 5 0.10 1.54 1.78
+L85@P0: 5° Trajectory n s
+L86@P0: Nozzle
+L87@P0: Pressure
+L88@P0: bar
+L89@P0: Radius
+L90@P0: m
+L91@P0: Flow
+L92@P0: m3
+L93@P0: /h
+L94@P0: Flow
+L95@P0: l/m
+L96@P0: Precip
+L97@P0: mm/h
+L98@P0: Precip
+L99@P0: mm/h
+L100@P0: 5F 1.0 1.1 0.06 1.1 79 91
+L101@P0: 1.5 1.3 0.08 1.4 51 58
+L102@P0: 2.0 1.5 0.09 1.6 57 65
+L103@P0: 2.1 1.5 0.09 1.6 40 46
+L104@P0: 5H 1.0 1.1 0.03 0.5 76 88
+L105@P0: 1.5 1.3 0.04 0.7 49 56
+L106@P0: 2.0 1.5 0.04 0.7 55 64
+L107@P0: 2.1 1.5 0.05 0.9 39 45
+L108@P0: 5Q 1.0 1.1 0.02 0.4 76 88
+L109@P0: 1.5 1.3 0.02 0.4 49 56
+L110@P0: 2.0 1.5 0.02 0.4 55 64
+L111@P0: 2.1 1.5 0.02 0.4 39 45
+L112@P0-1: 5 Series MPR 5 Series MPR METRICwww.rainbird.com/sprays
+L113@P1: www.rainbird.com 33
+L114@P1: Spray & Rotary Nozzles
+L115@P1: Spray Nozzles
+L116@P1: MPR Nozzles
+L117@P1: Note: All MPR nozzles tested on 4" (10.2 cm) pop-ups
+L118@P1: n Square spacing based on 50% diameter of throw
+L119@P1: s Triangular spacing based on 50% diameter of throw
+L120@P1: Performance data taken in zero wind conditions
+L121@P1: Note: Radius reduction over 25% of the normal throw of the nozzle is not recommended
+L122@P1: 15° Trajectory n s
+L123@P1: Nozzle
+L124@P1: Pressure
+L125@P1: psi
+L126@P1: Radius
+L127@P1: ft.
+L128@P1: Flow
+L129@P1: gpm
+L130@P1: Precip
+L131@P1: In/h
+L132@P1: Precip
+L133@P1: In/h
+L134@P1: 10F 15 7 1.16 2.28 2.63
+L135@P1: 20 8 1.30 1.96 2.26
+L136@P1: 25 9 1.44 1.71 1.98
+L137@P1: 30 10 1.58 1.52 1.75
+L138@P1: 10H 15 7 0.58 2.28 2.63
+L139@P1: 20 8 0.65 1.96 2.26
+L140@P1: 25 9 0.72 1.71 1.98
+L141@P1: 30 10 0.79 1.52 1.75
+L142@P1: 10Q 15 7 0.29 2.28 2.63
+L143@P1: 20 8 0.33 1.96 2.26
+L144@P1: 25 9 0.36 1.71 1.98
+L145@P1: 30 10 0.39 1.52 1.75
+L146@P1: 15° Trajectory n s
+L147@P1: Nozzle
+L148@P1: Pressure
+L149@P1: bar
+L150@P1: Radius
+L151@P1: m
+L152@P1: Flow
+L153@P1: m3
+L154@P1: /h
+L155@P1: Flow
+L156@P1: l/m
+L157@P1: Precip
+L158@P1: mm/h
+L159@P1: Precip
+L160@P1: mm/h
+L161@P1: 10F 1.0 2.1 0.26 4.2 58 67
+L162@P1: 1.5 2.4 0.29 4.8 50 58
+L163@P1: 2.0 3.0 0.35 6.0 39 45
+L164@P1: 2.1 3.1 0.36 6.0 37 43
+L165@P1: 10H 1.0 2.1 0.13 2.4 58 67
+L166@P1: 1.5 2.4 0.14 2.4 50 58
+L167@P1: 2.0 3.0 0.18 3.0 39 45
+L168@P1: 2.1 3.1 0.18 3.0 37 43
+L169@P1: 10Q 1.0 2.1 0.06 1.2 58 67
+L170@P1: 1.5 2.4 0.07 1.2 50 58
+L171@P1: 2.0 3.0 0.09 1.2 39 45
+L172@P1: 2.1 3.1 0.09 1.2 37 43
+L173@P1: 10 Series MPR 10 Series MPR METRIC
+L174@P1: 30° Trajectory n s
+L175@P1: Nozzle
+L176@P1: Pressure
+L177@P1: psi
+L178@P1: Radius
+L179@P1: ft.
+L180@P1: Flow
+L181@P1: gpm
+L182@P1: Precip
+L183@P1: In/h
+L184@P1: Precip
+L185@P1: In/h
+L186@P1: 12F 15 9 1.80 2.14 2.47
+L187@P1: 20 10 2.10 2.02 2.34
+L188@P1: 25 11 2.40 1.91 2.21
+L189@P1: 30 12 2.60 1.74 2.01
+L190@P1: 12H 15 9 0.90 2.14 2.47
+L191@P1: 20 10 1.05 2.02 2.34
+L192@P1: 25 11 1.20 1.91 2.21
+L193@P1: 30 12 1.30 1.74 2.01
+L194@P1: 12Q 15 9 0.45 2.14 2.47
+L195@P1: 20 10 0.53 2.02 2.34
+L196@P1: 25 11 0.60 1.91 2.21
+L197@P1: 30 12 0.65 1.74 2.01
+L198@P1: 30° Trajectory n s
+L199@P1: Nozzle
+L200@P1: Pressure
+L201@P1: bar
+L202@P1: Radius
+L203@P1: m
+L204@P1: Flow
+L205@P1: m3
+L206@P1: /h
+L207@P1: Flow
+L208@P1: l/m
+L209@P1: Precip
+L210@P1: mm/h
+L211@P1: Precip
+L212@P1: mm/h
+L213@P1: 12F 1.0 2.7 0.40 6.8 55 63
+L214@P1: 1.5 3.2 0.48 8.3 47 54
+L215@P1: 2.0 3.6 0.59 9.7 46 53
+L216@P1: 2.1 3.7 0.60 9.8 44 51
+L217@P1: 12H 1.0 2.7 0.20 3.4 55 63
+L218@P1: 1.5 3.2 0.24 4.2 47 54
+L219@P1: 2.0 3.6 0.30 4.9 46 53
+L220@P1: 2.1 3.7 0.30 4.9 44 51
+L221@P1: 12Q 1.0 2.7 0.10 1.7 55 63
+L222@P1: 1.5 3.2 0.12 2.1 47 54
+L223@P1: 2.0 3.6 0.15 2.4 46 53
+L224@P1: 2.1 3.7 0.15 2.5 44 51
+L225@P1-2: 12 Series MPR 12 Series MPR METRIC34 The Intelligent Use of Water.™
+L226@P2: Spray & Rotary Nozzles
+L227@P2: Spray Nozzles
+L228@P2: MPR Nozzles
+L229@P2: Note: All MPR nozzles tested on 4" (10.2 cm) pop-ups
+L230@P2: n Square spacing based on 50% diameter of throw
+L231@P2: s Triangular spacing based on 50% diameter of throw
+L232@P2: Performance data taken in zero wind conditions
+L233@P2: Note: Radius reduction over 25% of the normal throw of the nozzle is not recommended
+L234@P2: Note: Indicates adjusted radius at psi shown
+L235@P2: Note: Flow at adjusted radius of 5 feet (1.5 m)
+L236@P2: 30° Trajectory n s
+L237@P2: Nozzle
+L238@P2: Pressure
+L239@P2: psi
+L240@P2: Radius
+L241@P2: ft.
+L242@P2: Flow
+L243@P2: gpm
+L244@P2: Precip
+L245@P2: In/h
+L246@P2: Precip
+L247@P2: In/h
+L248@P2: 15F 15 11 2.60 2.07 2.39
+L249@P2: 20 12 3.00 2.01 2.32
+L250@P2: 25 14 3.30 1.62 1.87
+L251@P2: 30 15 3.70 1.58 1.83
+L252@P2: 15H 15 11 1.30 2.07 2.39
+L253@P2: 20 12 1.50 2.01 2.32
+L254@P2: 25 14 1.65 1.62 1.87
+L255@P2: 30 15 1.85 1.58 1.83
+L256@P2: 15Q 15 11 0.65 2.07 2.39
+L257@P2: 20 12 0.75 2.01 2.32
+L258@P2: 25 14 0.82 1.62 1.87
+L259@P2: 30 15 0.92 1.58 1.83
+L260@P2: 30° Trajectory n s
+L261@P2: Nozzle
+L262@P2: Pressure
+L263@P2: bar
+L264@P2: Radius
+L265@P2: m
+L266@P2: Flow
+L267@P2: m3
+L268@P2: /h
+L269@P2: Flow
+L270@P2: l/m
+L271@P2: Precip
+L272@P2: mm/h
+L273@P2: Precip
+L274@P2: mm/h
+L275@P2: 15F 1.0 3.4 0.60 9.8 52 60
+L276@P2: 1.5 3.9 0.72 11.8 47 55
+L277@P2: 2.0 4.5 0.84 13.7 41 48
+L278@P2: 2.1 4.6 0.84 14.0 40 46
+L279@P2: 15H 1.0 3.4 0.30 4.9 52 60
+L280@P2: 1.5 3.9 0.36 5.9 47 55
+L281@P2: 2.0 4.5 0.42 6.8 41 48
+L282@P2: 2.1 4.6 0.42 7.0 40 46
+L283@P2: 15Q 1.0 3.4 0.15 2.5 52 60
+L284@P2: 1.5 3.9 0.18 2.9 47 55
+L285@P2: 2.0 4.5 0.21 3.4 41 48
+L286@P2: 2.1 4.6 0.21 3.5 40 46
+L287@P2: 15 Series MPR 15 Series MPR METRIC
+L288@P2: 0° Trajectory
+L289@P2: Nozzle
+L290@P2: Pressure
+L291@P2: psi
+L292@P2: Radius
+L293@P2: ft.
+L294@P2: Flow
+L295@P2: gpm
+L296@P2: 5F-B 15 5 1.50
+L297@P2: 20 5 1.50
+L298@P2: 25 5 1.50
+L299@P2: 30 5 1.50
+L300@P2: 5H-B 15 5 1.00
+L301@P2: 20 5 1.00
+L302@P2: 25 5 1.00
+L303@P2: 30 5 1.00
+L304@P2: 5Q-B 15 5 0.50
+L305@P2: 20 5 0.50
+L306@P2: 25 5 0.50
+L307@P2: 30 5 0.50
+L308@P2: 5CST-B 15 5 0.50
+L309@P2: 20 5 0.50
+L310@P2: 25 5 0.50
+L311@P2: 30 5 0.50
+L312@P2: 0° Trajectory
+L313@P2: Nozzle
+L314@P2: Pressure
+L315@P2: bar
+L316@P2: Radius
+L317@P2: m
+L318@P2: Flow
+L319@P2: m3
+L320@P2: /h
+L321@P2: Flow
+L322@P2: l/m
+L323@P2: 5F-B 1.0 1.5 0.35 5.7
+L324@P2: 1.5 1.5 0.35 5.7
+L325@P2: 2.0 1.5 0.35 5.7
+L326@P2: 2.1 1.5 0.35 5.7
+L327@P2: 5H-B 1.0 1.5 0.23 3.8
+L328@P2: 1.5 1.5 0.23 3.8
+L329@P2: 2.0 1.5 0.23 3.8
+L330@P2: 2.1 1.5 0.23 3.8
+L331@P2: 5Q-B 1.0 1.5 0.12 1.9
+L332@P2: 1.5 1.5 0.12 1.9
+L333@P2: 2.0 1.5 0.12 1.9
+L334@P2: 2.1 1.5 0.12 1.9
+L335@P2: 5CST-B 1.0 1.5 0.12 1.9
+L336@P2: 1.5 1.5 0.12 1.9
+L337@P2: 2.0 1.5 0.12 1.9
+L338@P2: 2.1 1.5 0.12 1.9
+L339@P2-3: 5 Series MPR Stream Bubbler Nozzles 5 Series MPR Stream Bubbler Nozzles METRICwww.rainbird.com/sprays
+L340@P3: www.rainbird.com 35
+L341@P3: Spray & Rotary Nozzles
+L342@P3: Spray Nozzles
+L351@P3: Note: Radius reduction over 25% of the normal throw of the nozzle is not recommended
+L352@P3: 5° Trajectory n s
+L353@P3: Nozzle
+L354@P3: Pressure
+L355@P3: psi
+L356@P3: Radius
+L357@P3: ft.
+L358@P3: Flow
+L359@P3: gpm
+L360@P3: Precip
+L361@P3: In/h
+L362@P3: Precip
+L363@P3: In/h
+L364@P3: 8H-FLT 15 6 0.56 3.36 3.88
+L365@P3: 20 7 0.65 2.91 3.36
+L366@P3: 25 7 0.72 2.60 3.01
+L367@P3: 30 8 0.79 2.38 2.75
+L368@P3: 8Q-FLT 15 6 0.28 3.32 3.83
+L369@P3: 20 7 0.32 2.87 3.32
+L370@P3: 25 7 0.36 2.57 2.97
+L371@P3: 30 8 0.39 2.35 2.71
+L372@P3: 5° Trajectory n s
+L373@P3: Nozzle
+L374@P3: Pressure
+L375@P3: bar
+L376@P3: Radius
+L377@P3: m
+L378@P3: Flow
+L379@P3: m3
+L380@P3: /h
+L381@P3: Flow
+L382@P3: l/m
+L383@P3: Precip
+L384@P3: mm/h
+L385@P3: Precip
+L386@P3: mm/h
+L387@P3: 8H-FLT 1.0 1.7 0.12 2.1 87 101
+L388@P3: 1.5 2.1 0.15 2.6 71 82
+L389@P3: 2.0 2.4 0.18 2.9 62 71
+L390@P3: 2.1 2.4 0.18 3.0 60 70
+L391@P3: 8Q-FLT 1.0 1.7 0.06 1.1 86 100
+L392@P3: 1.5 2.1 0.07 1.3 71 81
+L393@P3: 2.0 2.4 0.09 1.4 61 71
+L394@P3: 2.1 2.4 0.09 1.5 60 69
+L395@P3: 8 FLT Series MPR 8 FLT Series MPR METRIC
+L396@P3: 30° Trajectory
+L397@P3: Nozzle
+L398@P3: Pressure
+L399@P3: psi
+L400@P3: W x L
+L401@P3: ft.
+L402@P3: Flow
+L403@P3: gpm
+L404@P3: 15EST 15 4 x 13 0.45
+L405@P3: 20 4 x 14 0.50
+L406@P3: 25 4 x 14 0.56
+L407@P3: 30 4 x 15 0.61
+L408@P3: 15CST 15 4 x 26 0.89
+L409@P3: 20 4 x28 1.00
+L410@P3: 25 4x 28 1.11
+L411@P3: 30 4 x 30 1.21
+L412@P3: 15RCS 15 3 x 11 0.35
+L413@P3: 20 3 x 12 0.40
+L414@P3: 25 4 x 14 0.45
+L415@P3: 30 4 x 15 0.49
+L416@P3: 15LCS 15 3 x 11 0.35
+L417@P3: 20 3 x 12 0.40
+L418@P3: 25 4 x 14 0.45
+L419@P3: 30 4 x 15 0.49
+L420@P3:  15SST 15 4 x 26 0.89
+L421@P3: 20 4 x 28 1.00
+L422@P3: 25 4 x 28 1.11
+L423@P3: 30 4 x 30 1.21
+L424@P3: 9SST 15 9 x 15 1.34
+L425@P3: 20 9 x 16 1.47
+L426@P3: 25 9 x 18 1.60
+L427@P3: 30 9 x 18 1.73
+L428@P3: 30° Trajectory
+L429@P3: Nozzle
+L430@P3: Pressure
+L431@P3: bar
+L432@P3: W x L
+L433@P3: m
+L434@P3: Flow
+L435@P3: m3
+L436@P3: /h
+L437@P3: Flow
+L438@P3: l/m
+L439@P3: 15EST 1.0 1.2 x 4.0 0.10 1.7
+L440@P3: 1.5 1.2 x 4.3 0.11 2.0
+L441@P3: 2.0 1.2 x 4.3 0.13 2.3
+L442@P3: 2.1 1.2 x 4.6 0.14 2.3
+L443@P3: 15CST 1.0 1.2 x 7.9 0.20 3.4
+L444@P3: 1.5 1.2 x 8.5 0.23 4.0
+L445@P3: 2.0 1.2 x 8.5 0.25 4.5
+L446@P3: 2.1 1.2 x 9.2 0.27 4.6
+L447@P3: 15RCS 1.0 0.8 x 3.2 0.08 1.3
+L448@P3: 1.5 1.0 x 3.9 0.09 1.6
+L449@P3: 2.0 1.2 x 4.5 0.11 1.8
+L450@P3: 2.1 1.2 x 4.6 0.11 1.9
+L451@P3: 15LCS 1.0 0.8 x 3.2 0.08 1.3
+L452@P3: 1.5 1.0 x 3.9 0.09 1.6
+L453@P3: 2.0 1.2 x 4.5 0.11 1.8
+L454@P3: 2.1 1.2 x 4.6 0.11 1.9
+L455@P3: 15SST 1.0 1.2 x 7.9 0.20 3.4
+L456@P3: 1.5 1.2 x 8.5 0.23 4.0
+L457@P3: 2.0 1.2 x 8.5 0.25 4.5
+L458@P3: 2.1 1.2 x 9.2 0.27 4.6
+L459@P3: 9SST 1.0 2.7 x 4.6 0.30 5.1
+L460@P3: 1.5 2.7 x 4.9 0.33 5.8
+L461@P3: 2.0 2.7 x 5.5 0.36 6.5
+L462@P3: 2.1 2.7 x 5.5 0.39 6.5
+L463@P3: 15 Strip Series 15 Strip Series METRIC

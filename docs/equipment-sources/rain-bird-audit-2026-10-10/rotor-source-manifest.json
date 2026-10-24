@@ -1,0 +1,79 @@
+[
+  {
+    "file": "rotor-source-1800.txt",
+    "url": "https://www.rainbird.com/media/13671",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "a309dc984d968057a213ad48c9afb8ccf100d56583760ff0b179824acb341a6a"
+  },
+  {
+    "file": "rotor-source-3500.txt",
+    "url": "https://www.rainbird.com/media/4634",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "3a922ab8940c6883c8ddc7e03146d7f80ba258dee342191fc7b4cc0d5e16f0cc"
+  },
+  {
+    "file": "rotor-source-5000-chart.txt",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/5000-series-rotor-nozzle-performance-chart.pdf",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "ac9d3eb0425446f3ef30edbe910e88c56ac807e66c128882f92d393b1a93893e"
+  },
+  {
+    "file": "rotor-source-5000-mpr.txt",
+    "url": "https://www.rainbird.com/media/4173",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "dd1a10fb354b30ff138ea5084aae6d5c29089f3babe0a90308bd87bb3c720853"
+  },
+  {
+    "file": "rotor-source-5000-tech-end.txt",
+    "url": "https://www.rainbird.com/media/4635",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "995c3879f3c52169c13e8a47ddea1e8bd84554373da1b969bc822d8ed78f4605"
+  },
+  {
+    "file": "rotor-source-5000-tech.txt",
+    "url": "https://www.rainbird.com/media/4635",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "6a7c1738af0297be9b37772826b68d44239c040dc373f6a7f81831e74f39d1a3"
+  },
+  {
+    "file": "rotor-source-6504-colors.txt",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_Falcon6504.pdf",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "11cd71e71fb44ee627e55a1ff0970db9b9db0d68c2f6ead4ea922e61bc6c90dd"
+  },
+  {
+    "file": "rotor-source-6504-tech.txt",
+    "url": "https://www.rainbird.com/media/4668",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "d62bb0d55317d24a873a0df2705c0ec8b2b85318da2162c98ea5ded179b22cef"
+  },
+  {
+    "file": "rotor-source-6504.txt",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/falcon-6504-series-rotors-performance-charts.pdf",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "4edc9156d170c9ec5a3aaed724eee2da4d2d41611177900b2ed376df53c6e5d3"
+  },
+  {
+    "file": "rotor-source-8005.txt",
+    "url": "https://www.rainbird.com/media/4636",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "6f8d9045e3c5551f78bc37f6a0418b6a2611caf67fc78f787ba1b3b52170533f"
+  },
+  {
+    "file": "rotor-source-8005-colors.txt",
+    "url": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/part_7005-8005.pdf",
+    "retrievedOn": "2026-10-10",
+    "method": "native web document extractor; no CLI network or browser",
+    "sha256": "6e135607f899379923eecb1b55a89dd9d70c3cb6811592a72be3b6927955f102"
+  }
+]

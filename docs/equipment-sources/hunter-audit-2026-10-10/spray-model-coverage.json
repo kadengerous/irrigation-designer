@@ -1,0 +1,3954 @@
+{
+  "verifiedOn": "2026-10-10",
+  "baselineHead": "78f89a7d94396de843dde1466ef0caff5cfd5f59",
+  "counts": {
+    "activeModels": 62,
+    "storedRows": 400,
+    "archivedModels": 7,
+    "numericalRowCorrections": 4,
+    "streamGeometryCorrections": 9
+  },
+  "active": [
+    {
+      "modelId": "4A",
+      "family": "spray",
+      "active": true,
+      "performanceRows": 35,
+      "rowChecks": [
+        {
+          "nozzleId": "4A",
+          "rowIndex": 0,
+          "arcDeg": 45.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 1,
+          "arcDeg": 45.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 2,
+          "arcDeg": 45.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 3,
+          "arcDeg": 45.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 4,
+          "arcDeg": 45.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 5,
+          "arcDeg": 90.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 6,
+          "arcDeg": 90.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 7,
+          "arcDeg": 90.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 8,
+          "arcDeg": 90.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 9,
+          "arcDeg": 90.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 10,
+          "arcDeg": 120.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 11,
+          "arcDeg": 120.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 12,
+          "arcDeg": 120.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 13,
+          "arcDeg": 120.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 14,
+          "arcDeg": 120.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 15,
+          "arcDeg": 180.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 16,
+          "arcDeg": 180.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 17,
+          "arcDeg": 180.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 18,
+          "arcDeg": 180.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 19,
+          "arcDeg": 180.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 20,
+          "arcDeg": 240.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 21,
+          "arcDeg": 240.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 22,
+          "arcDeg": 240.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 23,
+          "arcDeg": 240.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 24,
+          "arcDeg": 240.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 25,
+          "arcDeg": 270.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 26,
+          "arcDeg": 270.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 27,
+          "arcDeg": 270.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 28,
+          "arcDeg": 270.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 29,
+          "arcDeg": 270.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 30,
+          "arcDeg": 360.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 31,
+          "arcDeg": 360.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 32,
+          "arcDeg": 360.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 33,
+          "arcDeg": 360.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4A",
+          "rowIndex": 34,
+          "arcDeg": 360.0,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2026-05/RC-244-SS-Nozzles-ProAdj-US.pdf"
+      ],
+      "publishedArcDeg": [
+        45.0,
+        90.0,
+        120.0,
+        180.0,
+        240.0,
+        270.0,
+        360.0
+      ],
+      "mechanicalArcRangeDeg": [
+        0,
+        360
+      ],
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Mechanical 0–360; only 45–360 has bounded flow basis. Below 45 remains unavailable to automatic flow selection."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "6A",
+      "family": "spray",
+      "active": true,
+      "performanceRows": 35,
+      "rowChecks": [
+        {
+          "nozzleId": "6A",
+          "rowIndex": 0,
+          "arcDeg": 45.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 1,
+          "arcDeg": 45.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 2,
+          "arcDeg": 45.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 3,
+          "arcDeg": 45.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 4,
+          "arcDeg": 45.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 5,
+          "arcDeg": 90.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 6,
+          "arcDeg": 90.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 7,
+          "arcDeg": 90.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 8,
+          "arcDeg": 90.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 9,
+          "arcDeg": 90.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 10,
+          "arcDeg": 120.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 11,
+          "arcDeg": 120.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 12,
+          "arcDeg": 120.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 13,
+          "arcDeg": 120.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 14,
+          "arcDeg": 120.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 15,
+          "arcDeg": 180.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 16,
+          "arcDeg": 180.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 17,
+          "arcDeg": 180.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 18,
+          "arcDeg": 180.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 19,
+          "arcDeg": 180.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 20,
+          "arcDeg": 240.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 21,
+          "arcDeg": 240.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 22,
+          "arcDeg": 240.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 23,
+          "arcDeg": 240.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 24,
+          "arcDeg": 240.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 25,
+          "arcDeg": 270.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 26,
+          "arcDeg": 270.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 27,
+          "arcDeg": 270.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 28,
+          "arcDeg": 270.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 29,
+          "arcDeg": 270.0,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 30,
+          "arcDeg": 360.0,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 31,
+          "arcDeg": 360.0,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 32,
+          "arcDeg": 360.0,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 33,
+          "arcDeg": 360.0,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6A",
+          "rowIndex": 34,
+          "arcDeg": 360.0,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2026-05/RC-244-SS-Nozzles-ProAdj-US.pdf"
+      ],
+      "publishedArcDeg": [
+        45.0,
+        90.0,
+        120.0,
+        180.0,
+        240.0,
+        270.0,
+        360.0
+      ],
+      "mechanicalArcRangeDeg": [
+        0,
+        360
+      ],
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Mechanical 0–360; only 45–360 has bounded flow basis. Below 45 remains unavailable to automatic flow selection."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "8A-HE",
+      "family": "he",
+      "active": true,
+      "performanceRows": 20,
+      "rowChecks": [
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 5,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 6,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 7,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 8,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 9,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 10,
+          "arcDeg": 270,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 11,
+          "arcDeg": 270,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 12,
+          "arcDeg": 270,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 13,
+          "arcDeg": 270,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 14,
+          "arcDeg": 270,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 15,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 16,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 17,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 18,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "8A-HE",
+          "rowIndex": 19,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-high-efficiency-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf"
+      ],
+      "publishedArcDeg": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "mechanicalArcRangeDeg": [
+        0,
+        360
+      ],
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 1,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Below 90 flow is a labelled proportional estimate, not a measured table row."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "10A-HE",
+      "family": "he",
+      "active": true,
+      "performanceRows": 20,
+      "rowChecks": [
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 5,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 6,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 7,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 8,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 9,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 10,
+          "arcDeg": 270,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 11,
+          "arcDeg": 270,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 12,
+          "arcDeg": 270,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 13,
+          "arcDeg": 270,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 14,
+          "arcDeg": 270,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 15,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 16,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 17,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 18,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "10A-HE",
+          "rowIndex": 19,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-high-efficiency-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf"
+      ],
+      "publishedArcDeg": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "mechanicalArcRangeDeg": [
+        0,
+        360
+      ],
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 2,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Below 90 flow is a labelled proportional estimate, not a measured table row."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "12A-HE",
+      "family": "he",
+      "active": true,
+      "performanceRows": 20,
+      "rowChecks": [
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 5,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 6,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 7,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 8,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 9,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 10,
+          "arcDeg": 270,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 11,
+          "arcDeg": 270,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 12,
+          "arcDeg": 270,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 13,
+          "arcDeg": 270,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 14,
+          "arcDeg": 270,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 15,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 16,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 17,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 18,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "12A-HE",
+          "rowIndex": 19,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-high-efficiency-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf"
+      ],
+      "publishedArcDeg": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "mechanicalArcRangeDeg": [
+        0,
+        360
+      ],
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Below 90 flow is a labelled proportional estimate, not a measured table row."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "15A-HE",
+      "family": "he",
+      "active": true,
+      "performanceRows": 20,
+      "rowChecks": [
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 5,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 6,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 7,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 8,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 9,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 10,
+          "arcDeg": 270,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 11,
+          "arcDeg": 270,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 12,
+          "arcDeg": 270,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 13,
+          "arcDeg": 270,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 14,
+          "arcDeg": 270,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 15,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 16,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 17,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 18,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "15A-HE",
+          "rowIndex": 19,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-high-efficiency-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf"
+      ],
+      "publishedArcDeg": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "mechanicalArcRangeDeg": [
+        0,
+        360
+      ],
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Below 90 flow is a labelled proportional estimate, not a measured table row."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "17A-HE",
+      "family": "he",
+      "active": true,
+      "performanceRows": 20,
+      "rowChecks": [
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 5,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 6,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 7,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 8,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 9,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 10,
+          "arcDeg": 270,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 11,
+          "arcDeg": 270,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 12,
+          "arcDeg": 270,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 13,
+          "arcDeg": 270,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 14,
+          "arcDeg": 270,
+          "pressureBar": 2.8
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 15,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 16,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 17,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 18,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "17A-HE",
+          "rowIndex": 19,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-high-efficiency-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf"
+      ],
+      "publishedArcDeg": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "mechanicalArcRangeDeg": [
+        0,
+        360
+      ],
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 1,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Below 90 flow is a labelled proportional estimate, not a measured table row."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "5Q",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "5Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "5Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "5Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "5Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "5Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "5H",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "5H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "5H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "5H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "5H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "5H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "5F",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "5F",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "5F",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "5F",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "5F",
+          "rowIndex": 3,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "5F",
+          "rowIndex": 4,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "8Q",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "8Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "8Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "8Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "8Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "8Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "8T",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "8T",
+          "rowIndex": 0,
+          "arcDeg": 120,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "8T",
+          "rowIndex": 1,
+          "arcDeg": 120,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "8T",
+          "rowIndex": 2,
+          "arcDeg": 120,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "8T",
+          "rowIndex": 3,
+          "arcDeg": 120,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "8T",
+          "rowIndex": 4,
+          "arcDeg": 120,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        120
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "8H",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "8H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "8H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "8H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "8H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "8H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "8F",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "8F",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "8F",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "8F",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "8F",
+          "rowIndex": 3,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "8F",
+          "rowIndex": 4,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "10Q",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "10Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "10Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "10Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "10Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "10Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "10T",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "10T",
+          "rowIndex": 0,
+          "arcDeg": 120,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "10T",
+          "rowIndex": 1,
+          "arcDeg": 120,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "10T",
+          "rowIndex": 2,
+          "arcDeg": 120,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "10T",
+          "rowIndex": 3,
+          "arcDeg": 120,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "10T",
+          "rowIndex": 4,
+          "arcDeg": 120,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        120
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "10H",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "10H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "10H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "10H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "10H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "10H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "10F",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "10F",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "10F",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "10F",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "10F",
+          "rowIndex": 3,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "10F",
+          "rowIndex": 4,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "12Q",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "12Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "12Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "12Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "12Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "12Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "12T",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "12T",
+          "rowIndex": 0,
+          "arcDeg": 120,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "12T",
+          "rowIndex": 1,
+          "arcDeg": 120,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "12T",
+          "rowIndex": 2,
+          "arcDeg": 120,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "12T",
+          "rowIndex": 3,
+          "arcDeg": 120,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "12T",
+          "rowIndex": 4,
+          "arcDeg": 120,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        120
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "12H",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "12H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "12H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "12H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "12H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "12H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "12F",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "12F",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "12F",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "12F",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "12F",
+          "rowIndex": 3,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "12F",
+          "rowIndex": 4,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "15Q",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "15Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "15Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "15Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "15Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "15Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "15T",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "15T",
+          "rowIndex": 0,
+          "arcDeg": 120,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "15T",
+          "rowIndex": 1,
+          "arcDeg": 120,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "15T",
+          "rowIndex": 2,
+          "arcDeg": 120,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "15T",
+          "rowIndex": 3,
+          "arcDeg": 120,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "15T",
+          "rowIndex": 4,
+          "arcDeg": 120,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        120
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "15H",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "15H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "15H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "15H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "15H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "15H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "15F",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "15F",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "15F",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "15F",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "15F",
+          "rowIndex": 3,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "15F",
+          "rowIndex": 4,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "17Q",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "17Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "17Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "17Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "17Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "17Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "17H",
+      "family": "fixed",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "17H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "17H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "17H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "17H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "17H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "2Q",
+      "family": "short",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "2Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "2Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "2Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "2Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "2Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Published precipitation is without overlap, not square/triangle spacing."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "2H",
+      "family": "short",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "2H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "2H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "2H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "2H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "2H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Published precipitation is without overlap, not square/triangle spacing."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "4Q",
+      "family": "short",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "4Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Published precipitation is without overlap, not square/triangle spacing."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "4H",
+      "family": "short",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "4H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "4H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "4H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "4H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "4H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Published precipitation is without overlap, not square/triangle spacing."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "6Q",
+      "family": "short",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "6Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6Q",
+          "rowIndex": 3,
+          "arcDeg": 90,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6Q",
+          "rowIndex": 4,
+          "arcDeg": 90,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Published precipitation is without overlap, not square/triangle spacing."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "6H",
+      "family": "short",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "6H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "6H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "6H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "6H",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "6H",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "25% spray radius adjustment supported; reduced discharge retained only as a modelling assumption, not a manufacturer constant-flow guarantee.",
+        "Published precipitation is without overlap, not square/triangle spacing."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "CS-530",
+      "family": "prostrip",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "CS-530",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "CS-530",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "CS-530",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "CS-530",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "CS-530",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Manual pressure-specific rectangle; arc180 is orientation metadata.",
+        "Width/length verified. Exact left/right diagram-origin orientation not independently visually verified; screenshot returned no pixels."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "ES-515",
+      "family": "prostrip",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "ES-515",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "ES-515",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "ES-515",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "ES-515",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "ES-515",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Manual pressure-specific rectangle; arc180 is orientation metadata.",
+        "Width/length verified. Exact left/right diagram-origin orientation not independently visually verified; screenshot returned no pixels."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "LCS-515",
+      "family": "prostrip",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "LCS-515",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "LCS-515",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "LCS-515",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "LCS-515",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "LCS-515",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Manual pressure-specific rectangle; arc180 is orientation metadata.",
+        "Width/length verified. Exact left/right diagram-origin orientation not independently visually verified; screenshot returned no pixels."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "RCS-515",
+      "family": "prostrip",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "RCS-515",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "RCS-515",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "RCS-515",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "RCS-515",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "RCS-515",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Manual pressure-specific rectangle; arc180 is orientation metadata.",
+        "Width/length verified. Exact left/right diagram-origin orientation not independently visually verified; screenshot returned no pixels."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "SS-530",
+      "family": "prostrip",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "SS-530",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "SS-530",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "SS-530",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "SS-530",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "SS-530",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Manual pressure-specific rectangle; arc180 is orientation metadata.",
+        "Width/length verified. Exact left/right diagram-origin orientation not independently visually verified; screenshot returned no pixels."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "SS-918",
+      "family": "prostrip",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "SS-918",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "SS-918",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "SS-918",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "SS-918",
+          "rowIndex": 3,
+          "arcDeg": 180,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "SS-918",
+          "rowIndex": 4,
+          "arcDeg": 180,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Manual pressure-specific rectangle; arc180 is orientation metadata.",
+        "Width/length verified. Exact left/right diagram-origin orientation not independently visually verified; screenshot returned no pixels."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "MSBN-25Q",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "MSBN-25Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "MSBN-25Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "MSBN-25Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "MSBN-50Q",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "MSBN-50Q",
+          "rowIndex": 0,
+          "arcDeg": 90,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "MSBN-50Q",
+          "rowIndex": 1,
+          "arcDeg": 90,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "MSBN-50Q",
+          "rowIndex": 2,
+          "arcDeg": 90,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        90
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "MSBN-50H",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "MSBN-50H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "MSBN-50H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "MSBN-50H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "MSBN-10H",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "MSBN-10H",
+          "rowIndex": 0,
+          "arcDeg": 180,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "MSBN-10H",
+          "rowIndex": 1,
+          "arcDeg": 180,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "MSBN-10H",
+          "rowIndex": 2,
+          "arcDeg": 180,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        180
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "MSBN-10F",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "MSBN-10F",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "MSBN-10F",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "MSBN-10F",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "MSBN-20F",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "MSBN-20F",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "MSBN-20F",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "MSBN-20F",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "MSBN-25V",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "MSBN-25V",
+          "rowIndex": 0,
+          "arcDeg": 50,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "MSBN-25V",
+          "rowIndex": 1,
+          "arcDeg": 50,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "MSBN-25V",
+          "rowIndex": 2,
+          "arcDeg": 50,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        50
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling.",
+        "Explicit 6-inch exception: 2 ft throw; baseline is 4-inch PROS-04."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "MSBN-50V",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "MSBN-50V",
+          "rowIndex": 0,
+          "arcDeg": 50,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "MSBN-50V",
+          "rowIndex": 1,
+          "arcDeg": 50,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "MSBN-50V",
+          "rowIndex": 2,
+          "arcDeg": 50,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        50
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling.",
+        "Explicit 6-inch exception: 3 ft throw; baseline is 4-inch PROS-04."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCN-25",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCN-25",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCN-25",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCN-25",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCN-50",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCN-50",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCN-50",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCN-50",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCN-10",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCN-10",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCN-10",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCN-10",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCN-20",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCN-20",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCN-20",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCN-20",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCB-25",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCB-25",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCB-25",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCB-25",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCB-50",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCB-50",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCB-50",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCB-50",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCB-10",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCB-10",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCB-10",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCB-10",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCB-20",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCB-20",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCB-20",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCB-20",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCB-25-R",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCB-25-R",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCB-25-R",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCB-25-R",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCB-50-R",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCB-50-R",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCB-50-R",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCB-50-R",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCB-10-R",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCB-10-R",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCB-10-R",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCB-10-R",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "PCB-20-R",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 3,
+      "rowChecks": [
+        {
+          "nozzleId": "PCB-20-R",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.0
+        },
+        {
+          "nozzleId": "PCB-20-R",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "PCB-20-R",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 4.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+        "https://www.hunterirrigation.com/irrigation-product/bubblers-bubbler-nozzles/pcb-20-r"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "15–70 psi / metric 1.0–4.8 bar constant-flow range expanded to 3 app nodes",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Radius0 is an unknown-footprint placeholder, not a published zero-throw claim."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "AFB",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 0,
+      "rowChecks": [],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "No fixed-flow table",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": null,
+      "limitations": [
+        "Adjustable output below 2 GPM; fixed flow/radius unknown.",
+        "Current 1.4–2.1 bar application range is not verified as the full manufacturer operating limit."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    },
+    {
+      "modelId": "5-CST-B",
+      "family": "bubbler",
+      "active": true,
+      "performanceRows": 5,
+      "rowChecks": [
+        {
+          "nozzleId": "5-CST-B",
+          "rowIndex": 0,
+          "arcDeg": 360,
+          "pressureBar": 1.4
+        },
+        {
+          "nozzleId": "5-CST-B",
+          "rowIndex": 1,
+          "arcDeg": 360,
+          "pressureBar": 1.7
+        },
+        {
+          "nozzleId": "5-CST-B",
+          "rowIndex": 2,
+          "arcDeg": 360,
+          "pressureBar": 2.1
+        },
+        {
+          "nozzleId": "5-CST-B",
+          "rowIndex": 3,
+          "arcDeg": 360,
+          "pressureBar": 2.4
+        },
+        {
+          "nozzleId": "5-CST-B",
+          "rowIndex": 4,
+          "arcDeg": 360,
+          "pressureBar": 2.8
+        }
+      ],
+      "sourceUrls": [
+        "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+        "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf"
+      ],
+      "publishedArcDeg": [
+        360
+      ],
+      "mechanicalArcRangeDeg": null,
+      "pressureBasis": "20/25/30/35/40 psi converted and rounded to 0.1 bar",
+      "performanceCorrectionCount": 0,
+      "geometryCorrection": "coverageKind streams",
+      "limitations": [
+        "Discrete streams, not uniformly wetted sector; no filled-surface coverage credit. MSBN baseline throws are for PROS-04; no generic height scaling.",
+        "5-foot dual streams; stored360 is not a wetted full-circle claim. Listing0.50 GPM must not replace pressure-specific0.30–0.42 GPM table."
+      ],
+      "status": "Audited with field-specific limitations; no blanket verification of rendering assumptions."
+    }
+  ],
+  "archived": [
+    {
+      "modelId": "8A",
+      "family": "spray",
+      "active": false,
+      "disposition": "Preserve archived; excluded from 62 active models / 400 rows.",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles",
+      "evidence": "Current page explicitly phases larger Pro Adjustable sizes out in 2026."
+    },
+    {
+      "modelId": "10A",
+      "family": "spray",
+      "active": false,
+      "disposition": "Preserve archived; excluded from 62 active models / 400 rows.",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles",
+      "evidence": "Current page explicitly phases larger Pro Adjustable sizes out in 2026."
+    },
+    {
+      "modelId": "12A",
+      "family": "spray",
+      "active": false,
+      "disposition": "Preserve archived; excluded from 62 active models / 400 rows.",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles",
+      "evidence": "Current page explicitly phases larger Pro Adjustable sizes out in 2026."
+    },
+    {
+      "modelId": "15A",
+      "family": "spray",
+      "active": false,
+      "disposition": "Preserve archived; excluded from 62 active models / 400 rows.",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles",
+      "evidence": "Current page explicitly phases larger Pro Adjustable sizes out in 2026."
+    },
+    {
+      "modelId": "17A",
+      "family": "spray",
+      "active": false,
+      "disposition": "Preserve archived; excluded from 62 active models / 400 rows.",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles",
+      "evidence": "Current page explicitly phases larger Pro Adjustable sizes out in 2026."
+    },
+    {
+      "modelId": "S-8A",
+      "family": "stream",
+      "active": false,
+      "disposition": "Preserve archived; excluded from 62 active models / 400 rows.",
+      "sourceUrl": null,
+      "evidence": "No current active performance table verified; do not reactivate."
+    },
+    {
+      "modelId": "S-16A",
+      "family": "stream",
+      "active": false,
+      "disposition": "Preserve archived; excluded from 62 active models / 400 rows.",
+      "sourceUrl": null,
+      "evidence": "No current active performance table verified; do not reactivate."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+Strip Pattern Nozzles | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles)
+citeturn278view0 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles","lineno":null}); Total lines: 686
+## Charts
+L152: 
+L153: ### Strip Pattern Nozzle Performance Data
+L154: ## Strip Pattern Nozzles Performance Data
+L155: ---
+L156: Arc  | Pressure  | Width x Length  | Flow
+L157:    | PSI  | ft  | GPM
+L158: LCS-515 cite32†Image Left Corner Strip  | 20  | 4' x 14'  | 0.55
+L159: 25  | 5' x 15'  | 0.60
+L160: 30  | 5' x 15'  | 0.65
+L161: 35  | 5' x 15'  | 0.70
+L162: 40  | 5' x 15'  | 0.75
+L163: RCS-515 cite33†Image Right Corner Strip  | 20  | 4' x 14'  | 0.55
+L164: 25  | 5' x 15'  | 0.60
+L165: 30  | 5' x 15'  | 0.65
+L166: 35  | 5' x 15'   | 0.70
+L167: 40  | 5' x 15'  | 0.75
+L168: SS-530 cite34†Image Side Strip  | 20  | 4' x 28'  | 1.10
+L169: 25  | 5' x 30'  | 1.20
+L170: 30  | 5' x 30'  | 1.30
+L171: 35  | 5' x 30'  | 1.40
+L172: 40  | 5' x 30'  | 1.50
+L173: ES-515 cite35†Image End Strip  | 20  | 4' x 14'  | 0.55
+L174: 25  | 5' x 15'  | 0.60
+L175: 30  | 5' x 15'  | 0.65
+L176: 35  | 5' x 15'  | 0.70
+L177: 40  | 5' x 15'  | 0.75
+L178: CS-530 cite36†Image Center Strip  | 20  | 4' x 28'  | 1.10
+L179: 25  | 5' x 30'  | 1.20
+L180: 30  | 5' x 30'  | 1.30
+L181: 35  | 5' x 30'  | 1.40
+L182: 40  | 5' x 30'  | 1.50
+L183: SS-918 cite37†Image Side Strip  | 20  | 8' x 17'  | 1.45
+L184: 25  | 9' x 18'  | 1.58
+L185: 30  | 9' x 18'  | 1.72
+L186: 35  | 9' x 18'  | 1.88
+L187: 40  | 9' x 18'  | 2.08
+L188: Bold = Recommended pressure
+L189: 

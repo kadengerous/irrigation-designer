@@ -1,0 +1,538 @@
+
+ (https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf)
+citeturn361view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf","lineno":null}); Total lines: 535
+L0@P0: www.rainbird.com/sprays
+L1@P0: www.rainbird.com 27
+L2@P0: Spray & Rotary Nozzles
+L3@P0: VAN Series Nozzles
+L4@P0: Variable Arc Nozzles
+L5@P0: Features
+L6@P0: • A simple twist of the center collar with no special tools increases
+L7@P0: or decreases the arc setting making it ideal for watering odd
+L8@P0: shaped areas
+L9@P0: • Quickly identify radius with Top Color-coded™ nozzles even when
+L10@P0: system is not operating
+L11@P0: • 12, 15, and 18-VAN have matched precipitation rates with Rain Bird
+L12@P0: MPR Nozzles
+L13@P0: • Three year trade warranty
+L14@P0: Operating Range
+L15@P0: • Spacing: 3 to 18 feet (0.9 m to 5.5 m)1
+L16@P0: • Pressure: 15 to 30 psi (1.0 to 2.1 bar)
+L17@P0: • Optimum pressure: 30 psi (2.1 bar)2
+L18@P0: Models
+L19@P0: • 4-VAN Series: 3 to 4 feet (0.9 to 1.2 m)
+L20@P0: • 6-VAN Series: 4 to 6 feet (1.2 to 1.8 m)
+L21@P0: • 8-VAN Series: 6 to 8 feet (1.8 to 2.4 m)
+L22@P0: • 10-VAN Series: 7 to 10 feet (2.1 to 3.1 m)
+L23@P0: • 12-VAN Series: 9 to 12 feet (2.7 to 3.7 m)
+L24@P0: • 15-VAN Series: 11 to 15 feet (3.4 to 4.6 m)
+L25@P0: • 18-VAN Series: 14 to 18 feet (4.3 to 5.5 m)
+L26@P0: 1 These ranges are based on proper pressure at nozzle.
+L27@P0: 2 Rain Bird recommends using 1800 PRS Spray Bodies to maintain optimum nozzle
+L28@P0: performance in higher pressure situations.
+L29@P0: Spray Nozzles
+L30@P0: VAN Series Nozzles
+L31@P0: 8 VAN
+L32@P0: Nozzle Type
+L33@P0: VAN: Variable
+L34@P0: Arc Nozzle
+L35@P0: Radius Range
+L36@P0: 4: 3-4 feet (0.9-1.2 m)
+L37@P0: 6: 4-6 feet (1.2-1.8 m)
+L38@P0: 8: 6-8 feet (1.8-2.4 m)
+L39@P0: 10: 7-10 feet (2.1-3.0 m)
+L40@P0: 12: 9-12 feet (2.7-3.7 m)
+L41@P0: 15: 11-15 feet (3.4-4.6 m)
+L42@P0: 18: 14-18 feet (4.3-5.5 m)
+L43@P0: Note: All VAN nozzles tested on 4" (10.2 cm) pop-ups
+L44@P0: n Square spacing based on 50% diameter of throw
+L45@P0: s Triangular spacing based on 50% diameter of throw
+L46@P0: Performance data taken in zero wind conditions
+L47@P0: Note: Radius reduction over 25% of the normal throw of the nozzle is not recommended
+L48@P0: How to Specify
+L49@P0: 0° Trajectory n s
+L50@P0: Nozzle
+L51@P0: Pressure
+L52@P0: psi
+L53@P0: Radius
+L54@P0: ft.
+L55@P0: Flow
+L56@P0: gpm
+L57@P0: Precip
+L58@P0: In/h
+L59@P0: Precip
+L60@P0: In/h
+L61@P0: 330° Arc 15 3 0.62 7.23 8.35
+L62@P0: 20 3 0.70 8.17 9.43
+L63@P0: 25 4 0.80 5.25 6.06
+L64@P0: 30 4 0.88 5.78 6.67
+L65@P0: 270° Arc 15 3 0.52 7.42 8.57
+L66@P0: 20 3 0.58 8.27 9.55
+L67@P0: 25 4 0.66 5.29 6.11
+L68@P0: 30 4 0.73 5.86 6.77
+L69@P0: 180° Arc 15 3 0.32 6.84 7.90
+L70@P0: 20 3 0.37 7.91 9.13
+L71@P0: 25 4 0.41 4.93 5.69
+L72@P0: 30 4 0.45 5.41 6.25
+L73@P0: 90° Arc 15 3 0.21 8.98 10.37
+L74@P0: 20 3 0.24 10.27 11.86
+L75@P0: 25 4 0.26 6.26 7.23
+L76@P0: 30 4 0.29 6.98 8.06
+L77@P0: 0° Trajectory n s
+L78@P0: Nozzle
+L79@P0: Pressure
+L80@P0: bar
+L81@P0: Radius
+L82@P0: m
+L83@P0: Flow
+L84@P0: m3
+L85@P0: /h
+L86@P0: Flow
+L87@P0: l/m
+L88@P0: Precip
+L89@P0: mm/h
+L90@P0: Precip
+L91@P0: mm/h
+L92@P0: 330° Arc 1.0 0.9 0.14 2.3 189 218
+L93@P0: 1.5 1.0 0.17 2.8 183 215
+L94@P0: 2.0 1.2 0.20 3.3 152 176
+L95@P0: 2.1 1.2 0.20 3.3 152 176
+L96@P0: 270° Arc 1.0 0.9 0.12 2.0 198 229
+L97@P0: 1.5 1.0 0.14 2.3 187 216
+L98@P0: 2.0 1.2 0.16 2.7 148 171
+L99@P0: 2.1 1.2 0.17 2.8 157 181
+L100@P0: 180° Arc 1.0 0.9 0.07 1.2 173 200
+L101@P0: 1.5 1.0 0.09 1.5 180 208
+L102@P0: 2.0 1.2 0.10 1.7 139 161
+L103@P0: 2.1 1.2 0.10 1.7 139 161
+L104@P0: 90° Arc 1.0 0.9 0.05 0.8 247 285
+L105@P0: 1.5 1.0 0.06 0.9 240 277
+L106@P0: 2.0 1.2 0.06 1.1 167 193
+L107@P0: 2.1 1.2 0.07 1.1 194 224
+L108@P0: 4 Series VAN 4 Series VAN METRIC
+L109@P0: For Optimum Performance,
+L110@P0: Use Rain Bird 1800-SAM-PRS
+L111@P0: 30 PSI Regulated or
+L112@P0: RD1800-SAM-PRS 30 PSI
+L113@P0: Regulated Spray Bodies
+L114@P0: PRS
+L115@P0: VAN Series Nozzle
+L116@P0: Shipped with
+L117@P0: blue filter screen
+L118@P0: (0.02" x 0.02")
+L119@P0: Tactile left
+L120@P0: edge indicator
+L121@P0: Stainless steel
+L122@P0: adjustment screw to
+L123@P0: adjust flow and radius
+L124@P0: Adjustable
+L125@P0-1: arc collar28 The Intelligent Use of Water.™
+L126@P1: Spray & Rotary Nozzles
+L127@P1: Note: All VAN nozzles tested on 4" (10.2 cm) pop-ups
+L128@P1: n Square spacing based on 50% diameter of throw
+L129@P1: s Triangular spacing based on 50% diameter of throw
+L130@P1: Performance data taken in zero wind conditions
+L131@P1: Note: Radius reduction over 25% of the normal throw of the nozzle is not recommended
+L132@P1: You can use HE-VAN nozzles to have better coverage and save water vs. VAN nozzles.
+L133@P1: • Stronger streams and larger water droplets for increased wind resistance.
+L134@P1: • Superior close-in watering and edges provide better coverage.
+L135@P1: • Shortened run times saves up to 35% in water
+L136@P1: Did you
+L137@P1: know?
+L138@P1: 0° Trajectory n s
+L139@P1: Nozzle
+L140@P1: Pressure
+L141@P1: psi
+L142@P1: Radius
+L143@P1: ft.
+L144@P1: Flow
+L145@P1: gpm
+L146@P1: Precip
+L147@P1: In/h
+L148@P1: Precip
+L149@P1: In/h
+L150@P1: 330° Arc 15 4 0.85 5.58 6.44
+L151@P1: 20 5 0.96 4.03 4.65
+L152@P1: 25 5 1.09 4.58 5.29
+L153@P1: 30 6 1.20 3.50 4.04
+L154@P1: 270° Arc 15 4 0.79 6.34 7.32
+L155@P1: 20 5 0.88 4.52 5.22
+L156@P1: 25 5 1.00 5.13 5.92
+L157@P1: 30 6 1.10 3.92 4.53
+L158@P1: 180° Arc 15 4 0.42 5.05 5.83
+L159@P1: 20 5 0.49 3.77 4.35
+L160@P1: 25 5 0.55 4.24 4.90
+L161@P1: 30 6 0.60 3.21 3.71
+L162@P1: 90° Arc 15 4 0.26 6.26 7.23
+L163@P1: 20 5 0.30 4.62 5.33
+L164@P1: 25 5 0.34 5.24 6.05
+L165@P1: 30 6 0.37 3.96 4.57
+L166@P1: 5° Trajectory n s
+L167@P1: Nozzle
+L168@P1: Pressure
+L169@P1: psi
+L170@P1: Radius
+L171@P1: ft.
+L172@P1: Flow
+L173@P1: gpm
+L174@P1: Precip
+L175@P1: In/h
+L176@P1: Precip
+L177@P1: In/h
+L178@P1: 330° Arc 15 6 1.21 3.53 4.07
+L179@P1: 20 7 1.36 2.91 3.36
+L180@P1: 25 7 1.55 3.32 3.83
+L181@P1: 30 8 1.70 2.79 3.22
+L182@P1: 270° Arc 15 6 1.11 3.95 4.55
+L183@P1: 20 7 1.24 3.24 3.74
+L184@P1: 25 7 1.41 3.69 4.25
+L185@P1: 30 8 1.55 3.10 3.58
+L186@P1: 180° Arc 15 6 0.84 4.49 5.18
+L187@P1: 20 7 0.97 3.81 4.40
+L188@P1: 25 7 1.09 4.28 4.94
+L189@P1: 30 8 1.19 3.58 4.13
+L190@P1: 90° Arc 15 6 0.51 5.46 6.29
+L191@P1: 20 7 0.59 4.64 5.35
+L192@P1: 25 7 0.66 5.19 5.98
+L193@P1: 30 8 0.72 4.33 5.00
+L194@P1: 0° Trajectory n s
+L195@P1: Nozzle
+L196@P1: Pressure
+L197@P1: bar
+L198@P1: Radius
+L199@P1: m
+L200@P1: Flow
+L201@P1: m3
+L202@P1: /h
+L203@P1: Flow
+L204@P1: l/m
+L205@P1: Precip
+L206@P1: mm/h
+L207@P1: Precip
+L208@P1: mm/h
+L209@P1: 330° Arc 1.0 1.2 0.19 3.2 144 166
+L210@P1: 1.5 1.5 0.23 3.8 112 129
+L211@P1: 2.0 1.8 0.27 4.5 91 105
+L212@P1: 2.1 1.8 0.27 4.5 91 105
+L213@P1: 270° Arc 1.0 1.2 0.18 3.0 167 193
+L214@P1: 1.5 1.5 0.21 3.5 124 143
+L215@P1: 2.0 1.8 0.24 4.1 99 114
+L216@P1: 2.1 1.8 0.25 4.2 103 119
+L217@P1: 180° Arc 1.0 1.2 0.10 1.6 139 161
+L218@P1: 1.5 1.5 0.11 1.9 98 113
+L219@P1: 2.0 1.8 0.13 2.2 80 92
+L220@P1: 2.1 1.8 0.14 2.3 86 99
+L221@P1: 90° Arc 1.0 1.2 0.06 1.0 167 193
+L222@P1: 1.5 1.5 0.07 1.2 124 143
+L223@P1: 2.0 1.8 0.08 1.4 99 114
+L224@P1: 2.1 1.8 0.08 1.4 99 114
+L225@P1: 5° Trajectory n s
+L226@P1: Nozzle
+L227@P1: Pressure
+L228@P1: bar
+L229@P1: Radius
+L230@P1: m
+L231@P1: Flow
+L232@P1: m3
+L233@P1: /h
+L234@P1: Flow
+L235@P1: l/m
+L236@P1: Precip
+L237@P1: mm/h
+L238@P1: Precip
+L239@P1: mm/h
+L240@P1: 330° Arc 1.0 1.8 0.27 4.6 91 105
+L241@P1: 1.5 2.1 0.32 5.4 79 91
+L242@P1: 2.0 2.3 0.38 6.3 78 90
+L243@P1: 2.1 2.4 0.39 6.4 74 86
+L244@P1: 270° Arc 1.0 1.8 0.25 4.2 103 119
+L245@P1: 1.5 2.1 0.30 4.9 91 105
+L246@P1: 2.0 2.3 0.34 5.8 86 99
+L247@P1: 2.1 2.4 0.35 5.9 81 94
+L248@P1: 180° Arc 1.0 1.8 0.19 3.2 117 135
+L249@P1: 1.5 2.1 0.23 3.8 104 120
+L250@P1: 2.0 2.3 0.26 4.4 98 113
+L251@P1: 2.1 2.4 0.27 4.5 94 109
+L252@P1: 90° Arc 1.0 1.8 0.12 1.9 148 171
+L253@P1: 1.5 2.1 0.14 2.3 127 147
+L254@P1: 2.0 2.3 0.16 2.7 121 140
+L255@P1: 2.1 2.4 0.16 2.7 111 128
+L256@P1: 6 Series VAN
+L257@P1: 8 Series VAN
+L258@P1: 6 Series VAN METRIC
+L259@P1: 8 Series VAN METRIC
+L260@P1: Spray Nozzles
+L261@P1-2: VAN Series Nozzleswww.rainbird.com/sprays
+L262@P2: www.rainbird.com 29
+L263@P2: Spray & Rotary Nozzles
+L264@P2: Spray Nozzles
+L265@P2: VAN Series Nozzles
+L266@P2: Note: All VAN nozzles tested on 4" (10.2 cm) pop-ups
+L267@P2: n Square spacing based on 50% diameter of throw
+L268@P2: s Triangular spacing based on 50% diameter of throw
+L269@P2: Performance data taken in zero wind conditions
+L270@P2: Note: Radius reduction over 25% of the normal throw of the nozzle is not recommended
+L271@P2: You can use HE-VAN nozzles to have better coverage and save water vs. VAN nozzles.
+L272@P2: • Stronger streams and larger water droplets for increased wind resistance.
+L273@P2: • Superior close-in watering and edges provide better coverage.
+L274@P2: • Shortened run times saves up to 35% in water
+L275@P2: Did you
+L276@P2: know?
+L277@P2: 10° Trajectory n s
+L278@P2: Nozzle
+L279@P2: Pressure
+L280@P2: psi
+L281@P2: Radius
+L282@P2: ft.
+L283@P2: Flow
+L284@P2: gpm
+L285@P2: Precip
+L286@P2: In/h
+L287@P2: Precip
+L288@P2: In/h
+L289@P2: 360° Arc 15 7 1.93 3.80 4.39
+L290@P2: 20 8 2.32 3.50 4.04
+L291@P2: 25 9 2.52 3.00 3.46
+L292@P2: 30 10 2.60 2.50 2.89
+L293@P2: 270° Arc 15 7 1.45 3.80 4.39
+L294@P2: 20 8 1.75 3.50 4.04
+L295@P2: 25 9 1.89 3.00 3.46
+L296@P2: 30 10 2.10 2.70 3.12
+L297@P2: 180° Arc 15 7 0.97 3.80 4.39
+L298@P2: 20 8 1.20 3.50 4.04
+L299@P2: 25 9 1.26 3.00 3.46
+L300@P2: 30 10 1.45 2.80 3.23
+L301@P2: 90° Arc 15 7 0.48 3.80 4.39
+L302@P2: 20 8 0.58 3.50 4.04
+L303@P2: 25 9 0.63 3.00 3.46
+L304@P2: 30 10 0.75 2.90 3.35
+L305@P2: 15° Trajectory n s
+L306@P2: Nozzle
+L307@P2: Pressure
+L308@P2: psi
+L309@P2: Radius
+L310@P2: ft.
+L311@P2: Flow
+L312@P2: gpm
+L313@P2: Precip
+L314@P2: In/h
+L315@P2: Precip
+L316@P2: In/h
+L317@P2: 360° Arc 15 9 1.56 1.86 2.14
+L318@P2: 20 10 1.86 1.79 2.06
+L319@P2: 25 11 2.12 1.68 1.95
+L320@P2: 30 12 2.36 1.58 1.82
+L321@P2: 270° Arc 15 9 1.17 1.86 2.14
+L322@P2: 20 10 1.39 1.79 2.06
+L323@P2: 25 11 1.59 1.68 1.94
+L324@P2: 30 12 1.77 1.58 1.82
+L325@P2: 180° Arc 15 9 0.78 1.86 2.14
+L326@P2: 20 10 0.93 1.79 2.06
+L327@P2: 25 11 1.06 1.68 1.95
+L328@P2: 30 12 1.18 1.58 1.82
+L329@P2: 90° Arc 15 9 0.39 1.86 2.14
+L330@P2: 20 10 0.46 1.79 2.06
+L331@P2: 25 11 0.53 1.68 1.95
+L332@P2: 30 12 0.59 1.58 1.82
+L333@P2: 10° Trajectory n s
+L334@P2: Nozzle
+L335@P2: Pressure
+L336@P2: bar
+L337@P2: Radius
+L338@P2: m
+L339@P2: Flow
+L340@P2: m3
+L341@P2: /h
+L342@P2: Flow
+L343@P2: l/m
+L344@P2: Precip
+L345@P2: mm/h
+L346@P2: Precip
+L347@P2: mm/h
+L348@P2: 360° Arc 1.0 2.1 0.44 7.3 96 111
+L349@P2: 1.5 2.4 0.53 9.0 89 103
+L350@P2: 2.0 2.7 0.57 9.8 76 88
+L351@P2: 2.1 3.1 0.59 9.8 63 73
+L352@P2: 270° Arc 1.0 2.1 0.33 5.5 96 111
+L353@P2: 1.5 2.4 0.4 6.8 89 103
+L354@P2: 2.0 2.7 0.43 7.8 76 88
+L355@P2: 2.1 3.1 0.48 7.9 68 79
+L356@P2: 180° Arc 1.0 2.1 0.22 3.7 96 111
+L357@P2: 1.5 2.4 0.27 4.6 89 103
+L358@P2: 2.0 2.7 0.29 5.3 76 88
+L359@P2: 2.1 3.1 0.33 5.5 71 82
+L360@P2: 90° Arc 1.0 2.1 0.11 1.8 96 111
+L361@P2: 1.5 2.4 0.13 2.3 89 103
+L362@P2: 2.0 2.7 0.14 2.7 76 88
+L363@P2: 2.1 3.1 0.17 2.8 73 85
+L364@P2: 15° Trajectory n s
+L365@P2: Nozzle
+L366@P2: Pressure
+L367@P2: bar
+L368@P2: Radius
+L369@P2: m
+L370@P2: Flow
+L371@P2: m3
+L372@P2: /h
+L373@P2: Flow
+L374@P2: l/m
+L375@P2: Precip
+L376@P2: mm/h
+L377@P2: Precip
+L378@P2: mm/h
+L379@P2: 360° Arc 1.0 2.7 0.35 5.80 48 55
+L380@P2: 1.5 3.2 0.44 7.37 43 50
+L381@P2: 2.0 3.6 0.52 8.75 41 47
+L382@P2: 2.1 3.7 0.54 9.02 40 46
+L383@P2: 270° Arc 1.0 2.7 0.26 4.35 48 55
+L384@P2: 1.5 3.2 0.33 5.53 43 50
+L385@P2: 2.0 3.6 0.39 6.56 41 47
+L386@P2: 2.1 3.7 0.41 6.76 40 46
+L387@P2: 180° Arc 1.0 2.7 0.17 2.90 48 55
+L388@P2: 1.5 3.2 0.22 3.69 43 50
+L389@P2: 2.0 3.6 0.26 4.37 41 47
+L390@P2: 2.1 3.7 0.27 4.51 40 46
+L391@P2: 90° Arc 1.0 2.7 0.09 1.45 48 55
+L392@P2: 1.5 3.2 0.11 1.84 43 50
+L393@P2: 2.0 3.6 0.13 2.19 41 47
+L394@P2: 2.1 3.7 0.14 2.25 40 46
+L395@P2: 10 Series VAN
+L396@P2: 12 Series VAN
+L397@P2: 10 Series VAN METRIC
+L398@P2-3: 12 Series VAN METRIC30 The Intelligent Use of Water.™
+L399@P3: Spray & Rotary Nozzles
+L400@P3: Spray Nozzles
+L401@P3: VAN Series Nozzles
+L402@P3: Note: All VAN nozzles tested on 4" (10.2 cm) pop-ups
+L403@P3: n Square spacing based on 50% diameter of throw
+L404@P3: s Triangular spacing based on 50% diameter of throw
+L405@P3: Performance data taken in zero wind conditions
+L406@P3: Note: Radius reduction over 25% of the normal throw of the nozzle is not recommended
+L407@P3: You can use HE-VAN nozzles to have better coverage and save water vs. VAN nozzles.
+L408@P3: • Stronger streams and larger water droplets for increased wind resistance.
+L409@P3: • Superior close-in watering and edges provide better coverage.
+L410@P3: • Shortened run times saves up to 35% in water
+L411@P3: Did you
+L412@P3: know?
+L413@P3: 23° Trajectory n s
+L414@P3: Nozzle
+L415@P3: Pressure
+L416@P3: psi
+L417@P3: Radius
+L418@P3: ft.
+L419@P3: Flow
+L420@P3: gpm
+L421@P3: Precip
+L422@P3: In/h
+L423@P3: Precip
+L424@P3: In/h
+L425@P3: 360° Arc 15 11 2.60 2.07 2.39
+L426@P3: 20 12 3.00 2.01 2.32
+L427@P3: 25 14 3.30 1.62 1.87
+L428@P3: 30 15 3.70 1.58 1.83
+L429@P3: 270° Arc 15 11 1.95 2.07 2.39
+L430@P3: 20 12 2.25 2.01 2.32
+L431@P3: 25 14 2.48 1.62 1.87
+L432@P3: 30 15 2.78 1.58 1.83
+L433@P3: 180° Arc 15 11 1.30 2.07 2.39
+L434@P3: 20 12 1.50 2.01 2.32
+L435@P3: 25 14 1.65 1.62 1.87
+L436@P3: 30 15 1.85 1.58 1.83
+L437@P3: 90° Arc 15 11 0.65 2.07 2.39
+L438@P3: 20 12 0.75 2.01 2.32
+L439@P3: 25 14 0.82 1.62 1.87
+L440@P3: 30 15 0.92 1.58 1.83
+L441@P3: 26° Trajectory n s
+L442@P3: Nozzle
+L443@P3: Pressure
+L444@P3: psi
+L445@P3: Radius
+L446@P3: ft.
+L447@P3: Flow
+L448@P3: gpm
+L449@P3: Precip
+L450@P3: In/h
+L451@P3: Precip
+L452@P3: In/h
+L453@P3: 360° Arc 15 14 4.21 2.07 2.39
+L454@P3: 20 15 4.70 2.01 2.32
+L455@P3: 25 17 4.86 1.62 1.87
+L456@P3: 30 18 5.32 1.58 1.83
+L457@P3: 270° Arc 15 14 3.16 2.07 2.39
+L458@P3: 20 15 3.52 2.01 2.32
+L459@P3: 25 17 3.65 1.62 1.87
+L460@P3: 30 18 3.99 1.58 1.83
+L461@P3: 180° Arc 15 14 2.11 2.07 2.39
+L462@P3: 20 15 2.35 2.01 2.32
+L463@P3: 25 17 2.43 1.62 1.87
+L464@P3: 30 18 2.66 1.58 1.83
+L465@P3: 90° Arc 15 14 1.05 2.07 2.39
+L466@P3: 20 15 1.17 2.01 2.32
+L467@P3: 25 17 1.22 1.62 1.87
+L468@P3: 30 18 1.33 1.58 1.83
+L469@P3: 23° Trajectory n s
+L470@P3: Nozzle
+L471@P3: Pressure
+L472@P3: bar
+L473@P3: Radius
+L474@P3: m
+L475@P3: Flow
+L476@P3: m3
+L477@P3: /h
+L478@P3: Flow
+L479@P3: l/m
+L480@P3: Precip
+L481@P3: mm/h
+L482@P3: Precip
+L483@P3: mm/h
+L484@P3: 360° Arc 1.0 3.4 0.60 9.8 52 60
+L485@P3: 1.5 3.9 0.72 11.8 47 55
+L486@P3: 2.0 4.5 0.84 13.7 41 48
+L487@P3: 2.1 4.6 0.84 14.0 40 46
+L488@P3: 270° Arc 1.0 3.4 0.45 7.4 52 60
+L489@P3: 1.5 3.9 0.54 8.8 47 55
+L490@P3: 2.0 4.5 0.63 10.3 41 48
+L491@P3: 2.1 4.6 0.63 10.5 40 46
+L492@P3: 180° Arc 1.0 3.4 0.30 4.9 52 60
+L493@P3: 1.5 3.9 0.36 5.9 47 55
+L494@P3: 2.0 4.5 0.42 6.9 41 48
+L495@P3: 2.1 4.6 0.42 7.0 40 46
+L496@P3: 90° Arc 1.0 3.4 0.15 2.5 52 60
+L497@P3: 1.5 3.9 0.18 2.9 47 55
+L498@P3: 2.0 4.5 0.21 3.4 41 48
+L499@P3: 2.1 4.6 0.21 3.5 40 46
+L500@P3: 26° Trajectory n s
+L501@P3: Nozzle
+L502@P3: Pressure
+L503@P3: bar
+L504@P3: Radius
+L505@P3: m
+L506@P3: Flow
+L507@P3: m3
+L508@P3: /h
+L509@P3: Flow
+L510@P3: l/m
+L511@P3: Precip
+L512@P3: mm/h
+L513@P3: Precip
+L514@P3: mm/h
+L515@P3: 360° Arc 1.0 4.3 0.96 15.9 52 60
+L516@P3: 1.5 4.8 1.07 18.0 47 55
+L517@P3: 2.0 5.4 1.20 19.8 41 48
+L518@P3: 2.1 5.5 1.21 20.1 40 46
+L519@P3: 270° Arc 1.0 4.3 0.72 12.0 52 60
+L520@P3: 1.5 4.8 0.80 13.5 47 55
+L521@P3: 2.0 5.4 0.90 14.8 41 48
+L522@P3: 2.1 5.5 0.91 15.1 40 46
+L523@P3: 180° Arc 1.0 4.3 0.48 8.0 52 60
+L524@P3: 1.5 4.8 0.54 9.0 47 55
+L525@P3: 2.0 5.4 0.60 9.9 41 48
+L526@P3: 2.1 5.5 0.61 10.1 40 46
+L527@P3: 90° Arc 1.0 4.3 0.24 4.0 52 60
+L528@P3: 1.5 4.8 0.27 4.5 47 55
+L529@P3: 2.0 5.4 0.30 5.0 41 48
+L530@P3: 2.1 5.5 0.30 5.0 40 46
+L531@P3: 15 Series VAN
+L532@P3: 18 Series VAN
+L533@P3: 15 Series VAN METRIC
+L534@P3: 18 Series VAN METRIC

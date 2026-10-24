@@ -1,0 +1,524 @@
+[
+  {
+    "modelId": "RN100-ADJ-90-210",
+    "colorName": "Dark Green",
+    "hex": "#175e35",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN100-ADJ-210-270",
+    "colorName": "Medium Green",
+    "hex": "#58a34c",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN100-FIX360",
+    "colorName": "Light Green",
+    "hex": "#a9d28a",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN200-ADJ-90-210",
+    "colorName": "Dark Blue",
+    "hex": "#154b81",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN200-ADJ-210-270",
+    "colorName": "Medium Blue",
+    "hex": "#347ab8",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN200-FIX360",
+    "colorName": "Light Blue",
+    "hex": "#91c9e8",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN300-ADJ-90-210",
+    "colorName": "Dark Gray",
+    "hex": "#555b60",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN300-ADJ-210-270",
+    "colorName": "Medium Gray",
+    "hex": "#8c9296",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN300-FIX360",
+    "colorName": "Light Gray",
+    "hex": "#c0c5c7",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RNS-RES-515",
+    "colorName": "Burnt Orange",
+    "hex": "#b0642c",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RNS-LES-515",
+    "colorName": "Olive",
+    "hex": "#80883c",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RNS-SS-530",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 40,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN100-ADJ",
+    "colorName": "Green",
+    "hex": "#32834d",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 42,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN200-ADJ",
+    "colorName": "Blue",
+    "hex": "#3274bc",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 42,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "RN300-ADJ",
+    "colorName": "Red",
+    "hex": "#c83232",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 42,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KVF6",
+    "colorName": "Red",
+    "hex": "#c83232",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 44,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KVF8",
+    "colorName": "Green",
+    "hex": "#32834d",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 44,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KVF10",
+    "colorName": "Blue",
+    "hex": "#3274bc",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 44,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KVF12",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 45,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KVF15",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 45,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KVF17",
+    "colorName": "Gray",
+    "hex": "#96999b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 45,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KV8",
+    "colorName": "Green",
+    "hex": "#32834d",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 46,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KV10",
+    "colorName": "Blue",
+    "hex": "#3274bc",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 46,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KV12",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 46,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KV15",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 47,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "KV17",
+    "colorName": "Gray",
+    "hex": "#96999b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 47,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-8Q",
+    "colorName": "Green",
+    "hex": "#32834d",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-8H",
+    "colorName": "Green",
+    "hex": "#32834d",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-8TQ",
+    "colorName": "Green",
+    "hex": "#32834d",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-8F",
+    "colorName": "Green",
+    "hex": "#32834d",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-10Q",
+    "colorName": "Blue",
+    "hex": "#3274bc",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-10H",
+    "colorName": "Blue",
+    "hex": "#3274bc",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-10TQ",
+    "colorName": "Blue",
+    "hex": "#3274bc",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-10F",
+    "colorName": "Blue",
+    "hex": "#3274bc",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-12Q",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-12H",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-12TQ",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-12F",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-15Q",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-15H",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-15TQ",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "FN-15F",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 48,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P12Q",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P12H",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P12TQ",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P12F",
+    "colorName": "Brown",
+    "hex": "#885c3b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P15Q",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P15H",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P15TQ",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P15F",
+    "colorName": "Black",
+    "hex": "#25282b",
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "manufacturer-color-name",
+    "note": "Hex is an application approximation, not a published manufacturer RGB code."
+  },
+  {
+    "modelId": "P15CS",
+    "colorName": null,
+    "hex": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "not-published",
+    "note": "Special-pattern color is not named on the catalog model list; do not infer the ordinary P15/FN-15 black color."
+  },
+  {
+    "modelId": "FN-15CS",
+    "colorName": null,
+    "hex": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "not-published",
+    "note": "Special-pattern color is not named on the catalog model list; do not infer the ordinary P15/FN-15 black color."
+  },
+  {
+    "modelId": "P15ES",
+    "colorName": null,
+    "hex": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "not-published",
+    "note": "Special-pattern color is not named on the catalog model list; do not infer the ordinary P15/FN-15 black color."
+  },
+  {
+    "modelId": "FN-15ES",
+    "colorName": null,
+    "hex": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "not-published",
+    "note": "Special-pattern color is not named on the catalog model list; do not infer the ordinary P15/FN-15 black color."
+  },
+  {
+    "modelId": "P15SS",
+    "colorName": null,
+    "hex": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "not-published",
+    "note": "Special-pattern color is not named on the catalog model list; do not infer the ordinary P15/FN-15 black color."
+  },
+  {
+    "modelId": "FN-15SS",
+    "colorName": null,
+    "hex": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "not-published",
+    "note": "Special-pattern color is not named on the catalog model list; do not infer the ordinary P15/FN-15 black color."
+  },
+  {
+    "modelId": "P15HL",
+    "colorName": null,
+    "hex": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "not-published",
+    "note": "Special-pattern color is not named on the catalog model list; do not infer the ordinary P15/FN-15 black color."
+  },
+  {
+    "modelId": "FN-15HL",
+    "colorName": null,
+    "hex": null,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+    "sourcePage": 49,
+    "evidenceType": "not-published",
+    "note": "Special-pattern color is not named on the catalog model list; do not infer the ordinary P15/FN-15 black color."
+  }
+]

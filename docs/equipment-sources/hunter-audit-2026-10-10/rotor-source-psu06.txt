@@ -1,0 +1,304 @@
+PSU-06 | Hunter Industries (https://www.hunterirrigation.com/en-metric/irrigation-product/ps-ultra/psu-06)
+citeturn326view0 [wordlim: 200] Crawled: 3 weeks ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/en-metric/irrigation-product/ps-ultra/psu-06","lineno":null}); Total lines: 341
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: Metric
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite0†English L16:   * cite9†Metric L17:   * cite10†Español L18:   * cite11†Italiano L19: 
+L20:   * cite12†Français L21:   * cite13†Português L22:   * cite14†Deutsch L23:   * cite15†Türkçe L24: 
+L25:   * cite16†Polski L26:   * cite17†Русский L27:   * cite18†العربية L28:   * cite19†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: ]
+L35: 
+L36: [Button: Cancel]
+L37: 
+L38: cite20†Image: DSC_0975_PS_Ultra_FlushPlug_Tall L39: 
+L40: ## Create a new My List.
+L41: ## Log in to access this feature
+L42: 
+L43: Log in using your Hunter Account
+L44: 
+L45: Username [Input]
+L46: 
+L47: Password [Input]
+L48: 
+L49: [Input] [Input] [Input]
+L50: 
+L51: [Button: Sign In]
+L52: # PSU-06
+L53: 
+L54: cite21†More information about PS Ultra L55: 
+L56: Brand:
+L57: 
+L58: Landscape Irrigation
+L59: 
+L60: Product Line:
+L61: 
+L62: Spray Bodies
+L63: 
+L64: Product Model:
+L65: 
+L66: PS Ultra
+L67: 
+L68: SKU:
+L69: 
+L70: PSU06
+L71: 
+L72: Description:
+L73: 
+L74: PS Ultra Sprinkler Body, 6" slim pop-up with flush plug and ½" inlet; no large filter screen
+L75: 
+L76: Description:
+L77: 
+L78: PS Ultra Sprinkler Body, 15 cm slim pop-up with flush plug and ½" inlet; no large inlet filter screen
+L79: 
+L80: cite22†Download Spec Sheet L81: 
+L82: cite23†Add To List L83: 
+L84: cite24†Image: PSU-06 L85: 
+L86: [Input]
+L87: 
+L88: PSU-06
+L89: 
+L90: PSU-06
+L91: 
+L92: Ordering Number [Input]
+L93: 
+L94: [Input] [Input]
+L95: Qty [Input]
+L96: 
+L97: Notes [Input: Add a note...]
+L98: 
+L99: [Button: Add to list]
+L100: 
+L101: User installed options
+L102: 
+L103: [Input]
+L104: #### Product added to list
+L105: 
+L106: The following product was added to ""
+L107: 
+L108: QTY
+L109: 
+L110: cite25†Review your list L111: 
+L112: cite23†Continue L113: 
+L114: [Input] [Input]
+L115: 
+L116: ## Dimensions
+L117: 
+L118: Height:
+L119: 
+L120: 241.30 mm
+L121: 
+L122: Pop-up Height:
+L123: 
+L124: 15 cm
+L125: 
+L126: Diameter:
+L127: 
+L128: 31.75 mm
+L129: 
+L130: Exposed Diameter:
+L131: 
+L132: 31.75 mm
+L133: 
+L134: cite26†Image: asset_family_document_psu06 L135: 
+L136: ## Shipping Information
+L137: 
+L138: UPC-A:
+L139: 
+L140: 0611698156360
+L141: 
+L142: Qty. / Bag:
+L143: 
+L144: 100
+L145: 
+L146: Origin:
+L147: 
+L148: Made in Mexico
+L149: 
+L150: Ocean Pallet:
+L151: 
+L152: 6300
+L153: 
+L154: Land Pallet:
+L155: 
+L156: 5400
+L157: 
+L158: Master Carton:
+L159: 
+L160: 100
+L161: 
+L162: ## Specification Charts
+L163: 
+L164: ### Pro High-Efficiency Nozzles Performance Data Chart
+L165: ## cite27†Pro High-Efficiency Nozzles Performance Data Chart L166: 
+L167: ### PRO HIGH-EFFICIENCY NOZZLES PERFORMANCE DATA
+L168: ### 8A-HE Olive Green •
+L169: 
+L170:   * Radius: 2.4 m
+L171:   * Adjustable from 0° to 360°
+L172:   * Trajectory 20°
+L173: Arc  | Pressure  | Radius  | Flow  | Precip mm/hr
+L174:    | bar  | kPa  | m  | m³/hr  | l/min  | cite28†Image | cite29†Image L175: 90°cite30†Image | 1.0  | 100  | 2.0  | 0.05  | 0.87  | 52  | 60
+L176: 1.5  | 150  | 2.2  | 0.06  | 1.02  | 51  | 59
+L177: 2.1  | 210  | 2.4  | 0.06  | 1.06  | 44  | 51
+L178: 2.5  | 250  | 2.6  | 0.07  | 1.21  | 43  | 50
+L179: 3.0  | 300  | 2.8  | 0.08  | 1.32  | 41  | 47
+L180: 180°cite31†Image | 1.0  | 100  | 2.0  | 0.10  | 1.65  | 49  | 57
+L181: 1.5  | 150  | 2.2  | 0.11  | 1.85  | 46  | 53
+L182: 2.1  | 210  | 2.4  | 0.12  | 2.08  | 43  | 50
+L183: 2.5  | 250  | 2.6  | 0.14  | 2.37  | 42  | 48
+L184: 3.0  | 300  | 2.8  | 0.15  | 2.57  | 39  | 45
+L185: 270°cite32†Image | 1.0  | 100  | 2.0  | 0.15  | 2.47  | 49  | 57
+L186: 1.5  | 150  | 2.2  | 0.17  | 2.78  | 46  | 53
+L187: 2.1  | 210  | 2.4  | 0.19  | 3.11  | 43  | 50
+L188: 2.5  | 250  | 2.6  | 0.21  | 3.55  | 42  | 48
+L189: 3.0  | 300  | 2.8  | 0.23  | 3.86  | 39  | 45
+L190: 360°cite33†Image | 1.0  | 100  | 2.0  | 0.20  | 3.29  | 49  | 57
+L191: 1.5  | 150  | 2.2  | 0.22  | 3.71  | 46  | 53
+L192: 2.1  | 210  | 2.4  | 0.25  | 4.15  | 43  | 50
+L193: 2.5  | 250  | 2.6  | 0.28  | 4.73  | 42  | 50
+L194: 3.0  | 300  | 2.8  | 0.31  | 5.50  | 39  | 45
+L195: ### 10A-HE Dark Blue •
+L196: 
+L197:   * Radius: 3.0 m
+L198:   * Adjustable from 0° to 360°
+L199:   * Trajectory 25°
+L200: Arc  | Pressure  | Radius  | Flow  | Precip mm/hr
+L201:    | bar  | kPa  | m  | m³/hr  | l/min  | cite28†Image | cite29†Image L202: 90°cite30†Image | 1.0  | 100  | 2.7  | 0.08  | 1.36  | 45  | 52
+L203: 1.5  | 150  | 2.8  | 0.09  | 1.55  | 48  | 55
+L204: 2.1  | 210  | 3.0  | 0.10  | 1.67  | 44  | 51
+L205: 2.5  | 250  | 3.1  | 0.11  | 1.82  | 45  | 52
+L206: 3.0  | 300  | 3.2  | 0.12  | 1.93  | 45  | 52
+L207: 180°cite31†Image | 1.0  | 100  | 2.7  | 0.16  | 2.65  | 44  | 50
+L208: 1.5  | 150  | 2.8  | 0.18  | 2.94  | 45  | 52
+L209: 2.1  | 210  | 3.0  | 0.19  | 3.24  | 43  | 50
+L210: 2.5  | 250  | 3.1  | 0.21  | 3.52  | 44  | 51
+L211: 3.0  | 300  | 3.2  | 0.23  | 3.79  | 44  | 51
+L212: 270°cite32†Image | 1.0  | 100  | 2.7  | 0.24  | 3.97  | 44  | 50
+L213: 1.5  | 150  | 2.8  | 0.26  | 4.41  | 45  | 52
+L214: 2.1  | 210  | 3.0  | 0.29  | 4.85  | 43  | 50
+L215: 2.5  | 250  | 3.1  | 0.32  | 5.28  | 44  | 51
+L216: 3.0  | 300  | 3.2  | 0.34  | 5.68  | 44  | 51
+L217: 360°cite33†Image | 1.0  | 100  | 2.7  | 0.32  | 5.30  | 44  | 50
+L218: 1.5  | 150  | 2.8  | 0.35  | 5.88  | 45  | 52
+L219: 2.1  | 210  | 3.0  | 0.39  | 6.47  | 43  | 50
+L220: 2.5  | 250  | 3.1  | 0.42  | 7.04  | 44  | 51
+L221: 3.0  | 300  | 3.2  | 0.45  | 7.57  | 44  | 51
+L222: ### 12A-HE Brown •
+L223: 
+L224:   * Radius: 3.7 m
+L225:   * Adjustable from 0° to 360°
+L226:   * Trajectory 25°
+L227: Arc  | Pressure  | Radius  | Flow  | Precip mm/hr
+L228:    | bar  | kPa  | m  | m³/hr  | l/min  | cite28†Image | cite29†Image L229: 90°cite30†Image | 1.0  | 100  | 3.3  | 0.12  | 2.01  | 44  | 51
+L230: 1.5  | 150  | 3.5  | 0.13  | 2.23  | 44  | 51
+L231: 2.1  | 210  | 3.7  | 0.14  | 2.38  | 42  | 48
+L232: 2.5  | 250  | 3.8  | 0.16  | 2.65  | 44  | 51
+L233: 3.0  | 300  | 3.9  | 0.17  | 2.84  | 45  | 51
+L234: 180°cite31†Image | 1.0  | 100  | 3.3  | 0.23  | 3.88  | 43  | 49
+L235: 1.5  | 150  | 3.5  | 0.125  | 4.24  | 42  | 48
+L236: 2.1  | 210  | 3.7  | 0.28  | 4.62  | 40  | 47
+L237: 2.5  | 250  | 3.8  | 0.30  | 5.03  | 42  | 48
+L238: 3.0  | 300  | 3.9  | 0.33  | 5.53  | 42  | 50
+L239: 270°cite32†Image | 1.0  | 100  | 3.3  | 0.35  | 5.82  | 43  | 49
+L240: 1.5  | 150  | 3.5  | 0.38  | 6.36  | 42  | 48
+L241: 2.1  | 210  | 3.7  | 0.42  | 6.93  | 40  | 47
+L242: 2.5  | 250  | 3.8  | 0.45  | 7.55  | 42  | 48
+L243: 3.0  | 300  | 3.9  | 0.50  | 8.29  | 44  | 50
+L244: 360°cite33†Image | 1.0  | 100  | 3.3  | 0.47  | 7.76  | 43  | 49
+L245: 1.5  | 150  | 3.5  | 0.51  | 8.48  | 42  | 48
+L246: 2.1  | 210  | 3.7  | 0.55  | 9.24  | 40  | 47
+L247: 2.5  | 250  | 3.8  | 0.60  | 10.07  | 42  | 48
+L248: 3.0  | 300  | 3.9  | 0.66  | 11.05  | 44  | 50
+L249: ### 15A-HE Black •
+L250: 
+L251:   * Radius: 4.6 m
+L252:   * Adjustable from 0° to 360°
+L253:   * Trajectory 25°
+L254: Arc  | Pressure  | Radius  | Flow  | Precip mm/hr
+L255:    | bar  | kPa  | m  | m³/hr  | l/min  | cite28†Image | cite29†Image L256: 90°cite30†Image | 1.0  | 100  | 4.2  | 0.18  | 2.95  | 40  | 46
+L257: 1.5  | 150  | 4.4  | 0.20  | 3.33  | 41  | 48
+L258: 2.1  | 210  | 4.6  | 0.22  | 3.63  | 41  | 48
+L259: 2.5  | 250  | 4.7  | 0.24  | 4.05  | 44  | 51
+L260: 3.0  | 300  | 4.8  | 0.26  | 4.28  | 45  | 51
+L261: 180°cite31†Image | 1.0  | 100  | 4.2  | 0.35  | 5.78  | 39  | 45
+L262: 1.5  | 150  | 4.4  | 0.38  | 6.38  | 40  | 46
+L263: 2.1  | 210  | 4.6  | 0.42  | 7.08  | 40  | 46
+L264: 2.5  | 250  | 4.7  | 0.47  | 7.76  | 42  | 49
+L265: 3.0  | 300  | 4.8  | 0.50  | 8.39  | 44  | 50
+L266: 270°cite32†Image | 1.0  | 100  | 4.2  | 0.52  | 8.67  | 39  | 45
+L267: 1.5  | 150  | 4.4  | 0.57  | 9.58  | 40  | 46
+L268: 2.1  | 210  | 4.6  | 0.64  | 10.62  | 40  | 46
+L269: 2.5  | 250  | 4.7  | 0.70  | 11.64  | 42  | 49
+L270: 3.0  | 300  | 4.8  | 0.75  | 12.59  | 42  | 50
+L271: 360°cite33†Image | 1.0  | 100  | 4.2  | 0.69  | 11.56  | 39  | 45
+L272: 1.5  | 150  | 4.4  | 0.77  | 12.77  | 40  | 46
+L273: 2.1  | 210  | 4.6  | 0.85  | 14.16  | 40  | 46
+L274: 2.5  | 250  | 4.7  | 0.93  | 15.52  | 42  | 49
+L275: 3.0  | 300  | 4.8  | 1.01  | 16.78  | 44  | 50
+L276: ### 17A-HE Grey •
+L277: 
+L278:   * Radius: 4.6 m
+L279:   * Adjustable from 0° to 360°
+L280:   * Trajectory 25°
+L281: Arc  | Pressure  | Radius  | Flow  | Precip mm/hr
+L282:    | bar  | kPa  | m  | m³/hr  | l/min  | cite28†Image | cite29†Image L283: 90°cite30†Image | 1.0  | 100  | 4.6  | 0.22  | 3.61  | 41  | 47
+L284: 1.5  | 150  | 4.8  | 0.24  | 4.04  | 42  | 49
+L285: 2.1  | 210  | 5.2  | 0.28  | 4.69  | 42  | 48
+L286: 2.5  | 250  | 5.3  | 0.29  | 4.90  | 42  | 48
+L287: 3.0  | 300  | 5.4  | 0.31  | 5.25  | 43  | 50
+L288: 180°cite31†Image | 1.0  | 100  | 4.6  | 0.40  | 6.68  | 38  | 44
+L289: 1.5  | 150  | 4.8  | 0.46  | 7.70  | 40  | 46
+L290: 2.1  | 210  | 5.2  | 0.54  | 8.93  | 40  | 46
+L291: 2.5  | 250  | 5.3  | 0.56  | 9.33  | 40  | 46
+L292: 3.0  | 300  | 5.4  | 0.50  | 10.02  | 41  | 48
+L293: 270°cite32†Image | 1.0  | 100  | 4.6  | 0.60  | 10.02  | 38  | 44
+L294: 1.5  | 150  | 4.8  | 0.69  | 11.55  | 40  | 46
+L295: 2.1  | 210  | 5.2  | 0.80  | 13.40  | 40  | 46
+L296: 2.5  | 250  | 5.3  | 0.84  | 14.00  | 40  | 46
+L297: 3.0  | 300  | 5.4  | 0.90  | 15.05  | 41  | 48
+L298: 360°cite33†Image | 1.0  | 100  | 4.6  | 0.80  | 13.36  | 38  | 44
+L299: 1.5  | 150  | 4.8  | 0.92  | 15.40  | 40  | 46
+L300: 2.1  | 210  | 5.2  | 1.07  | 17.87  | 40  | 46
+L301: 2.5  | 250  | 5.3  | 1.12  | 18.66  | 40  | 46
+L302: 3.0  | 300  | 5.4  | 1.29  | 20.06  | 41  | 48
+L303: Bold = Recommended pressure
+L304: ### Strip Pattern Nozzle Performance Data
+L305: 
+L306: ## cite34†Strip Pattern Nozzle Performance Data L307: 
+L308: 
+L309: Strip Pattern Nozzles Performance Data
+L310: ---
+L311: • Nozzle Blue
+L312: Arc  | Pressure  | Width x Length  | Flow
+L313:    | bar  | kPa  | m  | m³/hr  | l/min
+L314: SS-530 cite35†Image Side Strip  | 1.0  | 100  | 1.2 x 8.5  | 0.21  | 3.50
+L315: 1.5  | 150  | 1.5 x 9.0  | 0.25  | 4.20
+L316: 2.0  | 200  | 1.5 x 9.0  | 0.29  | 4.90
+L317: 2.1  | 210  | 1.5 x 9.0  | 0.30  | 5.00
+L318: 2.5  | 250  | 1.5 x 9.0  | 0.33  | 5.50
+L319: Notes = Recommended pressure
+L320: ### Pro High-Efficiency Performance Data
+L321: 
+L322: ## cite36†Pro High-Efficiency Performance Data L323: ### Pro High-Efficiency Performance Data
+L324: 8A-HE  | Pro High-Efficiency Nozzle, 2.4 m radius, adjustable arc from 0° to 360°, female thread, olive green
+L325: 10A-HE  | Pro High-Efficiency Nozzle, 3 m radius, adjustable arc from 0° to 360°, female thread, dark blue
+L326: 12A-HE  | Pro High-Efficiency Nozzle, 3.7 m radius, adjustable arc from 0° to 360°, female thread, brown
+L327: 15A-HE  | Pro High-Efficiency Nozzle, 4.6 m radius, adjustable arc from 0° to 360°, female thread, black
+L328: 17A-HE  | Pro High-Efficiency Nozzle, 5.2 m radius, adjustable arc from 0° to 360°, female thread, grey
+L329: ### Print
+L330: 
+L331: Would you like to go to the print version of this page?
+L332: 
+L333: [Button: Stay on this page] [Button: Print version]
+L334: 
+L335:   * cite37†Find a Distributor L336:   * cite38†Contact Sales L337: 
+L338: cite39†Find Hunter L339: 
+L340: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite40†Privacy Policy |
+

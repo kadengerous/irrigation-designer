@@ -1,0 +1,629 @@
+{
+  "auditedOn": "2026-10-10",
+  "models": [
+    {
+      "modelId": "R-VAN14",
+      "catalogId": "rain-bird:R-VAN14",
+      "publishedRows": 54,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "sector",
+      "currentArcBounds": [
+        45,
+        270
+      ],
+      "manufacturerPattern": "45–270 degrees adjustable",
+      "publishedNumericArc": [
+        45,
+        270
+      ],
+      "catalogColor": {
+        "name": "blue",
+        "hex": "#2b69b5",
+        "verification": "Official catalog range color and current technical-specification illustration agree; exact hex is an application approximation."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "minimumReducedRadiusM": 2.4,
+      "fullThrowByPressure": [
+        {
+          "pressureBar": 2.1,
+          "radiusM": 4
+        },
+        {
+          "pressureBar": 2.4,
+          "radiusM": 4
+        },
+        {
+          "pressureBar": 2.8,
+          "radiusM": 4.3
+        },
+        {
+          "pressureBar": 3.1,
+          "radiusM": 4.3
+        },
+        {
+          "pressureBar": 3.4,
+          "radiusM": 4.6
+        },
+        {
+          "pressureBar": 3.8,
+          "radiusM": 4.6
+        }
+      ],
+      "radiusAdjustmentDecision": "Use the absolute floor and pressure-specific full-throw maximum. Reduced-flow law is not numerically published: keep flowPolicy unknown.",
+      "publishedArcGrid": [
+        45,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270
+      ]
+    },
+    {
+      "modelId": "R-VAN18",
+      "catalogId": "rain-bird:R-VAN18",
+      "publishedRows": 54,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "sector",
+      "currentArcBounds": [
+        45,
+        270
+      ],
+      "manufacturerPattern": "45–270 degrees adjustable",
+      "publishedNumericArc": [
+        45,
+        270
+      ],
+      "catalogColor": {
+        "name": "tan",
+        "hex": "#c89f73",
+        "verification": "Official catalog range color and current technical-specification illustration agree; exact hex is an application approximation."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "minimumReducedRadiusM": 4.0,
+      "fullThrowByPressure": [
+        {
+          "pressureBar": 2.1,
+          "radiusM": 4.9
+        },
+        {
+          "pressureBar": 2.4,
+          "radiusM": 4.9
+        },
+        {
+          "pressureBar": 2.8,
+          "radiusM": 5.2
+        },
+        {
+          "pressureBar": 3.1,
+          "radiusM": 5.2
+        },
+        {
+          "pressureBar": 3.4,
+          "radiusM": 5.5
+        },
+        {
+          "pressureBar": 3.8,
+          "radiusM": 5.5
+        }
+      ],
+      "radiusAdjustmentDecision": "Use the absolute floor and pressure-specific full-throw maximum. Reduced-flow law is not numerically published: keep flowPolicy unknown.",
+      "publishedArcGrid": [
+        45,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270
+      ]
+    },
+    {
+      "modelId": "R-VAN24",
+      "catalogId": "rain-bird:R-VAN24",
+      "publishedRows": 54,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "sector",
+      "currentArcBounds": [
+        45,
+        270
+      ],
+      "manufacturerPattern": "45–270 degrees adjustable",
+      "publishedNumericArc": [
+        45,
+        270
+      ],
+      "catalogColor": {
+        "name": "magenta",
+        "hex": "#8e355f",
+        "verification": "Official catalog range color and current technical-specification illustration agree; exact hex is an application approximation."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "minimumReducedRadiusM": 5.2,
+      "fullThrowByPressure": [
+        {
+          "pressureBar": 2.1,
+          "radiusM": 5.8
+        },
+        {
+          "pressureBar": 2.4,
+          "radiusM": 6.1
+        },
+        {
+          "pressureBar": 2.8,
+          "radiusM": 6.7
+        },
+        {
+          "pressureBar": 3.1,
+          "radiusM": 7
+        },
+        {
+          "pressureBar": 3.4,
+          "radiusM": 7.3
+        },
+        {
+          "pressureBar": 3.8,
+          "radiusM": 7.3
+        }
+      ],
+      "radiusAdjustmentDecision": "Use the absolute floor and pressure-specific full-throw maximum. Reduced-flow law is not numerically published: keep flowPolicy unknown.",
+      "publishedArcGrid": [
+        45,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270
+      ]
+    },
+    {
+      "modelId": "R-VAN18-360",
+      "catalogId": "rain-bird:R-VAN18-360",
+      "publishedRows": 6,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "sector",
+      "currentArcBounds": [
+        360,
+        360
+      ],
+      "manufacturerPattern": "360 degrees fixed",
+      "publishedNumericArc": [
+        360,
+        360
+      ],
+      "catalogColor": {
+        "name": "tan",
+        "hex": "#c89f73",
+        "verification": "Official catalog range color and current technical-specification illustration agree; exact hex is an application approximation."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "minimumReducedRadiusM": 4.0,
+      "fullThrowByPressure": [
+        {
+          "pressureBar": 2.1,
+          "radiusM": 4.9
+        },
+        {
+          "pressureBar": 2.4,
+          "radiusM": 4.9
+        },
+        {
+          "pressureBar": 2.8,
+          "radiusM": 5.2
+        },
+        {
+          "pressureBar": 3.1,
+          "radiusM": 5.2
+        },
+        {
+          "pressureBar": 3.4,
+          "radiusM": 5.5
+        },
+        {
+          "pressureBar": 3.8,
+          "radiusM": 5.5
+        }
+      ],
+      "radiusAdjustmentDecision": "Use the absolute floor and pressure-specific full-throw maximum. Reduced-flow law is not numerically published: keep flowPolicy unknown.",
+      "publishedArcGrid": [
+        360
+      ]
+    },
+    {
+      "modelId": "R-VAN14-360",
+      "catalogId": "rain-bird:R-VAN14-360",
+      "publishedRows": 6,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "sector",
+      "currentArcBounds": [
+        360,
+        360
+      ],
+      "manufacturerPattern": "360 degrees fixed",
+      "publishedNumericArc": [
+        360,
+        360
+      ],
+      "catalogColor": {
+        "name": "blue",
+        "hex": "#2b69b5",
+        "verification": "Official catalog range color and current technical-specification illustration agree; exact hex is an application approximation."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "minimumReducedRadiusM": 2.4,
+      "fullThrowByPressure": [
+        {
+          "pressureBar": 2.1,
+          "radiusM": 4
+        },
+        {
+          "pressureBar": 2.4,
+          "radiusM": 4
+        },
+        {
+          "pressureBar": 2.8,
+          "radiusM": 4.3
+        },
+        {
+          "pressureBar": 3.1,
+          "radiusM": 4.3
+        },
+        {
+          "pressureBar": 3.4,
+          "radiusM": 4.6
+        },
+        {
+          "pressureBar": 3.8,
+          "radiusM": 4.6
+        }
+      ],
+      "radiusAdjustmentDecision": "Use the absolute floor and pressure-specific full-throw maximum. Reduced-flow law is not numerically published: keep flowPolicy unknown.",
+      "publishedArcGrid": [
+        360
+      ]
+    },
+    {
+      "modelId": "R-VAN24-360",
+      "catalogId": "rain-bird:R-VAN24-360",
+      "publishedRows": 6,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "sector",
+      "currentArcBounds": [
+        360,
+        360
+      ],
+      "manufacturerPattern": "360 degrees fixed",
+      "publishedNumericArc": [
+        360,
+        360
+      ],
+      "catalogColor": {
+        "name": "magenta",
+        "hex": "#8e355f",
+        "verification": "Official catalog range color and current technical-specification illustration agree; exact hex is an application approximation."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "minimumReducedRadiusM": 5.2,
+      "fullThrowByPressure": [
+        {
+          "pressureBar": 2.1,
+          "radiusM": 5.8
+        },
+        {
+          "pressureBar": 2.4,
+          "radiusM": 6.1
+        },
+        {
+          "pressureBar": 2.8,
+          "radiusM": 6.7
+        },
+        {
+          "pressureBar": 3.1,
+          "radiusM": 7
+        },
+        {
+          "pressureBar": 3.4,
+          "radiusM": 7.3
+        },
+        {
+          "pressureBar": 3.8,
+          "radiusM": 7.3
+        }
+      ],
+      "radiusAdjustmentDecision": "Use the absolute floor and pressure-specific full-throw maximum. Reduced-flow law is not numerically published: keep flowPolicy unknown.",
+      "publishedArcGrid": [
+        360
+      ]
+    },
+    {
+      "modelId": "R-VAN-SST",
+      "catalogId": "rain-bird:R-VAN-SST",
+      "publishedRows": 6,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "strip",
+      "currentArcBounds": [
+        180,
+        180
+      ],
+      "manufacturerPattern": "Side Strip",
+      "publishedNumericArc": null,
+      "catalogColor": {
+        "name": "black",
+        "hex": "#1f2937",
+        "verification": "Official current illustrations support gray/black strip family; individual light/dark gray and black model assignments were not independently pixel-verified."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "currentStrip": {
+        "w": 1.5,
+        "l": 9.1,
+        "ox": -4.55,
+        "oy": 0
+      },
+      "recommendedStripLengthM": 9.1,
+      "radiusAdjustmentDecision": "Size adjustment exists, but no quantitative per-axis lower bound or flow law was located. Do not assume isotropic sector-radius reduction.",
+      "stripRowsMatch": 6
+    },
+    {
+      "modelId": "R-VAN-LCS",
+      "catalogId": "rain-bird:R-VAN-LCS",
+      "publishedRows": 6,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "strip",
+      "currentArcBounds": [
+        180,
+        180
+      ],
+      "manufacturerPattern": "Left Corner Strip",
+      "publishedNumericArc": null,
+      "catalogColor": {
+        "name": "light gray",
+        "hex": "#b6b8b7",
+        "verification": "Official current illustrations support gray/black strip family; individual light/dark gray and black model assignments were not independently pixel-verified."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "currentStrip": {
+        "w": 1.5,
+        "l": 4.6,
+        "ox": 0,
+        "oy": -1.5
+      },
+      "recommendedStripLengthM": 4.6,
+      "radiusAdjustmentDecision": "Size adjustment exists, but no quantitative per-axis lower bound or flow law was located. Do not assume isotropic sector-radius reduction.",
+      "stripRowsMatch": 6
+    },
+    {
+      "modelId": "R-VAN-RCS",
+      "catalogId": "rain-bird:R-VAN-RCS",
+      "publishedRows": 6,
+      "allHydraulicCellsMatch": true,
+      "pressureBar": {
+        "min": 2.1,
+        "recommended": 3.1,
+        "max": 3.8,
+        "grid": [
+          2.1,
+          2.4,
+          2.8,
+          3.1,
+          3.4,
+          3.8
+        ]
+      },
+      "coverageKind": "strip",
+      "currentArcBounds": [
+        180,
+        180
+      ],
+      "manufacturerPattern": "Right Corner Strip",
+      "publishedNumericArc": null,
+      "catalogColor": {
+        "name": "dark gray",
+        "hex": "#737b80",
+        "verification": "Official current illustrations support gray/black strip family; individual light/dark gray and black model assignments were not independently pixel-verified."
+      },
+      "trajectoryDeg": {
+        "catalog": null,
+        "manufacturerRange": [
+          4,
+          34
+        ],
+        "decision": "Keep null; a multiple-trajectory product must not be reduced to one nominal launch angle."
+      },
+      "tableSource": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "metadataSource": "https://www.rainbird.com/media/5918",
+      "currentStrip": {
+        "w": 1.5,
+        "l": 4.6,
+        "ox": 0,
+        "oy": 0
+      },
+      "recommendedStripLengthM": 4.6,
+      "radiusAdjustmentDecision": "Size adjustment exists, but no quantitative per-axis lower bound or flow law was located. Do not assume isotropic sector-radius reduction.",
+      "stripRowsMatch": 6
+    }
+  ]
+}

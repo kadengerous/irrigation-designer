@@ -1,0 +1,243 @@
+ (https://www.rainbird.com/media/4634)
+citeturn389view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 3; Source: open({"ref_id":"https://www.rainbird.com/media/4634","lineno":0}); Total lines: 240
+L0@P0: © 2023 Rain Bird Corporation D42378 Rainbird.com
+L1@P0: OPERATING RANGE:
+L2@P0: Precipitation Rate
+L3@P0: 0.37 to 0.83 in/hr (9 to 21 mm/h)
+L4@P0: Flow Rate
+L5@P0: 0.54 to 4.6 gpm (2.0 to 17.4 l/m)
+L6@P0: Radius
+L7@P0: 15 to 35 ft (4.6 to 10.7 m)
+L8@P0: Radius may be reduced up to 35% with
+L9@P0: Nozzle Retention Screw
+L10@P0: Pressure
+L11@P0: 25 to 55 psi (1.7 to 3.8 bar)
+L12@P0: SPECIFICATIONS:
+L13@P0: y 1⁄2” NPT female bottom threaded inlet
+L14@P0: y Full- and part-circle adjustment
+L15@P0: 40°–360°
+L16@P0: 3500 Series Rotors
+L17@P0: Technical Specifications
+L18@P0: 3504 - PC - SAM
+L19@P0: Rotation
+L20@P0: PC: Part-Circle
+L21@P0: Optional Feature
+L22@P0: SAM: Seal-A-Matic™
+L23@P0: Model
+L24@P0: 3504: 3500 Series Rotor with 4” pop-up
+L25@P0: y Arc adjustment requires only a flat
+L26@P0: bladed screwdriver
+L27@P0: y Water-lubricated gear-drive design for
+L28@P0: durable, reliable operation
+L29@P0: y 40°–360° part-circle arc rotation and
+L30@P0: reversing full-circle rotation in one
+L31@P0: y An attachable nozzle tree of six
+L32@P0: Rain Curtain nozzles
+L33@P0: y Optimized for short to mid-range
+L34@P0: distances
+L35@P0: y True 4” (10.2 cm) pop-up (measured
+L36@P0: from center of nozzle)
+L37@P0: y Quick Check Arc/Fast Forward
+L38@P0: y Dual action, positive stop wiper seal
+L39@P0: protects internals from debris and
+L40@P0: assures positive pop-up and retraction
+L41@P0: y Easily removable filter screen for
+L42@P0: maintenance purposes
+L43@P0: y Arc setting factory preset at 180° for
+L44@P0: installation convenience
+L45@P0: y Seal-A-Matic™ (SAM) check valve
+L46@P0: models hold back up to 7 ft (2.1 m) of
+L47@P0: elevation change, to prevent
+L48@P0: puddling and erosion caused by
+L49@P0: low head drainage
+L50@P0: y Standard rubber cover
+L51@P0: y Self-cleaning arc-adjustment screw
+L52@P0: y Three-year trade warranty
+L53@P0: The 3500 Series Rotor is an easy to use short to mid-range 1⁄2” gear-drive rotor, offering
+L54@P0: value and convenience for smaller turf areas and densely planted landscapes. Utilizing a
+L55@P0: simple flat-bladed screwdriver, the 3500’s arc adjustment is quick and easy.
+L56@P0: This versatile rotor offers an attachable nozzle tree with six superior performing Rain
+L57@P0: Curtain™ nozzles and the convenience of reversing full- and part-circle operation (up to
+L58@P0: 360˚) in one unit. Plus, a nozzle removal feature and easily removable filter screen makes
+L59@P0: maintenance a breeze.
+L60@P0: All of this makes the 3500 Series one rotor that is easy to use, easy to buy and tough
+L61@P0: to beat!
+L62@P0: FEATURES:
+L63@P0: DIMENSIONS:
+L64@P0: Pop-up Height
+L65@P0: 4” (10.2 cm)
+L66@P0: Overall Body Height
+L67@P0: 4”: 6.6” (16.8 cm)
+L68@P0: Exposed Surface Diameter:
+L69@P0: 1.16” (2.9 cm)
+L70@P0: Note: Pop-up height measured from cover
+L71@P0: to center of nozzle. Overall body height is
+L72@P0: measured popped down.
+L73@P0: MODELS:
+L74@P0: Part-circle units (PC) are adjustable from
+L75@P0: 40°–360°
+L76@P0: y 3504-PC
+L77@P0: y 3504-PC-SAM
+L78@P0-1: y 3500-S-PC-SAM3500 Series Rotors
+L79@P1: © 2023 Rain Bird Corporation D42378 Rainbird.com
+L80@P1: Technical Specifications
+L81@P1: 3500 SERIES NOZZLE PERFORMANCE
+L82@P1: ■ ▲ PRESSURE
+L83@P1: (PSI)
+L84@P1: NOZZLE RADIUS
+L85@P1: (FT)
+L86@P1: FLOW
+L87@P1: (GPM)
+L88@P1: PRECIP
+L89@P1: (IN/H)
+L90@P1: PRECIP
+L91@P1: (IN/H)
+L92@P1: 25 0.75 15 0.54 0.46 0.53
+L93@P1: 1.0 20 0.77 0.37 0.43
+L94@P1: 1.5 23 1.06 0.39 0.45
+L95@P1: 2.0 27 1.40 0.37 0.43
+L96@P1: 3.0 29 2.17 0.50 0.57
+L97@P1: 4.0 31 2.97 0.59 0.69
+L98@P1: 35 0.75 17 0.67 0.45 0.52
+L99@P1: 1.0 21 0.92 0.40 0.46
+L100@P1: 1.5 23 1.28 0.47 0.54
+L101@P1: 2.0 27 1.69 0.45 0.52
+L102@P1: 3.0 31 2.60 0.52 0.60
+L103@P1: 4.0 33 3.58 0.63 0.73
+L104@P1: 45 0.75 17 0.77 0.51 0.59
+L105@P1: 1.0 21 1.06 0.46 0.53
+L106@P1: 1.5 24 1.48 0.49 0.57
+L107@P1: 2.0 27 1.93 0.51 0.59
+L108@P1: 3.0 31 3.00 0.60 0.69
+L109@P1: 4.0 35 4.13 0.65 0.75
+L110@P1: 55 0.75 18 0.85 0.51 0.58
+L111@P1: 1.0 22 1.18 0.47 0.54
+L112@P1: 1.5 24 1.65 0.55 0.64
+L113@P1: 2.0 28 2.15 0.53 0.61
+L114@P1: 3.0 32 3.25 0.61 0.71
+L115@P1: 4.0 35 4.60 0.72 0.83
+L116@P1: Precipitation rates based on half-circle operation
+L117@P1: ■ Square spacing based on 50% diameter of throw
+L118@P1: ▲Triangular spacing based on 50% diameter of throw
+L119@P1: Performance data collected in zero wind conditions
+L120@P1: Performance data derived from tests that conform with ASAE
+L121@P1: Standards; ASAE S398.1.
+L122@P1: 3500 SERIES NOZZLE PERFORMANCE METRIC
+L123@P1: ■ ▲ PRESSURE
+L124@P1: (BAR)
+L125@P1: NOZZLE RADIUS
+L126@P1: (M)
+L127@P1: FLOW
+L128@P1: (M3/H)
+L129@P1: FLOW
+L130@P1: (L/M)
+L131@P1: PRECIP
+L132@P1: (MM/H)
+L133@P1: PRECIP
+L134@P1: (MM/H)
+L135@P1: 1.7 0.75 4.6 0.12 2.04 12 14
+L136@P1: 1.0 6.1 0.17 2.91 9 11
+L137@P1: 1.5 7.0 0.24 4.01 10 11
+L138@P1: 2.0 8.2 0.32 5.30 9 11
+L139@P1: 3.0 8.8 0.49 8.21 13 15
+L140@P1: 4.0 9.4 0.67 11.24 15 17
+L141@P1: 2.0 0.75 4.8 0.13 2.24 12 13
+L142@P1: 1.0 6.2 0.19 3.14 10 11
+L143@P1: 1.5 7.0 0.26 4.35 11 12
+L144@P1: 2.0 8.2 0.34 5.74 10 12
+L145@P1: 3.0 9.1 0.53 8.87 13 15
+L146@P1: 4.0 9.7 0.73 12.17 16 18
+L147@P1: 2.5 0.75 5.2 0.16 2.58 12 13
+L148@P1: 1.0 6.4 0.21 3.55 10 12
+L149@P1: 1.5 7.0 0.30 4.94 12 14
+L150@P1: 2.0 8.2 0.39 6.51 12 13
+L151@P1: 3.0 9.4 0.60 10.03 13 16
+L152@P1: 4.0 10.1 0.83 13.82 16 19
+L153@P1: 3.0 0.75 5.2 0.17 2.86 13 15
+L154@P1: 1.0 6.4 0.24 3.93 12 13
+L155@P1: 1.5 7.3 0.33 5.49 12 14
+L156@P1: 2.0 8.2 0.43 7.17 13 15
+L157@P1: 3.0 9.4 0.67 11.13 15 17
+L158@P1: 4.0 10.6 0.92 15.32 16 19
+L159@P1: 3.5 0.75 5.4 0.19 3.09 13 15
+L160@P1: 1.0 6.6 0.26 4.27 12 14
+L161@P1: 1.5 7.3 0.36 5.97 13 15
+L162@P1: 2.0 8.4 0.47 7.79 13 15
+L163@P1: 3.0 9.6 0.71 11.90 15 18
+L164@P1: 4.0 10.7 1.00 16.66 18 20
+L165@P1: 3.8 0.75 5.5 0.19 3.22 13 15
+L166@P1: 1.0 6.7 0.27 4.47 12 14
+L167@P1: 1.5 7.3 0.37 6.25 14 16
+L168@P1: 2.0 8.5 0.49 8.14 13 15
+L169@P1: 3.0 9.8 0.74 12.30 16 18
+L170@P1-2: 4.0 10.7 1.04 17.41 18 213500 Series Rotors
+L171@P2: © 2023 Rain Bird Corporation D42378 Rainbird.com
+L172@P2: Technical Specifications
+L173@P2: SPECIFICATIONS:
+L174@P2: Rain Bird Corporation
+L175@P2: 6991 E. Southpoint Road
+L176@P2: Tucson, AZ 85756
+L177@P2: Phone: (520) 741-6100
+L178@P2: Fax: (520) 741-6522
+L179@P2: Rain Bird Corporation
+L180@P2: 970 West Sierra Madre Avenue
+L181@P2: Azusa, CA 91702
+L182@P2: Phone: (626) 812-3400
+L183@P2: Fax: (626) 812-3411
+L184@P2: Model: 3504-PC, Partand Reversing Full-Circle
+L185@P2: Sprinkler
+L186@P2: The part- and reversing full-circle sprinkler
+L187@P2: shall be a single stream, water-lubricated,
+L188@P2: gear-drive type capable of covering a
+L189@P2:  radius at pounds per square
+L190@P2: inch with a discharge rate of
+L191@P2: gallons per minute (gpm). The sprinkler
+L192@P2: shall have an adjustable arc coverage
+L193@P2: of 40° to 360°. Arc adjustment shall be
+L194@P2: performed with or without the sprinkler
+L195@P2: in operation and shall require only a flatblade screwdriver.
+L196@P2: The sprinkler shall have a pressure
+L197@P2: activated, multi-function wiper seal that
+L198@P2: positively seals against the pop-up stem
+L199@P2: to keep debris out of the rotor and to
+L200@P2: clean debris from the pop-up stem as
+L201@P2: it retracts.
+L202@P2: The wiper seal shall prevent the sprinkler
+L203@P2: from sticking up, and be capable of
+L204@P2: sealing the sprinkler cap to sprinkler body
+L205@P2: under normal operating pressures.
+L206@P2: The sprinkler shall have a screen installed
+L207@P2: in the pop-up stem to filter inlet water,
+L208@P2: protect the drive from clogging, and to
+L209@P2: simplify removal for cleaning and flushing
+L210@P2: of the system. The sprinkler shall have a
+L211@P2: 1⁄2” (FNPT) bottom inlet.
+L212@P2: The sprinkler shall have a strong stainless
+L213@P2: steel retract spring for positive pop-down.
+L214@P2: Pop-up height as measured from the top
+L215@P2: of the cap, at normal installation, to the
+L216@P2: middle of the nozzle shall be 4 in
+L217@P2: (10.2 cm). The rotor’s overall height shall
+L218@P2: be 6.6 in (16.8 cm).
+L219@P2: The sprinkler shall have six
+L220@P2: interchangeable Rain Curtain nozzles for
+L221@P2: superior close in watering. The angle of
+L222@P2: trajectory of the nozzle bore shall be no
+L223@P2: more than 25° and no less than 10°. The
+L224@P2: stainless steel adjusting screw is capable
+L225@P2: of reducing the radius up to 25%.
+L226@P2: The sprinkler shall have a rubber cover
+L227@P2: and a self-cleaning arc-adjustment screw.
+L228@P2: The sprinkler shall be as manufactured by
+L229@P2: Rain Bird Corporation.
+L230@P2: 3500 Series Part- and
+L231@P2: Reversing Full-Circle
+L232@P2: Sprinkler (SAM)
+L233@P2: When the Seal-A-Matic (SAM) model is
+L234@P2: indicated on the design, the device shall
+L235@P2: hold back at least 7 ft (2.1 m) of elevation
+L236@P2: change to prevent puddling, run-off, and
+L237@P2: erosion caused by low head drainage.
+L238@P2: As well, the SAM unit shall experience no
+L239@P2: pressure loss during normal operation.
+

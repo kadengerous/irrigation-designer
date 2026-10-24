@@ -1,0 +1,374 @@
+{
+  "patches": [
+    {
+      "id": "I-25",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/support/commercial-rotors-i-25-adjust",
+      "reason": "Remove unsupported generic 25% allowance. Model instructions allow screw reduction but do not establish a numerical reduction limit.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-40",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust",
+      "reason": "Remove unsupported generic 25% allowance. Model instructions allow screw reduction but do not establish a numerical reduction limit.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-40-ON",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust",
+      "reason": "Remove unsupported generic 25% allowance. Model instructions allow screw reduction but do not establish a numerical reduction limit.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-80",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2023-09/rc-099-ic-i-80-us-web.pdf",
+      "reason": "Current I-80 installation instructions explicitly require changing the nozzle to change radius; individual nozzles cannot be adjusted to reduce radius.",
+      "classification": "Confirmed correction",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-80-ON",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2023-09/rc-099-ic-i-80-us-web.pdf",
+      "reason": "Current I-80 installation instructions explicitly require changing the nozzle to change radius; individual nozzles cannot be adjusted to reduce radius.",
+      "classification": "Confirmed correction",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-90",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-90",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-90-36V",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-90",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-25-SS",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/support/commercial-rotors-i-25-adjust",
+      "reason": "Remove unsupported generic 25% allowance. Model instructions allow screw reduction but do not establish a numerical reduction limit.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-40-SS",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust",
+      "reason": "Remove unsupported generic 25% allowance. Model instructions allow screw reduction but do not establish a numerical reduction limit.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-80-SS",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2023-09/rc-099-ic-i-80-us-web.pdf",
+      "reason": "Current I-80 installation instructions explicitly require changing the nozzle to change radius; individual nozzles cannot be adjusted to reduce radius.",
+      "classification": "Confirmed correction",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "G-70-B",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-70-b",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "G-75-B",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-75-b",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "G-80-B",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-80-b",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "G-85-B",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-85-b",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "ST-90",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "STG-900",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "ST-1600",
+      "field": "radiusAdjustment.minimumRatio",
+      "old": 0.75,
+      "new": 1,
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-1600",
+      "reason": "Remove unsupported generic 25% allowance. Reviewed model product/support documents do not establish continuous 25% reduction for these included standard nozzles. Low-angle nozzle substitution is a separate configuration.",
+      "classification": "Conservative restriction, not a claim that physical adjustment is impossible",
+      "target": "equipment-catalog adapter"
+    },
+    {
+      "id": "I-50",
+      "field": "arcMin",
+      "old": 50,
+      "new": 60,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    },
+    {
+      "id": "I-50",
+      "field": "rMin",
+      "old": 13.7,
+      "new": 13.1,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    },
+    {
+      "id": "I-50",
+      "field": "rMax",
+      "old": 24.7,
+      "new": 21.3,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    },
+    {
+      "id": "I-50",
+      "field": "recommendedPressureMin",
+      "old": 1.7,
+      "new": 2.5,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    },
+    {
+      "id": "I-50",
+      "field": "recommendedPressureMax",
+      "old": 4.5,
+      "new": 7.0,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    },
+    {
+      "id": "I-50-ON",
+      "field": "rMin",
+      "old": 13.7,
+      "new": 15.2,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    },
+    {
+      "id": "I-50-ON",
+      "field": "rMax",
+      "old": 24.7,
+      "new": 23.2,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    },
+    {
+      "id": "I-50-ON",
+      "field": "recommendedPressureMin",
+      "old": 1.7,
+      "new": 2.5,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    },
+    {
+      "id": "I-50-ON",
+      "field": "recommendedPressureMax",
+      "old": 4.5,
+      "new": 7.0,
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/irrigation-product/rotors/i-50",
+      "reason": "Official discontinued-product page has these variant-specific metadata. Keep discontinued=true and existing empty performance arrays.",
+      "classification": "Archived metadata correction; not required to re-enable calculation",
+      "target": "hunter-catalog.json"
+    }
+  ],
+  "unresolvedFields": [
+    {
+      "id": "I-25",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/support/commercial-rotors-i-25-adjust"
+    },
+    {
+      "id": "I-40",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust"
+    },
+    {
+      "id": "I-40-ON",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust"
+    },
+    {
+      "id": "I-90",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-90"
+    },
+    {
+      "id": "I-90-36V",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/rotors/i-90"
+    },
+    {
+      "id": "I-25-SS",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/en-metric/support/commercial-rotors-i-25-adjust"
+    },
+    {
+      "id": "I-40-SS",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust"
+    },
+    {
+      "id": "G-70-B",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-70-b"
+    },
+    {
+      "id": "G-75-B",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-75-b"
+    },
+    {
+      "id": "G-80-B",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-80-b"
+    },
+    {
+      "id": "G-85-B",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-85-b"
+    },
+    {
+      "id": "ST-90",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90"
+    },
+    {
+      "id": "STG-900",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90"
+    },
+    {
+      "id": "ST-1600",
+      "field": "radiusAdjustment.minimumRatio",
+      "unknown": "Verified numeric continuous reduction limit",
+      "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-1600"
+    }
+  ],
+  "runtimeSuggestions": [
+    {
+      "file": "src/lib/flow.ts",
+      "function": "radiusRange",
+      "reason": "For documented residential 25% radius reduction, the item rMin is the lowest unreduced table radius; it must not clamp the pressure-specific reduced minimum.",
+      "example": {
+        "model": "PGJ",
+        "nozzle": "pgj-0.50",
+        "pressureBar": 2.8,
+        "tableRadiusM": 4.572,
+        "minimumRatio": 0.75,
+        "correctMinimumM": 3.429,
+        "oldItemFloorM": 4.2672
+      }
+    },
+    {
+      "file": "src/lib/project-store.ts",
+      "reason": "Selected PRS30/PRS40 body caps nozzle working pressure at nominal regulator output, including manual pressure edits. Regulator cannot boost an insufficient upstream supply. Do not confuse the 1\u20137 bar body inlet operating range with nozzle regulated outlet."
+    },
+    {
+      "file": "src/lib/flow.ts",
+      "reason": "Reduced-radius unchanged flow, if retained, must be labelled modelling assumption; published precipitation remains tied to full table throw and table layout. No universal manufacturer unchanged-flow guarantee established."
+    }
+  ]
+}

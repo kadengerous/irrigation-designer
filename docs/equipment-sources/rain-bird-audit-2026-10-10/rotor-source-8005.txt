@@ -1,0 +1,402 @@
+ (https://www.rainbird.com/media/4636)
+citeturn388view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://www.rainbird.com/media/4636","lineno":0}); Total lines: 399
+L0@P0: © 2023 Rain Bird Corporation D42406 Rainbird.com
+L1@P0: 8005 Series Rotors
+L2@P0: Technical Specifications
+L3@P0: OPERATING RANGE
+L4@P0: Flow Rate
+L5@P0: 3.8 to 36.3 gpm (0.86 to 8.24 m3/h;
+L6@P0: 14.4 to 137.4 l/m)
+L7@P0: Radius
+L8@P0: Radius: 39 to 81 ft (11.9 to 24.7 m)
+L9@P0: Pressure
+L10@P0: 50 to 100 psi (3.5 to 6.9 bar)
+L11@P0: DIMENSIONS
+L12@P0: Exposed Diameter
+L13@P0: 17⁄8” (4.8 cm)
+L14@P0: Overall Diameter
+L15@P0: 31⁄8” (7.9 cm)
+L16@P0: Overall Height
+L17@P0: 101⁄8” (25.7 cm)
+L18@P0: Pop-up Height
+L19@P0: 5” (12.7 cm)
+L20@P0: Note: Pop-up height is measured from
+L21@P0: cover to center of primary nozzle port.
+L22@P0: Overall body height is measured
+L23@P0: popped down.
+L24@P0: SPECIFICATIONS
+L25@P0: y 1” NPT or BSP female threaded inlet
+L26@P0: y SAM check device holds up to 10 ft
+L27@P0: (3.1 m) of head
+L28@P0: y Nozzle outlet trajectory is 25°
+L29@P0: MODELS*
+L30@P0: y 8005: 1” NPT female threaded inlet
+L31@P0: (plastic riser stem)
+L32@P0: y 8005-SS: 1” NPT female threaded inlet
+L33@P0: (stainless steel covered riser stem)
+L34@P0: y Optional non-potable rubber cover
+L35@P0: (purple)
+L36@P0: *All models available with BSP threads
+L37@P0: AVAILABLE NOZZLES
+L38@P0: Standard Flow Kit - B81620
+L39@P0: 10, 12, 14, 16, 18
+L40@P0: Low Flow Kit - B81610
+L41@P0: 4, 6, 8
+L42@P0: High Flow Kit - B81630
+L43@P0: 20, 22, 24, 26
+L44@P0: y Five year trade warranty
+L45@P0: y Memory Arc® returns the rotor to its
+L46@P0: original arc setting
+L47@P0: y Non-strippable drive mechanism
+L48@P0: prevents damage from vandals
+L49@P0: y Brass reinforcing shaft of the nozzle
+L50@P0: turret to riser withstands vandal kick
+L51@P0: y Optional stainless steel riser model
+L52@P0: helps deter vandalism on public
+L53@P0: turf areas
+L54@P0: y Full and part circle operation in one unit
+L55@P0: to reduce inventory requirements
+L56@P0: y Easy, wet, dry arc adjustment with
+L57@P0: slotted screwdriver through top of rotor
+L58@P0: from 50° to 330° part-circle, 360°
+L59@P0: non-reversing full-circle
+L60@P0: y Left and right side trips adjustable for
+L61@P0: ease of installation without turning the
+L62@P0: case and loosening the pipe connection
+L63@P0: y Seal-A-Matic™ (SAM) check device/riser
+L64@P0: to help prevent low head drainage
+L65@P0: y Water-lubricated gear drive
+L66@P0: y Rain Curtain™ nozzles for optimal
+L67@P0: distribution and close-in watering
+L68@P0: resulting in superior uniformity
+L69@P0: y Nozzles are interchangeable from the
+L70@P0: front with no special tools
+L71@P0: y Heavy duty retract spring ensures
+L72@P0: positive pop-down
+L73@P0: y Standard rubber cover (black)
+L74@P0: The Rain Bird® 8005 Rotor is built rugged to withstand the harsh
+L75@P0: conditions and vandalism present in commercial rotor applications. It
+L76@P0: has been designed and tested to ensure the high reliability demanded by
+L77@P0: the market today. Its extensive customer identified features and 80 foot
+L78@P0: radius make it ideal for sports fields, parks and other large
+L79@P0: turf applications.
+L80@P0: FEATURES:
+L81@P0: 8005 - SS - NP - 26
+L82@P0: Optional Feature
+L83@P0: NP: Non-Potable Cover
+L84@P0: Nozzle Size
+L85@P0: 26
+L86@P0: Optional Feature
+L87@P0: Model SS: Stainless Steel Riser
+L88@P0-1: 8005 Series8005 Series Rotors
+L89@P1: © 2023 Rain Bird Corporation D42406 Rainbird.com
+L90@P1: Technical Specifications
+L91@P1: 8005 NOZZLE PERFORMANCE
+L92@P1: ■ ▲ PRESSURE
+L93@P1: (PSI)
+L94@P1: NOZZLE RADIUS
+L95@P1: (FT)
+L96@P1: FLOW
+L97@P1: (GPM)
+L98@P1: PRECIP
+L99@P1: (IN/H)
+L100@P1: PRECIP
+L101@P1: (IN/H)
+L102@P1: 50 ● 04 39 3.8 0.48 0.56
+L103@P1: ● 06 45 5.6 0.53 0.62
+L104@P1: ● 08 49 6.6 0.53 0.61
+L105@P1: ● 10 53 9.3 0.64 0.74
+L106@P1: ● 12 57 11.1 0.66 0.76
+L107@P1: ● 14 59 12.6 0.70 0.81
+L108@P1: ● 16 61 14.3 0.74 0.85
+L109@P1: ● 18 63 16.1 0.78 0.90
+L110@P1: ● 20 65 18.6 0.85 0.98
+L111@P1: ● 22 65 20.7 0.94 1.09
+L112@P1: ● 24 63 22.3 1.08 1.25
+L113@P1: ● 26 65 24.3 1.11 1.28
+L114@P1: 60 ● 04 39 3.8 0.48 0.56
+L115@P1: ● 06 45 6.1 0.58 0.67
+L116@P1: ● 08 49 8.4 0.67 0.78
+L117@P1: ● 10 53 10.1 0.69 0.80
+L118@P1: ● 12 59 12.0 0.66 0.77
+L119@P1: ● 14 61 14.3 0.74 0.85
+L120@P1: ● 16 65 15.9 0.72 0.84
+L121@P1: ● 18 65 17.8 0.81 0.94
+L122@P1: ● 20 67 20.1 0.86 1.00
+L123@P1: ● 22 71 23.2 0.89 1.02
+L124@P1: ● 24 69 24.7 1.00 1.15
+L125@P1: ● 26 73 26.7 0.96 1.11
+L126@P1: 70 ● 04 39 4.7 0.60 0.69
+L127@P1: ● 06 45 6.7 0.64 0.74
+L128@P1: ● 08 49 9.0 0.72 0.83
+L129@P1: ● 10 55 11.1 0.71 0.82
+L130@P1: ● 12 59 13.2 0.73 0.84
+L131@P1: ● 14 63 15.3 0.74 0.86
+L132@P1: ● 16 67 17.2 0.74 0.85
+L133@P1: ● 18 67 19.3 0.83 0.96
+L134@P1: ● 20 71 22.0 0.84 0.97
+L135@P1: ● 22 73 25.2 0.91 1.05
+L136@P1: ● 24 75 27.0 0.92 1.07
+L137@P1: ● 26 75 29.4 1.01 1.16
+L138@P1: 80 ● 04 39 5.0 0.63 0.73
+L139@P1: ● 06 45 7.1 0.68 0.78
+L140@P1: ● 08 49 9.8 0.79 0.91
+L141@P1: ● 10 55 11.8 0.75 0.87
+L142@P1: ● 12 61 14.2 0.73 0.85
+L143@P1: ● 14 63 16.4 0.80 0.92
+L144@P1: ● 16 67 18.6 0.80 0.92
+L145@P1: ● 18 69 20.9 0.85 0.98
+L146@P1: ● 20 71 23.9 0.91 1.05
+L147@P1: ● 22 75 27.3 0.93 1.08
+L148@P1: ● 24 77 29.2 0.95 1.10
+L149@P1: ● 26 79 31.5 0.97 1.12
+L150@P1: 90 ● 12 61 14.7 0.76 0.88
+L151@P1: ● 14 65 17.9 0.82 0.94
+L152@P1: ● 16 69 20.0 0.81 0.93
+L153@P1: ● 18 71 22.2 0.85 0.98
+L154@P1: ● 20 73 25.3 0.91 1.06
+L155@P1: ● 22 75 29.1 1.00 1.15
+L156@P1: ● 24 79 31.0 0.96 1.10
+L157@P1: ● 26 79 33.7 1.04 1.20
+L158@P1: 100 ● 20 75 26.8 0.85 0.97
+L159@P1: ● 22 77 30.7 1.00 1.15
+L160@P1: ● 24 79 32.8 1.01 1.17
+L161@P1: ● 26 81 36.3 1.07 1.23
+L162@P1: 8005 NOZZLE PERFORMANCE METRIC
+L163@P1: ■ ▲ PRESSURE
+L164@P1: (BAR)
+L165@P1: NOZZLE RADIUS
+L166@P1: (M)
+L167@P1: FLOW
+L168@P1: (M3/H)
+L169@P1: FLOW
+L170@P1: (L/M)
+L171@P1: PRECIP
+L172@P1: (MM/H)
+L173@P1: PRECIP
+L174@P1: (MM/H)
+L175@P1: 3.5 ● 04 11.9 0.86 14.38 12 14
+L176@P1: ● 06 13.7 1.28 21.34 14 16
+L177@P1: ● 08 14.9 1.59 25.50 14 16
+L178@P1: ● 10 16.1 2.10 35.43 16 19
+L179@P1: ● 12 17.5 2.52 42.27 16 19
+L180@P1: ● 14 18.0 2.89 48.18 18 21
+L181@P1: ● 16 18.7 3.28 54.59 19 22
+L182@P1: ● 18 19.2 3.69 61.43 20 23
+L183@P1: ● 20 19.9 4.25 70.83 21 25
+L184@P1: ● 22 20.0 5.08 79.07 25 29
+L185@P1: ● 24 19.3 5.11 85.10 27 32
+L186@P1: ● 26 20.0 5.57 92.67 28 32
+L187@P1: 4.0 ● 04 11.9 0.93 14.38 13 15
+L188@P1: ● 06 13.7 1.37 22.71 15 17
+L189@P1: ● 08 14.9 1.75 30.44 16 18
+L190@P1: ● 10 16.3 2.30 37.63 17 20
+L191@P1: ● 12 17.7 2.70 44.74 17 20
+L192@P1: ● 14 18.5 3.17 52.85 19 21
+L193@P1: ● 16 19.6 3.54 58.98 18 21
+L194@P1: ● 18 19.7 3.97 66.10 20 24
+L195@P1: ● 20 20.3 4.50 74.95 22 25
+L196@P1: ● 22 21.3 5.23 85.94 23 27
+L197@P1: ● 24 20.7 5.50 91.69 26 30
+L198@P1: ● 26 21.8 6.01 99.26 25 29
+L199@P1: 4.5 ● 04 11.9 1.00 16.18 14 16
+L200@P1: ● 06 13.7 1.45 24.28 15 18
+L201@P1: ● 08 14.9 1.92 32.99 17 20
+L202@P1: ● 10 16.5 2.40 40.22 18 20
+L203@P1: ● 12 18.0 2.87 47.81 18 20
+L204@P1: ● 14 18.9 3.37 56.12 19 22
+L205@P1: ● 16 20.1 3.77 62.77 19 22
+L206@P1: ● 18 20.1 4.22 70.36 21 24
+L207@P1: ● 20 21.1 4.79 79.87 22 25
+L208@P1: ● 22 22.0 5.51 91.80 23 26
+L209@P1: ● 24 22.0 5.88 98.08 24 28
+L210@P1: ● 26 22.6 6.42 106.44 25 29
+L211@P1: 5.0 ● 04 11.9 1.06 18.08 15 17
+L212@P1: ● 06 13.7 1.54 25.74 16 19
+L213@P1: ● 08 14.9 2.09 34.83 19 22
+L214@P1: ● 10 16.7 2.50 42.68 18 21
+L215@P1: ● 12 18.3 3.05 50.92 18 21
+L216@P1: ● 14 19.2 3.54 58.96 19 22
+L217@P1: ● 16 20.4 3.99 66.44 19 22
+L218@P1: ● 18 20.6 4.47 74.58 21 24
+L219@P1: ● 20 21.6 5.11 85.08 22 25
+L220@P1: ● 22 22.4 5.84 97.39 23 27
+L221@P1: ● 24 23.0 6.26 104.29 24 27
+L222@P1: ● 26 23.2 6.80 113.28 25 29
+L223@P1: 5.5 ● 04 11.9 1.13 18.90 16 18
+L224@P1: ● 06 13.7 1.62 26.84 17 20
+L225@P1: ● 08 14.9 2.25 37.02 20 23
+L226@P1: ● 10 16.8 2.70 44.60 19 22
+L227@P1: ● 12 18.5 3.23 53.66 19 22
+L228@P1: ● 14 19.2 3.72 61.98 20 23
+L229@P1: ● 16 20.4 4.22 70.28 20 23
+L230@P1: ● 18 21.0 4.74 78.97 21 25
+L231@P1: ● 20 21.6 5.42 90.30 23 27
+L232@P1: ● 22 22.8 6.19 103.15 24 28
+L233@P1: ● 24 23.5 6.62 110.33 24 28
+L234@P1: ● 26 24.1 7.14 119.05 25 28
+L235@P1: 6.0 ● 12 18.6 3.30 55.07 19 22
+L236@P1: ● 14 19.6 3.96 66.06 21 24
+L237@P1: ● 16 20.9 4.45 74.12 20 24
+L238@P1: ● 18 21.5 4.95 82.56 21 25
+L239@P1: ● 20 22.1 5.65 94.18 23 27
+L240@P1: ● 22 22.9 6.71 108.12 26 30
+L241@P1: ● 24 23.9 6.92 115.31 24 28
+L242@P1: ● 26 24.1 7.50 125.08 26 30
+L243@P1: 6.2 ● 14 19.8 4.06 67.75 21 24
+L244@P1: ● 16 21.0 4.54 75.70 21 24
+L245@P1: ● 18 21.7 5.04 84.02 21 25
+L246@P1: 6.5 ● 20 22.5 5.89 98.19 23 27
+L247@P1: ● 22 23.4 6.84 112.73 25 29
+L248@P1: ● 24 24.1 7.22 120.25 25 29
+L249@P1: ● 26 24.3 7.91 131.76 27 31
+L250@P1: 6.9 ● 20 22.9 6.09 101.43 23 27
+L251@P1: ● 22 23.5 6.97 116.19 25 29
+L252@P1: ● 24 24.1 7.45 124.14 26 30
+L253@P1: ● 26 24.7 8.24 137.39 27 31
+L254@P1: Precipitation rates based on half-circle operation
+L255@P1: ■ Square spacing based on 50% diameter of throw
+L256@P1: ▲ Triangular spacing based on 50% diameter of throw
+L257@P1: Performance data collected in zero wind conditions
+L258@P1: Performance data derived from tests that conform with ASAE Standards; ASAE S398.1.
+L259@P1: High Flow Kit
+L260@P1: 20, 22, 24, 26
+L261@P1: Low Flow Kit
+L262@P1: 4, 6, 8
+L263@P1: Standard Flow Kit
+L264@P1: 10, 12, 14, 16, 18
+L265@P1: 8005 Rain Curtain™ Nozzles
+L266@P1: 20
+L267@P1: 22
+L268@P1: 24
+L269@P1: 4 12
+L270@P1: 6
+L271@P1: 8
+L272@P1: 10 14
+L273@P1-2: 16 18 268005 Series Rotors
+L274@P2: © 2023 Rain Bird Corporation D42406 Rainbird.com
+L275@P2: Technical Specifications
+L276@P2: Adjustable Right & Left Trips Standard Rubber Cover with
+L277@P2: 17/8” Exposed Diameter
+L278@P2: For enhanced safety on playing fields
+L279@P2: Vandal Resistant Tripping
+L280@P2: Mechanism with Memory Arc®
+L281@P2: Brass Reinforcing Shaft
+L282@P2: Brass shaft for enhanced
+L283@P2: protection against vandals
+L284@P2: Non-Strippable
+L285@P2: Drive Mechanism
+L286@P2: Seal-A-Matic™ (SAM) Check Device
+L287@P2: Prevents puddling/erosion
+L288@P2: Adjustment Mechanism
+L289@P2: For part-circle and non-reversing
+L290@P2: full-circle operation
+L291@P2: Interchangeable Color-coded
+L292@P2: Rain Curtain™ Nozzles
+L293@P2: For superior water distribution
+L294@P2: Pressure-Activated
+L295@P2: Wiper Seal
+L296@P2: Protects the internals
+L297@P2: from debris
+L298@P2: Self-Adjusting Stator
+L299@P2: Automatically adjusts when
+L300@P2: nozzle is changed
+L301@P2: Filter with Built-In
+L302@P2-3: Freeze Protection8005 Series Rotors
+L303@P3: © 2023 Rain Bird Corporation D42406 Rainbird.com
+L304@P3: Technical Specifications
+L305@P3: The full- or part-circle sprinkler shall be a
+L306@P3: single stream, water lubricated, gear drive
+L307@P3: type capable of covering a foot
+L308@P3: (meter) radius at a base pressure of
+L309@P3: pounds per square inch (bar) with a
+L310@P3: discharge rate of gallons per minute
+L311@P3: (l/h, m3/h).
+L312@P3: The sprinkler shall be capable of both
+L313@P3: full-circle and part-circle operation in
+L314@P3: the same unit. The mode of operation
+L315@P3: shall be selected by inserting a flat blade
+L316@P3: screwdriver in the top of the rubber cap
+L317@P3: and turning a selector approximately
+L318@P3: 45 degrees. The sprinkler shall not
+L319@P3: reverse direction during continuous
+L320@P3: operation in the full-circle mode. The
+L321@P3: part-circle sprinkler shall have adjustable
+L322@P3: arc coverage of 50 to 330 degrees. Arc
+L323@P3: adjustment can be performed with or
+L324@P3: without the rotor in operation and shall
+L325@P3: require only a flat blade screwdriver. The
+L326@P3: arc adjustment can be performed on
+L327@P3: both the right and left trip of the sprinkler.
+L328@P3: The sprinkler shall have a rotating nozzle
+L329@P3: turret independent of the riser stem. The
+L330@P3: portion of the riser stem that is in contact
+L331@P3: with the wiper seal shall be non-rotating.
+L332@P3: The sprinkler shall have a non-strippable
+L333@P3: drive mechanism and permit manual
+L334@P3: rotation of the pop-up stem in any
+L335@P3: direction. This shall have no effect on
+L336@P3: either the drive or the set arc. Once
+L337@P3: the manual rotation is terminated, the
+L338@P3: sprinkler shall automatically return the
+L339@P3: water stream to its preset arc.
+L340@P3: The sprinkler shall have a pressure
+L341@P3: activated, multi-function, soft elastomeric
+L342@P3: wiper seal. This wiper seal shall prevent
+L343@P3: the sprinkler from sticking in the up
+L344@P3: position, and be capable of sealing the
+L345@P3: sprinkler riser stem to the sprinkler cap
+L346@P3: under normal operating pressures.
+L347@P3: The sprinkler shall have a screen attached
+L348@P3: to the drive housing to filter inlet water,
+L349@P3: protect the drive from clogging and
+L350@P3: simplify its removal for cleaning and
+L351@P3: flushing of the system. The sprinkler
+L352@P3: body shall have a 1” female (NPT or BSP)
+L353@P3: bottom inlet. The sprinkler shall have a
+L354@P3: standard rubber cover which designates
+L355@P3: each adjustment opening from the top.
+L356@P3: The sprinkler shall have a two-piece,
+L357@P3: front-load nozzle assembly which will
+L358@P3: allow the nozzle to be installed without
+L359@P3: a stator bushing change. The primary
+L360@P3: and secondary nozzle ports shall be
+L361@P3: contained in one of the parts and shall be
+L362@P3: unique to each nozzle size. The tertiary
+L363@P3: nozzle port shall be common to all of
+L364@P3: the other primary/secondary nozzle
+L365@P3: assemblies. The sprinkler shall have a
+L366@P3: selection of eight color-coded nozzles. All
+L367@P3: nozzles shall have three ports for optimal
+L368@P3: close-in, mid-range and long-range water
+L369@P3: distribution. The sprinkler shall have a
+L370@P3: stainless steel nozzle retention screw. The
+L371@P3: angle of trajectory shall be 25 degrees
+L372@P3: from horizontal.
+L373@P3: The sprinkler shall have a strong stainless
+L374@P3: steel retract spring for positive popdown. The sprinkler shall have a standard
+L375@P3: Seal-A-Matic™ (SAM) device capable of
+L376@P3: holding up to 10 feet (3.1 m) of head. Popup height as measured from the top of
+L377@P3: the cover to the centerline of the nozzle
+L378@P3: orifice shall be at least 5 inches (12.7 cm).
+L379@P3: The sprinkler’s overall height shall be 10
+L380@P3: 1⁄8 inches (25.7 cm) and the exposed
+L381@P3: diameter shall be 1 7⁄8 inches (4.8 cm).
+L382@P3: 8005-SS
+L383@P3: When so indicated on the design, the
+L384@P3: rotor shall have a stainless steel covered
+L385@P3: nozzle turret and riser stem. The riser
+L386@P3: stem shall be tapered and conform to the
+L387@P3: standard plastic riser in all other ways.
+L388@P3: SPECIFICATIONS:
+L389@P3: Rain Bird Corporation
+L390@P3: 6991 E. Southpoint Road
+L391@P3: Tucson, AZ 85756
+L392@P3: Phone: (520) 741-6100
+L393@P3: Fax: (520) 741-6522
+L394@P3: Rain Bird Corporation
+L395@P3: 970 West Sierra Madre Avenue
+L396@P3: Azusa, CA 91702
+L397@P3: Phone: (626) 812-3400
+L398@P3: Fax: (626) 812-3411
+

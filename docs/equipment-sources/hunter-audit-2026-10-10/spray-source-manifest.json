@@ -1,0 +1,74 @@
+{
+  "verifiedOn": "2026-10-10",
+  "access": "Native web only. Text/table extraction, no claimed PDF visual inspection.",
+  "sources": [
+    {
+      "family": "spray",
+      "url": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-adjustable-nozzles",
+      "role": "Current official product table",
+      "rowCount": 70
+    },
+    {
+      "family": "he",
+      "url": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-high-efficiency-nozzles",
+      "role": "Current official product table",
+      "rowCount": 100
+    },
+    {
+      "family": "fixed",
+      "url": "https://www.hunterirrigation.com/irrigation-product/nozzles/pro-fixed-nozzles",
+      "role": "Current official product table",
+      "rowCount": 105
+    },
+    {
+      "family": "short",
+      "url": "https://www.hunterirrigation.com/irrigation-product/nozzles/short-radius-micro-spray-nozzles",
+      "role": "Current official product table",
+      "rowCount": 30
+    },
+    {
+      "family": "prostrip",
+      "url": "https://www.hunterirrigation.com/irrigation-product/nozzles/strip-pattern-nozzles",
+      "role": "Current official product table",
+      "rowCount": 30
+    },
+    {
+      "family": "bubbler",
+      "url": "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles",
+      "role": "Current official product table",
+      "rowCount": 65
+    },
+    {
+      "family": "spray",
+      "url": "https://www.hunterirrigation.com/sites/default/files/2026-05/RC-244-SS-Nozzles-ProAdj-US.pdf",
+      "role": "Current linked US PDF, same-grid corroboration and footnotes",
+      "comparedRows": 70
+    },
+    {
+      "family": "he",
+      "url": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
+      "role": "Current linked US PDF, same-grid corroboration and footnotes",
+      "comparedRows": 100
+    },
+    {
+      "family": "fixed",
+      "url": "https://www.hunterirrigation.com/sites/default/files/CA-Cutsheet-Pro-Spray-Fixed-Arc-Nozzles-US.pdf",
+      "role": "Current linked US PDF, same-grid corroboration and footnotes",
+      "comparedRows": 105
+    },
+    {
+      "family": "bubbler",
+      "url": "https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf",
+      "role": "Current linked US PDF, same-grid corroboration and footnotes",
+      "comparedRows": null
+    },
+    {
+      "url": "https://www.hunterirrigation.com/en-metric/support/spray-nozzle-radius-adjustment",
+      "role": "25% spray-radius limit, no reduced-flow guarantee"
+    },
+    {
+      "url": "https://www.hunterirrigation.com/irrigation-product/bubblers-bubbler-nozzles/pcb-20-r",
+      "role": "Explicit fresh PCB20R SKU / 2GPM / flood / half-inch / reclaimed ID / performance table"
+    }
+  ]
+}

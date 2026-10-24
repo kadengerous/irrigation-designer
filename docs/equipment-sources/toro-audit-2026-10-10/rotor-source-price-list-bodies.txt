@@ -1,0 +1,275 @@
+ (https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf)
+citeturn442view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 27; Source: open({"ref_id":"turn433view1","lineno":210}); Total lines: 1753
+L83@P2: 100-S Series Valves (Century PLUS
+L84@P2-3: Scrubber) 13102 Series Anti-Contamination Valves 13
+L85@P3: P-220 Series Valves 13
+L86@P3: P-220S Scrubber Series Valves 14
+L87@P3: 220 Series Brass Valves 14
+L88@P3: QCV SERIES QUICK COUPLER VALVES
+L89@P3: & KEYS
+L90@P3: Quick Coupler Valves 14
+L91@P3: Quick Coupler Keys 14
+L92@P3: Hose Swivels 15
+L93@P3: VALVE PARTS & ACCESSORIES 15
+L94@P3: CONTROLLERS
+L95@P3: TEMPUS™ DC Series Bluetooth® Batteryoperated Controllers 15
+L96@P3: KD2™ Series Residential Controllers 15
+L97@P3: Rain Dial®-R Series Residential Controllers 15
+L98@P3: RXC® Series Controllers 15
+L99@P3: EVOLUTION® Series modular controller 16
+L100@P3: EVOLUTION® Series Smart Connect®
+L101@P3: wireless accessories 16
+L102@P3: Controller Pedestals 16
+L103@P3: Controller Enclosures 16
+L104@P3: Electric-hydraulic Converters 16
+L105@P3: Control Tubing 16
+L106@P3: RAIN MASTER®
+L107@P3: Rain Master Eagle™ Plus Series Modular
+L108@P3: Controllers 16
+L109@P3: Rain Master Eagle™ Plus 2-Wire
+L110@P3: Controllers 16
+L111@P3: Rain Master PRO MAX™ Commercial
+L112@P3: Maintenance Remote System 17
+L113@P3: Weather Centers 17
+L114@P3: WATER MANAGEMENT SENSORS &
+L115@P3: REMOTES
+L116@P3: Rain Sensors 17
+L117@P3: Climate Logic® 17
+L118@P3: SMRT Logic™ 17
+L119@P3: Contractor Residential Remote (CRR) 17
+L120@P3: Pump Start Relay 17
+L121@P3: Flow Sensors 17
+L122@P3: Hand-held Remotes 18
+L123@P3: LANDSCAPE DRIP AND LOW-VOLUME
+L124@P3: IRRIGATION
+L125@P3: Tri-Loc™ Collared Hose Fittings 18
+L126@P3: I560 Barbed Insert Fittings 18
+L127@P3: I620 Barbed Insert Fittings 19
+L128@P3: Microline ¼” Fittings 19
+L129@P3: DL2000™ Series PC Dripline with
+L130@P3: ROOTGUARD® 19
+L131@P3: DL2000™ Series Effluent PC Dripline with
+L132@P3: ROOTGUARD® 19
+L133@P3: Drip In® PC Brown Dripline, 17mm 19
+L134@P3: Blue Stripe® ¼” Micro-distribution Hose 19
+L135@P3: Blue Stripe® Round Hose 19
+L136@P3: N.G.E.® New Generation Emitters 20
+L137@P3: Turbo SC™ Plus Emitters 20
+L138@P3: E-2™ Emitters 20
+L139@P3: Drip Bubblers 20
+L140@P3: Drip Zone Valve Kits 20
+L141@P3: Multi-Outlet Manifold 20
+L142@P3: Varis™ and Varistake™ Adjustable Emitters 20
+L143@P3: Plastic Y-Screen Filters 21
+L144@P3: Plastic Disc Filters 21
+L145@P3: Replacement Filter Screens and Disc
+L146@P3: Filters 21
+L147@P3: Pressure Regulating Filters 21
+L148@P3: DRIP ACCESSORIES 21
+L149@P3: Toro Limited Warranty for Irrigation
+L150@P3-4: Division Products 22Model Number Description 2026
+L151@P4: List Price
+L152@P4: Discount
+L153@P4: Code
+L154@P4: Bag /
+L155@P4: Case
+L156@P4: Qty.
+L157@P4: Pallet
+L158@P4: Qty.
+L159@P4: TORO® & IRRITROL® SPRAY BODIES
+L160@P4: TORO® LPS SERIES COMPACT SPRAY BODIES
+L161@P4: LPS200 LPS 2" Compact Spray Body $3.80 A 100 25,000
+L162@P4: LPS208 LPS 2" Compact Spray Body with TVAN8 nozzle installed $6.87 A 100 25,000
+L163@P4: LPS210 LPS 2" Compact Spray Body with TVAN10 nozzle installed $6.87 A 100 25,000
+L164@P4: LPS212 LPS 2" Compact Spray Body with TVAN12 nozzle installed $6.87 A 100 25,000
+L165@P4: LPS215 LPS 2" Compact Spray Body with TVAN15 nozzle installed $6.87 A 100 25,000
+L166@P4: LPS217 LPS 2" Compact Spray Body with TVAN17 nozzle installed $6.87 A 100 25,000
+L167@P4: LPS400 LPS 4" Compact Spray Body $4.58 A 50 25,000
+L168@P4: LPS408 LPS 4" Compact Spray Body with TVAN8 nozzle installed $7.54 A 50 25,000
+L169@P4: LPS410 LPS 4" Compact Spray Body with TVAN10 nozzle installed $7.54 A 50 25,000
+L170@P4: LPS412 LPS 4" Compact Spray Body with TVAN12 nozzle installed $7.54 A 50 25,000
+L171@P4: LPS415 LPS 4" Compact Spray Body with TVAN15 nozzle installed $7.54 A 50 25,000
+L172@P4: LPS417 LPS 4" Compact Spray Body with TVAN17 nozzle installed $7.54 A 50 25,000
+L173@P4: TORO® 570Z SERIES ZERO-FLUSH, LOW PRESSURE SPRAY BODIES
+L174@P4: 570Z-2LP 570Z 2" Spray Body for Low Pressure Sealing $5.15 A 50 3,200
+L175@P4: 570Z-3LP 570Z 3" Spray Body for Low Pressure Sealing $5.30 A 50 3,200
+L176@P4: 570Z-4LP 570Z 4" Spray Body for Low Pressure Sealing $3.45 A 50 2,400
+L177@P4: 570Z-6LP 570Z 6" Spray Body for Low Pressure Sealing $10.92 A 50 1,600
+L178@P4: 570Z-6LPSI 570Z 6" Spray Body for Low Pressure Sealing with Side Inlet $13.75 A 50 1,600
+L179@P4: 570Z-12LP 570Z 12" Spray Body for Low Pressure Sealing $20.75 A 25 800
+L180@P4: 570Z-12LPSI 570Z 12" Spray Body for Low Pressure Sealing with Side Inlet $25.24 A 25 800
+L181@P4: TORO® 570Z SERIES ZERO-FLUSH SPRAY BODIES
+L182@P4: 570S 570S Shrub Adapter $1.03 A 100 30,000
+L183@P4: 570S-E 570S Shrub Adapter, Effluent $1.96 A 100 30,000
+L184@P4: 570Z-2P 570Z 2" Spray Body $5.15 A 50 3,200
+L185@P4: 570Z-2P-E 570Z 2" Spray Body, Effluent $7.11 A 50 3,200
+L186@P4: 570Z-2P-COME 570Z 2" Spray Body with Check Valve, Effluent $11.12 A 50 3,200
+L187@P4: 570Z-3P 570Z 3" Spray Body $5.30 A 50 3,200
+L188@P4: 570Z-3P-E 570Z 3" Spray Body, Effluent $7.31 A 50 3,200
+L189@P4: 570Z-3P-COME 570Z 3" Spray Body with Check Valve, Effluent $11.38 A 50 3,200
+L190@P4: 570Z-4P 570Z 4" Spray Body $3.45 A 50 2,400
+L191@P4: 570Z-4P-E 570Z 4" Spray Body, Effluent $5.46 A 50 2,400
+L192@P4: 570Z-4P-COM 570Z 4" Spray Body with Check Valve $7.73 A 50 2,400
+L193@P4: 570Z-4P-COME 570Z 4" Spray Body with Check Valve, Effluent $9.58 A 50 2,400
+L194@P4: 570Z-6P 570Z 6" Spray Body $10.92 A 50 1,600
+L195@P4: 570Z-6P-E 570Z 6" Spray Body, Effluent $12.82 A 50 1,600
+L196@P4: 570Z-6P-COM 570Z 6" Spray Body with Check Valve $19.78 A 50 1,600
+L197@P4: 570Z-6P-COME 570Z 6" Spray Body with Check Valve, Effluent $21.63 A 50 1,600
+L198@P4: 570Z-6SI 570Z 6" Spray Body with Side Inlet $13.75 A 50 1,600
+L199@P4: 570Z-6SI-E 570Z 6" Spray Body with Side Inlet, Effluent $15.55 A 50 1,600
+L200@P4: 570Z-12P 570Z 12" Spray Body $20.75 A 25 800
+L201@P4: 570Z-12P-E 570Z 12" Spray Body, Effluent $22.56 A 25 800
+L202@P4: 570Z-12P-COM 570Z 12" Spray Body with Check Valve $24.87 A 25 800
+L203@P4: 570Z-12P-COME 570Z 12" Spray Body with Check Valve, Effluent $26.83 A 25 800
+L204@P4: 570Z-12SI 570Z 12" Spray Body with Side Inlet $25.24 A 25 800
+L205@P4: 570Z-12SI-E 570Z 12" Spray Body with Side Inlet, Effluent $33.99 A 25 800
+L206@P4: IRRITROL® I-PRO™ SERIES SPRAY BODIES
+L207@P4: HS100 I-PRO Shrub Adapter $1.80 A 25 N/A
+L208@P4: I-PRO300 3" I-PRO Spray Body $3.76 A 50 2,400
+L209@P4: I-PRO400 4" I-PRO Spray Body $3.40 A 50 2,400
+L210@P4: I-PRO400-CV 4" I-PRO Spray Body with Check Valve $7.67 A 50 2,400
+L211@P4: I-PRO400-NP 4" I-PRO Spray Body with Lavender Cap (non-potable) $3.81 A 50 2,400
+L212@P4: I-PRO600 6" I-PRO Spray Body $7.98 A 50 2,400
+L213@P4: I-PRO600-CV 6" I-PRO Spray Body with Check Valve $16.17 A 50 2,400
+L214@P4: I-PRO600-NP 6" I-PRO Spray Body with Lavender Cap (non-potable) $8.19 A 50 2,400
+L215@P4: I-PRO600-SI 6" I-PRO Spray Body with Side Inlet $15.50 A 50 2,400
+L216@P4: I-PRO1200-SI 12" I-PRO Spray Body with Side Inlet $23.43 A 25 800
+L217@P4: I-PRO1200-SI-CV 12" I-PRO Spray Body with Side Inlet & Check Valve $27.81 A 25 800
+L218@P4: I-PRO1200-SI-NP 12" I-PRO Spray Body with Lavender Cap (non-potable) $23.64 A 25 800
+L219@P4: TORO® 570Z-XF SERIES SPRAY BODIES with X-FLOW® TECHNOLOGY
+L220@P4: 570S-XF 570S Shrub, X-Flow $3.81 A 50 800
+L221@P4: 570S-XFE 570S Shrub, Effluent, X-Flow $5.87 A 50 800
+L222@P4: 570Z-4P-XF 570Z 4" X-Flow Spray Body $7.52 A 50 2,400
+L223@P4: 570Z-4P-XFE 570Z 4" X-Flow Spray Body, Effluent $9.32 A 50 2,400
+L224@P4: 570Z-4P-XFCOM 570Z 4" X-Flow Spray Body with Check Valve $11.69 A 50 2,400
+L225@P4: 570Z-4P-XFCOME 570Z 4" X-Flow Spray Body with Check Valve, Effluent $13.65 A 50 2,400
+L226@P4-5: 1Model Number Description 2026
+L227@P5: List Price
+L228@P5: Discount
+L229@P5: Code
+L230@P5: Bag /
+L231@P5: Case
+L232@P5: Qty.
+L233@P5: Pallet
+L234@P5: Qty.
+L235@P5: 570Z-6P-XF 570Z 6" X-Flow Spray Body $17.36 A 50 1,600
+L236@P5: 570Z-6P-XFE 570Z 6" X-Flow Spray Body, Effluent $19.21 A 50 1,600
+L237@P5: 570Z-6P-XFCOM 570Z 6" X-Flow Spray Body with Check Valve $21.42 A 50 1,600
+L238@P5: 570Z-6P-XFCOME 570Z 6" X-Flow Spray Body with Check Valve, Effluent $23.33 A 50 1,600
+L239@P5: 570Z-6SI-XF 570Z 6" X-Flow Spray Body with Side Inlet $22.56 A 50 1,600
+L240@P5: 570Z-6SI-XFE 570Z 6" X-Flow Spray Body with Side Inlet, Effluent $24.41 A 50 1,600
+L241@P5: 570Z-12P-XF 570Z 12" X-Flow Spray Body $25.24 A 25 800
+L242@P5: 570Z-12P-XFE 570Z 12" X-Flow Spray Body, Effluent $27.14 A 25 800
+L243@P5: 570Z-12P-XFCOM 570Z 12" X-Flow Spray Body with Check Valve $29.46 A 25 800
+L244@P5: 570Z-12P-XFCOME 570Z 12" X-Flow Spray Body with Check Valve, Effluent $31.36 A 25 800
+L245@P5: 570Z-12SI-XF 570Z 12" X-Flow Spray Body with Side Inlet $28.07 A 25 800
+L246@P5: 570Z-12SI-XFE 570Z 12" X-Flow Spray Body with Side Inlet, Effluent $30.02 A 25 800
+L247@P5: TORO® 570Z-PR SERIES SPRAY BODIES with INTEGRATED 30 PSI PRESSURE REGULATOR
+L248@P5: 570S-PR 570S Shrub with 30 psi Pressure Reg. $7.65 A 50 30,000
+L249@P5: 570S-PRE 570S Shrub with 30 psi Pressure Reg., Effluent $9.50 A 50 30,000
+L250@P5: 570Z-3P-PR 570Z 3" Spray Body with 30 psi Pressure Reg. $13.04 A 50 2,400
+L251@P5: 570Z-3P-PR-E 570Z 3" Spray Body with 30 psi Pressure Reg., Effluent $16.42 A 50 2,400
+L252@P5: 570Z-4P-PR 570Z 4" Spray Body with 30 psi Pressure Reg. $11.19 A 50 2,400
+L253@P5: 570Z-4P-PRCOM 570Z 4" Spray Body with 30 psi Pressure Reg. and Check Valve $14.62 A 50 2,400
+L254@P5: 570Z-4P-PRCOME 570Z 4" Spray Body with 30 psi Pressure Reg. and Check Valve, Effluent $17.74 A 50 2,400
+L255@P5: 570Z-6P-PR 570Z 6" Spray Body with 30 psi Pressure Reg. $26.02 A 50 1,600
+L256@P5: 570Z-6P-PRCOM 570Z 6" Spray Body with 30 psi Pressure Reg. and Check Valve $30.19 A 50 1,600
+L257@P5: 570Z-6P-PRCOME 570Z 6" Spray Body with 30 psi Pressure Reg. and Check Valve, Effluent $32.15 A 50 1,600
+L258@P5: 570Z-6SI-PR 570Z 6" Spray Body with 30 psi Pressure Reg. and Side Inlet $27.92 A 50 1,600
+L259@P5: 570Z-12P-PR 570Z 12" Spray Body with 30 psi Pressure Reg. $30.14 A 25 800
+L260@P5: 570Z-12P-PRCOM 570Z 12" Spray Body with 30 psi Pressure Reg. and Check Valve $40.65 A 25 800
+L261@P5: 570Z-12P-PRCOME 570Z 12" Spray Body with 30 psi Pressure Reg. and Check Valve, Effluent $42.44 A 25 800
+L262@P5: 570Z-12SI-PR 570Z 12" Spray Body with 30 psi Pressure Reg. and Side Inlet $34.15 A 25 800
+L263@P5: TORO® 570ZLP-PR SERIES LOW PRESSURE SPRAY BODIES with INTEGRATED 30 PSI PRESSURE REGULATOR
+L264@P5: 570Z-3LP-PR 570Z 3" Low Pressure Spray Body with 30 psi Pressure Reg. $13.04 A 50 2,400
+L265@P5: 570Z-4LP-PR 570Z 4" Low Pressure Spray Body with 30 psi Pressure Reg. $11.19 A 50 2,400
+L266@P5: 570Z-6LP-PR 570Z 6" Low Pressure Spray Body with 30 psi Pressure Reg. $26.02 A 50 1,600
+L267@P5: 570Z-6LPSI-PR 570Z 6" Side Inlet Low Pressure Spray Body with 30 psi Pressure Reg. $28.93 A 50 1,600
+L268@P5: 570Z-12LP-PR 570Z 12" Low Pressure Spray Body with 30 psi Pressure Reg. $29.14 A 25 800
+L269@P5: 570Z-12LPSI-PR 570Z 12" Side Inlet Low Pressure Spray Body with 30 psi Pressure Reg. $34.15 A 25 800
+L270@P5: IRRITROL® I-PRO™ PR SERIES SPRAY BODIES with INTEGRATED 30 PSI PRESSURE REGULATOR
+L271@P5: I-PRO400-PR 4" I-PRO Spray Body with 30 psi Pressure Regulator $11.09 A 50 2,400
+L272@P5: I-PRO400-PR-CV 4" I-PRO Spray Body with 30 psi Pressure Regulator & Check Valve $14.57 A 50 2,400
+L273@P5: I-PRO600-PR 6" I-PRO Spray Body with 30 psi Pressure Regulator $20.27 A 50 2,400
+L274@P5: I-PRO600-PR-CV 6" I-PRO Spray Body with 30 psi Pressure Regulator & Check Valve $24.55 A 50 2,400
+L275@P5: I-PRO600-SI-PR 6" I-PRO Spray Body with Side Inlet & 30 psi Pressure Regulator $20.27 A 50 2,400
+L276@P5: I-PRO1200-SI-PR 12" I-PRO Spray Body with Side Inlet & 30 psi Pressure Regulator $32.83 A 25 800
+L277@P5: I-PRO1200-SI-PR-CV 12" I-PRO Spray Body with Side Inlet, 30 psi Pressure Regulator & Check Valve $37.11 A 25 800
+L278@P5: IRRITROL® I-PRO™ PR SERIES SPRAY BODIES with INTEGRATED 40 PSI PRESSURE REGULATOR
+L279@P5: I-PRO400-PR40 4" I-PRO Spray Body with 40 psi Pressure Regulator $11.09 A 50 2,400
+L280@P5: I-PRO400-PR40-CV 4" I-PRO Spray Body with 40 psi Pressure Regulator & Check Valve $14.57 A 50 2,400
+L281@P5: I-PRO600-PR40 6" I-PRO Spray Body with 40 psi Pressure Regulator $20.27 A 50 2,400
+L282@P5: I-PRO600-PR40-CV 6" I-PRO Spray Body with 40 psi Pressure Regulator & Check Valve $24.55 A 50 2,400
+L283@P5: I-PRO600-SI-PR40 6" I-PRO Spray Body with Side Inlet & 40 psi Pressure Regulator $20.27 A 50 2,400
+L284@P5: I-PRO1200-SI-PR40 12" I-PRO Spray Body with Side Inlet & 40 psi Pressure Regulator $32.83 A 25 800
+L285@P5: TORO® 570Z-PRX SERIES SPRAY BODIES with INTEGRATED 30 PSI PRESSURE REGULATOR and X-FLOW® TECHNOLOGY
+L286@P5: 570S-PRX 570S Shrub with Pressure Reg. and X-Flow $9.82 A 50 30,000
+L287@P5: 570S-PRXE 570S Shrub with Pressure Reg. and X-Flow, Effluent $11.67 A 50 30,000
+L288@P5: 570Z-4P-PRX 570Z 4" Spray Body with Pressure Reg. and X-Flow $14.46 A 50 2,400
+L289@P5: 570Z-4P-PRXE 570Z 4" Spray Body with Pressure Reg. and X-Flow, Effluent $16.36 A 50 2,400
+L290@P5: 570Z-4P-PRXCOM 570Z 4" Spray Body with Pressure Reg., X-Flow and Check Valve $19.11 A 50 2,400
+L291@P5: 570Z-4P-PRXCOME 570Z 4" Spray Body with Pressure Reg., X-Flow and Check Valve, Effluent $20.96 A 50 2,400
+L292@P5: 570Z-6P-PRX 570Z 6" Spray Body with Pressure Reg. and X-Flow $30.46 A 50 1,600
+L293@P5: 570Z-6P-PRXE 570Z 6" Spray Body with Pressure Reg. and X-Flow, Effluent $32.41 A 50 1,600
+L294@P5: 570Z-6P-PRXCOM 570Z 6" Spray Body with Pressure Reg., X-Flow and Check Valve $35.37 A 50 1,600
+L295@P5: 570Z-6P-PRXCOME 570Z 6" Spray Body with Pressure Reg., X-Flow and Check Valve, Effluent $37.27 A 50 1,600
+L296@P5: 570Z-6SI-PRX 570Z 6" Spray Body with Pressure Reg., X-Flow, and Side Inlet $30.46 A 50 1,600
+L297@P5: 570Z-12P-PRX 570Z 12" Spray Body with Pressure Reg. and X-Flow $39.01 A 50 800
+L298@P5: 570Z-12P-PRXCOM 570Z 12" Spray Body with Pressure Reg., X-Flow and Check Valve $44.08 A 25 800
+L299@P5: 570Z-12P-PRXCOME 570Z 12" Spray Body with Pressure Reg., X-Flow and Check Valve, Effluent $45.98 A 25 800
+L300@P5: 570Z-12P-PRXE 570Z 12" Spray Body with Pressure Reg. and X-Flow, Effluent $40.91 A 25 800
+L301@P5-6: 2Model Number Description 2026
+L302@P6: List Price
+L303@P6: Discount
+L304@P6: Code
+L305@P6: Bag /
+L306@P6: Case
+L307@P6: Qty.
+L308@P6: Pallet
+L309@P6: Qty.
+L310@P6: 570Z-12SI-PRX 570Z 12" Spray Body with Pressure Reg., X-Flow, and Side Inlet $40.80 A 25 800
+L311@P6: SPRAY BODY ACCESSORIES
+L312@P6: 102-1211 Effluent (Lavender) Cap and Seal assembly for 570Z Series Spray Bodies $4.56 B 1 N/A
+L313@P6: 35-2631 6" Stationary Riser for male-threaded nozzles $3.30 A 100 N/A
+L314@P6: 35-2636 6" Riser Extender for 570Z Series Spray Bodies $3.30 A 100 N/A
+L315@P6: 570-CAP Shut-off cap for 570Z Series Spray Bodies $3.28 A 5 N/A
+L316@P6: 570CV COM Check Valve for 570Z Series Spray Bodies $1.54 B 20 N/A
+L317@P6: 570SEAL Zero-Flush Seal for 570Z Series Spray Bodies $1.02 B 1 N/A
+L318@P6: 570SR-18 18" Stationary Riser for male-threaded nozzles $5.46 A 50 N/A
+L319@P6: 89-3747 Black Cap for 570Z Series Spray Bodies $2.26 B 1 N/A
+L320@P6: 89-5818 Effluent (Lavender) Cover for 570S Shrub Adapter $2.38 B 1 N/A
+L321@P6: 89-9752 Effluent (Lavender) Cap Cover for 570Z Series Spray Bodies $1.91 A 1 N/A
+L322@P6: I-PRO-CV Check Valve for I-PRO Series Spray Bodies $1.49 A 25 N/A
+L323@P6: I-PRO-NPC Effluent (Lavender) Cap for I-PRO Series Spray Bodies $2.11 A 25 N/A
+L324@P6: I-STEM-SEAL Wiper Seal for I-PRO Series Spray Bodies $0.80 B 20 N/A
+L325@P6: PCV-500 ½" MxF Precision™ Series Check Valve Adapter $4.64 A 10 N/A
+L326@P6: PNOZZTOOL Multi-Function Riser Pull-Up Tool $4.53 A 50 N/A
+L327@P6: TORO & IRRITROL SPRAY NOZZLES
+L328@P6: TORO PRECISION™ SERIES SPRAY NOZZLES FOR TORO 570Z SERIES SPRAY BODIES
+L329@P6: O-T-5-60 5' Precision Spray, 60° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L330@P6: O-T-5-Q 5' Precision Spray, 90° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L331@P6: O-T-5-T 5' Precision Spray, 120° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L332@P6: O-T-5-150 5' Precision Spray, 150° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L333@P6: O-T-5-H 5' Precision Spray, 180° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L334@P6: O-T-5-210 5' Precision Spray, 210° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L335@P6: O-T-5-TT 5' Precision Spray, 240° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L336@P6: O-T-5-TQ 5' Precision Spray, 270° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L337@P6: O-T-5-F 5 Precision Spray, 360° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L338@P6: O-T-8-60 8' Precision Spray, 60° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L339@P6: O-T-8-Q 8' Precision Spray, 90° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L340@P6: O-T-8-T 8' Precision Spray, 120° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L341@P6: O-T-8-150 8' Precision Spray, 150° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L342@P6: O-T-8-H 8' Precision Spray, 180° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L343@P6: O-T-8-210 8' Precision Spray, 210° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L344@P6: O-T-8-TT 8' Precision Spray, 240° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L345@P6: O-T-8-TQ 8' Precision Spray, 270° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L346@P6: O-T-8-F 8' Precision Spray, 360° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L347@P6: O-T-10-60 10' Precision Spray, 60° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L348@P6: O-T-10-Q 10' Precision Spray, 90° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L349@P6: O-T-10-T 10' Precision Spray, 120° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L350@P6: O-T-10-150 10' Precision Spray, 150° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L351@P6: O-T-10-H 10' Precision Spray, 180° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L352@P6: O-T-10-210 10' Precision Spray, 210° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L353@P6: O-T-10-TT 10' Precision Spray, 240° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+L354@P6: O-T-10-TQ 10' Precision Spray, 270° Nozzle with Screen, Toro (Male) Thread $6.75 A 25 36,000
+

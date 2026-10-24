@@ -1,0 +1,95 @@
+Rotor Frequently Asked Questions | Hunter Industries (https://www.hunterirrigation.com/rotor-frequently-asked-questions)
+citeturn303view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/rotor-frequently-asked-questions","lineno":0}); Total lines: 152
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite9†English L16:   * cite9†Metric L17:   * cite9†Español L18:   * cite9†Italiano L19: 
+L20:   * cite9†Français L21:   * cite9†Português L22:   * cite9†Deutsch L23:   * cite9†Türkçe L24: 
+L25:   * cite9†Polski L26:   * cite9†Русский L27:   * cite9†العربية L28:   * cite9†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: ]
+L35: 
+L36: [Button: Cancel]
+L37: Below you will find useful information and practical tips. If you still need assistance, please proceed to the end of the page to view our contact options. We at Hunter Industries appreciate your business and are dedicated to providing quality products and service.
+L38: ## Residential Rotor Identification Chart
+L39: 
+L40: cite10†PGJ L41: 
+L42: cite11†Image L43: 
+L44: cite12†SRM L45: 
+L46: cite13†Image L47: 
+L48: cite14†PGP-ADJ L49: 
+L50: cite15†Image L51: 
+L52: cite16†PGP Ultra L53: 
+L54: cite17†Image L55: 
+L56: cite18†I-20 L57: 
+L58: cite19†Image L59: 
+L60: cite20†iframe†www.youtube.com L61: 
+L62: cite21†How do I adjust my Hunter Rotor? L63: All Hunter Rotor models, including the PGM, SRM, PGJ, PGP, PGP Ultra and I-20, adjust the same way and utilize the same adjustment tool, the white Hunter wrench. The instructions you see below, as well as in the Video, "PGP Rotors Adjustment Instructions", use the PGP Rotor as an example.
+L64: 
+L65: cite21†Learn more L66: 
+L67: cite22†PGP Rotor Arc and Radius Adjustment Instructions L68: #### Arc Adjustment
+L69: 
+L70: cite23†Image L71: 
+L72: Adjustable heads are preset to approximately 180°. Sprinklers may be adjusted with water on or off. It is recommended that initial adjustments be made before installation.
+L73:   1. Using the palm of your hand, rotate the nozzle turret counterclockwise to the left stop to complete any interrupted rotation cycle.
+L74:   2. Rotate the nozzle turret clockwise to the right stop. This is the fixed side of the arc. The nozzle turret must be held in this position for arc adjustments. The right stop does not change.
+L75:   3. If right stop position needs to be moved, please click link below for video instructions on adjusting PGP rotor.
+L76: #### To Increase the Arc
+L77: 
+L78: cite24†Image L79: 
+L80:   1. Insert the plastic key end of the Hunter wrench (click here to purchase) into the adjustment socket
+L81:   2. While holding the nozzle turret at the right stop, turn the wrench clockwise. Each full 360° turn of the wrench will increase the arc 90°.
+L82:   3. Adjust to any arc between 40° or 50° and 360°
+L83:   4. The wrench will stop turning, or there will be a ratcheting noise, when the maximum arc of 360° (full circle) has been reached.
+L84: #### To Decrease the Arc
+L85: 
+L86: cite25†Image L87: 
+L88:   1. Insert the plastic key end of the Hunter wrench into the adjustment socket.
+L89:   2. While holding the nozzle turret at the right stop, turn the wrench counterclockwise. Each full 360° turn of the wrench will decrease the arc 90°.
+L90:   3. Adjust to any arc between 40° or 50° and 360°.
+L91:   4. The wrench will stop turning, or there will be a ratcheting noise, when the minimum arc of 40° or 50° has been reached.
+L92: #### Radius / Distance of Throw
+L93: 
+L94: cite26†Image L95: 
+L96: Insert the steel hex end of the Hunter wrench into the Radius Reduction Screw. Turn the screw clockwise to decrease the radius, or counterclockwise to increase the radius. Radius can be reduced up to 25%.
+L97: 
+L98: Caution for PGP-ADJ: Turning the adjustment screw clockwise more than five full turns may result in a lost radius adjustment screw.
+L99: 
+L100: cite22†Learn more L101: 
+L102: cite27†How do I obtain a Hunter Wrench to adjust my rotor? L103: All authorized Hunter distributors can help you obtain the Hunter adjustment wrench. cite28†Find a distributor near you or refer to our cite29†online store†promo.hunterindustries.com .
+L104: 
+L105: cite27†Learn more L106: 
+L107: cite30†iframe†www.youtube.com L108: 
+L109: cite31†Why has my Rotor stopped turning? L110: Hunter rotors operate on a "gear drive" system. When in operation, water turns a small turbine in the base of the sprinkler, which drives a series of gears that cause the nozzle turret to rotate. The Hunter gear drive mechanism is sealed from dirt and debris. Age, excessive pressure, or poor water quality may eventually allow particles of contamination to enter the gear drive.
+L111: If the sprinkler is no longer rotating and the water flow coming out of the sprinkler has decreased, you can first try cleaning out the filter by removing the pop-up assembly from the main body. The cap can simply be threaded off and the internal assembly removed. The filter on the bottom of the internal assembly can be easily removed using needle nose pliers.
+L112: 
+L113: cite31†Learn more L114: 
+L115: cite32†iframe†www.youtube.com L116: 
+L117: cite31†Can I replace a Riser Seal in my PGP or I-20 Rotor? L118: A worn riser seal can cause water to leak around the base of the riser stem when the PGP or I-20 is running. This can look like the sprinkler is leaking out of the top cap when the rotor is running. Or, water may be leaking from below the body cap.
+L119: The video "Replacing a Riser Seal on a Rotor" is a great tool to help you accomplish this when needed. The Hunter part number for the Seal Kit, which includes 10 riser seals and spring seat, for the PGP, PGP Ultra and I20-12 is #253400. The part number for the seal only for the PGP, PGP Ultra and I20-12 is 181500. The part numbers for the seal only for the I-20 is 252500.
+L120: 
+L121: cite31†Learn more L122: 
+L123: cite33†Are parts available for my Rotors?†www.ewing1.com L124: Yes. Seals, rubber covers, and body caps are all available through authorized Hunter Distributors. In addition, cite33†Ewing Irrigation†www.ewing1.com has a link that will take you take you to the Hunter Parts section of their website.
+L125: 
+L126: cite33†Visit Ewing1.com†www.ewing1.com L127: 
+L128: cite34†What is the purpose of the little hole that leaks water on the side of my rotor's stem? L129: It's a combination drain hole and flush hole. It's a drain hole because we need to drain the water from below the nozzle turret so it doesn't push up on nozzle turret in the freezing climates. It's a flush hole because when the head is retracted, then popped up on water pressure, water goes into the hole and cleans the area below the nozzle turret.
+L130: 
+L131: cite34†Learn more L132: 
+L133: cite35†Why does the little hole on the side of the riser leak water? L134: It's likely that it leaks water because of the "drool" from the nozzle. As the screw diffuses the stream, a little of the water runs down the front of the nozzle turret and into the open area, and it's then drained out of the hole in the riser. To prevent it from happening, simply back off the screw so it doesn't diffuse the nozzle so much.
+L135: If the water comes out of the hole in a "stream-like" manner, then it's likely that one of the internal seals is contaminated with debris, so the head will likely need to be replaced.
+L136: cite35†Learn more L137: #### NOT FINDING THE ANSWERS?
+L138: 
+L139: ### cite36†View All Support Articles for Rotors L140: #### STILL NOT FINDING THE ANSWERS?
+L141: 
+L142: Hunter Technical Support experts are available to answer your question(s) about Hunter products and their usage, simply click on the contact button below to submit an email request.
+L143: 
+L144: cite37†Contact Hunter Technical Support L145: 
+L146:   * cite38†Find a Distributor L147:   * cite39†Find a Contractor L148:   * cite40†Contact Sales L149: 
+L150: cite41†Find Hunter L151: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite42†Privacy Policy |
+

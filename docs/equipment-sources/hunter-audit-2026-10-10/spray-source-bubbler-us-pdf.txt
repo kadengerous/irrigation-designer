@@ -1,0 +1,83 @@
+(https://www.hunterirrigation.com/sites/default/files/2025-10/RC-235-SS-Sprays-MSBN-V-US-WEB.pdf)
+citeturn314view3 [wordlim: 200] Crawled: 4 weeks ago; Content type: application/pdf; Number of pages: 1; Source: click({"ref_id":"turn279view0","id":97}); Total lines: 81
+L0@P0: NOZZLES
+L1@P0: KEY BENEFITS
+L2@P0: • Pressure-compensating for constant water flow at any pressure
+L3@P0: • Designed for deep watering of planted areas
+L4@P0: • Nozzle threaded for use with Pro-Spray®
+L5@P0:  Sprinkler Bodies
+L6@P0: BUBBLER NOZZLES–
+L7@P0: MSBN-25Q/25V
+L8@P0: Flow: 0.25 GPM
+L9@P0: MSBN-10H/10F
+L10@P0: Flow: 1.0 GPM
+L11@P0: MSBN-20F
+L12@P0: Flow: 2.0 GPM
+L13@P0: PCN-50
+L14@P0: Flow: 0.50 GPM
+L15@P0: PCN-20
+L16@P0: Flow: 2.0 GPM
+L17@P0: PCN-25
+L18@P0: Flow: 0.25 GPM
+L19@P0: PCN-10
+L20@P0: Flow: 1.0 GPM
+L21@P0: MSBN-50Q/50H/50V
+L22@P0: Flow: 0.50 GPM
+L23@P0: MULTI-STREAM BUBBLER NOZZLES
+L24@P0: PCN BUBBLER NOZZLES
+L25@P0: Multi-Stream Bubbler
+L26@P0: PCN
+L27@P0: MULTI-STREAM BUBBLER
+L28@P0: PERFORMANCE DATA
+L29@P0: Arc Model Flow
+L30@P0: GPM
+L31@P0: Radius
+L32@P0: ft
+L33@P0: MSBN-25V* 0.25 1.5
+L34@P0: MSBN-50V* 0.50 2.5
+L35@P0: MSBN-25Q 0.25 1.0
+L36@P0: MSBN-50Q 0.50 1.5
+L37@P0: MSBN-50H 0.50 1.0
+L38@P0: MSBN-10H 1.00 1.5
+L39@P0: MSBN-10F 1.00 1.0
+L40@P0: MSBN-20F 2.00 1.5
+L41@P0: PCN PERFORMANCE DATA
+L42@P0: Model Flow
+L43@P0: GPM
+L44@P0: Pattern
+L45@P0: Type
+L46@P0: 25 0.25 Trickle
+L47@P0: 50 0.50 Trickle
+L48@P0: 10 1.00 Umbrella
+L49@P0: 20 2.00 Umbrella
+L50@P0: Notes:
+L51@P0: Typical spacing 2' to 4'. Flows shown for
+L52@P0: pressures between 15 and 70 PSI.
+L53@P0: MSBN Installed on PROS-04
+L54@P0: Combining Hunter Bubbler Nozzles with Pro-Spray Sprinkler Bodies provides the
+L55@P0: watering precision of pressure-compensating bubblers paired with the benefit of
+L56@P0: retracting the nozzle out of sight.
+L57@P0: 5-CST-B
+L58@P0: 5-CST-B DUAL-STREAM BUBBLER NOZZLE 5-CST-B BUBBLER NOZZLE
+L59@P0: PERFORMANCE DATA
+L60@P0: Pressure
+L61@P0: (PSI)
+L62@P0: Radius
+L63@P0: (ft.)
+L64@P0: Flow
+L65@P0: (GPM)
+L66@P0: 20 5 0.30
+L67@P0: 25 5 0.32
+L68@P0: 30 5 0.38
+L69@P0: 35 5 0.40
+L70@P0: 40 5 0.42
+L71@P0: Deliver a consistent flow regardless of inlet pressure with
+L72@P0: pressure-compensating Bubbler Nozzles.
+L73@P0: Notes:
+L74@P0: Typical spacing is 2' to 4'. Flow rates shown are based on pressures between 15 and 70 PSI.
+L75@P0: *For a 6" pop-up, the radius is 2' at 0.25 GPM and 3' at 0.50 GPM.
+L76@P0: OPERATING SPECIFICATIONS
+L77@P0: • Recommended operating pressure for the most consistent
+L78@P0: performance: 30 PSI
+L79@P0: • Warranty period: 2 years
+L80@P0: LANDSCAPE IRRIGATION | Built on Innovation®

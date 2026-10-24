@@ -1,0 +1,2289 @@
+{
+  "auditedOn": "2026-10-10",
+  "catalogPatches": [
+    {
+      "id": "toro:O-5-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-5-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-5-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-5-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-5-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-5-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-5-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-5-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-5-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-5-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-8-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-8-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-10-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-10-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-12-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-12-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-60",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-Q",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-T",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-150",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-H",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-210",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-TT",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-TQ",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-15-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-15-F",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-4X30-SST",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-4X30-SST",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-4X15-LCS",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-4X15-LCS",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-4X15-RCS",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-4X15-RCS",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-4X18-SST",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-4X18-SST",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-4X9-LCS",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-4X9-LCS",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-4X9-RCS",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    },
+    {
+      "id": "toro:O-T-4X9-RCS",
+      "file": "src/data/equipment/toro.json",
+      "fields": [
+        {
+          "field": "verifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        },
+        {
+          "field": "nozzles[0].colorVerifiedOn",
+          "old": "2026-10-06",
+          "new": "2026-10-10"
+        }
+      ],
+      "reason": "All four hydraulic rows, listed pattern, manufacturer color name and interface rechecked against official accessible documents. Primary 2026 source URL/version retained; fresh row corroboration is 25-1045-IRC."
+    }
+  ],
+  "hydraulicRowPatches": [],
+  "geometryPatches": [],
+  "colorValuePatches": [],
+  "runtimeRecommendations": [
+    {
+      "id": "nominal-30psi-pressure-equivalence",
+      "priority": "high",
+      "problem": "Female Toro O/PSN nozzle paired with Hunter PRS30 gets 2.1 bar interpolation, while Toro 570Z PR/PRX male counterpart uses the exact nominal 30 psi chart row 2.068427 bar. hydroKey incorrectly separates matched hardware variants.",
+      "examples": [
+        {
+          "female": "O-8-H",
+          "femaleDefaultPressure": 2.1,
+          "femaleBeforeKey": "spray|25.4|p:2.1000",
+          "male": "O-T-8-H",
+          "maleDefaultPressure": 2.068427,
+          "maleBeforeKey": "toro:precision|p:2.0684"
+        },
+        {
+          "female": "PSN8-H",
+          "femaleDefaultRadius": 2.5935915258544173,
+          "male": "PSN8T-H",
+          "maleDefaultRadius": 2.5908
+        }
+      ],
+      "recommendation": "Map only documented nominal 30 psi for Toro Precision nozzles at Hunter PRS30 or explicit nominal 2.1 bar to their canonical 30 psi table pressure. Apply consistently in defaults, body changes, automatic candidate selection and matched hydraulic keys. Do not treat arbitrary 2.09/2.11 bar or PRS40 as the same setting."
+    },
+    {
+      "id": "retain-legacy-nominal-radius-floor",
+      "priority": "regression-guard",
+      "recommendation": "Keep O-series minimumRadiusM=0.75*designated nominal radius, not a per-pressure ratio floor or rNom*.75. O-5-210 and O-12-Q have native 30 psi throws different from their designated model size."
+    }
+  ],
+  "preserve": [
+    "All 408 hydraulic rows and all 48 strip width/length rows",
+    "All 102 distinct hardware model IDs (51 female + 51 male)",
+    "Existing published color names and approximate UI hex values",
+    "O-series non-pressure-compensated identity; do not import PCD P-suffix tables",
+    "Strip rectangular geometry and manual-only automatic-selection exclusion",
+    "Existing matched family at recommended pressure; T5 remains configured and separate"
+  ]
+}

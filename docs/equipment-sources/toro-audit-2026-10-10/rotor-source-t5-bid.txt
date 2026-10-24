@@ -1,0 +1,40 @@
+Bid Specs (https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Rotors/T5-RapidSet-Series/T5-RapidSet-Series-Sprinkler-Bidding-Specs.ashx)
+citeturn426view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 1; Source: open({"ref_id":"https://cdn2.toro.com/en/-/media/Files/Toro/professional-contractor/Rotors/T5-RapidSet-Series/T5-RapidSet-Series-Sprinkler-Bidding-Specs.ashx","lineno":null}); Total lines: 37
+L0@P0: April 2015
+L1@P0: T5 RAPIDSET SERIES SPRINKLER BIDDING SPECIFICATIONS
+L2@P0: Note: These specifications were current at the time of publication, but are subject to change at any time without notice.
+L3@P0: Please confirm the accuracy of these specifications with the manufacturer and/or distributor prior to installation.
+L4@P0: The combination full- and part-circle sprinklers shall be a gear-driven rotary type and infinitely adjustable between
+L5@P0: 40 and 360 degrees. The sprinkler shall be capable of covering ____ feet of radius at ____ pounds per square inch (psi)
+L6@P0: pressure with a discharge rate of ____ gallons per minute (gpm). Water distribution shall be via one nozzle insert from
+L7@P0: a nozzle tree of eight (8) standard and four (4) low angle nozzles. Radius reduction shall be adjustable up to 25% by
+L8@P0: means of a stainless steel radius adjustment screw accessible from the top of the nozzle when the sprinkler is
+L9@P0: properly installed. The body and cap of the sprinkler shall be injection-molded ABS (Acrylonitrile butadiene styrene),
+L10@P0: a heavy-duty, non-corrosive, impact and UV-resistant plastic material. The sprinkler shall have a plastic filter screen
+L11@P0: in the base of the riser that prevents the entry of foreign material into the nozzle. All components shall be removable
+L12@P0: from the top of the sprinkler case.
+L13@P0: The sprinkler shall have a single-piece riser/body seal that regulates flushing during pop up and retraction to clear
+L14@P0: any debris from around the riser; a heavy-duty stainless steel spring shall ensure positive retraction of the riser. The
+L15@P0: seal shall utilize a spring support that supports the spring and maintains positive engagement between the seal and
+L16@P0: the body. The seal shall be a single piece construction and made of injection-molded Monprene impregnated with
+L17@P0: Kemamide®.
+L18@P0: The sprinkler shall incorporate RapidSet®, an arc adjustment feature that allows the sprinkler’s arc to be set or
+L19@P0: adjusted without the need for an adjustment tool. With RapidSet, the rotor’s arc can be set by hand through a series
+L20@P0: of turns of the nozzle base. The sprinkler shall include a nozzle base slip clutch feature that enables the user to
+L21@P0: rotate the nozzle base in either direction (wet or dry) and hold in one position (during operation) for spot watering
+L22@P0: without the risk of breaking the rotor’s gears.
+L23@P0: The sprinkler shall be capable of accepting any one of twelve (12) nozzles. The eight (8) standard nozzles shall offer
+L24@P0: flow ranges of 1.5 to 8.0 gpm and shall have a trajectory of 25 degrees. The low angle nozzles shall have flow ranges of
+L25@P0: 1.0 to 3.0 gpm and shall have an approximate trajectory of 10 degrees. All nozzles shall be clearly marked just below
+L26@P0: the nozzle openings with their respective flow rate. The sprinkler shall employ a modular, interchangeable nozzle
+L27@P0: technology. Any individual nozzle shall be easily removed, installed and held in place by the stainless steel set screw
+L28@P0: located on top of the rubber cover. The standard #3.0 nozzle shall be factory installed.
+L29@P0: Rotation shall be accomplished by a water-lubricated gear drive assembly driven by a variable stator that maintains a
+L30@P0: relatively constant speed of rotation with all nozzles. The variable stator shall require no adjustments when changing
+L31@P0: nozzles.
+L32@P0: An optional check valve shall be available with a hold back strength of 7’ of elevation change. The T5 shall have a 5"
+L33@P0: pop up when measured from the level of the installed grade to the top of the standard rubber cover.
+L34@P0: The sprinkler shall be a model number _____________________ and shall be manufactured by The Toro Company,
+L35@P0: Irrigation Division, based in Riverside, California, USA.
+L36@P0: END OF SECTION
+

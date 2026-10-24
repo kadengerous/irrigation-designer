@@ -1,0 +1,495 @@
+ (https://www.rainbird.com/media/13671)
+citeturn393view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://www.rainbird.com/media/13671","lineno":0}); Total lines: 492
+L0@P0: Trusted for over 30 years, 1800 Series Spray
+L1@P0: Heads have provided unmatched durability,
+L2@P0: reliability, and performance.
+L3@P0: Superior components and features make the
+L4@P0: 1800 Series Spray Head the spray head of
+L5@P0: choice for a wide variety of applications.
+L6@P0: Features
+L7@P0: Co-molded, pressure-activated, multi-functional wiper seal assures positive seal without
+L8@P0: excess “flow-by” which enables more heads
+L9@P0: to be installed on the same valve.
+L10@P0: • Designed for use with all Rain Bird plastic
+L11@P0: spray head nozzles – U-Series, HE-VAN,
+L12@P0: R-VAN, MPR, VAN, and XPCN Series.
+L13@P0: • Precision controlled flush at pop-down
+L14@P0: clears debris from unit, assuring positive
+L15@P0: stem retraction in all soil types.
+L16@P0: • Strong stainless steel spring provides
+L17@P0: reliable stem retraction.
+L18@P0: • Ratchet mechanism on all models allows
+L19@P0: easy nozzle pattern alignment without
+L20@P0: tools.
+L21@P0: • Pre-installed 1800 Pop-Top™ flush plug
+L22@P0: blocks debris from entering after flushing.
+L23@P0: Allows for easy nozzle installation.
+L24@P0: • Constructed of time-proven UV-resistant
+L25@P0: plastic and corrosion resistant stainless
+L26@P0: steel parts, assuring long product life.
+L27@P0: • All sprinkler components are removable
+L28@P0: from the top without special tools,
+L29@P0: providing for quick and easy flushing and
+L30@P0: maintenance of the sprinkler.
+L31@P0: • Side inlets featured on 1806, 1806PRS,
+L32@P0: 1806P45, 1812, 1812PRS, and 1812P45
+L33@P0: models only.
+L34@P0: • Five-year trade warranty.
+L35@P0: Operating Range
+L36@P0: • Spacing: 2.5 to 24 feet (0.8 to 7.3 m)
+L37@P0: • Pressure: 15 to 70 psi (1.0 to 4.8 bar)
+L38@P0: Specifications
+L39@P0: • Flow-by: 0 at 8 psi (0.6 bar) or greater;
+L40@P0: 0.1 gpm (0.02 m3/h; 0.006 l/s) otherwise
+L41@P0: Dimensions/Models
+L42@P0: • ½” (15/21) NPT female threaded inlet
+L43@P0: • Models and height:
+L44@P0: 1802: 4” (10 cm) body height;
+L45@P0: 2” pop-up height (5 cm)
+L46@P0: • 1803: 5” (12.7 cm) body height;
+L47@P0: 3” pop-up height (8 cm)
+L48@P0: 1804: 6” (15 cm) body height;
+L49@P0: 4” pop-up height (10 cm)
+L50@P0: 1806: 9 3
+L51@P0: ⁄8” (24 cm) body height;
+L52@P0: 6” pop-up height (15 cm)
+L53@P0: 1812: 16” (40 cm) body height;
+L54@P0: 12” pop-up height (30 cm)
+L55@P0: • Exposed surface diameter: 21
+L56@P0: ⁄4” (5.7 cm)
+L57@P0: SAM
+L58@P0: 1800™ Series Spray Heads
+L59@P0: Industry’s Leading Spray Heads
+L60@P0: Tech Spec
+L61@P0: How To Specify
+L62@P0: 1804 - SAM - PRS
+L63@P0: Model
+L64@P0: 1804: 4” (10.2 cm) pop-up height
+L65@P0: Optional
+L66@P0: Feature
+L67@P0: SAM:
+L68@P0: Seal-A-Matic™
+L69@P0: check valve
+L70@P0: Optional Feature
+L71@P0: PRS: 30psi (2.1 bar) in-stem
+L72@P0: pressure regulation
+L73@P0: P45: 45psi (3.1 bar) in-stem
+L74@P0: pressure regulation
+L75@P0: How To Specify
+L76@P0: 1804 - SAM-P45 - R-VAN18-360
+L77@P0: Model
+L78@P0: 1804: 4” (10.2 cm) pop-up height
+L79@P0: Optional
+L80@P0: Feature
+L81@P0: SAM:
+L82@P0: Seal-A-Matic™
+L83@P0: check valve
+L84@P0: P45: 45psi (3.1
+L85@P0: bar) in-stem
+L86@P0: pressure
+L87@P0: regulation
+L88@P0: Radius Range
+L89@P0: 8’ - 14’ (2.4 to 4.6m)
+L90@P0: R-VAN14: 45° - 270°
+L91@P0: R-VAN14-360: 360°
+L92@P0: 13’ - 18’ (4.0 to 5.5m)
+L93@P0: R-VAN18: 45° - 270°
+L94@P0: R-VAN18-360: 360°
+L95@P0: 17’ - 24’ (5.2 to 7.3m)
+L96@P0: R-VAN24: 45° - 270°
+L97@P0: R-VAN24-360: 360°
+L98@P0: Strip Nozzles
+L99@P0: R-VAN-LCS: 5’ x 15’
+L100@P0: (1.5 x 4.6m)
+L101@P0: R-VAN-RCS: 5’ x 15’
+L102@P0: (1.5 x 4.6m)
+L103@P0: R-VAN-SST: 5’ x 30’
+L104@P0: (1.5 x 9.1m)
+L105@P0: Note: Specify sprinkler bodies and nozzles separately.
+L106@P0: PRS-45
+L107@P0: PRS-30
+L108@P0: SAM-PRS-30
+L109@P0-1: SAM-PRS-P451800® SAM Series
+L110@P1: Ideal for use in areas with changing elevations, the 1800 SAM Series offers all 1800
+L111@P1: Series features plus:
+L112@P1: • Built-in Seal-A-Matic™ (SAM) check valve.
+L113@P1: Eliminates the need for under-the-head
+L114@P1: check valves. No parts to be installed at
+L115@P1: the site.
+L116@P1: • Stronger retract spring to accommodate
+L117@P1: elevation changes up to 14’ (4.2 m). One of
+L118@P1: the strongest springs in the industry.
+L119@P1: • Prevents drainage from spray heads at
+L120@P1: lower elevations. Stops water waste. Ends
+L121@P1: landscape damage due to flooding and/
+L122@P1: or erosion.
+L123@P1: • Helps retain water in lateral pipes which
+L124@P1: reduces wear on system components by
+L125@P1: minimizing water hammer during
+L126@P1: start-up.
+L127@P1: • Designed for use with all Rain Bird plastic
+L128@P1: spray head nozzles.
+L129@P1: • “SAM” stamped on cap for easy
+L130@P1: identification and maintenance.
+L131@P1: • Five-year trade warranty.
+L132@P1: Operating Range
+L133@P1: • Spacing: 2.5 to 24 feet (0.8 to 7.3 m)
+L134@P1: • Pressure: 25 to 70 psi (1.7 to 4.8 bar)
+L135@P1: Specifications
+L136@P1: • SAM capability: holds up to 14 feet (4.2 m)
+L137@P1: of head; 6 psi (0.3 bar)
+L138@P1: • Flow-by: 0 at 8 psi (0.6 bar) or greater;
+L139@P1: 0.1 gpm (0.02 m3/h; 0.006 l/s) otherwise
+L140@P1: • Installation: bottom inlet only
+L141@P1: Dimensions
+L142@P1: • 1
+L143@P1: ⁄2” (15/21) NPT female threaded inlets
+L144@P1: • Body height: 1804 SAM - 6” (15 cm),
+L145@P1: 1806 SAM - 93
+L146@P1: ⁄8” (24 cm),
+L147@P1: 1812 SAM- 16” (40 cm)
+L148@P1: • Exposed surface diameter: 21
+L149@P1: ⁄4” (5.7 cm)
+L150@P1: Models
+L151@P1: • 1804 SAM: 4” pop-up height (10 cm)
+L152@P1: • 1806 SAM: 6” pop-up height (15 cm)
+L153@P1: • 1812 SAM: 12” pop-up height (30 cm)
+L154@P1: 1800 PRS Series
+L155@P1: Designed for areas with high and/or widely
+L156@P1: fluctuating water pressures, the 1800 PRS
+L157@P1: Series has all 1800 Series features plus:
+L158@P1: • PATENTED PRS pressure regulator built
+L159@P1: into the stem. No parts to be installed at
+L160@P1: the site. Saves time and money.
+L161@P1: • Maintains constant outlet pressure at
+L162@P1: 30psi (2.1 bar). Spray nozzles perform
+L163@P1: best at 30psi. Ensures maximum nozzle
+L164@P1: performance, even with varying inlet
+L165@P1: pressures. Maintains constant pressure
+L166@P1: regardless of nozzles used.
+L167@P1: • Restricts water loss by up to 70% if nozzle
+L168@P1: is removed or damaged. Saves water and
+L169@P1: money. Reduces possibility of accidents
+L170@P1: and property damage. Recommended for
+L171@P1: vandal-prone areas.
+L172@P1: • Ensures consistent performance
+L173@P1: throughout zone if nozzle is removed or
+L174@P1: damaged. Keeps plant life covered by
+L175@P1: other spray heads properly irrigated.
+L176@P1: • Ends misting and fogging caused by high
+L177@P1: pressure. Stops water waste. Ensures
+L178@P1: necessary watering occurs in high pressure
+L179@P1: or wind conditions.
+L180@P1: • Designed for use with all Rain Bird plastic
+L181@P1: spray head nozzles.
+L182@P1: • “PRS-30” stamped on cap for easy
+L183@P1: identification and maintenance.
+L184@P1: • Five-year trade warranty.
+L185@P1: Operating Range
+L186@P1: • Spacing: 2.5 to 24 feet (0.8 to 7.3 m)
+L187@P1: • Pressure: 15 to 70 psi (1 to 5 bar)
+L188@P1: Specifications
+L189@P1: • Regulates nozzle pressure to an average 30
+L190@P1: psi (2.1 bar) with inlet pressures of up to 70
+L191@P1: psi (4.8 bar)
+L192@P1: • Flow-by: 0 at 8 psi (0.6 bar) or greater;
+L193@P1: 0.1 gpm (0.02 m3/h; 0.006 l/s) otherwise
+L194@P1: • Installation: side or bottom inlet
+L195@P1: • Side inlet installation not recommended in
+L196@P1: freezing climates
+L197@P1: Dimensions
+L198@P1: • 1⁄2” (15/21) NPT female threaded inlets
+L199@P1: • Body height: 1802 PRS - 4” (10 cm),
+L200@P1: 1803 PRS - 5” (12.7 cm),
+L201@P1: 1804 PRS - 6” (15 cm),
+L202@P1: 1806 PRS - 93
+L203@P1: ⁄8” (24 cm),
+L204@P1: 1812 PRS - 16” (40 cm)
+L205@P1: • Exposed surface diameter: 21
+L206@P1: ⁄4” (5.7 cm)
+L207@P1: Models
+L208@P1: • 1802 PRS: 2” pop-up height (5 cm)
+L209@P1: • 1803 PRS: 3” pop-up height (8 cm)
+L210@P1: • 1804 PRS: 4” pop-up height (10 cm)
+L211@P1: • 1806 PRS: 6” pop-up height (15 cm)
+L212@P1: • 1812 PRS: 12” pop-up height (30 cm)
+L213@P1: www.rainbird.com
+L214@P1: 1800™ Series Spray Heads Tech Spec
+L215@P1: 1800 P45 Series
+L216@P1: Designed for areas with high and/or widely
+L217@P1: fluctuating water pressures, the 1800 P45
+L218@P1: Series has all 1800 Series features plus:
+L219@P1: • PATENTED PRS pressure regulator built
+L220@P1: into the stem. No parts to be installed at
+L221@P1: the site. Saves time and money.
+L222@P1: • Maintains constant outlet pressure at
+L223@P1: 45psi (3.1 bar). Rotary nozzles perform
+L224@P1: best at 45psi. Ensures maximum nozzle
+L225@P1: performance, even with varying inlet
+L226@P1: pressures. Maintains constant pressure
+L227@P1: regardless of nozzles used.
+L228@P1: • Restricts water loss by up to 70% if nozzle
+L229@P1: is removed or damaged. Saves water and
+L230@P1: money. Reduces possibility of accidents
+L231@P1: and property damage. Recommended for
+L232@P1: vandal-prone areas.
+L233@P1: • Ensures consistent performance
+L234@P1: throughout zone if nozzle is removed or
+L235@P1: damaged. Keeps plant life covered by other
+L236@P1: spray heads properly irrigated.
+L237@P1: • Ends misting and fogging caused by high
+L238@P1: pressure. Stops water waste. Ensures
+L239@P1: necessary watering occurs in high pressure
+L240@P1: or wind conditions.
+L241@P1: • Designed for use with all Rain Bird plastic
+L242@P1: spray head nozzles.
+L243@P1: • “PRS-45” stamped on cap for easy
+L244@P1: identification and maintenance.
+L245@P1: • Five-year trade warranty.
+L246@P1: Operating Range
+L247@P1: • Spacing: 8 to 24 feet (2.4 to 7.3 m)
+L248@P1: • Pressure: 15 to 70 psi (1.7 to 4.8 bar)
+L249@P1: Specifications
+L250@P1: • Regulates nozzle pressure to an average
+L251@P1: 45 psi (3.1 bar) with inlet pressures of up to
+L252@P1: 70 psi (4.8 bar)
+L253@P1: • Flow-by: 0 at 8 psi (0.6 bar) or greater;
+L254@P1: 0.1 gpm (0.02 m3
+L255@P1: /h; 0.006 l/s) otherwise
+L256@P1: • Installation: side or bottom inlet
+L257@P1: • Side inlet installation not recommended in
+L258@P1: freezing climates
+L259@P1: Dimensions
+L260@P1: • 1⁄2” (15/21) NPT female threaded inlets
+L261@P1: • Body height: 1804 P45 - 6” (15 cm),
+L262@P1: 1806 P45 - 93
+L263@P1: ⁄8” (24 cm),
+L264@P1: 1812 P45 - 16” (40 cm)
+L265@P1: • Exposed surface diameter: 21
+L266@P1: ⁄4” (5.7 cm)
+L267@P1: Models
+L268@P1: • 1804 P45: 4” pop-up height (10 cm)
+L269@P1: • 1806 P45: 6” pop-up height (15 cm)
+L270@P1: • 1812 P45: 12” pop-up height (30 cm)
+L271@P1: All Rain Bird Spray Bodies with
+L272@P1-2: PRS are WaterSense certified 1800 SAM-P45 Series
+L273@P2: Meets the needs of spray body applications
+L274@P2: using Rotary Nozzles regardless of changing
+L275@P2: elevation or water pressures. Incorporates
+L276@P2: 1800 Series SAM feature and regulates operating pressure at 45 psi (3.1 bar).
+L277@P2: • Designed to maximize application
+L278@P2: efficiency when using Rotary Nozzles.
+L279@P2: • Maintains constant outlet pressure at
+L280@P2: 45psi (3.1 bar) at varying inlet pressures.
+L281@P2: Maintains constant pressure regardless of
+L282@P2: nozzle used.
+L283@P2: • “SAM-PRS-45” stamped on cap for easy
+L284@P2: identification and maintenance.
+L285@P2: • Five-year trade warranty.
+L286@P2: Operating Range
+L287@P2: • Spacing: 8 to 24 feet (2.4 to 7.3 m)
+L288@P2: • Pressure: 25 to 70 psi (1.7 to 4.8 bar)
+L289@P2: Specifications
+L290@P2: • SAM capability: holds up to 14 feet (4.2 m)
+L291@P2: of head; 6 psi (0.3 bar)
+L292@P2: • Flow-by: 0 at 8 psi (0.6 bar) or greater;
+L293@P2: 0.1 gpm (0.02 m3
+L294@P2: /h; 0.006 l/s) otherwise
+L295@P2: • Installation: bottom inlet only
+L296@P2: • Regulates nozzle pressure to an average
+L297@P2: 45 psi (3.1 bar) with inlet pressures of up to
+L298@P2: 70 psi (4.8 bar)
+L299@P2: Dimensions
+L300@P2: • ½” (15/21) NPT female threaded inlets
+L301@P2: • Body height: 1804 SAM-P45 - 6” (15 cm),
+L302@P2: 1806 SAM-P45 - 93
+L303@P2: ⁄8” (24 cm),
+L304@P2: 1812 SAM-P45 - 16” (40 cm)
+L305@P2: • Exposed diameter: 21
+L306@P2: ⁄4” (5.7 cm)
+L307@P2: Models
+L308@P2: • 1804 SAM-P45: 4” pop-up height (10 cm)
+L309@P2: • 1806 SAM-P45: 6” pop-up height (15 cm)
+L310@P2: • 1812 SAM-P45: 12” pop-up height (30 cm)
+L311@P2: Rain Bird® co-molded,
+L312@P2: pressure- activated
+L313@P2: wiper seal
+L314@P2: Strong stainless steel
+L315@P2: retract spring
+L316@P2: Side inlet on 1806,
+L317@P2: 1806PRS, 1806P45,
+L318@P2: 1812, 1812PRS, and
+L319@P2: 1812P45 models only
+L320@P2: Patented PRS-30
+L321@P2: or PRS-45 in-stem
+L322@P2: pressure regulator
+L323@P2: options
+L324@P2: Ratchet (for easy nozzle
+L325@P2: pattern alignment)
+L326@P2: SAM (Seal-A-Matic™)
+L327@P2: in-stem check valve
+L328@P2: option
+L329@P2: www.rainbird.com
+L330@P2: 1800™ Tech Spec Series Spray Heads
+L331@P2: 1806 with Swing Joint on Bottom Inlet 1812 with Swing Pipe on Side Inlet
+L332@P2: 1800 SAM-PRS-30 Series
+L333@P2: Meets the needs of spray body applications
+L334@P2: using Spray Nozzles regardless of changing
+L335@P2: elevation or water pressures. Incorporates 1800
+L336@P2: Series SAM feature and regulates operating
+L337@P2: pressure at 30 psi (2.1 bar).
+L338@P2: • Designed to maximize application efficiency
+L339@P2: when using Spray Nozzles.
+L340@P2: • Maintains constant outlet pressure at 30psi
+L341@P2: (3.1 bar) at varying inlet pressures. Maintains
+L342@P2: constant pressure regardless of nozzle used.
+L343@P2: • “SAM-PRS-30” stamped on cap for easy
+L344@P2: identification and maintenance.
+L345@P2: • Five-year trade warranty.
+L346@P2: Operating Range
+L347@P2: • Spacing: 2.5 to 24 feet (0.8 to 7.3 m)
+L348@P2: • Pressure: 25 to 70 psi (1.7 to 4.8 bar)
+L349@P2: Specifications
+L350@P2: • SAM capability: holds up to 14 feet (4.2 m)
+L351@P2: of head; 6 psi (0.3 bar)
+L352@P2: • Flow-by: 0 at 8 psi (0.6 bar) or greater;
+L353@P2: 0.1 gpm (0.02 m3
+L354@P2: /h; 0.006 l/s) otherwise
+L355@P2: • Installation: bottom inlet only
+L356@P2: • Regulates nozzle pressure to an average 30
+L357@P2: psi (2.1 bar) with inlet pressures of up to 70
+L358@P2: psi (4.8 bar)
+L359@P2: Dimensions
+L360@P2: • 1⁄2” (15/21) NPT female threaded inlets
+L361@P2: • Body height: 1804 SAM-PRS - 6” (15 cm),
+L362@P2: 1806 SAM-PRS - 93
+L363@P2: ⁄8” (24 cm),
+L364@P2: 1812 SAM-PRS - 16” (40 cm)
+L365@P2: • Exposed diameter: 21
+L366@P2: ⁄4” (5.7 cm)
+L367@P2: Models
+L368@P2: • 1804 SAM-PRS: 4” pop-up height (10 cm)
+L369@P2: • 1806 SAM-PRS: 6” pop-up height (15 cm)
+L370@P2: • 1812 SAM-PRS: 12” pop-up height (30 cm)
+L371@P2: All Rain Bird Spray Bodies with
+L372@P2-3: PRS are WaterSense certified 1802, 1804, 1806 and 1812 Pop-up Spray
+L373@P3: Sprinkler
+L374@P3: The sprinkler body, stem, nozzle and screen
+L375@P3: shall be constructed of heavy-duty, ultra-violet
+L376@P3: resistant plastic. It shall have a heavy-duty stainless steel retract spring for positive pop-down
+L377@P3: and a ratcheting system for easy alignment
+L378@P3: of the pattern. The sprinkler shall have a soft
+L379@P3: elastomer pressure-activated co-molded wiper
+L380@P3: seal for cleaning debris from the pop-up stem as
+L381@P3: it retracts into the case to prevent the sprinkler
+L382@P3: from sticking up to minimize “flow-by.”
+L383@P3: The sprinkler shall have a matched precipitation rate (MPR) plastic or brass nozzle with an
+L384@P3: adjusting screw capable of regulating the radius
+L385@P3: and flow. The sprinkler shall be capable of housing protective, non-clogging filter screens or
+L386@P3: pressure compensating screens (PCS) under the
+L387@P3: nozzle. The screen shall be used in conjunction
+L388@P3: with the adjusting screw for regulating. The 6”
+L389@P3: (15 cm) and 12” (30 cm) models shall have both
+L390@P3: a side and a bottom 1⁄2” (15/21) (FNPT) inlet for
+L391@P3: ease of installation.
+L392@P3: The sprinkler shall have a Pop-Top™ Flush Plug
+L393@P3: pre-installed. The plug shall prevent debris from
+L394@P3: clogging the sprinkler during installation and allow for the system to be flushed before nozzling.
+L395@P3: The plug shall be bright orange in color and
+L396@P3: constructed of polypropylene material.
+L397@P3: 1804 SAM, 1806 SAM and 1812 SAM Circle
+L398@P3: Seal-A-Matic™ Pop-up Spray Sprinkler
+L399@P3: Optional Feature Specifications:
+L400@P3: When so indicated on the design, the 4”, 6” or 12”
+L401@P3: high pop-up spray sprinklers shall also include
+L402@P3: a Seal-A-Matic (SAM) check valve to prevent
+L403@P3: low-head drainage of up to 14 feet of head. This
+L404@P3: feature shall require the use of the bottom inlet
+L405@P3: only. These units shall be identifiable from the
+L406@P3: top with “SAM” marking on the cap. The sealing
+L407@P3: device shall be an integral part of the pop-up
+L408@P3: stem, removable through the top of the sprinkler, and shall seal against the bottom case inlet.
+L409@P3: It shall create no more than 1 psi pressure drop
+L410@P3: at the maximum rated flow.
+L411@P3: 1802 PRS, 1803 PRS, 1804 PRS, 1806 PRS and
+L412@P3: 1812 PRS Pressure Regulating Pop-up Spray
+L413@P3: Sprinkler
+L414@P3: Optional Feature Specifications:
+L415@P3: When so indicated on the design, the 2”, 3”, 4”, 6”
+L416@P3: or 12” high pop-up spray sprinkler shall also include a pressure regulating (PRS) device to prevent high pressure fogging to the nozzle stream.
+L417@P3: This regulating device shall be an integral part
+L418@P3: of the pop-up stem, removable through the top
+L419@P3: of the case. These units shall be identifiable from
+L420@P3: the top with “PRS-30” markings on the cap.
+L421@P3: The device shall regulate the nozzle pressure to
+L422@P3: 30 psi for inlet pressures from 35 to 70 psi. Below
+L423@P3: 35 psi the pressure loss shall not exceed 6 psi.
+L424@P3: 1804 P45, 1806 P45 and 1812 P45 Pressure
+L425@P3: Regulating Pop-up Spray Sprinkler
+L426@P3: Optional Feature Specifications:
+L427@P3: When so indicated on the design, the 4”, 6” or 12”
+L428@P3: high pop-up spray sprinkler shall also include
+L429@P3: a pressure regulating (PRS) device to prevent
+L430@P3: high pressure fogging to the nozzle stream. This
+L431@P3: regulating device shall be an integral part of the
+L432@P3: pop-up stem, removable through the top of the
+L433@P3: case. These units shall be identifiable from the
+L434@P3: top with “PRS-45” markings on the cap.
+L435@P3: The device shall regulate the nozzle pressure to
+L436@P3: 45 psi for inlet pressures from 50 to 70 psi. Below
+L437@P3: 50 psi the pressure loss shall not exceed 6 psi.
+L438@P3: 1804 SAM-PRS, 1806 SAM-PRS and
+L439@P3: 1812 SAM-PRS Seal-A-Matic Pressure Regulating Pop-up Spray Sprinkler
+L440@P3: Optional Feature Specifications:
+L441@P3: When so indicated on the design, the 4”, 6” or 12”
+L442@P3: high pop-up spray sprinkler shall also include a
+L443@P3: Seal-A-Matic (SAM) check valve and a pressure
+L444@P3: regulating (PRS) device. These units shall be
+L445@P3: identifiable from the top with “SAM-PRS-30”
+L446@P3: markings on the cap.
+L447@P3: The check valve shall prevent low-head drainage
+L448@P3: of up to 14 feet of head. The pressure regulating device shall prevent high pressure fogging
+L449@P3: of the nozzle stream by regulating the nozzle
+L450@P3: pressure to 30 psi for inlet pressures from 35 to
+L451@P3: 70 psi. Below 35 psi the pressure loss shall not
+L452@P3: exceed 6 psi. These models shall utilize the bottom inlet only.
+L453@P3: 1804 SAM-P45, 1806 SAM-P45, and 1812
+L454@P3: SAM-P45 Seal-A-Matic Pressure Regulating
+L455@P3: Pop-up Spray Sprinkler
+L456@P3: Optional Feature Specifications:
+L457@P3: When so indicated on the design, the 4”, 6”, or
+L458@P3: 12” high pop-up spray sprinkler shall also include a Seal-A-Matic (SAM) check valve and a 45
+L459@P3: psi pressure regulating (P45) device. These units
+L460@P3: shall be identifiable from the top with “SAMPRS-45” markings on the cap.
+L461@P3: The check valve shall prevent low-head drainage
+L462@P3: of up to 14 feet of head. The pressure regulating
+L463@P3: device shall prevent high pressure misting and
+L464@P3: undesirable performance of the nozzle stream
+L465@P3: by regulating the nozzle pressure to 45 psi for
+L466@P3: inlet pressures from 50 to 70 psi. Below 50 psi
+L467@P3: the pressure loss shall not exceed 6 psi. These
+L468@P3: models shall utilize the bottom inlet only.
+L469@P3: Specifications
+L470@P3: Rain Bird Corporation
+L471@P3: 6991 E. Southpoint Road
+L472@P3: Tucson, AZ 85756
+L473@P3: Phone: (520) 741-6100
+L474@P3: Fax: (520) 741-6522
+L475@P3: Rain Bird Technical Services
+L476@P3: (800) RAINBIRD (1-800-724-6247)
+L477@P3: (U.S. and Canada)
+L478@P3: Rain Bird Corporation
+L479@P3: 970 West Sierra Madre Avenue
+L480@P3: Azusa, CA 91702
+L481@P3: Phone: (626) 812-3400
+L482@P3: Fax: (626) 812-3411
+L483@P3: The Intelligent Use of Water™
+L484@P3: www.rainbird.com
+L485@P3: Rain Bird International, Inc.
+L486@P3: 1000 West Sierra Madre Ave.
+L487@P3: Azusa, CA 91702
+L488@P3: Phone: (626) 963-9311
+L489@P3: Fax: (626) 852-7343
+L490@P3: ® Registered Trademark of Rain Bird Corporation
+L491@P3: © 2021 Rain Bird Corporation 11/21
+

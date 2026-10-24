@@ -1,0 +1,147 @@
+[
+  {
+    "file": "hevan.pdf",
+    "bytes": 146511,
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf",
+    "officialAlias": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/chart_HE-VAN.pdf",
+    "sha256": "de8a1eb737a1118bf26d8868edc72ac4669b3cf0c7f89a61bf6387505c729b6f",
+    "pages": 3,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "u.pdf",
+    "bytes": 110088,
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/u-series-spray-nozzles-performance-charts.pdf",
+    "officialAlias": "https://www.rainbird.com/media/4183",
+    "sha256": "0ba2ca13bdbaea21ace7b65d8b53db3d00a4cd1d9bc4697e75e79a6a5b724b43",
+    "pages": 2,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "van.pdf",
+    "bytes": 295331,
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/van-series-spray-nozzles-performance-charts.pdf",
+    "officialAlias": "https://www.rainbird.com/media/4184",
+    "sha256": "8abc4810558a7e492c095f3e5487346f68bac0bbe7c7fddf2da6d1e2c6efda7f",
+    "pages": 4,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "mpr.pdf",
+    "bytes": 149505,
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+    "officialAlias": "https://www.rainbird.com/sites/default/files/media/documents/2020-09/mpr-spray-nozzle-performance-charts_1.pdf",
+    "sha256": "ac177ada4df4468df016f3b030ea4fe62baf5f23934c01d95ace2a15137afc4f",
+    "pages": 4,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "mpr-tech.pdf",
+    "bytes": 374806,
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "officialAlias": "https://www.rainbird.com/sites/default/files/media/documents/2018-02/ts_MPRNozzles.pdf",
+    "sha256": "4e5ff1fc2d5c6050feae5afff7a2ccf1b733e6b0a103900affd8e69bac5e202a",
+    "pages": 6,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "sq.pdf",
+    "bytes": 1628385,
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf",
+    "officialAlias": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf",
+    "sha256": "9fd2df5dcbca4b54df23b6cd100de38cacc7378cba7d1ebdb839deaa34450296",
+    "pages": 2,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "bubbler.pdf",
+    "bytes": 354631,
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+    "officialAlias": "https://www.rainbird.com/sites/default/files/media/documents/2021-02/ts_1400_1300af.pdf",
+    "sha256": "a2dc877e4db36b23b49c5ec186a8c3025e77b50d295da54554d891841ff5f11e",
+    "pages": 2,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "sq-3qtr.pdf",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-10/sq_nozzle_3_quarter_sell-sheet_102121_web.pdf",
+    "officialAlias": "https://www.rainbird.com/media/13444",
+    "bytes": 2033997,
+    "sha256": "355eae31ec1dec8b82313676c6e9961d0015f455220184881b813227f6c7b456",
+    "pages": 2,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "spray-poster.pdf",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "officialAlias": "https://www.rainbird.com/sites/default/files/media/documents/2019-07/D41505_04AP19_Spray_Nozzles_Poster_Final.pdf",
+    "bytes": 9066726,
+    "sha256": "3999832083c98ae75512ef305768ef0a1659f146676183323d400b03332843f9",
+    "pages": 1,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "sq-full-line.pdf",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2021-10/sq_nozzle_full_line_sell-sheet_102121_web.pdf",
+    "officialAlias": "https://www.rainbird.com/media/13443",
+    "bytes": 1149914,
+    "sha256": "e2e21cfb3f37d4fcdbd9bafee26b0c6a772472fa869409e0767fc12a4beb2012",
+    "pages": 2,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "hevan-tech.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/4680",
+    "bytes": 670528,
+    "sha256": "3ded15f748e9b5065520232e3cb084774715c7e9a556daf86aaf09c34f4fcc9c",
+    "pages": 4,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "u-tech.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/4736",
+    "bytes": 1248754,
+    "sha256": "a17d12dcbdc8aa7667f3a2c010e0ea916fb953725735eca9a6cde118df06df4d",
+    "pages": 4,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "rvan-us.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/5908",
+    "bytes": 2121016,
+    "sha256": "72575a9addb27794dc1385f81b0f9ef0dc53caa4a61853373b1f6a70172eb15a",
+    "pages": 2,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "rvan-metric.pdf",
+    "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+    "bytes": 3395595,
+    "sha256": "0bbf5841a8a2d63b435e7341d1e40f4dc5d91cb7665d29016b870c15cb09dcb9",
+    "pages": 2,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  },
+  {
+    "file": "rvan-tech.pdf",
+    "sourceUrl": "https://www.rainbird.com/media/5918",
+    "bytes": 7982890,
+    "sha256": "d8482d12ff7747c15fb7bf74eb798f5a252d7f381ea9e33f46bb159e43caf2b2",
+    "pages": 4,
+    "checkedAt": "2026-10-05",
+    "status": "downloaded"
+  }
+]

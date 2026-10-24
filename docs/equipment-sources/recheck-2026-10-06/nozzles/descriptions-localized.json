@@ -1,0 +1,170 @@
+{
+  "entries": [
+    {
+      "key": "equipment.description.kRain.bubblerCompensated",
+      "modelIds": [
+        "TB-025",
+        "TB-05",
+        "TB-10",
+        "TB-20"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ],
+      "sourcePage": 50
+    },
+    {
+      "key": "equipment.description.kRain.bubblerAdjustable",
+      "modelIds": [
+        "TB-ADJ"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ],
+      "sourcePage": 50
+    },
+    {
+      "key": "equipment.description.kRain.highLow",
+      "modelIds": [
+        "P15HL",
+        "FN-15HL"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ],
+      "sourcePage": 49
+    },
+    {
+      "key": "equipment.description.kRain.rpsSelect",
+      "modelIds": [
+        "RPS-Select"
+      ],
+      "sourceUrls": [
+        "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf"
+      ],
+      "sourcePage": 16
+    }
+  ],
+  "locales": {
+    "en": {
+      "equipment.description.kRain.bubblerCompensated": "Pressure-compensating bubbler for watering trees and large shrubs at the root zone. Its umbrella pattern delivers a fixed flow throughout the specified pressure range.",
+      "equipment.description.kRain.bubblerAdjustable": "Adjustable bubbler that applies water around trees and shrubs with an umbrella pattern. The flow is set on the head.",
+      "equipment.description.kRain.highLow": "Fixed-pattern nozzle with a long-throw portion on one side and a short-throw portion on the other. Available with male or female threads.",
+      "equipment.description.kRain.rpsSelect": "Gear-driven rotor with four built-in nozzles. A selector on top changes the active nozzle without removing and replacing it."
+    },
+    "ru": {
+      "equipment.description.kRain.bubblerCompensated": "Барботер с компенсацией давления для прикорневого полива деревьев и крупных кустарников. Подаёт воду зонтичной струёй с постоянным расходом в указанном диапазоне давления.",
+      "equipment.description.kRain.bubblerAdjustable": "Регулируемый барботер для полива вокруг деревьев и кустарников зонтичной струёй. Расход настраивается на самом устройстве.",
+      "equipment.description.kRain.highLow": "Сопло с фиксированной формой полива: дальняя часть с одной стороны и ближняя с другой. Выпускается с наружной или внутренней резьбой.",
+      "equipment.description.kRain.rpsSelect": "Ротор с редуктором и четырьмя встроенными соплами. Переключатель сверху выбирает рабочее сопло без его снятия и замены."
+    },
+    "es": {
+      "equipment.description.kRain.bubblerCompensated": "Borbotador autocompensante para regar la zona radicular de árboles y arbustos grandes. Su patrón de paraguas mantiene un caudal fijo dentro del intervalo de presión indicado.",
+      "equipment.description.kRain.bubblerAdjustable": "Borbotador regulable que riega alrededor de árboles y arbustos con un patrón de paraguas. El caudal se ajusta en el propio emisor.",
+      "equipment.description.kRain.highLow": "Boquilla de patrón fijo con una zona de largo alcance a un lado y otra de corto alcance al otro. Disponible con rosca macho o hembra.",
+      "equipment.description.kRain.rpsSelect": "Aspersor de turbina con cuatro boquillas integradas. Un selector superior cambia la boquilla activa sin tener que desmontarla y sustituirla."
+    },
+    "pt-BR": {
+      "equipment.description.kRain.bubblerCompensated": "Borbulhador com compensação de pressão para irrigar a zona das raízes de árvores e arbustos grandes. O padrão guarda-chuva mantém uma vazão fixa na faixa de pressão especificada.",
+      "equipment.description.kRain.bubblerAdjustable": "Borbulhador regulável que irriga ao redor de árvores e arbustos com um padrão guarda-chuva. A vazão é ajustada no próprio emissor.",
+      "equipment.description.kRain.highLow": "Bocal de padrão fixo com alcance longo de um lado e curto do outro. Disponível com rosca macho ou fêmea.",
+      "equipment.description.kRain.rpsSelect": "Aspersor rotor com acionamento por engrenagens e quatro bocais integrados. Um seletor na parte superior troca o bocal ativo sem removê-lo e substituí-lo."
+    },
+    "fr": {
+      "equipment.description.kRain.bubblerCompensated": "Bubbler autorégulant pour arroser les racines des arbres et des grands arbustes. Son jet en parapluie assure un débit constant dans la plage de pression indiquée.",
+      "equipment.description.kRain.bubblerAdjustable": "Bubbler réglable qui arrose autour des arbres et des arbustes avec un jet en parapluie. Le débit se règle directement sur la tête.",
+      "equipment.description.kRain.highLow": "Buse à forme d’arrosage fixe, avec une longue portée d’un côté et une courte portée de l’autre. Disponible avec filetage mâle ou femelle.",
+      "equipment.description.kRain.rpsSelect": "Arroseur à turbine avec quatre buses intégrées. Un sélecteur sur le dessus change la buse active sans démontage ni remplacement."
+    },
+    "it": {
+      "equipment.description.kRain.bubblerCompensated": "Gorgogliatore autocompensante per irrigare la zona radicale di alberi e grandi arbusti. Il getto a ombrello mantiene una portata costante nell’intervallo di pressione indicato.",
+      "equipment.description.kRain.bubblerAdjustable": "Gorgogliatore regolabile che irriga attorno ad alberi e arbusti con un getto a ombrello. La portata si regola direttamente sulla testina.",
+      "equipment.description.kRain.highLow": "Ugello a schema fisso con una zona a lunga gittata su un lato e una a corta gittata sull’altro. Disponibile con filettatura maschio o femmina.",
+      "equipment.description.kRain.rpsSelect": "Irrigatore a turbina con quattro ugelli integrati. Un selettore superiore cambia l’ugello attivo senza smontarlo e sostituirlo."
+    },
+    "de": {
+      "equipment.description.kRain.bubblerCompensated": "Druckkompensierender Bubbler zur Bewässerung des Wurzelbereichs von Bäumen und großen Sträuchern. Sein Schirmstrahl liefert im angegebenen Druckbereich einen konstanten Durchfluss.",
+      "equipment.description.kRain.bubblerAdjustable": "Einstellbarer Bubbler zur Bewässerung rund um Bäume und Sträucher mit einem Schirmstrahl. Der Durchfluss wird direkt am Kopf eingestellt.",
+      "equipment.description.kRain.highLow": "Düse mit festem Beregnungsbild: große Wurfweite auf einer Seite und kurze Wurfweite auf der anderen. Mit Außen- oder Innengewinde erhältlich.",
+      "equipment.description.kRain.rpsSelect": "Getrieberegner mit vier integrierten Düsen. Ein Wahlschalter auf der Oberseite wechselt die aktive Düse ohne Ausbau und Austausch."
+    },
+    "ar": {
+      "equipment.description.kRain.bubblerCompensated": "نافورة ري معوّضة للضغط لري منطقة جذور الأشجار والشجيرات الكبيرة. توزّع الماء بنمط مظلي وبمعدل تدفق ثابت ضمن نطاق الضغط المحدد.",
+      "equipment.description.kRain.bubblerAdjustable": "نافورة ري قابلة للضبط توزّع الماء حول الأشجار والشجيرات بنمط مظلي. يُضبط التدفق من رأس الجهاز مباشرةً.",
+      "equipment.description.kRain.highLow": "فوهة ذات نمط ري ثابت، بمدى طويل في جانب ومدى قصير في الجانب الآخر. تتوفر بسن لولبي خارجي أو داخلي.",
+      "equipment.description.kRain.rpsSelect": "رشاش دوّار يعمل بالتروس ويضم أربع فوهات مدمجة. يتيح المفتاح العلوي اختيار الفوهة المستخدمة دون فكها واستبدالها."
+    },
+    "tr": {
+      "equipment.description.kRain.bubblerCompensated": "Ağaçların ve büyük çalıların kök bölgesini sulamak için basınç dengeleyici fıskiye. Şemsiye biçimli su dağılımı, belirtilen basınç aralığında sabit debi sağlar.",
+      "equipment.description.kRain.bubblerAdjustable": "Ağaç ve çalıların çevresini şemsiye biçiminde sulayan ayarlanabilir fıskiye. Debi doğrudan başlık üzerinden ayarlanır.",
+      "equipment.description.kRain.highLow": "Bir tarafında uzun, diğer tarafında kısa atış mesafesi olan sabit sulama desenli nozul. İç veya dış dişli seçenekleri bulunur.",
+      "equipment.description.kRain.rpsSelect": "Dört dahili nozulu bulunan dişli tahrikli rotor. Üstteki seçici, nozulu söküp değiştirmeden etkin nozulu seçer."
+    },
+    "pl": {
+      "equipment.description.kRain.bubblerCompensated": "Emiter zalewowy z kompensacją ciśnienia do nawadniania strefy korzeni drzew i dużych krzewów. Parasolowy strumień zapewnia stały przepływ w podanym zakresie ciśnienia.",
+      "equipment.description.kRain.bubblerAdjustable": "Regulowany emiter zalewowy nawadniający obszar wokół drzew i krzewów strumieniem parasolowym. Przepływ ustawia się bezpośrednio na głowicy.",
+      "equipment.description.kRain.highLow": "Dysza o stałym kształcie nawadniania, z długim zasięgiem po jednej stronie i krótkim po drugiej. Dostępna z gwintem zewnętrznym lub wewnętrznym.",
+      "equipment.description.kRain.rpsSelect": "Zraszacz przekładniowy z czterema wbudowanymi dyszami. Selektor na górze pozwala wybrać aktywną dyszę bez jej demontażu i wymiany."
+    },
+    "zh-CN": {
+      "equipment.description.kRain.bubblerCompensated": "压力补偿涌泉喷头，适用于树木和大型灌木的根区灌溉。伞形出水在规定压力范围内保持恒定流量。",
+      "equipment.description.kRain.bubblerAdjustable": "可调式涌泉喷头，以伞形水流灌溉树木和灌木周围。流量可直接在喷头上调节。",
+      "equipment.description.kRain.highLow": "固定喷洒形状的喷嘴，一侧射程较远，另一侧射程较近。提供外螺纹和内螺纹型号。",
+      "equipment.description.kRain.rpsSelect": "齿轮驱动旋转喷头，内置四个喷嘴。通过顶部选择器切换工作喷嘴，无需拆卸更换。"
+    },
+    "nl": {
+      "equipment.description.kRain.bubblerCompensated": "Drukcompenserende bubbler voor de bewatering van de wortelzone van bomen en grote struiken. Het paraplupatroon levert een constant debiet binnen het opgegeven drukbereik.",
+      "equipment.description.kRain.bubblerAdjustable": "Instelbare bubbler die rondom bomen en struiken water geeft met een paraplupatroon. Het debiet wordt rechtstreeks op de kop ingesteld.",
+      "equipment.description.kRain.highLow": "Sproeimond met een vast sproeibeeld, met een grote worp aan de ene kant en een korte worp aan de andere. Verkrijgbaar met binnen- of buitendraad.",
+      "equipment.description.kRain.rpsSelect": "Tandwielaangedreven sproeier met vier ingebouwde sproeimonden. Met een keuzeknop bovenop wisselt u van sproeimond zonder deze te demonteren en vervangen."
+    },
+    "cs": {
+      "equipment.description.kRain.bubblerCompensated": "Tlakově kompenzovaný zaplavovací zavlažovač pro kořenovou zónu stromů a velkých keřů. Deštníkový proud udržuje stálý průtok v uvedeném rozsahu tlaku.",
+      "equipment.description.kRain.bubblerAdjustable": "Nastavitelný zaplavovací zavlažovač zalévá okolí stromů a keřů deštníkovým proudem. Průtok se nastavuje přímo na hlavici.",
+      "equipment.description.kRain.highLow": "Tryska s pevným tvarem zavlažované plochy, s dlouhým dostřikem na jedné straně a krátkým na druhé. Dostupná s vnějším nebo vnitřním závitem.",
+      "equipment.description.kRain.rpsSelect": "Převodový rotační postřikovač se čtyřmi vestavěnými tryskami. Horní volič přepíná aktivní trysku bez její demontáže a výměny."
+    },
+    "el": {
+      "equipment.description.kRain.bubblerCompensated": "Εκτοξευτήρας πλημμύρας με αντιστάθμιση πίεσης για τη ριζική ζώνη δέντρων και μεγάλων θάμνων. Η ροή σε σχήμα ομπρέλας διατηρεί σταθερή παροχή στο καθορισμένο εύρος πίεσης.",
+      "equipment.description.kRain.bubblerAdjustable": "Ρυθμιζόμενος εκτοξευτήρας πλημμύρας που ποτίζει γύρω από δέντρα και θάμνους με ροή σε σχήμα ομπρέλας. Η παροχή ρυθμίζεται απευθείας στην κεφαλή.",
+      "equipment.description.kRain.highLow": "Ακροφύσιο σταθερού σχήματος διαβροχής, με μεγάλη εμβέλεια στη μία πλευρά και μικρή στην άλλη. Διατίθεται με αρσενικό ή θηλυκό σπείρωμα.",
+      "equipment.description.kRain.rpsSelect": "Περιστροφικός εκτοξευτήρας με γρανάζια και τέσσερα ενσωματωμένα ακροφύσια. Ο επάνω επιλογέας αλλάζει το ενεργό ακροφύσιο χωρίς αφαίρεση και αντικατάσταση."
+    },
+    "hu": {
+      "equipment.description.kRain.bubblerCompensated": "Nyomáskompenzált árasztó öntözőfej fák és nagyobb cserjék gyökérzónájának öntözésére. Ernyőszerű vízképe a megadott nyomástartományban állandó vízhozamot biztosít.",
+      "equipment.description.kRain.bubblerAdjustable": "Állítható árasztó öntözőfej, amely ernyőszerű vízképpel öntözi a fák és cserjék környezetét. A vízhozam közvetlenül a fejen állítható.",
+      "equipment.description.kRain.highLow": "Rögzített szórásképes fúvóka, egyik oldalán hosszú, a másikon rövid szórástávolsággal. Külső vagy belső menettel kapható.",
+      "equipment.description.kRain.rpsSelect": "Fogaskerekes rotoros szórófej négy beépített fúvókával. A felső választóval a fúvóka kiszerelése és cseréje nélkül váltható az aktív fúvóka."
+    },
+    "ro": {
+      "equipment.description.kRain.bubblerCompensated": "Bubbler cu compensare de presiune pentru udarea zonei rădăcinilor arborilor și arbuștilor mari. Jetul tip umbrelă menține un debit constant în intervalul de presiune specificat.",
+      "equipment.description.kRain.bubblerAdjustable": "Bubbler reglabil care udă în jurul arborilor și arbuștilor cu un jet tip umbrelă. Debitul se reglează direct pe capul dispozitivului.",
+      "equipment.description.kRain.highLow": "Duză cu formă fixă de udare, cu rază lungă pe o parte și scurtă pe cealaltă. Disponibilă cu filet exterior sau interior.",
+      "equipment.description.kRain.rpsSelect": "Aspersor rotativ cu angrenaje și patru duze integrate. Selectorul superior schimbă duza activă fără demontarea și înlocuirea acesteia."
+    },
+    "sk": {
+      "equipment.description.kRain.bubblerCompensated": "Tlakovo kompenzovaný zaplavovací zavlažovač pre koreňovú zónu stromov a veľkých kríkov. Dáždnikový prúd udržiava stály prietok v uvedenom rozsahu tlaku.",
+      "equipment.description.kRain.bubblerAdjustable": "Nastaviteľný zaplavovací zavlažovač polieva okolie stromov a kríkov dáždnikovým prúdom. Prietok sa nastavuje priamo na hlavici.",
+      "equipment.description.kRain.highLow": "Tryska s pevným tvarom zavlažovanej plochy, s dlhým dostrekom na jednej strane a krátkym na druhej. Dostupná s vonkajším alebo vnútorným závitom.",
+      "equipment.description.kRain.rpsSelect": "Prevodový rotačný postrekovač so štyrmi zabudovanými tryskami. Horný volič prepína aktívnu trysku bez jej demontáže a výmeny."
+    },
+    "he": {
+      "equipment.description.kRain.bubblerCompensated": "מבעבע מווסת לחץ להשקיית אזור השורשים של עצים ושיחים גדולים. דפוס הזרימה דמוי המטרייה שומר על ספיקה קבועה בטווח הלחצים שצוין.",
+      "equipment.description.kRain.bubblerAdjustable": "מבעבע מתכוונן המשקה סביב עצים ושיחים בדפוס דמוי מטרייה. הספיקה מכוונת ישירות בראש המכשיר.",
+      "equipment.description.kRain.highLow": "פייה בעלת דפוס השקיה קבוע, עם טווח ארוך בצד אחד וטווח קצר בצד השני. זמינה עם הברגה חיצונית או פנימית.",
+      "equipment.description.kRain.rpsSelect": "ממטיר רוטורי המונע בגלגלי שיניים, עם ארבע פיות מובנות. בורר בחלק העליון מחליף את הפייה הפעילה ללא פירוק והחלפה שלה."
+    },
+    "uk": {
+      "equipment.description.kRain.bubblerCompensated": "Барботер із компенсацією тиску для прикореневого поливу дерев і великих кущів. Подає воду парасольковим струменем зі сталою витратою в зазначеному діапазоні тиску.",
+      "equipment.description.kRain.bubblerAdjustable": "Регульований барботер для поливу навколо дерев і кущів парасольковим струменем. Витрата налаштовується на самому пристрої.",
+      "equipment.description.kRain.highLow": "Сопло з фіксованою формою поливу: дальня частина з одного боку та ближня з іншого. Випускається із зовнішньою або внутрішньою різьбою.",
+      "equipment.description.kRain.rpsSelect": "Ротор із редуктором і чотирма вбудованими соплами. Перемикач зверху вибирає робоче сопло без його зняття та заміни."
+    },
+    "ja": {
+      "equipment.description.kRain.bubblerCompensated": "樹木や大型低木の根域に水を供給する圧力補償式バブラーです。傘状の水流で、指定圧力範囲内では一定の流量を保ちます。",
+      "equipment.description.kRain.bubblerAdjustable": "樹木や低木の周囲に傘状の水流で散水する調整式バブラーです。流量はヘッド本体で調整できます。",
+      "equipment.description.kRain.highLow": "一方は遠く、反対側は近くまで散水する固定パターンのノズルです。おねじ式とめねじ式があります。",
+      "equipment.description.kRain.rpsSelect": "4つのノズルを内蔵したギア駆動式ローターです。上部のセレクターで、ノズルを取り外して交換せずに使用するノズルを切り替えられます。"
+    }
+  }
+}

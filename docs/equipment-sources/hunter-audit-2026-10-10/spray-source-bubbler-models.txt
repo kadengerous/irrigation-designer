@@ -1,0 +1,73 @@
+https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles
+Retrieved 2026-10-10 via native web tool.
+L97:
+L98: [Button: Add to List]
+L99: ## cite26†PCN-50
+L100:
+L101: Pressure-Compensating Bubbler Nozzle, flood pattern, 0.50 GPM, female thread
+L102:
+L103: Pressure-Compensating Bubbler Nozzle, flood pattern, 1.9 l/min, female thread
+L104:
+L105: [Button: Add to List]
+L106:
+L107: ## Filter
+L108:
+L109: ## Filter
+L110:
+L111: ## Arc Option
+L112:
+L113:   * cite27†50° (2)
+L114:   * cite28†90º (2)
+L115:   * cite29†180º (2)
+L116:   * cite30†360º (2)
+L117: ## Nozzle Type
+L118:
+L119:   * cite31†½" threaded bubbler (4)
+L120:   * cite32†Adjustable flow (1)
+L121:   * cite33†Bubbler nozzle (8)
+L122:   * cite34†Multi-stream (8)
+L123: Model  | Description  | Add to List
+L124: --- | --- | ---
+L125: cite35†MSBN-25V | Multi-Stream Bubbler Nozzle, pressure-compensating, 0.25 GPM, 50° dual streams, female thread  | cite9†+
+L126: cite36†MSBN-50V | Multi-Stream Bubbler Nozzle, pressure-compensating, 0.50 GPM, 50° dual streams, female thread  | cite9†+
+L127: cite37†MSBN-25Q | Multi-Stream Bubbler Nozzle, pressure-compensating, 0.25 GPM, 90°, female thread  | cite9†+
+L128: cite38†MSBN-50Q | Multi-Stream Bubbler Nozzle, pressure-compensating, 0.50 GPM, 90°, female thread  | cite9†+
+L129: cite23†MSBN-50H | Multi-Stream Bubbler Nozzle, pressure-compensating, 0.50 GPM, 180°, female thread  | cite9†+
+L130: cite39†MSBN-10H | Multi-Stream Bubbler Nozzle, pressure-compensating, 1.0 GPM, 180°, female thread  | cite9†+
+L131: cite40†MSBN-10F | Multi-Stream Bubbler Nozzle, pressure-compensating, 1.0 GPM, 360°, female thread  | cite9†+
+L132: cite41†MSBN-20F | Multi-Stream Bubbler Nozzle, pressure-compensating, 2.0 GPM, 360°, female thread  | cite9†+
+L133: cite24†PCN-25 | Pressure-Compensating Bubbler Nozzle, flood pattern, 0.25 GPM, female thread  | cite9†+
+L134: cite26†PCN-50 | Pressure-Compensating Bubbler Nozzle, flood pattern, 0.50 GPM, female thread  | cite9†+
+L135: cite42†PCN-10 | Pressure-Compensating Bubbler Nozzle, flood pattern, 1.0 GPM, female thread  | cite9†+
+L136: cite43†PCN-20 | Pressure-Compensating Bubbler Nozzle, flood pattern, 2.0 GPM, female thread  | cite9†+
+L137: cite44†5-CST-B | Dual-Stream Bubbler Nozzle, 5' radius, 0.50 GPM  | cite9†+
+L138: cite45†PCB-25 | Pressure-Compensating Bubbler, flood pattern, 0.25 GPM, ½" thread  | cite9†+
+L139: cite22†PCB-50 | Pressure-Compensating Bubbler, flood pattern, 0.50 GPM, ½" thread  | cite9†+
+L140: cite46†PCB-10 | Pressure-Compensating Bubbler, flood pattern, 1.0 GPM, ½" thread  | cite9†+
+L141: cite47†PCB-20 | Pressure-Compensating Bubbler, flood pattern, 2.0 GPM, ½" thread  | cite9†+
+L142: cite48†PCB-25-R | Pressure-Compensating Bubbler, flood pattern, 0.25 GPM, ½" thread, reclaimed water ID  | cite9†+
+L143: cite49†PCB-50-R | Pressure-Compensating Bubbler, flood pattern, 0.50 GPM, ½" thread, reclaimed water ID  | cite9†+
+L144: cite50†PCB-10-R | Pressure-Compensating Bubbler, flood pattern, 1.0 GPM, ½" thread, reclaimed water ID  | cite9†+
+L145: Showing 1 - 20 of 22
+L146:
+L147:   * 1
+L148:   * cite51†2
+L149:   * cite51†›
+L150:   * cite51†»
+L151:
+L152: cite52†Image: Bubblers & Bubbler Nozzles
+L153:
+L154: [Input]
+L155:
+L156: Bubblers & Bubbler Nozzles
+L157:
+L158: Bubblers & Bubbler Nozzles
+L159:
+L160: Ordering Number [Input]
+L161:
+L162: [Input] [Input]
+L163:
+L164: Qty [Input]
+L165:
+L166: Notes [Input: Add a note...]
+L167:

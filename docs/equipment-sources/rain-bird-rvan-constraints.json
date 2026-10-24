@@ -1,0 +1,46 @@
+{
+  "manufacturerId": "rain-bird",
+  "series": "R-VAN",
+  "sourceUrl": "https://www.rainbird.com/media/5918",
+  "sourceVersion": "D41159B, copyright 2024, metric Technical Specifications, pages 1–4",
+  "verifiedOn": "2026-10-04",
+  "pressureMinBar": 2.1,
+  "pressureMaxBar": 3.8,
+  "recommendedPressureBar": 3.1,
+  "recommendedPressureIsDefault": false,
+  "arcAdjustmentDeg": [45, 270],
+  "fullCircleArcDeg": 360,
+  "minimumManuallyAdjustedRadiusM": {
+    "R-VAN14": 2.4,
+    "R-VAN14-360": 2.4,
+    "R-VAN18": 4.0,
+    "R-VAN18-360": 4.0,
+    "R-VAN24": 5.2,
+    "R-VAN24-360": 5.2
+  },
+  "radiusAdjustment": {
+    "flowPolicy": "unknown",
+    "sourcePage": 2,
+    "note": "Manufacturer documents radius adjustment and minimum radii, but a quantitative flow law at manually reduced radius was not found. Matched precipitation claims alone were not used to infer a flow formula."
+  },
+  "nozzleThread": "rain-bird-spray-interface",
+  "threadDimensions": null,
+  "threadGender": null,
+  "compatibleBodyFamiliesPublished": ["Rain Bird 1800 Series", "Rain Bird RD1800 Series"],
+  "recommendedBodyRegulationBar": 3.1,
+  "compatibleCatalogBodyFamilyIds": [
+    "rain-bird:1800", "rain-bird:1800-PRS30", "rain-bird:1800-PRS45",
+    "rain-bird:1800-SAM", "rain-bird:1800-SAM-PRS30", "rain-bird:1800-SAM-PRS45"
+  ],
+  "mountingSourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2022-01/1800-series-tech-spec.pdf",
+  "compatibilityNote": "1800 specification explicitly accepts R-VAN; R-VAN specification recommends 1800 or RD1800 with 45 psi regulation. Interface compatibility does not imply that a PRS30 body meets the 3.1 bar recommended operating pressure.",
+  "testPopUpHeightMm": 102,
+  "trajectoryRangeDeg": [4, 34],
+  "singleRowApplicationsRecommended": false,
+  "notes": [
+    "Source page 2 states model-specific minimum reduced radii.",
+    "Source page 4 recommends 1800SAM-P45 in sandy environments.",
+    "Radius represents recommended head-to-head spacing; square/triangle precipitation uses spacing at 50% of throw diameter.",
+    "No R-VAN performance rows are duplicated here: the owner already has the nine-model, 198-row current performance dataset."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "checkedOn": "2026-10-06",
+  "items": 26,
+  "rotors": 9,
+  "bodies": 17,
+  "baseRows": 360,
+  "reducedRows": 162,
+  "hydraulicallyVerifiedBaseRows": 357,
+  "hydraulicallyVerifiedReducedRows": 159,
+  "unresolvedHydraulicBaseRows": 3,
+  "unresolvedHydraulicReducedRows": 3,
+  "nullPrecipitationCells": 107,
+  "unexpectedStoredValueMismatches": 0,
+  "sourceCatalogSha256": "2055f3f861c1767d18223b3724b619bb7bdbf457ce51c5508b0f1dfbe65c8af9"
+}

@@ -1,0 +1,78 @@
+{
+  "verifiedOn": "2026-10-10",
+  "method": "Fresh native web retrieval only. No external CLI download or browser session.",
+  "sources": [
+    {
+      "id": "catalog2026",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "edition": "2026, printed pp29–33,38–43,50",
+      "limits": "Current catalog; primary dimensional/pressure authority. No adjustable-bubbler setting table."
+    },
+    {
+      "id": "pros-brochure",
+      "url": "https://www.krain.com/content/files/images/landingpages/sprays/pro-s%20sprays/pros%20sprays%20product%20brochure.pdf",
+      "edition": "75020001 Rev.10, 1page",
+      "limits": "Independent Pro-S geometry,110psi body rating and PR options."
+    },
+    {
+      "id": "pros-pr30",
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/pro-s%20sprays%20pressure%20regulator%20pr30.pdf",
+      "edition": "Undated, currently linked,2pages",
+      "limits": "Model-specific30psi outlet guarantee only through100psi inlet; no minimum differential stated."
+    },
+    {
+      "id": "pros-pr40",
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/pro-s%20sprays%20pressure%20regulator%20pr40.pdf",
+      "edition": "Undated, currently linked,2pages",
+      "limits": "Model-specific40psi outlet guarantee only through100psi inlet; no minimum differential stated."
+    },
+    {
+      "id": "np-brochure",
+      "url": "https://www.krain.com/content/files/images/landingpages/sprays/np%20sprays/np%20sprays%20product%20brochure.pdf",
+      "edition": "71020001 Rev.02,2pages",
+      "limits": "70psi printed with incorrect3.5bar; current catalog resolves to4.8bar."
+    },
+    {
+      "id": "kspray-brochure",
+      "url": "https://www.krain.com/content/files/images/landingpages/sprays/k-sprays/ksprays%20product%20brochure.pdf",
+      "edition": "70011110 Rev.2,2pages",
+      "limits": "Male nozzle interface,20–70psi body and four models."
+    },
+    {
+      "id": "bubbler-brochure",
+      "url": "https://www.krain.com/content/files/images/landingpages/bubblers/bubblers%20product%20brochure.pdf",
+      "edition": "Rev.02,1page",
+      "limits": "Fixed flows agree;50psi incorrectly paired with2.8bar. TB-ADJ1.36–5.9GPM."
+    },
+    {
+      "id": "bubblers",
+      "url": "https://www.krain.com/bubblers",
+      "edition": "Current category page",
+      "limits": "All five models; four fixed nominal flows."
+    },
+    {
+      "id": "tb-adj",
+      "url": "https://www.krain.com/bubblers/bubbler-adjustable-tb--adj",
+      "edition": "Current product page",
+      "limits": "Title5.9GPM conflicts with description0.1–4.5GPM; user reviews excluded as evidence."
+    },
+    {
+      "id": "new-rn",
+      "url": "https://www.krain.com/fully-adjustable-rotary-nozzles",
+      "edition": "Current product page",
+      "limits": "40psi recommended conflicts with dated2026catalog30psi; individually matched family."
+    },
+    {
+      "id": "old-rn-spec",
+      "url": "https://www.krain.com/content/files/images/landingpages/written%20specifications/rotary%20nozzle%20product%20specifications.pdf",
+      "edition": "Undated, older90–270degree generation,2pages",
+      "limits": "Matched ≤0.6in/h with50%diameter spacing. Not a cross-generation guarantee."
+    },
+    {
+      "id": "new-rn-brochure",
+      "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/fully%20adjustable%20rotary%20nozzle%20product%20brochure.pdf",
+      "edition": "Undated,2pages",
+      "limits": "Contains25/30%radius conflict and obsolete metric precipitation; use currentcatalog for those cells."
+    }
+  ]
+}

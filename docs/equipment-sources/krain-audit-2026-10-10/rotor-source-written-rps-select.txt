@@ -1,0 +1,36 @@
+ (https://www.krain.com/content/files/images/landingpages/written%20specifications/rps%20select%20gear%20drive%20rotor%20product%20specifications.pdf)
+citeturn482view0 [wordlim: 200] Crawled: 3 weeks ago; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.krain.com/content/files/images/landingpages/written%20specifications/rps%20select%20gear%20drive%20rotor%20product%20specifications.pdf","lineno":null}); Total lines: 33
+L0@P0: Product Specifications
+L1@P0: An ISO 9001 Certified Company I Customer Service 1.800.735.7246 I Technical Support 561.844.1002 x129
+L2@P0: RPS Select Gear Drive Rotor / Professional Series Sprinkler
+L3@P0: Model # 60003, 60003-CV
+L4@P0: The sprinkler shall be of the gear-driven, rotary type, capable of covering a _______ foot (m) radius at
+L5@P0: _______ PSI (bar;kPa) with a discharge rate of _______ inches per hour (mm/h; l/m). The sprinkler shall be
+L6@P0: available with four (4) built-in nozzles with a trajectory of 26° discharging from 1.3 to 6.8 GPM (4.9-25.8 l/m).
+L7@P0: The nozzles shall be changed by using a flathead screwdriver to turn the nozzle selector located on the top of
+L8@P0: the sprinkler head. Nozzle settings shall match the arc setting of the sprinkler for matched precipitation. The
+L9@P0: sprinkler shall have radius adjustment capabilities by means of a stainless-steel nozzle retainer and radius
+L10@P0: adjustment screw.
+L11@P0: The sprinkler shall perform as a full circle and as an adjustable part-circle configuration in a single unit. The
+L12@P0: sprinkler arc shall be adjustable from 40° to 360° by setting the top arc adjustment indicator to 90°, 180°, 270°,
+L13@P0: or 360°. The unit shall be adjustable in all phases of installation (i.e., before installation, after installation while
+L14@P0: static, and after installation while in operation) by turning the sprinkler head riser. The sprinkler shall have a
+L15@P0: top arc adjustment carried out by the rotation of a flat blade screwdriver within the top cover. The sprinkler
+L16@P0: shall have a rubber cover firmly attached to the top of the sprinkler riser to seal dirt and increase product
+L17@P0: durability.
+L18@P0: The sprinkler shall have a minimum of 4-inch (10.1 cm) pop-up stroke to bring the rotating nozzle turret into a
+L19@P0: clean environment. Pop-up height as measured from the top of the cap at installation to the middle of the
+L20@P0: nozzle opening shall be _______ inches (cm). The sprinkler shall have an exposed surface diameter after
+L21@P0: installation of _______ inches (cm) and have an overall height of _______ inches (cm). The unit shall have a
+L22@P0: 3/4-inch (1.9 cm) Female National Pipe Thread (FNPT) inlet.
+L23@P0: The body and riser of the sprinkler shall be constructed of corrosion resistant, impact resistant, heavy duty
+L24@P0: ABS. It shall have a stainless-steel spring for positive retraction of the riser when irrigation is complete. The
+L25@P0: sprinkler shall be serviceable after installation by unscrewing the body cap, removing the riser assembly, and
+L26@P0: extracting the inlet filter basket. The inlet filter basket shall protect the drive from clogging and shall be
+L27@P0-1: removed for cleaning and flushing the system. The sprinkler shall include a universal plastic adjustment tool.Product Specifications
+L28@P1: An ISO 9001 Certified Company I Customer Service 1.800.735.7246 I Technical Support 561.844.1002 x129
+L29@P1: The sprinkler may be equipped with an optional drain check valve (60003-CV) to prevent low head drainage
+L30@P1: and be capable of checking up to 10 feet (3 m) in elevation change.
+L31@P1: The sprinkler shall carry a seven-year trade, exchange warranty.
+L32@P1: The sprinkler shall be manufactured by K-Rain Manufacturing Corporation of Riviera Beach, Florida.
+

@@ -1,0 +1,1031 @@
+{
+  "summary": {
+    "verifiedOn": "2026-10-05",
+    "modelCount": 16,
+    "rotorModels": 7,
+    "rvanModels": 9,
+    "performanceRowsChecked": 765,
+    "precipitationCellsChecked": 1530,
+    "publishedNonNullCellsMatching": 1504,
+    "rawMissingCells": 26,
+    "missingRows": 13,
+    "missingRowModels": 3,
+    "newVerifiedPublishedCellCorrections": 0,
+    "rvanPublishedStripRowsAvailableButCurrentlySuppressed": 18,
+    "rvanStripModels": 3
+  },
+  "publishedCellPatches": [],
+  "models": [
+    {
+      "itemId": "rain-bird:3504-PC",
+      "nozzleCount": 6,
+      "performanceRows": 36,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "nozzleCount": 24,
+      "performanceRows": 136,
+      "nullPrecipitationCells": 10,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "nozzleCount": 24,
+      "performanceRows": 136,
+      "nullPrecipitationCells": 10,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "nozzleCount": 12,
+      "performanceRows": 60,
+      "nullPrecipitationCells": 6,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:6504-PC",
+      "nozzleCount": 8,
+      "performanceRows": 60,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:6504-FC",
+      "nozzleCount": 8,
+      "performanceRows": 60,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:8005",
+      "nozzleCount": 12,
+      "performanceRows": 79,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:R-VAN14",
+      "nozzleCount": 1,
+      "performanceRows": 54,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:R-VAN18",
+      "nozzleCount": 1,
+      "performanceRows": 54,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:R-VAN24",
+      "nozzleCount": 1,
+      "performanceRows": 54,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:R-VAN18-360",
+      "nozzleCount": 1,
+      "performanceRows": 6,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:R-VAN14-360",
+      "nozzleCount": 1,
+      "performanceRows": 6,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:R-VAN24-360",
+      "nozzleCount": 1,
+      "performanceRows": 6,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "square",
+      "note": "All non-null precipitation cells match official published tables."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-SST",
+      "nozzleCount": 1,
+      "performanceRows": 6,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "strip",
+      "note": "Rate suppressed by current computeFlow because basis is strip."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-LCS",
+      "nozzleCount": 1,
+      "performanceRows": 6,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "strip",
+      "note": "Rate suppressed by current computeFlow because basis is strip."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-RCS",
+      "nozzleCount": 1,
+      "performanceRows": 6,
+      "nullPrecipitationCells": 0,
+      "publishedBasis": "strip",
+      "note": "Rate suppressed by current computeFlow because basis is strip."
+    }
+  ],
+  "unresolvedPublishedRows": [
+    {
+      "itemId": "rain-bird:5004-PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 0,
+      "pressureBar": 2.0,
+      "arcDeg": 180,
+      "radiusM": 11.8,
+      "flowLMin": 24.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 32.0,
+        "precipTriangleMmH": 37.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 20.683711577133007,
+        "triangleMmHr": 23.883492893796642,
+        "runtime10mmSquareMin": 29.008333333333333,
+        "runtime10mmTriangleMin": 25.12195358811359
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 1,
+      "pressureBar": 2.5,
+      "arcDeg": 180,
+      "radiusM": 13.3,
+      "flowLMin": 27.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 24.0,
+        "precipTriangleMmH": 28.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 18.316467861382776,
+        "triangleMmHr": 21.15003530074495,
+        "runtime10mmSquareMin": 32.75740740740741,
+        "runtime10mmTriangleMin": 28.368746976931366
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 2,
+      "pressureBar": 3.0,
+      "arcDeg": 180,
+      "radiusM": 13.4,
+      "flowLMin": 30.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 23.0,
+        "precipTriangleMmH": 27.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 20.049008687903765,
+        "triangleMmHr": 23.15060112589277,
+        "runtime10mmSquareMin": 29.926666666666666,
+        "runtime10mmTriangleMin": 25.9172535839223
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 3,
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "radiusM": 14.9,
+      "flowLMin": 32.4,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 20.0,
+        "precipTriangleMmH": 24.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 17.5127246520427,
+        "triangleMmHr": 20.221952584201297,
+        "runtime10mmSquareMin": 34.260802469135804,
+        "runtime10mmTriangleMin": 29.670725292312227
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004-PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 4,
+      "pressureBar": 4.0,
+      "arcDeg": 180,
+      "radiusM": 15.2,
+      "flowLMin": 34.2,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 21.0,
+        "precipTriangleMmH": 25.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 17.763157894736842,
+        "triangleMmHr": 20.511127984368287,
+        "runtime10mmSquareMin": 33.77777777777778,
+        "runtime10mmTriangleMin": 29.252413638941036
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 0,
+      "pressureBar": 2.0,
+      "arcDeg": 180,
+      "radiusM": 11.8,
+      "flowLMin": 24.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 32.0,
+        "precipTriangleMmH": 37.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 20.683711577133007,
+        "triangleMmHr": 23.883492893796642,
+        "runtime10mmSquareMin": 29.008333333333333,
+        "runtime10mmTriangleMin": 25.12195358811359
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 1,
+      "pressureBar": 2.5,
+      "arcDeg": 180,
+      "radiusM": 13.3,
+      "flowLMin": 27.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 24.0,
+        "precipTriangleMmH": 28.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 18.316467861382776,
+        "triangleMmHr": 21.15003530074495,
+        "runtime10mmSquareMin": 32.75740740740741,
+        "runtime10mmTriangleMin": 28.368746976931366
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 2,
+      "pressureBar": 3.0,
+      "arcDeg": 180,
+      "radiusM": 13.4,
+      "flowLMin": 30.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 23.0,
+        "precipTriangleMmH": 27.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 20.049008687903765,
+        "triangleMmHr": 23.15060112589277,
+        "runtime10mmSquareMin": 29.926666666666666,
+        "runtime10mmTriangleMin": 25.9172535839223
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 3,
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "radiusM": 14.9,
+      "flowLMin": 32.4,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 20.0,
+        "precipTriangleMmH": 24.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 17.5127246520427,
+        "triangleMmHr": 20.221952584201297,
+        "runtime10mmSquareMin": 34.260802469135804,
+        "runtime10mmTriangleMin": 29.670725292312227
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004+PC",
+      "nozzleId": "rain-bird:5000:8",
+      "rowIndex": 4,
+      "pressureBar": 4.0,
+      "arcDeg": 180,
+      "radiusM": 15.2,
+      "flowLMin": 34.2,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 3,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 21.0,
+        "precipTriangleMmH": 25.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 17.763157894736842,
+        "triangleMmHr": 20.511127984368287,
+        "runtime10mmSquareMin": 33.77777777777778,
+        "runtime10mmTriangleMin": 29.252413638941036
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "nozzleId": "rain-bird:5000-PRS:8",
+      "rowIndex": 1,
+      "pressureBar": 2.0,
+      "arcDeg": 180,
+      "radiusM": 11.8,
+      "flowLMin": 24.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 5,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 32.0,
+        "precipTriangleMmH": 37.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 20.683711577133007,
+        "triangleMmHr": 23.883492893796642,
+        "runtime10mmSquareMin": 29.008333333333333,
+        "runtime10mmTriangleMin": 25.12195358811359
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "nozzleId": "rain-bird:5000-PRS:8",
+      "rowIndex": 2,
+      "pressureBar": 2.5,
+      "arcDeg": 180,
+      "radiusM": 13.3,
+      "flowLMin": 27.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 5,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 24.0,
+        "precipTriangleMmH": 18.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 18.316467861382776,
+        "triangleMmHr": 21.15003530074495,
+        "runtime10mmSquareMin": 32.75740740740741,
+        "runtime10mmTriangleMin": 28.368746976931366
+      },
+      "rawRowMustRemainUnchanged": true
+    },
+    {
+      "itemId": "rain-bird:5004+PCR",
+      "nozzleId": "rain-bird:5000-PRS:8",
+      "rowIndex": 3,
+      "pressureBar": 3.0,
+      "arcDeg": 180,
+      "radiusM": 14.1,
+      "flowLMin": 30.0,
+      "sourceUrl": "https://www.rainbird.com/media/4635",
+      "sourcePage": 5,
+      "rawCatalogFields": {
+        "precipSquareMmH": null,
+        "precipTriangleMmH": null
+      },
+      "publishedConflictingFields": {
+        "precipSquareMmH": 23.0,
+        "precipTriangleMmH": 27.0
+      },
+      "decision": "Keep raw published fields null. These calculated outputs are separate UI approximations, not recovered manufacturer table values.",
+      "calculatedApproximation": {
+        "origin": "calculated-from-verified-flow-and-radius",
+        "spacingBasis": "head-to-head: S = radiusM; square L = S; triangular L = S × sqrt(3)/2",
+        "squareMmHr": 18.10774105930285,
+        "triangleMmHr": 20.90901835000908,
+        "runtime10mmSquareMin": 33.135000000000005,
+        "runtime10mmTriangleMin": 28.695751754397374
+      },
+      "rawRowMustRemainUnchanged": true
+    }
+  ],
+  "publishedStripApplicationProposals": [
+    {
+      "itemId": "rain-bird:R-VAN-SST",
+      "nozzleId": "rain-bird:R-VAN-SST",
+      "rowIndex": 0,
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "radiusM": 8.5,
+      "flowLMin": 1.36,
+      "dimensionsM": [
+        1.2,
+        8.5
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-SST",
+      "nozzleId": "rain-bird:R-VAN-SST",
+      "rowIndex": 1,
+      "pressureBar": 2.4,
+      "arcDeg": 180,
+      "radiusM": 9.1,
+      "flowLMin": 1.67,
+      "dimensionsM": [
+        1.5,
+        9.1
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 14.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 42.857142857142854,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 14.0,
+        "precipTriangleMmH": 14.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-SST",
+      "nozzleId": "rain-bird:R-VAN-SST",
+      "rowIndex": 2,
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "radiusM": 9.1,
+      "flowLMin": 1.74,
+      "dimensionsM": [
+        1.5,
+        9.1
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 15.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 40.0,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 15.0,
+        "precipTriangleMmH": 15.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-SST",
+      "nozzleId": "rain-bird:R-VAN-SST",
+      "rowIndex": 3,
+      "pressureBar": 3.1,
+      "arcDeg": 180,
+      "radiusM": 9.1,
+      "flowLMin": 1.82,
+      "dimensionsM": [
+        1.5,
+        9.1
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-SST",
+      "nozzleId": "rain-bird:R-VAN-SST",
+      "rowIndex": 4,
+      "pressureBar": 3.4,
+      "arcDeg": 180,
+      "radiusM": 9.1,
+      "flowLMin": 1.89,
+      "dimensionsM": [
+        1.5,
+        9.1
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-SST",
+      "nozzleId": "rain-bird:R-VAN-SST",
+      "rowIndex": 5,
+      "pressureBar": 3.8,
+      "arcDeg": 180,
+      "radiusM": 9.8,
+      "flowLMin": 2.12,
+      "dimensionsM": [
+        1.8,
+        9.8
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 14.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 42.857142857142854,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 14.0,
+        "precipTriangleMmH": 14.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-LCS",
+      "nozzleId": "rain-bird:R-VAN-LCS",
+      "rowIndex": 0,
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "radiusM": 4.3,
+      "flowLMin": 0.68,
+      "dimensionsM": [
+        1.2,
+        4.3
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-LCS",
+      "nozzleId": "rain-bird:R-VAN-LCS",
+      "rowIndex": 1,
+      "pressureBar": 2.4,
+      "arcDeg": 180,
+      "radiusM": 4.6,
+      "flowLMin": 0.83,
+      "dimensionsM": [
+        1.5,
+        4.6
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 14.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 42.857142857142854,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 14.0,
+        "precipTriangleMmH": 14.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-LCS",
+      "nozzleId": "rain-bird:R-VAN-LCS",
+      "rowIndex": 2,
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "radiusM": 4.6,
+      "flowLMin": 0.87,
+      "dimensionsM": [
+        1.5,
+        4.6
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 15.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 40.0,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 15.0,
+        "precipTriangleMmH": 15.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-LCS",
+      "nozzleId": "rain-bird:R-VAN-LCS",
+      "rowIndex": 3,
+      "pressureBar": 3.1,
+      "arcDeg": 180,
+      "radiusM": 4.6,
+      "flowLMin": 0.91,
+      "dimensionsM": [
+        1.5,
+        4.6
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-LCS",
+      "nozzleId": "rain-bird:R-VAN-LCS",
+      "rowIndex": 4,
+      "pressureBar": 3.4,
+      "arcDeg": 180,
+      "radiusM": 4.6,
+      "flowLMin": 0.95,
+      "dimensionsM": [
+        1.5,
+        4.6
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-LCS",
+      "nozzleId": "rain-bird:R-VAN-LCS",
+      "rowIndex": 5,
+      "pressureBar": 3.8,
+      "arcDeg": 180,
+      "radiusM": 4.9,
+      "flowLMin": 1.06,
+      "dimensionsM": [
+        1.8,
+        4.9
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 14.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 42.857142857142854,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 14.0,
+        "precipTriangleMmH": 14.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-RCS",
+      "nozzleId": "rain-bird:R-VAN-RCS",
+      "rowIndex": 0,
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "radiusM": 4.3,
+      "flowLMin": 0.68,
+      "dimensionsM": [
+        1.2,
+        4.3
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-RCS",
+      "nozzleId": "rain-bird:R-VAN-RCS",
+      "rowIndex": 1,
+      "pressureBar": 2.4,
+      "arcDeg": 180,
+      "radiusM": 4.6,
+      "flowLMin": 0.83,
+      "dimensionsM": [
+        1.5,
+        4.6
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 14.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 42.857142857142854,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 14.0,
+        "precipTriangleMmH": 14.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-RCS",
+      "nozzleId": "rain-bird:R-VAN-RCS",
+      "rowIndex": 2,
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "radiusM": 4.6,
+      "flowLMin": 0.87,
+      "dimensionsM": [
+        1.5,
+        4.6
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 15.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 40.0,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 15.0,
+        "precipTriangleMmH": 15.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-RCS",
+      "nozzleId": "rain-bird:R-VAN-RCS",
+      "rowIndex": 3,
+      "pressureBar": 3.1,
+      "arcDeg": 180,
+      "radiusM": 4.6,
+      "flowLMin": 0.91,
+      "dimensionsM": [
+        1.5,
+        4.6
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-RCS",
+      "nozzleId": "rain-bird:R-VAN-RCS",
+      "rowIndex": 4,
+      "pressureBar": 3.4,
+      "arcDeg": 180,
+      "radiusM": 4.6,
+      "flowLMin": 0.95,
+      "dimensionsM": [
+        1.5,
+        4.6
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 16.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 37.5,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 16.0,
+        "precipTriangleMmH": 16.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    },
+    {
+      "itemId": "rain-bird:R-VAN-RCS",
+      "nozzleId": "rain-bird:R-VAN-RCS",
+      "rowIndex": 5,
+      "pressureBar": 3.8,
+      "arcDeg": 180,
+      "radiusM": 4.9,
+      "flowLMin": 1.06,
+      "dimensionsM": [
+        1.8,
+        4.9
+      ],
+      "sourceUrl": "https://www.rainbird.com/sites/default/files/media/documents/2025-10/026579_rb_rvanperformancechartupdate_metric_f.pdf",
+      "sourcePage": 2,
+      "applicationMmHr": 14.0,
+      "applicationBasis": "strip",
+      "applicationOrigin": "published",
+      "spacingAssumption": "Straight-line spacing based on 50% overlap of throw for LCS, SST and RCS.",
+      "runtime10mmMin": 42.857142857142854,
+      "runtimeOrigin": "calculated-from-published-application-rate",
+      "rawColumnValues": {
+        "precipSquareMmH": 14.0,
+        "precipTriangleMmH": 14.0
+      },
+      "recommendation": "Expose a separately named strip application rate. Keep derived square/triangle outputs null; do not relabel these rates as square or triangular coverage."
+    }
+  ],
+  "formulaSources": [
+    {
+      "url": "https://www.rainbird.com/media/2428",
+      "page": 2,
+      "evidence": "Square and triangular precipitation include 360 / sprinkler arc. Run-time = desired application × 60 / precipitation rate."
+    },
+    {
+      "url": "https://www.rainbird.com/sites/default/files/media/documents/2020-11/precipitation-rate-equations.pdf",
+      "page": 1,
+      "evidence": "Metric PR = 1000 × m³/h / (S × L); triangular row spacing L = S × 0.866."
+    },
+    {
+      "url": "https://www.rainbird.com/professionals/irrigation-design-tip-sprinkler-spacing-patterns",
+      "evidence": "Explains metric flow per spacing area, half-circle discharge contribution and triangular head-to-head spacing."
+    }
+  ],
+  "calculationPolicy": {
+    "use": "UI approximation only when published sector rate is null and same-point flow/radius are available and verified; retain raw nulls.",
+    "squareMetric": "60 × flowLMin × 360 / (arcDeg × spacingM²)",
+    "triangleMetric": "squareMetric / (sqrt(3)/2)",
+    "runtimeMin": "targetMm × 60 / applicationMmHr",
+    "spacingAssumption": "Head-to-head: spacingM equals full published throw radius at the operating pressure. This is a regular-grid reference, not a measured site-wide application rate.",
+    "guards": [
+      "Sector geometry only; do not apply generic radius formula to strips, point bubblers, square patterns or unsupported specialty shapes.",
+      "Require finite positive flow, radius and arc and valid supported nozzle/pressure/arc.",
+      "Do not restore flow or infer it for manually reduced radii whose flow is unpublished.",
+      "If source pressure values are interpolated, keep the result labelled calculated/interpolated, not published.",
+      "Do not overwrite valid published precipitation cells, manufacturer source rows, or stored project hydraulic snapshots.",
+      "Use selected actual arc once; do not multiply by the source reference arc again.",
+      "Runtime is a derived reference for the stated spacing and depth; no efficiency or distribution-uniformity correction is implied."
+    ]
+  },
+  "rowChecksFile": "rotors-row-checks.json",
+  "noCheckoutEdits": true
+}

@@ -1,0 +1,66 @@
+{
+  "verifiedOn": "2026-10-04",
+  "catalogItems": 84,
+  "basePerformanceRows": 764,
+  "adjustedPerformanceRows": 162,
+  "legacyRps75iPressureRows": 52,
+  "legacyRps75iStates": 156,
+  "bodyModels": 17,
+  "statusCounts": {
+    "Needs Review": 33,
+    "Verified": 51
+  },
+  "categoryCounts": {
+    "rotary": 12,
+    "specialty": 11,
+    "spray": 11,
+    "fixed": 24,
+    "rotor": 9,
+    "body": 17
+  },
+  "unitAuditDiscrepancies": 166,
+  "primarySource": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+  "officialPdfSources": 28,
+  "nozzleGroups": 148,
+  "rotorNozzleGroups": 90,
+  "circularSectorNozzleModels": 47,
+  "rectangularStripModels": 9,
+  "compoundHighLowModelsUnsupported": 2,
+  "sourceManifestFile": "source-manifest.json",
+  "familyCounts": {
+    "RN": {
+      "models": 12,
+      "baseRows": 105
+    },
+    "Fully Adjustable RN": {
+      "models": 3,
+      "baseRows": 27
+    },
+    "KVF": {
+      "models": 6,
+      "baseRows": 96
+    },
+    "KV": {
+      "models": 5,
+      "baseRows": 80
+    },
+    "Fixed circular": {
+      "models": 24,
+      "baseRows": 80
+    },
+    "Fixed special": {
+      "models": 8,
+      "baseRows": 16
+    },
+    "Rotors": {
+      "models": 9,
+      "nozzleGroups": 90,
+      "baseRows": 360,
+      "adjustedRows": 162
+    },
+    "Spray bodies": {
+      "models": 17,
+      "baseRows": 0
+    }
+  }
+}

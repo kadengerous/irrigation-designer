@@ -1,0 +1,134 @@
+{
+  "checkedOn": "2026-10-10",
+  "sources": [
+    {
+      "id": "catalog2026",
+      "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+      "pages": [
+        37,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "role": "Primary current rows, mechanical arc ranges, model colors, interfaces and reduction rules",
+      "modelCount": 58,
+      "rowCount": 404,
+      "fetchedVia": "native web PDF text"
+    },
+    {
+      "id": "rnMetric",
+      "url": "https://www.krain.com/content/files/images/landingpages/nozzles/rotary%20nozzles/02-24-rotary%20nozzle_salessheet%20-%20metric_r.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "role": "Rotary Series metric corroboration and matched precipitation after adjustment",
+      "modelCount": 12
+    },
+    {
+      "id": "rnFully",
+      "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/fully%20adjustable%20rotary%20nozzle%20product%20brochure.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "role": "Selected RN300 radius 8.53 m; 80–360 degree mechanics; conflicting old metric precipitation not adopted",
+      "modelCount": 3
+    },
+    {
+      "id": "kvf",
+      "url": "https://www.krain.com/content/files/images/landingpages/nozzles/kvf%20nozzles/kvf%20nozzle%20product%20brochure.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "role": "Historical companion has inconsistent metric pressure labels and precipitation; current catalog governs",
+      "modelCount": 5
+    },
+    {
+      "id": "kv",
+      "url": "https://www.krain.com/content/files/images/landingpages/nozzles/kv%20nozzles/kv%20nozzle%20product%20brochure.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "role": "Paired US/metric pressures and rows; radius screw adjustment without a numeric bound",
+      "modelCount": 5
+    },
+    {
+      "id": "fixed",
+      "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "role": "Twelve FN12 flow corrections and FN12F radius; strip/high-low dimensions; other P12/P15 pressure grids not combined",
+      "modelCount": 32
+    },
+    {
+      "id": "rotary-nozzles",
+      "url": "https://www.krain.com/rotary-nozzles",
+      "role": "Current family/product identity, mechanics, recommendation, named colors and thread interface as applicable",
+      "fetchedVia": "native web HTML text"
+    },
+    {
+      "id": "fully-adjustable-rotary-nozzles",
+      "url": "https://www.krain.com/fully-adjustable-rotary-nozzles",
+      "role": "Current family/product identity, mechanics, recommendation, named colors and thread interface as applicable",
+      "fetchedVia": "native web HTML text"
+    },
+    {
+      "id": "kvf-nozzles",
+      "url": "https://www.krain.com/kvf-nozzles",
+      "role": "Current family/product identity, mechanics, recommendation, named colors and thread interface as applicable",
+      "fetchedVia": "native web HTML text"
+    },
+    {
+      "id": "kv-nozzles",
+      "url": "https://www.krain.com/kv-nozzles",
+      "role": "Current family/product identity, mechanics, recommendation, named colors and thread interface as applicable",
+      "fetchedVia": "native web HTML text"
+    },
+    {
+      "id": "fixed-nozzles",
+      "url": "https://www.krain.com/fixed-nozzles",
+      "role": "Current family/product identity, mechanics, recommendation, named colors and thread interface as applicable",
+      "fetchedVia": "native web HTML text"
+    },
+    {
+      "id": "kv-nozzles/variable-arc-male-nozzle-5-kv5",
+      "url": "https://www.krain.com/kv-nozzles/variable-arc-male-nozzle-5-kv5",
+      "role": "Current family/product identity, mechanics, recommendation, named colors and thread interface as applicable",
+      "fetchedVia": "native web HTML text"
+    }
+  ],
+  "coverage": {
+    "models": 58,
+    "rows": 404,
+    "activeNumbersChanged": 0,
+    "currentUSCounterparts": 373,
+    "retainedHydraulicConflicts": 14,
+    "retainedUnknownPrecipitationCells": 1,
+    "unsupportedHighLowModels": 2,
+    "namedColorsVerified": 50,
+    "unknownColorsPreserved": 8,
+    "brochureCorroboratedExistingCorrections": 13
+  },
+  "limitations": [
+    "Fresh PDF text retrieval used; no newly rendered visual trace of the High Low diagram.",
+    "No manufacturer erratum found for the unresolved 14 rows.",
+    "Hex swatches are illustrative, not manufacturer colorimetric measurements.",
+    "No reduced-radius flow table; matched flow is an explicit estimate.",
+    "KV5 product identity is available without a performance table."
+  ]
+}

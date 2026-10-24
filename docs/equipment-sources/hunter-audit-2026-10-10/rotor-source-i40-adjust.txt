@@ -1,0 +1,81 @@
+Commercial Rotors - I-40 Rotor Adjustment Instructions | Hunter Industries (https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust)
+citeturn324view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/support/commercial-rotors-i-40-adjust","lineno":null}); Total lines: 110
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite9†English L16:   * cite9†Metric L17:   * cite9†Español L18:   * cite9†Italiano L19: 
+L20:   * cite9†Français L21:   * cite9†Português L22:   * cite9†Deutsch L23:   * cite9†Türkçe L24: 
+L25:   * cite9†Polski L26:   * cite9†Русский L27:   * cite9†العربية L28:   * cite9†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: ]
+L35: 
+L36: [Button: Cancel]
+L37: # Commercial Rotors - I-40 Rotor Adjustment Instructions
+L38: 
+L39: The I-40 rotor has an optional opposing nozzle, indicated by the model number ending in -ON. The adjustment instructions for the opposing nozzle model are listed separately from the non-opposing nozzle model.
+L40: 
+L41: I-40 Rotor Adjustment Sockets
+L42: 
+L43: cite10†Image L44: 
+L45:   1. Arc adjustment socket
+L46:   2. Nozzle-retainer / range-adjustment screw
+L47:   3. Lift up socket
+L48:   4. Indicates VStat™ self-adjusting stator
+L49:   5. Specific model
+L50: Arc Adjustment (Non-Opposing Nozzle Model)
+L51: 
+L52: cite11†Image L53: 
+L54: All I-40 group adjustable heads are preset to approximately 180°. The I-40 can be adjusted from 50-360 degrees. Sprinklers may be adjusted with water on or off. It is recommended that initial adjustment be made before installation.
+L55:   1. Using the palm of your hand, rotate the nozzle turret counter-clockwise to the left stop to complete any interrupted rotation cycle (Fig. 1).
+L56:   2. Rotate the nozzle turret clockwise to the right stop. This is the fixed side of the arc, and it must be held in this position for all arc adjustments.
+L57: 
+L58: 
+L59: 
+L60: cite12†Image L61: 
+L62: To Increase Arc
+L63:   1. Insert the key end of the Hunter wrench into the adjustment socket.
+L64:   2. While holding the nozzle turret at the right stop, turn the wrench clockwise. Each 360° turn of the wrench increases the arc 45°.
+L65:   3. Adjust to any arc between 50° and 360°.
+L66: 
+L67:   4. Wrench will stop turning, or there will be a ratcheting noise, when the maximum arc (360°) is reached.
+L68: 
+L69:   5. When set to 360°, the sprinkler will rotate continually counterclockwise.
+L70: 
+L71: cite13†Image L72: 
+L73: To Decrease Arc
+L74:   1. Insert the key end of the Hunter wrench into the adjustment socket.
+L75:   2. While holding the nozzle turret at the right stop, turn the wrench counterclockwise. Each 360° turn of the wrench decreases the arc 45°.
+L76:   3. Adjust to any arc between 50° and 360°.
+L77:   4. The wrench will stop turning, or there will be a ratcheting noise, when the minimum arc (40°) is reached.
+L78: 
+L79: Arc Adjustment (Opposing Nozzle Models)
+L80: 
+L81: All I-40-ON models are 360° ONLY. There is no arc adjustment. For less than 360° use I-40-ADS.
+L82: Radius Adjustment
+L83: 
+L84: Insert the hex end of the Hunter wrench into the nozzle-retainer / range-adjustment screw. Turn the screw clockwise into the stream of water to decrease the radius, or counterclockwise to increase the radius.
+L85: 
+L86: Precipitation Rate Adjustment
+L87: 
+L88: Where excessively wet or dry areas are a problem, the precipitation rate may be adjusted. Simply replace the existing nozzle with a larger one to increase or a smaller one to decrease the rate of precipitation.
+L89: ## Still need help? We're here.
+L90: 
+L91: Tell us what you need support with and we'll find the best solution for you.
+L92: 
+L93: cite14†Contact Support L94: 
+L95: Previous article
+L96: 
+L97: cite15†I-25 - Adjust L98: 
+L99: Next article
+L100: 
+L101: cite16†I-80 - Adjust L102: 
+L103:   * cite17†Find a Distributor L104:   * cite18†Find a Contractor L105:   * cite19†Contact Sales L106: 
+L107: cite20†Find Hunter L108: 
+L109: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite21†Privacy Policy |
+

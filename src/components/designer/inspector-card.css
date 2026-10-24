@@ -1,0 +1,56 @@
+.inspector-card{--inspector-tint:#398ed1;min-width:0;margin-block-end:.625rem;border:.0625rem solid color-mix(in srgb,var(--inspector-tint) 48%,var(--color-line));border-radius:.625rem;background:color-mix(in srgb,var(--inspector-tint) 6%,var(--color-surface));color:var(--color-ink)}
+.inspector-card>.inspector-card-heading{display:flex;align-items:stretch;margin:0;padding:0;font-size:.875rem;line-height:1.35;font-weight:600;border-radius:inherit;background:color-mix(in srgb,var(--inspector-tint) 15%,var(--color-surface))}
+.inspector-card>.inspector-card-heading>.inspector-card-trigger{display:flex;flex:1;align-items:center;justify-content:flex-start;gap:.375rem;min-width:0;width:100%;min-height:2.5rem;margin:0;padding:.5rem .625rem;border:0;border-radius:inherit;text-align:start;white-space:normal;background:color-mix(in srgb,var(--inspector-tint) 15%,var(--color-surface));color:inherit;font:inherit;cursor:pointer}
+.inspector-card[data-open=true]>.inspector-card-heading{border-end-start-radius:0;border-end-end-radius:0}
+.inspector-card>.inspector-card-heading>.inspector-card-trigger:focus-visible{outline:.125rem solid var(--inspector-tint);outline-offset:-.1875rem}
+.inspector-card-trigger>.inspector-card-chevron{width:1.125rem;height:1.125rem;flex-shrink:0;transform:rotate(-90deg)}
+[dir=rtl] .inspector-card-trigger>.inspector-card-chevron{transform:rotate(90deg)}
+.inspector-card[data-open=true]>.inspector-card-heading>.inspector-card-trigger>.inspector-card-chevron{transform:none}
+.inspector-card-title{min-width:0;flex:1;overflow-wrap:anywhere}
+.inspector-card-summary{max-width:45%;font-size:.75rem;font-weight:400;font-variant-numeric:tabular-nums;line-height:1.4;overflow-wrap:anywhere;text-align:end}
+.inspector-card>.inspector-card-content{min-width:0;padding:.5rem;border-block-start:.0625rem solid color-mix(in srgb,var(--inspector-tint) 25%,var(--color-line));border-end-start-radius:inherit;border-end-end-radius:inherit}
+.inspector-card-content>.inspector-card:last-child{margin-block-end:0}
+.inspector-card .recommendation-content.engineering-properties{margin:0;padding:0;border:0;font-size:.8125rem;line-height:1.45}
+.inspector-card .engineering-properties label{display:flex;flex-direction:column;gap:.25rem;margin-block:.625rem}
+.inspector-card .engineering-properties input,.inspector-card .engineering-properties select{box-sizing:border-box;width:100%;min-width:0;min-height:2.25rem;border:.0625rem solid var(--color-line);border-radius:.375rem;background:var(--color-surface);color:var(--color-ink);padding:.375rem .5rem;font-size:.875rem}
+.inspector-card .engineering-properties input:focus-visible,.inspector-card .engineering-properties select:focus-visible{outline:.125rem solid var(--inspector-tint);outline-offset:.0625rem}
+.inspector-card .engineering-number{display:flex;align-items:center;gap:.375rem}.inspector-card .engineering-number>span{white-space:nowrap}
+.inspector-card .engineering-help{font-size:.8125rem;line-height:1.45;color:var(--color-muted)}
+.inspector-card .recommendation-content p{margin-block:.5rem}
+.inspector-card .engineering-pump-result{display:flex;flex-direction:column;gap:.375rem;padding:.5rem;border:.0625rem solid #249a80;border-radius:.5rem}
+.inspector-card .engineering-calculation-issues{padding-inline-start:1rem;font-size:.8125rem;line-height:1.4}.inspector-card .engineering-calculation-issues li{margin-block:.375rem}
+.inspector-card .engineering-duty-scroll{overflow-x:auto}.inspector-card .engineering-duty-scroll table{width:100%;font-size:.75rem;border-collapse:collapse}.inspector-card .engineering-duty-scroll td,.inspector-card .engineering-duty-scroll th{padding:.375rem;text-align:start;border-block-end:.0625rem solid var(--color-line)}
+.inspector-card .recommendation-content details{margin-block:.5rem}.inspector-card .recommendation-content summary{cursor:pointer;font-weight:600}
+@media(max-width:639px){.inspector-card>.inspector-card-heading>.inspector-card-trigger{padding:.5rem}.inspector-card>.inspector-card-content{padding:.375rem}}
+.inspector-card .recommendation-content td small{display:block;font-size:.6875rem;line-height:1.4;color:var(--color-muted)}
+.inspector-card-heading>.inspector-card-header-actions{display:flex;align-items:center;flex:0 0 auto;padding-inline-end:.125rem}
+.inspector-group-actions{display:inline-flex;align-items:center;gap:0}
+.inspector-card>.inspector-card-heading>.inspector-card-header-actions .inspector-header-action{display:inline-flex;align-items:center;justify-content:center;flex:0 0 2.25rem;width:2.25rem;min-width:2.25rem;min-height:2.5rem;margin:0;padding:.375rem;line-height:1;cursor:pointer}
+.inspector-header-action>svg,.inspector-eye,.inspector-eye>svg{display:block;width:1.125rem;height:1.125rem;flex-shrink:0}
+.inspector-eye{position:relative}
+.inspector-eye[data-hidden=true]::after{content:"";position:absolute;top:50%;left:50%;width:1.4rem;height:.125rem;background:#e33646;border-radius:.0625rem;transform:translate(-50%,-50%) rotate(-45deg)}
+.inspector-card .inspector-header-action[data-locked=true]>svg{color:#e33646!important}
+.inspector-header-action:disabled{opacity:.4;cursor:default}
+@media(pointer:coarse){.inspector-card>.inspector-card-heading>.inspector-card-header-actions .inspector-header-action{flex-basis:2.75rem;width:2.75rem;min-width:2.75rem;min-height:2.75rem}}
+
+/* Important declarations in this nested layer outrank the parent layer's
+   blanket button rules, including quiet-panel and active-button backgrounds.
+   Keep the same chrome in every state; the heading owns the open/closed corners. */
+@layer designer-controls.inspector-card-chrome {
+  .inspector-card>.inspector-card-heading>button.inspector-card-trigger {
+    border:0!important;
+    background:color-mix(in srgb,var(--inspector-tint) 15%,var(--color-surface))!important;
+    border-radius:inherit!important;
+  }
+  .inspector-card .inspector-card-header-actions button.inspector-header-action {
+    border:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    border-radius:.375rem!important;
+    color:var(--color-ink)!important;
+  }
+  .inspector-card .inspector-card-header-actions button.inspector-header-action:focus-visible {
+    outline:.125rem solid var(--inspector-tint)!important;
+    outline-offset:-.1875rem!important;
+  }
+}

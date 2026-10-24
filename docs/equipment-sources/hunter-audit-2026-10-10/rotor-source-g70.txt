@@ -1,0 +1,430 @@
+G-70-B | Hunter Industries (https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-70-b)
+citeturn299view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/irrigation-product/golf-rotors/g-70-b","lineno":140}); Total lines: 519
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: USA
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite0†USA English L16:   * cite9†English Metric L17:   * cite10†Español L18:   * cite11†Italiano L19: 
+L20:   * cite12†Français L21:   * cite13†Português L22:   * cite14†Deutsch L23:   * cite15†Türkçe L24: 
+L25:   * cite16†Polski L26:   * cite17†Русский L27:   * cite18†العربية L28:   * cite19†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: # G-70-B
+L36: 
+L37: With a wide range of performance to choose from, the B Series rotors are easy on the budget
+L38: 
+L39: Model Full-Circle
+L40: 
+L41: Radius 53' to 75'
+L42: 
+L43: Flow 13.0 to 33.7 GPM
+L44: 
+L45: Pressure 50 to 100 PSI
+L46: 
+L47:   * cite20†Models L48:   * cite21†Specs L49:   * cite22†Videos L50:   * cite23†Features L51:   * cite24†Charts L52:   * cite25†Documents L53:   * cite26†Photos L54:   * cite27†Related L55: ## Models
+L56: 
+L57: cite28†Image: G-70-B L58: 
+L59: [Input]
+L60: 
+L61: G-70-B
+L62: 
+L63: G-70-B
+L64: 
+L65: Ordering Number [Input]
+L66: 
+L67: [Input] [Input]
+L68: 
+L69: Qty [Input]
+L70: 
+L71: Notes [Input: Add a note...]
+L72: 
+L73: [Button: Add to list]
+L74: 
+L75: User installed options
+L76: 
+L77: [Input]
+L78: 
+L79: #### Product added to list
+L80: 
+L81: The following product was added to ""
+L82: 
+L83: QTY
+L84: 
+L85: cite29†Review your list L86: 
+L87: cite30†Continue L88: 
+L89: [Input] [Input]
+L90: 
+L91: ## Create a new My List.
+L92: ## Log in to access this feature
+L93: 
+L94: Log in using your Hunter Account
+L95: 
+L96: Username [Input]
+L97: 
+L98: Password [Input]
+L99: 
+L100: [Input] [Input] [Input]
+L101: 
+L102: [Button: Sign In]
+L103: 
+L104: cite31†Contact your local distributor for product availability and ordering. L105: 
+L106: ## Specifications
+L107: 
+L108: ### MODEL SPECIFICATIONS
+L109: 
+L110:   * Full circle
+L111: 
+L112: ### MODEL VARIATIONS
+L113: 
+L114:   * B = Block checks up to 10' in elevation change
+L115: 
+L116: ### NOZZLE RANGE
+L117: 
+L118:   * #15 to #28
+L119: 
+L120: ### NOZZLE CHOICE
+L121: 
+L122:   * 6 standard trajectory (25 degrees)
+L123: ### OPERATING SPECIFICATIONS
+L124: 
+L125:   * Discharge rate: 13 to 33.7 GPM
+L126:   * Radius: 53' to 75'
+L127:   * Pressure range: 50 to 100 PSI
+L128:   * Pressure rating: 150 PSI
+L129: 
+L130: * * *
+L131: 
+L132: cite32† Download Product Spec Sheet L133: 
+L134: cite33†  Download Written Specifications (in English) L135: 
+L136: ## Videos
+L137: 
+L138: Hunter Golf - Rotor Manufacturing Factory Tour
+L139: 
+L140: See the entire process of how a Hunter Golf Rotor is manufactured and assembled in this Director Commentary narrated video.
+L141: 
+L142: cite34†All Product Videos L143: ## Features
+L144: Easy to adjust and maintain, Hunter's G-70 golf and large turf rotor is also the ideal choice for the customer on a budget. The B Series rotors provide all the standard features you want for mid-distance coverage including a time-tested gear drive, convenient through-the-top servicing, and a sturdy, impact-resistant flanged body. Plus Hunter's PressurePort™ nozzle system reduces velocity and pressure to the secondary nozzles while increasing droplet size.
+L145: The result is they deliver uniform distribution every time.
+L146: #### Key Benefits
+L147: 
+L148: G-70-B is a dedicated, true full-circle model
+L149: 
+L150: #### Advanced Features
+L151: 
+L152: ### B Series Rotors are Yardage Marker Capable
+L153: 
+L154: All B Series rotors have a recessed area on the flange to accommodate installation of custom yardage markers.
+L155: 
+L156: cite35†Image: Yardage Marker on Golf Rotor  L157: 
+L158: ### B Series Color-Coded Nozzles
+L159: 
+L160: All G70B, G75B and G80B rotors have color-coded nozzles for easy identification and, the nozzle numbers approximate the flow in gallons per minute.
+L161: 
+L162: cite36†Image: Nozzle Lineup  L163: ## Charts
+L164: 
+L165: ### G70B Dimensions
+L166: 
+L167:    | cite37†Image G70B
+L168: --- | ---
+L169: Overall Height  | 9"
+L170: Pop-up Height  | 3"
+L171: Flange Diameter  | 4-3/4"
+L172: Inlet Size  | 1-1/4" Female ACME
+L173: ### G870 / G70B Nozzle Performance Data
+L174: 
+L175: G870 / G70B Nozzle Performance Data
+L176: ---
+L177: Nozzle  | Pressure  | Radius  | Flow  | Precip in/hr
+L178:    | PSI  | ft  | GPM  | cite38†Image | cite39†Image L179: 15 • Grey  | 50  | 53  | 13.0  | 0.45  | 0.51
+L180: 60  | 54  | 14.1  | 0.47  | 0.54
+L181: 65  | 55  | 14.8  | 0.47  | 0.54
+L182: 70  | 56  | 15.5  | 0.48  | 0.55
+L183: 80  | 58  | 16.3  | 0.47  | 0.54
+L184: 18 • Red  | 50  | 58  | 14.2  | 0.41  | 0.47
+L185: 60  | 59  | 15.9  | 0.44  | 0.51
+L186: 65  | 60  | 16.3  | 0.44  | 0.50
+L187: 70  | 60  | 16.9  | 0.45  | 0.52
+L188: 80  | 61  | 17.8  | 0.46  | 0.53
+L189: 20 • Dk. Brown  | 60  | 61  | 18.8  | 0.49  | 0.56
+L190: 65  | 62  | 19.6  | 0.49  | 0.57
+L191: 70  | 63  | 20.5  | 0.50  | 0.57
+L192: 80  | 64  | 22.0  | 0.52  | 0.60
+L193: 90  | 64  | 23.4  | 0.55  | 0.63
+L194: 23 • Dk. Green  | 60  | 63  | 20.1  | 0.49  | 0.56
+L195: 65  | 65  | 21.0  | 0.48  | 0.55
+L196: 70  | 65  | 21.9  | 0.50  | 0.58
+L197: 80  | 66  | 23.4  | 0.52  | 0.60
+L198: 90  | 67  | 24.9  | 0.53  | 0.62
+L199: 25 • Dk. Blue  | 60  | 65  | 21.8  | 0.50  | 0.57
+L200: 65  | 67  | 22.5  | 0.48  | 0.56
+L201: 70  | 67  | 23.6  | 0.51  | 0.58
+L202: 80  | 69  | 25.3  | 0.51  | 0.59
+L203: 90  | 71  | 26.9  | 0.51  | 0.59
+L204: 28 • Black  | 70  | 71  | 28.1  | 0.54  | 0.62
+L205: 80  | 71  | 29.9  | 0.57  | 0.66
+L206: 90  | 73  | 31.8  | 0.57  | 0.66
+L207: 100  | 75  | 33.7  | 0.58  | 0.67
+L208: Note: *Complies to ASAE standard. All precipitation rates calculated for 360° operation. All triangular rates are equilateral.
+L209: ## Documents
+L210: ### Select Type
+L211: 
+L212:   * All Documents
+L213:   * Manuals
+L214:   * Marketing
+L215:   * Specifications
+L216:   * Replacement Parts
+L217: 
+L218: Hunter Golf Catalog
+L219: 
+L220: cite30†Select Language  L221: 
+L222: Golf Rotors Installation Details (DWG)
+L223: 
+L224: cite40†Download   L225: 
+L226: Golf Rotors Installation Details (PDF)
+L227: 
+L228: cite41†Download   L229: 
+L230: Golf Rotors Installation Details (DXF)
+L231: 
+L232: cite42†Download   L233: 
+L234: G70B Written Spec
+L235: 
+L236: cite33†Download   L237: 
+L238: G-70 and G-75 Product Cutsheet
+L239: 
+L240: cite30†Select Language  L241: 
+L242: cite43†Metric   L243: 
+L244: cite44†Spanish   L245: 
+L246: cite45†Italian   L247: 
+L248: cite46†French   L249: 
+L250: cite47†Portuguese - Brazil   L251: cite48†German   L252: 
+L253: cite49†Turkish   L254: 
+L255: cite50†Polish   L256: 
+L257: cite51†Russian   L258: 
+L259: cite52†Arabic   L260: 
+L261: cite53†Hungarian   L262: 
+L263: cite54†Slovak   L264: 
+L265: cite30†Show all documents L266: ## Photos
+L267: 
+L268: ## Studio Photos
+L269: 
+L270: cite30†Image L271: 
+L272: cite55†Image L273: 
+L274: File:
+L275: 
+L276: i-40-on-all_clipped_0.jpg
+L277: 
+L278: Classification:
+L279: 
+L280: Studio
+L281: 
+L282: Product Line:
+L283: 
+L284: Golf Rotor
+L285: 
+L286: Products:
+L287: 
+L288: cite56†G-70-B L289: 
+L290: Keywords:
+L291: 
+L292: product
+L293: 
+L294: ,
+L295: 
+L296: rotor
+L297: 
+L298: ,
+L299: 
+L300: B Series
+L301: 
+L302: ,
+L303: 
+L304: G70B
+L305: 
+L306: ,
+L307: 
+L308: family
+L309: 
+L310: ,
+L311: 
+L312: parts
+L313: 
+L314: cite57†Image Page L315: 
+L316: * * *
+L317: 
+L318: #### Download Image
+L319: 
+L320: cite58†Medium cite59†Original L321: 
+L322: By clicking download, you agree to our cite30†terms and conditions .
+L323: ### Photo Usage Disclaimer
+L324: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L325: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L326: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L327: 
+L328: cite30†Image L329: 
+L330: cite60†Image L331: 
+L332: File:
+L333: 
+L334: g875_nozzles_all_clipped.jpg
+L335: 
+L336: Classification:
+L337: 
+L338: Studio
+L339: 
+L340: Product Line:
+L341: 
+L342: Golf Rotor
+L343: 
+L344: Products:
+L345: 
+L346: cite56†G-70-B L347: 
+L348: Keywords:
+L349: 
+L350: product
+L351: 
+L352: ,
+L353: 
+L354: rotor
+L355: 
+L356: ,
+L357: 
+L358: B Series
+L359: 
+L360: ,
+L361: 
+L362: G75B
+L363: 
+L364: ,
+L365: 
+L366: family
+L367: 
+L368: ,
+L369: 
+L370: parts
+L371: 
+L372: cite61†Image Page L373: 
+L374: * * *
+L375: #### Download Image
+L376: 
+L377: cite62†Medium cite63†Original L378: 
+L379: By clicking download, you agree to our cite30†terms and conditions .
+L380: ### Photo Usage Disclaimer
+L381: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L382: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L383: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L384: 
+L385: cite30†Image L386: 
+L387: cite64†Image L388: 
+L389: File:
+L390: 
+L391: g75b.jpg
+L392: 
+L393: Classification:
+L394: 
+L395: Studio
+L396: 
+L397: Product Line:
+L398: 
+L399: Golf Rotor
+L400: 
+L401: Products:
+L402: 
+L403: cite56†G-70-B L404: 
+L405: Keywords:
+L406: 
+L407: product
+L408: 
+L409: ,
+L410: 
+L411: rotor
+L412: 
+L413: ,
+L414: 
+L415: B Series
+L416: 
+L417: ,
+L418: 
+L419: G75B
+L420: 
+L421: cite65†Image Page L422: 
+L423: * * *
+L424: #### Download Image
+L425: 
+L426: cite66†Medium cite67†Original L427: 
+L428: By clicking download, you agree to our cite30†terms and conditions .
+L429: ### Photo Usage Disclaimer
+L430: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L431: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L432: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L433: 
+L434: cite30†Image L435: 
+L436: cite68†Image L437: 
+L438: File:
+L439: 
+L440: g70b.jpg
+L441: 
+L442: Classification:
+L443: 
+L444: Studio
+L445: 
+L446: Product Line:
+L447: 
+L448: Golf Rotor
+L449: 
+L450: Products:
+L451: 
+L452: cite56†G-70-B L453: 
+L454: Keywords:
+L455: 
+L456: product
+L457: 
+L458: ,
+L459: 
+L460: rotor
+L461: 
+L462: ,
+L463: 
+L464: B Series
+L465: 
+L466: ,
+L467: 
+L468: G70B
+L469: 
+L470: cite69†Image Page L471: 
+L472: * * *
+L473: #### Download Image
+L474: 
+L475: cite70†Medium cite71†Original L476: 
+L477: By clicking download, you agree to our cite30†terms and conditions .
+L478: ### Photo Usage Disclaimer
+L479: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L480: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L481: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L482: ## Compatible Products
+L483: 
+L484: cite72†HSJ Swing Joints L485: 
+L486: Hunter HSJ Swing Joints by Westlake are the product of a proven team with time-tested solutions for the irrigation market.
+L487: 
+L488: cite72†View Product L489: 
+L490: cite73†G-35-B L491: 
+L492: Easy to adjust and maintain, Hunter's G-35 golf and large turf rotor is also the ideal choice for the customer on a budget.
+L493: 
+L494: cite73†View Product L495: 
+L496: cite74†G-75-B L497: 
+L498: Easy to adjust and maintain, Hunter's G-75 golf and large turf rotor is also the ideal choice for the customer on a budget.
+L499: 
+L500: cite74†View Product L501: cite75†G-80-B L502: 
+L503: Easy to adjust and maintain, Hunter's G-80-B golf and large turf rotor is also the ideal choice for the customer on a budget.
+L504: 
+L505: cite75†View Product L506: 
+L507: cite76†G-85-B L508: 
+L509: Boasting the highest torque output of any golf rotor on the market, the G-85’s patented gear drive will push through anything that gets in its way. Try it yourself and see. With just one rotation of the turret by hand, you can clearly feel this rotor’s formidable durability.
+L510: 
+L511: cite76†View Product L512:   * cite31†Find a Distributor L513:   * cite77†Find a Contractor L514:   * cite78†Contact Sales L515: 
+L516: cite79†Find Hunter L517: 
+L518: ©2026 Hunter Industries Inc. Hunter, the Hunter logo, and other marks are trademarks of Hunter Industries Inc., registered in the U.S. and certain other countries. | cite80†Privacy Policy |
+

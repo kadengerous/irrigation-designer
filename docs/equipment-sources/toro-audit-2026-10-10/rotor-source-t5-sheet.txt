@@ -1,0 +1,201 @@
+ (https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25)
+citeturn427view0 [wordlim: 200] Crawled: 2 days ago; Content type: application/pdf; Number of pages: 4; Source: open({"ref_id":"https://cdn.thetorocompany.com/api/assetstorage/623_82540b95-decc-419e-981e-b9f5fb6dfa25","lineno":null}); Total lines: 198
+L0@P0: Stainless Steel Model Features
+L1@P0: 304 Stainless Steel riser and nozzle base
+L2@P0: protection
+L3@P0: Ideal for settings with heavy foot traffic or
+L4@P0: sandy soil conditions
+L5@P0: Heavy-duty construction protects the
+L6@P0: rotor from damage caused by vandalism
+L7@P0: The Toro® T5 RapidSet rotor can be set in seconds. Engineered to use the slip clutch to adjust the arc, the T5
+L8@P0: RapidSet rotor requires NO TOOLS for arc adjustments. Along with a five inch pop-up height of the Lawn model,
+L9@P0: the T5 RapidSet rotors feature exclusive Airfoil Technology™ standard and low angle nozzles that deliver classleading* distribution uniformity. Designed to save water, save time, and save money, the T5 RapidSet rotor is the
+L10@P0: only ¾” rotor needed to get the job done.
+L11@P0: RapidSet® Arc Adjustment
+L12@P0: Arc adjustments from 40° to 360° can be made quickly with a
+L13@P0: few twists of the turret – no tools required. The RapidSet slip
+L14@P0: clutch also protects against gear damage caused by intentional
+L15@P0: vandalism or inexperienced users.
+L16@P0: Lawn Model with a 5” Pop-up Height
+L17@P0: Fits in the same footprint as many competing 4” rotors for hasslefree retrofits, but delivers an extra inch of pop-up height, allowing
+L18@P0: the nozzle to clear tall grasses.
+L19@P0: Airfoil Technology™ Nozzles
+L20@P0: The T5 RapidSet rotor comes with a full set of 8 standard nozzles
+L21@P0: (25° trajectory) and 4 low angle (10° trajectory) nozzles that
+L22@P0: utilize proprietary Airfoil Technology, which creates a zone of
+L23@P0: low pressure just below the main stream to gently guide water
+L24@P0: downward for unmatched uniformity without forcefully washing
+L25@P0: out newly-laid seeds.
+L26@P0: Design Flexibility
+L27@P0: T5 RapidSet rotors are available in Effluent, Shrub, 12” High Pop
+L28@P0: and Stainless Steel models.
+L29@P0: T5 RAPIDSET® SERIES ROTORS
+L30@P0: FEATURES & BENEFITS
+L31@P0: Effluent Options
+L32@P0: Available
+L33@P0: Check Valve
+L34@P0: Options Available
+L35@P0-1: *Based on independently tested performance profiles from the Center for Irrigation TechnologyPRODUCT HIGHLIGHT
+L36@P1: Based on publicly available performance
+L37@P1: profiles from the Center for Irrigation
+L38@P1: Technology
+L39@P1: 5” Pop-Up In a 4” Body
+L40@P1: TOOLS
+L41@P1: NO TOOLS Arc Adjustment
+L42@P1: Gentler
+L43@P1: up-close
+L44@P1: watering,
+L45@P1: and classleading
+L46@P1: distribution
+L47@P1: uniformity
+L48@P1: of 82%
+L49@P1: (based on internal testing)
+L50@P1-2: Exclusive Airfoil™ Technology NozzlesT5 RAPIDSET NOZZLE PERFORMANCE DATA
+L51@P2: Nozzle psi Radius gpm Precipitation Rate
+L52@P2: (in/hr) ▲ (in/hr) ■
+L53@P2: 1.5
+L54@P2: 25 33 1.15 0.23 0.20
+L55@P2: 35 34 1.38 0.27 0.23
+L56@P2:  *45 35 1.59 0.29 0.25
+L57@P2: 55 35 1.74 0.32 0.27
+L58@P2: 65 36 1.88 0.32 0.28
+L59@P2: 2.0
+L60@P2: 25 35 1.45 0.26 0.23
+L61@P2: 35 36 1.80 0.31 0.27
+L62@P2:  *45 37 2.12 0.34 0.30
+L63@P2: 55 37 2.30 0.37 0.32
+L64@P2: 65 37 2.58 0.42 0.36
+L65@P2: 2.5
+L66@P2: 25 35 1.75 0.32 0.28
+L67@P2: 35 36 2.20 0.38 0.33
+L68@P2:  *45 37 2.55 0.41 0.36
+L69@P2: 55 37 2.80 0.45 0.39
+L70@P2: 65 37 3.05 0.50 0.43
+L71@P2: 3.0
+L72@P2: Standard
+L73@P2: 25 36 2.20 0.38 0.33
+L74@P2: 35 38 2.60 0.40 0.35
+L75@P2:  *45 40 3.05 0.42 0.37
+L76@P2: 55 40 3.52 0.49 0.42
+L77@P2: 65 40 3.80 0.53 0.46
+L78@P2: 4.0
+L79@P2: 25 37 2.95 0.48 0.41
+L80@P2: 35 40 3.55 0.49 0.43
+L81@P2:  *45 42 4.10 0.52 0.45
+L82@P2: 55 42 4.45 0.56 0.49
+L83@P2: 65 43 4.85 0.58 0.50
+L84@P2: 5.0
+L85@P2: 25 39 3.75 0.55 0.47
+L86@P2: 35 41 4.50 0.60 0.52
+L87@P2:  *45 43 5.10 0.61 0.53
+L88@P2: 55 45 5.75 0.63 0.55
+L89@P2: 65 45 6.10 0.67 0.58
+L90@P2: 6.0
+L91@P2: 25 39 4.20 0.61 0.53
+L92@P2: 35 43 5.20 0.63 0.54
+L93@P2:  *45 46 6.05 0.64 0.55
+L94@P2: 55 47 6.65 0.67 0.58
+L95@P2: 65 48 7.25 0.70 0.61
+L96@P2: 8.0
+L97@P2: 25 36 5.75 0.99 0.85
+L98@P2: 35 43 7.10 0.85 0.74
+L99@P2:  *45 47 8.05 0.81 0.70
+L100@P2: 55 48 8.95 0.86 0.75
+L101@P2: 65 50 9.70 0.86 0.75
+L102@P2: *Recommended operating pressure. Data based on 180°.
+L103@P2: T5 RAPIDSET® ROTOR MODEL LIST
+L104@P2: Model Description
+L105@P2: T5P-RS-LN 5” RapidSet Lawn pop-up
+L106@P2: T5PE-RS-LN 5” RapidSet Lawn pop-up, Effluent
+L107@P2: T5PCK1.5-RS 5” RapidSet Lawn pop-up with Check Valve, 1.5 gpm nozzle
+L108@P2: T5PCK2.0-RS 5” RapidSet Lawn pop-up with Check Valve, 2.0 gpm nozzle
+L109@P2: T5PCK2.5-RS 5” RapidSet Lawn pop-up with Check Valve, 2.5 gpm nozzle
+L110@P2: T5PCK3.0-RS 5” RapidSet Lawn pop-up with Check Valve
+L111@P2: T5HP-RS 12” RapidSet High Pop
+L112@P2: T5HPE-RS 12” RapidSet High Pop, Effluent
+L113@P2: T5S-RS RapidSet Shrub
+L114@P2: T5SE-RS RapidSet Shrub, Effluent
+L115@P2: T5PSS3.0-RS 5" RapidSet Stainless Steel Lawn pop-up, 3.0 gpm nozzle
+L116@P2: T5PSSE3.0-RS 5" RapidSet Stainless Steel Lawn pop-up, Effluent,
+L117@P2: 3.0 gpm nozzle
+L118@P2: T5PCKSS3.0-RS 5" RapidSet Stainless Steel Lawn pop-up with Check Valve,
+L119@P2: 3.0 gpm nozzle
+L120@P2: LOW ANGLE NOZZLE PERFORMANCE DATA
+L121@P2: Nozzle psi Radius gpm Precipitation Rate
+L122@P2: (in/hr) ▲ (in/hr) ■
+L123@P2: 1.0LA
+L124@P2: 25 25 0.74 0.26 0.23
+L125@P2: 35 28 0.94 0.27 0.23
+L126@P2:  *45 28 1.02 0.29 0.25
+L127@P2: 55 29 1.14 0.30 0.26
+L128@P2: 65 29 1.25 0.33 0.29
+L129@P2: 1.5LA
+L130@P2: 25 27 1.10 0.34 0.29
+L131@P2: 35 30 1.35 0.33 0.29
+L132@P2:  *45 31 1.52 0.35 0.30
+L133@P2: 55 31 1.75 0.40 0.35
+L134@P2: 65 31 1.90 0.44 0.38
+L135@P2: 2.0LA
+L136@P2: 25 29 1.40 0.37 0.32
+L137@P2: 35 31 1.72 0.40 0.34
+L138@P2:  *45 32 2.05 0.45 0.39
+L139@P2: 55 33 2.25 0.46 0.40
+L140@P2: 65 33 2.45 0.50 0.43
+L141@P2: 3.0LA
+L142@P2: 25 29 2.20 0.58 0.50
+L143@P2: 35 33 2.60 0.53 0.46
+L144@P2:  *45 34 3.05 0.59 0.51
+L145@P2: 55 36 3.40 0.58 0.51
+L146@P2: 65 36 3.70 0.63 0.55
+L147@P2: *Recommended operating pressure. Data based on 180°.
+L148@P2-3: T5 RAPIDSET® SERIES ROTORSwww.toro.com
+L149@P3: The Toro Company • Irrigation Business • 5825 Jasmine St. • Riverside, CA • 92504 • 877-345-8676
+L150@P3: Specifications subject to change without notice. For more information, contact your local Toro distributor. ©2020 The Toro Company. All rights reserved. 20-1009-IRC
+L151@P3: Specifying Information — T5 RapidSet Rotors
+L152@P3: T5XX XX XX X.X E-RS
+L153@P3: Base Model Body Optional Optional Custom Nozzles Optional Optional
+L154@P3: T5 XX XX XX X.X E -RS -LN
+L155@P3: T5—
+L156@P3: T5 RapidSet
+L157@P3: Series Rotor
+L158@P3: P - Lawn
+L159@P3: S - Shrub
+L160@P3: HP - High Pop
+L161@P3: CK — Check Valve SS — Stainless Steel Riser 1.5-1.5 gpm
+L162@P3: 2.0-2.0 gpm
+L163@P3: 2.5-2.5 gpm
+L164@P3: 3.0-3.0 gpm
+L165@P3: E — Effluent RS — RapidSet LN — Less Nozzle
+L166@P3: Example: A T5 RapidSet Lawn Pop-up sprinkler with a 2.5 gpm nozzle and Check Valve would be specified as: T5PCK2.5-RS
+L167@P3: SPECIFICATIONS
+L168@P3: Operational
+L169@P3: • Radius: 25 - 50 feet
+L170@P3: • Flow rate: 0.74 - 9.70 gpm
+L171@P3: • Arc: 40° to 360°, adjustable
+L172@P3: • Inlet: 3⁄4” NPT
+L173@P3: • Operating pressure range: 25-65 psi
+L174@P3: • Recommended operating pressure: 45 psi
+L175@P3: • Trajectory: 25° standard, 10° low angle
+L176@P3: • Pop-up height: 5” (measured from top of cap to
+L177@P3: nozzle high-pop height opening)
+L178@P3: • Available with factory-installed 1.5, 2.0, 2.5, or
+L179@P3: 3.0 gpm nozzle, or with no nozzle installed.
+L180@P3: Dimensions
+L181@P3: Body Diameter:
+L182@P3: − Lawn Pop-up: 21⁄4”
+L183@P3: − Shrub: 21⁄4”
+L184@P3: − High Pop: 21⁄4”
+L185@P3: Cap Diameter:
+L186@P3: − Lawn Pop-up: 25⁄8”
+L187@P3: − Shrub: N/A
+L188@P3: − High Pop: 25⁄8”
+L189@P3: Height:
+L190@P3: − Lawn Pop-up: 71⁄2”
+L191@P3: − Shrub: 73⁄4”
+L192@P3: − High Pop: 167⁄8”
+L193@P3: Warranty
+L194@P3: • Five years
+L195@P3: TOOLS RapidSet®
+L196@P3:  arc adjustment
+L197@P3: requires NO TOOLS!
+

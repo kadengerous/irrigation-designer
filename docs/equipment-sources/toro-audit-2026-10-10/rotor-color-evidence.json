@@ -1,0 +1,162 @@
+{
+  "checkedOn": "2026-10-10",
+  "modelCaps": [
+    {
+      "id": "toro:T5P-RS-LN",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    },
+    {
+      "id": "toro:T5PE-RS-LN",
+      "colorName": "Lavender",
+      "kind": "cap",
+      "sourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "sourceDetail": "December 2013 specification PDF page 2 lines 180–187 explicitly identifies effluent lavender."
+    },
+    {
+      "id": "toro:T5PCK1.5-RS",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    },
+    {
+      "id": "toro:T5PCK2.0-RS",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    },
+    {
+      "id": "toro:T5PCK2.5-RS",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    },
+    {
+      "id": "toro:T5PCK3.0-RS",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    },
+    {
+      "id": "toro:T5HP-RS",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    },
+    {
+      "id": "toro:T5HPE-RS",
+      "colorName": "Lavender",
+      "kind": "cap",
+      "sourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "sourceDetail": "December 2013 specification PDF page 2 lines 180–187 explicitly identifies effluent lavender."
+    },
+    {
+      "id": "toro:T5S-RS",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    },
+    {
+      "id": "toro:T5SE-RS",
+      "colorName": "Lavender",
+      "kind": "cap",
+      "sourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "sourceDetail": "December 2013 specification PDF page 2 lines 180–187 explicitly identifies effluent lavender."
+    },
+    {
+      "id": "toro:T5PSS3.0-RS",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    },
+    {
+      "id": "toro:T5PSSE3.0-RS",
+      "colorName": "Lavender",
+      "kind": "cap",
+      "sourceUrl": "https://media.toro.com/CatalogDocuments/Specifications/T5-bid-spec.pdf",
+      "sourceDetail": "December 2013 specification PDF page 2 lines 180–187 explicitly identifies effluent lavender."
+    },
+    {
+      "id": "toro:T5PCKSS3.0-RS",
+      "colorName": "Dark gray",
+      "kind": "cap",
+      "sourceUrl": "https://www.toro.com/getpub/128192",
+      "sourceDetail": "RapidSet manual first page lines 101–105 identifies dark gray cover, distinguishing black older T5 cover."
+    }
+  ],
+  "bodyCaps": {
+    "modelIds": [
+      "toro:570Z-2P",
+      "toro:570Z-2LP",
+      "toro:570Z-3P",
+      "toro:570Z-3LP",
+      "toro:570Z-4P",
+      "toro:570Z-4LP",
+      "toro:570Z-6P",
+      "toro:570Z-6LP",
+      "toro:570Z-6SI",
+      "toro:570Z-6LPSI",
+      "toro:570Z-12P",
+      "toro:570Z-12LP",
+      "toro:570Z-12SI",
+      "toro:570Z-12LPSI",
+      "toro:570Z-4P-COM",
+      "toro:570Z-6P-COM",
+      "toro:570Z-12P-COM",
+      "toro:570Z-4P-PRX",
+      "toro:570Z-6P-PRX",
+      "toro:570Z-6SI-PRX",
+      "toro:570Z-12P-PRX",
+      "toro:570Z-12SI-PRX",
+      "toro:570Z-4P-PRXCOM",
+      "toro:570Z-6P-PRXCOM",
+      "toro:570Z-12P-PRXCOM",
+      "toro:570Z-3P-PR",
+      "toro:570Z-4P-PR",
+      "toro:570Z-6P-PR",
+      "toro:570Z-12P-PR",
+      "toro:570Z-4P-PRCOM",
+      "toro:570Z-6P-PRCOM",
+      "toro:570Z-12P-PRCOM",
+      "toro:570Z-4P-XF",
+      "toro:570Z-6P-XF",
+      "toro:570Z-6SI-XF",
+      "toro:570Z-12P-XF",
+      "toro:570Z-12SI-XF",
+      "toro:570Z-4P-XFCOM",
+      "toro:570Z-6P-XFCOM",
+      "toro:570Z-12P-XFCOM"
+    ],
+    "colorName": "Black",
+    "sourceUrl": "https://specifier.toro.com/manuals/toro-irritrol_pricelist_2025.pdf",
+    "sourceDetail": "Current 2026 price list body accessories lists 89-3747 Black Cap; current catalog body records do not include optional effluent covers."
+  },
+  "nozzleInsertColors": {
+    "status": "Unknown",
+    "nozzleIds": [
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "8.0",
+      "1.0LA",
+      "1.5LA",
+      "2.0LA",
+      "3.0LA"
+    ],
+    "reason": "Official text identifies molded nozzle numbers, not a verified distinct color code for the 12 nozzle inserts. Do not treat cap colors as nozzle colors."
+  },
+  "hexPolicy": "Existing hex values are approximate display shades, not manufacturer-issued color specifications."
+}

@@ -1,0 +1,2362 @@
+[
+  {
+    "modelId": "FN-12Q",
+    "sourcePage": 48,
+    "rowIndex": 0,
+    "pressureBar": 1.4,
+    "arcDeg": 90,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 1.51,
+        "imperialConverted": 2.0063
+      }
+    }
+  },
+  {
+    "modelId": "FN-12Q",
+    "sourcePage": 48,
+    "rowIndex": 1,
+    "pressureBar": 1.7,
+    "arcDeg": 90,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 1.7,
+        "imperialConverted": 2.2712
+      }
+    }
+  },
+  {
+    "modelId": "FN-12Q",
+    "sourcePage": 48,
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 2.27,
+        "imperialConverted": 2.4605
+      }
+    }
+  },
+  {
+    "modelId": "FN-12H",
+    "sourcePage": 48,
+    "rowIndex": 0,
+    "pressureBar": 1.4,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 2.27,
+        "imperialConverted": 3.9747
+      }
+    }
+  },
+  {
+    "modelId": "FN-12H",
+    "sourcePage": 48,
+    "rowIndex": 1,
+    "pressureBar": 1.7,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 3.03,
+        "imperialConverted": 4.5425
+      }
+    }
+  },
+  {
+    "modelId": "FN-12H",
+    "sourcePage": 48,
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 3.79,
+        "imperialConverted": 4.921
+      }
+    }
+  },
+  {
+    "modelId": "FN-12TQ",
+    "sourcePage": 48,
+    "rowIndex": 0,
+    "pressureBar": 1.4,
+    "arcDeg": 270,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 3.6,
+        "imperialConverted": 5.981
+      }
+    }
+  },
+  {
+    "modelId": "FN-12TQ",
+    "sourcePage": 48,
+    "rowIndex": 1,
+    "pressureBar": 1.7,
+    "arcDeg": 270,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 3.79,
+        "imperialConverted": 6.8137
+      }
+    }
+  },
+  {
+    "modelId": "FN-12TQ",
+    "sourcePage": 48,
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 4.92,
+        "imperialConverted": 7.3816
+      }
+    }
+  },
+  {
+    "modelId": "FN-12F",
+    "sourcePage": 48,
+    "rowIndex": 0,
+    "pressureBar": 1.4,
+    "arcDeg": 360,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 6.06,
+        "imperialConverted": 7.9494
+      }
+    }
+  },
+  {
+    "modelId": "FN-12F",
+    "sourcePage": 48,
+    "rowIndex": 1,
+    "pressureBar": 1.7,
+    "arcDeg": 360,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 3.4,
+        "imperialConverted": 3.6576
+      },
+      "flowLMin": {
+        "publishedMetric": 6.81,
+        "imperialConverted": 9.085
+      }
+    }
+  },
+  {
+    "modelId": "FN-12F",
+    "sourcePage": 48,
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 7.95,
+        "imperialConverted": 9.8421
+      }
+    }
+  },
+  {
+    "modelId": "P12Q",
+    "sourcePage": 49,
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 90,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 4.3,
+        "imperialConverted": 3.9624
+      }
+    }
+  },
+  {
+    "modelId": "P12Q",
+    "sourcePage": 49,
+    "rowIndex": 3,
+    "pressureBar": 2.8,
+    "arcDeg": 90,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 4.6,
+        "imperialConverted": 4.2672
+      }
+    }
+  },
+  {
+    "modelId": "P12H",
+    "sourcePage": 49,
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 4.3,
+        "imperialConverted": 3.9624
+      }
+    }
+  },
+  {
+    "modelId": "P12H",
+    "sourcePage": 49,
+    "rowIndex": 3,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 4.6,
+        "imperialConverted": 4.2672
+      }
+    }
+  },
+  {
+    "modelId": "P12TQ",
+    "sourcePage": 49,
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 270,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 4.3,
+        "imperialConverted": 3.9624
+      }
+    }
+  },
+  {
+    "modelId": "P12TQ",
+    "sourcePage": 49,
+    "rowIndex": 3,
+    "pressureBar": 2.8,
+    "arcDeg": 270,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 4.6,
+        "imperialConverted": 4.2672
+      }
+    }
+  },
+  {
+    "modelId": "P12F",
+    "sourcePage": 49,
+    "rowIndex": 2,
+    "pressureBar": 2.1,
+    "arcDeg": 360,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 4.3,
+        "imperialConverted": 3.9624
+      }
+    }
+  },
+  {
+    "modelId": "P12F",
+    "sourcePage": 49,
+    "rowIndex": 3,
+    "pressureBar": 2.8,
+    "arcDeg": 360,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 4.6,
+        "imperialConverted": 4.2672
+      }
+    }
+  },
+  {
+    "modelId": "P15H",
+    "sourcePage": 49,
+    "rowIndex": 2,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "pressureBar": {
+        "publishedMetric": 2.8,
+        "imperialConverted": 2.0684
+      }
+    }
+  },
+  {
+    "modelId": "P15H",
+    "sourcePage": 49,
+    "rowIndex": 3,
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "discrepancies": {
+      "pressureBar": {
+        "publishedMetric": 3.4,
+        "imperialConverted": 2.7579
+      }
+    }
+  },
+  {
+    "modelId": "P15TQ",
+    "sourcePage": 49,
+    "rowIndex": 0,
+    "pressureBar": 1.4,
+    "arcDeg": 270,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 3.4,
+        "imperialConverted": 3.9624
+      }
+    }
+  },
+  {
+    "modelId": "P15F",
+    "sourcePage": 49,
+    "rowIndex": 0,
+    "pressureBar": 1.4,
+    "arcDeg": 360,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 3.4,
+        "imperialConverted": 3.9624
+      }
+    }
+  },
+  {
+    "modelId": "P15F",
+    "sourcePage": 49,
+    "rowIndex": 2,
+    "pressureBar": 2.8,
+    "arcDeg": 360,
+    "discrepancies": {
+      "pressureBar": {
+        "publishedMetric": 2.8,
+        "imperialConverted": 2.0684
+      }
+    }
+  },
+  {
+    "modelId": "P15F",
+    "sourcePage": 49,
+    "rowIndex": 3,
+    "pressureBar": 3.4,
+    "arcDeg": 360,
+    "discrepancies": {
+      "pressureBar": {
+        "publishedMetric": 3.4,
+        "imperialConverted": 2.7579
+      }
+    }
+  },
+  {
+    "modelId": "RN300-ADJ",
+    "sourcePage": 43,
+    "rowIndex": 8,
+    "pressureBar": 3.5,
+    "arcDeg": 360,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 8.83,
+        "imperialConverted": 8.5344
+      }
+    }
+  },
+  {
+    "modelId": "RPS75",
+    "sourcePage": 10,
+    "rowIndex": 26,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 18.5,
+        "imperialConverted": 20.8198
+      }
+    }
+  },
+  {
+    "modelId": "RPS75",
+    "sourcePage": 10,
+    "rowIndex": 27,
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 18.5,
+        "imperialConverted": 22.7125
+      }
+    }
+  },
+  {
+    "modelId": "RPS75",
+    "sourcePage": 10,
+    "rowIndex": 30,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 25.7,
+        "imperialConverted": 28.7691
+      }
+    }
+  },
+  {
+    "modelId": "RPS75",
+    "sourcePage": 10,
+    "rowIndex": 31,
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 25.7,
+        "imperialConverted": 31.0404
+      }
+    }
+  },
+  {
+    "modelId": "RPS75",
+    "sourcePage": 10,
+    "rowIndex": 39,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 13.2,
+        "imperialConverted": 14.3846
+      }
+    }
+  },
+  {
+    "modelId": "RPS75",
+    "sourcePage": 10,
+    "rowIndex": 46,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 27.6,
+        "imperialConverted": 30.2833
+      }
+    }
+  },
+  {
+    "modelId": "RPS75",
+    "sourcePage": 10,
+    "rowIndex": 47,
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "flowLMin": {
+        "publishedMetric": 27.6,
+        "imperialConverted": 32.5545
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 0,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 7.0,
+        "imperialConverted": 4.064
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 4.826
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 1,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 7.0,
+        "imperialConverted": 4.318
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 5.08
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 2,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 4.826
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 9.0,
+        "imperialConverted": 5.588
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 3,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 4.826
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 9.0,
+        "imperialConverted": 5.588
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 4,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 4.826
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 9.0,
+        "imperialConverted": 5.588
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 5,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 5.08
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 9.0,
+        "imperialConverted": 5.842
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 6,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 10.0,
+        "imperialConverted": 6.096
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 7.112
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 7,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 10.0,
+        "imperialConverted": 6.096
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 7.112
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 8,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 9.0,
+        "imperialConverted": 5.842
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 6.604
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 9,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 10.0,
+        "imperialConverted": 6.35
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 12.0,
+        "imperialConverted": 7.366
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 10,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 6.858
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 7.874
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 11,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 6.858
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 7.874
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 12,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 6.858
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 7.874
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 13,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 6.858
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 7.874
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 14,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 6.858
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 7.874
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 15,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 6.858
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 7.874
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 16,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 12.0,
+        "imperialConverted": 7.62
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 14.0,
+        "imperialConverted": 8.636
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 17,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 8.128
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 15.0,
+        "imperialConverted": 9.398
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 18,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 8.128
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 15.0,
+        "imperialConverted": 9.652
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 19,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 8.128
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 15.0,
+        "imperialConverted": 9.652
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 20,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 16.0,
+        "imperialConverted": 9.906
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 18.0,
+        "imperialConverted": 11.43
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 21,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 15.0,
+        "imperialConverted": 9.144
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 17.0,
+        "imperialConverted": 10.668
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 22,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 15.0,
+        "imperialConverted": 9.398
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 17.0,
+        "imperialConverted": 10.922
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 23,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 15.0,
+        "imperialConverted": 9.398
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 17.0,
+        "imperialConverted": 10.922
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 24,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 23.0,
+        "imperialConverted": 14.224
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 26.0,
+        "imperialConverted": 16.51
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 25,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 21.0,
+        "imperialConverted": 12.954
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 24.0,
+        "imperialConverted": 14.986
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 26,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 21.0,
+        "imperialConverted": 12.954
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 24.0,
+        "imperialConverted": 14.986
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 27,
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 21.0,
+        "imperialConverted": 12.954
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 24.0,
+        "imperialConverted": 14.986
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 28,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 23.0,
+        "imperialConverted": 14.478
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 27.0,
+        "imperialConverted": 16.764
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 29,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 23.0,
+        "imperialConverted": 14.478
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 27.0,
+        "imperialConverted": 16.764
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 30,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 23.0,
+        "imperialConverted": 14.478
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 27.0,
+        "imperialConverted": 16.764
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 31,
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 23.0,
+        "imperialConverted": 14.478
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 27.0,
+        "imperialConverted": 16.764
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 32,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 19.0,
+        "imperialConverted": 12.192
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 22.0,
+        "imperialConverted": 13.97
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 33,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 23.0,
+        "imperialConverted": 14.478
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 27.0,
+        "imperialConverted": 16.764
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 34,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 21.0,
+        "imperialConverted": 12.954
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 24.0,
+        "imperialConverted": 14.986
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 35,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 21.0,
+        "imperialConverted": 12.954
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 24.0,
+        "imperialConverted": 14.986
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 36,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 28.0,
+        "imperialConverted": 17.526
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 32.0,
+        "imperialConverted": 20.066
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 37,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 24.0,
+        "imperialConverted": 14.732
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 27.0,
+        "imperialConverted": 17.018
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 38,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 22.0,
+        "imperialConverted": 13.97
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 26.0,
+        "imperialConverted": 16.256
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 39,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 22.0,
+        "imperialConverted": 13.97
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 26.0,
+        "imperialConverted": 16.256
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 40,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 28.0,
+        "imperialConverted": 17.272
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 32.0,
+        "imperialConverted": 20.066
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 41,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 26.0,
+        "imperialConverted": 16.51
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 31.0,
+        "imperialConverted": 19.05
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 42,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 25.0,
+        "imperialConverted": 15.748
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 29.0,
+        "imperialConverted": 18.034
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 43,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 25.0,
+        "imperialConverted": 15.748
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 29.0,
+        "imperialConverted": 18.034
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 44,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 35.0,
+        "imperialConverted": 22.098
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 41.0,
+        "imperialConverted": 25.4
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 45,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 36.0,
+        "imperialConverted": 22.352
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 41.0,
+        "imperialConverted": 25.654
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 46,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 36.0,
+        "imperialConverted": 22.352
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 41.0,
+        "imperialConverted": 25.654
+      }
+    }
+  },
+  {
+    "modelId": "RPS75-PR",
+    "sourcePage": "10-pr",
+    "rowIndex": 47,
+    "pressureBar": 4.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 36.0,
+        "imperialConverted": 22.352
+      },
+      "precipTriangleMmH": {
+        "publishedMetric": 41.0,
+        "imperialConverted": 25.654
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 14,
+    "rowIndex": 8,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 7.0,
+        "imperialConverted": 8.128
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 14,
+    "rowIndex": 9,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 7.0,
+        "imperialConverted": 8.89
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 14,
+    "rowIndex": 10,
+    "pressureBar": 3.4,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 9.144
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 14,
+    "rowIndex": 11,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 9.144
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 14,
+    "rowIndex": 12,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipSquareMmH": {
+        "publishedMetric": 7.0,
+        "imperialConverted": 8.89
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 4,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 4.0,
+        "imperialConverted": 4.164
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 18,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 9.3,
+        "imperialConverted": 9.4635
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 20,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 9.3,
+        "imperialConverted": 9.4635
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 26,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 14.6,
+        "imperialConverted": 14.7631
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 33,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 18.0,
+        "imperialConverted": 18.17
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 35,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 23.3,
+        "imperialConverted": 23.4696
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 38,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 6.0,
+        "imperialConverted": 5.4864
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 40,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 3.2,
+        "imperialConverted": 3.0283
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 41,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 6.0,
+        "imperialConverted": 5.4864
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 43,
+    "pressureBar": 2.8,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 4.0,
+        "imperialConverted": 4.164
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 48,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 6.6,
+        "imperialConverted": 6.8137
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 49,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 7.4,
+        "imperialConverted": 7.5708
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 50,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 6.6,
+        "imperialConverted": 6.8137
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i",
+    "sourcePage": 15,
+    "rowIndex": 52,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.0,
+        "imperialConverted": 7.62
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 9.3,
+        "imperialConverted": 9.4635
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 38,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 6.604
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 39,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 8.0,
+        "imperialConverted": 6.604
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 41,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 10.0,
+        "imperialConverted": 8.636
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 43,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 10.0,
+        "imperialConverted": 8.636
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 44,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 9.144
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 45,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 11.0,
+        "imperialConverted": 9.144
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 46,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 10.922
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 47,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 12.0,
+        "imperialConverted": 10.414
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 48,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 11.176
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 49,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 11.176
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 50,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 14.0,
+        "imperialConverted": 11.938
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 51,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 15.0,
+        "imperialConverted": 12.7
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 52,
+    "pressureBar": 3.5,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 16.0,
+        "imperialConverted": 13.97
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": "14-pr",
+    "rowIndex": 53,
+    "pressureBar": 4.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "precipTriangleMmH": {
+        "publishedMetric": 16.0,
+        "imperialConverted": 13.97
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 3,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "precipTriangleAt30PercentMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 11.938
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 4,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 4.0,
+        "imperialConverted": 4.164
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 5,
+    "pressureBar": 2.8,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 6,
+    "pressureBar": 3.5,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 7,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 12,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 13,
+    "pressureBar": 2.8,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.1,
+        "imperialConverted": 8.2296
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 16,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.1,
+        "imperialConverted": 8.2296
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 18,
+    "pressureBar": 3.5,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.7,
+        "imperialConverted": 8.8392
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 9.3,
+        "imperialConverted": 9.4635
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 19,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.7,
+        "imperialConverted": 8.8392
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 9.3,
+        "imperialConverted": 9.4635
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 20,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.1,
+        "imperialConverted": 8.2296
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 9.3,
+        "imperialConverted": 9.4635
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 26,
+    "pressureBar": 3.5,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 14.6,
+        "imperialConverted": 14.7631
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 27,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 14.6,
+        "imperialConverted": 14.7631
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 33,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 18.0,
+        "imperialConverted": 18.17
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 35,
+    "pressureBar": 3.5,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 10.2,
+        "imperialConverted": 10.3632
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 23.3,
+        "imperialConverted": 23.4696
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 36,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 10.2,
+        "imperialConverted": 10.3632
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 23.3,
+        "imperialConverted": 23.4696
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 37,
+    "pressureBar": 4.8,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 10.2,
+        "imperialConverted": 10.3632
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 23.3,
+        "imperialConverted": 23.4696
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 39,
+    "pressureBar": 2.8,
+    "discrepancies": {
+      "precipTriangleAt30PercentMmH": {
+        "publishedMetric": 10.0,
+        "imperialConverted": 11.176
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 40,
+    "pressureBar": 3.5,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 3.2,
+        "imperialConverted": 3.0283
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 41,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 3.2,
+        "imperialConverted": 3.0283
+      },
+      "precipSquareAt30PercentMmH": {
+        "publishedMetric": 14.0,
+        "imperialConverted": 12.446
+      },
+      "precipTriangleAt30PercentMmH": {
+        "publishedMetric": 13.0,
+        "imperialConverted": 14.224
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 43,
+    "pressureBar": 2.8,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 4.0,
+        "imperialConverted": 4.164
+      },
+      "precipSquareAt30PercentMmH": {
+        "publishedMetric": 14.0,
+        "imperialConverted": 12.446
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 48,
+    "pressureBar": 3.5,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 6.6,
+        "imperialConverted": 6.8137
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 49,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 6.6,
+        "imperialConverted": 6.8137
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 50,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 6.6,
+        "imperialConverted": 6.8137
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 52,
+    "pressureBar": 3.5,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 9.3,
+        "imperialConverted": 9.4635
+      }
+    }
+  },
+  {
+    "modelId": "RPS75i-PR",
+    "sourcePage": 15,
+    "rowIndex": 53,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 9.3,
+        "imperialConverted": 9.4635
+      }
+    }
+  },
+  {
+    "modelId": "RPS-Select",
+    "sourcePage": 17,
+    "rowIndex": 2,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 10.4,
+        "imperialConverted": 11.2776
+      }
+    }
+  },
+  {
+    "modelId": "RPS-Select",
+    "sourcePage": 17,
+    "rowIndex": 12,
+    "pressureBar": 2.8,
+    "arcDeg": 180,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 12.2,
+        "imperialConverted": 12.4968
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 21,
+    "rowIndex": 16,
+    "pressureBar": 2.1,
+    "arcDeg": 180,
+    "discrepancies": {
+      "radiusM": {
+        "publishedMetric": 10.6,
+        "imperialConverted": 10.0584
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 3,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 6.9,
+        "imperialConverted": 6.7056
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 3.2,
+        "imperialConverted": 3.0283
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 5,
+    "pressureBar": 2.8,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 4.0,
+        "imperialConverted": 4.164
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 7,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.1,
+        "imperialConverted": 8.2296
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 12,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 15,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.1,
+        "imperialConverted": 8.2296
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 16,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.4,
+        "imperialConverted": 7.0104
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 19,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.1,
+        "imperialConverted": 8.2296
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 22,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.1,
+        "imperialConverted": 8.2296
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 24,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      },
+      "precipTriangleAt30PercentMmH": {
+        "publishedMetric": 28.0,
+        "imperialConverted": 25.146
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 27,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 9.0,
+        "imperialConverted": 8.8392
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 28,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 11.9,
+        "imperialConverted": 12.1133
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 30,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 8.7,
+        "imperialConverted": 8.8392
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 31,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 9.0,
+        "imperialConverted": 8.8392
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 32,
+    "pressureBar": 4.8,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 9.8,
+        "imperialConverted": 9.4488
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 33,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 7.5,
+        "imperialConverted": 7.62
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 35,
+    "pressureBar": 3.4,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 9.0,
+        "imperialConverted": 8.8392
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 36,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 9.6,
+        "imperialConverted": 9.7536
+      },
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 23.3,
+        "imperialConverted": 23.4696
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 37,
+    "pressureBar": 4.8,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 10.7,
+        "imperialConverted": 9.7536
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 38,
+    "pressureBar": 2.1,
+    "discrepancies": {
+      "radiusAt30PercentReductionM": {
+        "publishedMetric": 5.3,
+        "imperialConverted": 5.4864
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 41,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 3.2,
+        "imperialConverted": 3.0283
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 43,
+    "pressureBar": 2.8,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 3.2,
+        "imperialConverted": 3.0283
+      }
+    }
+  },
+  {
+    "modelId": "SuperPro",
+    "sourcePage": 22,
+    "rowIndex": 45,
+    "pressureBar": 4.1,
+    "discrepancies": {
+      "flowAt30PercentReductionLMin": {
+        "publishedMetric": 4.0,
+        "imperialConverted": 4.164
+      }
+    }
+  }
+]

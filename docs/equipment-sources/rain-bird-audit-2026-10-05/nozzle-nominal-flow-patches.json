@@ -1,0 +1,46 @@
+[
+  {
+    "id": "rain-bird:1401",
+    "set": {
+      "compensatedFlowLMin": 0.946352946,
+      "compensatedFlowM3H": 0.056781176759999996,
+      "publishedNominalFlowM3H": 0.06,
+      "compensatedFlowSourceUnit": "US gpm",
+      "compensatedFlowSourceValue": 0.25
+    },
+    "reason": "Keep canonical SI units coherent using exact conversion of published nominal US gpm. Retain original printed m³/h separately as rounded source value. Preserve 1408 Deprecated status."
+  },
+  {
+    "id": "rain-bird:1402",
+    "set": {
+      "compensatedFlowLMin": 1.892705892,
+      "compensatedFlowM3H": 0.11356235351999999,
+      "publishedNominalFlowM3H": 0.11,
+      "compensatedFlowSourceUnit": "US gpm",
+      "compensatedFlowSourceValue": 0.5
+    },
+    "reason": "Keep canonical SI units coherent using exact conversion of published nominal US gpm. Retain original printed m³/h separately as rounded source value. Preserve 1408 Deprecated status."
+  },
+  {
+    "id": "rain-bird:1404",
+    "set": {
+      "compensatedFlowLMin": 3.785411784,
+      "compensatedFlowM3H": 0.22712470703999998,
+      "publishedNominalFlowM3H": 0.23,
+      "compensatedFlowSourceUnit": "US gpm",
+      "compensatedFlowSourceValue": 1
+    },
+    "reason": "Keep canonical SI units coherent using exact conversion of published nominal US gpm. Retain original printed m³/h separately as rounded source value. Preserve 1408 Deprecated status."
+  },
+  {
+    "id": "rain-bird:1408",
+    "set": {
+      "compensatedFlowLMin": 7.570823568,
+      "compensatedFlowM3H": 0.45424941407999997,
+      "publishedNominalFlowM3H": 0.46,
+      "compensatedFlowSourceUnit": "US gpm",
+      "compensatedFlowSourceValue": 2
+    },
+    "reason": "Keep canonical SI units coherent using exact conversion of published nominal US gpm. Retain original printed m³/h separately as rounded source value. Preserve 1408 Deprecated status."
+  }
+]

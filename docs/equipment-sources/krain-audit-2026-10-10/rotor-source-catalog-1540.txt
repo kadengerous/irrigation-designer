@@ -1,0 +1,434 @@
+ (https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf)
+citeturn456view0 [wordlim: 200] Crawled: yesterday; Content type: application/pdf; Number of pages: 100; Source: open({"ref_id":"turn453view0","lineno":1540}); Total lines: 6106
+L1397@P23: n Recommended Pressure Range: 40 – 90 PSI (2,8 – 6,2 bar)
+L1398@P23: n Precipitation Rate: 0.48 – 1.35 in/hr (12,2 – 34 mm/hr)
+L1399@P23: (depending on spacing and nozzle used)
+L1400@P23: n Radius: 43' – 77' (13,1 – 23,5 m)
+L1401@P23: n Nozzle Trajectory: 26°
+L1402@P23: Model
+L1403@P23: 14003 ProSport® Plastic
+L1404@P23: 14003-6INCH ProSport®
+L1405@P23:  Plastic 6 inch
+L1406@P23: 14003-TC-6INCH 6 inch, NPT, Turf Cup, ProSport®
+L1407@P23: 14003-BSP-TC-6INCH 6 inch, BSP, Turf Cup, ProSport®
+L1408@P23: 14053 ProSport® High Speed Plastic
+L1409@P23: 14053-6INCH ProSport®
+L1410@P23:  High Speed Plastic 6 inch
+L1411@P23: 14053-TC-6INCH 6 inch, NPT, Turf Cup, ProSport®
+L1412@P23:  Hi-Speed
+L1413@P23: 14053-BSP-TC-6INCH 6 inch, BSP, Turf Cup, ProSport®
+L1414@P23:  Hi-Speed
+L1415@P23: Designed for sports turf and commercial applications.
+L1416@P23: Fast Facts
+L1417@P23: ALL
+L1418@P23: INLET: 1” (2,5 CM) FEMALE THREAD
+L1419@P23: NPT OR BSP
+L1420@P23: 4” Retracted height: 7 1/2" (19 cm)
+L1421@P23: Riser height: 4 1/2" (11,4 cm)
+L1422@P23: 6” Retracted height: 12" (30,5 cm)
+L1423@P23: Riser height: 6 1/4" (15,9 cm)
+L1424@P23: 6" Turf Cup Retracted height: 15" (38,1 cm)
+L1425@P23: Riser height: 6 1/4" (15,9 cm)
+L1426@P23: 6" Model Only
+L1427@P23: WITH
+L1428@P23: Nozzle
+L1429@P23: Socket
+L1430@P23: Nozzle
+L1431@P23: Turret
+L1432@P23: Can
+L1433@P23: Grass
+L1434@P23-24: Insertkrain.com 25
+L1435@P24: *All precipitation rates calculated for 180° operation. For the precipitation rate for a 360° sprinkler, divide by 2.
+L1436@P24: Visit our Sport
+L1437@P24: Field Designs.
+L1438@P24: Easy Arc Setting
+L1439@P24: Arc Selection: 40°
+L1440@P24: to continuous 360°
+L1441@P24: Adjust from left start
+L1442@P24: 14003 Performance Data - U.S.
+L1443@P24: NO ADJUSTMENT
+L1444@P24: NOZZLE
+L1445@P24: PRESSURE RADIUS FLOW PRECIP in/hr
+L1446@P24: PSI FEET GPM n p #5 40 43 5.5 0.57 0.66
+L1447@P24: 50 44 6.0 0.60 0.69
+L1448@P24: 60 45 7.0 0.67 0.77
+L1449@P24: 70 46 8.0 0.73 0.84
+L1450@P24: #10 50 49 11.8 0.95 1.09
+L1451@P24: 60 52 12.8 0.91 1.05
+L1452@P24: 70 53 13.8 0.95 1.09
+L1453@P24: Pre-Installed 80 54 14.5 0.96 1.11
+L1454@P24: #15 50 52 14.0 1.00 1.15
+L1455@P24: 60 54 16.0 1.06 1.22
+L1456@P24: 70 56 17.0 1.04 1.20
+L1457@P24: 80 58 18.0 1.03 1.19
+L1458@P24: #20 60 56 19.8 1.22 1.40
+L1459@P24: 70 58 21.0 1.20 1.39
+L1460@P24: 80 59 21.5 1.19 1.37
+L1461@P24: 90 60 22.0 1.18 1.36
+L1462@P24: #25 60 62 23.5 1.18 1.36
+L1463@P24: 70 66 26.5 1.17 1.35
+L1464@P24: 80 67 28.0 1.20 1.39
+L1465@P24: 90 68 29.0 1.21 1.39
+L1466@P24: #30 60 65 25.0 1.14 1.32
+L1467@P24: 70 72 30.0 1.11 1.29
+L1468@P24: 80 73 31.5 1.14 1.31
+L1469@P24: 90 75 33.5 1.15 1.32
+L1470@P24: 14003 Performance Data - Metric
+L1471@P24: NO ADJUSTMENT
+L1472@P24: NOZZLE
+L1473@P24: PRESSURE RADIUS FLOW PRECIP mm/hr
+L1474@P24: BAR METER L/M n p #5 2,8 13,1 20,8 15 17
+L1475@P24: 3,5 13,4 22,7 15 17
+L1476@P24: 4,1 13,7 26,5 17 20
+L1477@P24: 4,8 14,0 30,3 18 21
+L1478@P24: #10 3,5 14,9 44,7 24 28
+L1479@P24: 4,1 15,8 48,5 23 27
+L1480@P24: 4,8 16,2 52,2 24 28
+L1481@P24: Pre-Installed 5,5 16,5 54,9 24 28
+L1482@P24: #15 3,5 15,8 53,0 25 29
+L1483@P24: 4,1 16,5 60,6 27 31
+L1484@P24: 4,8 17,1 64,4 27 31
+L1485@P24: 5,5 17,7 68,1 26 30
+L1486@P24: #20 4,1 17,1 75,0 31 36
+L1487@P24: 4,8 17,7 79,5 31 35
+L1488@P24: 5,5 18,0 81,4 30 35
+L1489@P24: 6,2 18,3 83,3 30 35
+L1490@P24: #25 4,1 18,9 89,0 30 35
+L1491@P24: 4,8 20,1 100,3 30 34
+L1492@P24: 5,5 20,4 106,0 30 35
+L1493@P24: 6,2 20,7 109,8 31 35
+L1494@P24: #30 4,1 19,8 94,6 29 33
+L1495@P24: 4,8 21,9 113,6 28 33
+L1496@P24: 6,2 22,2 119,2 29 33
+L1497@P24: 6,2 22,9 126,8 29 34
+L1498@P24: 14053 Performance Data - U.S.
+L1499@P24: NO ADJUSTMENT
+L1500@P24: NOZZLE
+L1501@P24: PRESSURE RADIUS FLOW PRECIP in/hr
+L1502@P24: PSI FEET GPM n p #5 40 43 5.5 0.61 0.71
+L1503@P24: 50 44 6.0 0.62 0.71
+L1504@P24: 60 45 7.0 0.61 0.70
+L1505@P24: 70 45 8.0 0.72 0.83
+L1506@P24: #10 50 49 11.8 0.85 0.98
+L1507@P24: 60 53 12.8 0.79 0.91
+L1508@P24: 70 53 13.8 0.91 1.05
+L1509@P24: Pre-Installed 80 54 14.5 0.92 1.07
+L1510@P24: #15 50 52 14.0 0.88 1.02
+L1511@P24: 60 54 16.0 0.90 1.04
+L1512@P24: 70 56 17.0 0.90 1.03
+L1513@P24: 80 58 18.0 0.91 1.05
+L1514@P24: #20 60 56 19.8 1.22 1.40
+L1515@P24: 70 58 21.0 1.21 1.40
+L1516@P24: 80 59 21.5 1.26 1.46
+L1517@P24: 90 60 22.0 1.30 1.51
+L1518@P24: #25 60 59 23.5 1.24 1.43
+L1519@P24: 70 66 26.5 1.14 1.31
+L1520@P24: 80 67 28.0 1.19 1.38
+L1521@P24: 90 68 29.0 1.24 1.44
+L1522@P24: #30 60 60 25.0 1.35 1.56
+L1523@P24: 70 72 30.0 1.06 1.22
+L1524@P24: 80 73 31.5 1.11 1.28
+L1525@P24: 90 75 33.5 1.11 1.28
+L1526@P24: 14053 Performance Data - Metric
+L1527@P24: NO ADJUSTMENT
+L1528@P24: NOZZLE
+L1529@P24: PRESSURE RADIUS FLOW PRECIP mm/hr
+L1530@P24: BAR METER L/M n p #5 2,8 13,1 20,8 15 18
+L1531@P24: 3,5 13,4 22,7 16 18
+L1532@P24: 4,1 13,7 26,5 15 18
+L1533@P24: 4,8 13,7 30,3 18 21
+L1534@P24: #10 3,5 14,9 44,7 22 25
+L1535@P24: 4,1 15,8 48,5 20 23
+L1536@P24: 4,8 16,1 52,2 23 27
+L1537@P24: Pre-Installed 5,5 16,5 54,9 23 27
+L1538@P24: #15 3,5 15,8 53,0 22 26
+L1539@P24: 4,1 16,5 60,6 23 26
+L1540@P24: 4,8 17,1 64,4 23 26
+L1541@P24: 5,5 17,1 68,1 23 27
+L1542@P24: #20 4,1 17,1 75,0 31 36
+L1543@P24: 4,8 17,7 79,5 31 36
+L1544@P24: 5,5 18,0 81,4 32 37
+L1545@P24: 6,2 18,3 83,3 33 38
+L1546@P24: #25 4,1 18,0 89,0 31 36
+L1547@P24: 4,8 20,1 100,3 29 33
+L1548@P24: 5,5 20,4 106,0 30 35
+L1549@P24: 6,2 20,7 109,8 31 37
+L1550@P24: #30 4,1 18,3 94,6 34 40
+L1551@P24: 4,8 22,0 113,6 27 31
+L1552@P24: 6,2 22,2 119,2 28 33
+L1553@P24: 6,2 22,9 126,8 28 33
+L1554@P24: How to Specify with Options
+L1555@P24: MODELS OPTIONS
+L1556@P24: 14003 -SS u Stainless Steel (4” only)
+L1557@P24: 14003-6INCH -BSP u with BSP Thread
+L1558@P24: 14053 -RCW u Reclaimed Water Use
+L1559@P24: Examples: 14003-BSP, 14053-RCW-NN
+L1560@P24: WATCH VIDEO
+L1561@P24: Accessories
+L1562@P24-25: See page 26-2726 Down Here. Doing. It. Right.
+L1563@P25: Rotor Accessories
+L1564@P25: P1000902
+L1565@P25: P59995 P1000901
+L1566@P25: Nozzle Racks
+L1567@P25: P52775 MiniPro® and RPS™ 50 Nozzle Rack (red)
+L1568@P25: P51399 ProPlus®
+L1569@P25:  Nozzle Rack (red)
+L1570@P25: Standard: 0.5, 0.75, 1, 2, 3, 4, 6, 8 GPM
+L1571@P25: Low Angle: 1, 3, 4, 6 GPM
+L1572@P25: Pre-installed Nozzle: 2.5 GPM
+L1573@P25: P16001101 RPS™ 75 Nozzle Rack (red)
+L1574@P25: Standard: 0.75, 1, 1.5, 2, 4, 6, 8 GPM
+L1575@P25: Low Angle: 1, 3, 4, 6 GPM
+L1576@P25: Pre-installed Nozzle: 3.0 GPM
+L1577@P25: P90001102 ProPlus-RCW low angle nozzle rack
+L1578@P25: P16001110 RPS™ 75i, SuperPro Nozzle Rack (green)
+L1579@P25: Standard: 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8 GPM
+L1580@P25: Low Angle: 1, 1.5, 2, 3 GPM
+L1581@P25: Pre-installed Nozzle: 2.5 GPM
+L1582@P25: ProSport®
+L1583@P25: P14055130 Complete set of Nozzles (1 nozzle of each)
+L1584@P25: P55519-5 5 GPM (18,9 LPM), white (12 count)
+L1585@P25: P55519-10 10 GPM (37,9 LPM), green (12 count)
+L1586@P25: P55519-15 15 GPM (56,8 LPM ), gray (12 count)
+L1587@P25: P55519-20 20 GPM (75,7 LPM), brown (12 count)
+L1588@P25: P55519-25 25 GPM (94,6 LPM), blue (12 count)
+L1589@P25: P55519-30 30 GPM (113,5 LPM), black (12 count)
+L1590@P25: Adjustment Tools
+L1591@P25: P59995 K-Key; MiniPro®, ProPlus® Adjustment Key
+L1592@P25: P1000902 SuperPro®
+L1593@P25: , RPS™ Select, ProSport®
+L1594@P25: Adjustment Key
+L1595@P25: P1000901 RPS™ 75, RPS™ 75i, RPS™ 50 Adjustment Key
+L1596@P25: P55519
+L1597@P25: 5 GPM
+L1598@P25: 20 GPM
+L1599@P25: 10 GPM
+L1600@P25: 25 GPM
+L1601@P25: 15 GPM
+L1602@P25: 30 GPM
+L1603@P25: P52775 P51399
+L1604@P25: P16001101 P16001110
+L1605@P25-26: P90001102krain.com 27
+L1606@P26: Riser Clips, Check Valves
+L1607@P26: and Filter Baskets
+L1608@P26: P54065 Riser Clip
+L1609@P26: P51210 SuperPro®
+L1610@P26: -HP, SuperPro®-SH,
+L1611@P26: RPS™ Select-SH, RPS™ 75-SH,
+L1612@P26: RPS™ 75i-SH, ProPlus®
+L1613@P26:  High Pop
+L1614@P26: and ProPlus®
+L1615@P26:  Shrub Check Valve
+L1616@P26: P513995 MiniPro®
+L1617@P26: , RPS™ 50 Check Valve
+L1618@P26: P16009110 RPS™ 75, 75i, Select, ProPlus®
+L1619@P26: ,
+L1620@P26: SuperPro®
+L1621@P26:  Check Valve Assembly
+L1622@P26: P53425 ProSport®
+L1623@P26:  Check Valve
+L1624@P26: P51114 MiniPro®
+L1625@P26:  Filter Basket
+L1626@P26: P51115 RPS™ 75, 75i, Select Filter Basket
+L1627@P26: P51112 SuperPro®
+L1628@P26:  High Pop, ProPlus®
+L1629@P26: High Pop Filter Basket, SuperPro®
+L1630@P26: -SH,
+L1631@P26: RPS™ Select-SH, RPS™ 75-SH,
+L1632@P26: RPS™ 75i-SH, Shrub Check Valve
+L1633@P26: P58115 ProPlus®
+L1634@P26: , SuperPro® Filter Basket
+L1635@P26: Swing Pipe & Fittings
+L1636@P26: KA05100 Swing Pipe, 1/2" x 100' Roll
+L1637@P26: SWPC050 Swing Pipe, Coupling, 1/2" Barb
+L1638@P26: SWPT050 Swing Pipe, Tee, 1/2" Barb
+L1639@P26: SWPE050 Swing Pipe, Elbow,
+L1640@P26: 1/2" MNPT x 1/2" Barb
+L1641@P26: SWPE075 Swing Pipe, Elbow,
+L1642@P26: 3/4" MNPT x 1/2" Barb
+L1643@P26: SWPA060505 Swing Pipe Assembly, 6in,
+L1644@P26: 1/2" Inlet x 1/2" Outlet
+L1645@P26: SWPA060575 Swing Pipe Assembly, 6in,
+L1646@P26: 1/2" Inlet x 3/4"
+L1647@P26: SWPA067575 Swing Pipe Assembly, 6in,
+L1648@P26: 3/4" Inlet x 3/4" Outlet
+L1649@P26: SWPA120505 Swing Pipe Assembly, 12in,
+L1650@P26: 1/2" Inlet x 1/2" Outlet
+L1651@P26: SWPA120575 Swing Pipe Assembly, 12in,
+L1652@P26: 1/2" Inlet x 3/4" Outlet
+L1653@P26: SWPA127575 Swing Pipe Assembly, 12in,
+L1654@P26: 3/4" Inlet x 3/4" Outlet
+L1655@P26: SWPA180505 Swing Pipe Assembly, 18in,
+L1656@P26: 1/2" Inlet x 1/2" Outlet
+L1657@P26: SWPA187575 Swing Pipe Assembly, 18in,
+L1658@P26: 3/4" Inlet x 3/4" Outlet
+L1659@P26: P54065
+L1660@P26: P16009110
+L1661@P26: P51115
+L1662@P26: P51210
+L1663@P26: P53425
+L1664@P26: P51112
+L1665@P26: P513995
+L1666@P26: P51114
+L1667@P26: P58115
+L1668@P26: SWPC050 SWPT050
+L1669@P26: SWPE050 SWPE075
+L1670@P26: KA05100
+L1671@P26-28: SWPA127575SPRAYSkrain.com 29
+L1672@P28: Spray Body | Comparison Chart
+L1673@P28: The perfect combination of precise engineering and extensive field testing ensures long life and outstanding
+L1674@P28: performance with every K-Rain® spray. Well-suited for any application, the sprays are rugged, reliable and
+L1675@P28: available in a wide selection of sizes for optimal flexibility.
+L1676@P28: Pro-S™ Sprays NP Sprays K-Sprays
+L1677@P28: 78002 78003 78004 78006 78012 NP2 NP4 73001 74001 76001 71201
+L1678@P28: Specifications
+L1679@P28: Pop-up height 1 1/2" 2 1/2" 3 1/2" 5 1/2" 11 1/2" 2" 3 7/8" 2 1/2" 4" 5 7/8" 11 1/2"
+L1680@P28: Retracted height 4 3/8" 5" 6" 9 3/8" 16" 4" 6" 4 3/4" 5 7/8" 8" 15 3/4"
+L1681@P28: Operating Pressure
+L1682@P28: Range: (PSI) 20-110 20-110 20-110 20-110 20-110 20-70 20-70 20-70 20-70 20-70 20-70
+L1683@P28: Inlet
+L1684@P28: 1/2"
+L1685@P28: female
+L1686@P28: thread
+L1687@P28: 1/2”
+L1688@P28: female
+L1689@P28: thread
+L1690@P28: 1/2”
+L1691@P28: female
+L1692@P28: thread
+L1693@P28: 1/2”
+L1694@P28: female
+L1695@P28: thread
+L1696@P28: 1/2”
+L1697@P28: female
+L1698@P28: thread
+L1699@P28: 1/2"
+L1700@P28: female
+L1701@P28: thread
+L1702@P28: 1/2”
+L1703@P28: female
+L1704@P28: thread
+L1705@P28: 1/2”
+L1706@P28: female
+L1707@P28: thread
+L1708@P28: 1/2"
+L1709@P28: female
+L1710@P28: thread
+L1711@P28: 1/2”
+L1712@P28: female
+L1713@P28: thread
+L1714@P28: 1/2”
+L1715@P28: female
+L1716@P28: thread
+L1717@P28: Nozzle female
+L1718@P28: thread
+L1719@P28: female
+L1720@P28: thread
+L1721@P28: female
+L1722@P28: thread
+L1723@P28: female
+L1724@P28: thread
+L1725@P28: female
+L1726@P28: thread
+L1727@P28: female
+L1728@P28: thread
+L1729@P28: female
+L1730@P28: thread
+L1731@P28: male
+L1732@P28: thread
+L1733@P28: male
+L1734@P28: thread
+L1735@P28: male
+L1736@P28: thread
+L1737@P28: male
+L1738@P28: thread
+L1739@P28: Features
+L1740@P28: Co-molded wiper seal • • • • •
+L1741@P28: Ratcheting riser • • • • • • • • • • •
+L1742@P28: Heavy duty retraction
+L1743@P28: spring
+L1744@P28: • • • • • • • • • • •
+L1745@P28: Side inlet • • •
+L1746@P28: Narrow profile • •
+L1747@P28: Warranty 7 years 7 years 7 years 7 years 7 years 7 years 7 years 7 years 7 years 7 years 7 years
+L1748@P28: Options
+L1749@P28: Check valve • • • • • • • • • • •
+L1750@P28: Nozzle guard • • • • •
+L1751@P28: Pressure regulator
+L1752@P28: 30 PSI
+L1753@P28: • • •
+L1754@P28: Pressure regulator
+L1755@P28: 40 PSI
+L1756@P28: • • •
+L1757@P28: Reclaimed water use • • • • • • • • •
+L1758@P28: Stop Flow™ • •
+L1759@P28-29: Customizable • • • • •30 Down Here. Doing. It. Right.
+L1760@P29: Pro-S ™ Sprays
+L1761@P29: Proven long life and outstanding performance.
+L1762@P29: Features
+L1763@P29: n Co-molded wiper seal — Ensures a leak-free,
+L1764@P29: full pop-up even under low pressure situations.
+L1765@P29: Treated with UV inhibitors for long life. Carefully
+L1766@P29: selected seal material reduces degradation
+L1767@P29: and stick-ups
+L1768@P29: n Ratcheting Riser – Allows for easy pattern
+L1769@P29: alignment by turning the riser
+L1770@P29: n Heavy-duty retraction spring — Strongest in the
+L1771@P29: industry for complete retraction in all soil conditions
+L1772@P29: n Pre-installed flush cap
+L1773@P29: n Accepts female threaded nozzles
+L1774@P29: n Riser assembly fits into 1800 body
+L1775@P29: Specifications
+L1776@P29: n Operating Pressure Range: 20 – 110 PSI (1,4 – 7,6 bar)
+L1777@P29: n Flow-by: 0 – 8 PSI (0,6 bar) 0.20 GPM (0,76 LPM)
+L1778@P29: n Inlet: 1/2" (1,3 cm) Female Thread NPT
+L1779@P29: Models
+L1780@P29: 78002 Pro-S 2" (5 cm) Pop-up
+L1781@P29: 78003 Pro-S 3" (7,5 cm) Pop-up
+L1782@P29: 78004 Pro-S 4" (10 cm) Pop-up
+L1783@P29: 78006 Pro-S 6" (15 cm) Pop-up w/optional side inlet
+L1784@P29: 78012 Pro-S 12" (30 cm) Pop-up w/side inlet
+L1785@P29: Accessories
+L1786@P29: See page 34
+L1787@P29: Fast Facts
+L1788@P29: ALL INLET: 1/2” (1,3 CM) FEMALE THREAD NPT
+L1789@P29: 2” Retracted height: 4 3/8" (11,1 cm)
+L1790@P29: Riser height: 1 1/2" (3,8 cm)
+L1791@P29: 3” Retracted height: 5" (12,7 cm)
+L1792@P29: Riser height: 2 1/2" (6,4 cm)
+L1793@P29: 4” Retracted height: 6" (15,2)
+L1794@P29: Riser height: 3 1/2" (8,9 cm)
+L1795@P29: 6” Retracted height: 9 3/8" (23,8 cm)
+L1796@P29: Riser height: 5 1/2" (14,0 cm)
+L1797@P29: 12” Retracted height: 16" (40,6 cm)
+L1798@P29-30: Riser height: 11 1/2" (29,2 cm)krain.com 31
+L1799@P30: Options
+L1800@P30: n In-stem Pressure Regulator
+L1801@P30: - Factory preset at 30 or 40 PSI (2,1 or 2,8 bar)
+L1802@P30: - Available in 4”, 6”, and 12”. EPA WaterSense certified
+L1803@P30: - Visit krain.com/watersense-certified for a full list
+L1804@P30: n In-stem Check Valve
+L1805@P30: - Pre-installed or installs in the field
+L1806@P30: - Holds up to 10’ (3 m) of head pressure
+L1807@P30: n Pre-installed Nozzle Guard
+L1808@P30: - Protects the nozzle from foot traffic, mowers,
+L1809@P30:  edgers, and arc changes
+L1810@P30: n Stop Flow™
+L1811@P30: - Automatically stops water flow should the nozzle
+L1812@P30:  become damaged or removed 4" and 6" only
+L1813@P30: Stop Flow™ valve
+L1814@P30: Pro-S Spray
+L1815@P30: with Stop Flow
+L1816@P30: Pro-S Spray
+L1817@P30: How to Specify with Options
+L1818@P30: MODELS OPTIONS
+L1819@P30: 78002 -CV u Check Valve
+L1820@P30: 78003 -GUARD u Nozzle Guard
+L1821@P30: 78004 -NSI u No Side Inlet (6” only)
+L1822@P30: 78006 -PR30 u Pressure Regulator 30 PSI (4", 6" 12" only)
+L1823@P30: 78012 -PR40 u Pressure Regulator 40 PSI (4", 6" 12" only)
+L1824@P30: -RCW u Reclaimed Water Use
+L1825@P30: -SF u Stop Flow™ 4”, 6" and 12" Only
+L1826@P30-31: Examples: 78004-CV, 78006-NSI-RCW, 78012-CV-PR3032 Down Here. Doing. It. Right.
+L1827@P31: NP Sprays
+

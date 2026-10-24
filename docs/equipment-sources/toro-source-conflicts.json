@@ -1,0 +1,230 @@
+[
+  {
+    "modelId": "PSN15-F",
+    "pressureBar": 2.068427,
+    "current": {
+      "pressureBar": 2.068427,
+      "pressureKPa": 206.842719,
+      "arcDeg": 360,
+      "radiusM": 4.572,
+      "flowLMin": 8.744301,
+      "flowM3H": 0.524658,
+      "precipSquareMmH": 25.4,
+      "precipTriangleMmH": 27.94,
+      "published": {
+        "pressurePsi": 30.0,
+        "flowGpm": 2.31,
+        "radiusFt": 15.0,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1
+      }
+    },
+    "prior": {
+      "pressureBar": 2.068427,
+      "pressureKPa": 206.842719,
+      "arcDeg": 360,
+      "radiusM": 4.29768,
+      "flowLMin": 7.343699,
+      "flowM3H": 0.440622,
+      "precipSquareMmH": 22.86,
+      "precipTriangleMmH": 27.94,
+      "published": {
+        "pressurePsi": 30.0,
+        "flowGpm": 1.94,
+        "radiusFt": 14.1,
+        "precipSquareInH": 0.9,
+        "precipTriangleInH": 1.1
+      }
+    }
+  },
+  {
+    "modelId": "PSN15-F",
+    "pressureBar": 2.757903,
+    "current": {
+      "pressureBar": 2.757903,
+      "pressureKPa": 275.790292,
+      "arcDeg": 360,
+      "radiusM": 4.63296,
+      "flowLMin": 8.895718,
+      "flowM3H": 0.533743,
+      "precipSquareMmH": 25.4,
+      "precipTriangleMmH": 27.94,
+      "published": {
+        "pressurePsi": 40.0,
+        "flowGpm": 2.35,
+        "radiusFt": 15.2,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1
+      }
+    },
+    "prior": {
+      "pressureBar": 2.757903,
+      "pressureKPa": 275.790292,
+      "arcDeg": 360,
+      "radiusM": 4.4196,
+      "flowLMin": 8.517177,
+      "flowM3H": 0.511031,
+      "precipSquareMmH": 25.4,
+      "precipTriangleMmH": 30.48,
+      "published": {
+        "pressurePsi": 40.0,
+        "flowGpm": 2.25,
+        "radiusFt": 14.5,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.2
+      }
+    }
+  },
+  {
+    "modelId": "PSN15-F",
+    "pressureBar": 3.447379,
+    "current": {
+      "pressureBar": 3.447379,
+      "pressureKPa": 344.737865,
+      "arcDeg": 360,
+      "radiusM": 4.66344,
+      "flowLMin": 9.084988,
+      "flowM3H": 0.545099,
+      "precipSquareMmH": 25.4,
+      "precipTriangleMmH": 27.94,
+      "published": {
+        "pressurePsi": 50.0,
+        "flowGpm": 2.4,
+        "radiusFt": 15.3,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1
+      }
+    },
+    "prior": {
+      "pressureBar": 3.447379,
+      "pressureKPa": 344.737865,
+      "arcDeg": 360,
+      "radiusM": 4.572,
+      "flowLMin": 9.501384,
+      "flowM3H": 0.570083,
+      "precipSquareMmH": 27.94,
+      "precipTriangleMmH": 30.48,
+      "published": {
+        "pressurePsi": 50.0,
+        "flowGpm": 2.51,
+        "radiusFt": 15.0,
+        "precipSquareInH": 1.1,
+        "precipTriangleInH": 1.2
+      }
+    }
+  },
+  {
+    "modelId": "PSN15T-F",
+    "pressureBar": 2.068427,
+    "current": {
+      "pressureBar": 2.068427,
+      "pressureKPa": 206.842719,
+      "arcDeg": 360,
+      "radiusM": 4.572,
+      "flowLMin": 8.744301,
+      "flowM3H": 0.524658,
+      "precipSquareMmH": 25.4,
+      "precipTriangleMmH": 27.94,
+      "published": {
+        "pressurePsi": 30.0,
+        "flowGpm": 2.31,
+        "radiusFt": 15.0,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1
+      }
+    },
+    "prior": {
+      "pressureBar": 2.068427,
+      "pressureKPa": 206.842719,
+      "arcDeg": 360,
+      "radiusM": 4.29768,
+      "flowLMin": 7.343699,
+      "flowM3H": 0.440622,
+      "precipSquareMmH": 22.86,
+      "precipTriangleMmH": 27.94,
+      "published": {
+        "pressurePsi": 30.0,
+        "flowGpm": 1.94,
+        "radiusFt": 14.1,
+        "precipSquareInH": 0.9,
+        "precipTriangleInH": 1.1
+      }
+    }
+  },
+  {
+    "modelId": "PSN15T-F",
+    "pressureBar": 2.757903,
+    "current": {
+      "pressureBar": 2.757903,
+      "pressureKPa": 275.790292,
+      "arcDeg": 360,
+      "radiusM": 4.63296,
+      "flowLMin": 8.895718,
+      "flowM3H": 0.533743,
+      "precipSquareMmH": 25.4,
+      "precipTriangleMmH": 27.94,
+      "published": {
+        "pressurePsi": 40.0,
+        "flowGpm": 2.35,
+        "radiusFt": 15.2,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1
+      }
+    },
+    "prior": {
+      "pressureBar": 2.757903,
+      "pressureKPa": 275.790292,
+      "arcDeg": 360,
+      "radiusM": 4.4196,
+      "flowLMin": 8.517177,
+      "flowM3H": 0.511031,
+      "precipSquareMmH": 25.4,
+      "precipTriangleMmH": 30.48,
+      "published": {
+        "pressurePsi": 40.0,
+        "flowGpm": 2.25,
+        "radiusFt": 14.5,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.2
+      }
+    }
+  },
+  {
+    "modelId": "PSN15T-F",
+    "pressureBar": 3.447379,
+    "current": {
+      "pressureBar": 3.447379,
+      "pressureKPa": 344.737865,
+      "arcDeg": 360,
+      "radiusM": 4.66344,
+      "flowLMin": 9.084988,
+      "flowM3H": 0.545099,
+      "precipSquareMmH": 25.4,
+      "precipTriangleMmH": 27.94,
+      "published": {
+        "pressurePsi": 50.0,
+        "flowGpm": 2.4,
+        "radiusFt": 15.3,
+        "precipSquareInH": 1.0,
+        "precipTriangleInH": 1.1
+      }
+    },
+    "prior": {
+      "pressureBar": 3.447379,
+      "pressureKPa": 344.737865,
+      "arcDeg": 360,
+      "radiusM": 4.572,
+      "flowLMin": 9.501384,
+      "flowM3H": 0.570083,
+      "precipSquareMmH": 27.94,
+      "precipTriangleMmH": 30.48,
+      "published": {
+        "pressurePsi": 50.0,
+        "flowGpm": 2.51,
+        "radiusFt": 15.0,
+        "precipSquareInH": 1.1,
+        "precipTriangleInH": 1.2
+      }
+    }
+  }
+]

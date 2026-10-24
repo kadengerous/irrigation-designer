@@ -1,0 +1,206 @@
+ (https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf)
+citeturn364view0 [wordlim: 200] Crawled: 4 days ago; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"https://www.rainbird.com/sites/default/files/media/documents/2022-01/sq-nozzle-tech-spec-102121-web_1.pdf","lineno":null}); Total lines: 203
+
+L0@P0: Tech Spec
+L1@P0: SQ Series Square Pattern Nozzles
+L2@P0: Precise and efficient, low-volume spray nozzle for irrigation in small areas.
+L3@P0: The SQ Series is the most efficient,
+L4@P0: low-volume spray solution for precision
+L5@P0: irrigation of small areas. The SQ Series’ square
+L6@P0: spray pattern and pressure compensation
+L7@P0: offers increased efficiency and control,
+L8@P0: reducing overspray, property damage and
+L9@P0: liability.
+L10@P0: Unique edge-to-edge capability reduces the
+L11@P0: number of nozzles needed, which decreases
+L12@P0: cost and dramatically reduces installation
+L13@P0: time. Simplify design and installation with the
+L14@P0: flexibility of applications: one nozzle throws
+L15@P0: 2.5’ or 4’ (0.8m or 1.2 m) and can be used on
+L16@P0: a variety of spray heads and risers. It even
+L17@P0: meets micro irrigation system requirement
+L18@P0: for less than 26 gph flow rate at 30 psi.
+L19@P0: SQ Series nozzles provide up to 65% water
+L20@P0: savings, and are great for narrow planting
+L21@P0: beds, parking lot islands, walkways, parkways,
+L22@P0: street medians, and areas around trees and
+L23@P0: shrubs.
+L24@P0: Features
+L25@P0: Precision and Efficiency
+L26@P0: - Designed to precisely irrigate small areas.
+L27@P0: - Great for corners in narrow planting beds,
+L28@P0:  parking lot islands, walkways, parkways,
+L29@P0:  street medians, and around trees and
+L30@P0:  shrubs
+L31@P0: - Commercial grade nozzle is pressure
+L32@P0:  compensating and virtually mist-free –
+L33@P0:  even at the maximum operating pressure.
+L34@P0:  This ensures optimum coverage for
+L35@P0:  non-turf applications from 20 to 50 psi
+L36@P0: - Meets micro irrigation system requirement
+L37@P0:  with less than 26 gph flow rate at 30 psi
+L38@P0: Versatile Installation
+L39@P0: - Simplify design and installation with the
+L40@P0:  flexibility of applications
+L41@P0: - Patented design provides the designer
+L42@P0:  and the installer with the option of 2.5’ or 4’
+L43@P0:  throws (0.8 m or 1.2 m)
+L44@P0: - Can be installed on a variety of spray heads
+L45@P0:  and risers
+L46@P0: Savings on Material and Labor Costs
+L47@P0: - Unique edge-to-edge capability reduces
+L48@P0:  the number of nozzles needed, which
+L49@P0:  decreases cost and dramatically reduces
+L50@P0:  installation time.
+L51@P0: - Square spray pattern and pressure com
+L52@P0:  pensation offer increased efficiency and
+L53@P0:  control, reducing overspray, property dam
+L54@P0:  age, and liability
+L55@P0: Operating Range
+L56@P0: • Pressure: 20 to 50 psi (1.4 to 3.5 bar)
+L57@P0: • Flow rates: 6, 12, 18, and 24 gph
+L58@P0:  (22.7, 45.4, 68.1, and 90.8 l/hr)
+L59@P0: • Required Filtration: 40 Mesh
+L60@P0: Models
+L61@P0: • SQ QTR: SQ Nozzle, quarter pattern
+L62@P0: • SQ HLF: SQ Nozzle, half pattern
+L63@P0: • SQ 3QTR: SQ Nozzle, 3 quarter pattern
+L64@P0: • SQ FUL: SQ Nozzle, full pattern
+L65@P0: Specifications
+L66@P0: SQ Series, Square Pattern Nozzle
+L67@P0: The nozzle shall have matched precipitation
+L68@P0: rates for each model.The nozzle shall be
+L69@P0: capable of covering a ________(ft.)/ (meter)
+L70@P0: radius at _________(psi)/ (bar) with a
+L71@P0: discharge rate of ________(gpm)/ (m3/h).
+L72@P0: The SQ is intended for use with the 1800
+L73@P0: Series, SQ Adapter with Poly Flex Riser,
+L74@P0: UNI-Spray Series or SCH 80 risers. The SQ
+L75@P0: is constructed of UV resistant ABS plastic.
+L76@P0: The SQ shall be pressure compensating
+L77@P0: and factory manufactured by Rain Bird
+L78@P0: Corporation, Azusa,CA.
+L79@P0: The SQ Adapter
+L80@P0: The SQ Adapter shall be molded of ABS
+L81@P0: plastic material. The SQ Adapter shall be
+L82@P0: designed to mount onto either a 12” or 24”
+L83@P0: Poly Flex Riser.
+L84@P0: How To Specify
+L85@P0: SQ – QTR
+L86@P0: Nozzle Series/Pattern:
+L87@P0: Quarter Pattern
+L88@P0: Model:
+L89@P0-1: Square Pattern NozzlesSQ Series, Square Pattern Nozzles
+L90@P1: Throw Precip. Rate
+L91@P1: Nozzle Pressure Radius Flow Flow w/no overlap
+L92@P1: psi ft. gph gpm in/h
+L93@P1: QTR 20 2.5 6.0 0.11 1.64
+L94@P1: 30 2.5 7.0 0.12 1.90
+L95@P1: 40 3.0 7.2 0.12 1.32
+L96@P1: 50 3.0 7.2 0.12 1.32
+L97@P1: HALF 20 2.5 10.2 0.17 1.31
+L98@P1: 30 2.5 10.7 0.20 1.57
+L99@P1: 40 3.0 10.7 0.23 1.22
+L100@P1: 50 3.0 10.7 0.23 1.22
+L101@P1: 3QTR 20 2.5 16 0.27 1.37
+L102@P1: 30 2.5 18 0.30 1.54
+L103@P1: 40 3.0 21 0.35 1.25
+L104@P1: 50 3.0 21 0.35 1.25
+L105@P1:  FUL 20 2.5 20.0 0.33 1.28
+L106@P1: 30 2.5 24.2 0.40 1.55
+L107@P1: 40 3.0 27.3 0.46 1.22
+L108@P1: 50 3.0 27.3 0.46 1.22
+L109@P1:  SQ Nozzle Performance
+L110@P1: 2.5’ throw @ 6" height above grade
+L111@P1: U.S
+L112@P1: Throw Precip. Rate
+L113@P1: Nozzle Pressure Radius Flow Flow w/no overlap
+L114@P1: bar m lph lpm mm/h
+L115@P1: QTR 1.4 0.8 24 0.38 41.66
+L116@P1: 2.1 0.8 28 0.45 48.26
+L117@P1: 2.8 0.9 28 0.45 33.53
+L118@P1: 3.4 0.9 28 0.45 33.53
+L119@P1: HALF 1.4 0.8 39 0.64 33.27
+L120@P1: 2.1 0.8 46 0.68 39.88
+L121@P1: 2.8 0.9 52 0.68 30.99
+L122@P1: 3.4 0.9 52 0.68 30.99
+L123@P1: 3QTR 1.4 0.8 61 1.01 34.77
+L124@P1: 2.1 0.8 68 1.14 39.12
+L125@P1: 2.8 0.9 79 1.32 31.69
+L126@P1: 3.4 0.9 79 1.32 31.69
+L127@P1:  FUL 1.4 0.8 76 1.25 32.51
+L128@P1: 2.1 0.8 92 1.51 39.37
+L129@P1: 2.8 0.9 103 1.74 30.99
+L130@P1: 3.4 0.9 103 1.74 30.99
+L131@P1:  SQ Nozzle Performance
+L132@P1: 0.8m throw @.15m height above grade
+L133@P1: METRIC
+L134@P1: Throw Precip. Rate
+L135@P1: Nozzle Pressure Radius Flow Flow w/no overlap
+L136@P1: bar m lph lpm mm/h
+L137@P1: QTR 1.4 1.2 23 0.38 16.26
+L138@P1: 2.1 1.2 26 0.45 18.80
+L139@P1: 2.8 1.4 27 0.45 14.99
+L140@P1: 3.4 1.4 27 0.45 14.99
+L141@P1: H 1.4 1.2 39 0.64 12.95
+L142@P1: 2.1 1.2 40 0.68 15.49
+L143@P1: 2.8 1.4 40 0.68 13.72
+L144@P1: 3.4 1.4 40 0.68 13.72
+L145@P1: 3QTR 1.4 0.8 61 1.01 13.58
+L146@P1: 2.1 0.8 68 1.14 15.28
+L147@P1: 2.8 0.9 79 1.32 14.08
+L148@P1: 3.4 0.9 79 1.32 14.08
+L149@P1:  FUL 1.4 1.2 76 1.25 12.70
+L150@P1: 2.1 1.2 92 1.51 15.49
+L151@P1: 2.8 1.4 103 1.74 13.72
+L152@P1: 3.4 1.4 103 1.74 13.72
+L153@P1: SQ Nozzle Performance
+L154@P1: 1.2m throw @.15m height above grade
+L155@P1: METRIC
+L156@P1: Throw Precip. Rate
+L157@P1: Nozzle Pressure Radius Flow Flow w/no overlap
+L158@P1: psi ft. gph gpm in/h
+L159@P1: QTR 20 4.0 6 0.10 0.64
+L160@P1: 30 4.0 7 0.12 0.74
+L161@P1: 40 4.5 7.2 0.12 0.59
+L162@P1: 50 4.5 7.2 0.12 0.59
+L163@P1: HALF 20 4.0 10.2 0.17 0.51
+L164@P1: 30 4.0 10.7 0.18 0.61
+L165@P1: 40 4.5 10.7 0.18 0.54
+L166@P1: 50 4.5 10.7 0.18 0.54
+L167@P1: 3QTR 20 4.0 16 0.27 0.53
+L168@P1: 30 4.0 18 0.30 0.60
+L169@P1: 40 4.5 21 0.35 0.55
+L170@P1: 50 4.5 21 0.35 0.55
+L171@P1:  FUL 20 4.0 20.0 0.33 0.50
+L172@P1: 30 4.0 24.2 0.40 0.61
+L173@P1: 40 4.5 27.3 0.46 0.54
+L174@P1: 50 4.5 27.3 0.46 0.54
+L175@P1: SQ Nozzle Performance
+L176@P1: 4’ throw @ 6" height above grade
+L177@P1: U.S
+L178@P1: D42033
+L179@P1: Rain Bird International, Inc.
+L180@P1: 1000 West Sierra Madre Ave.
+L181@P1: Azusa, CA 91702
+L182@P1: Phone: (626) 963-9311
+L183@P1: Fax: (626) 852-7343
+L184@P1: The Intelligent Use of Water™
+L185@P1: www.rainbird.com
+L186@P1: Rain Bird Corporation
+L187@P1: 970 West Sierra Madre Avenue
+L188@P1: Azusa, CA 91702
+L189@P1: Phone: (626) 812-3400
+L190@P1: Fax: (626) 812-3411
+L191@P1: Specification Hotline
+L192@P1: 800-458-3005 (U.S. and Canada)
+L193@P1: Rain Bird Corporation
+L194@P1: 6991 E. Southpoint Road
+L195@P1: Tucson, AZ 85756
+L196@P1: Phone: (520) 741-6100
+L197@P1: Fax: (520) 741-6522
+L198@P1: Rain Bird Technical Services
+L199@P1: (800) RAINBIRD (1-800-724-6247)
+L200@P1: (U.S. and Canada)
+L201@P1: ® Registered Trademark of Rain Bird Corporation
+L202@P1: © 2021 Rain Bird Corporation 10/21

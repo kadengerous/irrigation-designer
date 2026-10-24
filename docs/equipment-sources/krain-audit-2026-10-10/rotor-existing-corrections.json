@@ -1,0 +1,107 @@
+[
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-6.0",
+    "pressureBar": 4.1,
+    "selectedFlowLMin": 20.8,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+    "sourceLine": 210,
+    "sourceText": "60 413 4.1 46 14.0 5.5 20.8 1.25 0.50 0.58 13 15",
+    "currentUSFlowGpm": 5.5,
+    "currentCatalogueSourceLines": [
+      503,
+      389
+    ],
+    "decision": "Retain existing correction; corroborated current US and separately published metric instruction value. For LA6 at 4.8 bar, ignore manual US 8.3 typo; current US 8.6 corroborates metric32.6."
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-6.0",
+    "pressureBar": 4.8,
+    "selectedFlowLMin": 22.7,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+    "sourceLine": 211,
+    "sourceText": "70 482 4.8 47 14.3 6.0 22.7 1.36 0.52 0.60 13 15",
+    "currentUSFlowGpm": 6.0,
+    "currentCatalogueSourceLines": [
+      504,
+      390
+    ],
+    "decision": "Retain existing correction; corroborated current US and separately published metric instruction value. For LA6 at 4.8 bar, ignore manual US 8.3 typo; current US 8.6 corroborates metric32.6."
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-8.0",
+    "pressureBar": 4.1,
+    "selectedFlowLMin": 28.8,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+    "sourceLine": 214,
+    "sourceText": "60 413 4.1 49 14.9 7.6 28.8 1.73 0.61 0.70 15 18",
+    "currentUSFlowGpm": 7.6,
+    "currentCatalogueSourceLines": [
+      507,
+      393
+    ],
+    "decision": "Retain existing correction; corroborated current US and separately published metric instruction value. For LA6 at 4.8 bar, ignore manual US 8.3 typo; current US 8.6 corroborates metric32.6."
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:standard-8.0",
+    "pressureBar": 4.8,
+    "selectedFlowLMin": 31.0,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+    "sourceLine": 215,
+    "sourceText": "70 482 4.8 51 15.5 8.2 31.0 1.86 0.61 0.70 15 18",
+    "currentUSFlowGpm": 8.2,
+    "currentCatalogueSourceLines": [
+      508,
+      394
+    ],
+    "decision": "Retain existing correction; corroborated current US and separately published metric instruction value. For LA6 at 4.8 bar, ignore manual US 8.3 typo; current US 8.6 corroborates metric32.6."
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:low-angle-3.0",
+    "pressureBar": 4.1,
+    "selectedFlowLMin": 14.4,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+    "sourceLine": 227,
+    "sourceText": "60 413 4.1 37 11.3 3.8 14.4 .87 0.53 0.62 13 16",
+    "currentUSFlowGpm": 3.8,
+    "currentCatalogueSourceLines": [
+      557,
+      442
+    ],
+    "decision": "Retain existing correction; corroborated current US and separately published metric instruction value. For LA6 at 4.8 bar, ignore manual US 8.3 typo; current US 8.6 corroborates metric32.6."
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:low-angle-6.0",
+    "pressureBar": 4.1,
+    "selectedFlowLMin": 30.3,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+    "sourceLine": 234,
+    "sourceText": "60 413 4.1 42 12.8 8.0 30.3 1.82 0.87 1.01 22 26",
+    "currentUSFlowGpm": 8.0,
+    "currentCatalogueSourceLines": [
+      564,
+      449
+    ],
+    "decision": "Retain existing correction; corroborated current US and separately published metric instruction value. For LA6 at 4.8 bar, ignore manual US 8.3 typo; current US 8.6 corroborates metric32.6."
+  },
+  {
+    "itemId": "k-rain:RPS75",
+    "nozzleId": "k-rain:RPS75:low-angle-6.0",
+    "pressureBar": 4.8,
+    "selectedFlowLMin": 32.6,
+    "sourceUrl": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+    "sourceLine": 235,
+    "sourceText": "70 482 4.8 44 13.4 8.3 32.6 1.96 0.86 0.99 22 25",
+    "currentUSFlowGpm": 8.6,
+    "currentCatalogueSourceLines": [
+      565,
+      450
+    ],
+    "decision": "Retain existing correction; corroborated current US and separately published metric instruction value. For LA6 at 4.8 bar, ignore manual US 8.3 typo; current US 8.6 corroborates metric32.6."
+  }
+]

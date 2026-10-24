@@ -1,0 +1,654 @@
+ST-1600 | Hunter Industries (https://www.hunterirrigation.com/en-metric/irrigation-product/st-1600)
+citeturn302view0 [wordlim: 200] Crawled: 3 days ago; Content type: text/html; Source: open({"ref_id":"https://www.hunterirrigation.com/en-metric/irrigation-product/st-1600","lineno":120}); Total lines: 1177
+L0:   * cite0†Landscape Irrigation L1:   * cite1†Landscape Lighting†www.fxl.com L2:   * cite2†Golf Irrigation L3:   * cite3†Agricultural Irrigation†agriculture.hunterirrigation.com L4:   * cite4†Dispensing Technology†www.dispensingdynamics.com L5:   * cite5†Custom Manufacturing†www.huntercustommanufacturing.com L6:   * cite6†Architectural Lighting†www.lumascape.com L7:   * cite7†Company†hunter.global L8: 
+L9: Landscape Irrigation
+L10: 
+L11: Metric
+L12: ##### cite8†Image: Hunter L13: Select Your Language
+L14: 
+L15:   * cite9†English L16:   * cite9†Metric L17:   * cite9†Español L18:   * cite9†Italiano L19: 
+L20:   * cite9†Français L21:   * cite9†Português L22:   * cite9†Deutsch L23:   * cite9†Türkçe L24: 
+L25:   * cite9†Polski L26:   * cite9†Русский L27:   * cite9†العربية L28:   * cite9†中国/中华 L29: 
+L30: [Button: Close ]
+L31: 
+L32: Built on Innovation
+L33: 
+L34: [Button: Cancel]
+L35: # ST-1600
+L36: 
+L37: This ST System solution offers cleaning, cooling, and flushing capabilities to prepare synthetic sports fields for play.
+L38: 
+L39: Radius 32.5 to 50.3 m
+L40: 
+L41: Flow 21.8 to 74.2 m³/hr
+L42: 
+L43: Inlet 2" BSP
+L44: 
+L45:   * cite10†Models L46:   * cite11†Specs L47:   * cite12†Features L48:   * cite13†Charts L49:   * cite14†Documents L50:   * cite15†CAD Details L51:   * cite16†Photos L52:   * cite17†Related L53: ## Models
+L54: 
+L55: cite18†Image: ST-1600 L56: 
+L57: [Input]
+L58: 
+L59: ST-1600
+L60: 
+L61: ST-1600
+L62: 
+L63: Ordering Number [Input]
+L64: 
+L65: [Input] [Input]
+L66: 
+L67: Qty [Input]
+L68: 
+L69: Notes [Input: Add a note...]
+L70: 
+L71: [Button: Add to list]
+L72: 
+L73: User installed options
+L74: 
+L75: [Input]
+L76: 
+L77: #### Product added to list
+L78: 
+L79: The following product was added to ""
+L80: 
+L81: QTY
+L82: 
+L83: cite19†Review your list L84: 
+L85: cite9†Continue L86: 
+L87: [Input] [Input]
+L88: 
+L89: ## Create a new My List.
+L90: ## Log in to access this feature
+L91: 
+L92: Log in using your Hunter Account
+L93: 
+L94: Username [Input]
+L95: 
+L96: Password [Input]
+L97: 
+L98: [Input] [Input] [Input]
+L99: 
+L100: [Button: Sign In]
+L101: 
+L102: cite20†Contact your local distributor for product availability and ordering. L103: 
+L104: ## Specifications
+L105: ### OPERATING SPECIFICATIONS
+L106: 
+L107:   * Radius: 32.5 to 50.3 m
+L108:   * Flow: 21.8 to 74.2 m3 /hr; 364 to 1,237 l/min
+L109:   * Operating pressure range: 4.0 to 8.0 bar; 400 to 800 kPa
+L110:   * Precipitation rate: 60 mm/hr approximately
+L111:   * Warranty period: 5 years component part
+L112: 
+L113: * * *
+L114: 
+L115: cite21† Download Product Spec Sheet L116: 
+L117: cite22†  Download Written Specifications (in English) L118: ## Features
+L119: The enhanced STK-6V is the first and only cost- effective integrated solution designed to exceed the unique and specific needs of the synthetic turf irrigation market. The ST System features total top access to all irrigation components making maintenance simple while keeping the surface intact, playable and safe. The exclusive IBS Infill Barrier System accommodates every field surface configuration including infill turf, short non-infill turf, synthetic running track, and in-concrete installations.
+L120: The robust and reliable manifold features 80 mm galvanized ductile iron components with heavy-duty grooved (Victaulic™ type) fittings. Also included is a slow-opening, low pressure loss control valve, isolation valve, drain valve, quick coupler valve, and the powerful ST-1600B long- range gear-driven rotor.
+L121: #### Key Benefits
+L122: 
+L123: Nozzle choices: 6
+L124: 
+L125: Standard nozzle: #20
+L126: 
+L127: Nozzle range: #16 to #26
+L128: 
+L129: Nozzle trajectory: 22.5°
+L130: 
+L131: Isolated, grease-lubricated gear drive
+L132: 
+L133: Factory-installed rubber logo cap (ST-1600-B / ST-1600-HSB)
+L134: 
+L135: Movable stops (left and right) arc adjustment
+L136: 
+L137: Arc setting: 40° to non-reversing 360°
+L138: 
+L139: Ratcheting nozzle turret
+L140: 
+L141: Telescoping rubber infill barrier on riser
+L142: 
+L143: Adjustable speed of rotation: 0 to 65 seconds (High-speed models, 180° at 8 bar, 800 kPa)
+L144: Internal construction: brass, stainless steel, and ball bearings
+L145: 
+L146: Optional infill barrier system (ST-1600-B / ST-1600-HSB)
+L147: #### Advanced Features
+L148: ### ST Rotor: ST-1600
+L149: The ST-1600 and optional high-speed ST-1600HS rotors complement the ST-90 and STG-900 rotors by adding long-range capabilities. These enhanced radius rotors are perfect for football fields, where smaller radius rotors might fall a little short. They are even better for extra-wide field applications like soccer and field hockey.
+L150: While the ST-1600 rotors are specifically designed for use on synthetic sports fields, they are also great for other applications such as pastures, horse arenas, zoo animal enclosures, dust control and even casual non-critical natural turf areas. ST-1600 rotors are available in two configurations:
+L151: ST-1600B
+L152: This model is a 13 cm pop-up with adjustable-arc and full-circle capabilities in one rotor. All internal components of this rotor are accessible from the top without disturbing the synthetic surface. It is ideally suited for installation within Hunter's ST-243642B vault, or in the natural turf that is sometimes adjacent to the synthetic field to be irrigated.
+L153: ST-1600HSB
+L154: This pop-up high-speed model provides rotation speeds up to 65 seconds at a 180° arc setting with 8 bar operating pressure. If desirable, the rotation speed can be slowed by using the manual speed adjustment knob.
+L155: 
+L156: ST-1600BR
+L157: This model is a compact and unobtrusive riser-mounted rotor with adjustable-arc and full-circle capabilities. It’s perfect for those installations where it is preferable to keep all irrigation piping and equipment away from the synthetic surface. The riser-mounted configuration also allows existing synthetic sports fields to be retrofitted for irrigation without disturbing the playing surface.
+L158: Riser-mounted configurations are typically installed at elevations that promote safety and protection from the rotor's high-flow water stream.
+L159: ST-1600HSBR
+L160: 
+L161: This riser-mounted high-speed model provides rotation speeds up to 65 seconds at a 180° arc setting with 8 bar operating pressure. If desirable, the rotation speed can be slowed by using the manual speed adjustment knob.
+L162: 
+L163: cite23†Image L164: ### ST ROTOR AND MANIFOLD ASSEMBLY
+L165: 
+L166: cite24†Image: ST ROTOR AND MANIFOLD ASSEMBLY L167: 
+L168:   1. ST Infill Barrier System
+L169: ST-IBS-1600
+L170: The unique IBS Rubber Cover Kit includes vertical rubber barriers to retain infill material creating a safe transition where the rotor pops up. The IBS can also be trimmed to create a flat exposed surface area.
+L171: 
+L172: cite25†Image†www.hunterindustries.com L173: 
+L174: #### Infill Turf Example
+L175: 
+L176: cite26†Image†www.hunterindustries.com L177: 
+L178: #### Synthetic Track Example
+L179: 
+L180: cite27†Image†www.hunterindustries.com L181: #### Non-Infill Hockey Turf
+L182: 
+L183: cite28†Image†www.hunterindustries.com L184: #### Bare Cover Option
+L185: ST-FRP-1600
+L186:   2. ST Adjustable Hanger Bracket
+L187: ST-BKT-1600
+L188: This bracket supports the rotor within the vault and provides vertical elevation adjustments allowing for a perfect surface transition.
+L189:   3. ST Manifold and Isolation Valve
+L190: ST-BVF30-K
+L191: Rated to 35 bar; 350 kPa working pressure, this 3" (80 mm) galvanised ductile iron assembly includes Victaulic™ type grooved connections, a butterfly isolation valve, a point of connection for the quick coupler, and a 1" (25 mm) brass drain valve.
+L192:   4. ST Low-Loss, Slow-Opening Valve
+L193: ST-V30-KV: Heavy-duty control valve.
+L194: Valve: 3" (80 mm) grooved Victaulic type
+L195: Pressure loss: Ultra low (0.15 bar; 15 kPa at 65.0 m3/hr; 1,082 l/min)
+L196: Manual control: Remote On-Off-Auto Selector and solenoid (not shown)
+L197:   5. ST Flexible Stainless Inlet Hose
+L198: ST-H30-K
+L199: 3" (80 mm) ultra-flexible stainless steel corrugated hose with stainless steel support braiding. Provides for minor offset and alignment of sub-mainline to the ST Manifold's inlet connection.
+L200: ### ST H-Block Manifold Supports
+L201: 
+L202: ST-SPT-K
+L203: Adjustable support stands include a large footprint base made from recycled tire rubber and a 2" (50 mm) vertically adjustable support rail (two required under manifold).
+L204: 
+L205: cite29†Image L206: 
+L207: ### Inside the ST System
+L208: 
+L209: Open access to all components for ease of ongoing maintenance.
+L210: 
+L211: cite30†Image L212: 
+L213: ### From the top
+L214: 
+L215: Smooth and safe surface area with quick-access ports.
+L216: 
+L217: cite31†Image L218: ### ST VAULTS TOTAL-TOP-Serviceability
+L219: 
+L220: Heavy-duty tapered fiberglass and polymer-concrete construction with precast holes for rotor, quick coupler valve, and remote on-off-auto selector manifold assembly.
+L221: 
+L222: The ST-V30-KV valve kit includes a remotely located On-Off-Auto selector and solenoid manifold assembly. These convenient features bring valve manual control functions and solenoid splice connections closer to the surface for easy access.
+L223: Quick couplers provide a convenient source of water for washing down spills and water-soluble paint. Integrated in-vault design eliminates the need for additional quick coupler enclosures.
+L224: 
+L225: cite32†Image L226: ### Seamless integration
+L227: 
+L228: Blends in perfectly with the surrounding synthetic surface.
+L229: 
+L230: cite33†Image L231: 
+L232: ### ST Rotors Have Many Uses
+L233: 
+L234: While ST Rotors are specifically designed for cleaning and cooling synthetic turf sports fields, they are also great for other applications such as pastures, horse arenas, dust control and even casual natural turf area.
+L235: 
+L236: cite34†Image: different applications of st rotors L237: 
+L238: ## Charts
+L239: ### ST-1600 Nozzle Performance Data
+L240: 
+L241: ST-1600 Nozzle Performance Data
+L242: ---
+L243: Nozzle  | Pressure  | Radius  | Flow  | Precip mm/hr
+L244:    | bar  | kPa  | m  | m³/hr  | l/min  | cite35†Image | cite36†Image L245: 16  | 4.0  | 400  | 32.5  | 21.8  | 364  | 41.4  | 47.8
+L246: 5.0  | 500  | 35.0  | 24.4  | 406  | 39.8  | 45.9
+L247: 6.0  | 600  | 37.0  | 26.8  | 446  | 39.1  | 45.1
+L248: 7.0  | 700  | 39.0  | 28.9  | 482  | 38.0  | 43.9
+L249: 8.0  | 800  | 41.0  | 31.2  | 520  | 37.1  | 42.9
+L250: 18  | 4.0  | 400  | 34.0  | 24.3  | 405  | 42.0  | 48.6
+L251: 5.0  | 500  | 37.0  | 27.1  | 452  | 39.6  | 45.8
+L252: 6.0  | 600  | 39.0  | 29.8  | 496  | 39.1  | 45.2
+L253: 7.0  | 700  | 40.5  | 32.1  | 535  | 39.1  | 45.2
+L254: 8.0  | 800  | 43.0  | 34.8  | 580  | 37.6  | 43.5
+L255: 20  | 4.0  | 400  | 35.0  | 32.7  | 545  | 53.4  | 61.7
+L256: 5.0  | 500  | 39.0  | 36.5  | 609  | 48.1  | 55.5
+L257: 6.0  | 600  | 43.0  | 40.1  | 668  | 43.4  | 50.1
+L258: 7.0  | 700  | 44.0  | 43.3  | 721  | 44.7  | 51.6
+L259: 8.0  | 800  | 45.0  | 46.4  | 773  | 45.8  | 52.9
+L260: 22  | 4.0  | 400  | 36.0  | 38.9  | 649  | 60.1  | 69.4
+L261: 5.0  | 500  | 39.5  | 43.6  | 726  | 55.8  | 64.5
+L262: 6.0  | 600  | 44.0  | 47.7  | 795  | 49.3  | 56.9
+L263: 7.0  | 700  | 47.0  | 51.5  | 859  | 46.7  | 53.9
+L264: 8.0  | 800  | 48.0  | 55.2  | 920  | 47.9  | 55.3
+L265: 24  | 4.0  | 400  | 37.0  | 45.9  | 765  | 67.1  | 77.4
+L266: 5.0  | 500  | 40.5  | 51.3  | 855  | 62.6  | 72.2
+L267: 6.0  | 600  | 45.0  | 56.2  | 937  | 55.5  | 64.1
+L268: 7.0  | 700  | 47.5  | 60.7  | 1012  | 53.8  | 62.2
+L269: 8.0  | 800  | 48.7  | 65.0  | 1084  | 54.9  | 63.3
+L270: 26  | 4.0  | 400  | 38.4  | 53.0  | 883  | 71.8  | 82.9
+L271: 5.0  | 500  | 41.4  | 59.2  | 986  | 68.8  | 79.5
+L272: 6.0  | 600  | 46.0  | 64.6  | 1077  | 61.0  | 70.4
+L273: 7.0  | 700  | 48.7  | 69.7  | 1162  | 58.6  | 67.7
+L274: 8.0  | 800  | 50.3  | 74.2  | 1237  | 58.7  | 67.8
+L275: Note: All precipitation rates calculated for 180 degree operation. For precipitation rate of 360 degree sprinkler divide by 2.
+L276: ## Documents
+L277: ### Select Type
+L278: 
+L279:   * All Documents
+L280:   * Manuals
+L281:   * Marketing
+L282:   * Specifications
+L283:   * Replacement Parts
+L284: 
+L285: STK–5V / STK–6V INSTALLATION & ASSEMBLY INSTRUCTIONS
+L286: 
+L287: cite37†Download   L288: 
+L289: ST-1600 Owners Manual
+L290: 
+L291: cite38†Download   L292: 
+L293: ST-1600 Owners Manual
+L294: 
+L295: cite9†Select Language  L296: 
+L297: STK-6V Written Specifications
+L298: 
+L299: cite9†Select Language  L300: 
+L301: Synthetic Turf Systems Brochure
+L302: 
+L303: cite9†Select Language  L304: 
+L305: ST-1600 / STK-6V Product Cutsheet
+L306: 
+L307: cite9†Select Language  L308: 
+L309: cite39†USA   L310: 
+L311: cite40†Metric   L312: 
+L313: cite41†Spanish   L314: 
+L315: cite42†Spanish - USA   L316: 
+L317: cite43†Italian   L318: cite44†French   L319: 
+L320: cite45†Portuguese - Brazil   L321: 
+L322: cite46†German   L323: 
+L324: cite47†Turkish   L325: 
+L326: cite48†Polish   L327: 
+L328: cite49†Russian   L329: 
+L330: cite50†Arabic   L331: 
+L332: cite51†Hungarian   L333: 
+L334: cite52†Slovak   L335: 
+L336: ST-1600-KIT-B Reference Guide
+L337: 
+L338: cite9†Select Language  L339: 
+L340: RC-125
+L341: 
+L342: cite53†Download   L343: 
+L344: cite9†Show all documents L345: ## CAD Installation Details
+L346: 
+L347: Synthetic Turf Kit (ST-1600-KIT) Adjacent to Infill Turf  | cite54†DWG |  |  |
+L348: 
+L349: ## CAD Installation Details
+L350: 
+L351: Synthetic Turf Kit (ST-1600-KIT) Adjacent to Infill Turf
+L352: 
+L353: cite9†Select Format  L354: 
+L355: ## Photos
+L356: 
+L357: ## Application Photos
+L358: 
+L359: cite9†Image L360: 
+L361: cite55†Image L362: 
+L363: Title:
+L364: 
+L365: ST System
+L366: 
+L367: File:
+L368: 
+L369: p1010263rt_2016.jpg
+L370: 
+L371: Classification:
+L372: 
+L373: Action Shot
+L374: 
+L375: Product Line:
+L376: 
+L377: ST System
+L378: 
+L379: Products:
+L380: 
+L381: cite56†ST-1600 L382: 
+L383: Keywords:
+L384: 
+L385: product
+L386: 
+L387: ,
+L388: 
+L389: ST
+L390: 
+L391: ,
+L392: 
+L393: location
+L394: 
+L395: ,
+L396: 
+L397: ST-1600
+L398: 
+L399: cite57†Image Page L400: 
+L401: * * *
+L402: #### Download Image
+L403: 
+L404: cite58†Medium cite59†Original L405: 
+L406: By clicking download, you agree to our cite9†terms and conditions .
+L407: ### Photo Usage Disclaimer
+L408: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L409: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L410: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L411: 
+L412: cite9†Image L413: 
+L414: cite60†Image L415: 
+L416: Title:
+L417: 
+L418: ST-1600
+L419: 
+L420: File:
+L421: 
+L422: img_4567_seamlessint_adj_2016.jpg
+L423: 
+L424: Classification:
+L425: 
+L426: Action Shot
+L427: 
+L428: Product Line:
+L429: 
+L430: ST System
+L431: 
+L432: Products:
+L433: 
+L434: cite56†ST-1600 L435: 
+L436: Keywords:
+L437: 
+L438: product
+L439: 
+L440: ,
+L441: 
+L442: ST
+L443: 
+L444: ,
+L445: 
+L446: location
+L447: 
+L448: ,
+L449: 
+L450: ST-1600
+L451: 
+L452: cite61†Image Page L453: 
+L454: * * *
+L455: #### Download Image
+L456: 
+L457: cite62†Medium cite63†Original L458: 
+L459: By clicking download, you agree to our cite9†terms and conditions .
+L460: ### Photo Usage Disclaimer
+L461: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L462: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L463: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L464: 
+L465: Title:
+L466: 
+L467: ST System
+L468: 
+L469: File:
+L470: 
+L471: Classification:
+L472: 
+L473: Action Shot
+L474: 
+L475: Product Line:
+L476: 
+L477: Rotors, ST System
+L478: 
+L479: Products:
+L480: 
+L481: cite56†ST-1600 L482: 
+L483: Keywords:
+L484: 
+L485: product
+L486: 
+L487: ,
+L488: 
+L489: ST
+L490: 
+L491: ,
+L492: 
+L493: location
+L494: 
+L495: ,
+L496: 
+L497: ST-1600
+L498: 
+L499: cite64†Image Page L500: 
+L501: * * *
+L502: #### Download Image
+L503: 
+L504: Medium Original
+L505: 
+L506: By clicking download, you agree to our cite9†terms and conditions .
+L507: ### Photo Usage Disclaimer
+L508: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L509: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L510: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L511: 
+L512: Title:
+L513: 
+L514: ST-1600
+L515: 
+L516: File:
+L517: 
+L518: Classification:
+L519: 
+L520: Action Shot
+L521: 
+L522: Product Line:
+L523: 
+L524: Rotors, ST System
+L525: 
+L526: Products:
+L527: 
+L528: cite56†ST-1600 L529: 
+L530: Keywords:
+L531: 
+L532: product
+L533: 
+L534: ,
+L535: 
+L536: ST
+L537: 
+L538: ,
+L539: 
+L540: location
+L541: 
+L542: ,
+L543: 
+L544: ST-1600
+L545: 
+L546: cite65†Image Page L547: 
+L548: * * *
+L549: #### Download Image
+L550: 
+L551: Medium Original
+L552: 
+L553: By clicking download, you agree to our cite9†terms and conditions .
+L554: ### Photo Usage Disclaimer
+L555: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L556: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L557: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L558: ## Studio Photos
+L559: 
+L560: cite9†Image L561: 
+L562: cite66†Image L563: 
+L564: Title:
+L565: 
+L566: ST-1600 Tool
+L567: 
+L568: File:
+L569: 
+L570: st-1600_tool_clipped.jpg
+L571: 
+L572: Classification:
+L573: 
+L574: Studio
+L575: 
+L576: Product Line:
+L577: 
+L578: Rotors
+L579: 
+L580: ,
+L581: 
+L582: Product Line:
+L583: 
+L584: ST System
+L585: 
+L586: Products:
+L587: 
+L588: cite56†ST-1600 L589: 
+L590: Keywords:
+L591: 
+L592: product
+L593: 
+L594: ,
+L595: 
+L596: tool
+L597: 
+L598: ,
+L599: 
+L600: ST1600
+L601: 
+L602: ,
+L603: 
+L604: 517600
+L605: 
+L606: cite67†Image Page L607: 
+L608: * * *
+L609: 
+L610: #### Download Image
+L611: 
+L612: cite68†Medium cite69†Original L613: 
+L614: By clicking download, you agree to our cite9†terms and conditions .
+L615: ### Photo Usage Disclaimer
+L616: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L617: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L618: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L619: 
+L620: cite9†Image L621: 
+L622: cite70†Image L623: 
+L624: Title:
+L625: 
+L626: ST Vault
+L627: 
+L628: File:
+L629: 
+L630: stvault_lookinside.jpg
+L631: 
+L632: Classification:
+L633: 
+L634: Studio
+L635: 
+L636: Product Line:
+L637: 
+L638: Rotors
+L639: 
+L640: ,
+L641: 
+L642: Product Line:
+L643: 
+L644: ST System
+L645: 
+L646: Products:
+L647: 
+L648: cite56†ST-1600 L649: 
+L650: Keywords:
+L651: 
+L652: rotor
+L653: 
+L654: ,
+L655: 
+L656: ST
+L657: 
+L658: ,
+L659: 
+L660: vault
+L661: 
+L662: ,
+L663: 
+L664: STG-9000
+L665: 
+L666: ,
+L667: 
+L668: ST173026B
+L669: 
+L670: ,
+L671: 
+L672: quick coupler
+L673: 
+L674: cite71†Image Page L675: 
+L676: * * *
+L677: #### Download Image
+L678: 
+L679: cite72†Medium cite73†Original L680: 
+L681: By clicking download, you agree to our cite9†terms and conditions .
+L682: ### Photo Usage Disclaimer
+L683: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L684: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+L685: All images must be accompanied by the credit line "Photo courtesy of Hunter Industries Incorporated." The credit line must appear adjacent to the photo.
+L686: 
+L687: cite9†Image L688: 
+L689: cite74†Image L690: 
+L691: Title:
+L692: 
+L693: ST Vault On-Off-Auto Selector
+L694: 
+L695: File:
+L696: 
+L697: stenclosure_dsc_0263_adj2.jpg
+L698: 
+L699: Classification:
+L700: 
+L701: Studio
+L702: 
+L703: Product Line:
+L704: 
+L705: Rotors
+L706: 
+L707: ,
+L708: 
+L709: Product Line:
+L710: 
+L711: ST System
+L712: 
+L713: Products:
+L714: 
+L715: cite56†ST-1600 L716: 
+L717: Keywords:
+L718: 
+L719: rotor
+L720: 
+L721: ,
+L722: 
+L723: ST
+L724: 
+L725: ,
+L726: 
+L727: vault
+L728: 
+L729: ,
+L730: 
+L731: STG-9000
+L732: 
+L733: ,
+L734: 
+L735: ST173026B
+L736: 
+L737: ,
+L738: 
+L739: quick coupler
+L740: 
+L741: cite75†Image Page L742: 
+L743: * * *
+L744: #### Download Image
+L745: 
+L746: cite76†Medium cite77†Original L747: 
+L748: By clicking download, you agree to our cite9†terms and conditions .
+L749: ### Photo Usage Disclaimer
+L750: Disclaimer: It is illegal to reproduce Hunter photographs or other copyrighted material without the express written permission of the company. When used and/or reproduced, photos must be accompanied by the credit line: "Photo courtesy of Hunter Industries Incorporated." Hunter photos may not be used in association with copy, logos, or other graphic elements that represent other manufacturers' products.
+L751: If you are using Hunter photos to create any type of print or graphic piece or on a website, you must send a copy of your intended use to creative@hunterindustries.com. Hunter must approve the design prior to final production.
+

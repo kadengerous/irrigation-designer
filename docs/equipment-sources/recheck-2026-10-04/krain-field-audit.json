@@ -1,0 +1,3520 @@
+{
+  "policy": [
+    "Use 2026 metric tables as primary; pressure-specific performance overrides nominal marketing ranges.",
+    "Resolve numerical errors only when an official metric value is corroborated by the current US row; preserve the original conflict in this audit.",
+    "Independent output rounding does not imply a conflict: rounded GPM or whole-foot radii need not convert exactly into independently rounded metric outputs.",
+    "Treat special-pattern metric pressures 1.5/2.0 bar as explicitly published metric design points; preserve US-unit convention discrepancy as a note, never silently convert or extrapolate.",
+    "Disputed precipitation can be null without invalidating sound pressure/radius/flow.",
+    "Never remove conflicting pressure/radius/flow rows and interpolate across the gap; keep affected model hydraulically unresolved.",
+    "Unknown quantitative radius-flow laws and exact high-low curve remain unknown."
+  ],
+  "corrections": [
+    {
+      "modelId": "FN-12Q",
+      "nozzleId": "k-rain:FN-12Q",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "pressureBar": 1.4,
+      "arcDeg": 90,
+      "field": "flowLMin",
+      "before": 1.51,
+      "after": 2.0,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12Q",
+      "nozzleId": "k-rain:FN-12Q",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "pressureBar": 1.7,
+      "arcDeg": 90,
+      "field": "flowLMin",
+      "before": 1.7,
+      "after": 2.3,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12Q",
+      "nozzleId": "k-rain:FN-12Q",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "pressureBar": 2.1,
+      "arcDeg": 90,
+      "field": "flowLMin",
+      "before": 2.27,
+      "after": 2.5,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12H",
+      "nozzleId": "k-rain:FN-12H",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "pressureBar": 1.4,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 2.27,
+      "after": 4.0,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12H",
+      "nozzleId": "k-rain:FN-12H",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "pressureBar": 1.7,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 3.03,
+      "after": 4.5,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12H",
+      "nozzleId": "k-rain:FN-12H",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 3.79,
+      "after": 4.9,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12TQ",
+      "nozzleId": "k-rain:FN-12TQ",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "pressureBar": 1.4,
+      "arcDeg": 270,
+      "field": "flowLMin",
+      "before": 3.6,
+      "after": 6.0,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12TQ",
+      "nozzleId": "k-rain:FN-12TQ",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "pressureBar": 1.7,
+      "arcDeg": 270,
+      "field": "flowLMin",
+      "before": 3.79,
+      "after": 6.8,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12TQ",
+      "nozzleId": "k-rain:FN-12TQ",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "pressureBar": 2.1,
+      "arcDeg": 270,
+      "field": "flowLMin",
+      "before": 4.92,
+      "after": 7.4,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12F",
+      "nozzleId": "k-rain:FN-12F",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "pressureBar": 1.4,
+      "arcDeg": 360,
+      "field": "flowLMin",
+      "before": 6.06,
+      "after": 7.9,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12F",
+      "nozzleId": "k-rain:FN-12F",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "pressureBar": 1.7,
+      "arcDeg": 360,
+      "field": "flowLMin",
+      "before": 6.81,
+      "after": 9.1,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "FN-12F",
+      "nozzleId": "k-rain:FN-12F",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "pressureBar": 2.1,
+      "arcDeg": 360,
+      "field": "flowLMin",
+      "before": 7.95,
+      "after": 9.8,
+      "reason": "Official fixed-nozzle brochure metric flow at this same arc/pressure agrees with 2026 US GPM; 2026 metric flow column conflicts. Adopt the corroborated published metric flow, not a calculated replacement.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48,
+          "role": "Current US corroboration; current metric conflict"
+        }
+      ]
+    },
+    {
+      "modelId": "RN300-ADJ",
+      "nozzleId": "k-rain:RN300-ADJ",
+      "rowIndex": 8,
+      "flatRowIndex": 8,
+      "pressureBar": 3.5,
+      "arcDeg": 360,
+      "field": "radiusM",
+      "before": 8.83,
+      "after": 8.53,
+      "reason": "Official fully-adjustable brochure prints 8.53 m at 360 degrees and 50 PSI, matching current catalog 28 ft; current metric 8.83 m is not used.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fully%20adjustable%20rotary%20nozzles/fully%20adjustable%20rotary%20nozzle%20product%20brochure.pdf",
+          "page": 2,
+          "role": "Selected metric radius"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 43,
+          "role": "Current US 28 ft corroboration"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75",
+      "nozzleId": "k-rain:RPS75:standard-6.0",
+      "rowIndex": 2,
+      "flatRowIndex": 26,
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 18.5,
+      "after": 20.8,
+      "reason": "Official RPS75 setting instructions Rev.12 metric L/min agrees with 2026 catalog US GPM; current metric catalog repeats lower-pressure flow. Adopt corroborated published metric value.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+          "page": 1,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "Current US corroboration"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Conflicting metric cell"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75",
+      "nozzleId": "k-rain:RPS75:standard-6.0",
+      "rowIndex": 3,
+      "flatRowIndex": 27,
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 18.5,
+      "after": 22.7,
+      "reason": "Official RPS75 setting instructions Rev.12 metric L/min agrees with 2026 catalog US GPM; current metric catalog repeats lower-pressure flow. Adopt corroborated published metric value.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+          "page": 1,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "Current US corroboration"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Conflicting metric cell"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75",
+      "nozzleId": "k-rain:RPS75:standard-8.0",
+      "rowIndex": 2,
+      "flatRowIndex": 30,
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 25.7,
+      "after": 28.8,
+      "reason": "Official RPS75 setting instructions Rev.12 metric L/min agrees with 2026 catalog US GPM; current metric catalog repeats lower-pressure flow. Adopt corroborated published metric value.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+          "page": 1,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "Current US corroboration"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Conflicting metric cell"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75",
+      "nozzleId": "k-rain:RPS75:standard-8.0",
+      "rowIndex": 3,
+      "flatRowIndex": 31,
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 25.7,
+      "after": 31.0,
+      "reason": "Official RPS75 setting instructions Rev.12 metric L/min agrees with 2026 catalog US GPM; current metric catalog repeats lower-pressure flow. Adopt corroborated published metric value.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+          "page": 1,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "Current US corroboration"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Conflicting metric cell"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75",
+      "nozzleId": "k-rain:RPS75:low-angle-3.0",
+      "rowIndex": 3,
+      "flatRowIndex": 39,
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 13.2,
+      "after": 14.4,
+      "reason": "Official RPS75 setting instructions Rev.12 metric L/min agrees with 2026 catalog US GPM; current metric catalog repeats lower-pressure flow. Adopt corroborated published metric value.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+          "page": 1,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "Current US corroboration"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Conflicting metric cell"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75",
+      "nozzleId": "k-rain:RPS75:low-angle-6.0",
+      "rowIndex": 2,
+      "flatRowIndex": 46,
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 27.6,
+      "after": 30.3,
+      "reason": "Official RPS75 setting instructions Rev.12 metric L/min agrees with 2026 catalog US GPM; current metric catalog repeats lower-pressure flow. Adopt corroborated published metric value.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+          "page": 1,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "Current US corroboration"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Conflicting metric cell"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75",
+      "nozzleId": "k-rain:RPS75:low-angle-6.0",
+      "rowIndex": 3,
+      "flatRowIndex": 47,
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "flowLMin",
+      "before": 27.6,
+      "after": 32.6,
+      "reason": "Official RPS75 setting instructions Rev.12 metric L/min agrees with 2026 catalog US GPM; current metric catalog repeats lower-pressure flow. Adopt corroborated published metric value.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+          "page": 1,
+          "role": "Selected metric flow"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "Current US corroboration"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Conflicting metric cell"
+        }
+      ]
+    }
+  ],
+  "precipitationCellsUnavailable": [
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 7.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "rowIndex": 0,
+      "flatRowIndex": 0,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 8.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 7.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 8.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 8.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "rowIndex": 2,
+      "flatRowIndex": 2,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 9.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "rowIndex": 3,
+      "flatRowIndex": 3,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 8.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-0.75",
+      "rowIndex": 3,
+      "flatRowIndex": 3,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 9.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "rowIndex": 0,
+      "flatRowIndex": 4,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 8.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "rowIndex": 0,
+      "flatRowIndex": 4,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 9.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "rowIndex": 1,
+      "flatRowIndex": 5,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 8.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "rowIndex": 1,
+      "flatRowIndex": 5,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 9.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "rowIndex": 2,
+      "flatRowIndex": 6,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 10.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "rowIndex": 2,
+      "flatRowIndex": 6,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "rowIndex": 3,
+      "flatRowIndex": 7,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 10.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.0",
+      "rowIndex": 3,
+      "flatRowIndex": 7,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "rowIndex": 0,
+      "flatRowIndex": 8,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 9.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "rowIndex": 0,
+      "flatRowIndex": 8,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "rowIndex": 1,
+      "flatRowIndex": 9,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 10.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "rowIndex": 1,
+      "flatRowIndex": 9,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 12.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "rowIndex": 2,
+      "flatRowIndex": 10,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "rowIndex": 2,
+      "flatRowIndex": 10,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "rowIndex": 3,
+      "flatRowIndex": 11,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-1.5",
+      "rowIndex": 3,
+      "flatRowIndex": 11,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "rowIndex": 0,
+      "flatRowIndex": 12,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "rowIndex": 0,
+      "flatRowIndex": 12,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "rowIndex": 1,
+      "flatRowIndex": 13,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "rowIndex": 1,
+      "flatRowIndex": 13,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "rowIndex": 2,
+      "flatRowIndex": 14,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "rowIndex": 2,
+      "flatRowIndex": 14,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "rowIndex": 3,
+      "flatRowIndex": 15,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 11.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-2.0",
+      "rowIndex": 3,
+      "flatRowIndex": 15,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "rowIndex": 0,
+      "flatRowIndex": 16,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 12.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "rowIndex": 0,
+      "flatRowIndex": 16,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 14.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "rowIndex": 1,
+      "flatRowIndex": 17,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "rowIndex": 1,
+      "flatRowIndex": 17,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 15.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "rowIndex": 2,
+      "flatRowIndex": 18,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "rowIndex": 2,
+      "flatRowIndex": 18,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 15.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "rowIndex": 3,
+      "flatRowIndex": 19,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-3.0",
+      "rowIndex": 3,
+      "flatRowIndex": 19,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 15.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "rowIndex": 0,
+      "flatRowIndex": 20,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 16.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "rowIndex": 0,
+      "flatRowIndex": 20,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 18.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "rowIndex": 1,
+      "flatRowIndex": 21,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 15.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "rowIndex": 1,
+      "flatRowIndex": 21,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 17.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "rowIndex": 2,
+      "flatRowIndex": 22,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 15.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "rowIndex": 2,
+      "flatRowIndex": 22,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 17.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "rowIndex": 3,
+      "flatRowIndex": 23,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 15.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-4.0",
+      "rowIndex": 3,
+      "flatRowIndex": 23,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 17.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "rowIndex": 0,
+      "flatRowIndex": 24,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 23.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "rowIndex": 0,
+      "flatRowIndex": 24,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 26.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "rowIndex": 1,
+      "flatRowIndex": 25,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 21.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "rowIndex": 1,
+      "flatRowIndex": 25,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 24.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "rowIndex": 2,
+      "flatRowIndex": 26,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 21.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "rowIndex": 2,
+      "flatRowIndex": 26,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 24.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "rowIndex": 3,
+      "flatRowIndex": 27,
+      "kind": "base",
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 21.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-6.0",
+      "rowIndex": 3,
+      "flatRowIndex": 27,
+      "kind": "base",
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 24.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "rowIndex": 0,
+      "flatRowIndex": 28,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 23.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "rowIndex": 0,
+      "flatRowIndex": 28,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 27.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "rowIndex": 1,
+      "flatRowIndex": 29,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 23.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "rowIndex": 1,
+      "flatRowIndex": 29,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 27.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "rowIndex": 2,
+      "flatRowIndex": 30,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 23.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "rowIndex": 2,
+      "flatRowIndex": 30,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 27.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "rowIndex": 3,
+      "flatRowIndex": 31,
+      "kind": "base",
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 23.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:standard-8.0",
+      "rowIndex": 3,
+      "flatRowIndex": 31,
+      "kind": "base",
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 27.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "rowIndex": 0,
+      "flatRowIndex": 32,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 19.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "rowIndex": 0,
+      "flatRowIndex": 32,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 22.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "rowIndex": 1,
+      "flatRowIndex": 33,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 23.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "rowIndex": 1,
+      "flatRowIndex": 33,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 27.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "rowIndex": 2,
+      "flatRowIndex": 34,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 21.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "rowIndex": 2,
+      "flatRowIndex": 34,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 24.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "rowIndex": 3,
+      "flatRowIndex": 35,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 21.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-1.0",
+      "rowIndex": 3,
+      "flatRowIndex": 35,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 24.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "rowIndex": 0,
+      "flatRowIndex": 36,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 28.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "rowIndex": 0,
+      "flatRowIndex": 36,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 32.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "rowIndex": 1,
+      "flatRowIndex": 37,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 24.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "rowIndex": 1,
+      "flatRowIndex": 37,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 27.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "rowIndex": 2,
+      "flatRowIndex": 38,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 22.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "rowIndex": 2,
+      "flatRowIndex": 38,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 26.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "rowIndex": 3,
+      "flatRowIndex": 39,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 22.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-3.0",
+      "rowIndex": 3,
+      "flatRowIndex": 39,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 26.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "rowIndex": 0,
+      "flatRowIndex": 40,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 28.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "rowIndex": 0,
+      "flatRowIndex": 40,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 32.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "rowIndex": 1,
+      "flatRowIndex": 41,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 26.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "rowIndex": 1,
+      "flatRowIndex": 41,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 31.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "rowIndex": 2,
+      "flatRowIndex": 42,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 25.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "rowIndex": 2,
+      "flatRowIndex": 42,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 29.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "rowIndex": 3,
+      "flatRowIndex": 43,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 25.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-4.0",
+      "rowIndex": 3,
+      "flatRowIndex": 43,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 29.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "rowIndex": 0,
+      "flatRowIndex": 44,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 35.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "rowIndex": 0,
+      "flatRowIndex": 44,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 41.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "rowIndex": 1,
+      "flatRowIndex": 45,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 36.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "rowIndex": 1,
+      "flatRowIndex": 45,
+      "kind": "base",
+      "pressureBar": 3.5,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 41.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "rowIndex": 2,
+      "flatRowIndex": 46,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 36.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "rowIndex": 2,
+      "flatRowIndex": 46,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 41.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "rowIndex": 3,
+      "flatRowIndex": 47,
+      "kind": "base",
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 36.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75-PR",
+      "nozzleId": "k-rain:RPS75-PR:low-angle-6.0",
+      "rowIndex": 3,
+      "flatRowIndex": 47,
+      "kind": "base",
+      "pressureBar": 4.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 41.0,
+      "runtimeValue": null,
+      "reason": "Metric PR precipitation is systematically about 1.6 times corresponding current US rates without a stated spacing change. Radius/flow agree; leave rate unavailable rather than silently choose a calculation.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10,
+          "role": "US PR table"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 11,
+          "role": "Metric PR table"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-2.0",
+      "rowIndex": 0,
+      "flatRowIndex": 8,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 7.0,
+      "runtimeValue": null,
+      "reason": "Current metric square precipitation conflicts with current US rate by more than integer rounding; flow and radius are corroborated. No replacement inferred.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-2.0",
+      "rowIndex": 1,
+      "flatRowIndex": 9,
+      "kind": "base",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 7.0,
+      "runtimeValue": null,
+      "reason": "Current metric square precipitation conflicts with current US rate by more than integer rounding; flow and radius are corroborated. No replacement inferred.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-2.0",
+      "rowIndex": 2,
+      "flatRowIndex": 10,
+      "kind": "base",
+      "pressureBar": 3.4,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 8.0,
+      "runtimeValue": null,
+      "reason": "Current metric square precipitation conflicts with current US rate by more than integer rounding; flow and radius are corroborated. No replacement inferred.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-2.0",
+      "rowIndex": 3,
+      "flatRowIndex": 11,
+      "kind": "base",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 8.0,
+      "runtimeValue": null,
+      "reason": "Current metric square precipitation conflicts with current US rate by more than integer rounding; flow and radius are corroborated. No replacement inferred.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i",
+      "nozzleId": "k-rain:RPS75i:standard-2.5",
+      "rowIndex": 0,
+      "flatRowIndex": 12,
+      "kind": "base",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 7.0,
+      "runtimeValue": null,
+      "reason": "Current metric square precipitation conflicts with current US rate by more than integer rounding; flow and radius are corroborated. No replacement inferred.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:standard-1.0",
+      "rowIndex": 3,
+      "flatRowIndex": 3,
+      "kind": "reduction",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Reduced-radius metric precipitation conflicts with current US table or square/triangular grid relationship; radius and flow remain independently verified.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US reduced PR rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric reduced PR rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:low-angle-1.0",
+      "rowIndex": 39,
+      "flatRowIndex": 39,
+      "kind": "reduction",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 10.0,
+      "runtimeValue": null,
+      "reason": "Reduced-radius metric precipitation conflicts with current US table or square/triangular grid relationship; radius and flow remain independently verified.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US reduced PR rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric reduced PR rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:low-angle-1.0",
+      "rowIndex": 41,
+      "flatRowIndex": 41,
+      "kind": "reduction",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 14.0,
+      "runtimeValue": null,
+      "reason": "Reduced-radius metric precipitation conflicts with current US table or square/triangular grid relationship; radius and flow remain independently verified.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US reduced PR rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric reduced PR rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:low-angle-1.0",
+      "rowIndex": 41,
+      "flatRowIndex": 41,
+      "kind": "reduction",
+      "pressureBar": 4.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 13.0,
+      "runtimeValue": null,
+      "reason": "Reduced-radius metric precipitation conflicts with current US table or square/triangular grid relationship; radius and flow remain independently verified.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US reduced PR rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric reduced PR rate"
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75i-PR",
+      "nozzleId": "k-rain:RPS75i-PR:low-angle-1.5",
+      "rowIndex": 43,
+      "flatRowIndex": 43,
+      "kind": "reduction",
+      "pressureBar": 2.8,
+      "arcDeg": 180,
+      "field": "precipSquareMmH",
+      "publishedValue": 14.0,
+      "runtimeValue": null,
+      "reason": "Reduced-radius metric precipitation conflicts with current US table or square/triangular grid relationship; radius and flow remain independently verified.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 14,
+          "role": "US reduced PR rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 15,
+          "role": "Metric reduced PR rate"
+        }
+      ]
+    },
+    {
+      "modelId": "KVF6",
+      "nozzleId": "k-rain:KVF6",
+      "rowIndex": 1,
+      "flatRowIndex": 1,
+      "kind": "base",
+      "pressureBar": 1.72,
+      "arcDeg": 90,
+      "field": "precipSquareMmH",
+      "publishedValue": 156.0,
+      "runtimeValue": null,
+      "reason": "Printed square 156 mm/h and triangular 194 mm/h cannot be paired under integer rounding; US 6.16/7.65 shows the same anomaly. Pressure, radius and flow agree across units. Leave square rate unavailable.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 44,
+          "role": "Both current unit tables"
+        }
+      ]
+    },
+    {
+      "modelId": "SuperPro",
+      "nozzleId": "k-rain:SuperPro:standard-5.0",
+      "rowIndex": 24,
+      "flatRowIndex": 24,
+      "kind": "reduction",
+      "pressureBar": 2.1,
+      "arcDeg": 180,
+      "field": "precipTriangleMmH",
+      "publishedValue": 28.0,
+      "runtimeValue": null,
+      "reason": "Reduced triangle 28 mm/h conflicts with current US 0.99 in/h and square 22 mm/h. No replacement inferred.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 21,
+          "role": "US rate"
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 22,
+          "role": "Metric rate"
+        }
+      ]
+    }
+  ],
+  "unresolvedHydraulicOrFootprintIssues": {
+    "P12Q": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Different older pressure sequence"
+          }
+        ]
+      }
+    ],
+    "P12H": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Different older pressure sequence"
+          }
+        ]
+      }
+    ],
+    "P12TQ": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Different older pressure sequence"
+          }
+        ]
+      }
+    ],
+    "P12F": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "At 2.1/2.8 bar metric radii 4.3/4.6 m conflict with current US 13/14 ft. Linked older brochure uses a different pressure sequence, so it cannot conclusively repair these current rows.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Different older pressure sequence"
+          }
+        ]
+      }
+    ],
+    "P15H": [
+      {
+        "field": "pressureBar",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "Metric 2.8/3.4 bar corresponds to US 30/40 PSI in the same rows. A prior brochure has different hydraulics. No verified current correction selected.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          }
+        ]
+      }
+    ],
+    "P15TQ": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          0
+        ],
+        "reason": "At first pressure metric 3.4 m conflicts with 13 ft (approximately 4.0 m); no independent matching current hydraulic table resolves it.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          }
+        ]
+      }
+    ],
+    "P15F": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          0
+        ],
+        "reason": "First metric radius 3.4 m conflicts with 13 ft.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          }
+        ]
+      },
+      {
+        "field": "pressureBar",
+        "flatRowIndices": [
+          2,
+          3
+        ],
+        "reason": "Metric 2.8/3.4 bar conflicts with US 30/40 PSI.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Current conflicting unit columns"
+          }
+        ]
+      }
+    ],
+    "RPS-Select": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          2,
+          12
+        ],
+        "reason": "At 2.8 bar #1/#3 metric radius 10.4/12.2 m conflicts with 37/41 ft. The linked brochure repeats the same conflict, so it does not resolve it.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 17,
+            "role": "Current conflicting unit columns"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps%20select/rps%20select%20product%20brochure.pdf",
+            "page": 2,
+            "role": "Repeats conflict"
+          }
+        ]
+      }
+    ],
+    "SuperPro": [
+      {
+        "field": "radiusM",
+        "flatRowIndices": [
+          16
+        ],
+        "reason": "Standard #3 at 2.1 bar metric 10.6 m conflicts with current US 33 ft; earlier brochures use materially different table editions.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 21,
+            "role": "US table"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 22,
+            "role": "Metric table"
+          }
+        ]
+      },
+      {
+        "field": "reductionPerformance.radiusM",
+        "flatRowIndices": [
+          16,
+          32,
+          37
+        ],
+        "reason": "Reduced metric radii differ materially from current US; #6/#8 at 4.8 bar also do not fit stated 30% within rounding. Do not replace them with an assumed 0.7 multiplier.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 21,
+            "role": "US reduced table"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 22,
+            "role": "Metric reduced table"
+          }
+        ]
+      }
+    ],
+    "P15HL": [
+      {
+        "field": "footprint",
+        "reason": "Published dimensions and centered origin are verified, but the upper schematic has no exact curve definition. At 2.0 bar High 4.6 x 9.8 m is not an exact radius-4.6 m semicircle. No circle or ellipse is asserted; footprint remains unsupported.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Diagram and dimensions"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Missing second Low dimensions 1.5 x 9.8 m"
+          }
+        ]
+      }
+    ],
+    "FN-15HL": [
+      {
+        "field": "footprint",
+        "reason": "Published dimensions and centered origin are verified, but the upper schematic has no exact curve definition. At 2.0 bar High 4.6 x 9.8 m is not an exact radius-4.6 m semicircle. No circle or ellipse is asserted; footprint remains unsupported.",
+        "sources": [
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+            "page": 49,
+            "role": "Diagram and dimensions"
+          },
+          {
+            "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+            "page": 2,
+            "role": "Missing second Low dimensions 1.5 x 9.8 m"
+          }
+        ]
+      }
+    ]
+  },
+  "retainedFieldDecisions": [
+    {
+      "modelId": "FN-12F",
+      "field": "radiusM",
+      "pressureBar": 1.7,
+      "retainedValue": 3.4,
+      "rejectedCurrentUsValueFeet": 12,
+      "reason": "Current metric 3.4 m and official brochure 11 ft / 3.4 m corroborate one another. The current US radius is not selected; no blanket US-table precedence is used.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 48
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/nozzles/fixed/fixed%20nozzle%20performance%20data.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "modelId": "RPS75",
+      "nozzleId": "k-rain:RPS75:low-angle-6.0",
+      "field": "flowLMin",
+      "pressureBar": 4.8,
+      "selectedValue": 32.6,
+      "currentUsValueGpm": 8.6,
+      "rejectedManualUsValueGpm": 8.3,
+      "reason": "Select visible bottom-right manual metric 32.6 L/min, corroborated by current catalog 8.6 GPM. The manual US typo is not adopted. Hidden/overlaid extracted legacy tables in the instruction PDF were not used.",
+      "sources": [
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/catalogs/2026%20product%20catalog%20english.pdf",
+          "page": 10
+        },
+        {
+          "url": "https://www.krain.com/content/files/images/landingpages/rotors/rps75/rps75%20setting%20instructions.pdf",
+          "page": 1
+        }
+      ]
+    }
+  ],
+  "scopeOfCorrections": "These are documented field selections from corroborating official rows, not manufacturer-issued errata. No publication chronology was inferred from ISO labels or revision numbers. Only the product catalog explicitly identifies itself as 2026."
+}
