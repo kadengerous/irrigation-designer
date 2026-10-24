@@ -8,7 +8,7 @@ test("rotor rack selection, live controls and canvas tools in the irrigation wor
   const server = await createServer({ server: { middlewareMode: true, hmr: false } });
   try {
     const { placeableCatalog, itemById } = await server.ssrLoadModule("/src/lib/hunter-catalog.ts");
-    const { catalogHeadDefaults, headFlow, performanceAt, pressureRange, pressureSteps, nearestPressure, radiusRange } = await server.ssrLoadModule("/src/lib/flow.ts");
+    const { catalogHeadDefaults, headFlow, performanceAt, pressureRange, pressureSteps, nearestPressure, boundedPressure, radiusRange } = await server.ssrLoadModule("/src/lib/flow.ts");
     const { headParameterRanges, usesAutomaticNozzle } = await server.ssrLoadModule("/src/lib/head-adjustment.ts");
     globalThis.window = { localStorage: globalThis.localStorage };
     const { useProject } = await server.ssrLoadModule("/src/lib/project-store.ts");
@@ -47,10 +47,10 @@ test("rotor rack selection, live controls and canvas tools in the irrigation wor
     assert.equal(current().designPressure,2.4);
     reset(mp);
     useProject.getState().updateHead("test-head",{r:9.5,designPressure:2.6});
-    assert.equal(current().designPressure,2.4,"API changes cannot retain intermediate pressure");
+    assert.equal(current().designPressure,2.6,"API changes retain bounded intermediate pressure");
     assert.equal(current().r,9.5,"an explicitly supplied radius remains a separate manual adjustment");
 
-    const rotors = placeableCatalog().filter(usesAutomaticNozzle);
+    const rotors = placeableCatalog().filter(item=>item.manufacturerId==='hunter').filter(usesAutomaticNozzle);
     assert.ok(rotors.some(item => item.family === "golf"));
     for (const item of rotors) {
       reset(item);
@@ -58,7 +58,7 @@ test("rotor rack selection, live controls and canvas tools in the irrigation wor
       const pressure = headParameterRanges(item,current()).pressure;
       for (const bar of [pressure.min,(pressure.min+pressure.max)/2,pressure.max]) {
         useProject.getState().updateHead("test-head",{designPressure:bar});
-        assert.equal(current().designPressure,nearestPressure(pressureSteps(item,current().nozzleId,current().arc),bar));
+        assert.ok(Math.abs(current().designPressure-boundedPressure(pressureSteps(item,current().nozzleId,current().arc),bar))<1e-9);
         valid(item,current());
         const radius = headParameterRanges(item,current()).radius;
         for (const r of [radius.min,radius.max]) {

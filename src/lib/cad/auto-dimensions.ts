@@ -12,7 +12,7 @@ export function automaticDimensions(project: Project, mode: "plan" | "irrigation
     mode==='irrigation' ? !key.startsWith('irrigation:')&&!key.startsWith('heads:') : !key.startsWith('edge:')&&!key.startsWith('face:'))};
   const dims = { ...d.dims };
   if(mode==='irrigation') {
-    const drawing={...d,automaticDimensionMode:'irrigation' as const,irrigationDimensions:{...d.irrigationDimensions,headIds:project.heads.map(h=>h.id),suppressed:[],offset:d.irrigationDimensions?.offset??offset}};
+    const drawing={...d,automaticDimensionMode:'irrigation' as const,irrigationDimensions:{...d.irrigationDimensions,headsOnly:true,headIds:project.heads.map(h=>h.id),suppressed:[],offset:d.irrigationDimensions?.offset??offset}};
     return {...drawing,dims:resolveSprinklerDimensions(drawing,project.heads,true),layers:d.layers?{...d.layers,dims:{visible:true,locked:false}}:d.layers};
   }
   const keys = new Set(Object.values(dims).map(dim => dim.autoKey));
@@ -33,7 +33,7 @@ export function automaticDimensions(project: Project, mode: "plan" | "irrigation
   {
     for (const f of Object.values(d.faces)) {
       if (f.hidden) continue;
-      if (f.circle || f.ellipse || f.spline || f.freehand) {
+      if (f.circle || f.ellipse || f.spline || f.freehand || f.rounding) {
         for (const axis of (f.circle ? ["x"] : ["x","y"]) as ("x"|"y")[]) {
           add(`face:${f.id}:${axis}`, { a:{x:0,y:0},b:{x:0,y:0},faceAxis:{id:f.id,axis} });
         }

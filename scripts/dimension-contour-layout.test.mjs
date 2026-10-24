@@ -49,7 +49,7 @@ test('step numbers stay close to their own dimension line without colliding with
    for(let j=0;j<i;j++)assert.ok(!presentation.labelBoxesOverlap(rows[i].box,rows[j].box),`text collision at ${px}`);
    const own=rows[i].segments[1],text=rows[i].text,dx=own.b.x-own.a.x,dy=own.b.y-own.a.y;
    const normal=Math.abs((text.x-own.a.x)*dy-(text.y-own.a.y)*dx)/Math.hypot(dx,dy);
-   assert.ok(normal<=20*px/36+1e-8,'dimension number stays immediately beside its line');
+   assert.ok(normal<=20*rows[i].textScale*px/36+1e-8,'dimension number stays immediately beside its line relative to text size');
   }
  }
 });

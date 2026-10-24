@@ -9,6 +9,7 @@ export type { CadDrawing, RegionType };
 export type Tool =
   | "draw"
   | "place"
+  | "auto-head"
   | "move"
   | "measure"
   | "scale"
@@ -34,6 +35,7 @@ export type DrawSub =
   | "fill"
   | "dim"
   | "text"
+  | "cut"
   | "trim"
   | "extend"
   | "copy"
@@ -90,6 +92,9 @@ export type Geom = {
 export type Head = {
   id: string;
   catalogId: string;
+  equipmentSnapshot?: import("./equipment-catalog").CatalogItem;
+  equipmentAdjusted?: boolean;
+  bodySnapshot?: import("./equipment-catalog").CatalogItem;
   nozzleId: string | null;
   x: number;
   y: number;
@@ -163,6 +168,7 @@ export type ProjectMeta = {
 };
 
 export type Project = {
+  engineering?: import('./engineering').EngineeringData;
   view?: { showCoverage:boolean;showLabels:boolean;showGrid:boolean;snapOn:boolean;snapGridOn:boolean;gridStep:number;measureUnit:string;activeZoneId:number;pxPerMeter?:number;panX?:number;panY?:number };
   id: string;
   name: string;
@@ -195,19 +201,13 @@ export type ProjectListItem = {
 export const MAX_ZONES = 100;
 
 export const ZONE_PALETTE = [
-  "#86c99a",
-  "#68b884",
-  "#9ed1a3",
-  "#73bda5",
-  "#a4ce8c",
-  "#67b68d",
-  "#96c6ac",
-  "#7fc6b2",
+  '#00d43b','#087cff','#ff7900','#d900ed','#ffcf00','#00c9d9',
+  '#ff274b','#7d42ff','#91d600','#ff409b','#00a987','#9b6200',
 ];
 
 export function zoneColor(id: number) {
   const i = Math.max(1, Math.floor(id)) - 1;
-  return ZONE_PALETTE[i % ZONE_PALETTE.length]!;
+  return ZONE_PALETTE[i] ?? `hsl(${Math.round((i*137.508)%360)} 95% 48%)`;
 }
 
 export function defaultZones(): Zone[] {
@@ -238,6 +238,39 @@ export function compactAfterRemoveZone(zones: Zone[], heads: Head[], removeId?: 
   return { zones: nextZones, heads: nextHeads, idMap };
 }
 
+/** Zone numbers are shared by sprinklers, pipe circuits and equipment. */
+export function remapEngineeringZones(engineering: Project['engineering'], idMap: Map<number, number>, fallback?: number): Project['engineering'] {
+  if (!engineering) return engineering;
+  let changed = false;
+  const remap = (id: number) => id === 0 ? 0 : idMap.get(id) ?? fallback ?? id;
+  const elements = Object.fromEntries(Object.entries(engineering.elements).map(([id, element]) => {
+    if (element.kind === 'pipe') {
+      const remapCircuit = (circuit: string | undefined) => circuit?.startsWith('zone:') ? `zone:${remap(Number(circuit.slice(5)))}` : circuit;
+      const savedNetwork = remapCircuit(element.networkCircuit);
+      const circuit = remapCircuit(element.auto?.circuit), networkCircuit = remapCircuit(element.auto?.networkCircuit);
+      if (savedNetwork !== element.networkCircuit || circuit !== element.auto?.circuit || networkCircuit !== element.auto?.networkCircuit) {
+        changed = true;
+        return [id, {...element, ...(savedNetwork != null ? {networkCircuit:savedNetwork} : {}), ...(element.auto ? {auto: {...element.auto, circuit:circuit!, ...(networkCircuit != null ? {networkCircuit} : {})}} : {})}];
+      }
+    }
+    if ((element.kind === 'equipment' || element.kind === 'pipe' && element.type === 'dripLine') && element.zoneId != null) {
+      const zoneId = remap(element.zoneId);
+      if (zoneId !== element.zoneId) { changed = true; return [id, {...element, zoneId}]; }
+    }
+    return [id, element];
+  }));
+  let hydraulics = engineering.hydraulics;
+  if (Array.isArray(hydraulics?.simultaneousZoneIds)) {
+    // Removing a selected zone must not silently activate its transfer target.
+    const simultaneousZoneIds = [...new Set(hydraulics.simultaneousZoneIds.map(id => idMap.get(id)).filter((id): id is number => id != null))];
+    if (simultaneousZoneIds.length !== hydraulics.simultaneousZoneIds.length || simultaneousZoneIds.some((id, i) => id !== hydraulics!.simultaneousZoneIds![i])) {
+      changed = true;
+      hydraulics = {...hydraulics, simultaneousZoneIds};
+    }
+  }
+  return changed ? {...engineering, elements, ...(hydraulics ? {hydraulics} : {})} : engineering;
+}
+
 /** Compact display numbers together with every engineering reference. */
 export function renumberProjectZones(project: Project): Project {
   const { zones, heads, idMap } = compactAfterRemoveZone(project.zones, project.heads);
@@ -246,7 +279,8 @@ export function renumberProjectZones(project: Project): Project {
     Object.entries(project.drawing.plants ?? {}).map(([id, plant]) => [id, plant.irrigation?.zoneId
       ? { ...plant, irrigation: { ...plant.irrigation, zoneId: idMap.get(plant.irrigation.zoneId) ?? null } } : plant])
   ) } : undefined;
-  return { ...project, zones, heads, ...(drawing ? { drawing } : {}) };
+  const engineering = remapEngineeringZones(project.engineering, idMap);
+  return { ...project, zones, heads, ...(drawing ? { drawing } : {}), ...(engineering ? {engineering} : {}) };
 }
 
 export function emptyMeta(): ProjectMeta {

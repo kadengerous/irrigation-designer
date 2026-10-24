@@ -2,13 +2,13 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { createServer } from "vite";
 
-test("every Hunter nozzle uses only published pressure points and refreshes geometry and zone totals", async () => {
+test("every Hunter nozzle uses published points and bounded interpolation, refreshing geometry and zone totals", async () => {
   const oldStorage=globalThis.localStorage, oldWindow=globalThis.window;
   const memory=new Map();
   globalThis.localStorage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v),removeItem:k=>memory.delete(k)};
   const server=await createServer({server:{middlewareMode:true,hmr:false}});
   try {
-    const {placeableCatalog,stripAtPressure}=await server.ssrLoadModule('/src/lib/hunter-catalog.ts');
+    const {placeableCatalog,stripAtPressure,bodiesFor,mountingKind}=await server.ssrLoadModule('/src/lib/equipment-catalog.ts');
     const {catalogHeadDefaults,pressureSteps,performanceAt,headFlow,runTimeMin}=await server.ssrLoadModule('/src/lib/flow.ts');
     const {zoneFlow,zonePressure}=await server.ssrLoadModule('/src/lib/hydro.ts');
     const {emptyProject}=await server.ssrLoadModule('/src/lib/project-types.ts');
@@ -17,13 +17,15 @@ test("every Hunter nozzle uses only published pressure points and refreshes geom
     globalThis.window={localStorage:globalThis.localStorage};
     const {useProject,migrateProject}=await server.ssrLoadModule('/src/lib/project-store.ts');
     let checked=0;
-    for(const item of placeableCatalog()) {
+    for(const item of placeableCatalog().filter(c=>c.manufacturerId==='hunter')) {
       const defaults=catalogHeadDefaults(item);
+      // Testing every chart pressure requires a compatible body without a regulator.
+      if(mountingKind(item)==='spray')defaults.bodyId=bodiesFor(item).find(body=>body.regulatedPressureBar==null).id;
       for(const nozzle of item.nozzles) {
         const steps=pressureSteps(item,nozzle.id,defaults.arc);
         for(const [i,bar] of steps.entries()) {
           const row=performanceAt(item,nozzle.id,bar,defaults.arc).row;
-          assert.ok(nozzle.performance.some(r=>r.pressureBar===bar));
+          assert.ok(nozzle.performance.some(r=>r.pressureBar===bar)||item.pressureCompensating&&performanceAt(item,nozzle.id,bar,defaults.arc).kind==='pressure-compensated');
           const source=performanceAt(item,nozzle.id,steps[0],defaults.arc).row;
           const h={...defaults,id:'a',catalogId:item.id,nozzleId:nozzle.id,r:source.radiusM,designPressure:steps[0],x:3,y:4,start:90,zone:1,locked:false};
           const companion={...h,id:'b',zone:2};
@@ -59,12 +61,14 @@ test("every Hunter nozzle uses only published pressure points and refreshes geom
           }
           if(i>0) {
             const middle=(steps[i-1]+bar)/2;
-            assert.equal(performanceAt(item,nozzle.id,middle,defaults.arc),null,'no invented intermediate pressure row');
+            const interpolated=performanceAt(item,nozzle.id,middle,defaults.arc);
+            assert.ok(interpolated,'intermediate pressure stays inside the official table');
+            assert.ok(['interpolated','pressure-compensated'].includes(interpolated.kind));
             useProject.getState().updateHead('a',{designPressure:middle});
-            assert.ok(steps.includes(useProject.getState().project.heads[0].designPressure));
+            assert.equal(useProject.getState().project.heads[0].designPressure,middle);
             const legacy=migrateProject({...emptyProject(),heads:[{...h,designPressure:middle}]});
             assert.equal(legacy.heads[0].designPressure,middle,'opening an old project does not silently change it');
-            assert.equal(legacy.heads[0].needsReview,true);
+            assert.equal(legacy.heads[0].needsReview,false);
           }
           checked++;
         }

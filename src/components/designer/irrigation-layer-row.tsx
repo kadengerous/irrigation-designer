@@ -2,15 +2,16 @@ import { useId, useRef, useState, type ReactNode, type CSSProperties } from "rea
 import * as Popover from "@radix-ui/react-popover";
 import { ChevronDown, Eye, Lock, SquarePen, Trash2, Unlock } from "lucide-react";
 import { useProject } from "@/lib/project-store";
-import { zoneLabel, type Head, type Zone } from "@/lib/project-types";
+import { zoneLabel, zoneColor, type Head, type Zone } from "@/lib/project-types";
 import { isHeadLocked, isHeadVisible } from "@/lib/head-visibility";
 import { formatNumber, tr, type Locale } from "@/lib/i18n";
 import { formatFlowU, formatLenU, formatPressureU, type UnitPrefs } from "@/lib/units";
 import { headFlow } from "@/lib/flow";
-import { itemById, defaultNozzle } from "@/lib/hunter-catalog";
+import { catalogForHead,  itemById, nozzleTablePressure } from "@/lib/equipment-catalog";
 import { catalogName } from "@/lib/catalog-localization";
 import { SprinklerIcon } from "./sprinkler-icon";
 import { ZoneHeadGrip } from "./zone-drag";
+import { LayerDeleteDialog } from "./layer-delete-dialog";
 
 /** Shared layer-shaped presentation for zones and their installed equipment. */
 export function IrrigationLayerRow({ name, icon, rowKey, kind, selected, hidden, locked, open, onToggle, onSelect, summary, children, locale, floating = false, grip, style }: {
@@ -28,7 +29,7 @@ export function IrrigationLayerRow({ name, icon, rowKey, kind, selected, hidden,
       {kind !== "zone" && <span className="irrigation-row-symbol" aria-hidden="true">{icon}</span>}
       <button type="button" className="irrigation-layer-name" title={name} onClick={onSelect ?? onToggle}
         {...(onSelect ? { "aria-pressed": Boolean(selected) } : { "aria-expanded": open, "aria-controls": detailsId })}>
-        <bdi dir={kind === "head" ? "ltr" : "auto"}>{name}</bdi>
+        {kind === "zone" && icon}<bdi dir={kind === "head" ? "ltr" : "auto"}>{name}</bdi>
       </button>
       {kind !== "zone" && (hidden || locked) && <span className="irrigation-layer-status" aria-hidden="true">
         {hidden && <span className="layer-eye" data-hidden="true"><Eye size={16}/></span>}
@@ -58,7 +59,7 @@ export function IrrigationLayerRow({ name, icon, rowKey, kind, selected, hidden,
 export function IrrigationLayerActions({ name, hidden, locked, inheritedHidden, inheritedLocked, deleteDisabled, onVisibility, onLock, onDelete, onEdit, locale }: {
   name: string; hidden: boolean; locked: boolean; inheritedHidden?: boolean; inheritedLocked?: boolean;
   deleteDisabled?: boolean; onVisibility: () => void; onLock: () => void;
-  onDelete: (button: HTMLButtonElement) => void; onEdit?: () => void; locale: Locale;
+  onDelete?: (button: HTMLButtonElement) => void; onEdit?: () => void; locale: Locale;
 }) {
   const visibility = `${tr(locale, hidden ? "show" : "hide")}: ${name}`;
   const lock = `${tr(locale, locked ? "referenceUnlockAction" : "referenceLockAction")}: ${name}`;
@@ -69,29 +70,31 @@ export function IrrigationLayerActions({ name, hidden, locked, inheritedHidden, 
       aria-pressed={locked} disabled={inheritedLocked} onClick={onLock}>{locked ? <Lock size={18}/> : <Unlock size={18}/>}</button>
     {onEdit && <button type="button" className="mobile-icon-button" title={tr(locale, "editNamed", { name })}
       aria-label={tr(locale, "editNamed", { name })} disabled={locked || hidden} onClick={onEdit}><SquarePen size={18}/></button>}
-    <button type="button" className="mobile-icon-button layer-delete-direct" title={tr(locale, "deleteNamed", { name })}
-      aria-label={tr(locale, "deleteNamed", { name })} disabled={locked || deleteDisabled} onClick={event => onDelete(event.currentTarget)}><Trash2 size={18}/></button>
+    {onDelete&&<button type="button" className="mobile-icon-button layer-delete-direct" title={tr(locale, "deleteNamed", { name })}
+      aria-label={tr(locale, "deleteNamed", { name })} disabled={locked || deleteDisabled} onClick={event => onDelete(event.currentTarget)}><Trash2 size={18}/></button>}
   </div>;
 }
 
-export function HeadLayerRow({ head, number, zone, selected, units, locale, onInspect, floating = false }: {
-  head: Head; number: number; zone?: Zone; selected?: boolean; units: UnitPrefs; locale: Locale; onInspect?: () => void; floating?: boolean;
+export function HeadLayerRow({ head, number, zone, selected, units, locale, onInspect, onPreview, floating = false, expanded, onExpandedChange }: {
+  head: Head; number: number; zone?: Zone; selected?: boolean; units: UnitPrefs; locale: Locale; onInspect?: () => void; onPreview?: () => void; floating?: boolean;
+  expanded?: boolean; onExpandedChange?: (open: boolean) => void;
 }) {
-  const [open, setOpen] = useState(false);
+  const [localOpen, setLocalOpen] = useState(false);
+  const open = expanded ?? localOpen;
   const [deleting, setDeleting] = useState(false);
   const allZones = useProject(s => s.project.zones);
   const name = head.catalogId;
   const zones = zone ? [zone] : [];
   const hidden = !isHeadVisible(head, zones), locked = isHeadLocked(head, zones);
-  const item = itemById(head.catalogId);
-  const nozzle = head.nozzleId ? item?.nozzles.find(n => n.id === head.nozzleId) : item && defaultNozzle(item);
-  const color = nozzle?.color ?? item?.color ?? "#6b7280";
+  const item = catalogForHead(head);
+  const color = zoneColor(head.zone);
   const flow = headFlow(head).lpm;
   const t = (key: string) => tr(locale, key);
   const inspect = () => { useProject.getState().selectHead(head.id); onInspect?.(); };
-  const preview = () => { if (zone) useProject.getState().focusZone(zone.id, head.id); };
+  const preview = () => { if(onPreview)onPreview();else if (zone) useProject.getState().focusZone(zone.id, head.id); };
   const toggle = () => {
-    setOpen(value => !value); setDeleting(false);
+    if (onExpandedChange) onExpandedChange(!open); else setLocalOpen(!open);
+    setDeleting(false);
     preview();
   };
   return <IrrigationLayerRow name={name} rowKey={`head:${head.id}`} kind="head"
@@ -102,11 +105,8 @@ export function HeadLayerRow({ head, number, zone, selected, units, locale, onIn
       onVisibility={() => useProject.getState().setHeadFlag(head.id, { hidden: !head.hidden })}
       onLock={() => useProject.getState().setHeadFlag(head.id, { locked: !head.locked })}
       onDelete={() => setDeleting(true)} onEdit={inspect} locale={locale}/>
-    {deleting && <div className="irrigation-layer-confirm" role="group" aria-label={t("deleteSprinkler")}>
-      <p>{t("deleteSprinkler")}: <bdi dir="ltr">{name}</bdi>?</p>
-      <button type="button" onClick={() => setDeleting(false)}>{t("cancel")}</button>
-      <button type="button" className="layer-delete-direct" disabled={locked} onClick={() => useProject.getState().removeHead(head.id)}>{t("delete")}</button>
-    </div>}
+    {deleting && <LayerDeleteDialog name={name} locale={locale} disabled={locked}
+      onCancel={() => setDeleting(false)} onDelete={() => { useProject.getState().removeHead(head.id); setDeleting(false); }}/>}
     <p className="irrigation-layer-model">{item ? catalogName(item) : <bdi dir="ltr">{head.catalogId}</bdi>}</p>
     <label className="zone-name-editor"><span>{t("zoneTransferDestination")}</span>
       <select aria-label={t("zoneTransferDestination")} value={head.zone} disabled={locked}
@@ -117,7 +117,7 @@ export function HeadLayerRow({ head, number, zone, selected, units, locale, onIn
     <dl className="irrigation-layer-stats">
       <div><dt>{t("radius")}</dt><dd>{formatLenU(head.r, units.length)}</dd></div>
       <div><dt>{t("sector")}</dt><dd>{formatNumber(head.arc, 0)}°</dd></div>
-      <div><dt>{t("pressure")}</dt><dd>{formatPressureU(head.designPressure, units.pressure)}</dd></div>
+      <div><dt>{t("pressure")}</dt><dd>{formatPressureU(item?nozzleTablePressure(item,head.designPressure):head.designPressure, units.pressure)}</dd></div>
       <div><dt>{t("flow")}</dt><dd>{flow == null ? t("noData") : formatFlowU(flow, units.flow)}</dd></div>
       {zone && <div><dt>{t("zone")}</dt><dd><bdi>{zoneLabel(zone)}</bdi></dd></div>}
     </dl>

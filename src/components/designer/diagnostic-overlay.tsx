@@ -2,7 +2,7 @@ import { useEffect, useMemo } from "react";
 import { Arrow, Circle, Group, Line, Rect, Shape, Text } from "react-konva";
 import { diagnosticBounds, diagnosticView, DIAGNOSTIC_COLORS, liveDiagnosticIssue, formatDiagnosticMetric, useDiagnosticFocus } from "@/lib/diagnostic-focus";
 import { useProject } from "@/lib/project-store";
-import { headSurface, type Surface } from "@/lib/irrigation-geometry";
+import { headSurface, irrigationSurfaces, subtractSurface, type Surface } from "@/lib/irrigation-geometry";
 import { COVERAGE_HATCHES, diagnosticCoverage } from "@/lib/diagnostic-coverage";
 import type { Project } from "@/lib/project-types";
 import { tr } from "@/lib/i18n";
@@ -44,6 +44,10 @@ export function DiagnosticOverlay({ project, px, panX, panY, size, canvas }: {
   const coverageId = useCoverageDisplay(s => s.projectId);
   const irrigation = useProject(s => s.workspaceSection === "irrigation");
   const coverage = issue || (irrigation && coverageId === project.id) ? diagnosticCoverage(project) : null;
+  const issueArea=useMemo(()=>{
+    if(!issue?.area?.length)return [];
+    try{return subtractSurface(issue.area,irrigationSurfaces(project).excluded);}catch{return [];}
+  },[issue?.area,project]);
   const heads = useMemo(() => issue ? project.heads.filter(h => issue.headIds.includes(h.id)) : [], [issue, project]);
   useEffect(() => {
     if (!issue) return;
@@ -73,7 +77,7 @@ export function DiagnosticOverlay({ project, px, panX, panY, size, canvas }: {
   const radius = issue?.line && issue.metrics.find(m => m.key === "radius");
   return <Group listening={false}>
     {coverage && COVERAGE_HATCHES.map(hatch => <HatchedSurface key={hatch.id} surface={coverage[hatch.id]} color={hatch.color} px={px} panX={panX} panY={panY}/>)}
-    {!!issue?.area?.length && <HatchedSurface surface={issue.area} color={color} px={px} panX={panX} panY={panY}/>}
+    {!!issueArea.length && <HatchedSurface surface={issueArea} color={color} px={px} panX={panX} panY={panY}/>}
     {heads.map(head => <Group key={head.id}>
       {headSurface(head).flatMap((polygon, p) => polygon.map((ring, r) => <Group key={`${p}-${r}`}>
         <Line points={ring.flatMap(([a, b]) => [x(a), y(b)])} closed stroke="#ffffffdd" strokeWidth={5}/>

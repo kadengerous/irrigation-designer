@@ -1,3 +1,4 @@
+import {isLawnTexture,lawnPeriodMeters,LAWN_PATTERN_PIXELS} from "./lawn-pattern";
 import type { Pt } from "@/lib/geometry";
 import { faceTexture, texturePatternScale } from "./types";
 
@@ -35,12 +36,21 @@ export function textureFrame(geometry: Geometry): TextureFrame {
 
 /** Keep the previous density at the app's original 36 px/m, then use world units. */
 export function texturePatternAttrs(fill: string, frame: TextureFrame, reference: TextureSize, px = 36, rotation = 0) {
-  const metersPerTexel = texturePatternScale(fill) / 36;
+  const metersPerTexel = isLawnTexture(fill)?lawnPeriodMeters(fill)/LAWN_PATTERN_PIXELS:texturePatternScale(fill) / 36;
+  const texture = faceTexture(fill);
   return {
     fillPatternX: frame.x,
     fillPatternY: frame.y,
-    fillPatternRotation: frame.rotation + rotation + (faceTexture(fill)?.baseRotation ?? 0),
+    // Saved manual turns remain meaningful for flat materials; roofs follow their slopes.
+    fillPatternRotation: frame.rotation + (texture?.roof ? 0 : rotation) + (texture?.baseRotation ?? 0),
     fillPatternScaleX: metersPerTexel * px,
     fillPatternScaleY: metersPerTexel * px,
   };
+}
+
+/** Courses start at the eave; the image's +Y direction runs downhill, away from the ridge. */
+export function roofPatternTransform(fill: string, eaveAngle: number, origin: Pt, sx: number, sy: number) {
+  const radians = (eaveAngle + 180 + (faceTexture(fill)?.baseRotation ?? 0)) * Math.PI / 180;
+  const c = Math.cos(radians), s = Math.sin(radians);
+  return { a: c * sx, b: s * sx, c: -s * sy, d: c * sy, e: origin.x, f: origin.y };
 }

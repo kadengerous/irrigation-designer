@@ -1,21 +1,47 @@
+import {operatingGeometryAvailable} from "@/lib/flow";
+import {specialFootprint} from "@/lib/equipment-footprint";
+import {CanvasNote,canvasNoteHit} from "./canvas-note";
+import {isIrrigationSimulation,canvasDimensionsVisible,equipmentLabelsVisible} from "@/lib/simulation-presentation";
+import {SimulationLawn} from "./simulation-lawn";
+import {simulationLawnSurface} from "@/lib/simulation-lawn";
+import {LandscapeObjectGlyph} from "./landscape-object-glyph";
+import {snapLandscapePoint,snapLandscapeRotation,landscapeAlignmentGuides,type LandscapeAlignmentGuide} from '@/lib/landscape-snapping';
+import {landscapeReturnDrop} from '@/lib/landscape-return-drop';
+import {ensureLandscapeImages} from "@/lib/landscape-object-images";
+import {landscapeLayerVisible,landscapeLayerLocked,landscapeExclusions,resizeLandscapeObject,rotationDegrees,objectToLocal,type LandscapeObject} from "@/lib/landscape-objects";
+import {UI_SCALE} from "@/lib/ui-scale";
+import {plantLayerLocked,plantLayerVisible,resizedPlantRadius,normalizedPlantRotation} from "@/lib/plant-visuals";
+import {ensurePlantImages} from "@/lib/plant-images";
+import { CornerRoundingHandles, RoundedFigureHandles } from "./corner-rounding-handles";
+import { useCornerRounding } from "@/lib/corner-rounding-store";
+import { toPolygons } from "@/lib/cad/engine";
+import { cutFigures, snapCutPoint } from "@/lib/cad/cut-figures";
 import { headPaintOrder, isHeadVisible, visibleProjectHeads } from "@/lib/head-visibility";
 import { ZoneHighlights, WateringHead, FocusedHead } from "./zone-highlights";
 import { DiagnosticOverlay } from "./diagnostic-overlay";
-import { focusedIssue, useDiagnosticFocus } from "@/lib/diagnostic-focus";
+import { focusedIssue, liveDiagnosticIssue, useDiagnosticFocus } from "@/lib/diagnostic-focus";
+import { useCoverageDisplay } from '@/lib/coverage-display';
+import { diagnosticCoverage } from '@/lib/diagnostic-coverage';
+import { hatchedPaintMask, outsideHatchesClip, sprinklerPaintClip } from '@/lib/coverage-paint';
 import { text as uiText } from "@/lib/i18n";
 import { ReferenceCanvas } from "./reference-canvas";
+import {AutomaticHeadTool} from './automatic-head-tool';
+import {ENGINEERING_BACKGROUND,engineeringPlanDrawing} from '@/lib/engineering-view';
 import { installCanvasZoom } from './canvas-zoom-events';
 import { headAtPointer, HEAD_MOUSE_HIT_RADIUS } from "@/lib/head-hit-target";
 import { snapSprinklerPoint } from "@/lib/head-snapping";
 import { catalogName, nozzleName } from '@/lib/catalog-localization';
+import {ManualSprinklerPlacement} from './manual-sprinkler-placement';
+import type {ManualPlacementTracker} from '@/lib/manual-placement-tracker';
 import { SprinklerGuides } from './sprinkler-placement-guides';
 import { TapeMeasureIcon, TAPE_MEASURE_TIP } from "./tape-measure-icon";
-import {createPortal} from "react-dom";
+import {createPortal, flushSync} from "react-dom";
 import {snapDimensionOffset} from "@/lib/cad/dimension-offset-snap";
 import { DimensionLine } from "./dimension-line";
-import { layoutHeadLabels,equipmentLabel, headSymbolScale } from '@/lib/head-presentation';
+import { layoutHeadLabels,equipmentLabel, headSymbolScale, HEAD_SYMBOL_RADIUS } from '@/lib/head-presentation';
+import {annotationPaintInk,type InkRequest} from './annotation-contrast';
 import { displayedDimensions } from '@/lib/cad/sprinkler-dimensions';
-import { seamlessPattern } from "@/lib/cad/seamless-pattern";
+import {loadMaterialImage} from "@/lib/cad/material-images";
 import { TextEditor } from "./text-editor";
 import { PlantGlyph } from "./plant-glyph";
 import type { CadPlant } from "@/lib/cad/types";
@@ -41,18 +67,22 @@ import { snapLayerTransform } from "@/lib/cad/layer-snapping";
 import { EditPointGlyph, RotationHandleGlyph, EDIT_HANDLE_COLOR, EDIT_OUTLINE_COLOR, SELECTION_OUTLINE_COLOR, ROTATION_STEM_PX } from "./edit-handle-glyphs";
 import { snapFigurePoint, snapFigureTranslation } from "@/lib/cad/figure-snapping";
 import { segmentAlignmentAnchors, snapSegmentAlignment } from "@/lib/cad/segment-alignment";
+import {snapPointDraft} from '@/lib/cad/point-draft-snap';
+import {canvasWorkspace,canvasSnapDrawing} from '@/lib/workspace-canvas';
 import { SegmentAlignmentGuides } from "./segment-alignment-guides";
 import { DrawingGuidance, ClosureGuide } from "./drawing-guidance";
 import { CanvasMagnifier } from "./canvas-magnifier";
+import {setPlacementFocus,usePlacementFocus} from './placement-focus';
 import { HeadSectorHandles } from "./head-sector-handles";
 import { startSprinklerHold } from "./sprinkler-hold";
 import { rotationHandleLayout } from "@/lib/cad/edit-handle-layout";
 import { installSingleFingerPan } from "./single-finger-pan";
 import { bindMaterialPattern } from "./material-pattern";
+import { bindHippedMaterial } from "./hipped-material";
 import { textureFrame, texturePatternAttrs, validTextureSize } from "@/lib/cad/texture-mapping";
 import { Trash2, Pencil } from "lucide-react";
 import { toast } from "sonner";
-import { defaultNozzle, itemById, stripAtPressure } from "@/lib/hunter-catalog";
+import { catalogForHead, equipmentAppearance, defaultNozzle, itemById, stripAtPressure, supportsArc } from "@/lib/equipment-catalog";
 import { tr } from "@/lib/i18n";
 import { exclusionPolygons, lawnPolygon, sampleGrid } from "@/lib/coverage";
 import {
@@ -81,6 +111,7 @@ import { useProject, drawingForEditing as drawingOrMigrate } from "@/lib/project
 import type { DesignCanvasProps } from "@/components/designer/canvas-types";
 import { cadSnap } from "@/lib/cad/snap";
 import {layoutDimensions} from "@/lib/cad/dimension-layout";
+import {dimensionScaleResolver,dimensionTextScale} from "@/lib/cad/dimension-appearance";
 import {dimensionsInBox,updateDimensionSelection,irrigationSelectionTarget} from "@/lib/cad/dimension-selection";
 import { pathTouchesBox } from "@/lib/cad/workspace-selection";
 import { isDimensionGeometrySnap, snapDimension } from "@/lib/cad/dimension-snap";
@@ -129,7 +160,7 @@ import {
   hexagonFromBounds,
   triangleMetrics,
 } from "@/lib/cad/engine";
-import { ALL_FACE_TEXTURES, REGION_FILL, layerForType, type CadDrawing } from "@/lib/cad/types";
+import { REGION_FILL, layerForType, type CadDrawing } from "@/lib/cad/types";
 
 const DRAW_CREATE = new Set([
   "line",
@@ -145,6 +176,7 @@ const DRAW_CREATE = new Set([
   "freehand",
   "spline",
   "path",
+  "cut",
   "text",
 ]);
 
@@ -403,8 +435,11 @@ const PREVIEW_EMPTY_IDS: string[] = [];
 const PREVIEW_EMPTY_DRAFT = { points: [], scaleA: null, scaleB: null, measureA: null };
 
 export function DesignCanvas({
+  automaticHeadPanelHost,
+  engineeringBase = false,
   previewView,
   multiSelect = false,
+  shortcutsDisabled = false,
   onSelectionClear,
   mobile = false,
   onScalePair,
@@ -417,6 +452,7 @@ export function DesignCanvas({
   const wrapRef = useRef<HTMLDivElement>(null);
   const hoverRaf = useRef(0);
   const pendingHover = useRef<ReturnType<typeof cadSnap> | null>(null);
+  const manualTracker=useRef<ManualPlacementTracker|null>(null);
   const [pickList, setPickList] = useState<{
     x: number;
     y: number;
@@ -486,6 +522,7 @@ export function DesignCanvas({
   const draggedHeadNode = useRef<Konva.Node | null>(null);
   useEffect(() => {
     const clearDrop = () => {
+      setPlacementFocus('head-move',null);
       setHeadMovePreview(null);
       overCatalog.current = false;
       document.querySelectorAll("[data-head-drop]").forEach(el => el.removeAttribute("data-head-drop"));
@@ -508,6 +545,7 @@ export function DesignCanvas({
   const startCadHold = (id: string) => {
     if (pinch.current) return;
     const st = useProject.getState();
+    if(!canvasWorkspace(st.workspaceSection).editPlan)return;
     if (st.tool === "place" || st.tool === "measure" || st.tool === "scale" || multiSelect) return;
     const face = drawingOrMigrate(st.project).faces[id];
     const drawingSegment = st.tool === "draw" && st.drawSub === "line" && face?.segment;
@@ -559,46 +597,70 @@ export function DesignCanvas({
     }
   };
 
-  const project = useProject((s) => s.project);
+  const storedProject = useProject((s) => s.project);
+  const cornerPreview = useCornerRounding(s => s.preview);
+  const project = useMemo(() => !readOnly && cornerPreview?.base === storedProject ? {...storedProject, drawing:cornerPreview.drawing, polygons:toPolygons(cornerPreview.drawing)} : storedProject, [storedProject, cornerPreview, readOnly]);
   const workspaceSection = useProject(s => s.workspaceSection);
+  const hideLandscapeInIrrigation=useProject(s=>s.hideLandscapeInIrrigation);
+  const workspace=canvasWorkspace(workspaceSection,readOnly,hideLandscapeInIrrigation);
+  const placementFocus=usePlacementFocus(s=>!readOnly&&s.focus&&['plant-move','landscape-move'].includes(s.focus.owner)?s.focus:null);
   const diagnosticProject = useMemo(() => headMovePreview ? { ...project,
     heads: project.heads.map(head => head.id === headMovePreview.id ? { ...head, x: headMovePreview.x, y: headMovePreview.y } : head),
   } : project, [project, headMovePreview]);
   const diagnosticFocus = useDiagnosticFocus(s => s.focus);
-  const diagnosticIssue = readOnly ? null : focusedIssue(diagnosticFocus, project);
+  const diagnosticIssue = readOnly || !workspace.showIrrigation ? null : focusedIssue(diagnosticFocus, project);
   const diagnosticHeads = diagnosticIssue ? project.heads.filter(h => diagnosticIssue.headIds.includes(h.id) && !h.hidden && !h.locked &&
-    !project.zones.some(z => z.id === h.zone && (z.hidden || z.locked)) && itemById(h.catalogId) && itemById(h.catalogId)?.coverageKind !== "point") : [];
+    !project.zones.some(z => z.id === h.zone && (z.hidden || z.locked)) && catalogForHead(h) && catalogForHead(h)?.coverageKind !== "point") : [];
   const tool = useProject((s) => readOnly ? null : s.tool);
   const drawSub = useProject((s) => readOnly || s.tool !== "draw" ? "none" : s.drawSub);
   const measureSub = useProject((s) => s.measureSub);
   const px = useProject((s) => previewView?.px ?? s.pxPerMeter);
   const panX = useProject((s) => previewView?.panX ?? s.panX);
   const panY = useProject((s) => previewView?.panY ?? s.panY);
-  const showCoverage = useProject((s) => s.showCoverage);
-  const simulationActive = useProject(s => !readOnly && s.workspaceSection === "irrigation" && s.simulationProjectId === s.project.id);
+  const coverageProjectId = useCoverageDisplay(s => s.projectId);
+  const paintMask = useMemo(() => {
+    if (readOnly || workspaceSection==='plan') return [];
+    const issue = liveDiagnosticIssue(diagnosticFocus, diagnosticProject);
+    const coverage = issue || workspaceSection === 'irrigation' && coverageProjectId === project.id
+      ? diagnosticCoverage(diagnosticProject, headMovePreview ? project : undefined, headMovePreview?.id) : null;
+    return hatchedPaintMask(coverage, issue?.area);
+  }, [readOnly, diagnosticFocus, diagnosticProject, workspaceSection, coverageProjectId, project, headMovePreview]);
+  const figurePaintClip = useMemo(() => outsideHatchesClip(paintMask, px, panX, panY), [paintMask, px, panX, panY]);
+  const showCoverage = useProject((s) => !engineeringBase && s.showCoverage);
+  const simulationActive = useProject(s => !readOnly && isIrrigationSimulation(s));
+  const simulationLawn=useMemo(()=>simulationActive?simulationLawnSurface(project):[],[simulationActive,project]);
   const showGrid = useProject((s) => !readOnly && s.showGrid);
   const textHidden = useProject((s) => s.textHidden);
   const showLabels = useProject((s) => s.showLabels);
-  const selectedId = useProject((s) => readOnly ? null : s.selectedId);
+  const showHeadLabels = useProject(s => !engineeringBase && (readOnly ? s.showLabels : equipmentLabelsVisible(s)));
+  const selectedId = useProject((s) => readOnly || simulationActive ? null : s.selectedId);
   const zoneFocus = useProject(s => !readOnly && s.workspaceSection === "irrigation" && s.rightMode === "zone" ? s.zoneFocus : null);
-  const sectorEditId = useProject(s => readOnly ? null : s.sectorEditId);
-  const selectedIds = useProject((s) => readOnly ? PREVIEW_EMPTY_IDS : s.selectedIds);
-  const selectedPolyId = useProject((s) => readOnly ? null : s.selectedPolyId);
-  const selectedPlantId = useProject(s => readOnly ? null : s.selectedPlantId);
+  const sectorEditId = useProject(s => readOnly || simulationActive ? null : s.sectorEditId);
+  const selectedIds = useProject((s) => readOnly || simulationActive ? PREVIEW_EMPTY_IDS : s.selectedIds);
+  const selectedPolyId = useProject((s) => workspace.editPlan ? s.selectedPolyId : null);
+  const plantUiScale = useProject(s=>UI_SCALE[s.uiSize]);
+  const selectedPlantId = useProject(s => readOnly || simulationActive ? null : s.selectedPlantId);
   const pendingCatalogPlant = useProject(s => readOnly ? null : s.pendingCatalogPlant);
+  const selectedLandscapeId=useProject(s=>readOnly||simulationActive?null:s.selectedLandscapeId);
+  const pendingLandscapeObject=useProject(s=>readOnly?null:s.pendingLandscapeObject);
+  const catalogPlacementArmed=useProject(s=>s.catalogPlacementArmed);
+  const manualPlacement=!readOnly&&workspaceSection==='irrigation'&&tool==='place'&&catalogPlacementArmed;
+  const pendingPlacement=pendingCatalogPlant||pendingLandscapeObject||manualPlacement;
+  const [landscapePreview,setLandscapePreview]=useState<LandscapeObject|null>(null);
+  const [landscapeGuides,setLandscapeGuides]=useState<LandscapeAlignmentGuide[]>([]);
   const [plantPreview, setPlantPreview] = useState<CadPlant | null>(null);
-  const selectedEdgeId = useProject((s) => readOnly ? null : s.selectedEdgeId);
-  const cadEditId = useProject((s) => readOnly ? null : s.cadEditId);
+  const selectedEdgeId = useProject((s) => workspace.editPlan ? s.selectedEdgeId : null);
+  const cadEditId = useProject((s) => workspace.editPlan ? s.cadEditId : null);
   const catalogOpen = useProject((s) => !readOnly && s.catalogOpen);
-  const selectedPolyIds = useProject((s) => readOnly ? PREVIEW_EMPTY_IDS : s.selectedPolyIds);
-  const draft = useProject((s) => readOnly ? PREVIEW_EMPTY_DRAFT : s.draft);
+  const selectedPolyIds = useProject((s) => workspace.editPlan ? s.selectedPolyIds : PREVIEW_EMPTY_IDS);
+  const draft = useProject((s) => readOnly || simulationActive ? PREVIEW_EMPTY_DRAFT : s.draft);
   const fitNonce = useProject((s) => s.fitNonce);
   const measureUnit = useProject((s) => s.measureUnit);
   const areaUnit = useProject((s) => s.units.area);
   const dimensionFormat = useProject(s => `${s.units.length}|${s.numberFormat}|${s.decimals}`);
   const spaceDown = useProject((s) => s.spaceDown);
   const gridStep = useProject((s) => s.gridStep);
-  const analysis = useProject((s) => !readOnly && s.analysis);
+  const analysis = useProject((s) => !readOnly && !simulationActive && workspace.showIrrigation && s.analysis);
   const snapOn = useProject((s) => s.snapOn);
   const snapGridOn = useProject((s) => s.snapGridOn);
   const locale = useProject((s) => s.locale);
@@ -611,14 +673,14 @@ export function DesignCanvas({
     if (sectorEditId && !sectorHead) useProject.getState().setSectorEdit(null);
   }, [sectorEditId, sectorHead?.id, tool, drawSub, multiSelect]);
   useEffect(() => {
-    if (!sectorEditId) return;
+    if (!sectorEditId || shortcutsDisabled) return;
     const escape = (e: KeyboardEvent) => {
       if (e.key === "Escape" && !editDrag.current) useProject.getState().setSectorEdit(null);
     };
     window.addEventListener("keydown", escape);
     return () => window.removeEventListener("keydown", escape);
-  }, [sectorEditId]);
-  const dimensionsVisible = cadDrawing.layers?.dims?.visible !== false;
+  }, [sectorEditId, shortcutsDisabled]);
+  const dimensionsVisible = !simulationActive && cadDrawing.layers?.dims?.visible !== false;
   useEffect(()=>{
     if(!dimensionsVisible) {
       setSelectedDimension(null);setDimensionEditor(null);setDimensionPreview(null);dimensionInteraction.current=false;
@@ -635,7 +697,7 @@ export function DesignCanvas({
     editedFace &&
     !editedFaceIsDrawnCurve &&
     !editedFace.nodeEdit &&
-    (editedFace.circle ||
+    (editedFace.rounding || editedFace.circle ||
       editedFace.ellipse ||
       (editedFace.rect && rectMetaMatchesFace(cadDrawing, cadEditId)) ||
       isTriangleFace(cadDrawing, cadEditId) ||
@@ -717,6 +779,7 @@ export function DesignCanvas({
     ro.observe(el);
     if (readOnly) return () => ro.disconnect();
     const onTouchStart = (e: TouchEvent) => {
+      if(useProject.getState().tool==='auto-head')return;
       if (e.touches.length < 2) return;
       if (cadHold.current) {
         window.clearTimeout(cadHold.current);
@@ -741,6 +804,7 @@ export function DesignCanvas({
         };
     };
     const onTouchMove = (e: TouchEvent) => {
+      if(useProject.getState().tool==='auto-head')return;
       e.preventDefault();
       if (e.touches.length < 2) return;
       if (cadHold.current) {
@@ -814,31 +878,36 @@ export function DesignCanvas({
     im.src = src;
   }, [project.underlay?.src, project.underlay?.visible]);
 
+  const neededMaterialIds=JSON.stringify([...new Set([
+    ...project.polygons.filter(poly=>!poly.hidden).map(poly=>poly.fill),
+    ...(simulationActive?["texture:lawn-parterre"]:[]),
+  ].filter((fill):fill is string=>Boolean(fill?.startsWith("texture:"))))].sort());
   useEffect(() => {
-    let active = true;
-    const loaded: Record<string, HTMLImageElement> = {};
-    for (const texture of ALL_FACE_TEXTURES) {
-      const image = new window.Image();
-      image.onload = async () => {
-        if (!active) return;
-        const prepared = await seamlessPattern(image);
-        if (!active) return;
-        loaded[texture.id] = prepared;
-        setTextureImages({ ...loaded });
-      };
-      image.src = texture.src;
+    let active=true;
+    for(const fill of JSON.parse(neededMaterialIds) as string[]) {
+      loadMaterialImage(fill).then(image=>{
+        if(active)setTextureImages(current=>current[fill]===image?current:{...current,[fill]:image});
+      }).catch(()=>{/* The canvas keeps its solid material fallback. */});
     }
-    return () => { active = false; };
-  }, []);
+    return ()=>{active=false;};
+  },[neededMaterialIds]);
 
   useEffect(() => {
-    onExportReady?.(() => {
+    onExportReady?.(async () => {
+      await Promise.all([ensurePlantImages(drawingOrMigrate(useProject.getState().project)),ensureLandscapeImages(drawingOrMigrate(useProject.getState().project))]);
+      await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));
       const stage = stageRef.current;
       if (!stage) return null;
+      const landscapeControls=[...stage.find('.landscape-controls'),...stage.find('.landscape-selection')];
+      const visible=landscapeControls.map(node=>node.visible());
       try {
+        landscapeControls.forEach(node=>node.visible(false));
+        stage.draw();
         return stage.toDataURL({ pixelRatio: 2, mimeType: "image/png" });
       } catch {
         return null;
+      } finally {
+        landscapeControls.forEach((node,i)=>node.visible(visible[i]!));stage.draw();
       }
     });
   }, [onExportReady]);
@@ -870,7 +939,11 @@ export function DesignCanvas({
   ) => {
     if (extra?.free) return { pt: p, kind: "none" as const };
     const st = useProject.getState();
-    const d = drawingOrMigrate(st.project);
+    const d = canvasSnapDrawing(drawingOrMigrate(st.project),st.workspaceSection);
+    if(st.tool === "draw" && st.drawSub === "cut") return snapCutPoint(d,p,{
+      snapOn:st.snapOn,snapGridOn:st.snapGridOn,gridStep:st.gridStep,pxPerMeter:st.pxPerMeter,
+      pointerType:pointerType.current,closeTo:st.draft.points.length>=3?st.draft.points[0]:null,
+    });
     if ((st.tool === "draw" && st.drawSub === "dim") || (st.tool === "measure" && st.measureSub === "measure")) {
       return snapDimension(p,d,{pxPerMeter:st.pxPerMeter,pointerType:pointerType.current,
         snapOn:st.snapOn,snapGridOn:st.snapGridOn,gridStep:st.gridStep});
@@ -886,7 +959,7 @@ export function DesignCanvas({
       canCloseDraft
         ? st.draft.points[0]!
         : null;
-    const snapped = cadSnap(p, d, {
+    const snapOptions = {
       pxPerMeter: st.pxPerMeter,
       pointerType: pointerType.current,
       snapOn: st.snapOn,
@@ -896,8 +969,10 @@ export function DesignCanvas({
       gridStep: st.gridStep,
       angleFrom: extra?.angleFrom,
       closeTo,
-      heads: visibleProjectHeads(st.project).map((h) => ({ x: h.x, y: h.y })),
-    });
+      heads: canvasWorkspace(st.workspaceSection).showIrrigation?visibleProjectHeads(st.project).map((h) => ({ x: h.x, y: h.y })):[],
+    };
+    const snapped = st.tool==='draw'&&st.drawSub==='polygon'
+      ?snapPointDraft(p,d,st.draft.points,snapOptions):cadSnap(p,d,snapOptions);
     if (st.tool === "draw" && st.drawSub === "spline" && st.snapOn && snapped.kind !== "close") {
       const endpoint = nearestOpenSplineEndpoint(
         d,
@@ -920,9 +995,9 @@ export function DesignCanvas({
 
   const snapPolygonDraftPoint = (p: Pt, pointIndex: number) => {
     const st = useProject.getState();
-    const d = drawingOrMigrate(st.project);
+    const d = canvasSnapDrawing(drawingOrMigrate(st.project),st.workspaceSection);
     if (pointIndex === st.draft.points.length - 1 && pointIndex >= 3 && dist(p, st.draft.points[0]!) * st.pxPerMeter <= 18) return {pt: st.draft.points[0]!, kind: "close"};
-    return cadSnap(p, d, {
+    return snapPointDraft(p, d, st.draft.points.filter((_,i)=>i!==pointIndex), {
       pxPerMeter: st.pxPerMeter,
       pointerType: pointerType.current,
       snapOn: st.snapOn,
@@ -932,13 +1007,19 @@ export function DesignCanvas({
       gridStep: st.gridStep,
       angleFrom: pointIndex > 0 ? st.draft.points[pointIndex - 1] ?? null : null,
       closeTo: pointIndex === st.draft.points.length - 1 && pointIndex >= 3 ? st.draft.points[0]! : null,
-      heads: visibleProjectHeads(st.project).map((h) => ({ x: h.x, y: h.y })),
+      heads: canvasWorkspace(st.workspaceSection).showIrrigation?visibleProjectHeads(st.project).map((h) => ({ x: h.x, y: h.y })):[],
     });
   };
 
   const trackPointer = (p: Pt) => {
     if(segmentHoldStart.current && dist(p,segmentHoldStart.current)*useProject.getState().pxPerMeter>8) endCadHold();
     const st = useProject.getState();
+    if(st.tool==='place'&&st.catalogPlacementArmed){
+      if(st.spaceDown||pinchGestureActive.current||midDown.current||mousePan.current)manualTracker.current?.clear();
+      else manualTracker.current?.move({x:p.x*st.pxPerMeter+st.panX,y:p.y*st.pxPerMeter+st.panY},pointerType.current==='touch');
+      return {pt:p,kind:'none' as const};
+    }
+    if(st.tool === "draw" && st.drawSub === "cut" && cutFigures(drawingOrMigrate(st.project),st.draft.points)) return {pt:p,kind:"none" as const};
     const stretching =
       st.tool === "draw" &&
       st.draft.points.length >= 1 &&
@@ -976,12 +1057,16 @@ export function DesignCanvas({
     const st = useProject.getState();
     const tolerance = Math.max(0.12, 24 / Math.max(st.pxPerMeter, 1));
     const boundary = nearestFaceBoundary(drawingOrMigrate(st.project), point, tolerance);
+    setHoverPt(boundary?.pt ?? point);
+    setSnapHit(null);
     freehandOn.current = true;
     skipClick.current = true;
     st.setDraftPoints([{ ...(boundary?.pt ?? point) }]);
   };
 
   const appendFreehand = (point: Pt) => {
+    setHoverPt(point);
+    setSnapHit(null);
     const st = useProject.getState();
     const previous = st.draft.points[st.draft.points.length - 1];
     const minimum = Math.max(0.006, 1.4 / Math.max(st.pxPerMeter, 1));
@@ -1174,6 +1259,14 @@ export function DesignCanvas({
     setSnapHit(null);
   }, ["redoPoints" in draft ? draft.redoPoints : undefined]);
 
+  const clearEmptyCanvasSelection = () => {
+    const st=useProject.getState();
+    st.selectHead(null);
+    st.selectPoly(null);
+    st.setCadEdit(null);
+    setSelectedNote(null);setSelectedDimension(null);setDimensionEditor(null);setPickList(null);
+    onSelectionClear?.();
+  };
   const handleClick = (e: Konva.KonvaEventObject<MouseEvent | TouchEvent>) => {
     if (textEditor || e.target.name() === "drawing-annotation") return;
     if (segmentEditTapConsumed.current) return;
@@ -1199,10 +1292,19 @@ export function DesignCanvas({
         ? st.draft.points[st.draft.points.length - 1]!
         : null;
     const p = st.tool === "scale" ? raw : applySnap(raw, { angleFrom, free: stretching }).pt;
+    if (!readOnly&&st.workspaceSection==='irrigation'&&st.tool==='place'&&st.catalogPlacementArmed&&st.placeId) {
+      st.placeHead(raw,st.placeId);return;
+    }
+    if (st.pendingLandscapeObject) { st.placeLandscape(raw,'touches' in e.evt?'touch':'mouse'); return; }
     if (st.pendingCatalogPlant) { st.placeCatalogPlant(raw); return; }
+    const emptyTarget=e.target.name()==='bg'||e.target===e.target.getStage();
+    const selecting=!st.tool||st.tool==='move'||st.tool==='place'||st.tool==='draw'&&st.drawSub==='none';
+    if(!readOnly && emptyTarget && selecting && st.workspaceSection!=='plan'){
+      clearEmptyCanvasSelection();return;
+    }
     if (st.tool === "place") {
-      if (e.target.name() === "bg") { st.selectHead(null); st.selectPoly(null); }
-      return; // Library objects are added only by a completed drag.
+      if (emptyTarget) clearEmptyCanvasSelection();
+      return; // Opening the library alone never arms placement.
     }
 
     if (st.tool === "scale") {
@@ -1245,6 +1347,7 @@ export function DesignCanvas({
       }
       return;
     }
+    if (!canvasWorkspace(st.workspaceSection).editPlan && (!st.tool||st.tool==='move'||st.tool==='draw'&&st.drawSub==='none')) return;
     if (!st.cadEditId && (!st.tool || st.tool === "move" || multiSelect || (st.tool === "draw" && st.drawSub === "none"))) {
       const d = drawingOrMigrate(st.project);
       const hit = pickOpenPathAt(d, p, 18 / px);
@@ -1282,6 +1385,14 @@ export function DesignCanvas({
         }
         return;
       }
+      if (drawSub === "cut") {
+        const points=st.draft.points;
+        if(cutFigures(drawingOrMigrate(st.project),points)) return;
+        if(points.length>=4 && dist(points[0]!,points.at(-1)!)<1e-8) return;
+        if(points.length && dist(points.at(-1)!,p)<1e-8) return;
+        st.addDraftPoint(p);
+        return;
+      }
       if (drawSub === "freehand") return;
       if (drawSub === "fill") {
         st.fillRegionAt(p);
@@ -1316,7 +1427,7 @@ export function DesignCanvas({
         return;
       }
       if (drawSub === "text") {
-        setTextEditor({id:uid("txt"),x:p.x,y:p.y,text:"",size:0.35,fontFamily:"osifont",color:appearance.ink});
+        setTextEditor({id:uid("txt"),x:p.x,y:p.y,text:"",size:0.35,fontFamily:"PT Mono",color:appearance.ink});
         return;
       }
       if (drawSub === "trim") {
@@ -1710,21 +1821,21 @@ export function DesignCanvas({
   const selecting = !tool || tool === "move" ||
     (tool === "draw" && (!drawSub || drawSub === "none" || !!cadEditId ||
       (drawSub === "line" && (selectedDraftSegment != null || !!selectedEdgeId))));
-  const dimensionInteractive = !readOnly && !pendingCatalogPlant && !spaceDown && cadDrawing.layers?.dims?.locked !== true &&
+  const dimensionInteractive = !readOnly && !simulationActive && (workspace.editPlan||workspaceSection==='irrigation') && !pendingPlacement && !spaceDown && cadDrawing.layers?.dims?.locked !== true &&
     (multiSelect || selecting || tool === "place" || (tool === "draw" && drawSub === "dim"));
   const selectDimension = (id: string, additive=false) => {
     const st = useProject.getState();
-    if (st.selectedId || st.selectedPolyId || st.selectedPlantId) st.selectHead(null);
+    if (st.selectedId || st.selectedPolyId || st.selectedPlantId || st.selectedLandscapeId) st.selectHead(null);
     setSelectedNote(null);
     dimensionInteraction.current = true;
     setSelectedDimensions(previous=>updateDimensionSelection(previous,[id],additive,additive));
   };
   useEffect(() => {
-    if (!dimensionInteractive || selectedId || selectedPlantId || selectedPolyId) {
+    if (!dimensionInteractive || selectedId || selectedPlantId || selectedLandscapeId || selectedPolyId) {
       setSelectedDimension(null); setDimensionEditor(null); setDimensionPreview(null);
       dimensionInteraction.current = false;
     }
-  }, [dimensionInteractive, selectedId, selectedPlantId, selectedPolyId]);
+  }, [dimensionInteractive, selectedId, selectedPlantId, selectedLandscapeId, selectedPolyId]);
   useEffect(()=>{setSelectedDimension(null);dimensionInteraction.current=false;},[project.id,workspaceSection]);
   useEffect(()=>{dimensionInteraction.current=selectedDimensions.length>0;},[selectedDimensions]);
   const deleteSelectedDimensions=()=>{
@@ -1734,7 +1845,7 @@ export function DesignCanvas({
     setSelectedDimension(null);setDimensionEditor(null);setDimensionPreview(null);dimensionInteraction.current=false;
   };
   useEffect(()=>{
-    if(!selectedDimensions.length||!dimensionInteractive||!dimensionsVisible)return;
+    if(shortcutsDisabled||!selectedDimensions.length||!dimensionInteractive||!dimensionsVisible)return;
     const key=(event:KeyboardEvent)=>{
       if((event.target as HTMLElement)?.closest?.("input,textarea,select,[contenteditable=true],[role=dialog]"))return;
       if(event.key=== "Escape"){setSelectedDimension(null);dimensionInteraction.current=false;return;}
@@ -1743,38 +1854,57 @@ export function DesignCanvas({
     };
     window.addEventListener("keydown",key,true);
     return ()=>window.removeEventListener("keydown",key,true);
-  },[selectedDimensions,dimensionInteractive,dimensionsVisible]);
-  const showLinePointer = !readOnly && tool === "draw" && (drawSub === "line" || drawSub === "dim") &&
+  },[selectedDimensions,dimensionInteractive,dimensionsVisible,shortcutsDisabled]);
+  const cutReady=useMemo(()=>tool === "draw" && drawSub === "cut" && Boolean(cutFigures(cadDrawing,draft.points)),[tool,drawSub,cadDrawing,draft.points]);
+  const showLinePointer = !readOnly && tool === "draw" && (drawSub === "line" || drawSub === "dim" || (drawSub === "cut" && !cutReady)) &&
     !selecting && !spaceDown && !pinching && !!hoverPt;
   const showFirstPoint = !readOnly && tool === "draw" && (drawSub === "polygon" || drawSub === "spline") &&
     !draft.points.length && !selecting && !spaceDown && !pinching && !!hoverPt;
   const showTapePointer = !readOnly && tool === "measure" && measureSub === "measure" &&
     !spaceDown && !pinching && !!hoverPt;
-  const cursor = readOnly ? "default" : draggingHead ? "none" : mousePanning || pressedHead ? "grabbing" : spaceDown ? "grab"
-    : pendingCatalogPlant ? "crosshair"
+  const cursor = readOnly || cutReady ? "default" : draggingHead ? "none" : mousePanning || pressedHead ? "grabbing" : spaceDown ? "grab"
+     : manualPlacement ? "none" : pendingPlacement ? "crosshair"
     : hoveredHead && !multiSelect && (selecting || tool === "place") ? "pointer"
     : selecting || tool === "place" ? "default"
     : showLinePointer || showFirstPoint || showTapePointer ? "none"
     : tool === "draw" && drawSub === "text" ? "text" : "crosshair";
   const lawn = lawnPolygon(project.polygons);
-  const holes = exclusionPolygons(project.polygons);
-  const visibleHeads = useMemo(()=>visibleProjectHeads(project),[project.heads,project.zones]);
-  const labelScale=px/36;
-  const renderedDimensions=useMemo(()=>layoutDimensions(drawingOrMigrate(diagnosticProject),px,
-    readOnly?undefined:workspaceSection==='irrigation'?'irrigation':'plan',length=>formatLenU(length,useProject.getState().units.length),dimensionPreview),
-    [diagnosticProject,px,workspaceSection,readOnly,dimensionPreview,locale,dimensionFormat]);
+  const holes = [...exclusionPolygons(project.polygons),...landscapeExclusions(cadDrawing)];
+  const visibleHeads = useMemo(()=>!engineeringBase&&workspace.showIrrigation?visibleProjectHeads(project):[],[project.heads,project.zones,workspace.showIrrigation,engineeringBase]);
+  const labelScale=.85*px/36;
+  const dimensionSource=useMemo(()=>{const d=drawingOrMigrate(diagnosticProject);return engineeringBase?engineeringPlanDrawing(d):d;},[diagnosticProject,engineeringBase]);
+  const dimensionScale=useMemo(()=>dimensionScaleResolver(dimensionSource),[dimensionSource]);
+  const dimensionMode=engineeringBase?'plan':readOnly?undefined:workspaceSection==='irrigation'?'irrigation':'plan';
+  const renderedDimensions=useMemo(()=>layoutDimensions(dimensionSource,px,
+    dimensionMode,length=>formatLenU(length,useProject.getState().units.length),dimensionPreview),
+    [dimensionSource,px,dimensionMode,dimensionPreview,locale,dimensionFormat]);
   const labelsInside=dimensionsVisible&&renderedDimensions.size>0;
   const headLabels=useMemo(()=>new Map(visibleHeads.map(h=>{
-    const item=itemById(h.catalogId),nz=h.nozzleId?item?.nozzles.find(n=>n.id===h.nozzleId):item&&defaultNozzle(item);
+    const item=catalogForHead(h),nz=h.nozzleId?item?.nozzles.find(n=>n.id===h.nozzleId):item&&defaultNozzle(item);
     const model=item?catalogName(item):h.catalogId;
     const text=item?.type==='rotor'&&nz?`${model} (${nozzleName(nz)})`:model;
     return [h.id,equipmentLabel(text,labelScale,labelsInside)];
   })),[visibleHeads,labelScale,labelsInside]);
-  const labelPositions=useMemo(()=>showLabels?layoutHeadLabels(visibleHeads.map(h=>({
+  const labelPositions=useMemo(()=>showHeadLabels?layoutHeadLabels(visibleHeads.map(h=>({
     ...h,...(headMovePreview?.id===h.id?headMovePreview:{}),width:headLabels.get(h.id)!.width,height:headLabels.get(h.id)!.height,
     radius:13*labelScale,priority:h.id===selectedId||selectedIds.includes(h.id),
   })),cadDrawing,px,dimensionsVisible?{boxes:[...renderedDimensions.values()].map(o=>o.box),segments:[...renderedDimensions.values()].flatMap(o=>o.segments)}:{boxes:[],segments:[]},labelsInside):new Map<string,Pt>(),
-    [showLabels,visibleHeads,headMovePreview,headLabels,labelScale,selectedId,selectedIds,cadDrawing,px,dimensionsVisible,renderedDimensions,labelsInside]);
+    [showHeadLabels,visibleHeads,headMovePreview,headLabels,labelScale,selectedId,selectedIds,cadDrawing,px,dimensionsVisible,renderedDimensions,labelsInside]);
+  const annotationRequests=useMemo(()=>{
+    const requests:InkRequest[]=[];
+    if(dimensionsVisible)for(const row of renderedDimensions.values())requests.push({id:`dim:${row.id}`,x:row.text.x+panX,y:row.text.y+panY,dark:'#626b75'});
+    if(showHeadLabels)for(const h of visibleHeads){
+      const label=headLabels.get(h.id),position=labelPositions.get(h.id),point=headMovePreview?.id===h.id?headMovePreview:h;
+      if(label&&position)requests.push({id:`head:${h.id}`,x:point.x*px+panX+position.x+label.width/2,y:point.y*px+panY+position.y+label.height/2,dark:'#626b75'});
+    }
+    return requests;
+  },[dimensionsVisible,renderedDimensions,panX,panY,showHeadLabels,visibleHeads,headLabels,labelPositions,headMovePreview,px]);
+  const annotationInk=useMemo(()=>{
+    const heads=visibleHeads.map(h=>headMovePreview?.id===h.id?{...h,...headMovePreview}:h);
+    return Object.fromEntries(annotationRequests.map(request=>[request.id,annotationPaintInk(
+      {x:(request.x-panX)/px,y:(request.y-panY)/px},cadDrawing,heads,showCoverage&&!simulationActive,paintMask)]));
+  },[annotationRequests,cadDrawing,visibleHeads,headMovePreview,showCoverage,simulationActive,paintMask,panX,panY,px]);
+
   const heat =
     analysis === "cover" || analysis === "overlap"
       ? lawn && visibleHeads.length <= 48
@@ -1785,6 +1915,7 @@ export function DesignCanvas({
   const rubberFrom =
     tool === "draw" &&
     draft.points.length &&
+    !(drawSub === "cut" && (cutReady || (draft.points.length>=4 && dist(draft.points[0]!,draft.points.at(-1)!)<1e-8))) &&
     !(drawSub === "line" && (selectedDraftSegment != null || selectedEdgeId || pinching))
       ? draft.points[draft.points.length - 1]!
       : tool === "scale" && draft.scaleA && !draft.scaleB
@@ -1843,6 +1974,7 @@ export function DesignCanvas({
     pointIndex: number,
     e: Konva.KonvaEventObject<PointerEvent | MouseEvent | TouchEvent>,
   ) => {
+    const originalPoints=useProject.getState().draft.points.map(p=>({...p}));
     const movePoint = (p: Pt) => {
       const snapped = snapPolygonDraftPoint(p, pointIndex);
       const st = useProject.getState();
@@ -1882,13 +2014,18 @@ export function DesignCanvas({
       () => setSnapHit(null),
       () => {
         const st = useProject.getState();
-        if (pointIndex !== 0 || st.drawSub !== "polygon" || st.draft.points.length < 3) return;
+        if (st.drawSub !== "polygon") return;
+        // Restore pre-tap coordinates: touch jitter must not move a revisited vertex.
+        st.setDraftPoints(originalPoints);
+        skipClick.current=true;
+        window.setTimeout(()=>{skipClick.current=false;},500);
         pendingHover.current = null;
         if (hoverRaf.current) cancelAnimationFrame(hoverRaf.current);
         hoverRaf.current = 0;
         setHoverPt(null);
         setSnapHit(null);
-        st.closePolygon();
+        setActiveDraftPolygonPoint(null);
+        st.tapPolygonDraftPoint(pointIndex);
       },
     );
   };
@@ -1951,6 +2088,7 @@ export function DesignCanvas({
     const st = useProject.getState();
     if (
       st.tool !== "draw" ||
+      st.drawSub === "cut" ||
       st.drawSub === "polygon" ||
       st.drawSub === "line" ||
       st.drawSub === "spline"
@@ -1959,18 +2097,24 @@ export function DesignCanvas({
     if (st.draft.points.length >= 2) st.finishOpenDraw();
   };
 
-  const noteEnabled = !readOnly && !cadEditId && !pendingCatalogPlant &&
+  const noteEnabled = !readOnly && !simulationActive &&
+    (workspaceSection === 'plan' || workspaceSection === 'landscape' || workspaceSection === 'irrigation') &&
+    !spaceDown && !pendingPlacement &&
     (!tool || tool === "move" || (tool === "draw" && (drawSub === "none" || drawSub === "text"))) &&
     cadDrawing.layers?.annotations?.locked !== true;
   const beginNote = (tx:CadText, e:Konva.KonvaEventObject<PointerEvent | TouchEvent | MouseEvent>) => {
     if(!noteEnabled || ("touches" in e.evt && e.evt.touches.length>1)) return;
+    e.cancelBubble=true;
+    if(editDrag.current) return;
     let anchor:Pt={x:tx.x,y:tx.y};
     const moved=(p:Pt)=>({x:tx.x+p.x-anchor.x,y:tx.y+p.y-anchor.y});
     bindPointerDrag(e,editDrag,panX,panY,px,
-      p=>{anchor=p;setSelectedNote(tx.id);useProject.getState().selectPoly(null);useProject.getState().selectEdge(null);},
+      p=>{anchor=p;setSelectedDimension(null);setDimensionEditor(null);dimensionInteraction.current=false;setSelectedNote(tx.id);const st=useProject.getState();st.setCadEdit(null);st.selectPoly(null);st.selectEdge(null);onSelectionClear?.();},
       p=>setNotePreview({id:tx.id,...moved(p)}),
       p=>{setNotePreview(null);useProject.getState().moveNote(tx.id,moved(p));},
-      skipClick,pinchGestureActive,()=>setNotePreview(null),()=>setNotePreview(null));
+      skipClick,pinchGestureActive,()=>setNotePreview(null),()=>{
+        setNotePreview(null);setSelectedNote(tx.id);
+      });
   };
   const beginNoteResize = (tx:CadText, corner:number, bounds:{width:number;height:number}, e:Konva.KonvaEventObject<PointerEvent | TouchEvent>) => {
     if(!noteEnabled || ("touches" in e.evt && e.evt.touches.length>1)) return;
@@ -1988,28 +2132,74 @@ export function DesignCanvas({
       if(d.texts?.[tx.id]) st.commitDrawing({...d,texts:{...d.texts,[tx.id]:scaled(p)}},null,true);
     },skipClick,pinchGestureActive,()=>setNotePreview(null),()=>setNotePreview(null));
   };
+  const beginLandscapeMove=(o:LandscapeObject,event:Konva.KonvaEventObject<PointerEvent|TouchEvent>)=>{
+    event.cancelBubble=true;
+    if(editDrag.current)return;
+    const st=useProject.getState();if(pendingPlacement||st.spaceDown)return;
+    st.selectLandscape(o.id);
+    if(o.locked||landscapeLayerLocked(cadDrawing,o.category)){event.cancelBubble=true;return;}
+    const start=clientXY(event.evt);
+    bindClientDeltaDrag(event,editDrag,skipClick,(dx,dy,commit)=>{
+      if(commit||(!dx&&!dy))setPlacementFocus('landscape-move',null);
+      if(landscapeReturnDrop(start,dx,dy,commit)){setLandscapePreview(null);setLandscapeGuides([]);setSnapHit(null);useProject.getState().removeLandscape(o.id);return;}
+      const state=useProject.getState(),drawing=drawingOrMigrate(state.project),hit=snapLandscapePoint({x:o.x+dx/px,y:o.y+dy/px},o,drawing,{pxPerMeter:px,snapOn:state.snapOn,snapGridOn:state.snapOn&&state.snapGridOn,gridStep:state.gridStep,heads:visibleProjectHeads(state.project),origin:o,pointerType:'pointerType' in event.evt?event.evt.pointerType:'touch'});
+      if(commit){setLandscapePreview(null);setLandscapeGuides([]);setSnapHit(null);state.updateLandscape(o.id,hit.pt);}
+      else{if(dx||dy)setPlacementFocus('landscape-move',hit.pt,o.id,hit.kind);setLandscapePreview(dx||dy?{...o,...hit.pt}:null);setSnapHit(dx||dy?hit:null);setLandscapeGuides(state.snapOn&&(dx||dy)?landscapeAlignmentGuides(hit.pt,o,drawing,px,o):[]);}
+    },pinchGestureActive,()=>{setLandscapePreview(null);setLandscapeGuides([]);setSnapHit(null);});
+  };
+  const beginLandscapeResize=(o:LandscapeObject,axis:'both'|'length'|'width',event:Konva.KonvaEventObject<PointerEvent|TouchEvent>)=>{
+    if(o.locked||landscapeLayerLocked(cadDrawing,o.category))return;
+    bindClientDeltaDrag(event,editDrag,skipClick,(dx,dy,commit)=>{
+      const size=resizeLandscapeObject(o,dx,dy,px,axis);
+      if(commit){setLandscapePreview(null);useProject.getState().updateLandscape(o.id,size);}else setLandscapePreview(dx||dy?{...o,...size}:null);
+    },pinchGestureActive,()=>setLandscapePreview(null));
+  };
+  const beginLandscapeRotate=(o:LandscapeObject,event:Konva.KonvaEventObject<PointerEvent|TouchEvent>)=>{
+    if(o.locked||landscapeLayerLocked(cadDrawing,o.category))return;
+    bindClientDeltaDrag(event,editDrag,skipClick,(dx,dy,commit)=>{
+      const delta=objectToLocal(o,{x:o.x+dx,y:o.y+dy});
+      const rotation=snapLandscapeRotation(o.rotation+Math.atan2(delta.x,o.width*px/2+30*plantUiScale-delta.y)*180/Math.PI,useProject.getState().snapOn);
+      if(commit){setLandscapePreview(null);useProject.getState().updateLandscape(o.id,{rotation});}else setLandscapePreview(dx||dy?{...o,rotation}:null);
+    },pinchGestureActive,()=>setLandscapePreview(null));
+  };
+
   const beginPlantMove = (plant: CadPlant, event: Konva.KonvaEventObject<PointerEvent | TouchEvent>) => {
+    event.cancelBubble=true;
+    if(editDrag.current)return;
     const st = useProject.getState();
-    if (st.pendingCatalogPlant || st.spaceDown || (st.tool && st.tool !== "move" && !(st.tool === "draw" && st.drawSub === "none"))) return;
-    if (plant.locked || cadDrawing.layers?.plants?.locked) { event.cancelBubble = true; st.selectPlant(plant.id); return; }
+    if (st.pendingCatalogPlant || st.pendingLandscapeObject || st.spaceDown || (st.tool && st.tool !== "move" && !(st.tool === "draw" && st.drawSub === "none"))) return;
+    if (plant.locked || plantLayerLocked(cadDrawing,plant.kind)) { event.cancelBubble = true; st.selectPlant(plant.id); return; }
     st.selectPlant(plant.id);
+    const start=clientXY(event.evt);
     bindClientDeltaDrag(event, editDrag, skipClick, (dx, dy, commit) => {
+      if(commit||(!dx&&!dy))setPlacementFocus('plant-move',null);
+      if(landscapeReturnDrop(start,dx,dy,commit)){setPlantPreview(null);setSnapHit(null);useProject.getState().removePlant(plant.id);return;}
       const state = useProject.getState();
       const hit = cadSnap({x:plant.x+dx/px,y:plant.y+dy/px}, drawingOrMigrate(state.project), {
         pxPerMeter: px, snapOn: state.snapOn, snapGridOn: state.snapOn && state.snapGridOn,
         gridStep: state.gridStep, heads: visibleProjectHeads(state.project), excludePlant: plant.id,
       });
       if (commit) { setPlantPreview(null); setSnapHit(null); state.updatePlant(plant.id, hit.pt); }
-      else { setPlantPreview(dx || dy ? {...plant,...hit.pt} : null); setSnapHit(dx || dy ? hit : null); }
+      else { if(dx||dy)setPlacementFocus('plant-move',hit.pt,plant.id,hit.kind);setPlantPreview(dx || dy ? {...plant,...hit.pt} : null); setSnapHit(dx || dy ? hit : null); }
     }, pinchGestureActive, () => {setPlantPreview(null); useProject.getState().selectPlant(plant.id);});
   };
   const beginPlantResize = (plant: CadPlant, event: Konva.KonvaEventObject<PointerEvent | TouchEvent>) => {
+    if (plant.locked || plantLayerLocked(cadDrawing,plant.kind)) return;
     bindClientDeltaDrag(event, editDrag, skipClick, (dx, dy, commit) => {
-      const r = Math.max(0.025, Math.min(50, Math.hypot(plant.r+dx/px, dy/px)));
+      const r = resizedPlantRadius(plant.r,dx,dy,px);
       if (commit) { setPlantPreview(null); useProject.getState().updatePlant(plant.id, {r}); }
       else setPlantPreview(dx || dy ? {...plant,r} : null);
     }, pinchGestureActive, () => setPlantPreview(null));
   };
+  const beginPlantRotate = (plant: CadPlant, event: Konva.KonvaEventObject<PointerEvent | TouchEvent>) => {
+    if (plant.locked || plantLayerLocked(cadDrawing,plant.kind)) return;
+    bindClientDeltaDrag(event, editDrag, skipClick, (dx,dy,commit) => {
+      const rotation=normalizedPlantRotation((plant.rotation??0) + Math.atan2(dx,plant.r*px+30*plantUiScale-dy)*180/Math.PI);
+      if(commit){setPlantPreview(null);useProject.getState().updatePlant(plant.id,{rotation});}
+      else setPlantPreview(dx||dy?{...plant,rotation}:null);
+    },pinchGestureActive,()=>setPlantPreview(null));
+  };
+
   const selectedText = selectedNote ? cadDrawing.texts?.[selectedNote] : undefined;
 
   return (
@@ -2017,6 +2207,7 @@ export function DesignCanvas({
       ref={wrapRef}
       data-design-canvas="1"
       onPointerDownCapture={event => {
+        if(tool==='auto-head')return;
         if (!readOnly && event.pointerType === "mouse" && (event.button === 2 || event.button === 1) && (event.target as HTMLElement).tagName === "CANVAS") {
           event.preventDefault(); event.stopPropagation(); endCadHold();
           const st = useProject.getState();
@@ -2029,6 +2220,18 @@ export function DesignCanvas({
           applyDimensionLabel();event.preventDefault();event.stopPropagation();return;
         }
         beginCanvasContact();
+        if(noteEnabled && event.button===0 && (event.target as HTMLElement).tagName==="CANVAS") {
+          const rect=event.currentTarget.getBoundingClientRect();
+          const hit=canvasNoteHit(stageRef.current,{x:event.clientX-rect.left,y:event.clientY-rect.top});
+          const note=hit&&cadDrawing.texts?.[hit.id];
+          if(hit&&note){
+            if(!hit.resize){
+              event.stopPropagation();
+              beginNote(note,{evt:event.nativeEvent,target:hit.node,cancelBubble:false} as Konva.KonvaEventObject<PointerEvent>);
+            }
+            return; // Text and its handles take priority over the selection marquee.
+          }
+        }
         if (!multiSelect || readOnly || spaceDown || event.button !== 0 || (event.target as HTMLElement).tagName !== "CANVAS") return;
         if (!event.isPrimary) {
           box.current = null; setBoxNow(null); marqueePointer.current = null;
@@ -2052,7 +2255,7 @@ export function DesignCanvas({
         if (event.pointerType === "mouse") {
           pointerType.current = "mouse";
           const st = useProject.getState();
-          const canHover = !readOnly && st.catalogOpen && !multiSelect && !st.pendingCatalogPlant && !st.spaceDown &&
+          const canHover = !readOnly && st.catalogOpen && !multiSelect && !st.pendingCatalogPlant && !st.pendingLandscapeObject && !st.spaceDown &&
             (selecting || tool === "place") && (event.target as HTMLElement).tagName === "CANVAS";
           const point = worldOfPointer(event.clientX, event.clientY, event.currentTarget, st.panX, st.panY, st.pxPerMeter);
           setHoveredHead(canHover ? headAtPointer(st.project.heads, st.project.zones, point, st.pxPerMeter) : null);
@@ -2080,7 +2283,7 @@ export function DesignCanvas({
         if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
         skipClick.current = true;
         const tap=Math.hypot(b.x-a.x,b.y-a.y)*st.pxPerMeter < 5;
-        const dimensionIds=dimensionsVisible ? dimensionsInBox(d,a,b,st.pxPerMeter,st.workspaceSection==='irrigation'?'irrigation':'plan',length=>formatLenU(length,st.units.length),tap) : [];
+        const dimensionIds=dimensionsVisible&&dimensionInteractive ? dimensionsInBox(d,a,b,st.pxPerMeter,st.workspaceSection==='irrigation'?'irrigation':'plan',length=>formatLenU(length,st.units.length),tap) : [];
         const target=irrigationSelectionTarget(st.workspaceSection==='irrigation'
           ? st.project.heads.filter(h=>isHeadVisible(h,st.project.zones)) : [],dimensionIds,a,b,st.pxPerMeter,tap);
         if(target?.kind==='heads'){
@@ -2095,6 +2298,13 @@ export function DesignCanvas({
           return;
         }
         setSelectedDimension(null);dimensionInteraction.current=false;
+        if(!canvasWorkspace(st.workspaceSection).editPlan){
+          if(tap){
+            const node=stageRef.current?.getIntersection({x:b.x*st.pxPerMeter+st.panX,y:b.y*st.pxPerMeter+st.panY});
+            if(!node||node.name()==='bg')clearEmptyCanvasSelection();
+          }
+          return;
+        }
         if (tap) {
           const hit = pickOpenPathAt(d,b,14/st.pxPerMeter) ?? pickFaceAt(d,b);
           if (hit) st.selectPoly(hit,true);
@@ -2123,6 +2333,7 @@ export function DesignCanvas({
         if (!ids.length && !event.shiftKey && !event.metaKey && !event.ctrlKey) st.selectHeads([]);
       }}
       onPointerCancelCapture={event => {
+        manualTracker.current?.clear();
         setPressedHead(null);
         if (mousePan.current?.pointerId === event.pointerId) { mousePan.current = null; setMousePanning(false); }
         if (marqueePointer.current !== event.pointerId) return;
@@ -2141,16 +2352,17 @@ export function DesignCanvas({
       {textEditor && <TextEditor key={textEditor.id} note={textEditor} onClose={()=>setTextEditor(null)} onSave={note=>{
         const st=useProject.getState(),d=drawingOrMigrate(st.project);
         st.commitDrawing({...d,texts:{...d.texts,[note.id]:note}},null,true);
-        st.deactivateDrawing();setSelectedNote(null);setTextEditor(null);
+        if(st.workspaceSection === 'plan') st.setCadMode("select");
+        st.selectPoly(null);setSelectedNote(note.id);setTextEditor(null);
       }}/>}
-      {selectedText && !textHidden && noteEnabled && !textEditor && !pinching && cadDrawing.layers?.annotations?.visible !== false &&
-        <div className="note-canvas-actions" onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()}>
+      {selectedText && !textHidden && noteEnabled && !textEditor && !pinching && cadDrawing.layers?.annotations?.visible !== false && createPortal(
+        <section className="note-canvas-actions" onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()}>
           <button type="button" onClick={()=>setTextEditor(selectedText)}><Pencil size={16}/>{tr(locale,"edit")}</button>
           <button type="button" className="text-danger" onClick={()=>{
             const st=useProject.getState(),d=drawingOrMigrate(st.project),texts={...d.texts};
             delete texts[selectedText.id];st.commitDrawing({...d,texts},null,true);setSelectedNote(null);
           }}><Trash2 size={16}/>{tr(locale,"delete")}</button>
-        </div>}
+        </section>,document.querySelector("[data-note-actions]") ?? wrapRef.current!)}
       {draggingHead && createPortal(<div ref={trashPreview} className="head-return-trash" aria-hidden="true"><Trash2 size={30} strokeWidth={1.25}/></div>, document.body)}
       <Stage
         ref={stageRef}
@@ -2164,6 +2376,7 @@ export function DesignCanvas({
         onDblTap={finishOpenDrawFromDoubleTap}
         onMouseEnter={(e) => trackPointer(toWorld(e.target.getStage()))}
         onMouseDown={(e) => {
+          if(editDrag.current){e.cancelBubble=true;return;}
           pointerType.current = "mouse";
           if(e.evt.button===0 && !spaceDown) startSegmentHold(toWorld(e.target.getStage()));
           if (e.evt.button === 0 && !spaceDown && tool === "draw" && drawSub === "freehand") {
@@ -2179,7 +2392,7 @@ export function DesignCanvas({
             startPan(e.target.getStage());
             return;
           }
-          if (!tool && !pendingCatalogPlant && e.target.name() === "bg") {
+          if (!tool && !pendingPlacement && e.target.name() === "bg") {
             box.current = toWorld(e.target.getStage());
             setBoxNow(box.current);
           }
@@ -2207,6 +2420,7 @@ export function DesignCanvas({
           finishFreehand();
         }}
         onMouseLeave={() => {
+          manualTracker.current?.clear();
           endCadHold();
           panDrag.current = null;
           pendingHover.current = null;
@@ -2235,7 +2449,7 @@ export function DesignCanvas({
           pointerType.current = "touch";
           const wrap = wrapRef.current;
           const touches = e.evt.touches;
-          if(touches.length===1) startSegmentHold(toWorld(e.target.getStage()));
+          if(touches.length===1) { startSegmentHold(toWorld(e.target.getStage())); if(manualPlacement)trackPointer(toWorld(e.target.getStage())); }
           else endCadHold();
           if (wrap && touches.length >= 2) {
             e.evt.preventDefault();
@@ -2336,21 +2550,24 @@ export function DesignCanvas({
           {project.polygons.map((poly) =>
             poly.type === "line" && (poly.id === selectedEdgeId || poly.id === selectedDraftEdgeId)
               ? null
-              : <RenderedGeom
+              : <CoverageGeom
+                  clip={figurePaintClip}
+                  materialOpacity={engineeringBase?ENGINEERING_BACKGROUND.materials:1}
                   key={poly.id}
                   poly={poly} sx={sx} sy={sy} px={px}
                   selectedPolyId={selectedPolyId} selectedPolyIds={selectedPolyIds}
                   fillOf={(k) => REGION_FILL[k as keyof typeof REGION_FILL] ?? "#ddd"}
                   startHold={startCadHold} endHold={endCadHold}
-                  passThrough={DRAW_CREATE.has(drawSub) || tool === "place" || tool === "measure" || tool === "scale" || !!pendingCatalogPlant}
+                  passThrough={!workspace.editPlan || DRAW_CREATE.has(drawSub) || tool === "place" || tool === "measure" || tool === "scale" || !!pendingPlacement}
                   previewPoints={liveCadPath?.faceId === poly.id && cadEditId === poly.id ? liveCadPath.points : null}
                   appearance={appearance} textureImages={textureImages}
                 />,
           )}
+          {simulationActive&&<SimulationLawn surface={simulationLawn} image={textureImages["texture:lawn-parterre"]} px={px} panX={panX} panY={panY}/>}
           {Object.values(cadDrawing.faces).map((face) => {
             if (!face.spline?.closed || face.hidden ||
               cadDrawing.layers?.[layerForType(face.type)]?.visible === false ||
-              cadDrawing.layers?.dims?.visible === false ||
+              !dimensionsVisible ||
               (cadEditId && layerFaceIds(cadDrawing, cadEditId).includes(face.id))) return null;
             const center = faceCentroid(cadDrawing, face.id);
             return <Text
@@ -2362,11 +2579,15 @@ export function DesignCanvas({
               fillAfterStrokeEnabled listening={false}
             />;
           })}
-          {cadDrawing.layers?.plants?.visible !== false && Object.values(cadDrawing.plants ?? {}).map(original => {
+          {workspace.showLandscape&&Object.values(cadDrawing.landscapeObjects??{}).filter(o=>landscapeLayerVisible(cadDrawing,o.category,o)).map(original=>{
+            const object=landscapePreview?.id===original.id?landscapePreview:original;
+            return <Group key={object.id} opacity={engineeringBase?(object.category==='furniture'?ENGINEERING_BACKGROUND.furniture:ENGINEERING_BACKGROUND.decoration):1}><LandscapeObjectGlyph object={object} x={sx(object.x)} y={sy(object.y)} px={px} uiScale={plantUiScale} selected={selectedLandscapeId===object.id} locked={landscapeLayerLocked(cadDrawing,object.category)} interactive={!readOnly&&!pendingPlacement&&!spaceDown&&(!tool||tool==='move'||tool==='draw'&&drawSub==='none')} onBegin={e=>beginLandscapeMove(original,e)} onResize={(axis,e)=>beginLandscapeResize(original,axis,e)} onRotate={e=>beginLandscapeRotate(original,e)}/></Group>;
+          })}
+          {workspace.showLandscape&&cadDrawing.layers?.plants?.visible !== false && Object.values(cadDrawing.plants ?? {}).filter(p=>plantLayerVisible(cadDrawing,p.kind,p)).map(original => {
             const plant = plantPreview?.id === original.id ? plantPreview : original;
-            return <PlantGlyph key={plant.id} plant={plant} x={sx(plant.x)} y={sy(plant.y)} px={px}
-              selected={selectedPlantId === plant.id} showLabel={showLabels} interactive={!readOnly && !pendingCatalogPlant && !spaceDown && (!tool || tool === "move" || tool === "draw" && drawSub === "none")}
-              onBegin={e => beginPlantMove(original,e)} onResize={e => beginPlantResize(original,e)} />;
+            return <Group key={plant.id} opacity={engineeringBase?ENGINEERING_BACKGROUND.plants:1}><PlantGlyph plant={plant} x={sx(plant.x)} y={sy(plant.y)} px={px}
+              uiScale={plantUiScale} locked={plantLayerLocked(cadDrawing,plant.kind)} selected={selectedPlantId === plant.id} showLabel={showLabels} interactive={!readOnly && !pendingPlacement && !spaceDown && (!tool || tool === "move" || tool === "draw" && drawSub === "none")}
+              onBegin={e => beginPlantMove(original,e)} onResize={e => beginPlantResize(original,e)} onRotate={e=>beginPlantRotate(original,e)} /></Group>;
           })}
           {heat.map((c, i) => (
             <Rect
@@ -2394,106 +2615,29 @@ export function DesignCanvas({
               />
             ),
           )}
-          {displayedDimensions(drawingOrMigrate(diagnosticProject), readOnly ? undefined : workspaceSection === 'irrigation' ? 'irrigation' : 'plan').map((dim) => {
-            if (!dimensionsVisible) return null;
-            const dimensionDrawing = drawingOrMigrate(diagnosticProject);
-            const { a, b } = resolveDim(dimensionDrawing, dimensionDrawing.dims?.[dim.id] ?? dim);
-            const dx = b.x - a.x;
-            const dy = b.y - a.y;
-            const len = Math.hypot(dx, dy) || 1;
-            const nx = -dy / len;
-            const ny = dx / len;
-            const o = dimensionPreview?.id === dim.id ? dimensionPreview.offset : dim.offset;
-            const active = selectedDimensions.includes(dim.id);
-            const textPlacement=renderedDimensions.get(dim.id)?.text;
-            const dimensionColor = active ? "#1689e8" : "#7b8490";
-            const interactive = dimensionInteractive;
-            const a2 = { x: a.x + nx * o, y: a.y + ny * o };
-            const b2 = { x: b.x + nx * o, y: b.y + ny * o };
-            const mx = (a2.x + b2.x) / 2;
-            const my = (a2.y + b2.y) / 2;
-            return (
-              <Group
-                key={dim.id}
-                listening={interactive}
-                draggable={interactive && !multiSelect && selectedDimensions.length<=1}
-                onMouseDown={e=>{e.cancelBubble=true;selectDimension(dim.id,e.evt.shiftKey||e.evt.ctrlKey||e.evt.metaKey);}}
-                onTouchStart={e=>{e.cancelBubble=true;selectDimension(dim.id);}}
-                onClick={e=>{e.cancelBubble=true;}}
-                onTap={e=>{e.cancelBubble=true;}}
-                dragBoundFunc={pos=>{
-                  const mid={x:(a.x+b.x)/2,y:(a.y+b.y)/2};
-                  const raw=((pos.x-panX)/px-mid.x)*nx+((pos.y-panY)/px-mid.y)*ny;
-                  const offset=snapDimensionOffset(drawingOrMigrate(useProject.getState().project),dim.id,raw,px);
-                  return {x:sx(mid.x+offset*nx),y:sy(mid.y+offset*ny)};
-                }}
-                onDragStart={e=>{e.cancelBubble=true;setDimensionEditor(null);selectDimension(dim.id);editDrag.current=true;}}
-                onDragMove={e=>{
-                  const delta=((e.target.x()-panX)/px-(a.x+b.x)/2)*nx+((e.target.y()-panY)/px-(a.y+b.y)/2)*ny;
-                  setDimensionPreview({id:dim.id,offset:delta});
-                }}
-                x={sx(mx)}
-                y={sy(my)}
-                onDragEnd={(e) => {
-                  e.cancelBubble=true;editDrag.current=false;skipClick.current=true;
-                  const p = { x: (e.target.x() - panX) / px, y: (e.target.y() - panY) / px };
-                  const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
-                  useProject
-                    .getState()
-                    .setDimOffset(dim.id, (p.x - mid.x) * nx + (p.y - mid.y) * ny);
-                  setDimensionPreview(null);
-                }}
-              >
-                <Line
-                  points={[
-                    sx(a.x) - sx(mx),
-                    sy(a.y) - sy(my),
-                    sx(a2.x) - sx(mx),
-                    sy(a2.y) - sy(my),
-                  ]}
-                  stroke={dimensionColor}
-                  strokeWidth={0.8}
-                />
-                <Line
-                  points={[
-                    sx(b.x) - sx(mx),
-                    sy(b.y) - sy(my),
-                    sx(b2.x) - sx(mx),
-                    sy(b2.y) - sy(my),
-                  ]}
-                  stroke={dimensionColor}
-                  strokeWidth={0.8}
-                />
-                <DimensionLine a={{x:sx(a2.x)-sx(mx),y:sy(a2.y)-sy(my)}}
-                  b={{x:sx(b2.x)-sx(mx),y:sy(b2.y)-sy(my)}}
-                  label={dim.label ?? formatLenU(len,useProject.getState().units.length)} color={dimensionColor} selected={active}
-                  visualScale={px/36} offset={o} textPlacement={textPlacement?{...textPlacement,x:textPlacement.x-mx*px,y:textPlacement.y-my*px}:undefined} hideLabel={dimensionEditor?.id===dim.id}
-                  onEdit={interactive && !multiSelect ? event=>{
-                    if(event.shiftKey||event.ctrlKey||event.metaKey)return;
-                    selectDimension(dim.id);
-                    setDimensionEditor({id:dim.id,value:dim.label ?? formatLenU(len,useProject.getState().units.length)});
-                  }:undefined}/>
-              </Group>
-            );
-          })}
           {(readOnly || workspaceSection === 'irrigation' || simulationActive) &&
             headPaintOrder(visibleHeads, [...selectedIds,...(selectedId?[selectedId]:[]),...(diagnosticIssue?.headIds??[])],
               !simulationActive && zoneFocus?.projectId === project.id ? zoneFocus.headId : null)
               .map((h) => {
-                const item = itemById(h.catalogId);
+                const item = catalogForHead(h);
                 const selected = h.id === selectedId || selectedIds.includes(h.id);
-                const symbolScale = headSymbolScale(px);
-                const symbolRadius = (selected ? 13 : 11) * symbolScale;
+                // A normal marker can cover the entire 0.3 m micro-stream
+                // pattern. Shrink only its paint in simulation, keeping the
+                // true throw and the independently sized pointer hit target.
+                const baseSymbolScale = headSymbolScale(px);
+                const symbolScale = simulationActive && item?.type === 'bubbler' && item.coverageKind === 'streams' && h.r > 0
+                  ? Math.min(baseSymbolScale, h.r * px * .25 / HEAD_SYMBOL_RADIUS) : baseSymbolScale;
+                const symbolRadius = (selected ? 13 : HEAD_SYMBOL_RADIUS) * symbolScale;
+                const special=specialFootprint(h)?.flatMap(p=>[p.x*px,p.y*px]);
                 const rPx = h.r * px;
                 const strip = item && stripAtPressure(item, h.designPressure);
-                const nz = h.nozzleId ? item?.nozzles.find((n) => n.id === h.nozzleId) : item && defaultNozzle(item);
-                const rotorColor = nz?.color ?? item?.color ?? "#6b7280";
+                const rotorColor = equipmentAppearance(item,h.nozzleId).color;
                 const grabR =
                   item?.type === "rotor" || item?.family === "st" || item?.family === "golf"
                     ? 48
                     : 36;
                 const canDrag =
-                  !readOnly && !spaceDown && !multiSelect && !pendingCatalogPlant &&
+                  !readOnly && !spaceDown && !multiSelect && !pendingPlacement &&
                   !(tool === "draw" && drawSub !== "none") &&
                   tool !== "measure" &&
                   tool !== "scale" &&
@@ -2502,7 +2646,8 @@ export function DesignCanvas({
                 return (
                   <Group
                     key={h.id}
-                    listening={!pendingCatalogPlant && !multiSelect}
+                    placementId={h.id}
+                    listening={!pendingPlacement && !multiSelect}
                     x={sx(h.x)}
                     y={sy(h.y)}
                     draggable={canDrag && sectorEditId !== h.id && !diagnosticHeads.some(head => head.id === h.id)}
@@ -2574,14 +2719,22 @@ export function DesignCanvas({
                         y: (ev.target.y() - panY) / px,
                       };
                       const st = useProject.getState();
-                      const pt = snapSprinklerPoint(world, drawingOrMigrate(st.project), {
+                      const hit = snapSprinklerPoint(world, drawingOrMigrate(st.project), {
                         snapOn: st.snapOn, pxPerMeter: px, pointerType: pointerType.current,
                         snapGridOn:st.snapGridOn,gridStep:st.gridStep,heads:visibleProjectHeads(st.project),excludeHead:h.id,
-                      }).pt;
+                      });
+                      const pt=hit.pt;
                       ev.target.position({ x: sx(pt.x), y: sy(pt.y) });
-                      setHeadMovePreview({ id: h.id, ...pt });
+                      setPlacementFocus('head-move',pt,h.id,hit.kind);
+                      // Konva moves the head immediately. Commit the matching
+                      // coverage and paint masks before its next canvas draw.
+                      const preview = { id: h.id, ...pt };
+                      if (coverageProjectId === project.id || diagnosticIssue) {
+                        flushSync(() => setHeadMovePreview(preview));
+                      } else setHeadMovePreview(preview);
                     }}
-                    onDragEnd={(ev) => {
+                    onDragEnd={(ev) => flushSync(() => {
+                      setPlacementFocus('head-move',null);
                       setHeadMovePreview(null);
                       ev.target.opacity(1); draggedHeadNode.current = null;
                       document.querySelectorAll("[data-head-drop]").forEach(el => el.removeAttribute("data-head-drop"));
@@ -2619,7 +2772,7 @@ export function DesignCanvas({
                       }).pt;
                       ev.target.position({ x: sx(world.x), y: sy(world.y) });
                       useProject.getState().finishMoveHead(h.id, world);
-                    }}
+                    })}
                     onClick={(ev) => {
                       if (ev.evt.button !== 0) return;
                       if ((tool === "draw" && drawSub !== "none") || tool === "measure" || tool === "scale") return;
@@ -2634,9 +2787,10 @@ export function DesignCanvas({
                       useProject.getState().selectHead(h.id);
                     }}
                   >
-                    {showCoverage && !simulationActive && (!item?.strip || strip) && item?.coverageKind !== "point" && (
+                    {showCoverage && !simulationActive && item && operatingGeometryAvailable(item,h) && supportsArc(item,h.arc) && h.r>=0 && (!item.strip || strip) && item.coverageKind !== "point" && item.coverageKind !== "streams" && (
+                      <Group listening={false} clipFunc={sprinklerPaintClip(paintMask, px, h, headMovePreview)}>
                       <Line
-                        points={strip ? stripLocal(strip, h.start, px) : sectorLocal(rPx, h.start, h.arc)}
+                        points={special ?? (strip ? stripLocal(strip, h.start, px) : sectorLocal(rPx, h.start, h.arc))}
                         closed
                         fill={rotorColor}
                         opacity={selected ? 0.55 : 0.32}
@@ -2645,6 +2799,7 @@ export function DesignCanvas({
                         lineJoin="miter"
                         listening={false}
                       />
+                      </Group>
                     )}
                     {simulationActive && <WateringHead head={h} elapsed={wateringTime} px={px}/>}
                     <Circle radius={pointerType.current === "mouse" ? HEAD_MOUSE_HIT_RADIUS : grabR} fill="transparent" />
@@ -2655,10 +2810,10 @@ export function DesignCanvas({
                       strokeWidth={(selected ? 3.2 : 2.6) * symbolScale}
                       listening={false}
                     />
-                    <Circle radius={4 * symbolScale} fill={rotorColor} listening={false} />
+                    <Circle radius={4 * symbolScale} fill={zoneColor(h.zone)} listening={false} />
                     {!simulationActive && zoneFocus?.projectId === project.id && zoneFocus.zoneId === h.zone &&
                       (zoneFocus.headId == null || zoneFocus.headId === h.id) &&
-                      <FocusedHead symbolScale={symbolScale} elapsed={wateringTime} points={item?.coverageKind === "point" ? [] : strip ? stripLocal(strip, h.start, px) : sectorLocal(rPx, h.start, h.arc)}/>}
+                      <FocusedHead symbolScale={symbolScale} elapsed={wateringTime} points={item?.coverageKind === "point"||item?.coverageKind === "streams" ? [] : special ?? (strip ? stripLocal(strip, h.start, px) : sectorLocal(rPx, h.start, h.arc))}/>}
                   </Group>
                 );
               })}
@@ -2666,10 +2821,11 @@ export function DesignCanvas({
           {sectorHead && !diagnosticHeads.some(h => h.id === sectorHead.id) && <HeadSectorHandles key={sectorHead.id} head={sectorHead} px={px} panX={panX} panY={panY}
             editDrag={editDrag} gestureBlocked={pinchGestureActive} skipClick={skipClick}
             onCenterDragChange={active => setPressedHead(active ? sectorHead.id : null)}/>}
+          {workspace.editPlan && <CornerRoundingHandles px={px} panX={panX} panY={panY} editDrag={editDrag} skipClick={skipClick} gestureBlocked={pinchGestureActive}/>}
           {cadEditId && drawingOrMigrate(project).faces[cadEditId]?.layerId && <LayerHandles faceId={cadEditId} px={px} panX={panX} panY={panY} editDrag={editDrag} skipClick={skipClick} gestureBlocked={pinchGestureActive} />}
           {cadEditId && !drawingOrMigrate(project).faces[cadEditId]?.layerId && (
             <>
-              <CadHandles
+              {cadDrawing.faces[cadEditId]?.rounding ? <RoundedFigureHandles faceId={cadEditId} px={px} panX={panX} panY={panY} editDrag={editDrag} skipClick={skipClick} gestureBlocked={pinchGestureActive}/> : <CadHandles
                 faceId={cadEditId}
                 sx={sx}
                 sy={sy}
@@ -2683,7 +2839,7 @@ export function DesignCanvas({
                 onPreviewPath={(points) =>
                   setLiveCadPath(points ? { faceId: cadEditId, points } : null)
                 }
-              />
+              />}
               {drawingOrMigrate(project).faces[cadEditId]?.circle && (
                 <CircleMeasure
                   cx={drawingOrMigrate(project).faces[cadEditId]!.circle!.cx}
@@ -2942,8 +3098,8 @@ export function DesignCanvas({
                 />
               </Group>
             )}
-          {drawSub === "line" && !cadEditId && rubberFrom && rubberTo && dist(rubberFrom,rubberTo)*px > 6 &&
-            <SegmentAlignmentGuides drawing={cadDrawing} point={rubberTo} fixed={rubberFrom} sx={sx} sy={sy} px={px} appearance={appearance}/>}
+          {snapOn&&(drawSub === "line"||drawSub==='polygon') && !cadEditId && rubberFrom && rubberTo && dist(rubberFrom,rubberTo)*px > 6 &&
+            <SegmentAlignmentGuides drawing={cadDrawing} point={rubberTo} fixed={rubberFrom} extraPoints={drawSub==='polygon'?draft.points:undefined} sx={sx} sy={sy} px={px} appearance={appearance}/>}
           {rubberFrom &&
             rubberTo &&
             drawSub !== "line" &&
@@ -3144,7 +3300,7 @@ export function DesignCanvas({
             return <Group listening={false}>
               <Line points={[sx(rubberFrom.x),sy(rubberFrom.y),a.x,a.y]} stroke={appearance.accent} strokeWidth={0.8}/>
               <Line points={[sx(rubberTo.x),sy(rubberTo.y),b.x,b.y]} stroke={appearance.accent} strokeWidth={0.8}/>
-              <DimensionLine a={a} b={b} offset={offset} label={formatLenU(dist(rubberFrom,rubberTo),useProject.getState().units.length)} color={appearance.accent}/>
+              <DimensionLine a={a} b={b} visualScale={dimensionScale(rubberFrom,rubberTo)*px/36} offset={offset} label={formatLenU(dist(rubberFrom,rubberTo),useProject.getState().units.length)} color={appearance.accent}/>
             </Group>;
           })()}
           {rubberFrom &&
@@ -3244,24 +3400,115 @@ export function DesignCanvas({
               listening={false}
             />
           )}
-          {!readOnly && <DiagnosticOverlay project={diagnosticProject} px={px} panX={panX} panY={panY} size={size} canvas={wrapRef}/>}
-          {headMovePreview && <SprinklerGuides point={headMovePreview} px={px} panX={panX} panY={panY} excludeHead={headMovePreview.id}/>}
-          {diagnosticHeads.map(head => <HeadSectorHandles key={`diagnostic-${head.id}`} diagnostic head={head} px={px} panX={panX} panY={panY}
+          {!readOnly&&!simulationActive&&workspace.showIrrigation && <DiagnosticOverlay project={diagnosticProject} px={px} panX={panX} panY={panY} size={size} canvas={wrapRef}/>}
+          {!simulationActive && workspace.showIrrigation && headMovePreview && <SprinklerGuides point={headMovePreview} px={px} panX={panX} panY={panY} excludeHead={headMovePreview.id}/>}
+          {placementFocus&&['plant-move','landscape-move'].includes(placementFocus.owner)&&<Group name="magnifier-placement-overlay" x={sx(placementFocus.point.x)} y={sy(placementFocus.point.y)} listening={false}>
+            <Line points={[-12,0,-3,0]} stroke="white" strokeWidth={3}/><Line points={[3,0,12,0]} stroke="white" strokeWidth={3}/><Line points={[0,-12,0,-3]} stroke="white" strokeWidth={3}/><Line points={[0,3,0,12]} stroke="white" strokeWidth={3}/>
+            <Line points={[-12,0,-3,0]} stroke={appearance.ink} strokeWidth={1}/><Line points={[3,0,12,0]} stroke={appearance.ink} strokeWidth={1}/><Line points={[0,-12,0,-3]} stroke={appearance.ink} strokeWidth={1}/><Line points={[0,3,0,12]} stroke={appearance.ink} strokeWidth={1}/>
+          </Group>}
+          {!readOnly&&snapOn&&landscapePreview&&landscapeGuides.map(g=><Line key={`landscape-align-${g.axis}`} points={[sx(g.anchor.x),sy(g.anchor.y),sx(g.axis==='x'?g.anchor.x:g.point.x),sy(g.axis==='y'?g.anchor.y:g.point.y)]} stroke={g.aligned?appearance.guideAligned:appearance.guideError} strokeWidth={1.25} dash={[6,5]} listening={false}/>)}
+          {!simulationActive && diagnosticHeads.map(head => <HeadSectorHandles key={`diagnostic-${head.id}`} diagnostic head={head} px={px} panX={panX} panY={panY}
             editDrag={editDrag} gestureBlocked={pinchGestureActive} skipClick={skipClick}
             onCenterDragChange={active => setPressedHead(active ? head.id : null)}/>)}
         </Layer>
+        <Layer name="dimension-annotations">
+          {displayedDimensions(dimensionSource, dimensionMode).map((dim) => {
+            if (!dimensionsVisible) return null;
+            const dimensionDrawing = drawingOrMigrate(diagnosticProject);
+            const { a, b } = resolveDim(dimensionDrawing, dimensionDrawing.dims?.[dim.id] ?? dim);
+            const dx = b.x - a.x;
+            const dy = b.y - a.y;
+            const len = Math.hypot(dx, dy) || 1;
+            const nx = -dy / len;
+            const ny = dx / len;
+            const o = dimensionPreview?.id === dim.id ? dimensionPreview.offset : dim.offset;
+            const active = selectedDimensions.includes(dim.id);
+            const textPlacement=renderedDimensions.get(dim.id)?.text;
+            const dimensionColor = engineeringBase ? appearance.ink : active ? "#1689e8" : (annotationInk[`dim:${dim.id}`]??'#626b75');
+            const interactive = dimensionInteractive;
+            const a2 = { x: a.x + nx * o, y: a.y + ny * o };
+            const b2 = { x: b.x + nx * o, y: b.y + ny * o };
+            const mx = (a2.x + b2.x) / 2;
+            const my = (a2.y + b2.y) / 2;
+            return (
+              <Group
+                key={dim.id}
+                listening={interactive}
+                draggable={interactive && !multiSelect && selectedDimensions.length<=1}
+                onMouseDown={e=>{e.cancelBubble=true;selectDimension(dim.id,e.evt.shiftKey||e.evt.ctrlKey||e.evt.metaKey);}}
+                onTouchStart={e=>{e.cancelBubble=true;selectDimension(dim.id);}}
+                onClick={e=>{e.cancelBubble=true;}}
+                onTap={e=>{e.cancelBubble=true;}}
+                dragBoundFunc={pos=>{
+                  const mid={x:(a.x+b.x)/2,y:(a.y+b.y)/2};
+                  const raw=((pos.x-panX)/px-mid.x)*nx+((pos.y-panY)/px-mid.y)*ny;
+                  const offset=snapDimensionOffset(drawingOrMigrate(useProject.getState().project),dim.id,raw,px);
+                  return {x:sx(mid.x+offset*nx),y:sy(mid.y+offset*ny)};
+                }}
+                onDragStart={e=>{e.cancelBubble=true;setDimensionEditor(null);selectDimension(dim.id);editDrag.current=true;}}
+                onDragMove={e=>{
+                  const delta=((e.target.x()-panX)/px-(a.x+b.x)/2)*nx+((e.target.y()-panY)/px-(a.y+b.y)/2)*ny;
+                  setDimensionPreview({id:dim.id,offset:delta});
+                }}
+                x={sx(mx)}
+                y={sy(my)}
+                onDragEnd={(e) => {
+                  e.cancelBubble=true;editDrag.current=false;skipClick.current=true;
+                  const p = { x: (e.target.x() - panX) / px, y: (e.target.y() - panY) / px };
+                  const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+                  useProject
+                    .getState()
+                    .setDimOffset(dim.id, (p.x - mid.x) * nx + (p.y - mid.y) * ny);
+                  setDimensionPreview(null);
+                }}
+              >
+                <Line
+                  points={[
+                    sx(a.x) - sx(mx),
+                    sy(a.y) - sy(my),
+                    sx(a2.x) - sx(mx),
+                    sy(a2.y) - sy(my),
+                  ]}
+                  stroke={dimensionColor}
+                  strokeWidth={0.8}
+                />
+                <Line
+                  points={[
+                    sx(b.x) - sx(mx),
+                    sy(b.y) - sy(my),
+                    sx(b2.x) - sx(mx),
+                    sy(b2.y) - sy(my),
+                  ]}
+                  stroke={dimensionColor}
+                  strokeWidth={0.8}
+                />
+                <DimensionLine a={{x:sx(a2.x)-sx(mx),y:sy(a2.y)-sy(my)}}
+                  b={{x:sx(b2.x)-sx(mx),y:sy(b2.y)-sy(my)}}
+                  label={dim.label ?? formatLenU(len,useProject.getState().units.length)} color={dimensionColor} selected={active}
+                  visualScale={(renderedDimensions.get(dim.id)?.annotationScale??dimensionScale(a,b))*px/36} offset={o} textPlacement={textPlacement?{...textPlacement,x:textPlacement.x-mx*px,y:textPlacement.y-my*px}:undefined} hideLabel={dimensionEditor?.id===dim.id}
+                  onEdit={interactive && !multiSelect ? event=>{
+                    if(event.shiftKey||event.ctrlKey||event.metaKey)return;
+                    selectDimension(dim.id);
+                    setDimensionEditor({id:dim.id,value:dim.label ?? formatLenU(len,useProject.getState().units.length)});
+                  }:undefined}/>
+              </Group>
+            );
+          })}
+        </Layer>
         <Layer listening={false} name="equipment-labels">
-          {showLabels && (readOnly || workspaceSection==='irrigation' || simulationActive) && visibleHeads.map(head=>{
+          {showHeadLabels && (readOnly || workspaceSection==='irrigation' || simulationActive) && visibleHeads.map(head=>{
             const label=headLabels.get(head.id),position=labelPositions.get(head.id);
             if(!label||!position)return null;
             const point=headMovePreview?.id===head.id?headMovePreview:head;
             return <Text key={head.id} x={sx(point.x)+position.x} y={sy(point.y)+position.y}
               width={label.width} text={label.text} lineHeight={12/11} fontSize={11*labelScale}
-              fontFamily="IBM Plex Sans, sans-serif" fill="#18232d" stroke="#fff"
-              strokeWidth={2.5*labelScale} fillAfterStrokeEnabled listening={false}/>;
+              fontFamily="IBM Plex Sans, sans-serif" fill={annotationInk[`head:${head.id}`]??'#626b75'} stroke={annotationInk[`head:${head.id}`]==='#ffffff'?'#18232d':'#fff'}
+              strokeWidth={0.8*labelScale} fillAfterStrokeEnabled listening={false}/>;
           })}
         </Layer>
       </Stage>
+      {manualPlacement && !pinching && !spaceDown && !mousePanning && <ManualSprinklerPlacement trackerRef={manualTracker}/>}
+      {!readOnly && workspaceSection==='irrigation' && tool==='auto-head' && <AutomaticHeadTool key={project.id} panelHost={automaticHeadPanelHost}/>}
       {dimensionsVisible && selectedDimension && dimensionInteractive && cadDrawing.dims?.[selectedDimension] && createPortal(
         <div className="dimension-delete-action" onPointerDown={e=>e.stopPropagation()}>
           <button type="button" className="bulk-delete" onClick={deleteSelectedDimensions}><Trash2 size={18}/>{selectedDimensions.length===1?uiText("deleteDimension"):`${uiText("delete")} (${selectedDimensions.length})`}</button>
@@ -3273,7 +3520,7 @@ export function DesignCanvas({
         const nx=-(b.y-a.y)/length,ny=(b.x-a.x)/length;
         const arranged=renderedDimensions.get(dim.id)?.text;
         const placement=arranged?{...arranged,x:arranged.x+panX,y:arranged.y+panY}:dimensionLabelLayout({x:sx(a.x+nx*dim.offset),y:sy(a.y+ny*dim.offset)},
-          {x:sx(b.x+nx*dim.offset),y:sy(b.y+ny*dim.offset)},dim.offset);
+          {x:sx(b.x+nx*dim.offset),y:sy(b.y+ny*dim.offset)},dim.offset,dimensionTextScale(dimensionScale(a,b)*px/36));
         return <form className="dimension-value-editor" style={{left:placement.x,top:placement.y,transform:`translate(-50%,-50%) rotate(${placement.angle}deg)`}}
           onPointerDown={e=>e.stopPropagation()} onSubmit={e=>{e.preventDefault();applyDimensionLabel();}}>
           <input autoFocus aria-label={uiText("dimensionLabel")} value={dimensionEditor.value}
@@ -3288,7 +3535,7 @@ export function DesignCanvas({
       </div>}
       {!readOnly && <DrawingGuidance wrapRef={wrapRef} hover={hoverPt} />}
       {!readOnly && <CanvasMagnifier stageRef={stageRef} wrapRef={wrapRef} editDrag={editDrag} gestureBlocked={pinchGestureActive} drawingFocus={hoverPt}/>}
-      {pickList && (
+      {workspace.editPlan&&pickList && (
         <div
           className="absolute z-30 min-w-36 rounded-md bg-surface p-1 text-ink shadow-border"
           style={{ left: pickList.x, top: pickList.y }}
@@ -3326,7 +3573,7 @@ function ScaleBar({
   const meters = niceScale(px);
   const width = Math.max(24, meters * px);
   return (
-    <div className="pointer-events-none absolute bottom-2 left-2 flex items-end gap-2 text-[10px] text-ink-soft">
+    <div className="pointer-events-none absolute bottom-2 left-2 flex items-end gap-2 text-[0.625rem] text-ink-soft">
       <div className="flex flex-col items-center">
         <div className="h-1.5 border-x border-b border-ink" style={{ width }} />
         <span className="mt-0.5 tabular">{formatLen(meters, unit)}</span>
@@ -3409,7 +3656,7 @@ function CircleMeasure({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
-  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  const visible = useProject(canvasDimensionsVisible);
   if(!visible) return null;
   if (r < 0.02) return null;
   const rAng = -Math.PI / 6;
@@ -3488,7 +3735,7 @@ function SegmentLengthText({
   outsideWinding?: number;
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
-  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  const visible = useProject(canvasDimensionsVisible);
   if(!visible) return null;
   const length = dist(a, b);
   if (length < 0.002) return null;
@@ -3691,7 +3938,7 @@ function RectMeasure({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
-  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  const visible = useProject(canvasDimensionsVisible);
   if(!visible) return null;
   if (corners.length < 4) return null;
   const a = corners[0]!;
@@ -3828,7 +4075,7 @@ function TriangleMeasure({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
-  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  const visible = useProject(canvasDimensionsVisible);
   if(!visible) return null;
   const layout = triangleLabelLayout(points, px);
   if (!layout || layout.metrics.width < 0.02 || layout.metrics.height < 0.02) return null;
@@ -4096,7 +4343,7 @@ function PathTotalMeasure({
   unit: ReturnType<typeof useProject.getState>["measureUnit"];
 }) {
   const appearance = canvasTheme(useProject((s) => s.themeId));
-  const visible = useProject(s=>s.project.drawing?.layers?.dims?.visible!==false);
+  const visible = useProject(canvasDimensionsVisible);
   if(!visible) return null;
   if (points.length < 2) return null;
   const lengths = points.slice(1).map((point, index) => dist(points[index]!, point));
@@ -4250,8 +4497,8 @@ function bindPointerDrag(
   onTap?: () => void,
   onHold?: () => void,
 ) {
-  if (editDrag.current) return;
   e.cancelBubble = true;
+  if (editDrag.current) return;
   const native = e.evt as PointerEvent & TouchEvent;
   native.preventDefault?.();
   native.stopPropagation?.();
@@ -4260,6 +4507,7 @@ function bindPointerDrag(
   editDrag.current = true;
   onStart(worldFromClient(native, stage, panX, panY, px));
   let holdTimer: number | null = null;
+  let moved = false;
   const clearLongHold = () => {
     if (holdTimer != null) {
       window.clearTimeout(holdTimer);
@@ -4293,12 +4541,13 @@ function bindPointerDrag(
         currentClient.clientY - startClient.clientY,
       ) > 6
     ) {
+      moved = true;
       clearLongHold();
     }
     onMove(worldFromClient(ev, stage, panX, panY, px));
   };
   const end = (ev: PointerEvent | TouchEvent) => {
-    if (gestureBlocked?.current) {
+    if (gestureBlocked?.current || ev.type === "pointercancel" || ev.type === "touchcancel") {
       cancel();
       return;
     }
@@ -4308,7 +4557,7 @@ function bindPointerDrag(
       endClient.clientX - startClient.clientX,
       endClient.clientY - startClient.clientY,
     );
-    if (onTap && tapDistance <= 6) {
+    if (onTap && !moved && tapDistance <= 6) {
       editDrag.current = false;
       onTap();
       return;
@@ -4353,8 +4602,8 @@ function bindClientDeltaDrag(
   gestureBlocked?: { current: boolean },
   onTap?: () => void,
 ) {
-  if (editDrag.current) return;
   e.cancelBubble = true;
+  if (editDrag.current) return;
   const native = e.evt as PointerEvent & TouchEvent;
   if (gestureBlocked?.current || (native.touches?.length ?? 0) >= 2) return;
   native.preventDefault?.();
@@ -6973,14 +7222,23 @@ function polyKindFill(kind: string) {
   return REGION_FILL[kind as keyof typeof REGION_FILL] ?? "#ddd";
 }
 
+function CoverageGeom({clip,materialOpacity=1,...props}: Parameters<typeof RenderedGeom>[0] & {clip: ReturnType<typeof outsideHatchesClip>;materialOpacity?:number}) {
+  if ((!clip&&materialOpacity===1) || props.poly.type === 'guide' || props.poly.type === 'line') return <RenderedGeom {...props}/>;
+  return <>
+    <Group listening={false} clipFunc={clip??undefined} opacity={materialOpacity}><RenderedGeom {...props} paint="fill" passThrough/></Group>
+    <RenderedGeom {...props} paint="outline"/>
+  </>;
+}
+
 function RenderedGeom({ poly, sx, sy, px, selectedPolyId, selectedPolyIds, fillOf, startHold, endHold, passThrough,
-  previewPoints = null, appearance = canvasTheme("crystal"), textureImages = {},
+  previewPoints = null, appearance = canvasTheme("mint"), textureImages = {}, paint = 'all',
 }: {
   poly: Geom; sx: (n: number) => number; sy: (n: number) => number; px: number;
   selectedPolyId: string | null; selectedPolyIds: string[]; fillOf: (k: string) => string;
   startHold: (id: string) => void; endHold: () => void; passThrough: boolean;
   previewPoints?: Pt[] | null; appearance?: ReturnType<typeof canvasTheme>;
   textureImages?: Record<string, HTMLImageElement>;
+  paint?: 'all' | 'fill' | 'outline';
 }) {
   const nodeRef = useRef<Konva.Shape | null>(null);
   const selected = poly.id === selectedPolyId || selectedPolyIds.includes(poly.id);
@@ -6990,27 +7248,32 @@ function RenderedGeom({ poly, sx, sy, px, selectedPolyId, selectedPolyIds, fillO
   const themeId = useProject(s=>s.themeId);
   const themeFill = poly.fill === "theme";
   const fill = themeFill ? themeFigureFill(themeId) : poly.fill ?? fillOf(poly.cadType ?? poly.kind);
-  const texture = textureImages[fill];
+  const texture = paint === 'outline' ? undefined : textureImages[fill];
   const shapeKind = poly.ellipse ? "ellipse" : poly.type;
   const reference = validTextureSize(poly.textureSize) ? poly.textureSize : textureFrame(poly);
   useLayoutEffect(() => {
     if (!texture || !nodeRef.current) return;
-    return bindMaterialPattern(nodeRef.current, fill, reference, px, poly.textureRotation ?? 0);
-  }, [texture, fill, reference.width, reference.height, shapeKind, poly.hidden, px, poly.textureRotation]);
+    return bindMaterialPattern(nodeRef.current, fill, reference, px, poly.textureRotation ?? 0,{x:sx(0),y:sy(0)});
+  });
+  // Hole contours have a React scene function; bind after each commit to its latest version.
+  useLayoutEffect(() => {
+    if (texture && nodeRef.current) return bindHippedMaterial(nodeRef.current, fill);
+  });
   if (poly.hidden) return null;
   const solidFill = fill.startsWith("texture:") ? "#d8d4cc" : fill;
   const frame = textureFrame({ ...poly,
     points: (previewPoints ?? poly.points).map((point) => ({ x: sx(point.x), y: sy(point.y) })),
     radius: poly.radius == null ? undefined : poly.radius * px,
     ellipse: poly.ellipse ? { ...poly.ellipse, rx: poly.ellipse.rx * px, ry: poly.ellipse.ry * px } : undefined });
-  const pattern = texture ? {
+  const pattern = { ...(texture ? {
     fill: undefined,
     fillPriority: "pattern",
     fillPatternImage: texture,
     fillPatternRepeat: "repeat" as const,
     ...texturePatternAttrs(fill, frame, reference, px, poly.textureRotation ?? 0),
-  } : { fill: solidFill, fillPriority: "color" };
+  } : { fill: paint === 'outline' ? 'rgba(0,0,0,0)' : solidFill, fillPriority: "color" }), strokeEnabled: paint !== 'fill' };
   const shapeRef = (node: Konva.Shape | null) => { nodeRef.current = node; };
+  const shapeId = `face-${poly.id}${paint === 'fill' ? '-paint' : ''}`;
   const hold = passThrough
     ? { listening: false as const }
     : {
@@ -7048,7 +7311,7 @@ function RenderedGeom({ poly, sx, sy, px, selectedPolyId, selectedPolyIds, fillO
       <Circle
         key={poly.id}
         ref={shapeRef}
-        id={`face-${poly.id}`}
+        id={shapeId}
         x={sx(poly.points[0].x)}
         y={sy(poly.points[0].y)}
         radius={poly.radius * px}
@@ -7066,7 +7329,7 @@ function RenderedGeom({ poly, sx, sy, px, selectedPolyId, selectedPolyIds, fillO
       <Ellipse
         key={poly.id}
         ref={shapeRef}
-        id={`face-${poly.id}`}
+        id={shapeId}
         x={sx(e.cx)}
         y={sy(e.cy)}
         radiusX={e.rx * px}
@@ -7081,7 +7344,9 @@ function RenderedGeom({ poly, sx, sy, px, selectedPolyId, selectedPolyIds, fillO
     );
   }
   const shownPoints = previewPoints ?? poly.points;
-  if(poly.holes?.length) return <Shape ref={shapeRef} id={`face-${poly.id}`} {...pattern}
+  if(poly.holes?.length) return <Shape ref={shapeRef} id={shapeId} {...pattern}
+    points={shownPoints.flatMap(p => [sx(p.x), sy(p.y)])}
+    materialHoles={poly.holes.map(ring => ring.map(p => ({x:sx(p.x),y:sy(p.y)})))}
     fillRule="evenodd" opacity={themeFill || texture ? 1 : 0.72} stroke={selected ? outline : appearance.ink} strokeWidth={selected ? 2.5 : 2} {...hold}
     sceneFunc={(ctx,shape)=>{
       ctx.beginPath();
@@ -7095,7 +7360,7 @@ function RenderedGeom({ poly, sx, sy, px, selectedPolyId, selectedPolyIds, fillO
     <Line
       key={poly.id}
       ref={shapeRef}
-        id={`face-${poly.id}`}
+        id={shapeId}
       x={0}
       y={0}
       points={shownPoints.flatMap((p) => [sx(p.x), sy(p.y)])}
@@ -7123,39 +7388,6 @@ function ConstructionOrigin({color,closing=false}:{color:string;closing?:boolean
   return <Group listening={false}><Circle radius={6} fill={color}/><Circle radius={11} stroke={closing ? color : "#ff2538"} strokeWidth={1} dash={[2,3]} lineCap="round"/></Group>;
 }
 
-function CanvasNote({note,x,y,px,ink,enabled,selected,onBegin,onSelect,onResize}:{
-  note:CadText;x:number;y:number;px:number;ink:string;enabled:boolean;selected:boolean;
-  onBegin:(e:Konva.KonvaEventObject<PointerEvent|TouchEvent>)=>void;onSelect:()=>void;
-  onResize:(corner:number,bounds:{width:number;height:number},e:Konva.KonvaEventObject<PointerEvent|TouchEvent>)=>void;
-}) {
-  const ref=useRef<Konva.Text>(null);
-  const [bounds,setBounds]=useState({width:1,height:1});
-  const font=note.fontFamily ?? "IBM Plex Sans";
-  const fontSize=Math.max(1,note.size*px);
-  const fontStyle=[note.bold?"bold":"",note.italic?"italic":""].filter(Boolean).join(" ") || "normal";
-  useLayoutEffect(()=>{
-    let alive=true;
-    const measure=()=>{if(alive && ref.current) setBounds({width:Math.max(1,ref.current.width()),height:Math.max(1,ref.current.height())});};
-    measure();
-    document.fonts?.load(`${fontStyle} ${fontSize}px "${font}"`,note.text).then(()=>{
-      if(!alive || !ref.current) return;
-      // Refresh Konva's cached text metrics after the web font becomes available.
-      ref.current.fontFamily("sans-serif");ref.current.fontFamily(font);measure();ref.current.getLayer()?.batchDraw();
-    }).catch(()=>{});
-    return ()=>{alive=false;};
-  },[font,fontSize,fontStyle,note.text]);
-  const select=(e:Konva.KonvaEventObject<MouseEvent|TouchEvent>)=>{e.cancelBubble=true;onSelect();};
-  return <Group x={x} y={y} name="drawing-annotation" listening={enabled}
-    onPointerDown={onBegin} onTouchStart={onBegin} onClick={select} onTap={select} onDblClick={select} onDblTap={select}>
-    <Rect name="drawing-annotation" x={-5} y={-5} width={bounds.width+10} height={bounds.height+10}
-      fill="rgba(0,0,0,0.001)" stroke={selected?EDIT_HANDLE_COLOR:undefined} strokeWidth={1.2} dash={[5,4]} />
-    <Text ref={ref} name="drawing-annotation" text={note.text} fontSize={fontSize} fontFamily={font}
-      fontStyle={fontStyle} textDecoration={note.underline?"underline":""} fill={note.color ?? ink} listening={false}/>
-    {selected && [[-5,-5],[bounds.width+5,-5],[bounds.width+5,bounds.height+5],[-5,bounds.height+5]].map(([hx,hy],i)=><Rect
-      key={i} x={hx!-4} y={hy!-4} width={8} height={8} cornerRadius={1} fill="#fff" stroke={EDIT_HANDLE_COLOR} strokeWidth={1.5} hitStrokeWidth={22}
-      onPointerDown={e=>onResize(i,bounds,e)} onTouchStart={e=>onResize(i,bounds,e)}/>)}
-  </Group>;
-}
 
 function stripLocal(
   s: { w: number; l: number; ox: number; oy: number },

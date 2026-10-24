@@ -20,13 +20,13 @@ test("Hunter: verified catalog, every model placement, flow, pressure and geomet
     const { headCovers } = await server.ssrLoadModule("/src/lib/coverage.ts");
     const { zoneFlow, recommendPump, headWorkingBar, distributeZones } = await server.ssrLoadModule("/src/lib/hydro.ts");
     const { projectToSvg } = await server.ssrLoadModule("/src/lib/export-plan.ts");
-    const catalog = placeableCatalog();
+    const catalog = placeableCatalog().filter(item=>item.manufacturerId==='hunter');
     assert.equal(catalog.length, 104);
     assert.ok(catalog.every((item, i) => !i || catalog[i-1].rMax >= item.rMax), "library order: largest range first");
     const unknown = [];
     for (const item of catalog) {
       assert.match(item.sourceUrl, /^https:\/\/www\.hunterirrigation\.com\//, item.id);
-      assert.equal(item.verifiedOn, "2026-09-18", item.id);
+      assert.equal(item.verifiedOn, "2026-10-10", item.id);
       const defaults = catalogHeadDefaults(item);
       const flow = headFlow({ catalogId: item.id, ...defaults });
       if (flow.lpm == null) unknown.push(item.id);
@@ -58,6 +58,9 @@ test("Hunter: verified catalog, every model placement, flow, pressure and geomet
         const moved = useProject.getState().project.heads[0];
         assert.deepEqual(moved, {...h,x:20,y:30}, `${item.id} move preserves specification`);
         if (!withSite) for (const nozzle of item.nozzles) {
+          // A regulated body deliberately prevents reaching higher table pressures.
+          // Exercise the full nozzle table with a compatible unregulated body.
+          if(item.type!=='rotor'&&!item.id.startsWith('PCB-')&&item.id!=='AFB')useProject.getState().updateHead(h.id,{bodyId:'PRO-SPRAY'});
           const row = performanceAt(item,nozzle.id,nozzle.recommendedBar,defaults.arc)?.row;
           if (!row) continue;
           useProject.getState().updateHead(h.id,{nozzleId:nozzle.id,designPressure:nozzle.recommendedBar,arc:defaults.arc});
@@ -131,6 +134,6 @@ test("Hunter: verified catalog, every model placement, flow, pressure and geomet
     assert.equal(headCovers(point,{x:0,y:0}),false,"unknown flood radius is not a coverage claim");
     assert.equal(headFlow(point).precipMmHr,null);
     const merged=useProject.persist.getOptions().merge({showGrid:false},useProject.getState());
-    assert.equal(merged.showGrid,true,"grid is enabled on every app entry");
+    assert.equal(merged.showGrid,false,"saved grid visibility is preserved on app entry");
   } finally { await server.close(); if (oldStorage) globalThis.localStorage = oldStorage; else delete globalThis.localStorage; if (oldWindow) globalThis.window = oldWindow; else delete globalThis.window; }
 });

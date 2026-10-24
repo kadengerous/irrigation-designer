@@ -31,7 +31,7 @@ test('snap hierarchy, exact diagonal midpoint, distant alignment, red hint and g
  const tilted=engine.addDrawingLines(types.emptyDrawing(),[{x:1,y:2},{x:9,y:8}],'lawn');
  assert.deepEqual(snap.snapSprinklerPoint({x:5.03,y:4.96},tilted,options).pt,{x:5,y:5});
  const off={x:.21,y:.12};assert.deepEqual(snap.snapSprinklerPoint(off,d,{...options,snapOn:false,snapGridOn:false}).pt,off);
- assert.deepEqual(snap.snapSprinklerPoint(off,d,{...options,snapOn:false}).pt,{x:0,y:0});
+ assert.deepEqual(snap.snapSprinklerPoint(off,d,{...options,snapOn:false}).pt,off);
  assert.equal(snap.snapSprinklerPoint({x:40.09,y:310.43},d,options).pt.y,310.43,'grid never drags an edge point');
  const self=snap.snapSprinklerPoint({x:15.12,y:302.3},types.emptyDrawing(),{...options,heads:[head('self',15,302)],excludeHead:'self',snapGridOn:false});
  assert.equal(self.kind,'none');
@@ -109,12 +109,19 @@ test('external save requires destination, cancels cleanly, awaits close and abor
    saveState.useFileSave.getState().request.finish();await pending;
  }finally{globalThis.window=previousWindow;}
 });
-test('desktop save fallback keeps native Save Link As and never starts an ordinary-click download',()=>{
+test('other desktop browsers keep native Save Link As without an ordinary-click download',()=>{
  assert.equal(saveState.fileSaveMode({picker:false,mobile:false,share:true}),'link','desktop sharing must not masquerade as folder selection');
  assert.equal(saveState.fileSaveMode({picker:true,mobile:false,share:true}),'picker');
  assert.equal(saveState.fileSaveMode({picker:false,mobile:true,share:true}),'share');
  let prevented=false;saveState.preventFileNavigation({preventDefault:()=>{prevented=true;}});assert.ok(prevented);
  for(const ext of ['ird','pdf','png','jpeg','xlsx'])assert.equal(saveState.fileWithExtension(`Участок.${ext}`,ext),`Участок.${ext}`);
+});
+test('Mac Safari uses explicit downloads while native pickers and mobile file sharing take priority',()=>{
+ assert.equal(saveState.fileSaveMode({picker:false,mobile:false,share:true,safari:true}),'download','Mac sharing is not a destination picker');
+ assert.equal(saveState.fileSaveMode({picker:false,mobile:false,share:false,safari:true}),'download','Safari does not need file sharing');
+ assert.equal(saveState.fileSaveMode({picker:true,mobile:false,share:true,safari:true}),'picker');
+ assert.equal(saveState.fileSaveMode({picker:false,mobile:true,share:true,safari:true}),'share','iPad desktop mode must still save through Files');
+ assert.equal(saveState.fileSaveMode({picker:false,mobile:true,share:false,safari:true}),'unavailable');
 });
 test('closing an old save request cannot dismiss a newer export or change its file contents',async()=>{
  const first=saveState.requestFileDestination(new Blob(['editable project']),'Сад.ird');
@@ -124,4 +131,30 @@ test('closing an old save request cannot dismiss a newer export or change its fi
  const current=saveState.useFileSave.getState().request;
  assert.equal(current.filename,'План.pdf');assert.equal(await current.blob.text(),'drawing');
  current.finish();await second;assert.equal(saveState.useFileSave.getState().request,null);
+});
+test('download closes its dialog after the click and keeps file bytes available while the browser takes over',async t=>{
+ t.mock.timers.enable({apis:['setTimeout']});
+ const pending=saveState.requestFileDestination(new Blob(['editable project']),'Сад.ird');
+ const request=saveState.useFileSave.getState().request;
+ const link=saveState.createFileDownloadLink(request.blob);
+ link.handoff(request.finish);
+ assert.equal(saveState.useFileSave.getState().request,request,'anchor remains mounted for its default click action');
+ t.mock.timers.tick(0);await pending;
+ assert.equal(saveState.useFileSave.getState().request,null);
+ link.release();link.release();
+ assert.equal(await (await fetch(link.url)).text(),'editable project','unmount must not break the download');
+ t.mock.timers.tick(60_000);
+ await assert.rejects(fetch(link.url));
+});
+test('a cancelled save releases its file without downloading or dismissing a newer save',async t=>{
+ t.mock.timers.enable({apis:['setTimeout']});
+ const link=saveState.createFileDownloadLink(new Blob(['cancelled']));
+ link.release();let closed=false;link.handoff(()=>{closed=true;});
+ t.mock.timers.tick(60_000);assert.equal(closed,false);await assert.rejects(fetch(link.url));
+ const first=saveState.requestFileDestination(new Blob(['first']),'first.ird');
+ const old=saveState.useFileSave.getState().request,oldLink=saveState.createFileDownloadLink(old.blob);
+ oldLink.handoff(old.finish);
+ const next=saveState.requestFileDestination(new Blob(['second']),'second.ird');await first;
+ t.mock.timers.tick(0);assert.equal(saveState.useFileSave.getState().request.filename,'second.ird');
+ saveState.useFileSave.getState().request.finish();await next;oldLink.release();t.mock.timers.tick(60_000);
 });

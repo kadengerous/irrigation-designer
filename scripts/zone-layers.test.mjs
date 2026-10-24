@@ -9,7 +9,7 @@ test("zone and equipment layers preserve engineering data, inheritance and all t
   try {
     const load = path => server.ssrLoadModule(path);
     const { useProject: store, migrateProject } = await load("/src/lib/project-store.ts");
-    const { emptyProject } = await load("/src/lib/project-types.ts");
+    const { emptyProject, zoneColor } = await load("/src/lib/project-types.ts");
     const { itemById } = await load("/src/lib/hunter-catalog.ts");
     const { catalogHeadDefaults } = await load("/src/lib/flow.ts");
     const { zoneFlow, zonePressure, recommendPump } = await load("/src/lib/hydro.ts");
@@ -246,7 +246,8 @@ test("zone and equipment layers preserve engineering data, inheritance and all t
       const expected = { "MP2000-90": "multi", "MP800SR-90": "multi", "MP-LCS-515": "strip-multi",
         "SS-530": "strip-fan", "4A": "fan", "8A-HE": "fan", "5Q": "fan", "2Q": "fan", "I-20": "rotor",
         "I-40-ON": "opposed", "I-80-ON": "opposed", "G-80-B": "opposed", "G-85-B": "rotor",
-        "MSBN-25Q": "streams", "MSBN-25V": "dual", "5-CST-B": "dual", "PCB-25": "flood", "AFB": "flood", "S-8A": "unknown" };
+        "MSBN-25Q": "streams", "MSBN-25V": "dual", "5-CST-B": "dual", "PCB-25": "flood", "AFB": "unknown", "S-8A": "unknown" };
+      // AFB has no published fixed flow/throw, so the audited preview remains unknown.
       for (const [id, kind] of Object.entries(expected)) {
         const head = { ...catalogHeadDefaults(itemById(id)), id, catalogId: id, x: 0, y: 0, zone: 1, start: 37, locked: false };
         const profile = wateringProfile(head);
@@ -268,7 +269,7 @@ test("zone and equipment layers preserve engineering data, inheritance and all t
           assert.equal(wateringDrop(head, 1, 3, profile).angle, wateringDrop(head, 5, 3, profile).angle, "fixed nozzles do not rotate");
         }
       }
-      const head = { ...project.heads[0], catalogId: "MP2000-90", arc: 180 };
+      const head = { ...project.heads[0], ...catalogHeadDefaults(itemById("MP2000-90")), catalogId: "MP2000-90", arc: 180 };
       const profile = wateringProfile(head);
       const angles = new Set(Array.from({ length: 240 }, (_, i) => wateringDrop(head, 3, i, profile)).filter(Boolean).map(p => Math.round(p.angle * 10)));
       assert.ok(angles.size > 4, "MP streams occupy multiple directions simultaneously");
@@ -286,7 +287,7 @@ test("zone and equipment layers preserve engineering data, inheritance and all t
 
     await t.test("spray density is uniform and jets follow the current radius", async () => {
       const { wateringDrop, wateringJets, wateringProfile, wateringParticleCount } = await load("/src/lib/watering-preview.ts");
-      const head = { ...project.heads[0], catalogId: "4A", arc: 180, start: 37, r: 5 };
+      const head = { ...project.heads[0], ...catalogHeadDefaults(itemById("4A")), catalogId: "4A", arc: 180, start: 37 };
       const profile = wateringProfile(head);
       for (const time of [0, .3, 1, 7.9]) {
         const cells = new Set();
@@ -302,9 +303,13 @@ test("zone and equipment layers preserve engineering data, inheritance and all t
         assert.ok(outer.length >= 48, "the last one percent of throw stays populated throughout animation");
       }
       for (const catalogId of ["I-20", "G-80-B", "G-85-B"]) {
+        const validRotor = { ...head, ...catalogHeadDefaults(itemById(catalogId)), catalogId, arc: 360 };
+        const rotorProfile = wateringProfile(validRotor);
+        assert.ok(["rotor", "opposed"].includes(rotorProfile.kind), catalogId);
+        // Isolate low-level drawing scale from the catalog's operating-radius limits.
         for (const r of [.5, 5, 30]) {
-          const rotor = { ...head, catalogId, r, arc: 360 };
-          const jets = wateringJets(rotor, 3, wateringProfile(rotor));
+          const rotor = { ...validRotor, r };
+          const jets = wateringJets(rotor, 3, rotorProfile);
           assert.equal(jets[0].reach, r);
           assert.ok(jets.every(j => j.reach <= r && Number.isFinite(j.angle)));
         }
@@ -338,9 +343,7 @@ test("zone and equipment layers preserve engineering data, inheritance and all t
         assert.match(collapsed, /class="irrigation-layer-name"[^>]*aria-pressed="true"/);
         assert.doesNotMatch(collapsed, /class="irrigation-layer-name"[^>]*aria-expanded/);
         assert.match(collapsed, /class="mobile-icon-button irrigation-layer-toggle"[^>]*aria-expanded="false"/);
-        const item = itemById(project.heads[0].catalogId);
-        const nozzle = item.nozzles.find(n => n.id === project.heads[0].nozzleId);
-        assert.ok(markup.includes(`class="head-nozzle-icon" style="color:${nozzle?.color ?? item.color}"`));
+        assert.ok(markup.includes(`class="head-nozzle-icon" style="color:${zoneColor(project.heads[0].zone)}"`));
         assert.ok(!markup.includes("--head-card-color"));
         assert.doesNotMatch(collapsed, /data-layer-key="head:|class="zone-demand"|class="irrigation-layer-actions"/);
         assert.match(markup, /class="zone-head-grip"/);

@@ -1,4 +1,26 @@
-# Hunter catalog audit — 2026-09-18
+# Hunter catalog audit
+
+## Recheck — 2026-10-10
+
+Rechecked all 104 active emitters: 19 MP items / 222 rows, 62 sprays and bubblers / 400 rows, and 23 rotors / 755 rows. Also checked 58 spray bodies and 35 rotor mounting variants. Current official US tables remain the coherent source for most models; ST-1600 uses its metric table. Separate regional tables have different pressure grids and must not be spliced together. Full evidence, comparison fixtures, source discrepancies and model coverage are in [the audit folder](equipment-sources/hunter-audit-2026-10-10/).
+
+Implemented corrections:
+
+- MP-LCS-515 and MP-RCS-515 are fixed 90° corner strips; retain their rectangular footprint and manual placement.
+- Four Pro HE cells follow the current linked US cutsheet: 8A-HE full-circle flow at 40 psi; 10A-HE triangular precipitation at 270°/20 and 25 psi; 17A-HE triangular precipitation at 360°/40 psi.
+- Documented 25% reduction is relative to the current pressure/sector throw for MP, Adjustable, HE, Fixed, Short Radius and the documented residential rotors. MP800SR's explicit minimum-radius/minimum-flow rows take priority. The marketing minimum radius no longer overrides the physical setting.
+- I-80 nozzles cannot be reduced. Large-rotor families without a verified numerical reduction limit use only their nozzle/pressure throw until that limit is documented. This conservative restriction is not a claim that every such product physically lacks an adjustment screw.
+- Manual controls and automatic selection respect PRS30/PRS40 outlet limits. Saved overpressure is preserved for review and cannot produce a verified flow, animated watering or coverage claim. End-point snapping checks radius against the resulting sector angle.
+- MSBN and 5-CST-B remain illustrative individual streams; they do not credit a filled irrigated sector. MSBN-25V/50V use the discrete published 150 mm pop-up throws (0.6096/0.9144 m). No height-interpolation curve is invented.
+- Archived I-50 metadata were corrected without enabling archived equipment or inventing performance rows. Saved equipment snapshots remain authoritative.
+
+Limits retained explicitly: two I-80-ON/nozzle23 source rows at 50/60 psi conflict with the product's 65 psi minimum and remain unavailable for design. Pro Adjustable 4A/6A sectors below 45° have no supported discharge basis for automatic selection; HE's separately documented matched-precipitation estimate below 90° remains enabled. Reduced spray/residential-rotor discharge remains a labelled calculation assumption using the nominal nozzle flow, not a separately measured reduced-flow table. MSBN heights other than the documented 100/150 mm cases have no independent throw chart. Short Radius's existing no-overlap display remains correctly labelled despite its legacy internal column name.
+
+Regression coverage exercises all 1,377 stored rows (the two conflicting I-80-ON rows are explicitly rejected), pressure and radius endpoints, automatic selection, body limits, both sector directions, contour snapping, persistence/undo and invalid simulation inputs. Browser inspection is unavailable because the environment's approval review blocks browser access; automated interaction-handler and server-rendered checks are used without bypassing that restriction.
+
+## Historical audit — 2026-09-18
+
+The notes below describe the original import; the recheck above supersedes their historical UI and adjustment-policy statements.
 
 Scope: all 104 currently placeable records in Irrigation Designer, including MP Rotator, spray nozzles, rotors, golf/ST and bubblers. Archived records remain readable in projects but have no unverified performance rows. The four body-only records are not performance emitters.
 

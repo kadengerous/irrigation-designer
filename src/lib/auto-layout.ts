@@ -1,3 +1,7 @@
+import {CATALOG,type CatalogItem} from "./equipment-catalog";
+import {equipmentCategory} from "./equipment-library";
+import {selectAutomaticHead} from "./automatic-head";
+import {catalogHeadDefaults,performanceAt} from "./flow";
 import {
   clampArc,
   clampRadius,
@@ -8,7 +12,7 @@ import {
   pickSeriesForRadius,
   pickSkuForArc,
   type Family,
-} from "@/lib/hunter-catalog";
+} from "@/lib/equipment-catalog";
 import { closestOnSegment, cornerArc, dist, headingDeg, pointInPoly, uid, type Pt } from "@/lib/geometry";
 import { irrigPatches, exclusionLoops, siteLoop } from "@/lib/cad/irrigation-geom";
 import { chooseLayoutFamily, maxThrow, patchMetrics } from "@/lib/hunter-rules";
@@ -41,14 +45,14 @@ function makeHead(partial: Pick<Head, "catalogId" | "x" | "y" | "arc" | "start" 
   };
 }
 
-function skuFor(family: Family, rNeed: number, arc: number) {
-  const series = pickSeriesForRadius(rNeed, family);
+function skuFor(family: Family, rNeed: number, arc: number, catalog:CatalogItem[]) {
+  const series = pickSeriesForRadius(rNeed, family, catalog);
   return pickSkuForArc(series, arc);
 }
 
-function fitHead(h: Head, family: Family, keep: Pt[] | null, cuts: Pt[][]): Head {
+function fitHead(h: Head, family: Family, keep: Pt[] | null, cuts: Pt[][], catalog:CatalogItem[]): Head {
   const cap = maxThrow(h, h.start, h.arc, keep, cuts);
-  const sku = skuFor(family, Math.min(h.r, cap), h.arc);
+  const sku = skuFor(family, Math.min(h.r, cap), h.arc,catalog);
   const r = clampRadius(sku, Math.min(h.r, cap));
   const nz = pickNozzleForRadius(sku, r);
   return {
@@ -125,7 +129,12 @@ export function layoutOnPolygon(
   family: Family = "mp",
   keep: Pt[] | null = null,
   cuts: Pt[][] = [],
+  catalog:CatalogItem[]=CATALOG, availableBar?:number,
 ): Head[] {
+  catalog=catalog.filter(c=>c.verificationStatus==='Verified'&&!c.strip&&c.coverageKind==='sector'&&c.type!=='body'&&c.type!=='bubbler');
+  const group=family==='rotor'?'rotor':family==='spray'?'spray':'rotary';
+  catalog=catalog.filter(c=>equipmentCategory(c)===group||group==='spray'&&equipmentCategory(c)==='fixed');
+  if(!catalog.length)return [];
   if (pts.length < 3) return [];
   const bound = keep ?? pts;
   const { width } = patchMetrics(pts);
@@ -139,7 +148,7 @@ export function layoutOnPolygon(
     const prev = stations[(i - 1 + stations.length) % stations.length]!;
     const nxt = stations[(i + 1) % stations.length]!;
     const reach = Math.max(dist(node.p, prev.p), dist(node.p, nxt.p), spacing * 0.9);
-    const sku = skuFor(family, reach, node.arc);
+    const sku = skuFor(family, reach, node.arc,catalog);
     return makeHead({
       catalogId: sku.id,
       x: node.p.x,
@@ -150,11 +159,28 @@ export function layoutOnPolygon(
     });
   });
 
-  heads.push(...interiorGrid(pts, heads, family, spacing, bound, cuts));
-  return heads.slice(0, MAX_PER_PATCH).map((h) => fitHead(h, family, bound, cuts));
+  heads.push(...interiorGrid(pts, heads, family, spacing, bound, cuts,catalog));
+  return heads.slice(0, MAX_PER_PATCH).map(h=>fitHead(h,family,bound,cuts,catalog)).flatMap(h=>{
+    const cap=maxThrow(h,h.start,h.arc,bound,cuts), fits:{head:Head;score:number}[]=[];
+    for(const item of catalog){
+      const pressure=availableBar??catalogHeadDefaults(item).designPressure;
+      for(const nozzle of item.nozzles){
+        const defaults=catalogHeadDefaults(item),bar=Math.min(pressure,defaults.designPressure);
+        const row=performanceAt(item,nozzle.id,bar,h.arc)?.row;
+        if(!row)continue;
+        const radius=Math.min(h.r,cap,row.radiusM);
+        const fit=selectAutomaticHead(radius,h.arc,pressure,[item]);
+        // Batch layouts have no per-head reduced-flow warning/acceptance step.
+        // Keep their hydraulic completeness while manual drawn sectors can be flagged.
+        if(fit&&!fit.needsReview)fits.push({head:{...h,...fit,start:h.start},score:Math.abs(h.r-radius)});
+      }
+    }
+    fits.sort((a,b)=>a.score-b.score);
+    return fits[0]?[fits[0].head]:[];
+  });
 }
 
-function interiorGrid(pts: Pt[], existing: Head[], family: Family, spacing: number, bound: Pt[], cuts: Pt[][]): Head[] {
+function interiorGrid(pts: Pt[], existing: Head[], family: Family, spacing: number, bound: Pt[], cuts: Pt[][],catalog:CatalogItem[]): Head[] {
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
   for (const p of pts) {
     minX = Math.min(minX, p.x);
@@ -174,8 +200,8 @@ function interiorGrid(pts: Pt[], existing: Head[], family: Family, spacing: numb
       if (!inIrrigationTarget(p, pts, cuts)) continue;
       if (existing.some((h) => dist(h, p) < spacing * 0.7)) continue;
       if (out.some((h) => dist(h, p) < spacing * 0.7)) continue;
-      const sku = skuFor(family, spacing, 360);
-      const full = pickSeriesForRadius(spacing, family).find((s) => s.arcMin === 360) ?? sku;
+      const sku = skuFor(family, spacing, 360,catalog);
+      const full = pickSeriesForRadius(spacing, family,catalog).find((s) => s.arcMin === 360) ?? sku;
       out.push(
         makeHead({
           catalogId: full.id,
@@ -209,7 +235,7 @@ function allowed(p: Pt, d: CadDrawing): boolean {
   return true;
 }
 
-export function layoutOnDrawing(d: CadDrawing): Head[] {
+export function layoutOnDrawing(d: CadDrawing,catalog:CatalogItem[]=CATALOG,availableBar?:number): Head[] {
   const site = siteLoop(d);
   const cuts = exclusionLoops(d);
   const out: Head[] = [];
@@ -219,7 +245,7 @@ export function layoutOnDrawing(d: CadDrawing): Head[] {
     const family = chooseLayoutFamily(patch.method, width, avgEdge);
     const keep = site ?? patch.pts;
     const holes = [...cuts, ...patch.holes];
-    const heads = layoutOnPolygon(patch.pts, family, keep, holes).filter((h) => {
+    const heads = layoutOnPolygon(patch.pts, family, keep, holes,catalog,availableBar).filter((h) => {
       if (!allowed({ x: h.x, y: h.y }, d)) return false;
       if (patch.holes.some((hole) => strictlyInside(h, hole))) return false;
       return true;

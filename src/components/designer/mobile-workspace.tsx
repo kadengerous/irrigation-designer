@@ -1,14 +1,16 @@
+import { activeFillFace, applyLibraryFill, openLayerFillLibrary, useLayerFillLibrary } from "@/lib/layer-fill-library";
 import { HeadLayerRow } from "./irrigation-layer-row";
+import { LayerDeleteDialog } from "./layer-delete-dialog";
 import { text as uiText } from "@/lib/i18n";
 import { useLayerReorder } from "./use-layer-reorder";
-import { orderedFaces, setGroupMemberAppearance, setFaceTextureRotation, groupMembers, segmentNumber, faceLayerNumber, splitLayer, layerFaceIds, layerRepresentatives, layerArea, layerPerimeter } from "@/lib/cad/engine";
+import { orderedFaces, setGroupMemberAppearance, groupMembers, segmentNumber, faceLayerNumber, splitLayer, layerFaceIds, layerRepresentatives, layerArea, layerPerimeter } from "@/lib/cad/engine";
 import { Fragment, useEffect, useId, useRef, useState, type ComponentProps, type CSSProperties, type ReactNode } from "react";
 import * as Popover from "@radix-ui/react-popover";
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import { Group, ArrowUp, ArrowDown, ChevronDown, Eye, Lock, Unlock, Trash2, Check, Copy, Minus, SquarePen, Ungroup, X } from "lucide-react";
-import { useProject, drawingForEditing } from "@/lib/project-store";
+import { useProject } from "@/lib/project-store";
 import { arcLength, drawingOrMigrate, faceArea, facePerimeter } from "@/lib/cad/engine";
-import { FACE_FILLS, FACE_TEXTURES, REGION_FILL, faceTexture, layerPurpose, type LayerPurpose, type CadDrawing } from "@/lib/cad/types";
+import { FACE_FILLS, FACE_TEXTURE_GROUPS, REGION_FILL, faceTexture, layerPurpose, type LayerPurpose, type CadDrawing } from "@/lib/cad/types";
 import { formatAreaU, formatLenU, type UnitPrefs } from "@/lib/units";
 import { tr, type Locale } from "@/lib/i18n";
 import type { Project } from "@/lib/project-types";
@@ -208,8 +210,7 @@ function GroupMemberProperties({groupId,member,drawing,locale,units,onEdit,dragH
     <div className="group-member-heading">
       {dragHandle}
       {member.segment && <span className="layer-palette-spacer layer-segment-symbol"><SegmentSymbol/></span>}
-      {!member.segment && <fieldset disabled={face.locked} className="group-member-palette"><LayerColorPicker title={title} color={face.fill ?? REGION_FILL[face.type]} orientation={face.textureRotation ?? 0}
-        onChange={fill=>update({fill})} onOrientationChange={textureRotation=>update({textureRotation})} /></fieldset>}
+      {!member.segment && <fieldset disabled={face.locked} className="group-member-palette"><LayerColorPicker faceId={member.id} title={title} color={face.fill ?? REGION_FILL[face.type]} orientation={face.textureRotation ?? 0} /></fieldset>}
       <button type="button" className="group-member-visibility group-member-action" aria-label={`${t(face.hidden ? "showLayer" : "hideLayer")}: ${title}`} aria-pressed={Boolean(face.hidden)} onClick={() => useProject.getState().setGroupMemberFlag(member.id,{hidden:!face.hidden})}><span className="layer-eye" data-hidden={face.hidden}><Eye size={18}/></span></button>
       <button type="button" className="group-member-lock group-member-action" aria-label={`${t(face.locked ? "unlockLayer" : "lockLayer")}: ${title}`} aria-pressed={Boolean(face.locked)} onClick={() => useProject.getState().setGroupMemberFlag(member.id,{locked:!face.locked})}>{face.locked ? <Lock size={18}/> : <Unlock size={18}/>}</button>
       {manager ? <span className="manager-row-name" title={title}>{title}</span> : <input key={member.name ?? ""} className="group-member-rename" aria-label={title} placeholder={groupMemberLabel(member,locale)} defaultValue={member.name ?? ""} readOnly={face.locked}
@@ -222,9 +223,8 @@ function GroupMemberProperties({groupId,member,drawing,locale,units,onEdit,dragH
         <ChevronDown size={16} aria-hidden="true" />
       </button>
     </div>
-    {deleting && <div className="mobile-layer-confirm group-member-confirm"><p>{tr(locale,"deleteConfirm",{name:title})}</p>
-      <button type="button" onClick={() => setDeleting(false)}>{t("cancel")}</button><button type="button" className="text-danger" onClick={() => useProject.getState().deleteGroupMember(member.id)}>{t("delete")}</button>
-    </div>}
+    {deleting && <LayerDeleteDialog name={title} locale={locale} disabled={face.locked}
+      onCancel={() => setDeleting(false)} onDelete={() => { useProject.getState().deleteGroupMember(member.id); setDeleting(false); }}/>}
     <div id={detailsId} className="group-member-details" hidden={!expanded}>
       {manager && <div className="manager-layer-actions">
         <button type="button" aria-label={t(face.hidden ? "showLayer" : "hideLayer")} onClick={()=>useProject.getState().setGroupMemberFlag(member.id,{hidden:!face.hidden})}><span className="layer-eye" data-hidden={face.hidden}><Eye size={18}/></span></button>
@@ -262,41 +262,46 @@ function GroupMemberList({groupId,drawing,locale,units,onEdit,manager=false}: {
   </ul>;
 }
 
-export function changeMaterialOrientation(id: string, rotation: 0 | 90) {
-  const st = useProject.getState();
-  st.commitDrawing(setFaceTextureRotation(drawingForEditing(st.project), id, rotation), id, true);
-}
-
-// One palette for layer rows and the tablet figure editor; only its anchor changes.
-export function LayerColorPicker({ title, color, onChange, side = "bottom", className = "", open: controlledOpen, onOpenChange, orientation = 0, onOrientationChange }: {
-  title: string; color: string; onChange: (color: string) => void;
-  orientation?: 0 | 90; onOrientationChange?: (rotation: 0 | 90) => void;
-  side?: "top" | "right" | "bottom" | "left"; className?: string;
-  open?: boolean; onOpenChange?: (open: boolean) => void;
+export function LayerColorPicker({ faceId, title, color, className = "", orientation = 0, onOpen }: {
+  faceId: string; title: string; color: string; className?: string; orientation?: 0 | 90; onOpen?: () => void;
 }) {
-  const locale = useProject((s) => s.locale);
+  const locale = useProject(s => s.locale);
   const t = (key: string, vars?: Record<string, string | number>) => tr(locale, key, vars);
-  const [localOpen, setLocalOpen] = useState(false);
-  const paletteAnchor=useRef<HTMLButtonElement>(null);
-  const open = controlledOpen ?? localOpen;
-  const setOpen = (next: boolean) => { setLocalOpen(next); onOpenChange?.(next); };
   const selectedTexture = faceTexture(color);
   const swatchColor = color === "theme" ? "var(--color-accent)" : color;
+  return <button onClick={() => { openLayerFillLibrary(faceId); onOpen?.(); }} type="button" className={`mobile-icon-button layer-color-button ${className}`} aria-label={t("paletteChangeFill", { name: title })}>{color === "theme" ? <svg className="layer-palette-icon" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="var(--color-surface)" stroke="currentColor" strokeWidth="1"/><g transform="rotate(-40 16 16)"><rect x="11" y="5" width="10" height="4" rx="2" fill="#4c7fc7"/><rect x="5" y="11" width="22" height="4" rx="2" fill="#e7bf32"/><rect x="5" y="17" width="22" height="4" rx="2" fill="#c16b95"/><rect x="11" y="23" width="10" height="4" rx="2" fill="#79aa58"/></g></svg> : <span className="mobile-layer-color" aria-hidden="true" data-transparent={color === "transparent"} style={{background:selectedTexture ? undefined : swatchColor}}>{selectedTexture && <span className="layer-fill-texture" style={{backgroundImage:`url(${selectedTexture.src})`,transform:`rotate(${(selectedTexture.baseRotation ?? 0) + (selectedTexture.roof ? 0 : orientation)}deg)`}}/>}</span>}</button>;
+}
+
+export function LayerFillLibrary() {
+  const open = useLayerFillLibrary(s => s.open);
+  return open ? <LayerFillLibraryContent /> : null;
+}
+
+function LayerFillLibraryContent() {
+  const project = useProject(s => s.project);
+  const selectedPolyId = useProject(s => s.selectedPolyId);
+  const selectedPolyIds = useProject(s => s.selectedPolyIds);
+  const groupMemberId = useProject(s => s.groupMemberId);
+  const locale = useProject(s => s.locale);
+  const face = activeFillFace({ ...useProject.getState(), project, selectedPolyId, selectedPolyIds, groupMemberId });
+  const t = (key: string, vars?: Record<string, string | number>) => tr(locale, key, vars);
+  const drawing = drawingOrMigrate(project);
+  const title = face ? (face.name || t("layerN", { n: faceLayerNumber(drawing, face.id) })) : t("selectLayerForFill");
+  const color = face ? face.fill ?? REGION_FILL[face.type] : "";
+  const orientation = face?.textureRotation ?? 0;
+  const selectedTexture = faceTexture(color);
   const customColor = /^#[0-9a-f]{6}$/i.test(color) ? color : "#0a7c66";
   const isCustomColor = !FACE_FILLS.includes(color as (typeof FACE_FILLS)[number]) && !selectedTexture && /^#[0-9a-f]{6}$/i.test(color);
-  return <Popover.Root open={open} onOpenChange={setOpen}>
-    <Popover.Trigger asChild><button ref={paletteAnchor} type="button" className={`mobile-icon-button layer-color-button ${className}`} aria-label={t("paletteChangeFill", { name: title })}>{color === "theme" ? <svg className="layer-palette-icon" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="var(--color-surface)" stroke="currentColor" strokeWidth="1"/><g transform="rotate(-40 16 16)"><rect x="11" y="5" width="10" height="4" rx="2" fill="#4c7fc7"/><rect x="5" y="11" width="22" height="4" rx="2" fill="#e7bf32"/><rect x="5" y="17" width="22" height="4" rx="2" fill="#c16b95"/><rect x="11" y="23" width="10" height="4" rx="2" fill="#79aa58"/></g></svg> : <span className="mobile-layer-color" aria-hidden="true" data-transparent={color === "transparent"} style={{background:selectedTexture ? undefined : swatchColor}}>{selectedTexture && <span className="layer-fill-texture" style={{backgroundImage:`url(${selectedTexture.src})`,transform:`rotate(${(selectedTexture.baseRotation ?? 0) + orientation}deg)`}}/>}</span>}</button></Popover.Trigger>
-    <Popover.Portal><Popover.Content side={side} align="center" sideOffset={4} collisionPadding={4} className="layer-color-popover centered-layer-palette" data-floating-priority="100" aria-label={t("paletteForLayer", { name: title })} onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onTouchMove={(e) => e.stopPropagation()} onTouchEnd={(e) => e.stopPropagation()} onClick={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
-      <div className="restored-palette-heading"><strong>{title}</strong><Popover.Close aria-label={t("close")}><X size={18}/></Popover.Close></div>
-      <section className="layer-palette-section"><h3>{t("paletteColors")}</h3><div className="mobile-palette">{FACE_FILLS.map((swatch) => <button key={swatch} type="button" aria-label={t(swatch === "transparent" ? "noFill" : `color:${swatch}`)} title={t(swatch === "transparent" ? "noFill" : `color:${swatch}`)} aria-pressed={color === swatch} data-transparent={swatch === "transparent"} style={{ background: swatch }} onClick={() => { onChange(swatch); setOpen(false); }}>{color === swatch ? <Check size={18} /> : null}</button>)}<label className="custom-color-swatch" data-selected={isCustomColor} title={t("paletteCustomColor")}><input type="color" aria-label={t("paletteCustomColor")} value={customColor} onChange={(event) => { onChange(event.currentTarget.value); setOpen(false); }} /><span>{t("paletteCustom")}</span></label></div></section>
+  return <aside className="layer-color-popover layer-fill-library" data-floating-priority="100" aria-label={t("paletteForLayer", { name: title })}
+    onPointerDown={e => e.stopPropagation()} onTouchStart={e => e.stopPropagation()} onTouchMove={e => e.stopPropagation()} onTouchEnd={e => e.stopPropagation()}
+    onClick={e => e.stopPropagation()} onWheel={e => e.stopPropagation()} onKeyDown={e => e.stopPropagation()}>
+      <div className="restored-palette-heading"><div><strong>{t("fillLibrary")}</strong><span>{title}</span></div><button type="button" aria-label={t("close")} onClick={() => useLayerFillLibrary.setState({ open: false })}><X size={18}/></button></div>
+      <div className="layer-fill-library-body"><fieldset disabled={!face || face.locked} className="layer-fill-library-choices">
+      <section className="layer-palette-section"><h3>{t("paletteColors")}</h3><div className="mobile-palette">{FACE_FILLS.map((swatch) => <button key={swatch} type="button" aria-label={t(swatch === "transparent" ? "noFill" : `color:${swatch}`)} title={t(swatch === "transparent" ? "noFill" : `color:${swatch}`)} aria-pressed={color === swatch} data-transparent={swatch === "transparent"} style={{ background: swatch }} onClick={() => applyLibraryFill(swatch)}>{color === swatch ? <Check size={18} /> : null}</button>)}<label className="custom-color-swatch" data-selected={isCustomColor} title={t("paletteCustomColor")}><input type="color" aria-label={t("paletteCustomColor")} value={customColor} onChange={(event) => applyLibraryFill(event.currentTarget.value)} /><span>{t("paletteCustom")}</span></label></div></section>
       <section className="layer-palette-section"><h3>{t("paletteMaterials")}</h3>
-      {onOrientationChange && <div className="material-orientation" role="group" aria-label={t("materialDirection")}>
-        <button type="button" aria-pressed={orientation === 0} onClick={() => onOrientationChange(0)}>↔ {t("materialHorizontal")}</button>
-        <button type="button" aria-pressed={orientation === 90} onClick={() => onOrientationChange(90)}><span aria-hidden="true" style={{display:"inline-block",transform:"rotate(90deg)"}}>↔</span> {t("materialVertical")}</button>
-      </div>}
-      <div className="material-palette">{FACE_TEXTURES.map((texture) => <button key={texture.id} type="button" aria-label={t(texture.id)} title={t(texture.id)} aria-pressed={color === texture.id} onClick={() => { onChange(texture.id); setOpen(false); }}><i className="material-swatch-image" aria-hidden="true" style={{ backgroundImage: `url(${texture.src})`, transform: `rotate(${(texture.baseRotation ?? 0) + orientation}deg)` }} />{color === texture.id ? <Check size={18} /> : null}<span>{t(texture.id)}</span></button>)}</div></section>
-    </Popover.Content></Popover.Portal>
-  </Popover.Root>;
+      {FACE_TEXTURE_GROUPS.map(group => <section className="material-category" key={group.key} aria-label={t(group.key)}><h4>{t(group.key)}</h4><div className="material-palette">{group.textures.map((texture) => <button key={texture.id} type="button" aria-label={t(texture.id)} title={t(texture.id)} aria-pressed={color === texture.id} onClick={() => applyLibraryFill(texture.id)}><i className="material-swatch-image" aria-hidden="true" style={{ backgroundImage: `url(${texture.src})`, transform: `rotate(${(texture.baseRotation ?? 0) + (texture.roof ? 0 : orientation)}deg)` }} />{color === texture.id ? <Check size={18} /> : null}<span>{t(texture.id)}</span></button>)}</div></section>)}</section>
+      </fieldset></div>
+  </aside>;
 }
 
 export function MobileLayers({ onEdit, onInspect, selectedFirst = true, manager = false }: { onEdit: (id: string) => void; onInspect?: () => void; selectedFirst?: boolean; manager?: boolean }) {
@@ -400,7 +405,7 @@ export function LayerList({ project, selection, units, locale, onEdit, onInspect
       setMenu(open ? row.key : null);
       if (!open) { setDeleting(false); setSplitting(false); }
     }}><Popover.Anchor asChild><article ref={row.selected ? selectedRow : undefined} className="mobile-layer" style={!selectedFirst && !manager && !tablet ? drag.rowStyle(face?.layerId ?? id) : undefined} data-layer-key={row.key} data-reorder-id={manager || tablet ? undefined : face?.layerId ?? id} data-dragging={drag.active===(face?.layerId ?? id)} data-segment={Boolean(face?.segment && !face.layerId)} data-group={Boolean(face?.layerId)} data-selected={row.selected}>
-      <div className="mobile-layer-heading">
+      <div className="mobile-layer-heading" data-layer-state={hidden || locked}>
         {!selectedFirst && face && drag.handle(face.layerId ?? id,title)}
         {activeMember && !manager ? <>
           <span className="group-member-breadcrumb">{title} › {groupMemberTitle(activeMember,locale)}</span>
@@ -409,11 +414,15 @@ export function LayerList({ project, selection, units, locale, onEdit, onInspect
         </> : <>
         {face && <>
           {(face.layerId || face.segment) && <span className={`layer-palette-spacer ${face.layerId ? "layer-group-symbol" : "layer-segment-symbol"}`} aria-hidden="true">{face.layerId ? <Group size={19}/> : <SegmentSymbol/>}</span>}
-          {!face.layerId && !face.segment && <LayerColorPicker title={title} orientation={face.textureRotation ?? 0} onOrientationChange={rotation => changeMaterialOrientation(id, rotation)} color={face.fill ?? REGION_FILL[face.type]} onChange={(color) => { select(); useProject.getState().setFaceFill(color); }} />}
+          {!face.layerId && !face.segment && <LayerColorPicker faceId={id} title={title} orientation={face.textureRotation ?? 0} color={face.fill ?? REGION_FILL[face.type]} />}
           <button type="button" className="mobile-icon-button layer-visibility" aria-label={`${hidden ? t("showLayer") : t("hideLayer")}: ${title}`} aria-pressed={hidden} onClick={() => { select(); useProject.getState().hideSelected(!hidden); }}><span className="layer-eye" data-hidden={hidden}><Eye size={18} /></span></button>
           <button type="button" className="mobile-icon-button layer-lock" aria-label={`${locked ? t("unlockLayer") : t("lockLayer")}: ${title}`} aria-pressed={locked} onClick={() => { select(); useProject.getState().lockSelected(!locked); }}>{locked ? <Lock size={18} /> : <Unlock size={18} />}</button>
         </>}
         {face ? <>
+          {(hidden || locked) && <span className="layer-state-indicators">
+            {hidden && <button type="button" className="mobile-icon-button" title={t("showLayer")} aria-label={`${t("showLayer")}: ${title}`} onClick={() => { select(); useProject.getState().hideSelected(false); }}><span className="layer-eye" data-hidden="true"><Eye size={18}/></span></button>}
+            {locked && <button type="button" className="mobile-icon-button layer-lock" aria-pressed="true" title={t("unlockLayer")} aria-label={`${t("unlockLayer")}: ${title}`} onClick={() => { select(); useProject.getState().lockSelected(false); }}><Lock size={18}/></button>}
+          </span>}
           {manager ? <span className="manager-row-name" title={title}>{title}</span> : tablet && !row.selected ? <button type="button" className="tablet-layer-select" title={title} onClick={select}>{title}</button> : <input key={`${id}:${face.layerId ?? ""}:${title}`} className="mobile-layer-name" aria-label={title} title={title} defaultValue={title}
             onFocus={manager ? undefined : select}
             onBlur={(e) => { const next = e.currentTarget.value.trim(); if (next && next !== title) { select(); useProject.getState().setFaceName(next); } else e.currentTarget.value = title; }}
@@ -478,13 +487,8 @@ export function LayerList({ project, selection, units, locale, onEdit, onInspect
                 }}>{t("splitLayer")}</button>
               </div>
             </div>}
-            {deleting && <div className="mobile-layer-menu">
-              <div className="mobile-layer-confirm" role="alert">
-                <p>{tr(locale, "deleteConfirm", { name: title })}</p>
-                <button type="button" onClick={close}>{t("cancel")}</button>
-                <button type="button" className="text-danger" onClick={() => { select(); useProject.getState().deleteSelected(); close(); }}>{t("delete")}</button>
-              </div>
-            </div>}
+            {deleting && menu === row.key && <LayerDeleteDialog name={title} locale={locale} disabled={locked}
+              onCancel={close} onDelete={() => { select(); useProject.getState().deleteSelected(); close(); }}/>}
           </div>
       </LayerDetailsSurface></DetailsInner></DetailsWrapper>}
     </Popover.Root></RowWrapper>;

@@ -1,5 +1,5 @@
 {
-  "verifiedOn": "2026-09-19",
+  "verifiedOn": "2026-10-10",
   "models": [
     {
       "ids": [
@@ -307,9 +307,16 @@
       "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/st-90"
     },
     {
-      "ids": ["STG-900"],
+      "ids": [
+        "STG-900"
+      ],
       "defaultMm": 76.2,
-      "options": [{ "mm": 76.2, "sku": "STG-900" }],
+      "options": [
+        {
+          "mm": 76.2,
+          "sku": "STG-900"
+        }
+      ],
       "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/st-system/stg-900"
     },
     {

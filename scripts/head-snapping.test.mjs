@@ -20,6 +20,10 @@ test("sprinklers snap to visible figure corners before contours, without the gri
     const free={x:10.04,y:10.01};
     assert.deepEqual(snap(free,d),{pt:free,kind:"none"},"empty space is not rounded to grid lines");
     assert.equal(snap({x:.2,y:.25},d,{snapOn:false}).kind,"none");
+    for(const pointerType of ['mouse','touch','pen']) {
+      const raw={x:.21,y:.26};
+      assert.deepEqual(snap(raw,d,{snapOn:false,snapGridOn:true,gridStep:.5,pointerType,heads:[{id:'nearby',x:.2,y:.23}]}),{pt:raw,kind:'none'},'magnet off disables geometry, head and grid snapping');
+    }
     const hidden={...d,faces:Object.fromEntries(Object.entries(d.faces).map(([id,f])=>[id,{...f,hidden:true}]))};
     assert.equal(snap({x:.2,y:.25},hidden).kind,"none","hidden face edges do not leak into loose-edge snapping");
     const hiddenLayer={...d,layers:{...d.layers,landscape:{visible:false,locked:false}}};

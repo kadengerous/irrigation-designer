@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 export type FileSaveRequest = {blob:Blob;filename:string;finish:()=>void};
 export const useFileSave = create<{request:FileSaveRequest|null}>(()=>({request:null}));
-/** A user-confirmed OS destination is mandatory; never trigger an automatic download. */
+/** Prepare the file first, then wait for the user's save action. */
 export function requestFileDestination(blob:Blob,filename:string):Promise<void> {
   return new Promise(resolve=>{
     useFileSave.getState().request?.finish();
@@ -10,9 +10,30 @@ export function requestFileDestination(blob:Blob,filename:string):Promise<void> 
   });
 }
 
-/** Desktop browsers offer Save Link As through their real context menu. */
-export function fileSaveMode({picker,mobile,share}:{picker:boolean;mobile:boolean;share:boolean}) {
-  return picker?'picker':mobile?(share?'share':'unavailable'):'link';
+/** Safari's download destination is controlled by its General settings. */
+export function fileSaveMode({picker,mobile,share,safari=false}:{picker:boolean;mobile:boolean;share:boolean;safari?:boolean}) {
+  return picker?'picker':mobile?(share?'share':'unavailable'):safari?'download':'link';
+}
+
+/** Closing the dialog must not revoke a URL while the browser starts its download. */
+export function createFileDownloadLink(blob:Blob) {
+  const url=URL.createObjectURL(blob);
+  let handedOff=false,released=false;
+  return {
+    url,
+    handoff(finish:()=>void) {
+      if(handedOff||released)return;
+      handedOff=true;
+      // Allow the anchor's default click action to run before removing it.
+      setTimeout(finish,0);
+    },
+    release() {
+      if(released)return;
+      released=true;
+      if(handedOff)setTimeout(()=>URL.revokeObjectURL(url),60_000);
+      else URL.revokeObjectURL(url);
+    },
+  };
 }
 
 // Keep the native context menu, but prevent ordinary clicks from starting a

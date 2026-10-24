@@ -1,4 +1,5 @@
 import { text as uiText } from "@/lib/i18n";
+import { uiPixels } from "@/lib/ui-scale";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import * as Popover from "@radix-ui/react-popover";
 import {
@@ -76,7 +77,6 @@ export function AdvancedPalette({
   color,
   onChange,
   orientation,
-  onOrientationChange,
   onClose,
 }: {
   anchor: RefObject<HTMLButtonElement | null>;
@@ -84,7 +84,6 @@ export function AdvancedPalette({
   color: string;
   onChange: (c: string) => void;
   orientation: 0 | 90;
-  onOrientationChange?: (r: 0 | 90) => void;
   onClose: () => void;
 }) {
   const locale = useProject((s) => s.locale),
@@ -94,7 +93,7 @@ export function AdvancedPalette({
     ref,
     (b) => {
       const r = anchor.current?.getBoundingClientRect();
-      return { x: r ? r.left - 430 : b.x + 24, y: r ? r.top : b.y + 24 };
+      return { x: r ? r.left - uiPixels(430) : b.x + 24, y: r ? r.top : b.y + 24 };
     },
     80,
   );
@@ -312,24 +311,6 @@ export function AdvancedPalette({
         )}
         {mode === "material" && (
           <>
-            {onOrientationChange && (
-              <div className="material-orientation">
-                <button
-                  type="button"
-                  aria-pressed={orientation === 0}
-                  onClick={() => onOrientationChange(0)}
-                >
-                  ↔ {t("materialHorizontal")}
-                </button>
-                <button
-                  type="button"
-                  aria-pressed={orientation === 90}
-                  onClick={() => onOrientationChange(90)}
-                >
-                  ↕ {t("materialVertical")}
-                </button>
-              </div>
-            )}
             <div className="advanced-materials">
               {ALL_FACE_TEXTURES.map((texture) => (
                 <button
@@ -341,7 +322,7 @@ export function AdvancedPalette({
                   <i
                     style={{
                       backgroundImage: `url(${texture.src})`,
-                      transform: `rotate(${(texture.baseRotation ?? 0) + orientation}deg)`,
+                      transform: `rotate(${(texture.baseRotation ?? 0) + (texture.roof ? 0 : orientation)}deg)`,
                     }}
                   />
                   <span>{t(texture.id)}</span>

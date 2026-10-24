@@ -1,9 +1,12 @@
-import { useEffect } from 'react';
-import { Group, Line } from 'react-konva';
+import { useEffect,useLayoutEffect } from 'react';
+import {setPlacementFocus} from './placement-focus';
+import { Circle, Group, Line, Path } from 'react-konva';
+import {headSymbolScale} from '@/lib/head-presentation';
+import {SPRINKLER_TARGET_COLOR,SPRINKLER_TARGET_CIRCLE,SPRINKLER_TARGET_CROSS} from './sprinkler-target';
 import { useProject } from '@/lib/project-store';
 import { visibleProjectHeads } from '@/lib/head-visibility';
 import { drawingOrMigrate } from '@/lib/cad/engine';
-import { itemById } from '@/lib/hunter-catalog';
+import { itemById } from '@/lib/equipment-catalog';
 import { snapSprinklerPoint, sprinklerAlignmentGuides } from '@/lib/head-snapping';
 import type { Pt } from '@/lib/geometry';
 
@@ -13,11 +16,11 @@ export function SprinklerGuides({ point, px, panX, panY, excludeHead }: {point:P
   const guides=snapOn ? sprinklerAlignmentGuides(point,visibleProjectHeads(project),px,excludeHead,drawingOrMigrate(project)) : [];
   return <Group listening={false}>
     {guides.map(g=><Line key={g.axis} points={[x(g.target.x),y(g.target.y),x(g.point.x),y(g.point.y)]} stroke={g.exact?'#12a647':'#ed4242'} strokeWidth={1.25} dash={[6,5]}/>)}
-    <Group x={x(point.x)} y={y(point.y)}>
-      <Line points={[-11,0,-3,0]} stroke="#fff" strokeWidth={3}/><Line points={[3,0,11,0]} stroke="#fff" strokeWidth={3}/>
-      <Line points={[0,-11,0,-3]} stroke="#fff" strokeWidth={3}/><Line points={[0,3,0,11]} stroke="#fff" strokeWidth={3}/>
-      <Line points={[-11,0,-3,0]} stroke="#244137" strokeWidth={1}/><Line points={[3,0,11,0]} stroke="#244137" strokeWidth={1}/>
-      <Line points={[0,-11,0,-3]} stroke="#244137" strokeWidth={1}/><Line points={[0,3,0,11]} stroke="#244137" strokeWidth={1}/>
+    <Group x={x(point.x)} y={y(point.y)} scaleX={headSymbolScale(px)} scaleY={headSymbolScale(px)} name="magnifier-placement-overlay">
+      <Circle radius={SPRINKLER_TARGET_CIRCLE} fill="#0f9f8233" stroke="white" strokeWidth={2.5}/>
+      <Path data={SPRINKLER_TARGET_CROSS} stroke="white" strokeWidth={3} lineCap="round"/>
+      <Circle radius={SPRINKLER_TARGET_CIRCLE} stroke={SPRINKLER_TARGET_COLOR} strokeWidth={1.25}/>
+      <Path data={SPRINKLER_TARGET_CROSS} stroke={SPRINKLER_TARGET_COLOR} strokeWidth={1.25} lineCap="round"/>
     </Group>
   </Group>;
 }
@@ -28,6 +31,13 @@ export function CatalogPlacementPreview({ ghost }: {ghost:{id:string;x:number;y:
   const snapOn=useProject(s=>s.snapOn), snapGridOn=useProject(s=>s.snapGridOn), gridStep=useProject(s=>s.gridStep);
   useEffect(()=>{document.documentElement.dataset.sprinklerPlacement='true'; return ()=>{delete document.documentElement.dataset.sprinklerPlacement;};},[]);
   const rect=document.querySelector('[data-design-canvas]')?.getBoundingClientRect();
+  useLayoutEffect(()=>{
+    if(!rect)return;
+    const inside=ghost.x>=rect.left&&ghost.x<=rect.right&&ghost.y>=rect.top&&ghost.y<=rect.bottom;
+    const hit=inside?snapSprinklerPoint({x:(ghost.x-rect.left-panX)/px,y:(ghost.y-rect.top-panY)/px},drawingOrMigrate(project),{snapOn,snapGridOn,gridStep,pxPerMeter:px,heads:visibleProjectHeads(project)}):null;
+    setPlacementFocus('catalog-head',hit?.pt??null,undefined,hit?.kind);
+    return()=>setPlacementFocus('catalog-head',null);
+  },[ghost,project,px,panX,panY,snapOn,snapGridOn,gridStep]);
   if (!rect) return null;
   const inside=ghost.x>=rect.left&&ghost.x<=rect.right&&ghost.y>=rect.top&&ghost.y<=rect.bottom;
   const heads=visibleProjectHeads(project);
@@ -42,7 +52,7 @@ export function CatalogPlacementPreview({ ghost }: {ghost:{id:string;x:number;y:
       <circle r="7" stroke={itemById(ghost.id)?.color??'#327b64'} strokeWidth="1.2" opacity=".7"/>
       <path d="M-12 0H-3M3 0H12M0-12V-3M0 3V12" stroke="white" strokeWidth="3"/>
       <path d="M-12 0H-3M3 0H12M0-12V-3M0 3V12" stroke="#244137" strokeWidth="1"/>
-      <text x="16" y="-16" fill="#244137" stroke="white" strokeWidth="3" paintOrder="stroke" fontSize="12">{ghost.id}</text>
+      <text x="16" y="-16" fill="#244137" stroke="white" strokeWidth="0.8" paintOrder="stroke" fontSize="12">{ghost.id}</text>
     </g>
   </svg>;
 }

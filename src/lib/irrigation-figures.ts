@@ -4,17 +4,26 @@ import { dist, pointInPoly, polygonArea, projectOnSegment, type Pt } from './geo
 
 export type IrrigationFigure = { id: string; points: Pt[]; holes: Pt[][]; ellipse?:{cx:number;cy:number;rx:number;ry:number;rot?:number} };
 const cache = new WeakMap<CadDrawing, IrrigationFigure[]>();
+const contourCache = new WeakMap<CadDrawing, IrrigationFigure[]>();
 /** Figure identity is independent of its layer, translated name and list position. */
-export function irrigationFigures(d: CadDrawing): IrrigationFigure[] {
-  const cached = cache.get(d); if (cached) return cached;
+export function closedDrawingFigures(d: CadDrawing): IrrigationFigure[] {
+  const cached = contourCache.get(d); if (cached) return cached;
   const result = Object.values(d.faces).filter(f => !f.segment && !(f.spline && !f.spline.closed) &&
-    !(f.freehand && !f.freehand.closed) && layerPurpose(f) !== 'none' && (f.type !== 'site' || f.hydro?.purpose === 'irrigation'))
+    !(f.freehand && !f.freehand.closed))
     .map(f => {
       const ellipse=f.ellipse??(f.circle?{cx:f.circle.cx,cy:f.circle.cy,rx:f.circle.r,ry:f.circle.r}:undefined);
       return { id:f.id,ellipse,points:ellipse?ellipseWorldPts(ellipse.cx,ellipse.cy,ellipse.rx,ellipse.ry,ellipse.rot??0,720):facePoints(d,f.id),holes:faceHoles(d,f.id) };
     })
     .filter(f => f.points.length >= 3).sort((a,b) => polygonArea(a.points)-polygonArea(b.points) || a.id.localeCompare(b.id));
-  cache.set(d,result); return result;
+  contourCache.set(d,result); return result;
+}
+export function irrigationFigures(d: CadDrawing): IrrigationFigure[] {
+  const cached = cache.get(d); if (cached) return cached;
+  const result=closedDrawingFigures(d).filter(figure=>{
+    const face=d.faces[figure.id]!;
+    return layerPurpose(face)!=='none' && (face.type!=='site'||face.hydro?.purpose==='irrigation');
+  });
+  cache.set(d,result);return result;
 }
 export function onContour(p: Pt, points: Pt[], tolerance = 1e-5): boolean {
   return points.some((a,i) => dist(p,projectOnSegment(p,a,points[(i+1)%points.length]!).pt) <= tolerance);

@@ -1,4 +1,4 @@
-import { CATALOG, clampArc, clampRadius, defaultBodyFor, pickNozzleForRadius, pickSeriesForRadius, pickSkuForArc, type Family } from "@/lib/hunter-catalog";
+import { CATALOG, clampArc, clampRadius, defaultBodyFor, pickNozzleForRadius, pickSeriesForRadius, pickSkuForArc, type Family } from "@/lib/equipment-catalog";
 import { rayPolyHit, type Pt } from "@/lib/geometry";
 import type { Head } from "@/lib/project-types";
 

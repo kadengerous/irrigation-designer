@@ -8,7 +8,9 @@ const expected = [
   ["sage", "#F5F8F5", "#F3F7F4", "#52796F"],
   ["ice", "#F4F9FC", "#F2F8FC", "#3A7CA5"],
   ["sand", "#FBF8F2", "#FAF6EE", "#756B55"],
-  ["matte", "#F5FAF8", "#F0F8F5", "#167564"],
+  ["lavender", "#F7F5FC", "#F5F1FC", "#76529C"],
+  ["light", "#F7F8FA", "#FFFFFF", "#52616F"],
+  ["mint", "#EFFAF5", "#F3FCF8", "#14715A"],
   ["graphite", "#172126", "#202B2F", "#62D6B1"],
 ];
 function luminance(hex) {
@@ -21,7 +23,7 @@ function contrast(a, b) {
   return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05);
 }
 
-test("seven themes: exact palettes, contrast, legacy migration and isolated persistence", async () => {
+test("nine themes: restored palettes, contrast, legacy migration, fixed technical colours and isolated persistence", async () => {
   const previousStorage = globalThis.localStorage;
   const data = new Map();
   globalThis.localStorage = {
@@ -38,9 +40,11 @@ test("seven themes: exact palettes, contrast, legacy migration and isolated pers
     const { useProject } = await server.ssrLoadModule("/src/lib/project-store.ts");
     assert.deepEqual([...THEME_IDS], expected.map((p) => p[0]));
     assert.equal(parseThemeId("irrigation"), "crystal");
+    for (const [id] of expected) assert.equal(parseThemeId(id), id);
     assert.equal(parseThemeId("night"), "graphite");
     assert.equal(parseThemeId("lawn"), "sage");
-    assert.equal(parseThemeId("unknown"), "crystal");
+    assert.equal(parseThemeId("matte"), "mint");
+    assert.equal(parseThemeId("unknown"), "mint");
     let stored;
     useProject.persist.setOptions({ storage: {
       getItem: () => stored, setItem: (_name, value) => { stored = value; }, removeItem: () => {},
@@ -63,7 +67,8 @@ test("seven themes: exact palettes, contrast, legacy migration and isolated pers
       assert.match(vars["--mobile-panel-glass"], /\/(?: 58| 66)%\)$/);
       assert.equal(canvasTheme(id).bg, bg);
       assert.equal(canvasTheme(id).accent, vars["--color-btn"]);
-      assert.equal(canvasTheme(id).guideAligned, vars["--color-btn"], id + " construction follows theme");
+      assert.equal(canvasTheme(id).guideAligned, "#16A34A", "alignment remains green in every theme");
+      assert.equal(canvasTheme(id).guideError, "#D9364E", "alignment warning remains red in every theme");
       for (const [fg, background] of [
         ["--color-ink", "--color-surface"], ["--color-muted", "--color-surface"],
         ["--color-tool-fg", "--color-tool"], ["--color-btn-fg", "--color-btn"],

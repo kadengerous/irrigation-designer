@@ -1,4 +1,4 @@
-import type { Family } from "@/lib/hunter-catalog";
+import type { Family } from "@/lib/equipment-catalog";
 import { tr, type Locale } from "@/lib/i18n";
 import type { UnitPrefs } from "@/lib/units";
 

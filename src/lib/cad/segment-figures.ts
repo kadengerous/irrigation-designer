@@ -43,7 +43,16 @@ export function segmentFigures(d: CadDrawing): SegmentFigure[] {
 export function createSegmentFigure(d0: CadDrawing, key: string) {
   const candidate=segmentFigures(d0).find(c=>c.key===key);
   if(!candidate) return null;
-  let d=cloneDrawing(d0);
+  let d=removeSegmentFigureParts(d0,candidate);
+  const before=new Set(Object.keys(d.faces));
+  d=addPointShape(d,candidate.points,'lawn');
+  const faceId=Object.keys(d.faces).find(id=>!before.has(id))!;
+  return {drawing:segmentLayers(d),faceId};
+}
+
+/** Remove the drawn portions only, never the existing figure's boundary. */
+export function removeSegmentFigureParts(d0: CadDrawing, candidate: SegmentFigure) {
+  const d=cloneDrawing(d0);
   for(const id of new Set(candidate.parts.map(p=>p.id))) {
     const original=d.faces[id]!;
     const [a,b]=original.spline!.pts as [Pt,Pt];
@@ -57,8 +66,5 @@ export function createSegmentFigure(d0: CadDrawing, key: string) {
       d.faces[nextId]={...original,id:nextId,spline:{pts:[point(a,b,low),point(a,b,high)],closed:false}};
     }
   }
-  const before=new Set(Object.keys(d.faces));
-  d=addPointShape(d,candidate.points,'lawn');
-  const faceId=Object.keys(d.faces).find(id=>!before.has(id))!;
-  return {drawing:segmentLayers(d),faceId};
+  return d;
 }

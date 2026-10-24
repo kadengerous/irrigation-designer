@@ -1,12 +1,4 @@
-export const THEME_IDS = [
-  "crystal",
-  "pearl",
-  "sage",
-  "ice",
-  "sand",
-  "matte",
-  "graphite",
-] as const;
+export const THEME_IDS = ["crystal", "pearl", "sage", "ice", "sand", "lavender", "light", "mint", "graphite"] as const;
 export type ThemeId = (typeof THEME_IDS)[number];
 
 /** Kept for persisted settings; buttons always follow the selected theme. */
@@ -21,10 +13,10 @@ const THEME_ALIAS: Record<string, ThemeId> = {
   clay: "sand", berry: "pearl", dusk: "graphite",
   blue: "pearl",
   green: "sage",
-  light: "pearl",
   dark: "graphite",
   night: "graphite",
-  neutral: "matte",
+  matte: "mint",
+  neutral: "mint",
   custom: "crystal",
   ocean: "ice",
   forest: "sage",
@@ -34,7 +26,7 @@ const THEME_ALIAS: Record<string, ThemeId> = {
 export function parseThemeId(v: unknown): ThemeId {
   if (THEME_IDS.includes(v as ThemeId)) return v as ThemeId;
   if (typeof v === "string" && THEME_ALIAS[v]) return THEME_ALIAS[v]!;
-  return "crystal";
+  return "mint";
 }
 
 export function parseButtonStyle(v: unknown): ButtonStyle {
@@ -92,7 +84,9 @@ const THEMES: Record<ThemeId, ThemeBase> = {
   sage: { dark: false, bg: "#F5F8F5", surface: "#F3F7F4", ink: "#263730", tool: "#52796F", btn: "#52796F" },
   ice: { dark: false, bg: "#F4F9FC", surface: "#F2F8FC", ink: "#253442", tool: "#3A7CA5", btn: "#3A7CA5" },
   sand: { dark: false, bg: "#FBF8F2", surface: "#FAF6EE", ink: "#362F24", tool: "#756B55", btn: "#756B55" },
-  matte: { dark: false, bg: "#F5FAF8", surface: "#F0F8F5", ink: "#22352F", tool: "#167564", btn: "#167564" },
+  lavender: { dark: false, bg: "#F7F5FC", surface: "#F5F1FC", ink: "#332B42", tool: "#76529C", btn: "#76529C" },
+  light: { dark: false, bg: "#F7F8FA", surface: "#FFFFFF", ink: "#20252C", tool: "#52616F", btn: "#52616F" },
+  mint: { dark: false, bg: "#EFFAF5", surface: "#F3FCF8", ink: "#22382F", tool: "#14715A", btn: "#14715A" },
   graphite: { dark: true, bg: "#172126", surface: "#202B2F", ink: "#EFF8F5", tool: "#62D6B1", btn: "#62D6B1" },
 };
 
@@ -102,8 +96,8 @@ export function canvasTheme(id: ThemeId) {
   const t = THEMES[parseThemeId(id)];
   return { bg: t.bg, ink: t.ink, accent: t.btn, surface: t.surface,
     segmentStroke: t.dark ? t.ink : "#000000",
-    guideError: t.dark ? "#FF8D9C" : "#D9364E",
-    guideAligned: t.btn,
+    guideError: "#D9364E",
+    guideAligned: "#16A34A",
     minor: mix(t.bg, t.ink, 0.09), major: mix(t.bg, t.ink, 0.18),
     axis: mix(t.bg, t.ink, 0.34), handleOutline: t.dark ? "#EFF8F5" : "#FFFFFF" };
 }
@@ -190,7 +184,7 @@ export function applyTheme(
   root.dataset.theme = base.dark ? "dark" : "light";
   root.dataset.appearance = id;
   root.style.colorScheme = base.dark ? "dark" : "light";
-  root.style.setProperty("--panel-glass", `rgb(${hexToRgb(base.surface).join(" ")} / ${id === "crystal" ? 76 : id === "matte" ? 98 : 92}%)`);
+  root.style.setProperty("--panel-glass", `rgb(${hexToRgb(base.surface).join(" ")} / ${id === "mint" ? 98 : 92}%)`);
   root.style.setProperty("--mobile-panel-glass", `rgb(${hexToRgb(base.surface).join(" ")} / ${base.dark ? 66 : 58}%)`);
 }
 

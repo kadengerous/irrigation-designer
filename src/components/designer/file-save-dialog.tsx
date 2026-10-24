@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { FileDown, FolderOpen, Save, X } from 'lucide-react';
-import { useFileSave, fileWithExtension, fileSaveMode, preventFileNavigation } from '@/lib/file-save';
+import { useFileSave, fileWithExtension, fileSaveMode, preventFileNavigation, createFileDownloadLink } from '@/lib/file-save';
 import { chooseSaveTarget, saveFile } from '@/lib/export-plan';
 import { useProject } from '@/lib/project-store';
 import { tr } from '@/lib/i18n';
@@ -12,13 +12,13 @@ import './project-files-dialogs.css';
 export function FileSaveDialog() {
   const request=useFileSave(s=>s.request),locale=useProject(s=>s.locale),t=(key:string)=>tr(locale,key);
   const [name,setName]=useState(''),[busy,setBusy]=useState(false),[error,setError]=useState(false);
-  const [fileLink,setFileLink]=useState<{blob:Blob;url:string}|null>(null);
+  const [fileLink,setFileLink]=useState<({blob:Blob}&ReturnType<typeof createFileDownloadLink>)|null>(null);
   const help=useRef<HTMLParagraphElement>(null);
   useEffect(()=>{setName(request?.filename ?? '');setBusy(false);setError(false);},[request]);
   useEffect(()=>{
     if(!request){setFileLink(null);return;}
-    const url=URL.createObjectURL(request.blob);setFileLink({blob:request.blob,url});
-    return ()=>URL.revokeObjectURL(url);
+    const link=createFileDownloadLink(request.blob);setFileLink({blob:request.blob,...link});
+    return link.release;
   },[request]);
   if(!request)return null;
   const extension=request.filename.split('.').pop()!;
@@ -28,15 +28,16 @@ export function FileSaveDialog() {
   const file=new File([request.blob],filename,{type:request.blob.type});
   const share=!!navigator.canShare?.({files:[file]}) && !!navigator.share;
   const mobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||/Mac/i.test(navigator.platform)&&navigator.maxTouchPoints>1;
-  const mode=fileSaveMode({picker:native,mobile,share});
   const mac=/Mac/i.test(navigator.platform)&&!mobile;
+  const safari=mac&&/Version\/[\d.]+.*Safari\//i.test(navigator.userAgent)&&!/Chrome|Chromium|CriOS|Edg|OPR|FxiOS/i.test(navigator.userAgent);
+  const mode=fileSaveMode({picker:native,mobile,share,safari});
   return <Dialog.Root open onOpenChange={open=>{if(!open&&!busy)request.finish();}}><Dialog.Portal>
     <Dialog.Overlay className="project-files-overlay file-destination-overlay"/>
     <Dialog.Content className="project-files-dialog file-destination-dialog" dir={localeDirection(locale)} aria-describedby="file-destination-help">
       <header><Dialog.Title>{t('save')}</Dialog.Title><Dialog.Close asChild><Button disabled={busy} aria-label={t('close')}><X/></Button></Dialog.Close></header>
-      <Dialog.Description ref={help} tabIndex={-1} id="file-destination-help">{t(mode==='picker'?'saveDestinationHint':mode==='link'?(mac?'saveLinkMacHint':'saveLinkHint'):mode==='share'?'saveSystemHint':'saveUnavailable')}</Dialog.Description>
+      <Dialog.Description ref={help} tabIndex={-1} id="file-destination-help">{t(mode==='picker'?'saveDestinationHint':mode==='download'?'saveSafariHint':mode==='link'?(mac?'saveLinkMacHint':'saveLinkHint'):mode==='share'?'saveSystemHint':'saveUnavailable')}</Dialog.Description>
       <label className="file-destination-name">{t('fileName')}<input value={name} onChange={e=>setName(e.target.value)} disabled={busy} autoComplete="off"/></label>
-      {mode==='link'&&fileUrl?<a className="file-destination-link" href={fileUrl} download={filename}
+      {(mode==='link'||mode==='download')&&fileUrl?<a className="file-destination-link" href={fileUrl} download={filename}
         aria-describedby="file-destination-help" onClick={event=>{preventFileNavigation(event);help.current?.focus();}}
         onContextMenu={event=>event.stopPropagation()}
         onAuxClick={preventFileNavigation}>
@@ -52,7 +53,13 @@ export function FileSaveDialog() {
           request.finish();
         }catch(e){if(e instanceof DOMException&&e.name==='AbortError')setBusy(false);else{setError(true);setBusy(false);}}
       }}>{native?<FolderOpen/>:<Save/>}{t(native?'saveDestination':'saveSystem')}</Button>}
-      <Button disabled={busy} onClick={()=>request.finish()}>{t(mode==='link'?'close':'cancel')}</Button></div>
+      {mode==='download'&&<Button asChild><a href={fileUrl||undefined} download={filename}
+        aria-describedby="file-destination-help" aria-disabled={!fileUrl||!name.trim()}
+        onClick={event=>{if(!fileUrl||!name.trim()){event.preventDefault();return;}fileLink?.handoff(request.finish);}}
+        onContextMenu={event=>event.stopPropagation()} onAuxClick={preventFileNavigation}>
+        <Save/>{t('save')}
+      </a></Button>}
+      <Button disabled={busy} onClick={()=>request.finish()}>{t(mode==='link'||mode==='download'?'close':'cancel')}</Button></div>
     </Dialog.Content>
   </Dialog.Portal></Dialog.Root>;
 }

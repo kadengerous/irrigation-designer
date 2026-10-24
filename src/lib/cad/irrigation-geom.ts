@@ -1,3 +1,4 @@
+import {landscapeExclusions} from "../landscape-objects";
 import { faceHoles, facePoints } from "@/lib/cad/engine";
 import { irrigationRegionType, isExclusion, isIrrigationTarget, type CadDrawing, type CadFace } from "@/lib/cad/types";
 import { pointInPoly, type Pt } from "@/lib/geometry";
@@ -28,7 +29,7 @@ export function siteLoop(d: CadDrawing): Pt[] | null {
 }
 
 export function exclusionLoops(d: CadDrawing): Pt[][] {
-  const out: Pt[][] = [];
+  const out: Pt[][] = landscapeExclusions(d);
   for (const f of Object.values(d.faces)) {
     if (f.hidden) continue;
     const type = irrigationRegionType(f);

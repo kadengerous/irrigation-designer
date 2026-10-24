@@ -97,6 +97,31 @@ test('tablet dimension action operates on the whole project even with an inspect
   useProject.setState({groupMemberId:null});
 });
 
+test('irrigation auto-dimension button works on site outlines with mouse and touch, undo and redo',async()=>{
+  const {emptyProject}=await load('lib/project-types.ts'),{emptyDrawing}=await load('lib/cad/types.ts');
+  const engine=await load('lib/cad/engine.ts'),{useProject}=await load('lib/project-store.ts');
+  const {applyAutomaticDimensions}=await load('lib/automatic-dimension-action.ts');
+  const {displayedDimensions}=await load('lib/cad/sprinkler-dimensions.ts');
+  const {canvasTapActivation}=await load('components/designer/canvas-tap-activation.ts');
+  for(const input of ['mouse','touch']){
+    const drawing=engine.addRect(emptyDrawing(),{x:0,y:0},{x:12,y:8},'site');
+    const project={...emptyProject(),drawing,heads:[0,6,12].map((x,i)=>({id:`h${i}`,x,y:0}))};
+    useProject.setState({project,workspaceSection:'irrigation',tool:null,drawSub:'none',groupMemberId:null,
+      selectedPolyId:null,selectedPolyIds:[],past:[],future:[],pastOps:[],futureOps:[]});
+    const handlers=canvasTapActivation(applyAutomaticDimensions);
+    const event={pointerType:input,isPrimary:true,pointerId:1,clientX:10,clientY:10,detail:1,preventDefault(){}};
+    if(input==='touch'){handlers.onPointerDown(event);handlers.onPointerUp(event);}
+    handlers.onClick(event);
+    const current=useProject.getState().project;
+    assert.equal(displayedDimensions(current.drawing,'irrigation').length,2);
+    assert.equal(current.drawing.layers.dims.visible,true);
+    assert.deepEqual(current.heads,project.heads);
+    assert.equal(useProject.getState().past.length,1,'one tap is one history entry');
+    useProject.getState().undo();assert.equal(Object.keys(useProject.getState().project.drawing.dims).length,0);
+    useProject.getState().redo();assert.deepEqual(useProject.getState().project.drawing.dims,JSON.parse(JSON.stringify(current.drawing.dims)));
+  }
+});
+
 test('nearby sprinkler labels avoid one another and symbols at different zooms',async()=>{
   const engine=await load('lib/cad/engine.ts'),{emptyDrawing}=await load('lib/cad/types.ts');
   const {layoutHeadLabels,headSymbolScale,labelBoxesOverlap}=await load('lib/head-presentation.ts');

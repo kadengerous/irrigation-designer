@@ -9,10 +9,45 @@ Konva.autoDrawEnabled = false;
 Konva.Util.createCanvasElement = () => Object.assign(createCanvas(1, 1), { style: {} });
 const server = await createServer({ server: { middlewareMode: true, hmr: false } });
 const { MagnifierRenderer } = await server.ssrLoadModule('/src/components/designer/magnifier-renderer.ts');
+const {drawPlacementSnapMarker}=await server.ssrLoadModule('/src/components/designer/placement-snap-marker.ts');
 await server.close();
 
 const pixels = canvas => canvas.getContext('2d').getImageData(0, 0, canvas.width, canvas.height).data;
 const at = (canvas, x, y) => [...canvas.getContext('2d').getImageData(x, y, 1, 1).data];
+
+test('placement snap cue is green, dashed, centred and absent without an actual snap',()=>{
+ for(const dpr of [1,2]){
+  const canvas=createCanvas(100*dpr,100*dpr),ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);
+  drawPlacementSnapMarker(ctx,100,'none');assert.equal(pixels(canvas).some(v=>v!==0),false);
+  drawPlacementSnapMarker(ctx,100,'edge');
+  assert.equal(at(canvas,50*dpr,50*dpr)[3],0,'open centre leaves the actual join visible');
+  assert.ok(at(canvas,57*dpr,50*dpr)[3]>0,'larger circle marks the snapped boundary');
+  const row=Array.from({length:30},(_,i)=>at(canvas,(i+4)*dpr,50*dpr)[3]);
+  assert.ok(row.some(a=>a>0)&&row.some(a=>a===0),'guides have visible dash gaps');
+  assert.deepEqual(ctx.getLineDash(),[],'dash state cannot leak into the crosshair');
+  const boundaryAlpha=at(canvas,57*dpr,50*dpr)[3];
+  ctx.clearRect(0,0,100,100);drawPlacementSnapMarker(ctx,100,'grid');
+  assert.ok(at(canvas,57*dpr,50*dpr)[3]<boundaryAlpha,'grid retains a smaller, quieter ring');
+ }
+});
+
+test('placement lens removes only the moving object and its overlay, revealing the plan beneath',()=>{
+  const stage=new Konva.Stage({width:200,height:200}),layer=new Konva.Layer();stage.add(layer);
+  layer.add(new Konva.Rect({x:90,y:90,width:20,height:20,fill:'#00ff00'}));
+  const moving=new Konva.Group({placementId:'moving'});
+  moving.add(new Konva.Rect({x:98,y:98,width:4,height:4,fill:'#ff0000'}));layer.add(moving);
+  const other=new Konva.Group({placementId:'other'});
+  other.add(new Konva.Rect({x:104,y:98,width:2,height:4,fill:'#0000ff'}));layer.add(other);
+  const overlay=new Konva.Group({name:'magnifier-placement-overlay'});
+  overlay.add(new Konva.Circle({x:100,y:100,radius:1,fill:'#000000'}));layer.add(overlay);layer.draw();
+  const original=stage.toJSON(),main=pixels(layer.getNativeCanvasElement()).slice(),renderer=new MagnifierRenderer();
+  try {for(const dpr of [1,2]){
+    const lens=renderer.render(stage,{x:100,y:100},200,200,98,dpr,'#fff',undefined,'moving',true);
+    assert.deepEqual(at(lens,49*dpr,49*dpr),[0,255,0,255]);
+    assert.deepEqual(at(lens,74*dpr,49*dpr),[0,0,255,255]);
+    assert.equal(stage.toJSON(),original);assert.deepEqual(pixels(layer.getNativeCanvasElement()),main);
+  }}finally{renderer.dispose();stage.destroy();}
+});
 
 test('magnifier omits measurement and zero text while retaining geometry and user notes', () => {
   const stage=new Konva.Stage({width:390,height:720});

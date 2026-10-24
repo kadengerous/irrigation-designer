@@ -1,3 +1,5 @@
+import {landscapeFootprint,landscapeLayerVisible} from "../landscape-objects";
+import {plantLayerVisible} from "../plant-visuals";
 import { dist, headingDeg, mid, type Pt } from "@/lib/geometry";
 import type { CadDrawing, SnapHit, SnapKind } from "@/lib/cad/types";
 import { vertPt } from "@/lib/cad/engine";
@@ -23,6 +25,7 @@ export function cadSnap(
     closeTo?: Pt | null;
     heads?: Pt[];
     excludePlant?: string;
+    excludeLandscape?:string;
   },
 ): SnapHit {
   const pxTol =
@@ -34,7 +37,7 @@ export function cadSnap(
     gridPxTol / Math.max(opts.pxPerMeter, 1e-6),
     opts.gridStep * 0.45,
   );
-  let best: SnapHit = { pt: p, kind: "none" };
+  let best: SnapHit = { pt: {x:p.x,y:p.y}, kind: "none" };
   let bestD = tol;
   const cell = Math.max(tol * 2.5, 0.25);
 
@@ -46,7 +49,7 @@ export function cadSnap(
     const samePriorityAndCloser = kind === best.kind && dd < bestD;
     if (!firstHit && !higherPriority && !samePriorityAndCloser) return;
     bestD = dd;
-    best = { pt: q, kind, ...extra };
+    best = { pt: {x:q.x,y:q.y}, kind, ...extra };
   };
 
   if (opts.closeTo && dist(p, opts.closeTo) < Math.max(tol, 28 / opts.pxPerMeter)) {
@@ -54,8 +57,19 @@ export function cadSnap(
   }
 
   if (opts.snapOn) {
+    for(const o of Object.values(d.landscapeObjects??{})) {
+      if(o.id===opts.excludeLandscape||!landscapeLayerVisible(d,o.category,o))continue;
+      consider({x:o.x,y:o.y},'center');
+      const loop=landscapeFootprint(o);
+      for(let i=0;i<loop.length;i++){
+        const a=loop[i]!,b=loop[(i+1)%loop.length]!,dx=b.x-a.x,dy=b.y-a.y;
+        const t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/(dx*dx+dy*dy||1)));
+        consider({x:a.x+t*dx,y:a.y+t*dy},'edge');
+      }
+    }
+
     if (d.layers?.plants?.visible !== false) for (const plant of Object.values(d.plants ?? {})) {
-      if (plant.id === opts.excludePlant) continue;
+      if (plant.id === opts.excludePlant || !plantLayerVisible(d,plant.kind,plant)) continue;
       consider({ x: plant.x, y: plant.y }, "center");
       const dx = p.x - plant.x, dy = p.y - plant.y, length = Math.hypot(dx, dy);
       if (length > 1e-6) consider({ x: plant.x + dx / length * plant.r, y: plant.y + dy / length * plant.r }, "tangent");
@@ -187,7 +201,7 @@ export function cadSnap(
     return best;
   }
 
-  if (!opts.snapOn && !opts.snapGridOn && best.kind !== "close") return { pt: p, kind: "none" };
+  if (!opts.snapOn && !opts.snapGridOn && best.kind !== "close") return { pt: {x:p.x,y:p.y}, kind: "none" };
   return best;
 }
 

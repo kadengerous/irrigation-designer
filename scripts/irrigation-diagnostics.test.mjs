@@ -5,7 +5,7 @@ import { readFile } from "node:fs/promises";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
-let server, checkProject, geometry, catalog, flow, emptyProject, i18n, units, focus, store;
+let server, checkProject, geometry, catalog, flow, emptyProject, i18n, units, focus, store, selectAutomaticHead;
 const memory = new Map(), previousStorage = globalThis.localStorage;
 before(async () => {
   globalThis.localStorage = { getItem: k => memory.get(k) ?? null, setItem: (k, v) => memory.set(k, v), removeItem: k => memory.delete(k) };
@@ -14,6 +14,7 @@ before(async () => {
   geometry = await server.ssrLoadModule("/src/lib/irrigation-geometry.ts");
   catalog = await server.ssrLoadModule("/src/lib/hunter-catalog.ts");
   flow = await server.ssrLoadModule("/src/lib/flow.ts");
+  ({ selectAutomaticHead } = await server.ssrLoadModule("/src/lib/automatic-head.ts"));
   ({ emptyProject } = await server.ssrLoadModule("/src/lib/project-types.ts"));
   i18n = await server.ssrLoadModule("/src/lib/i18n.ts");
   units = await server.ssrLoadModule("/src/lib/units.ts");
@@ -25,9 +26,23 @@ const zone = id => ({ id, name: `Zone ${id}`, nameKind: "generated", hidden: fal
 const rectangle = (id, x, y, w, h, cadType = "lawn") => ({ id, type: "poly", kind: "lawn", cadType, closed: true, hidden: false, locked: false,
   points: [{ x, y }, { x: x + w, y }, { x: x + w, y: y + h }, { x, y: y + h }] });
 const head = (id, x, y, patch = {}) => {
-  const item = catalog.itemById("MP2000-360"); assert.ok(item);
-  return { ...flow.catalogHeadDefaults(item), id, catalogId: item.id, x, y, start: 0, arc: 360, zone: 1,
-    popUpMm: catalog.defaultPopUpMm(item), locked: false, needsReview: false, ...patch };
+  const arc=patch.arc??360,r=patch.r??flow.catalogHeadDefaults(catalog.itemById('MP2000-360')).r;
+  const item=catalog.itemById(r>10?'I-80':`${r<=3?'MP800SR':'MP2000'}-${arc===360?360:90}`);
+  assert.ok(item);
+  let pressure=r<=2?2.1:r<=5.5?2.8:3.8;
+  let scoped=item;
+  if(item.id==='I-80'){
+    // This rotor does not permit radius reduction. Use its published i80-23
+    // pressure bracket to obtain the unchanged 20 m geometry by interpolation.
+    const nozzle=item.nozzles.find(n=>n.id==='i80-23'),rows=nozzle.performance;
+    const lo=rows.find(row=>row.radiusM<r),hi=rows.find(row=>row.radiusM>r);
+    assert.ok(lo&&hi&&hi.pressureBar>lo.pressureBar);
+    pressure=lo.pressureBar+(r-lo.radiusM)/(hi.radiusM-lo.radiusM)*(hi.pressureBar-lo.pressureBar);
+    scoped={...item,nozzles:[nozzle]};
+  }
+  const fit=selectAutomaticHead(r,arc,pressure,[scoped]);
+  assert.ok(fit,`physical diagnostic fixture: ${item.id}, ${r} m, ${arc}°`);
+  return { ...fit, id, x, y, zone: 1, locked: false, ...patch };
 };
 const project = (heads = [], polygons = []) => ({ ...emptyProject(), heads, polygons, zones: [zone(1), zone(2)] });
 
@@ -136,7 +151,7 @@ test("diagnostic area and measurements follow live edits before pointer release"
   assert.equal(line.metrics.find(m => m.key === "diagShortage").value, 0);
 
   const dryIssue = checkProject(p).find(i => i.id.startsWith("dry-"));
-  const watered = { ...p, heads: [{ ...p.heads[0], x: 10, r: 20 }] };
+  const watered = { ...p, heads: [head(p.heads[0].id,10,p.heads[0].y,{r:20})] };
   const dry = focus.liveDiagnosticIssue({ project: p, issue: dryIssue }, watered);
   assert.equal(geometry.surfaceArea(dry.area), 0, "resolved gaps leave no stale area on the drawing");
 });
@@ -179,6 +194,18 @@ test("manufacturer pressure and MP compatibility checks use nozzle data, not sup
   const b = { ...head("b", 4, 0), ...flow.catalogHeadDefaults(mp800), catalogId: mp800.id };
   const mix = checkProject(project([a, b])).find(i => i.id === "mix-1");
   assert.equal(mix.level, "error"); assert.deepEqual(mix.metrics.map(m => m.value), [10, 20]);
+  const stripItem=catalog.itemById('MP-LCS-515');
+  const strip={...a,...flow.catalogHeadDefaults(stripItem),id:'strip',catalogId:stripItem.id};
+  const stripReport=checkProject(project([strip,b]));
+  assert.ok(!stripReport.some(i=>i.id==='mix-1'),'MP Strip is not universally a standard-MP precipitation class');
+  assert.ok(stripReport.some(i=>i.id==='precip-review-1'),'MP Strip compatibility requires the actual layout');
+  const conventional=catalog.itemById('CS-530');
+  const conventionalHead={...a,...flow.catalogHeadDefaults(conventional),id:'conventional',catalogId:conventional.id};
+  assert.ok(checkProject(project([strip,conventionalHead])).some(i=>i.id==='mix-type-1'));
+  const regulated=catalog.itemById('rain-bird:5004+PCR'),regulatedNozzle=regulated.nozzles.find(n=>n.performance.some(r=>r.pressureRangeIsConstant));
+  const regulatedHead={...a,...flow.catalogHeadDefaults(regulated),id:'regulated',catalogId:regulated.id,nozzleId:regulatedNozzle.id,designPressure:5};
+  assert.ok(!checkProject(project([regulatedHead])).some(i=>i.id==='p-regulated'),'published constant pressure range is valid');
+
 });
 
 test("flow and runoff require actual inputs; unknown models never yield a complete flow check", () => {

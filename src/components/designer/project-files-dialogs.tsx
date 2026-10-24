@@ -49,14 +49,14 @@ export function ProjectTrashDialog({open,onClose}:{open:boolean;onClose:()=>void
   const [purge,setPurge]=useState<string|null>(null);
   return <><Dialog.Root open={open} onOpenChange={v=>{if(!v)onClose();}}><Dialog.Portal>
     <Dialog.Overlay className="project-files-overlay"/>
-    <Dialog.Content className="project-files-dialog" dir={localeDirection(locale)} aria-describedby="trash-description">
+    <Dialog.Content className="project-files-dialog project-trash-dialog" dir={localeDirection(locale)} aria-describedby="trash-description">
       <header><Dialog.Title>{t("projectTrash")}</Dialog.Title><Dialog.Close asChild><Button size="icon" aria-label={t("close")}><X/></Button></Dialog.Close></header>
       <Dialog.Description id="trash-description">{t("projectTrashHint")}</Dialog.Description>
       {!retainedTrash(trash).length && <p>{t("projectTrashEmpty")}</p>}
-      <ul>{retainedTrash(trash).map(({project,deletedAt})=><li className="project-trash-row" key={project.id}>
-        <div><strong>{project.name||t("untitled")}</strong><small>{formatDate(deletedAt,locale)}</small></div>
-        <div className="project-file-actions"><Button onClick={()=>{useProject.getState().restoreLibrary(project.id);void flushProjectStorage();}}><RotateCcw/>{t("restoreProject")}</Button>
-          <Button className="text-danger" onClick={()=>setPurge(project.id)}><Trash2/>{t("purgeProject")}</Button></div>
+      <ul className="project-trash-list">{retainedTrash(trash).map(({project,deletedAt})=><li className="project-trash-row" key={project.id}>
+        <div><strong><bdi>{project.name||t("untitled")}</bdi></strong><small>{formatDate(deletedAt,locale)}</small></div>
+        <div className="project-file-actions"><Button onClick={()=>{useProject.getState().restoreLibrary(project.id);void flushProjectStorage();}}><RotateCcw/><span>{t("restoreProject")}</span></Button>
+          <Button className="project-trash-delete" onClick={()=>setPurge(project.id)}><Trash2/><span>{t("purgeProject")}</span></Button></div>
       </li>)}</ul>
     </Dialog.Content>
   </Dialog.Portal></Dialog.Root>

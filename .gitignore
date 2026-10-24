@@ -15,5 +15,6 @@ public/downloads/*.zip
 !.env.example
 .project_id
 .node_modules.lock
+.sites-runtime/
 *.local
 .DS_Store

@@ -20,6 +20,12 @@ export function dimensionsInBox(d:CadDrawing,a:Pt,b:Pt,px:number,mode:'plan'|'ir
   const hits=[...layoutDimensions(d,px,mode,label).values()].filter(o=>{
     return labelBoxesOverlap(box,o.box)||o.segments.some(({a,b})=>segmentTouchesLabel(a,b,box,0));
   });
+  if(tap){
+    // Prefer the number under the pointer over neighbouring enlarged touch targets.
+    const x=b.x*px,y=b.y*px;
+    const textHit=hits.find(o=>x>=o.box.x&&x<=o.box.x+o.box.width&&y>=o.box.y&&y<=o.box.y+o.box.height);
+    if(textHit)return [textHit.id];
+  }
   return (tap?hits.slice(-1):hits).map(d=>d.id);
 }
 export function updateDimensionSelection(previous:string[],incoming:string[],additive:boolean,toggle=false) {

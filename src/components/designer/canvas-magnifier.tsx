@@ -3,9 +3,13 @@ import type Konva from "konva";
 import type { Pt } from "@/lib/geometry";
 import { useProject } from "@/lib/project-store";
 import { canvasTheme } from "@/lib/theme";
-import { canShowMagnifier, magnifierLayout } from "./canvas-magnifier-model";
+import { canShowMagnifier, magnifierLayout, constructionMagnifierFocus } from "./canvas-magnifier-model";
+import { TAPE_MEASURE_TIP, TAPE_MEASURE_BODY, TAPE_MEASURE_TICKS } from "./tape-measure-icon";
 import { MagnifierRenderer } from "./magnifier-renderer";
 import { placeFloating, workspaceBounds, floatingObstacles } from "./floating-layout";
+import {usePlacementFocus} from './placement-focus';
+import {drawPlacementSnapMarker} from './placement-snap-marker';
+import {SPRINKLER_TARGET_COLOR,SPRINKLER_TARGET_CIRCLE,SPRINKLER_TARGET_CROSS} from './sprinkler-target';
 
 /** A live detail view of the existing scene, independent of the main canvas's input and exports. */
 export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, drawingFocus }: {
@@ -26,7 +30,7 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
     if (!ctx) return;
     const renderer = new MagnifierRenderer();
     const contacts = new Set<number>();
-    let contact: { id: number; x: number; y: number; startX: number; startY: number; moved: boolean; handle: Konva.Node | null } | null = null;
+    let contact: { id: number; x: number; y: number; startX: number; startY: number; moved: boolean; handle: Konva.Node | null; landscapeTransform:boolean } | null = null;
     let raf = 0;
     const hide = () => { frameElement.style.visibility = "hidden"; };
     const stop = () => {
@@ -35,29 +39,35 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       raf = 0;
       hide();
     };
-    const reset = () => { stop(); contacts.clear(); };
+    const reset = () => { stop(); contacts.clear(); usePlacementFocus.setState({focus:null}); };
     const frame = () => {
       raf = 0;
-      if (!contact) return;
+      const placement=usePlacementFocus.getState().focus;
+      if ((!contact&&!placement)||(placement?.owner==='catalog-head'&&!contact)) {hide();return;}
       const stage = stageRef.current;
       const state = useProject.getState();
-      const eligible = canShowMagnifier({ blocked: gestureBlocked.current || contacts.size !== 1,
+      const eligible = canShowMagnifier({ blocked: gestureBlocked.current || contacts.size > 1,
         catalogOpen: state.catalogOpen, editDrag: editDrag.current, tool: state.tool, drawSub: state.drawSub,
         cadEditId: state.cadEditId, selectedEdgeId: state.selectedEdgeId, draftPointCount: state.draft.points.length,
-        sectorEditId: state.sectorEditId });
-      if (!stage || !contact.moved || !eligible) {
+        sectorEditId: state.sectorEditId, measureSub: state.measureSub,
+        placementActive:!!placement,landscapeTransform:contact?.landscapeTransform });
+      if (!stage || (!placement&&!contact?.moved) || !eligible) {
         hide();
         raf = requestAnimationFrame(frame);
         return;
       }
       const rect = wrap.getBoundingClientRect();
-      const finger = { x: contact.x - rect.left, y: contact.y - rect.top };
+      const finger = contact?{ x: contact.x - rect.left, y: contact.y - rect.top }:
+        {x:(placement!.point.x*state.pxPerMeter+state.panX)*rect.width/stage.width(),y:(placement!.point.y*state.pxPerMeter+state.panY)*rect.height/stage.height()};
       let focus = finger;
-      if (editDrag.current && contact.handle?.getStage() === stage && contact.handle.isVisible()) {
+      if(placement){
+        focus={x:(placement.point.x*state.pxPerMeter+state.panX)*rect.width/stage.width(),y:(placement.point.y*state.pxPerMeter+state.panY)*rect.height/stage.height()};
+      } else if (editDrag.current && contact?.handle?.getStage() === stage && contact.handle.isVisible()) {
         const position = contact.handle.getAbsolutePosition();
         focus = { x: position.x * rect.width / stage.width(), y: position.y * rect.height / stage.height() };
       } else if (!editDrag.current && drawingFocusRef.current) {
-        const point = drawingFocusRef.current;
+        const point = constructionMagnifierFocus(state.tool === "draw" ? state.drawSub : null,
+          state.draft.points.at(-1) ?? null, drawingFocusRef.current);
         focus = { x: (point.x * state.pxPerMeter + state.panX) * rect.width / stage.width(),
           y: (point.y * state.pxPerMeter + state.panY) * rect.height / stage.height() };
       }
@@ -70,7 +80,7 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       if (!phone || state.sectorEditId) {
         const bounds = phone ? { x: rect.left + 4, y: rect.top + topInset + 4, width: rect.width - 8, height: rect.height - topInset - 8 } : workspaceBounds();
         const obstacles = [...floatingObstacles(frameElement,30),
-          {x:contact.x-44,y:contact.y-44,width:88,height:88},
+          {x:rect.left+finger.x-44,y:rect.top+finger.y-44,width:88,height:88},
           {x:rect.left+focus.x-32,y:rect.top+focus.y-32,width:64,height:64}];
         const lensSize = phone ? 100 : 120;
         const wanted={x:bounds.x+bounds.width-lensSize,y:bounds.y};
@@ -96,12 +106,30 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       ctx.clearRect(0, 0, contentSize, contentSize);
       ctx.fillStyle = theme.bg;
       ctx.fillRect(0, 0, contentSize, contentSize);
-      const source = renderer.render(stage, focus, rect.width, rect.height, contentSize, dpr, theme.bg);
+      const source = renderer.render(stage, focus, rect.width, rect.height, contentSize, dpr, theme.bg,undefined,placement?.objectId,!!placement);
       ctx.drawImage(source, 0, 0, contentSize, contentSize);
+      if(placement)drawPlacementSnapMarker(ctx,contentSize,placement.snapKind);
+      if (state.tool === "measure" && state.measureSub === "measure") {
+        ctx.save();
+        ctx.translate(contentSize/2 - TAPE_MEASURE_TIP.x, contentSize/2 - TAPE_MEASURE_TIP.y);
+        ctx.strokeStyle = theme.ink; ctx.fillStyle = theme.bg; ctx.lineWidth = 0.8;
+        ctx.lineJoin = "round"; ctx.lineCap = "round";
+        const body = new Path2D(TAPE_MEASURE_BODY);
+        ctx.fill(body); ctx.stroke(body); ctx.stroke(new Path2D(TAPE_MEASURE_TICKS));
+        ctx.beginPath(); ctx.arc(17.25,11,2.6,0,Math.PI*2); ctx.stroke();
+        ctx.restore();
+      }
       // A fine, open-centre sight leaves the actual join visible.
       const centre = contentSize / 2;
       ctx.beginPath();
-      for (const sign of [-1, 1]) {
+      if(placement?.owner==='catalog-head'){
+        ctx.save();ctx.translate(centre,centre);ctx.lineCap='round';
+        const cross=new Path2D(SPRINKLER_TARGET_CROSS);
+        ctx.beginPath();ctx.arc(0,0,SPRINKLER_TARGET_CIRCLE,0,Math.PI*2);
+        ctx.fillStyle='#0f9f8233';ctx.fill();ctx.strokeStyle='white';ctx.lineWidth=2.5;ctx.stroke();
+        ctx.lineWidth=3;ctx.stroke(cross);ctx.strokeStyle=SPRINKLER_TARGET_COLOR;ctx.lineWidth=1.25;ctx.stroke();ctx.stroke(cross);
+        ctx.restore();ctx.beginPath();
+      }else for (const sign of [-1, 1]) {
         ctx.moveTo(centre + sign * 8, centre); ctx.lineTo(centre + sign * 14, centre);
         ctx.moveTo(centre, centre + sign * 8); ctx.lineTo(centre, centre + sign * 14);
       }
@@ -124,6 +152,10 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       const hit = stage.getIntersection({ x: (event.clientX - rect.left) * stage.width() / rect.width,
         y: (event.clientY - rect.top) * stage.height() / rect.height });
       let handle: Konva.Node | null = null;
+      let landscapeTransform=false;
+      for(let node:Konva.Node|null=hit;node&&node!==stage;node=node.getParent()){
+        if(node.hasName('plant-controls')||node.hasName('landscape-controls'))landscapeTransform=true;
+      }
       for (let parent = hit?.getParent(); parent && parent !== stage; parent = parent.getParent()) {
         if (parent.getClassName() === "Layer") break;
         if (parent.hasName("magnifier-symbol") || parent.getChildren().some(child => child.hasName("edit-point-glyph"))) { handle = parent; break; }
@@ -131,7 +163,7 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
       // Desktop magnification is reserved for the small irrigation editing handles.
       if (event.pointerType === "mouse" && !handle?.hasName("sector-edit-handle")) return;
       contact = { id: event.pointerId, x: event.clientX, y: event.clientY,
-        startX: event.clientX, startY: event.clientY, moved: false, handle };
+        startX: event.clientX, startY: event.clientY, moved: false, handle,landscapeTransform };
       if (!raf) raf = requestAnimationFrame(frame);
     };
     const move = (event: PointerEvent) => {
@@ -145,6 +177,7 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
     };
     const visibility = () => { if (document.hidden) reset(); };
     const options = { capture: true, passive: true };
+    const unsubscribe=usePlacementFocus.subscribe(()=>{if(!raf)raf=requestAnimationFrame(frame);});
     // Observe only. Existing drawing, snapping, pointer capture and touch navigation own input.
     window.addEventListener("pointerdown", down, options);
     window.addEventListener("pointermove", move, options);
@@ -153,6 +186,7 @@ export function CanvasMagnifier({ stageRef, wrapRef, editDrag, gestureBlocked, d
     window.addEventListener("blur", reset);
     document.addEventListener("visibilitychange", visibility);
     return () => {
+      unsubscribe();
       reset();
       renderer.dispose();
       window.removeEventListener("pointerdown", down, true);

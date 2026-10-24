@@ -1,4 +1,4 @@
-import type { CatalogItem, CatalogNozzle } from './hunter-catalog';
+import type { CatalogItem, CatalogNozzle } from './equipment-catalog';
 
 export type CoverageRule = 'HEAD_TO_HEAD' | 'SPECIAL' | 'CUSTOM';
 export const COVERAGE_RULE_SOURCES = {
@@ -9,6 +9,10 @@ export const COVERAGE_RULE_SOURCES = {
 
 /** A catalog policy is not inferred from the current amount of geometric overlap. */
 export function modelCoveragePolicy(item: CatalogItem): { coverageRule:CoverageRule; coverageRuleSource:string; coverageRuleId:string } {
+  if(item.manufacturerId && item.manufacturerId!=='hunter') return {
+    coverageRule:item.coverageRule??'CUSTOM',coverageRuleId:item.coverageRuleId??'unverified-layout',
+    coverageRuleSource:item.coverageRuleSource??item.sourceUrl,
+  };
   if(item.id==='MP-CORNER') return {coverageRule:'SPECIAL',coverageRuleId:'mp-corner-supplement',coverageRuleSource:COVERAGE_RULE_SOURCES.corner};
   if(item.strip) return {coverageRule:'SPECIAL',coverageRuleId:'strip-layout',coverageRuleSource:item.family==='strip'?COVERAGE_RULE_SOURCES.corner:item.sourceUrl};
   if(['mp','mp800','spray','he','fixed','short'].includes(item.family) || ['PGJ','SRM','PGP-ADJ','PGP-ULTRA','I-20','I-20-SS'].includes(item.id))

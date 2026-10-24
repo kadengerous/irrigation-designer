@@ -1,8 +1,8 @@
 import type { CadDim, CadDrawing } from './types';
-import { figureAtPoint, irrigationFigures, onFigureBoundary, figureAxisIntersections, type IrrigationFigure } from '../irrigation-figures';
+import { figureAtPoint, closedDrawingFigures, irrigationFigures, onFigureBoundary, figureAxisIntersections, type IrrigationFigure } from '../irrigation-figures';
 import { dist, projectOnSegment, shoelace, type Pt } from '../geometry';
 
-type HeadPoint = Pt & {id:string};
+type HeadPoint = Pt & {id:string;zone?:number};
 // Drafting association only, never added to a watering radius.
 const BOUNDARY_TOLERANCE=.10;
 function straightSides(input:Pt[]) {
@@ -28,17 +28,50 @@ export function sprinklerDatum(point:Pt,figure:IrrigationFigure,axis:'x'|'y') {
 export function displayedDimensions(d:CadDrawing, mode=d.automaticDimensionMode ?? (d.irrigationDimensions?'irrigation':'plan')) {
   return Object.values(d.dims??{}).filter(dim=>{
     const key=dim.autoKey ?? (dim.id.startsWith('auto:')?dim.id.slice(5):'');
+    if(mode==='irrigation')return !!(dim.aHeadId&&dim.bHeadId)||key.startsWith('heads:')||key.startsWith('irrigation:')&&(key.includes(':side:')||key.includes(':between:')||key.includes(':inside:'));
     if(!key)return true; // User dimensions are never hidden by the automatic mode.
-    if(mode==='irrigation' && d.irrigationDimensions) return !key.startsWith('edge:')&&!key.startsWith('face:');
     return !key.startsWith('irrigation:')&&!key.startsWith('heads:');
   });
 }
 /** Derived CAD dimensions, never an all-pairs network. Manual dimensions are left untouched. */
-export function resolveSprinklerDimensions(d: CadDrawing, heads: HeadPoint[], generate = false): Record<string,CadDim> {
+export function resolveSprinklerDimensions(d: CadDrawing, heads: HeadPoint[], generate = false, removedHeadIds: string[] = []): Record<string,CadDim> {
   const setting=d.irrigationDimensions;
   if (!setting) return d.dims ?? {};
   const old=d.dims ?? {}, dims:Record<string,CadDim>={};
   const headById=new Map(heads.map(h=>[h.id,h]));
+  const keys=Object.values(old).map(dim=>dim.autoKey??dim.id.replace(/^auto:/,''));
+  const knownHeadIds=setting.headIds??[...new Set(keys.flatMap(key=>{
+    const parts=key.split(':');
+    if(key.startsWith('heads:'))return parts.slice(-2);
+    if(!key.startsWith('irrigation:'))return [];
+    if(parts.includes('inside'))return parts.slice(-2,-1);
+    return parts.slice(-2).filter(id=>!id.startsWith('corner-'));
+  }))];
+  // Reconnection is an explicit deletion operation, never a load-time migration.
+  const removed=new Set(removedHeadIds);
+  const bridges=new Map<string,Map<string,Set<string>>>();
+  for(const dim of Object.values(old)){
+    const key=dim.autoKey??dim.id.replace(/^auto:/,'');
+    const parts=key.split(':');
+    if(!key.startsWith('irrigation:') || !['side','step','between'].includes(parts[2]!))continue;
+    if(setting.suppressed?.includes(key)||d.suppressedAutoDimensions?.includes(key))continue;
+    const [a,b]=parts.slice(-2),figure=parts[1]!;
+    const graph=bridges.get(figure)??new Map<string,Set<string>>();bridges.set(figure,graph);
+    for(const [from,to] of [[a!,b!],[b!,a!]]){const links=graph.get(from)??new Set<string>();links.add(to);graph.set(from,links);}
+  }
+  const reconnects=(key:string)=>{
+    const parts=key.split(':'),graph=bridges.get(parts[0]!);
+    if(!graph || !['side','step','between'].includes(parts[1]!))return false;
+    const [a,b]=parts.slice(-2),seen=new Set<string>(),queue=[a!];
+    while(queue.length){
+      const from=queue.shift()!;seen.add(from);
+      for(const to of graph.get(from)??[]){
+        if(to===b && from!==a)return true;
+        if(removed.has(to)&&!seen.has(to))queue.push(to);
+      }
+    }
+    return false;
+  };
   for (const [id,dim] of Object.entries(old)) if (!(dim.autoKey??dim.id.replace(/^auto:/,'')).startsWith('irrigation:') && !(dim.autoKey??dim.id.replace(/^auto:/,'')).startsWith('heads:')) {
     const a=dim.aHeadId?headById.get(dim.aHeadId):dim.a,b=dim.bHeadId?headById.get(dim.bHeadId):dim.b;
     if(a&&b)dims[id]={...dim,a:{x:a.x,y:a.y},b:{x:b.x,y:b.y}};
@@ -48,20 +81,35 @@ export function resolveSprinklerDimensions(d: CadDrawing, heads: HeadPoint[], ge
   const add=(key:string,a:Pt,b:Pt,offset:number)=>{
     if (dist(a,b)<1e-6 || pairs.has(pairKey(a,b))) return;
     const autoKey=`irrigation:${key}`, id=`auto:${autoKey}`;
-    if(!generate && !old[id]) return; // Live editing updates existing dimensions only.
+    if(!generate && !old[id] && !reconnects(key)) return;
     if(setting.suppressed?.includes(autoKey) || d.suppressedAutoDimensions?.includes(autoKey)) return;
     const previous=old[id];
     dims[id]={id,autoKey,a:{x:a.x,y:a.y},b:{x:b.x,y:b.y},offset:previous && Math.abs(Math.abs(previous.offset)-Math.abs(setting.offset))>1e-7 ? previous.offset : offset,...(previous?.label!==undefined?{label:previous.label}:{})};
+    if(setting.headsOnly){
+      const parts=key.split(':');
+      if(parts.includes('inside')){
+        if(parts.at(-1)==='y')dims[id]!.bHeadId=parts.at(-2);
+        else dims[id]!.aHeadId=parts.at(-2);
+      }else{dims[id]!.aHeadId=parts.at(-2);dims[id]!.bHeadId=parts.at(-1);}
+    }
     pairs.add(pairKey(a,b));
   };
-  const figures=irrigationFigures(d), grouped=new Map<string,HeadPoint[]>();
-  const keys=Object.values(old).map(dim=>dim.autoKey??dim.id.replace(/^auto:/,''));
+  // Dimensions describe placed equipment against the drawing, independently of
+  // whether a layer is a site outline or requires watering. Coverage and automatic
+  // placement continue using irrigationFigures and their watering assignments.
+  const figures=(setting.headsOnly?irrigationFigures(d):closedDrawingFigures(d)).filter(f=>!d.faces[f.id]?.hidden), grouped=new Map<string,HeadPoint[]>();
   // Exclude subsequently placed heads so they cannot split an existing chain.
   // For old files infer the participating IDs from the dimensions already saved.
-  const participants=generate?heads:heads.filter(h=>setting.headIds
-    ? setting.headIds.includes(h.id)
-    : keys.some(key=>key.startsWith('irrigation:')&&(key.endsWith(`:${h.id}`)||key.includes(`:${h.id}:`))));
-  for (const h of participants) { const f=figureAtPoint(h,figures)??figures.find(f=>f.points.some((a,i)=>dist(h,projectOnSegment(h,a,f.points[(i+1)%f.points.length]!).pt)<=BOUNDARY_TOLERANCE)); if(f) grouped.set(f.id,[...(grouped.get(f.id)??[]),h]); }
+  // Deletion reconnects the surviving participants. Newly placed sprinklers
+  // still wait for the user's next automatic-dimensions command.
+  const participants=generate?heads:heads.filter(h=>knownHeadIds.includes(h.id));
+  for (const h of participants) {
+    // A shared corner belongs to both contour chains. Assigning it only to the
+    // smaller neighbouring figure silently removed dimensions from the other.
+    const boundary=figures.filter(f=>f.points.some((a,i)=>dist(h,projectOnSegment(h,a,f.points[(i+1)%f.points.length]!).pt)<=BOUNDARY_TOLERANCE));
+    const containing=boundary.length?boundary:[figureAtPoint(h,figures)].filter((f):f is IrrigationFigure=>!!f);
+    for(const f of containing)grouped.set(f.id,[...(grouped.get(f.id)??[]),h]);
+  }
   for (const f of figures) {
     const members=grouped.get(f.id)??[], pts=straightSides(f.points);
     const boundaryMembers=members.filter(h=>pts.some((a,i)=>dist(h,projectOnSegment(h,a,pts[(i+1)%pts.length]!).pt)<=BOUNDARY_TOLERANCE));
@@ -73,6 +121,7 @@ export function resolveSprinklerDimensions(d: CadDrawing, heads: HeadPoint[], ge
         .sort((p,q)=>p.projection.t-q.projection.t || p.h.id.localeCompare(q.h.id));
       for(let j=1;j<side.length;j++) {
         const h=side[j-1]!.h,k=side[j]!.h;
+        if(setting.headsOnly && h.zone!==k.zone)continue;
         add(`${f.id}:side:${i}:${h.id}:${k.id}`,h,k,exterior);
       }
     });
@@ -96,6 +145,10 @@ export function resolveSprinklerDimensions(d: CadDrawing, heads: HeadPoint[], ge
       // Do not dimension the long empty remainder when only one side is populated.
       if(!recessed && end-from.position>perimeter/2+1e-6)continue;
       if(!corners.length)continue;
+      if(setting.headsOnly){
+        if(from.h.zone===to.h.zone)add(`${f.id}:between:${from.h.id}:${to.h.id}`,from.h,to.h,exterior);
+        continue;
+      }
       const chain=[{p:from.h,id:from.h.id},...corners.map(c=>({p:c.p,id:`corner-${c.i}`})),{p:to.h,id:to.h.id}];
       for(let i=1;i<chain.length;i++) {
         const a=chain[i-1]!.p,b=chain[i]!.p;

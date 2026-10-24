@@ -1,7 +1,9 @@
 import type { Locale } from "./locale-config";
 import { text as uiText } from "@/lib/i18n";
+export type LandscapeVisualMode = "image" | "vector";
+export const isLandscapeVisualMode = (value: unknown): value is LandscapeVisualMode => value === "image" || value === "vector";
 /** Catalog facts are sourced values; null always means unknown, never zero. */
-export type PlantCategory = "tree" | "shrub" | "flower";
+export type PlantCategory = "tree" | "shrub" | "flower" | "grass";
 export type PlantSource = { title: string; url: string; accessedAt: string };
 export type PlantPhoto = { url: string; pageUrl: string; author: string; license: string; licenseUrl?: string };
 export type PlantRange = { min: number; max: number; sourceUrl: string };
@@ -34,14 +36,19 @@ export type PlantRecord = {
     wettingZone: string | null;
     recommendations: string | null;
   };
-  symbol: "deciduous" | "conifer" | "shrub" | "flower" | null;
+  symbol: "deciduous" | "conifer" | "shrub" | "flower" | "grass" | null;
   sources: PlantSource[];
   externalId?: number;
+  /** Decorative artwork is a design choice, not a botanical identification. */
+  visualId?: string;
+  decorative?: boolean;
+  defaultDiameterM?: number;
 };
 
 /** Inputs for a future, source-backed irrigation model. No generic demand constant. */
 export type PlantIrrigationContext = {
   plantId: string;
+  category?: PlantCategory;
   diameterM: number;
   climateZone: string | null;
   season: string | null;
@@ -53,8 +60,8 @@ export type PlantIrrigationContext = {
   factors?: { value: number; meaning: string; sourceUrl: string }[];
 };
 
-export const PLANT_CATEGORIES = { get tree() { return uiText("plantCategory_tree"); }, get shrub() { return uiText("plantCategory_shrub"); }, get flower() { return uiText("plantCategory_flower"); } } as const;
-export const PLANT_TYPES = { get tree() { return uiText("plantType_tree"); }, get shrub() { return uiText("plantType_shrub"); }, get flower() { return uiText("plantType_flower"); } } as const;
+export const PLANT_CATEGORIES = { get tree() { return uiText("plantCategory_tree"); }, get shrub() { return uiText("plantCategory_shrub"); }, get flower() { return uiText("plantCategory_flower"); }, get grass() { return uiText("plantCategory_grass"); } } as const;
+export const PLANT_TYPES = { get tree() { return uiText("plantType_tree"); }, get shrub() { return uiText("plantType_shrub"); }, get flower() { return uiText("plantType_flower"); }, get grass() { return uiText("plantType_grass"); } } as const;
 export const WATER_NEEDS = { get low() { return uiText("waterNeed_low"); }, get moderate() { return uiText("waterNeed_moderate"); }, get high() { return uiText("waterNeed_high"); } } as const;
 // Fold Latin accents for search without stripping Japanese voicing marks or changing stored names.
 export const normalizePlantSearch = (text: string) => text.normalize("NFKC").trim().toLowerCase()
@@ -66,7 +73,7 @@ export const plantSearchText = (p: PlantRecord) => normalizePlantSearch([p.russi
 
 /** Shared input boundary for the future irrigation module; deliberately performs no estimation. */
 export function plantIrrigationInput(plant: import("./cad/types").CadPlant, project: import("./project-types").Project): PlantIrrigationContext {
-  return { ...plant.irrigation, plantId: plant.catalogId ?? plant.id, diameterM: plant.r * 2,
+  return { ...plant.irrigation, plantId: plant.catalogId ?? plant.id, category: plant.kind, diameterM: plant.r * 2,
     climateZone: project.meta.climateZone ?? null, season: project.meta.season ?? null,
     exposure: plant.irrigation?.exposure ?? null, soil: plant.irrigation?.soil ?? project.meta.soil ?? null,
     method: plant.irrigation?.method ?? null };

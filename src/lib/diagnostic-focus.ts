@@ -5,6 +5,7 @@ import { headSurface, surfaceBounds, irrigationSurfaces, unionSurfaces, subtract
 import { formatNumber } from "./i18n";
 import { clampPxPerMeter } from "./geometry";
 import { directedReach, dryOnHeadLink } from './head-to-head';
+import { headWorkingBar } from './hydro';
 import { formatAreaU, formatFlowU, formatLenU, formatPrecipitation, formatPressureU, type UnitPrefs } from "./units";
 
 export type DiagnosticFocus = { project: Project; issue: Issue };
@@ -41,7 +42,7 @@ export function liveDiagnosticIssue(focus: DiagnosticFocus | null, project: Proj
           next.titleKey=reach.reached?'noIssues':'diagOverlap';
           next.detailKey=reach.reached?'noIssues':!reach.inSector?'diagDirectionDetail':confirmed?'diagOverlapDryDetail':'diagOverlapWetDetail';
         } catch {next.area=[];next.level='info';next.detailKey='diagGeometryMissing';}
-        next.metrics=next.metrics.map(m=>m.key==='workingPressure'?{...m,value:a.designPressure}:m);
+        next.metrics=next.metrics.map(m=>m.key==='workingPressure'?{...m,value:headWorkingBar(a)}:m);
       }
     } else if(issue.direction) {
       next={...next,resolved:true,level:'info',titleKey:'noIssues',detailKey:'noIssues',direction:undefined,area:[],metrics:[]};

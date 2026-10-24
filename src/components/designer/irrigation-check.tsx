@@ -9,7 +9,7 @@ import { liveDiagnosticIssue, formatDiagnosticMetric, useDiagnosticFocus } from 
 import { formatNumber, tr, type Locale } from "@/lib/i18n";
 import { localeDirection } from "@/lib/locale-config";
 import { zoneLabel, type Project } from "@/lib/project-types";
-import { itemById } from "@/lib/hunter-catalog";
+import { catalogForHead,  itemById } from "@/lib/equipment-catalog";
 import { catalogName, nozzleName } from "@/lib/catalog-localization";
 import { flowLabel, fromLpm, precipitationUnit, lenLabel, toLpm, type UnitPrefs } from "@/lib/units";
 import { LocalizedNumberInput } from "./localized-number-input";
@@ -19,7 +19,7 @@ import { diagnosticReportCards } from "@/lib/diagnostic-report";
 const LEVEL_KEY = { error: "diagErrors", warn: "diagWarnings", info: "diagInformation" } as const;
 function headDescription(project: Project, id: string) {
   const index = project.heads.findIndex(head => head.id === id), head = project.heads[index];
-  const item = head && itemById(head.catalogId), nozzle = item?.nozzles.find(n => n.id === head.nozzleId);
+  const item = head && catalogForHead(head), nozzle = item?.nozzles.find(n => n.id === head.nozzleId);
   const name = item ? `${catalogName(item)}${nozzle && item.type === 'rotor' ? ` (${nozzleName(nozzle)})` : ''}` : head?.catalogId ?? id;
   return `${name}${index >= 0 ? ` · #${formatNumber(index + 1, 0)}` : ''}`;
 }
@@ -86,7 +86,7 @@ export function IrrigationReport({ project, issues, units, locale, filter, onFil
           <summary><span className="diagnostic-title">{t(group.titleKey)} <span className="diagnostic-category-count">({formatNumber(group.entries.length, 0)})</span></span>
             <span className="diagnostic-shared">{zones(group.zoneIds)}</span>
             {!!group.headIds.length && <span className="diagnostic-models">{[...new Set(group.headIds.map(id => {
-              const head = project.heads.find(h => h.id === id), item = head && itemById(head.catalogId);
+              const head = project.heads.find(h => h.id === id), item = head && catalogForHead(head);
               return item ? catalogName(item) : head?.catalogId ?? id;
             }))].map(name => <bdi key={name}>{name}</bdi>)}</span>}
             <span className="diagnostic-expand">{t('details')}<ChevronRight aria-hidden="true"/></span>

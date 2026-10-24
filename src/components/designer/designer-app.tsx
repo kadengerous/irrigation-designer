@@ -1,5 +1,21 @@
+import {EquipmentLibraryControls,EquipmentDataStatus,EquipmentSeriesSelector,EquipmentGroupNote,EquipmentSubgroupButtons} from "./equipment-library-controls";
+import {hunterLibrarySubgroups} from '@/lib/hunter-library';
+import {equipmentGroupsFor,equipmentGroupSelection,equipmentGroup,equipmentGroupCatalog,equipmentInnerSeries,equipmentSeriesOptions,equipmentGroupItem} from '@/lib/equipment-groups';
+import {equipmentTechnology} from "@/lib/equipment-library";
+import {automaticCandidateSupported} from '@/lib/automatic-head';
+import {manufacturerName, nozzleTablePressure} from "@/lib/equipment-catalog";
+import {engineeringMaterials} from '@/lib/engineering-materials';
 "use client";
-import { projectHasContent } from "@/lib/project-store";
+import {EngineeringWorkspace} from './engineering-workspace';
+import {IrrigationSystemCards} from './irrigation-system-cards';
+import {EngineeringIcon} from './engineering-symbol';
+import {installDesignerSelectionGuard} from "@/lib/designer-selection";
+import { CornerRoundingPanel, FigureContextTools, RoundedFigureDimensions } from "./figure-context-tools";
+import { contextualFigure, useCornerRounding } from "@/lib/corner-rounding-store";
+import { useLayerFillLibrary } from "@/lib/layer-fill-library";
+import { cutFigures } from "@/lib/cad/cut-figures";
+import { projectRequiresName } from "@/lib/project-store";
+import { applyUiSize, uiPixels } from "@/lib/ui-scale";
 import { frameUpdate } from "@/lib/frame-update";
 import { zoneLabel } from "@/lib/project-types";
 import { nozzleName, catalogName, catalogUse, catalogNote, catalogColor, plantName } from "@/lib/catalog-localization";
@@ -11,15 +27,23 @@ import { TapeMeasureIcon } from "./tape-measure-icon";
 import { SprinklerIcon } from "./sprinkler-icon";
 import { MeasurementResult } from "./measurement-result";
 import { CatalogSeriesInfo, CatalogThumb, CatalogReference } from "./catalog-details";
+import {coveragePatternLabel, coverageSize, coverageSizeLabel, coverageSizeRange, hasStreamCoverage} from '@/lib/catalog-coverage';
+import { PrecipitationStats } from "./precipitation-stats";
+import { displayPrecipitation } from "@/lib/precipitation-display";
 import { sliderRange, sliderFillPosition } from "@/lib/slider-range";
 import { headRadiusScale } from "@/lib/head-adjustment";
 import { HEAD_CONTROL_COLORS } from "@/lib/head-sector-edit";
-import { LandscapeLibrary, PlantInspector, PlantPlacementHint } from "./landscape-library";
+import {LandscapeLibrary} from "./landscape-objects-library";
+import {LandscapeLayersPanel} from './landscape-layers-panel';
+import {WorkspacePanelTitle} from './workspace-panel-title';
+import {LandscapeCategoryBar} from './landscape-category-bar';
+import {LandscapeSelectionActions} from './landscape-selection-actions';
+import {LandscapeReturnTrash} from './landscape-return-trash';
 import { ReferencePanel, useReferenceImport } from "./reference-panel";
 import { REFERENCE_ACCEPT, referenceFileKind } from "@/lib/reference-file";
 
-import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode, type RefObject } from "react";
-import { createPortal } from "react-dom";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode, type RefObject } from "react";
+import { createPortal, flushSync } from "react-dom";
 import * as Popover from "@radix-ui/react-popover";
 import * as Dialog from "@radix-ui/react-dialog";
 import { DirectionProvider } from "@radix-ui/react-direction";
@@ -53,7 +77,6 @@ import {
   MonitorPlay,
   Menu,
   Minus,
-  MoreHorizontal,
   MousePointer2,
   MoveHorizontal,
   Pencil,
@@ -75,33 +98,32 @@ import {
 import { toast, Toaster } from "sonner";
 import { activeNumberLocale, formatDate, formatNumber, parseLocalizedNumber, setActiveLocale, setNumberPrefs, tr } from "@/lib/i18n";
 import { applyTheme } from "@/lib/theme";
-import { fromBar, toBar, toLpm, pressureLabel, formatDepth, formatPrecipitation, setActiveUnits, flowLabel, fromLpm, formatAreaU, formatFlowU, formatGridStep, formatLenU, formatPressureU, fromM2, fromMeters, lenLabel, areaLabel, LENGTH_OPTS, toM2, toMetersLen } from "@/lib/units";
+import { fromBar, toBar, toLpm, pressureLabel, setActiveUnits, flowLabel, fromLpm, formatAreaU, formatFlowU, formatGridStep, formatLenU, formatPressureU, fromM2, fromMeters, lenLabel, areaLabel, LENGTH_OPTS, toM2, toMetersLen } from "@/lib/units";
 import { SettingsPanel } from "@/components/designer/settings-panel";
 import { layoutOnDrawing, layoutOnPolygon } from "@/lib/auto-layout";
-import { IrrigationCheck, IrrigationCheckButton } from "./irrigation-check";
 import { AutomaticPlanControls } from "./automatic-plan-controls";
-import { CatalogPlacementPreview } from './sprinkler-placement-guides';
+import { ProjectsSubmenu } from "./projects-submenu";
 import { FileSaveDialog } from './file-save-dialog';
 import { ProjectExportDialog, ProjectTrashDialog } from "./project-files-dialogs";
 import { attachStorageLifecycle, flushProjectStorage } from "@/lib/workspace-storage";
 import { coverageStats, exclusionPolygons, lawnPolygon } from "@/lib/coverage";
-import { CATEGORIES, bodiesFor, bodyForHead, bomLineName, catalogPhoto, defaultBodyFor, defaultNozzle, itemById, nozzleRange, placeableCatalog, recommendedBodyFor, stripAtPressure, workingPressureBar, type CatalogItem } from "@/lib/hunter-catalog";
+import { catalogForHead, catalogPressureLabel, equipmentAppearance, CATEGORIES, bodiesFor, bodyForHead, bomLineName, defaultBodyFor, defaultNozzle, itemById, nozzleRange, placeableCatalog, recommendedBodyFor, stripAtPressure, workingPressureBar, type CatalogItem } from "@/lib/equipment-catalog";
 import { exportDxf, exportEstimateExcel, exportEstimatePdf, exportEstimateWord, exportPdf, exportPdfFromProject, exportPng, exportPngFromProject, exportProjectJson, exportSvg } from "@/lib/export-plan";
 import { downloadProjectFile, fileStem, parseProjectFile, toProjectFile } from "@/lib/project-file";
-import { catalogHeadDefaults, computeFlow, pressureRange, pressureSteps, headFlow, runTimeMin } from "@/lib/flow";
+import { catalogHeadDefaults, computeFlow, geometryAt, pressureRange, headPressureSteps, headFlow } from "@/lib/flow";
 import { closedPathSideStarts, dist, fmt1, fmtM, headingDeg, parseMeasureUnit, pointInPoly, polygonArea, toMeters, uid, type Pt } from "@/lib/geometry";
 import { parseCadInput } from "@/lib/cad/parse";
 import { arcLength, catmullRom, faceArea, faceCentroid, faceEdges, faceLayerNumber, facePerimeter, facePoints, isDrawnCurveFace, isInternalEdge, isTriangleFace, rectMetaMatchesFace, rectWorldCorners, setFaceSideLength, triangleMetrics, mergeLayers, layerFaceIds, layerRepresentatives, layerArea, layerBounds } from "@/lib/cad/engine";
 import { segmentFigures, createSegmentFigure } from "@/lib/cad/segment-figures";
+import { attachedSegmentFigures, resolveAttachedSegmentFigure } from "@/lib/cad/attached-segment-figures";
 import { fusionCandidates, fuseFigures } from "@/lib/cad/fuse-figures";
 import { CAD_LAYERS, REGION_FILL, layerForType } from "@/lib/cad/types";
-import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, projectZoneLimit, recommendPump, zoneFlow } from "@/lib/hydro";
+import { DEFAULT_ZONE_LPM, defaultMaxZoneLpm, projectZoneLimit, zoneFlow } from "@/lib/hydro";
 import { HeadSelectionActions } from "./head-selection-actions";
 import { PressureSteps } from "./pressure-steps";
 import { HeadPlacementSettings } from "./head-placement-settings";
 import { BodyOptions } from "./body-options";
 import { useZoneDeletion } from "./zone-delete-dialog";
-import { ZoneList } from "./zone-list";
 import { SectorEditIcon } from "./head-sector-actions";
 import { type Head, type Project, zoneColor } from "@/lib/project-types";
 import { isNamed, useProject, projectWithView, updateHeadSettings, drawingForEditing as drawingOrMigrate } from "@/lib/project-store";
@@ -110,7 +132,7 @@ import { Button } from "@/components/ui/button";
 import { CanvasHost } from "@/components/designer/canvas-host";
 import { MobilePreview } from "@/components/designer/mobile-preview";
 import { MobileGridButton } from "@/components/designer/mobile-grid-button";
-import { changeMaterialOrientation, layerTitle, LayerColorPicker, MobileLayers, MobileSheet, selectedObjectKey, usePhoneWorkspace, useWorkspaceViewport, type MobilePanel } from "@/components/designer/mobile-workspace";
+import { LayerFillLibrary, layerTitle, LayerColorPicker, MobileLayers, MobileSheet, selectedObjectKey, usePhoneWorkspace, useWorkspaceViewport, type MobilePanel } from "@/components/designer/mobile-workspace";
 
 const MEASURE_SUBS: { id: "measure" | "guide"; key: string }[] = [
   { id: "measure", key: "measure" },
@@ -227,6 +249,7 @@ function useT() {
 }
 
 export function DesignerApp() {
+  useEffect(()=>installDesignerSelectionGuard(document),[]);
   const isPhone = usePhoneWorkspace();
   useWorkspaceViewport();
   const [mobilePanel, setMobilePanel] = useState<MobilePanel>(null);
@@ -248,7 +271,7 @@ export function DesignerApp() {
   const referenceFileRef = useRef<HTMLInputElement>(null);
   const referenceOpen = useProject(s => s.referenceOpen);
   const referenceImport = useReferenceImport();
-  const exportFn = useRef<(() => string | null) | null>(null);
+  const exportFn = useRef<(() => Promise<string | null>) | null>(null);
   const [scalePair, setScalePair] = useState<{ a: { x: number; y: number }; b: { x: number; y: number } } | null>(null);
   const [scaleValue, setScaleValue] = useState("5.00");
   const [measurementResult, setMeasurementResult] = useState<number | null>(null);
@@ -259,12 +282,10 @@ export function DesignerApp() {
   }, [hover]);
   const [fileMenuOpen, setFileMenuOpen] = useState(false);
   const [exportDrawOpen, setExportDrawOpen] = useState(false);
-  const [projectsOpen, setProjectsOpen] = useState(false);
   const [trashOpen, setTrashOpen] = useState(false);
   const [exportProject, setExportProject] = useState<Project|null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const projectMenuAnchor = useRef<HTMLButtonElement>(null);
-  const [issuesOpen, setIssuesOpen] = useState(false);
   const [gridOpen, setGridOpen] = useState(false);
   const [customGridOpen, setCustomGridOpen] = useState(false);
   const [customGridDraft, setCustomGridDraft] = useState("");
@@ -272,31 +293,25 @@ export function DesignerApp() {
   const [nameDraft, setNameDraft] = useState("");
   const [bulkDeleteConfirm, setBulkDeleteConfirm] = useState(false);
   const [dismissedFusion, setDismissedFusion] = useState("");
-  const [deleteAsk, setDeleteAsk] = useState<{ id: string; name: string } | null>(null);
-  const [catalogGhost, setCatalogGhost] = useState<{ id: string; x: number; y: number } | null>(null);
   const [libInfo, setLibInfo] = useState<string | null>(null);
-  const catalogClickSuppressedUntil = useRef(0);
   const [catInfo, setCatInfo] = useState<(typeof CATEGORIES)[number]["id"] | null>(null);
-  const catalogDrag = useRef<{
-    id: string;
-    pointerId: number;
-    startX: number;
-    startY: number;
-    lastX: number;
-    lastY: number;
-    dragging: boolean;
-    hold: boolean;
-  } | null>(null);
   const catalogListRef = useRef<HTMLUListElement>(null);
+  const [automaticHeadPanelHost,setAutomaticHeadPanelHost]=useState<HTMLDivElement|null>(null);
+  const [irrigationPanelVisit,setIrrigationPanelVisit]=useState(0);
+  const [seriesByGroup,setSeriesByGroup]=useState<Record<string,string>>({});
 
   const project = useProject((s) => s.project);
+  const savedProjects = useProject(s=>s.projects);
+  const nameRequired = projectRequiresName(project,savedProjects);
   const workspaceSection = useProject(s => s.workspaceSection);
+  useEffect(() => {
+    if (isPhone && workspaceSection === "plan") setMobilePanel("tools");
+  }, [isPhone, workspaceSection]);
   const simulationProjectId = useProject(s => s.simulationProjectId);
   useEffect(() => {
     if (workspaceSection !== "irrigation" || simulationProjectId !== project.id)
       useProject.setState({ simulationProjectId: null });
   }, [workspaceSection, project.id, simulationProjectId]);
-  const [startDismissed, setStartDismissed] = useState<string | null>(null);
   const tool = useProject((s) => s.tool);
   const drawSub = useProject((s) => s.drawSub);
   const polyKind = useProject((s) => s.regionType);
@@ -305,6 +320,7 @@ export function DesignerApp() {
   const hoverRef = useRef<{ x: number; y: number } | null>(null);
   const measureSub = useProject((s) => s.measureSub);
   const placeId = useProject((s) => s.placeId);
+  const catalogPlacementArmed=useProject(s=>s.catalogPlacementArmed);
   const selectedId = useProject((s) => s.selectedId);
   const selectedPolyId = useProject((s) => s.selectedPolyId);
   const selectedPolyIds = useProject((s) => s.selectedPolyIds);
@@ -316,6 +332,7 @@ export function DesignerApp() {
   const showGrid = useProject((s) => s.showGrid);
   const textHidden = useProject((s) => s.textHidden);
   const dimensionsHidden = useProject(s=>s.project.drawing?.layers?.dims?.visible===false);
+  const hideLandscapeInIrrigation=useProject(s=>s.hideLandscapeInIrrigation);
   const showCoverage = useProject((s) => s.showCoverage);
   const showLabels = useProject((s) => s.showLabels);
   const catalogOpen = useProject((s) => s.catalogOpen);
@@ -354,9 +371,9 @@ export function DesignerApp() {
   }, []);
   useEffect(() => {
     applyTheme(themeId, buttonStyle, accent, themeAccent, themeGradient, themeAccent2);
-    document.documentElement.dataset.uiSize = uiSize;
-  }, [themeId, buttonStyle, accent, themeAccent, themeAccent2, themeGradient, uiSize]);
-  useEffect(() => { setLibInfo(null); setCatInfo(null); }, [selectedId, selectedIds]);
+  }, [themeId, buttonStyle, accent, themeAccent, themeAccent2, themeGradient]);
+  useLayoutEffect(() => { applyUiSize(uiSize); }, [uiSize]);
+  useEffect(() => { if(selectedId || selectedIds.length) { setLibInfo(null); setCatInfo(null); } }, [selectedId, selectedIds]);
   const activeZoneId = useProject((s) => s.activeZoneId);
   const past = useProject((s) => s.past);
   const [drawMoreOpen, setDrawMoreOpen] = useState(false);
@@ -370,7 +387,7 @@ export function DesignerApp() {
   const draft = useProject((s) => s.draft);
   useEffect(() => { setMeasurementResult(null); }, [tool, measureSub, project.id]);
   useEffect(() => { if (draft.measureA) setMeasurementResult(null); }, [draft.measureA]);
-  const pointHistoryActive = tool === "draw" && (drawSub === "polygon" || drawSub === "spline");
+  const pointHistoryActive = tool === "draw" && (drawSub === "polygon" || drawSub === "spline" || (drawSub === "cut" && (!!draft.points.length || !!draft.redoPoints?.length)));
   useEffect(() => {
     if (!isPhone) return;
     const deselectedHead = Boolean(previousMobileHead.current && !selectedId);
@@ -390,7 +407,6 @@ export function DesignerApp() {
       return current === "properties" ? null : current;
     });
   }, [isPhone, cadEditId, selectedPolyId, selectedId, selectedIds, selectedEdgeId, tool, drawSub, workspaceSection]);
-  const library = useProject((s) => s.projects);
   const lastSeg =
     draft.points.length >= 2
       ? Math.hypot(
@@ -402,9 +418,8 @@ export function DesignerApp() {
   const selected = project.heads.find((h) => h.id === selectedId) ?? null;
   const panelMode = workspaceSection === "irrigation"
     ? rightMode === "object" && selected ? "object" : rightMode === "irrigation" ? "irrigation" : "zone"
-    : workspaceSection === "landscape" && rightMode === "landscape" ? "landscape" : "drawing";
-  const selectedItem = selected ? itemById(selected.catalogId) : null;
-  const activeZone = project.zones.find((z) => z.id === activeZoneId) ?? project.zones[0] ?? null;
+    : workspaceSection === "landscape" ? "landscape" : "drawing";
+  const selectedItem = selected ? catalogForHead(selected) : null;
   const lawnPts = lawnPolygon(project.polygons);
   const holes = exclusionPolygons(project.polygons);
   const area = lawnPts ? Math.max(0, polygonArea(lawnPts) - holes.reduce((s, h) => s + polygonArea(h), 0)) : 0;
@@ -414,12 +429,17 @@ export function DesignerApp() {
     return coverageStats(lawn, project.heads, project.heads.length > 36 ? 1.2 : 0.55, exclusionPolygons(project.polygons));
   }, [project.polygons, project.heads]);
 
-  const zoneFlows = useMemo(() => new Map(project.zones.map(z => [z.id, zoneFlow(project.heads, z.id)])), [project.heads, project.zones]);
 
 
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if(fileMenuOpen){
+        if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();setFileMenuOpen(false);setExportDrawOpen(false);setGridOpen(false);}
+        return;
+      }
+      const state=useProject.getState();
+      if(state.projectFormOpen||projectRequiresName(state.project,state.projects))return;
       const t = e.target as HTMLElement;
       const typing = t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT";
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "z") {
@@ -433,11 +453,13 @@ export function DesignerApp() {
         useProject.getState().redo();
         return;
       }
+      if(state.workspaceSection === 'engineering' || state.tool === 'auto-head') return;
       if (e.code === "Space" && !typing) {
         e.preventDefault();
         useProject.getState().setSpaceDown(true);
       }
       const st0 = useProject.getState();
+      if (e.key === "Escape" && st0.pendingLandscapeObject) { useProject.setState({pendingLandscapeObject:null}); return; }
       if (e.key === "Escape" && st0.pendingCatalogPlant) { useProject.setState({pendingCatalogPlant:null}); return; }
       if (!typing && st0.tool === "draw") {
         if (/^[0-9٠-٩۰-۹０-９.,٫٬x×;mсм]$/i.test(e.key) || e.key === "Backspace" && cadBuf.current) {
@@ -574,6 +596,7 @@ export function DesignerApp() {
       }
     };
     const up = (e: KeyboardEvent) => {
+      if(fileMenuOpen){if(e.code==='Space')useProject.getState().setSpaceDown(false);return;}
       if (e.code === "Space") {
         useProject.getState().setSpaceDown(false);
         const st = useProject.getState();
@@ -581,16 +604,19 @@ export function DesignerApp() {
       }
       if (e.key === "Shift") useProject.getState().setInferenceLock(null);
     };
-    window.addEventListener("keydown", onKey);
+    window.addEventListener("keydown", onKey, fileMenuOpen);
     window.addEventListener("keyup", up);
     return () => {
-      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("keydown", onKey, fileMenuOpen);
       window.removeEventListener("keyup", up);
     };
-  }, []);
+  }, [fileMenuOpen]);
 
   useEffect(() => {
-    const ready=()=>{useProject.getState().saveCurrentToLibrary();void flushProjectStorage();};
+    const ready=()=>{const state=useProject.getState();
+      if(projectRequiresName(state.project,state.projects))state.setProjectFormOpen(true);
+      else state.saveCurrentToLibrary();
+      void flushProjectStorage();};
     if(useProject.persist.hasHydrated()) ready();
     const off=useProject.persist.onFinishHydration(ready),detach=attachStorageLifecycle();
     return ()=>{off();detach();};
@@ -605,7 +631,31 @@ export function DesignerApp() {
     return useProject.persist.onFinishHydration(fit);
   }, []);
 
-  const catalog = placeableCatalog().filter((c) => familyFilter === "all" || c.family === familyFilter);
+  const equipmentFilters=useProject(s=>s.equipmentFilters);
+  useEffect(()=>{setLibInfo(null);setCatInfo(null);},[equipmentFilters.manufacturerId]);
+  const equipmentGroups=equipmentGroupsFor(equipmentFilters.manufacturerId);
+  const equipmentGroupId=equipmentGroupSelection(equipmentFilters.manufacturerId,familyFilter);
+  const activeEquipmentGroup=equipmentGroup(equipmentFilters.manufacturerId,equipmentGroupId);
+  const catalog=useMemo(()=>equipmentGroupCatalog(placeableCatalog(),equipmentFilters.manufacturerId,equipmentGroupId),[equipmentFilters.manufacturerId,equipmentGroupId]);
+  const seriesOptions=useMemo(()=>activeEquipmentGroup.browseBySeries?equipmentSeriesOptions(catalog):[],[catalog,activeEquipmentGroup]);
+  const seriesKey=`${equipmentFilters.manufacturerId}:${equipmentGroupId}`;
+  const storedSeries=seriesByGroup[seriesKey];
+  const activeSeries=storedSeries&&seriesOptions.includes(storedSeries)?storedSeries:seriesOptions[0]??'';
+  const librarySubgroups=useMemo(()=>hunterLibrarySubgroups(catalog,equipmentGroupId),[catalog,equipmentGroupId]);
+  const activeSubgroup=librarySubgroups.find(group=>group.id===storedSeries)??librarySubgroups[0];
+  // Subgroups organize browsing; automatic selection retains the full compatibility group.
+  const visibleCatalog=activeSubgroup?.catalog??(seriesOptions.length>1?catalog.filter(item=>equipmentInnerSeries(item)===activeSeries):catalog);
+  const automaticSupported=visibleCatalog.some(automaticCandidateSupported);
+  const inspectedCatalogItem=libInfo?equipmentGroupItem(libInfo,equipmentFilters.manufacturerId,equipmentGroupId):undefined;
+  const openEquipmentSeries=(series:string)=>{
+    setSeriesByGroup(previous=>({...previous,[seriesKey]:series}));setLibInfo(null);setCatInfo(null);
+    const nextCatalog=librarySubgroups.find(group=>group.id===series)?.catalog??(seriesOptions.length>1?catalog.filter(item=>equipmentInnerSeries(item)===series):catalog);
+    const manualOnly=!nextCatalog.some(automaticCandidateSupported);
+    useProject.setState({catalogPlacementArmed:false,...(manualOnly&&useProject.getState().tool==='auto-head'?{tool:'place' as const}:{})});
+    const list=catalogListRef.current;
+    if(list)list.scrollTop=0;
+    const sheet=list?.closest('.mobile-sheet-body');if(sheet)sheet.scrollTop=0;
+  };
 
   const onUploadFile = (file: File) => {
     const lower = file.name.toLowerCase();
@@ -667,7 +717,7 @@ export function DesignerApp() {
         await saveProjectAsFile(project.name);
         return;
       }
-      const uri = exportFn.current?.();
+      const uri = await exportFn.current?.();
       if (!uri) {
         toast(t("toastCanvas"));
         return;
@@ -686,7 +736,7 @@ export function DesignerApp() {
     const name = fileStem(p.name);
     try {
       if (kind === "pdf") {
-        const snap = p.id === project.id ? exportFn.current?.() ?? undefined : undefined;
+        const snap = p.id === project.id ? (await exportFn.current?.()) ?? undefined : undefined;
         await exportPdfFromProject(p, name, snap);
         return;
       }
@@ -695,7 +745,7 @@ export function DesignerApp() {
         return;
       }
       if (kind === "png") {
-        const snap = p.id === project.id ? exportFn.current?.() : undefined;
+        const snap = p.id === project.id ? await exportFn.current?.() : undefined;
         if (snap) await exportPng(snap, name);
         else await exportPngFromProject(p, name);
         return;
@@ -712,7 +762,7 @@ export function DesignerApp() {
 
   const autoPlace = () => {
     const d = drawingOrMigrate(project);
-    const fromCad = layoutOnDrawing(d);
+    const fromCad = layoutOnDrawing(d,catalog,project.water.dynamicBar??undefined);
     if (fromCad.length) {
       useProject.getState().setHeads(fromCad);
       useProject.getState().autoZone(defaultMaxZoneLpm(project.water.availableLpm));
@@ -723,158 +773,18 @@ export function DesignerApp() {
       toast(t("toastNeedLawn"));
       return;
     }
-    const placed = layoutOnPolygon(lawnPts).filter((h) => !holes.some((poly) => pointInPoly(h, poly)));
+    const technology=catalog[0]&&equipmentTechnology(catalog[0]);
+    const layoutFamily=technology==='rotor'?'rotor':technology==='spray'?'spray':familyFilter==='mp800'?'mp800':'mp';
+    const placed = layoutOnPolygon(lawnPts,layoutFamily,null,holes,catalog,project.water.dynamicBar??undefined).filter((h) => !holes.some((poly) => pointInPoly(h, poly)));
+    if(!placed.length){toast(t("autoHead.noMatch"));return;}
     useProject.getState().setHeads(placed);
     useProject.getState().autoZone(defaultMaxZoneLpm(project.water.availableLpm));
     toast(t("toastAuto"));
   };
 
-  const dropCatalogAt = (clientX: number, clientY: number, catalogId: string) => {
-    const el = document.querySelector("[data-design-canvas]");
-    if (!(el instanceof HTMLElement)) return;
-    const rect = el.getBoundingClientRect();
-    if (rect.width < 8 || rect.height < 8) return;
-    if (clientX < rect.left || clientX > rect.right || clientY < rect.top || clientY > rect.bottom) return;
-    const target = document.elementFromPoint(clientX, clientY);
-    if (!target || !el.contains(target) || target.closest("button,input,aside,[role=dialog],[data-mobile-sheet],.info-panel,.library-panel,.floating-toolbar,.workspace-tool-strip")) return;
-    const x = clientX, y = clientY;
-    const st = useProject.getState();
-    st.setPlaceId(catalogId);
-    st.placeHead(
-      {
-        x: (x - rect.left - st.panX) / st.pxPerMeter,
-        y: (y - rect.top - st.panY) / st.pxPerMeter,
-      },
-      catalogId,
-    );
-  };
-
-  const startCatalogDrag = (e: ReactPointerEvent<HTMLButtonElement>, catalogId: string) => {
-    if (e.button !== 0) return;
-    const pointerId = e.pointerId;
-    useProject.getState().setTool("place");
-    useProject.getState().setPlaceId(catalogId);
-    useProject.getState().setRightMode("irrigation");
-    useProject.getState().setRightOpen(true);
-    setLibInfo(catalogId);
-    setCatInfo(null);
-    catalogDrag.current = {
-      id: catalogId,
-      pointerId,
-      startX: e.clientX,
-      startY: e.clientY,
-      lastX: e.clientX,
-      lastY: e.clientY,
-      dragging: false,
-      hold: false,
-    };
-
-    const trackFrom = (clientX: number, clientY: number) => {
-      const d = catalogDrag.current;
-      if (!d) return;
-      if (clientX !== 0 || clientY !== 0) {
-        d.lastX = clientX;
-        d.lastY = clientY;
-      }
-      if (d.hold) setCatalogGhost({ id: d.id, x: d.lastX, y: d.lastY });
-    };
-
-    const holdTimer = window.setTimeout(() => {
-      const d = catalogDrag.current;
-      if (!d || d.pointerId !== pointerId) return;
-      d.hold = true;
-      d.dragging = true;
-      try {
-        navigator.vibrate?.(15);
-      } catch {
-        /* ignore */
-      }
-      setLibInfo(null);
-      if (isPhone) setMobilePanel(null);
-      setCatalogGhost({ id: d.id, x: d.lastX, y: d.lastY });
-    }, 380);
-
-    const onMove = (ev: PointerEvent) => {
-      const d = catalogDrag.current;
-      if (!d || d.pointerId !== ev.pointerId) return;
-      trackFrom(ev.clientX, ev.clientY);
-      if (!d.hold) {
-        if (Math.hypot(d.lastX - d.startX, d.lastY - d.startY) <= 8) return;
-        window.clearTimeout(holdTimer);
-        if (e.pointerType === "touch") {
-          // A finger may scroll the library; a deliberate hold starts the drag.
-          catalogDrag.current = null;
-          return;
-        }
-        d.hold = true;
-        d.dragging = true;
-        setLibInfo(null);
-        setCatalogGhost({ id: d.id, x: d.lastX, y: d.lastY });
-      }
-      ev.preventDefault();
-    };
-
-    const onTouchMove = (ev: TouchEvent) => {
-      const d = catalogDrag.current;
-      if (!d?.hold) return;
-      const t = ev.touches[0] ?? ev.changedTouches[0];
-      if (!t) return;
-      ev.preventDefault();
-      trackFrom(t.clientX, t.clientY);
-    };
-
-    let finished = false;
-    const finish = (clientX?: number, clientY?: number, cancelled = false) => {
-      if (finished) return;
-      finished = true;
-      window.clearTimeout(holdTimer);
-      window.removeEventListener("pointermove", onMove, true);
-      window.removeEventListener("pointerup", onUp, true);
-      window.removeEventListener("pointercancel", onCancel, true);
-      window.removeEventListener("touchmove", onTouchMove, true);
-      window.removeEventListener("touchend", onTouchEnd, true);
-      window.removeEventListener("touchcancel", onTouchCancel, true);
-      const d = catalogDrag.current;
-      catalogDrag.current = null;
-      setCatalogGhost(null);
-      if (!d?.hold || cancelled) return;
-      catalogClickSuppressedUntil.current = Date.now() + 500;
-      const x = clientX ?? d.lastX;
-      const y = clientY ?? d.lastY;
-      if (Math.hypot(x - d.startX, y - d.startY) < 8) return;
-      setLibInfo(null);
-      const canvas = document.querySelector("[data-design-canvas]")?.getBoundingClientRect();
-      if (canvas && x >= canvas.left && x <= canvas.right && y >= canvas.top && y <= canvas.bottom) {
-        dropCatalogAt(x, y, d.id);
-        if (isPhone) useProject.getState().setCatalogVisible(false);
-      }
-    };
-
-    const onUp = (ev: PointerEvent) => {
-      if (catalogDrag.current && catalogDrag.current.pointerId !== ev.pointerId) return;
-      finish(ev.clientX, ev.clientY);
-    };
-    const onCancel = (ev: PointerEvent) => {
-      if (catalogDrag.current?.pointerId !== ev.pointerId) return;
-      finish(undefined, undefined, true);
-    };
-    const onTouchCancel = () => finish(undefined, undefined, true);
-    const onTouchEnd = (ev: TouchEvent) => {
-      const d = catalogDrag.current;
-      if (!d?.hold) {
-        finish();
-        return;
-      }
-      const t = ev.changedTouches[0];
-      finish(t?.clientX, t?.clientY);
-    };
-
-    window.addEventListener("pointermove", onMove, { capture: true, passive: false });
-    window.addEventListener("pointerup", onUp, { capture: true });
-    window.addEventListener("pointercancel", onCancel, { capture: true });
-    window.addEventListener("touchmove", onTouchMove, { capture: true, passive: false });
-    window.addEventListener("touchend", onTouchEnd, { capture: true });
-    window.addEventListener("touchcancel", onTouchCancel, { capture: true });
+  const selectCatalogItem = (id: string) => {
+    useProject.getState().selectCatalogItem(id);
+    setLibInfo(id);setCatInfo(null);setWorkspaceMultiSelect(false);
   };
 
   const editDrawing = drawingOrMigrate(project);
@@ -955,8 +865,9 @@ export function DesignerApp() {
     if (cadEditId || (tool && !(tool === "draw" && drawSub === "none"))) setWorkspaceMultiSelect(false);
   }, [cadEditId, tool, drawSub]);
 
-  const context = catalogOpen || tool === "measure" || tool === "scale" || tool === "draw";
-  const activeQ = zoneFlows.get(activeZoneId);
+  const contextualFace = contextualFigure();
+  const roundingId = useCornerRounding(s => s.faceId);
+  const context = catalogOpen || tool === "measure" || tool === "scale" || tool === "draw" || Boolean(contextualFace);
   const mobileFaceId = selected ? null : cadEditId ?? selectedPolyId;
   const mobileDrawing = drawingOrMigrate(project);
   const groupedLayer = mobileFaceId && mobileDrawing.faces[mobileFaceId]?.layerId ? mobileFaceId : null;
@@ -964,7 +875,7 @@ export function DesignerApp() {
   const contextTitle = mobileFace ? layerTitle(mobileDrawing, mobileFace.id, locale)
     : selected ? selected.catalogId : tool === "draw" ? t([...DRAW_SUBS, ...MOBILE_EXTRA_DRAW].find((s) => s.id === drawSub)?.key ?? "draw") : tool === "scale" ? t("calibrateScale") : t("measure");
   const selectedSegment = !cadEditId && selectedPolyIds.length === 1 && mobileFace?.segment && !groupedLayer ? mobileFace : null;
-  const drawingDimensionsVisible = !(tool === "draw" && drawSub === "text") && Boolean(selectedSegment || cadEditId || selectedEdgeId || (tool === "draw" && drawSub !== "none"));
+  const drawingDimensionsVisible = simulationProjectId !== project.id && !(tool === "draw" && drawSub === "text") && Boolean(selectedSegment || cadEditId || selectedEdgeId || (tool === "draw" && drawSub !== "none"));
   const mobileFaceDimensions: { label: string; value: number; kind?: "area" }[] = [];
   if (mobileFace && !groupedLayer) {
     const curveGeometry = mobileFace.spline ?? mobileFace.freehand;
@@ -993,11 +904,12 @@ export function DesignerApp() {
   const selectedLayersCount = new Set(selectedPolyIds.filter(id => mobileDrawing.faces[id]).map(id => mobileDrawing.faces[id]!.layerId ?? id)).size;
   const bulkSelection = selectedLayersCount > 1 && !cadEditId;
   const headSelectionActions = selectedIds.length > 1 && <HeadSelectionActions />;
+  const hasAttachedSegments = useMemo(() => attachedSegmentFigures(mobileDrawing).some(c=>selectedPolyIds.length<2 || c.parts.every(p=>selectedPolyIds.includes(p.id))), [project.drawing, selectedPolyIds]);
   const fusionIds = useMemo(() => draft.points.length ? [] : fusionCandidates(mobileDrawing, selectedPolyIds), [project.drawing, selectedPolyIds, draft.points.length]);
   const fusionKey = fusionIds.length ? JSON.stringify(fusionIds.map(id => [id, facePoints(mobileDrawing,id)])) : "";
-  const fusionActions = fusionKey && fusionKey !== dismissedFusion && <section className="figure-fusion-actions" role="region" aria-label={t("fuseFigures")}
+  const fusionActions = !hasAttachedSegments && drawSub !== "cut" && fusionKey && fusionKey !== dismissedFusion && <section className="figure-fusion-actions" role="region" aria-label={t("fuseFigures")}
     onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onWheel={e=>e.stopPropagation()}>
-    <button type="button" onClick={()=>{
+    <FuseFiguresButton onClick={()=>{
       const st=useProject.getState(), drawing=drawingOrMigrate(st.project);
       const next=fuseFigures(drawing,fusionIds);
       if(next===drawing) return;
@@ -1007,7 +919,7 @@ export function DesignerApp() {
       setWorkspaceMultiSelect(false);
       st.selectPoly(fusionIds[0]!);
       setDismissedFusion(fusionKey);
-    }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true"><path d="M3 3h12v6h6v12H9v-6H3Z"/><path d="M9 9h6v6H9Z" strokeDasharray="2 2" opacity=".45"/></svg>{t("fuseFigures")}</button>
+    }}/>
     <button type="button" className="action-cancel" aria-label={t("cancel")} title={t("cancel")} onClick={()=>setDismissedFusion(fusionKey)}><X size={18}/></button>
   </section>;
   const bulkLocked = selectedPolyIds.some(id => mobileDrawing.faces[id]?.locked);
@@ -1059,12 +971,13 @@ export function DesignerApp() {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 7V4h14v3M12 4v16M8 20h8" /></svg>
     <VisibilitySlash />
   </button>;
+  const cutControl = workspaceSection === "plan" && <button type="button" className="mobile-icon-button" aria-label={t("drawCut")} title={t("drawCut")} aria-pressed={tool === "draw" && drawSub === "cut"} onClick={()=>useProject.getState().setDrawSub("cut")}><Scissors/></button>;
   const textControl = <button type="button" className="mobile-icon-button" aria-label={t("drawText")} title={t("drawText")} aria-pressed={tool === "draw" && drawSub === "text"} onClick={()=>useProject.getState().setDrawSub("text")}><Type /></button>;
   const dimensionVisibilityControl = <AdaptiveTooltip label={t(dimensionsHidden ? "showDimensions":"hideDimensions")}>
     <button type="button" className="mobile-icon-button visibility-toggle dimension-visibility-toggle" aria-label={t(dimensionsHidden ? "showDimensions":"hideDimensions")}
       aria-pressed={dimensionsHidden} onClick={()=>useProject.getState().setCadLayer("dims",{visible:dimensionsHidden})}><IconDim/><VisibilitySlash/></button>
   </AdaptiveTooltip>;
-  const contextControls = tool === "draw" && drawSub === "text" ? null : <div className={isPhone ? "mobile-context-content" : "contents"}>
+  const contextControls = roundingId ? null : editFace?.rounding && cadEditId ? <RoundedFigureDimensions faceId={cadEditId} compact={isPhone}/> : tool === "draw" && (drawSub === "cut" || drawSub === "text") ? null : <div className={isPhone ? "mobile-context-content" : "contents"}>
           {tool === "draw" && drawSub === "polygon" && <PolygonDraftDimensions hover={hover}/>}
           {selectedSegment?.spline && <div className="selected-segment-length" style={!isPhone ? { position:"absolute", bottom:12, left:12 } : undefined} aria-label={t("segmentLength")}><strong>L</strong><output>{formatLenU(dist(selectedSegment.spline.pts[0]!, selectedSegment.spline.pts[1]!), units.length)}</output></div>}
           {!groupedLayer && cadEditId && editingFreeformFace && !draft.points.length && (
@@ -1251,8 +1164,8 @@ export function DesignerApp() {
                       className="h-8 min-w-0 flex-1 rounded-sm border border-line bg-bg px-2 text-xs outline-none focus:border-btn"
                       autoFocus
                     />
-                    <span className="shrink-0 text-[10px] text-muted">{lenLabel(units.length)}</span>
-                    <button type="submit" aria-label={uiText("applyGridStep")} className="h-8 rounded-sm bg-btn px-2 text-[10px] font-semibold text-btn-fg">
+                    <span className="shrink-0 text-[0.625rem] text-muted">{lenLabel(units.length)}</span>
+                    <button type="submit" aria-label={uiText("applyGridStep")} className="h-8 rounded-sm bg-btn px-2 text-[0.625rem] font-semibold text-btn-fg">
                       ✓
                     </button>
                   </form>
@@ -1263,17 +1176,18 @@ export function DesignerApp() {
         </Popover.Root>
   </>;
 
-  const openCatalogFamily = (family: (typeof CATEGORIES)[number]["id"]) => {
+  const openCatalogFamily = (family: string) => {
     const st = useProject.getState();
-    st.setFamily(family);
-    st.setCatalogVisible(true);
-    setLibInfo(null);
-    setCatInfo(family === "all" ? null : family);
-    if (family !== "all") {
-      st.setRightMode("irrigation");
-      st.setRightOpen(true);
-      if (isPhone) setMobilePanel(null);
-    }
+    if(st.tool==='auto-head')useProject.setState({tool:'place'});
+    st.setFamily(family);st.setCatalogVisible(true);st.setRightMode('irrigation');setLibInfo(null);setCatInfo(null);
+  };
+
+  const openAutomaticHead = () => {
+    if(!automaticSupported)return;
+    const st=useProject.getState();st.setTool('place');st.selectHead(null);st.selectPoly(null);
+    useProject.setState({tool:'auto-head',catalogOpen:true,catalogVisible:true,catalogPlacementArmed:false,sectorEditId:null,rightOpen:true,rightMode:'irrigation'});
+    if(isPhone)setMobilePanel(null);
+    setLibInfo(null);setCatInfo(null);setLayerManagerOpen(false);setWorkspaceMultiSelect(false);
   };
 
   const WorkspaceStrip = catalogOpen ? "div" : FloatingToolbar;
@@ -1281,19 +1195,20 @@ export function DesignerApp() {
         <div className={catalogOpen ? "library-category-bar relative z-30 shrink-0" : "tablet-tool-overlay"} data-right-open={rightOpen} data-cat-bar>
         <WorkspaceStrip className="workspace-tool-strip" role="toolbar" aria-label={t(catalogOpen ? "irrigation" : "draw")}>
           {catalogOpen &&
-            CATEGORIES.map((f) => (
+            <>{equipmentGroups.map((f) => (
               <Button
                 key={f.id}
+                data-no-tooltip
                 size="xs"
-                variant={familyFilter === f.id ? "pale-on" : "pale"}
-                aria-pressed={familyFilter === f.id}
+                variant={equipmentGroupId === f.id ? "pale-on" : "pale"}
+                aria-pressed={equipmentGroupId === f.id}
                 onClick={() => openCatalogFamily(f.id)}
               >
-                {t(`cat_${f.id}`)}
+                {f.label}
               </Button>
-            ))}
+            ))}</>}
           {showHints && tool === "scale" && <p className="px-2 text-xs text-ink-soft">{t("scaleHint")}</p>}
-          {!catalogOpen && (tool === "draw" || tool === "measure") && (
+          {!catalogOpen && (tool === "draw" || tool === "measure" || contextualFace) && (
             <>
               {DRAW_PRIMARY.map((s) => (
                 <AdaptiveTooltip key={s.id} label={t(s.key)}><Button
@@ -1309,12 +1224,13 @@ export function DesignerApp() {
               ))}
             </>
           )}
+          <FigureContextTools onRounding={() => setWorkspaceMultiSelect(false)} />
         </WorkspaceStrip>
         </div>
       );
 
   return (
-    <DirectionProvider dir={localeDirection(locale)}><div className="app-shell bg-bg text-ink" dir={localeDirection(locale)} lang={locale} data-locale={locale} data-mobile={isPhone} data-preview={projectPreview}>
+    <DirectionProvider dir={localeDirection(locale)}><div className="app-shell bg-bg text-ink" dir={localeDirection(locale)} lang={locale} data-locale={locale} data-mobile={isPhone} data-preview={projectPreview} data-name-required={nameRequired} data-main-menu-open={fileMenuOpen}>
       <WorkspaceTooltips />
       {!isPhone && <WorkspacePanelBounds />}
       {projectPreview && <MobilePreview onBack={() => setProjectPreview(false)} />}
@@ -1340,7 +1256,10 @@ export function DesignerApp() {
             aria-pressed={fileMenuOpen}
             aria-label={t("file")}
             onClick={() => {
-              if (isPhone) setMobilePanel(null);
+              if(nameRequired&&projectFormOpen) {
+                (document.activeElement as HTMLElement)?.blur?.();
+                flushSync(()=>useProject.getState().setProjectFormOpen(false));
+              }
               setFileMenuOpen((v) => !v);
               setExportDrawOpen(false);
               setGridOpen(false);
@@ -1350,25 +1269,23 @@ export function DesignerApp() {
           </Button>
           {fileMenuOpen && createPortal(
             <div className="project-menu fixed z-[150] w-64 rounded-md text-ink shadow-border" style={{
-              left: Math.max(8,Math.min(projectMenuAnchor.current?.getBoundingClientRect().left ?? 8,window.innerWidth-272)),
+              left: Math.max(8,Math.min(projectMenuAnchor.current?.getBoundingClientRect().left ?? 8,window.innerWidth-uiPixels(256)-16)),
               top:(projectMenuAnchor.current?.getBoundingClientRect().bottom ?? 56)+8,
               maxHeight:`calc(100dvh - ${(projectMenuAnchor.current?.getBoundingClientRect().bottom ?? 56)+16}px)`,overflowY:"auto",
             }}>
-              <div className="px-2 py-2">
-                <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("currentProject")}</p>
-                <p className="mt-0.5 truncate text-sm font-medium">{!isNamed(project) ? t("untitled") : project.name}</p>
-                <p className="mt-1 text-xs text-muted">{t("projectAutosaveHint")}</p>
-              </div>
-              <div className="mx-1 my-1 h-px bg-line" />
-              <MenuBtn icon={<FilePlus2 className="size-4" />} label={t("newProject")} onClick={() => { useProject.getState().saveCurrentToLibrary(); useProject.getState().newProject(); setFileMenuOpen(false); setMobilePanel(null); }} />
+              <ProjectsSubmenu onShow={() => {setLayerManagerOpen(false);setGridOpen(false);}} onOpenProject={() => setFileMenuOpen(false)}/>
+              <MenuBtn icon={<FilePlus2 className="size-4" />} label={t("newProject")} onClick={() => {
+                flushSync(()=>{useProject.getState().saveCurrentToLibrary();useProject.getState().newProject();setFileMenuOpen(false);setMobilePanel(null);});
+                document.querySelector<HTMLInputElement>('[data-project-name-input]')?.focus({preventScroll:true});
+              }} />
               <MenuBtn icon={<FolderOpen className="size-4" />} label={t("openEditableProject")} onClick={() => { if(fileRef.current)fileRef.current.accept=".ird,.irrigationproject,.json";fileRef.current?.click();setFileMenuOpen(false); }} />
-              <MenuBtn icon={<Save className="size-4" />} label={t("saveProjectCopy")} onClick={() => {setFileMenuOpen(false);void saveProjectAsFile();}} />
+              <MenuBtn disabled={nameRequired} icon={<Save className="size-4" />} label={t("saveProjectCopy")} onClick={() => {setFileMenuOpen(false);void saveProjectAsFile();}} />
               <MenuBtn icon={<Trash2 className="size-4" />} label={t("projectTrash")} onClick={() => {setFileMenuOpen(false);setTrashOpen(true);}} />
               <div className="mx-1 my-1 h-px bg-line" />
-              <MenuBtn icon={<FileDown className="size-4" />} label={t("exportMaterials")} onClick={()=>{setFileMenuOpen(false);setExportProject(project);}} />
-              <MenuBtn icon={<Pencil className="size-4" />} label={t("projectName")} onClick={() => { useProject.getState().setProjectFormOpen(true); setFileMenuOpen(false); }} />
-              <MenuBtn icon={<Upload className="size-4" />} label={t("importDxfDrawing")} onClick={() => { if(fileRef.current)fileRef.current.accept=".dxf";fileRef.current?.click();setFileMenuOpen(false); }} />
+              <MenuBtn disabled={nameRequired} icon={<FileDown className="size-4" />} label={t("exportMaterials")} onClick={()=>{setFileMenuOpen(false);setExportProject(project);}} />
+              <MenuBtn disabled={nameRequired} icon={<Upload className="size-4" />} label={t("importDxfDrawing")} onClick={() => { if(fileRef.current)fileRef.current.accept=".dxf";fileRef.current?.click();setFileMenuOpen(false); }} />
               <MenuBtn
+                disabled={nameRequired}
                 onClick={() => {
                   setFileMenuOpen(false);
                   void exportDxf(useProject.getState().project, fileStem(useProject.getState().project.name)).then(
@@ -1391,17 +1308,24 @@ export function DesignerApp() {
             </div>, document.querySelector(".app-shell") ?? document.body
           )}
         </div>
-        <button type="button" className="app-brand-refresh mr-2 hidden shrink-0 pr-3 text-left md:block"
+        <button type="button" disabled={nameRequired} className="app-brand-refresh shrink-0"
           aria-label={t("refreshApplication")} title={t("refreshApplication")} onClick={()=>{
             const url=new URL(window.location.href);
             url.searchParams.set("__refresh",String(Date.now()));
             window.location.replace(url.toString());
           }}>
-          <span className="block font-display text-sm font-semibold tracking-[0.12em] leading-none">IRRIGATION DESIGNER</span>
-          <span className="mt-0.5 block text-[10px] text-tool-fg/75">{t("hunterTagline")}</span>
+          <span className="app-brand-logo" role="img" aria-label="IRRI — Irrigation Designer">
+            <span className="app-brand-mark" aria-hidden="true">
+              <img src="/brand/irri-sprinkler-transparent.png" alt="" width={1101} height={682} draggable={false} />
+              <img className="app-brand-lettering" src="/brand/irri-sprinkler-transparent.png" alt="" width={1101} height={682} draggable={false} />
+            </span>
+            <span className="app-brand-caption" aria-hidden="true">
+              <img src="/brand/irri-sprinkler-transparent.png" alt="" width={1101} height={682} draggable={false} />
+            </span>
+          </span>
         </button>
-        <div className="scroll-touch flex min-w-0 flex-1 items-center gap-1">
-        <Button size="icon" variant="bar" className="max-sm:size-10" disabled={pointHistoryActive ? !draft.points.length : !past.length} onClick={() => useProject.getState().undo()} aria-label={t("undo")}>
+        <div inert={nameRequired} className="scroll-touch flex min-w-0 flex-1 items-center gap-1">
+        <Button size="icon" variant="bar" className="max-sm:size-10" disabled={pointHistoryActive && !(drawSub === "cut" && !draft.points.length) ? !draft.points.length : !past.length} onClick={() => useProject.getState().undo()} aria-label={t("undo")}>
           <Undo2 />
         </Button>
         <Button size="icon" variant="bar" className="max-sm:size-10" disabled={pointHistoryActive ? !(draft.redoPoints?.length || draft.redoClosure) : !future.length} onClick={() => useProject.getState().redo()} aria-label={t("redo")}>
@@ -1409,30 +1333,39 @@ export function DesignerApp() {
         </Button>
         <nav className="workspace-sections" aria-label={t("mainSections")}>
           <Button size="sm" variant={referenceOpen ? "bar-on" : "bar"} title={t("reference")} aria-pressed={referenceOpen} onClick={() => {
-            setStartDismissed(project.id);
             useProject.getState().setReferenceOpen(!referenceOpen); setMobilePanel(null); setFileMenuOpen(false); setLayerManagerOpen(false);
           }}><FileImage /><span>{t("reference")}</span></Button>
           <span className="workspace-section-divider" aria-hidden="true" />
           <Button size="sm" variant={!referenceOpen && workspaceSection === "plan" ? "bar-on" : "bar"} aria-pressed={!referenceOpen && workspaceSection === "plan"} title={t("plan")} onClick={() => {
-            setStartDismissed(project.id);
+            if (!referenceOpen && workspaceSection === "plan") {
+              useProject.getState().deactivateDrawing();
+              setMobilePanel(null);setMobileLayersVisible(false);setLayerManagerOpen(false);setGridOpen(false);setWorkspaceMultiSelect(false);
+              return;
+            }
             const st = useProject.getState(); st.setReferenceOpen(false); st.setLandscapeOpen(false); st.setCatalogOpen(false); st.setTool("draw"); st.setRightMode("drawing");
             setLibInfo(null); setCatInfo(null);
             setMobilePanel(isPhone ? "tools" : null); setWorkspaceMultiSelect(false);
           }}><Pencil /><span>{t("plan")}</span></Button>
           <Button size="sm" variant={!referenceOpen && workspaceSection === "landscape" ? "bar-on" : "bar"} aria-pressed={!referenceOpen && workspaceSection === "landscape"} title={t("landscape")} onClick={() => {
-            setStartDismissed(project.id);
             const st = useProject.getState(); st.setReferenceOpen(false); st.setLandscapeOpen(!landscapeOpen);
             setMobilePanel(null); setLayerManagerOpen(false); setWorkspaceMultiSelect(false);
           }}><Trees /><span>{t("landscape")}</span></Button>
           <Button size="sm" variant={!referenceOpen && workspaceSection === "irrigation" ? "bar-on" : "bar"} aria-pressed={!referenceOpen && workspaceSection === "irrigation"} title={t("irrigation")} onClick={() => {
-            setStartDismissed(project.id);
             const st = useProject.getState(); st.setReferenceOpen(false); st.setLandscapeOpen(false); st.setCatalogOpen(true); st.setCatalogVisible(true); st.setRightMode("zone");
             setLibInfo(null); setCatInfo(null);
             setMobilePanel(isPhone ? "library" : null); setGridOpen(false); setFileMenuOpen(false);
           }}><SprinklerIcon width={20} height={20} /><span>{t("irrigation")}</span></Button>
+          <Button size="sm" variant={!referenceOpen && workspaceSection === 'engineering' ? 'bar-on' : 'bar'} aria-pressed={!referenceOpen && workspaceSection === 'engineering'} title={t('engineering.title')} onClick={()=>{
+            const st=useProject.getState();
+            if(st.groupMemberId)st.finishGroupMember();
+            st.cancelDraft();st.setCadEdit(null);st.selectHead(null);st.selectPoly(null);
+            st.setReferenceOpen(false);st.setLandscapeOpen(false);st.setCatalogOpen(false);
+            useProject.setState({workspaceSection:'engineering',tool:null,drawSub:'none',sectorEditId:null,pendingCatalogPlant:null,pendingLandscapeObject:null});
+            setMobilePanel(null);setLayerManagerOpen(false);setWorkspaceMultiSelect(false);setGridOpen(false);setLibInfo(null);setCatInfo(null);
+          }}><EngineeringIcon/><span>{t('engineering.title')}</span></Button>
         </nav>
         </div>
-        <div className="flex shrink-0 items-center gap-1 pl-1">
+        <div inert={nameRequired} className="flex shrink-0 items-center gap-1 pl-1">
           {previewControl}
           {workspaceSection === "irrigation" && <button type="button" className="mobile-icon-button workspace-header-action simulation-control"
             aria-pressed={simulationProjectId === project.id} aria-label={t("simulation")}
@@ -1441,21 +1374,10 @@ export function DesignerApp() {
           <EstimateDialog mobile={isPhone} onOpen={() => {
             setMobilePanel(null); setGridOpen(false); setFileMenuOpen(false);
           }} />
-          <Button size="xs" variant="bar" className="max-sm:size-10 max-sm:px-0" aria-label={t("projects")} onClick={() => {
-            setMobilePanel(null);
-            setFileMenuOpen(false);
-            useProject.getState().saveCurrentToLibrary();
-            setProjectsOpen(true);
-          }}>
-            <FolderOpen />
-            <span className="hidden sm:inline">{t("projects")}</span>
-          </Button>
         </div>
       </header>
 
-      {projectFormOpen ? (
-        <ProjectFormBar />
-      ) : null}
+      {projectFormOpen && <ProjectFormBar key={project.id} allowMenu={nameRequired} />}
       {mergePrompt && (
         <div className="absolute inset-0 z-40 grid place-items-center bg-ink/30 p-4">
           <div className="w-full max-w-sm rounded-lg bg-surface p-4 shadow-border">
@@ -1474,26 +1396,21 @@ export function DesignerApp() {
         </div>
       )}
 
-      {catalogOpen && workspaceToolStrip}
-      <div className="designer-workspace relative flex min-h-0 flex-1">
+      {workspaceSection === 'engineering' && !referenceOpen ? <EngineeringWorkspace key={project.id} onExportReady={fn=>{exportFn.current=fn;}}/> : <>
+      {workspaceSection === "landscape" ? <LandscapeCategoryBar /> : catalogOpen && workspaceToolStrip}
+      <div inert={nameRequired} className="designer-workspace relative flex min-h-0 flex-1">
+        <LayerFillLibrary />
         {workspaceSection === 'irrigation' && simulationProjectId === project.id && <div className="simulation-note" role="status">{t('simulationApproximate')}</div>}
-        {!projectHasContent(project) && !projectFormOpen && !referenceOpen && !catalogOpen && !landscapeOpen && startDismissed !== project.id && <section className="project-start-choice" aria-label={t("startChoice")}>
-          <h2>{t("startChoice")}</h2>
-          <Button variant="solid" onClick={() => { setStartDismissed(project.id); useProject.getState().setReferenceOpen(true); referenceFileRef.current?.click(); }}><FileImage />{t("referenceUpload")}</Button>
-          <Button onClick={() => { setStartDismissed(project.id); useProject.getState().setTool("draw"); if (isPhone) setMobilePanel("tools"); }}><Pencil />{t("startBlank")}</Button>
-        </section>}
         {referenceOpen && <ReferencePanel busy={referenceImport.busy} onUpload={() => referenceFileRef.current?.click()} />}
         {tool === "scale" && <div className="reference-scale-banner" role="status"><span>{t("referenceCalibrateHint")}</span><Button size="xs" onClick={() => { useProject.getState().cancelDraft(); useProject.getState().setTool(null); useProject.getState().setReferenceOpen(true); }}>{t("cancel")}</Button></div>}
 
-        {!catalogOpen && workspaceToolStrip}
+        {workspaceSection !== "landscape" && !catalogOpen && workspaceToolStrip}
         {landscapeOpen && <LandscapeLibrary mobile={isPhone} />}
-        <PlantPlacementHint />
 
         {!isPhone && catalogOpen && catalogVisible && (
           <aside
             className={cn(
-              "library-panel absolute inset-y-0 left-0 z-20 flex w-56 flex-col border-r border-line",
-              catalogGhost && "opacity-50",
+              "library-panel absolute inset-y-0 left-0 z-30 flex w-56 flex-col border-r border-line",
             )}
             data-catalog
           >
@@ -1509,41 +1426,25 @@ export function DesignerApp() {
               </Button>
               <p className="ml-auto text-xs font-semibold text-muted">{t("library")}</p>
             </div>
-            {showHints && <p className="px-1.5 pt-0.5 text-[10px] leading-snug text-muted">{t("dragHint")}</p>}
+            <EquipmentLibraryControls/>
+            <EquipmentSeriesSelector series={seriesOptions} value={activeSeries} onChange={openEquipmentSeries}/>
+            <EquipmentSubgroupButtons groups={librarySubgroups} value={activeSubgroup?.id??''} onChange={openEquipmentSeries}/>
+            {showHints && <p className="px-1.5 pt-0.5 text-[0.625rem] leading-snug text-muted">{t("dragHint")}</p>}
             <div className="mt-1.5 flex min-h-0 flex-1">
             <ul
               ref={catalogListRef}
               className="catalog-list min-h-0 flex-1 overflow-y-auto px-1 pb-3"
             >
-              {catalog.map((c) => (
+              {automaticSupported&&<li><AutomaticLibraryCard active={tool==='auto-head'} onClick={openAutomaticHead}/></li>}
+              {visibleCatalog.map((c) => (
                 <li key={c.id}>
-                  <button
-                    type="button"
-                    aria-pressed={placeId === c.id}
-                    onPointerDown={(e) => startCatalogDrag(e, c.id)}
-                    onClick={(e) => { if (e.detail === 0) { useProject.getState().setTool("place"); useProject.getState().setPlaceId(c.id); useProject.getState().setRightMode("irrigation"); useProject.getState().setRightOpen(true); setLibInfo(c.id); setCatInfo(null); } }}
-                    className={cn(
-                      "irrigation-catalog-card mb-1 flex w-full touch-pan-y select-none items-center gap-1 rounded-md border px-1 text-left text-xs",
-                      familyFilter === "all" ? "py-1.5" : "py-1",
-                      placeId === c.id ? "border-catalog bg-catalog text-catalog-fg" : "border-line bg-surface hover:bg-catalog-soft",
-                    )}
-                  >
-                    <CatalogPic item={c} className="h-12 w-12" />
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate font-medium leading-tight">{c.id}</span>
-                      <span className={cn("block text-[10px] leading-tight", placeId === c.id ? "text-catalog-fg/80" : "text-muted")}>
-                        {c.coverageKind==="point"?uiText("bubblerNoRadius"):c.strip?`${formatLenU(c.strip.w,units.length)} × ${formatLenU(c.strip.l,units.length)}`:`${formatLenU(c.rMin, units.length)}–${formatLenU(c.rMax, units.length)}`}
-                      </span>
-                      <span className={cn("block text-[10px] leading-tight", placeId === c.id ? "text-catalog-fg/80" : "text-muted")}>
-                        {c.arcMin === c.arcMax ? `${c.arcMax}°` : `${c.arcMin}–${c.arcMax}°`}
-                      </span>
-                    </span>
-                    <CatalogThumb color={c.color} arc={c.arcMax} strip={c.strip} />
-                  </button>
+                  <EquipmentLibraryCard item={c} selected={placeId===c.id && tool!=='auto-head'} onSelect={()=>selectCatalogItem(c.id)}/>
+                  <EquipmentDataStatus item={c}/>
                 </li>
               ))}
+              {!visibleCatalog.length&&<li className="p-3 text-xs text-muted">{t("equipment.empty")}</li>}
             </ul>
-            {catalog.length > 0 && <CatalogScroller listRef={catalogListRef} dep={`${familyFilter}:${catalog.length}`} />}
+            {visibleCatalog.length > 0 && <CatalogScroller listRef={catalogListRef} dep={`${seriesKey}:${activeSubgroup?.id??activeSeries}:${visibleCatalog.length}`} />}
             </div>
           </aside>
         )}
@@ -1560,30 +1461,33 @@ export function DesignerApp() {
         )}
 
         <section className="mobile-canvas-stage relative min-w-0 flex-1 overflow-visible">
-          {isPhone && !catalogGhost && (fusionActions || layerManagerOpen || mobilePanel === "tools" || mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <div className="mobile-top-overlays" data-magnifier-top-panel>
-            {mobilePanel === "tools" && <div className="mobile-tool-stack">
+          {isPhone && (fusionActions || layerManagerOpen || mobilePanel === "tools" || contextualFace || mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <div className="mobile-top-overlays" data-magnifier-top-panel>
+            {(mobilePanel === "tools" || contextualFace) && <div className="mobile-tool-stack">
               <div className="mobile-tool-strip-panel" role="toolbar" aria-label={uiText("tools")}>
                 <div className="mobile-tool-strip scroll-touch">
                   {DRAW_SUBS.filter((item) => item.id !== "arc" && item.id !== "dim" && item.id !== "text").map((item) => <button key={item.id} type="button" aria-label={t(item.key)} title={t(item.key)} aria-pressed={tool === "draw" && drawSub === item.id} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub(item.id))}>{item.icon}</button>)}
+                  <FigureContextTools onRounding={() => {setWorkspaceMultiSelect(false);setMobilePanel(null);}} />
                 </div>
               </div>
             </div>}
             {layerManagerOpen && <section className="mobile-layer-manager" role="region" aria-label={t("layerManager")}
               onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onWheel={e=>e.stopPropagation()} onKeyDown={e=>{e.stopPropagation();if(e.key==="Escape")setLayerManagerOpen(false);}}>
-              <header><strong>{t("layerManager")}</strong><button type="button" aria-label={t("close")} onClick={()=>setLayerManagerOpen(false)}><X size={18}/></button></header>
-              <MobileLayers manager selectedFirst={false} onEdit={id=>{useProject.getState().setCadEdit(id);setLayerManagerOpen(false);setMobilePanel("properties");}} />
+              <header><WorkspacePanelTitle section={workspaceSection}/><button type="button" aria-label={t("close")} onClick={()=>setLayerManagerOpen(false)}><X size={18}/></button></header>
+              {workspaceSection === "landscape" ? <LandscapeLayersPanel /> : workspaceSection === "irrigation" ? <IrrigationSystemCards /> : <MobileLayers manager selectedFirst={false} onEdit={id=>{useProject.getState().setCadEdit(id);setLayerManagerOpen(false);setMobilePanel("properties");}} />}
             </section>}
-            {!layerManagerOpen && !bulkSelection && (mobileWorkspaceMode === "irrigation" || mobileLayersVisible) && <section className="mobile-top-layers" data-workspace-mode={mobileWorkspaceMode} aria-label={mobileWorkspaceMode === "drawing" ? t("layers") : t("irrigation")}
+            {workspaceSection !== "landscape" && !layerManagerOpen && !bulkSelection && (workspaceSection === "irrigation" || mobileLayersVisible) && <section className="mobile-top-layers" data-workspace-mode={mobileWorkspaceMode} aria-label={mobileWorkspaceMode === "drawing" ? t("layers") : t("irrigation")}
               onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
-              {mobileWorkspaceMode === "drawing" ? <MobileLayers onEdit={(id) => { useProject.getState().setCadEdit(id); setMobilePanel("properties"); }} onInspect={() => { mobileInspectTarget.current = selectedObjectKey(useProject.getState()); setMobilePanel("properties"); }} /> : <div className="mobile-zone-strip">
+              {workspaceSection !== "irrigation" ? <MobileLayers onEdit={(id) => { useProject.getState().setCadEdit(id); setMobilePanel("properties"); }} onInspect={() => { mobileInspectTarget.current = selectedObjectKey(useProject.getState()); setMobilePanel("properties"); }} /> : <div className="mobile-zone-strip">
                 {project.zones.map((zone) => <button type="button" key={zone.id} aria-pressed={zone.id === activeZoneId} onClick={() => useProject.getState().setActiveZone(zone.id)}><span style={{ background: zoneColor(zone.id) }} />{zoneLabel(zone)}</button>)}
-                <Popover.Root modal><Popover.Trigger asChild><button type="button" aria-label={uiText("zoneInfo")}>{uiText("details")}<ChevronRight size={16} /></button></Popover.Trigger><Popover.Portal><Popover.Content side="bottom" align="end" sideOffset={4} collisionPadding={8} aria-label={uiText("irrigationZones")} className="layer-details-dialog" onPointerDown={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}><div className="layer-dialog-body"><ZoneList /><ZoneReview /><Popover.Close asChild><Button className="w-full">{uiText("close")}</Button></Popover.Close></div></Popover.Content></Popover.Portal></Popover.Root>
+                <Popover.Root modal><Popover.Trigger asChild><button type="button" aria-label={uiText("zoneInfo")}>{uiText("details")}<ChevronRight size={16} /></button></Popover.Trigger><Popover.Portal><Popover.Content side="bottom" align="end" sideOffset={4} collisionPadding={8} aria-label={uiText("irrigationZones")} className="layer-details-dialog" onPointerDown={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}><div className="layer-dialog-body"><IrrigationSystemCards /><Popover.Close asChild><Button className="w-full">{uiText("close")}</Button></Popover.Close></div></Popover.Content></Popover.Portal></Popover.Root>
               </div>}
             </section>}
             {!layerManagerOpen && fusionActions}
           </div>}
           <CanvasHost
+            automaticHeadPanelHost={automaticHeadPanelHost}
             mobile={isPhone}
+            shortcutsDisabled={fileMenuOpen}
             multiSelect={workspaceMultiSelect && selectionModeAvailable}
             onSelectionClear={() => setWorkspaceMultiSelect(false)}
             onScalePair={(a, b) => { setScaleValue(formatNumber(fromMeters(5, units.length), 2)); setScalePair({ a, b }); }}
@@ -1601,16 +1505,22 @@ export function DesignerApp() {
           {!isPhone && !bulkSelection && !fusionActions && contextControls}
         </section>
 
-        {isPhone && rightOpen && rightMode === "landscape" && <aside className="info-panel landscape-phone-inspector" aria-label={uiText("plantCard")}>
-          <div className="workspace-panel-heading"><strong>{uiText("plant")}</strong><Button onClick={() => useProject.getState().setRightOpen(false)} aria-label={uiText("hidePlantCard")}><X />{uiText("hide")}</Button></div>
-          <PlantInspector mobile />
+        {isPhone && rightOpen && workspaceSection === "landscape" && <aside className="info-panel landscape-phone-inspector" aria-label={t("landscapeObjectsTitle")}>
+          <div className="workspace-panel-heading"><WorkspacePanelTitle section={workspaceSection}/><Button onClick={() => useProject.getState().setRightOpen(false)} aria-label={uiText("hide")}><X />{uiText("hide")}</Button></div>
+          <LandscapeLayersPanel />
         </aside>}
-        {isPhone && rightOpen && (catInfo || libInfo) && rightMode === "irrigation" && <aside className="info-panel landscape-phone-inspector" aria-label={uiText("irrigationInfo")}>
+        {isPhone && tool==='auto-head' && rightOpen && <aside data-mobile-sheet="automatic-head" className="info-panel landscape-phone-inspector automatic-phone-inspector" aria-label={t('autoHead.title')}>
+          <div className="workspace-panel-heading"><strong>{uiText('irrigationInfo')}</strong><Button onClick={()=>useProject.getState().setRightOpen(false)} aria-label={t('hide')}><ChevronRight/>{t('hide')}</Button></div>
+          <div ref={setAutomaticHeadPanelHost} data-auto-head-panel-host/>
+          <EquipmentGroupNote group={activeEquipmentGroup} catalog={visibleCatalog}/>
+        </aside>}
+        {isPhone && tool==='auto-head' && !rightOpen && <button className="tablet-panel-handle" type="button" onClick={()=>useProject.getState().setRightOpen(true)} aria-label={t('autoHead.title')}><ChevronLeft/></button>}
+        {isPhone && tool!=='auto-head' && mobilePanel!=="library" && rightOpen && (catInfo || libInfo) && rightMode === "irrigation" && <aside className="info-panel landscape-phone-inspector" aria-label={uiText("irrigationInfo")}>
           <div className="workspace-panel-heading"><strong>{catInfo ? t(`cat_${catInfo}`) : uiText("headTab")}</strong><Button onClick={() => { setLibInfo(null); setCatInfo(null); useProject.getState().setRightOpen(false); }} aria-label={uiText("hideHeadCard")}><X />{uiText("hide")}</Button></div>
-          {catInfo ? <CatalogSeriesInfo key={catInfo} family={catInfo} /> : libInfo && <CatalogInfo catalogId={libInfo} />}
+          <IrrigationSystemCards selection={{key:catInfo?`series:${catInfo}`:`catalog:${libInfo}`,title:catInfo?t(`cat_${catInfo}`):inspectedCatalogItem?catalogName(inspectedCatalogItem):libInfo,content:<>{catInfo ? <CatalogSeriesInfo key={catInfo} family={catInfo} /> : libInfo && <CatalogInfo catalogId={libInfo} item={inspectedCatalogItem}/>}<EquipmentGroupNote group={activeEquipmentGroup} catalog={visibleCatalog}/></>}}/>
         </aside>}
         {!isPhone && (rightOpen ? (
-          <aside className="info-panel absolute inset-x-0 top-0 z-40 flex max-h-[45vh] flex-col overflow-y-auto border-b border-line bg-surface shadow-border sm:inset-x-auto sm:inset-y-0 sm:right-0 sm:max-h-none sm:w-[min(100%,22rem)] lg:w-[320px]">
+          <aside className="info-panel absolute inset-x-0 top-0 z-40 flex max-h-[45vh] flex-col overflow-y-auto border-b border-line bg-surface shadow-border sm:inset-x-auto sm:inset-y-0 sm:right-0 sm:max-h-none sm:w-[min(100%,22rem)] lg:w-[20rem]">
             <div className="workspace-panel-heading hidden shrink-0 items-center gap-2 border-b border-line px-2 py-2 sm:flex">
               <Button
                 type="button"
@@ -1622,22 +1532,24 @@ export function DesignerApp() {
                 {t("hide")}
                 <ChevronRight className="size-3.5" />
               </Button>
-              {workspaceSection === "irrigation" ? <button type="button" className="zones-navigation ml-auto"
+              {tool==='auto-head'?<strong className="ms-auto">{uiText('irrigationInfo')}</strong>:workspaceSection === "irrigation" ? <button type="button" className="zones-navigation ml-auto"
                 aria-pressed={panelMode === "zone"} onClick={() => {
+                  setIrrigationPanelVisit(value=>value+1);
                   setLibInfo(null); setCatInfo(null); useProject.getState().endHeadEdit(); useProject.getState().setRightMode("zone");
-                }}>{t("zonesTitle")}</button> : <p className="ml-auto text-xs font-semibold text-muted">{t("layers")}</p>}
+                }}><WorkspacePanelTitle section={workspaceSection}/></button> : <div className="ms-auto"><WorkspacePanelTitle section={workspaceSection}/></div>}
             </div>
-            {panelMode === "landscape" ? <PlantInspector /> : panelMode === "zone" || panelMode === "object" || panelMode === "irrigation" ? (
-              <>{panelMode === "irrigation" && catInfo ? <CatalogSeriesInfo key={catInfo} family={catInfo} /> : panelMode === "irrigation" && libInfo ? <CatalogInfo catalogId={libInfo} /> : panelMode === "object" && selected && selectedItem && selectedIds.length <= 1 ? (
-                <HeadCard head={selected} />
-              ) : (
-                <div className="p-1.5 sm:p-3">
-                  <ZoneList />
-                </div>
-              )}{panelMode === "zone" && <div className="px-1.5 pb-3 sm:px-3"><ZoneReview /></div>}</>
+            {tool==='auto-head'?<div ref={setAutomaticHeadPanelHost} data-auto-head-panel-host/>:panelMode === "landscape" ? <LandscapeLayersPanel /> : panelMode === "zone" || panelMode === "object" || panelMode === "irrigation" ? (
+              <IrrigationSystemCards key={irrigationPanelVisit} selection={panelMode === "irrigation" && catInfo ? {
+                key:`series:${catInfo}`,title:t(`cat_${catInfo}`),content:<><CatalogSeriesInfo key={catInfo} family={catInfo}/><EquipmentGroupNote group={activeEquipmentGroup} catalog={visibleCatalog}/></>
+              } : panelMode === "irrigation" && libInfo ? {
+                key:`catalog:${libInfo}`,title:inspectedCatalogItem?catalogName(inspectedCatalogItem):libInfo,content:<><CatalogInfo catalogId={libInfo} item={inspectedCatalogItem}/><EquipmentGroupNote group={activeEquipmentGroup} catalog={visibleCatalog}/></>
+              } : panelMode === "object" && selected && selectedItem && selectedIds.length <= 1 ? {
+                key:`head:${selected.id}`,title:catalogName(selectedItem),content:<HeadCard head={selected}/>
+              } : undefined}/>
             ) : (
               <DrawingCard />
             )}
+            {tool==='auto-head'&&<EquipmentGroupNote group={activeEquipmentGroup} catalog={visibleCatalog}/>}
           </aside>
         ) : (
           <button
@@ -1651,15 +1563,17 @@ export function DesignerApp() {
         ))}
       </div>
 
-      <footer className="app-footer relative z-30 flex min-h-11 shrink-0 items-center gap-2 border-t border-line bg-surface px-2 py-1 text-xs">
+      <footer inert={nameRequired} className="app-footer relative z-30 flex min-h-11 shrink-0 items-center gap-2 border-t border-line bg-surface px-2 py-1 text-xs">
         <div className="footer-tools-scroll scroll-touch">
         {isPhone && <nav className="mobile-canvas-controls" aria-label={uiText("gridNavigation")}>
           {cursorControl}
           {selectionControls}
           {textControl}
+          {cutControl}
           <button type="button" className="mobile-icon-button" aria-label={t("drawDim")} title={t("drawDim")} aria-pressed={tool === "draw" && drawSub === "dim"} onClick={() => chooseMobileTool(() => useProject.getState().setDrawSub("dim"))}><IconDim /></button>
           <button type="button" className="mobile-icon-button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => chooseMobileTool(() => useProject.getState().setMeasureSub("measure"))}><TapeMeasureIcon /></button>
           {viewControls}
+          <AutomaticPlanControls/>
           <button type="button" className="mobile-icon-button" aria-label={t("layerManager")} aria-pressed={layerManagerOpen} onClick={() => { setLayerManagerOpen(open=>!open); setMobileWorkspaceMode("drawing"); setMobilePanel(null); setGridOpen(false); }}><Layers /></button>
           {gridControls}
           {textVisibilityControl}
@@ -1669,9 +1583,11 @@ export function DesignerApp() {
           {cursorControl}
           {selectionControls}
           {textControl}
+          {cutControl}
           <button type="button" className="mobile-icon-button" aria-label={t("drawDim")} title={t("drawDim")} aria-pressed={tool === "draw" && drawSub === "dim"} onClick={() => useProject.getState().setDrawSub("dim")}><IconDim /></button>
-          <button type="button" className="mobile-icon-button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure"} onClick={() => useProject.getState().setMeasureSub("measure")}><TapeMeasureIcon /></button>
+          <button type="button" className="mobile-icon-button" aria-label={t("ruler")} title={t("ruler")} aria-pressed={tool === "measure" && measureSub === "measure"} onClick={() => useProject.getState().setMeasureSub("measure")}><TapeMeasureIcon /></button>
           {viewControls}
+          <AutomaticPlanControls/>
           <button type="button" className="mobile-icon-button" aria-label={t(workspaceSection === "irrigation" ? "zonesTitle" : "layerManager")} title={t(workspaceSection === "irrigation" ? "zonesTitle" : "layerManager")} aria-pressed={rightOpen} onClick={() => {
             if (rightOpen) useProject.getState().setRightOpen(false);
             else useProject.getState().setRightMode(workspaceSection === "irrigation" ? "zone" : "drawing");
@@ -1680,8 +1596,13 @@ export function DesignerApp() {
           {textVisibilityControl}
           {dimensionVisibilityControl}
         </nav>}
-        {project.heads.length > 0 && (
+        {(project.heads.length > 0 || workspaceSection==='irrigation') && (
           <div className="workspace-canvas-controls irrigation-visibility-controls">
+            {workspaceSection==='irrigation'&&<AdaptiveTooltip label={t(hideLandscapeInIrrigation?"showLandscape":"hideLandscape")}>
+              <button type="button" className="mobile-icon-button visibility-toggle" aria-label={t(hideLandscapeInIrrigation?"showLandscape":"hideLandscape")}
+                aria-pressed={hideLandscapeInIrrigation} onClick={()=>useProject.setState({hideLandscapeInIrrigation:!hideLandscapeInIrrigation})}><Trees/><VisibilitySlash/></button>
+            </AdaptiveTooltip>}
+            {project.heads.length>0&&<>
             <AdaptiveTooltip label={t(showCoverage ? "hideSectors" : "showSectors")}>
               <button type="button" className="mobile-icon-button visibility-toggle" aria-label={t(showCoverage ? "hideSectors" : "showSectors")}
                 aria-pressed={!showCoverage} onClick={() => useProject.getState().setCoverage(!showCoverage)}>
@@ -1694,22 +1615,17 @@ export function DesignerApp() {
               <button type="button" className="mobile-icon-button visibility-toggle" aria-label={t(showLabels ? "hideHeadLabels" : "showHeadLabels")}
                 aria-pressed={!showLabels} onClick={() => useProject.getState().setLabels(!showLabels)}><Tag/><VisibilitySlash/></button>
             </AdaptiveTooltip>
+            </>}
           </div>
         )}
-        <span className="hidden shrink-0 text-ink-soft sm:inline">
-          {catalogOpen ? (
-            <>
-              ● {activeZone ? zoneLabel(activeZone) : t("unassigned")}
-              {activeQ != null ? ` · ${formatFlowU(activeQ, units.flow)}` : uiText("missingFlowSuffix")}
-            </>
-          ) : null}
-        </span>
-        <AutomaticPlanControls/>
         </div>
-        <IrrigationCheckButton project={project} section={workspaceSection} locale={useProject.getState().locale} onClick={() => { setMobilePanel(null); setIssuesOpen(true); }} />
       </footer>
-      {isPhone ? <><SegmentFigureConfirmation deletingSelection={bulkDeleteConfirm}
-        onDeleteSelected={bulkSelection ? () => setBulkDeleteConfirm(true) : undefined} />
+      </>}
+      <div className="desktop-bottom-actions note-actions-host" data-note-actions />
+      <LandscapeSelectionActions/>
+      <LandscapeReturnTrash/>
+      {isPhone ? <>{drawSub === "cut" ? <CutFigureConfirmation/> : <SegmentFigureConfirmation deletingSelection={bulkDeleteConfirm}
+        onDeleteSelected={bulkSelection ? () => setBulkDeleteConfirm(true) : undefined} />}
         {headSelectionActions && <div className="desktop-bottom-actions"><div className="figure-actions-surface">{headSelectionActions}</div></div>}
         </> : (
         <div className="desktop-bottom-actions">
@@ -1717,13 +1633,13 @@ export function DesignerApp() {
             {headSelectionActions}
             {bulkActions}
             {fusionActions}
-            <SegmentFigureConfirmation deletingSelection={bulkDeleteConfirm}
-              onDeleteSelected={bulkSelection ? () => setBulkDeleteConfirm(true) : undefined} />
+            {drawSub === "cut" ? <CutFigureConfirmation/> : <SegmentFigureConfirmation deletingSelection={bulkDeleteConfirm}
+              onDeleteSelected={bulkSelection ? () => setBulkDeleteConfirm(true) : undefined} />}
           </div>
         </div>
       )}
 
-      {isPhone && !bulkSelection && mobilePanel === "tools" && !catalogGhost && drawingDimensionsVisible && !groupedLayer && <section data-mobile-sheet="tool-properties" className="mobile-parameter-bar mobile-tool-parameter-bar" role="region" aria-label={contextTitle}
+      {isPhone && !bulkSelection && mobilePanel === "tools" && drawingDimensionsVisible && !groupedLayer && <section data-mobile-sheet="tool-properties" className="mobile-parameter-bar mobile-tool-parameter-bar" role="region" aria-label={contextTitle}
         onPointerDown={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()} onWheel={(e) => e.stopPropagation()}>
         <div className="mobile-parameter-scroll">
           {cadEditId && editingNodeContour && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{dimension.kind === "area" ? formatAreaU(dimension.value, units.area) : formatLenU(dimension.value, units.length)}</output></span>)}</div>}
@@ -1731,35 +1647,40 @@ export function DesignerApp() {
         </div>
       </section>}
 
-      {isPhone && !mobilePanel && tool === "place" && !catalogGhost && <div className="mobile-placement-hint"><span>{placeId} {uiText("dragLibrary")}</span><button type="button" aria-label={uiText("finishPlacement")} onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
-      {isPhone && !((bulkSelection || headSelectionActions || groupedLayer || (!selected && !drawingDimensionsVisible && tool !== "measure" && tool !== "scale")) && mobilePanel === "properties") && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && !catalogGhost && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("zonesTitle") : contextTitle} onClose={() => setMobilePanel(null)}
+      {isPhone && !mobilePanel && tool === "place" && catalogPlacementArmed && <div className="mobile-placement-hint"><span>{placeId} {uiText("dragLibrary")}</span><button type="button" aria-label={uiText("finishPlacement")} onClick={() => useProject.getState().setTool(null)}><X size={20} /></button></div>}
+      {isPhone && !((bulkSelection || headSelectionActions || groupedLayer || (!selected && !drawingDimensionsVisible && tool !== "measure" && tool !== "scale")) && mobilePanel === "properties") && mobilePanel && mobilePanel !== "layers" && mobilePanel !== "tools" && <MobileSheet panelKey={mobilePanel} compact={mobilePanel === "properties" && !selected} title={mobilePanel === "library" ? t("library") : mobilePanel === "irrigation" ? t("zonesTitle") : contextTitle} onClose={() => setMobilePanel(null)}
         footer={mobilePanel === "properties" && selected ? <div className="mobile-context-footer">
           <Button className="ml-auto" aria-label={uiText("drawFinish")} title={uiText("drawFinish")} onPointerDown={(e) => e.preventDefault()} onClick={() => { (document.activeElement as HTMLElement)?.blur?.(); if (selected) setMobilePanel(null); }}><Check /></Button>
         </div> : undefined}>
         {mobilePanel === "library" && <div className="mobile-catalog" data-catalog>
-          <div className="mobile-categories" data-cat-bar>{CATEGORIES.map((category) => <button type="button" key={category.id} aria-pressed={familyFilter === category.id} onClick={() => openCatalogFamily(category.id)}>{t(`cat_${category.id}`)}</button>)}</div>
+          <EquipmentLibraryControls/>
+          <div className="mobile-catalog-navigation">
+          <div className="mobile-categories" data-cat-bar>{equipmentGroups.map(category=><button type="button" key={category.id} data-no-tooltip aria-pressed={equipmentGroupId===category.id} onClick={()=>openCatalogFamily(category.id)}>{category.label}</button>)}</div>
+          <EquipmentSeriesSelector series={seriesOptions} value={activeSeries} onChange={openEquipmentSeries}/>
+          <EquipmentSubgroupButtons groups={librarySubgroups} value={activeSubgroup?.id??''} onChange={openEquipmentSeries}/>
+          </div>
           <div className="mobile-library-actions"><span>{uiText("catalogGestureHint")}</span></div>
-          <ul className="mobile-catalog-list">{catalog.map((item) => <li key={item.id} className="mobile-catalog-card" data-selected={placeId === item.id}>
-            <button type="button" className="mobile-catalog-select" aria-label={uiText("itemProperties", { name: item.id })} onPointerDown={e => startCatalogDrag(e, item.id)} onClick={() => { if (Date.now() < catalogClickSuppressedUntil.current) return; const st = useProject.getState(); st.setTool("place"); st.setPlaceId(item.id); st.setCatalogVisible(false); st.setRightMode("irrigation"); st.setRightOpen(true); setLibInfo(item.id); setCatInfo(null); setMobilePanel(null); }}>
-              <CatalogPic item={item} className="h-16 w-16 shrink-0" />
-              <span><strong><bdi dir="ltr">{item.id}</bdi></strong><span>{item.coverageKind === "point" ? uiText("bubblerNoRadius") : item.strip ? `${formatLenU(item.strip.w, units.length)} × ${formatLenU(item.strip.l, units.length)}` : `${formatLenU(item.rMin, units.length)}–${formatLenU(item.rMax, units.length)}`}</span><span>{item.arcMin === item.arcMax ? `${formatNumber(item.arcMax,0)}°` : `${formatNumber(item.arcMin,0)}–${formatNumber(item.arcMax,0)}°`}</span></span>
-              <CatalogThumb color={item.color} arc={item.arcMax} strip={item.strip} />
-            </button>
-            <div className="mobile-catalog-card-actions"><button type="button" className="mobile-icon-button mobile-drag-handle" aria-label={uiText("moveItem", { name: item.id })} onPointerDown={(e) => { e.preventDefault(); useProject.getState().setTool("place"); startCatalogDrag(e, item.id); }}><Crosshair size={22} /></button><button type="button" className="mobile-icon-button" aria-label={uiText("aboutItem", { name: item.id })} aria-expanded={libInfo === item.id} onClick={() => { setLibInfo(item.id); setCatInfo(null); useProject.getState().setRightMode("irrigation"); useProject.getState().setRightOpen(true); setMobilePanel(null); }}><MoreHorizontal size={22} /></button></div>
-
-          </li>)}</ul>
+          <ul className="mobile-catalog-list" ref={catalogListRef}>
+            {automaticSupported&&<li><AutomaticLibraryCard active={tool==='auto-head'} onClick={openAutomaticHead}/></li>}
+            {visibleCatalog.map(item=><li key={item.id} className="mobile-catalog-card" data-selected={placeId===item.id && tool!=='auto-head'}>
+              <EquipmentLibraryCard item={item} selected={placeId===item.id && tool!=='auto-head'} onSelect={()=>selectCatalogItem(item.id)}/>
+              <EquipmentDataStatus item={item}/>
+              {rightOpen && rightMode==='irrigation' && libInfo===item.id && <div className="mobile-catalog-info"><CatalogInfo catalogId={item.id} item={item}/><EquipmentGroupNote group={activeEquipmentGroup} catalog={visibleCatalog}/></div>}
+            </li>)}
+          </ul>
         </div>}
         {mobilePanel === "properties" && <>
           {!groupedLayer && mobileFace && cadEditId && editingNodeContour && <div className="mobile-face-dimensions">{mobileFaceDimensions.map((dimension, index) => <span key={index}>{dimension.label}<output>{dimension.kind === "area" ? formatAreaU(dimension.value, units.area) : formatLenU(dimension.value, units.length)}</output></span>)}</div>}
-          {selected ? <>{selectedIds.length > 1 ? <ZoneList /> : <HeadCard head={selected} onZones={() => {
+          {selected ? <IrrigationSystemCards selection={selectedIds.length > 1 ? undefined : {key:`head:${selected.id}`,title:selectedItem?catalogName(selectedItem):selected.catalogId,content:<HeadCard head={selected} onZones={() => {
             setLibInfo(null); setCatInfo(null); useProject.getState().endHeadEdit(); useProject.getState().setRightMode("zone"); setMobilePanel("irrigation");
-          }}/>}</> : drawingDimensionsVisible ? contextControls : null}
+          }}/>} }/> : drawingDimensionsVisible ? contextControls : null}
           {showHints && tool === "scale" && <p className="mobile-context-hint">{t("scaleHint")}</p>}
           {showHints && tool === "measure" && <p className="mobile-context-hint">{uiText("chooseTwoPoints")}</p>}
         </>}
-        {mobilePanel === "irrigation" && <><ZoneList /><ZoneReview /></>}
+        {mobilePanel === "irrigation" && <IrrigationSystemCards/>}
       </MobileSheet>}
 
+      <CornerRoundingPanel/>
       {referenceImport.picker}
       <input ref={referenceFileRef} type="file" accept={REFERENCE_ACCEPT} hidden onChange={e => {
         const file = e.target.files?.[0]; if (file) void referenceImport.importFile(file); e.target.value = "";
@@ -1780,24 +1701,17 @@ export function DesignerApp() {
         <div className="absolute inset-0 z-50 grid place-items-center bg-ink/30 p-4">
           <div className="w-full max-w-sm rounded-lg bg-surface p-5 shadow-border">
             <p className="font-display text-lg">{t("actualDistance")}</p>
-            <p className="mt-1 text-sm text-muted">
-              {t("onDrawing", { len: formatLenU(Math.hypot(scalePair.b.x - scalePair.a.x, scalePair.b.y - scalePair.a.y), units.length) })}
-            </p>
-            <div className="mt-3 flex flex-wrap gap-1">
-              {LENGTH_OPTS.map((u) => (
-                <Button key={u} size="xs" variant={u === units.length ? "pressed" : "outline"} onClick={() => { const n = parseLocalizedNumber(scaleValue); if (Number.isFinite(n)) setScaleValue(formatNumber(fromMeters(toMetersLen(n, units.length), u), 2)); useProject.getState().patchUnits({ length: u }); }}>
-                  {t(`unit_${u}`)}
-                </Button>
-              ))}
-            </div>
+            <label className="mt-3 flex items-center gap-2">
             <input
               aria-label={`${t("actualDistance")}, ${lenLabel(units.length)}`}
               value={scaleValue}
               onChange={(e) => setScaleValue(e.target.value)}
-              className="mt-3 h-10 w-full rounded-md bg-bg-2 px-3 text-sm shadow-border"
+              className="h-10 min-w-0 flex-1 rounded-md bg-bg-2 px-3 text-sm shadow-border"
               inputMode="decimal"
               autoFocus
             />
+            <span className="shrink-0 text-sm font-medium">{lenLabel(units.length)}</span>
+            </label>
             <div className="mt-3 flex gap-2">
               <Button
                 variant="solid"
@@ -1811,10 +1725,10 @@ export function DesignerApp() {
                   toast(t("scaleCalibrated"));
                 }}
               >
-                {t("save")}
+                {t("apply")}
               </Button>
               <Button
-                className="flex-1"
+                className="flex-1 reference-scale-cancel"
                 size="sm"
                 onClick={() => {
                   setScalePair(null);
@@ -1863,87 +1777,11 @@ export function DesignerApp() {
         </KeyboardSheet>
       )}
 
-      {projectsOpen && (
-        <div className="absolute inset-0 z-50 grid place-items-center bg-ink/30 p-4" onClick={() => setProjectsOpen(false)}>
-          <div className="flex max-h-[80vh] w-full max-w-md flex-col rounded-lg bg-surface p-4 shadow-border" onClick={(e) => e.stopPropagation()}>
-            <p className="font-display text-lg">{t("projects")}</p>
-            <p className="mt-1 text-xs text-muted">{t("projectsHint")}</p>
-            <ul className="mt-3 flex-1 overflow-y-auto text-sm">
-              {library.length === 0 && <li className="text-muted">{t("noProjects")}</li>}
-              {[...library]
-                .sort((a, b) => (b.updatedAt ?? "").localeCompare(a.updatedAt ?? ""))
-                .map((p) => (
-                  <LibraryRow
-                    key={p.id}
-                    name={isNamed(p) ? p.name : t("untitled")}
-                    updatedAt={p.updatedAt}
-                    active={p.id === project.id}
-                    onOpen={() => {
-                      useProject.getState().saveCurrentToLibrary();
-                      useProject.getState().openLibrary(p.id);
-                      setProjectsOpen(false);
-                    }}
-                    onDelete={() => useProject.getState().removeLibrary(p.id)}
-                    onCopy={() => {void downloadProjectFile(p.id===project.id?packedNow():toProjectFile({...packedNow(),...p.view,project:p})).catch(()=>toast.error(t("toastExportFail")));}}
-                    onExport={() => setExportProject(p)}
-                  />
-                ))}
-            </ul>
-            <div className="mt-3 flex gap-2">
-              <Button
-                size="sm"
-                variant="solid"
-                className="flex-1"
-                onClick={() => {
-                  setProjectsOpen(false);
-                  useProject.getState().newProject();
-                }}
-              >
-                <Plus />
-                {t("newProject")}
-              </Button>
-              <Button className="flex-1" size="sm" onClick={() => setProjectsOpen(false)}>
-                {t("close")}
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
-
       {settingsOpen && <SettingsPanel onClose={() => setSettingsOpen(false)} />}
-      {deleteAsk && (
-        <div className="absolute inset-0 z-50 grid place-items-center bg-ink/40 p-4" onClick={() => setDeleteAsk(null)}>
-          <div className="w-full max-w-sm rounded-lg bg-surface p-5 shadow-border" onClick={(e) => e.stopPropagation()}>
-            <p className="font-display text-lg">{t("deleteProject")}</p>
-            <p className="mt-2 text-sm text-ink-soft">
-              {t("deleteConfirm", { name: deleteAsk.name })}
-            </p>
-            <div className="mt-4 flex gap-2">
-              <Button
-                variant="solid"
-                className="flex-1"
-                size="sm"
-                onClick={() => {
-                  useProject.getState().removeLibrary(deleteAsk.id);
-                  setDeleteAsk(null);
-                  setProjectsOpen(false);
-                }}
-              >
-                {t("delete")}
-              </Button>
-              <Button className="flex-1" size="sm" onClick={() => setDeleteAsk(null)}>
-                {t("cancel")}
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
 
       <ProjectExportDialog project={exportProject} onClose={()=>setExportProject(null)}/>
       <ProjectTrashDialog open={trashOpen} onClose={()=>setTrashOpen(false)}/>
       <FileSaveDialog/>
-      <IrrigationCheck open={issuesOpen} onOpenChange={setIssuesOpen}/>
-      {catalogGhost && createPortal(<CatalogPlacementPreview ghost={catalogGhost}/>,document.body)}
 
     </div></DirectionProvider>
   );
@@ -2050,122 +1888,45 @@ function CatalogScroller({ listRef, dep }: { listRef: RefObject<HTMLUListElement
   );
 }
 
-function CatalogPic({ item, className }: { item: CatalogItem; className?: string }) {
-  const fallback =
-    item.type === "rotor" || item.family === "rotor"
-      ? "/catalog/PGP-ADJ.png?v=9"
-      : item.type === "bubbler" || item.family === "bubbler"
-        ? "/catalog/MSBN-50Q.png?v=9"
-        : item.family === "mp" || item.family === "mp800" || item.family === "strip"
-        ? "/catalog/MP2000.png?v=9"
-        : item.type === "body"
-          ? "/catalog/body.png?v=9"
-          : "/catalog/8A.png?v=9";
-  return (
-    <img
-      src={catalogPhoto(item)}
-      alt={catalogName(item)}
-      className={cn("shrink-0 object-contain", className)}
-      onError={(e) => {
-        const el = e.currentTarget;
-        if (!el.src.endsWith(fallback)) el.src = fallback;
-      }}
-    />
-  );
+export function formatCatalogArc(item:CatalogItem) {
+  return coveragePatternLabel(item);
 }
 
-function MenuBtn({ onClick, icon, label }: { onClick: () => void; icon: ReactNode; label: string }) {
+export function EquipmentLibraryCard({item,selected,onSelect}:{item:CatalogItem;selected:boolean;onSelect:()=>void}) {
+  const units=useProject.getState().units;
+  return <button type="button" className="irrigation-catalog-card" aria-pressed={selected}
+    aria-label={uiText("itemProperties",{name:item.modelId??item.id})}
+    onClick={onSelect} onDragStart={e=>e.preventDefault()}>
+    <span className="irrigation-catalog-copy">
+      <span className="irrigation-catalog-brand">{manufacturerName(item)}</span>
+      <strong><bdi dir="ltr">{item.modelId??item.id}</bdi></strong>
+      <span className="irrigation-catalog-spec">{coverageSizeRange(item,units.length)}</span>
+      <span className="irrigation-catalog-spec">{formatCatalogArc(item)}</span>
+    </span>
+    <CatalogThumb item={item} color={equipmentAppearance(item).color}/>
+  </button>;
+}
+export function AutomaticLibraryCard({active,onClick,disabled=false}:{active:boolean;onClick:()=>void;disabled?:boolean}) {
+  if(disabled)return null;
+  return <button type="button" className="irrigation-catalog-card automatic-library-card" aria-pressed={active} onClick={onClick}>
+    <span className="irrigation-catalog-copy"><strong>{uiText('autoHead.title')}</strong></span><Crosshair className="size-6 shrink-0" aria-hidden="true"/>
+  </button>;
+}
+
+function MenuBtn({ onClick, icon, label, disabled=false }: { onClick: () => void; icon: ReactNode; label: string; disabled?:boolean }) {
   return (
-    <button type="button" className="flex h-8 w-full items-center gap-2 rounded-sm px-2 text-left text-xs text-btn hover:bg-btn-soft" onClick={onClick}>
+    <button type="button" disabled={disabled} className="flex h-8 w-full items-center gap-2 rounded-sm px-2 text-left text-xs text-btn hover:bg-btn-soft disabled:opacity-45" onClick={onClick}>
       {icon}
       {label}
     </button>
   );
 }
 
-function LibraryRow({
-  name,
-  updatedAt,
-  active,
-  onOpen,
-  onDelete,
-  onExport,
-  onCopy,
-}: {
-  name: string;
-  updatedAt?: string;
-  active: boolean;
-  onOpen: () => void;
-  onDelete: () => void;
-  onExport: () => void;
-  onCopy: () => void;
-}) {
-  const t = useT();
-  const [dl, setDl] = useState(false);
-  const hold = useRef<number | null>(null);
-  const skip = useRef(false);
-  const when = updatedAt
-    ? new Date(updatedAt).toLocaleString(activeNumberLocale(), { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })
-    : "";
-  const clear = () => {
-    if (hold.current) {
-      window.clearTimeout(hold.current);
-      hold.current = null;
-    }
-  };
-  return (
-    <li className={cn("border-b border-line py-2", active && "bg-btn-soft/60")}>
-      <div className="flex items-center gap-1.5">
-        <button
-          type="button"
-          className="min-w-0 flex-1 text-left"
-          onPointerDown={() => {
-            skip.current = false;
-            clear();
-            hold.current = window.setTimeout(() => {
-              skip.current = true;
-              onDelete();
-            }, 500);
-          }}
-          onPointerUp={clear}
-          onPointerCancel={clear}
-          onPointerLeave={clear}
-          onClick={() => {
-            if (skip.current) return;
-            onOpen();
-          }}
-        >
-          <p className="truncate font-medium">{name}</p>
-          <p className="text-xs text-muted">{when}</p>
-        </button>
-        <Button
-          size="xs"
-          variant="solid"
-          className="shrink-0 bg-btn-soft px-1.5 text-ink"
-          onClick={() => setDl((v) => !v)}
-        >
-          <FileDown className="size-3.5" />
-          {t("file")}
-        </Button>
-        <Button size="xs" variant="ghost" className="shrink-0 text-danger" aria-label={t("deleteProject")} onClick={onDelete}>
-          <Trash2 />
-        </Button>
-      </div>
-      {dl && (
-        <div className="mt-1.5 flex flex-wrap gap-1">
-          <Button size="xs" variant="outline" onClick={onCopy}>{t("saveProjectCopy")}</Button>
-          <Button size="xs" variant="outline" onClick={onExport}>{t("exportMaterials")}</Button>
-        </div>
-      )}
-    </li>
-  );
-}
-
 function Stat({ k, v }: { k: string; v: string }) {
   return (
     <div className="info-stat rounded-sm bg-bg-2 px-1.5 py-1 sm:rounded-md sm:px-2.5 sm:py-2">
-      <dt className="text-[8px] font-semibold text-faint uppercase sm:text-[10px]">{k}</dt>
-      <dd className="mt-0.5 text-[11px] font-medium leading-tight tabular sm:text-sm">{v}</dd>
+      <dt className="text-[0.5rem] font-semibold text-faint uppercase sm:text-[0.625rem]">{k}</dt>
+      <dd className="mt-0.5 text-[0.6875rem] font-medium leading-tight tabular sm:text-sm">{v}</dd>
     </div>
   );
 }
@@ -2255,7 +2016,7 @@ function CadEditBar({ faceId }: { faceId: string }) {
   const themeId = useProject((s) => s.themeId);
   const dark = themeId === "graphite";
   const [askDel, setAskDel] = useState(false);
-  const [fillOpen, setFillOpen] = useState(false);
+  const fillOpen = useLayerFillLibrary(s => s.open);
   const [tip, setTip] = useState<string | null>(null);
   const hideTip = useRef(0);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -2263,7 +2024,6 @@ function CadEditBar({ faceId }: { faceId: string }) {
   const face = d.faces[faceId];
   useEffect(() => {
     setAskDel(false);
-    setFillOpen(false);
     setTip(null);
     return () => window.clearTimeout(hideTip.current);
   }, [faceId]);
@@ -2325,22 +2085,17 @@ function CadEditBar({ faceId }: { faceId: string }) {
       >
         <div className="flex flex-col items-center">
           {!face.layerId && <LayerColorPicker
-            key={faceId}
+            faceId={faceId}
             orientation={face.textureRotation ?? 0}
-            onOrientationChange={rotation => changeMaterialOrientation(faceId, rotation)}
             title={face.name || t("layerN", { n: faceLayerNumber(d, faceId) })}
             color={face.fill ?? REGION_FILL[face.type] ?? "#c8e6b0"}
-            side="right"
             className="cad-fill-trigger"
-            open={fillOpen}
-            onOpenChange={(open) => { setAskDel(false); setTip(null); setFillOpen(open); }}
-            onChange={(color) => useProject.getState().setFaceFill(color)}
+            onOpen={() => { setAskDel(false); setTip(null); }}
           />}
           {!face.layerId && !memberScope && <Btn
             label={t("duplicateHint")}
             onPress={() => {
               setAskDel(false);
-              setFillOpen(false);
               useProject.getState().duplicateSelected();
             }}
           >
@@ -2350,7 +2105,6 @@ function CadEditBar({ faceId }: { faceId: string }) {
             label={t("deleteShapeHint")}
             danger
             onPress={() => {
-              setFillOpen(false);
               setAskDel(true);
             }}
           >
@@ -2358,7 +2112,7 @@ function CadEditBar({ faceId }: { faceId: string }) {
           </Btn>
         </div>
         {tip && !askDel && !fillOpen && (
-          <span className="pointer-events-none absolute left-full top-1/2 z-10 ml-1 w-max max-w-[12rem] -translate-y-1/2 rounded-sm bg-ink px-2 py-1 text-[10px] leading-snug text-white shadow-border">
+          <span className="pointer-events-none absolute left-full top-1/2 z-10 ml-1 w-max max-w-[12rem] -translate-y-1/2 rounded-sm bg-ink px-2 py-1 text-[0.625rem] leading-snug text-white shadow-border">
             {tip}
           </span>
         )}
@@ -2460,6 +2214,25 @@ function DimensionArea({ area }: { area: number }) {
   </div>;
 }
 
+function FuseFiguresButton({ onClick, className = "" }: { onClick: () => void; className?: string }) {
+  const t=useT();
+  return <button type="button" className={`figure-fuse-button ${className}`} onClick={onClick}>
+    <svg width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true"><path d="M3 3h12v6h6v12H9v-6H3Z"/><path d="M9 9h6v6H9Z" strokeDasharray="2 2" opacity=".45"/></svg>{t("fuseFigures")}
+  </button>;
+}
+
+function CutFigureConfirmation() {
+  const t=useT();
+  const project=useProject(s=>s.project),points=useProject(s=>s.draft.points);
+  const ready=useMemo(()=>Boolean(cutFigures(drawingOrMigrate(project),points)),[project,points]);
+  if(points.length<2) return null;
+  return <section className="bulk-selection-actions segment-figure-confirm" data-confirming="true" role="region" aria-label={t("drawCut")}
+    onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()} onWheel={e=>e.stopPropagation()}>
+    <button type="button" className="bulk-create" disabled={!ready} onClick={()=>useProject.getState().confirmCut()}><Scissors size="1.25rem"/>{t("drawCut")}</button>
+    <button type="button" className="action-cancel" aria-label={t("cancel")} title={t("cancel")} onClick={()=>useProject.getState().setDrawSub("cut")}><X size="1.25rem"/></button>
+  </section>;
+}
+
 function SegmentFigureConfirmation({ deletingSelection, onDeleteSelected }: {
   deletingSelection: boolean; onDeleteSelected?: () => void;
 }) {
@@ -2468,11 +2241,29 @@ function SegmentFigureConfirmation({ deletingSelection, onDeleteSelected }: {
   const selectedPolyIds=useProject(s=>s.selectedPolyIds);
   const [dismissed,setDismissed]=useState<string[]>([]);
   const candidates=useMemo(()=>segmentFigures(drawingOrMigrate(project)),[project.drawing]);
+  const attachedCandidates=useMemo(()=>attachedSegmentFigures(drawingOrMigrate(project)),[project.drawing]);
   const drawing=drawingOrMigrate(project);
   const multipleSegments=selectedPolyIds.length>1 && selectedPolyIds.every(id=>drawing.faces[id]?.segment);
   const candidate=candidates.find(c=>!dismissed.includes(c.key) &&
     (selectedPolyIds.length<2 || c.parts.every(part=>selectedPolyIds.includes(part.id))));
   const showDelete=multipleSegments && !!onDeleteSelected;
+  const attached=attachedCandidates.find(c=>!dismissed.includes(c.key) &&
+    (selectedPolyIds.length<2 || c.parts.every(part=>selectedPolyIds.includes(part.id))));
+  if(attached && !deletingSelection) {
+    const resolve=(action: 'merge' | 'separate' | 'delete')=>{
+      const st=useProject.getState();
+      const result=resolveAttachedSegmentFigure(drawingOrMigrate(st.project),attached.key,action);
+      if(!result) return;
+      st.commitDrawing(result.drawing,result.faceId);
+      st.setCadEdit(action==='delete' ? null : result.faceId);
+    };
+    return <section className="bulk-selection-actions segment-figure-confirm attached-segment-confirm" data-confirming="true" role="region" aria-label={t("attachedSegmentActions")}
+      onPointerDown={e=>e.stopPropagation()} onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onWheel={e=>e.stopPropagation()}>
+      <FuseFiguresButton className="bulk-create attached-merge" onClick={()=>resolve('merge')}/>
+      <button type="button" className="bulk-create attached-separate" onClick={()=>resolve('separate')}><Square size="1.25rem" strokeWidth={1.6} aria-hidden="true"/>{t("makeSeparateFigure")}</button>
+      <button type="button" className="bulk-delete" onClick={()=>resolve('delete')}><Trash2 size={18}/>{t("delete")}</button>
+    </section>;
+  }
   // Let the existing bulk-delete confirmation take this same panel position.
   if(!candidate || deletingSelection) return null;
   return <section className="bulk-selection-actions segment-figure-confirm" data-confirming="true" data-selection-delete={showDelete} role="region" aria-label={t("createSegmentFigure")}
@@ -2617,7 +2408,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
           >
             {formatLength(totalLength)}
           </output>
-          <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+          <span className="pr-0.5 text-[0.6875rem] text-muted">{lenLabel(units.length)}</span>
         </div>}
         {lengths.map((length, index) => (
           <label key={`${faceId ?? "draft"}-${index}`} className="flex h-9 shrink-0 items-center gap-1 rounded-sm bg-bg-2 px-1.5">
@@ -2643,7 +2434,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
                 }
               }}
             />
-            <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+            <span className="pr-0.5 text-[0.6875rem] text-muted">{lenLabel(units.length)}</span>
           </label>
         ))}
         {!faceId && points.length >= 1 && (
@@ -2668,7 +2459,7 @@ function SplineLengthsPad({ faceId, compact = false }: { faceId: string | null; 
                 }
               }}
             />
-            <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+            <span className="pr-0.5 text-[0.6875rem] text-muted">{lenLabel(units.length)}</span>
             {!compact && <button
               type="button"
               aria-label={uiText("drawSegmentNamed", { name: sideLetter(segmentCount) })}
@@ -2759,7 +2550,7 @@ function FreeformSidesPad({ faceId }: { faceId: string }) {
                 }
               }}
             />
-            <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+            <span className="pr-0.5 text-[0.6875rem] text-muted">{lenLabel(units.length)}</span>
           </label>
         ))}
       </div>
@@ -3017,7 +2808,7 @@ function DrawMeasurePad({
           if (event.key === "Enter") event.currentTarget.blur();
         }}
       />
-      <span className="pr-0.5 text-[11px] text-muted">{unit}</span>
+      <span className="pr-0.5 text-[0.6875rem] text-muted">{unit}</span>
     </label>
   );
   if (["circle", "rect", "ellipse", "triangle", "hexagon"].includes(drawSub)) {
@@ -3074,7 +2865,7 @@ function DrawMeasurePad({
           onChange={e => setText(e.target.value)} onFocus={e => e.currentTarget.select()}
           onBlur={() => { if (text.trim()) { apply(text); setText(""); } }}
           onKeyDown={e => { e.stopPropagation(); if (e.key === "Enter") e.currentTarget.blur(); }}/>
-        <span className="pr-0.5 text-[11px] text-muted">{lenLabel(units.length)}</span>
+        <span className="pr-0.5 text-[0.6875rem] text-muted">{lenLabel(units.length)}</span>
       </label>
     </div>
   </div>;
@@ -3141,7 +2932,7 @@ function Field({
       <span className={cn("flex items-center gap-1.5 font-medium", required ? "text-tool" : "text-muted")}>
         {label}
         {required ? (
-          <span className="rounded-sm bg-tool-soft px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-tool uppercase">{t("required")}</span>
+          <span className="rounded-sm bg-tool-soft px-1.5 py-0.5 text-[0.625rem] font-semibold tracking-wide text-tool uppercase">{t("required")}</span>
         ) : (
           <span className="font-normal text-faint">{t("optional")}</span>
         )}
@@ -3172,7 +2963,7 @@ function ProjectCard() {
   const project = useProject((s) => s.project);
   return (
     <div className="p-1.5 sm:p-4">
-      <p className="text-[9px] font-semibold tracking-wide text-muted uppercase sm:text-[10px]">{t("project")}</p>
+      <p className="text-[0.5625rem] font-semibold tracking-wide text-muted uppercase sm:text-[0.625rem]">{t("project")}</p>
       <h2 className="mt-0.5 font-display text-sm sm:mt-1 sm:text-xl">{!isNamed(project) ? t("untitled") : project.name}</h2>
       <Button className="mt-2 sm:mt-3" size="sm" onClick={() => useProject.getState().setProjectFormOpen(true)}>
         {t("edit")}
@@ -3277,14 +3068,20 @@ function focusWithoutScroll(el: HTMLInputElement) {
   pinToVisualViewport();
 }
 
-function ProjectFormBar() {
+function ProjectFormBar({allowMenu=false}:{allowMenu?:boolean}) {
   const t = useT();
-  const kbLift = useKbLift();
+  const [viewport,setViewport]=useState<{top:number;height:number;keyboard:boolean}|null>(null);
+  useLayoutEffect(()=>{
+    const vv=window.visualViewport;
+    const update=()=>setViewport({top:vv?.offsetTop??0,height:vv?.height??window.innerHeight,
+      keyboard:window.innerHeight-(vv?.height??window.innerHeight)>48});
+    update();vv?.addEventListener('resize',update);vv?.addEventListener('scroll',update);window.addEventListener('resize',update);
+    return()=>{vv?.removeEventListener('resize',update);vv?.removeEventListener('scroll',update);window.removeEventListener('resize',update);};
+  },[]);
   const project = useProject((s) => s.project);
   const nameRef = useRef<HTMLInputElement>(null);
   const [name, setName] = useState(!isNamed(project) ? "" : project.name);
   const [nameError, setNameError] = useState(false);
-  const [more, setMore] = useState(false);
   const [meta, setMeta] = useState({
     address: project.meta.address,
     client: project.meta.client,
@@ -3317,20 +3114,16 @@ function ProjectFormBar() {
   );
 
   const canSave = name.trim().length > 0;
-  const required = !isNamed(project);
   const closeForm = () => {
-    if (required) {
-      setNameError(true);
-      return;
-    }
     nameRef.current?.blur();
-    unlockScreen(() => useProject.getState().setProjectFormOpen(false));
+    unlockScreen(() => useProject.getState().cancelProjectForm());
   };
   const save = () => {
     const n = (nameRef.current?.value ?? name).trim();
     if (!n) {
       setNameError(true);
-      toast(t("enterName"));
+      if(nameRef.current)focusWithoutScroll(nameRef.current);
+      nameRef.current?.closest('.project-details-form')?.scrollTo({top:0,behavior:'smooth'});
       return;
     }
     setNameError(false);
@@ -3353,35 +3146,43 @@ function ProjectFormBar() {
   return createPortal(
     <div
       className={cn(
-        "fixed inset-0 z-[80] flex justify-center bg-ink/45 px-4",
-        kbLift > 0 ? "items-end" : "items-center",
+        "fixed inset-x-0 top-0 z-[80] flex justify-center bg-ink/45 px-4",
+        allowMenu && "pointer-events-none",
+        viewport?.keyboard ? "items-end" : "items-center",
       )}
       style={{
-        paddingTop: 16,
-        paddingBottom: kbLift > 0 ? kbLift + 16 : 24,
+        top:viewport?.top??0,
+        height:viewport?.height??'100dvh',
+        paddingBlock:12,
       }}
+      onKeyDown={e=>{e.stopPropagation();if(e.key==='Escape'){e.preventDefault();closeForm();}}}
       onPointerDown={(e) => {
         if (e.target !== e.currentTarget) return;
-        if (required) {
-          setNameError(true);
-          return;
-        }
-        closeForm();
+        if(isNamed(project))closeForm();
       }}
     >
       <div
         className={cn(
-          "mb-2 w-full max-w-sm rounded-lg bg-surface p-4 shadow-border",
-          nameError && "ring-2 ring-danger",
+          "project-details-form pointer-events-auto mb-2 w-full max-w-md overflow-y-auto overscroll-contain rounded-lg bg-surface p-4 shadow-border",
         )}
+        style={{ maxHeight:'100%' }}
         onPointerDown={(e) => e.stopPropagation()}
       >
-        <p className="text-center font-display text-lg">{t("projectName")}</p>
-        <p className={cn("mt-1 text-center text-xs", nameError ? "font-medium text-danger" : "text-muted")}>{t("enterName")}</p>
+        <div className="project-details-heading">
+          <p className="font-display text-lg">{t("projectName")}</p>
+          <Button size="icon" aria-label={t("cancel")} title={t("cancel")} onPointerDown={e=>e.preventDefault()} onClick={closeForm}><X /></Button>
+        </div>
+        <label className="mt-4 block">
+          <span className="flex flex-wrap items-center gap-1.5 text-sm font-medium text-tool">
+            {t("projectName")}
+            <span className="rounded-sm bg-tool-soft px-1.5 py-0.5 text-xs">{t("required")}</span>
+          </span>
+        <span className="project-name-control" data-invalid={nameError}>
         <input
+          data-project-name-input
           ref={nameRef}
           value={name}
-          placeholder={`${t("projectName")} *`}
+          placeholder={t("projectName")}
           autoComplete="off"
           autoCorrect="off"
           spellCheck={false}
@@ -3389,7 +3190,9 @@ function ProjectFormBar() {
           inputMode="text"
           aria-required
           aria-invalid={nameError}
+          aria-describedby={nameError?'project-name-error':undefined}
           autoFocus
+          onFocus={()=>lockScreen()}
           onPointerDown={() => lockScreen()}
           onTouchEnd={(e) => {
             e.preventDefault();
@@ -3409,12 +3212,18 @@ function ProjectFormBar() {
               save();
             }
           }}
-          className={cn(
-            "mt-4 h-11 w-full rounded-md px-3 text-center text-base leading-normal text-ink shadow-border",
-            nameError ? "bg-danger/10 ring-2 ring-danger" : "bg-bg-2",
-            !canSave && !nameError && "ring-2 ring-tool/70",
-          )}
+          className="project-name-input h-11 w-full text-base leading-normal text-ink"
         />
+          <span className="project-name-asterisk" aria-hidden="true">*</span>
+        </span>
+        </label>
+        {nameError&&<p id="project-name-error" className="project-name-error" role="alert">{t("enterName")}</p>}
+        <div className="project-details-fields mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <Field label={t("address")} value={meta.address} onChange={(v) => setMeta({ ...meta, address: v })} />
+          <Field label={t("client")} value={meta.client} onChange={(v) => setMeta({ ...meta, client: v })} />
+          <Field label={t("phone")} value={meta.phone} onChange={(v) => setMeta({ ...meta, phone: v })} />
+          <Field label={t("notes")} value={meta.notes} onChange={(v) => setMeta({ ...meta, notes: v })} />
+        </div>
         <div className="mt-3 flex gap-2">
           <button
             type="button"
@@ -3431,31 +3240,7 @@ function ProjectFormBar() {
           >
             {t("save")}
           </button>
-          {!required && (
-            <button
-              type="button"
-              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-line text-tool"
-              aria-label={t("close")}
-              onPointerDown={(e) => {
-                e.preventDefault();
-                closeForm();
-              }}
-            >
-              <X />
-            </button>
-          )}
         </div>
-        <button type="button" className="mt-2 w-full text-center text-[11px] font-medium text-muted" onClick={() => setMore((v) => !v)}>
-          {more ? t("extraHide") : t("extra")}
-        </button>
-        {more && (
-          <div className="mt-1 grid max-h-36 grid-cols-2 gap-1 overflow-y-auto">
-            <Field label={t("address")} value={meta.address} onChange={(v) => setMeta({ ...meta, address: v })} />
-            <Field label={t("client")} value={meta.client} onChange={(v) => setMeta({ ...meta, client: v })} />
-            <Field label={t("phone")} value={meta.phone} onChange={(v) => setMeta({ ...meta, phone: v })} />
-            <Field label={t("notes")} value={meta.notes} onChange={(v) => setMeta({ ...meta, notes: v })} />
-          </div>
-        )}
       </div>
     </div>,
     document.body,
@@ -3472,7 +3257,7 @@ function LayerIrrigCard() {
   if (!face) {
     return (
       <div className="border-b border-line px-2 py-2">
-        <p className="text-[11px] text-muted">{t("noLayers")}</p>
+        <p className="text-[0.6875rem] text-muted">{t("noLayers")}</p>
       </div>
     );
   }
@@ -3480,9 +3265,9 @@ function LayerIrrigCard() {
   const label = layerTitle(d, face.id, locale);
   return (
     <div className="border-b border-line px-2 py-2">
-      <p className="text-[10px] font-semibold tracking-wide text-muted uppercase">{t("irrigation")}</p>
+      <p className="text-[0.625rem] font-semibold tracking-wide text-muted uppercase">{t("irrigation")}</p>
       <p className="mt-0.5 truncate text-sm font-medium">{label}</p>
-      <p className="text-[11px] tabular text-muted">
+      <p className="text-[0.6875rem] tabular text-muted">
         {t("area")}: {formatAreaU(faceArea(d, face.id), useProject.getState().units.area)}
       </p>
       <div className="mt-1.5 flex flex-wrap gap-1">
@@ -3588,9 +3373,9 @@ function DrawingCard({ onlyConstraints = false }: { onlyConstraints?: boolean })
 }
 
 function CatalogSource({ item }: { item: CatalogItem }) {
-  return <div className="mt-3 border-t border-line pt-2 text-[11px] leading-relaxed">
+  return <div className="mt-3 border-t border-line pt-2 text-[0.6875rem] leading-relaxed">
     {item.dataNote && <p className="mb-2 text-muted">{catalogNote(item)}</p>}
-    <a className="text-accent underline underline-offset-2" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{uiText("hunterTableLink")}</a>
+    <a className="text-accent underline underline-offset-2" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{manufacturerName(item)} · {uiText("source")}</a>
     {item.verifiedOn && <p className="mt-1 text-muted">{uiText("checkedOn")}{formatDate(item.verifiedOn)}</p>}
   </div>;
 }
@@ -3605,55 +3390,66 @@ function isLightColor(hex: string) {
   return rgb.length === 6 && [0, 2, 4].reduce((sum, i, j) => sum + parseInt(rgb.slice(i, i + 2), 16) * [0.2126, 0.7152, 0.0722][j]!, 0) > 175;
 }
 
-function CatalogInfo({ catalogId }: { catalogId: string }) {
+export function CatalogInfo({ catalogId,item:scopedItem }: { catalogId: string;item?:CatalogItem }) {
   const units=useProject(s=>s.units),target=useProject(s=>s.project.meta.targetMm);
-  const item=itemById(catalogId);
+  const item=scopedItem??itemById(catalogId);
   if (!item) return null;
   const defaults=catalogHeadDefaults(item),nozzle=item.nozzles.find(n=>n.id===defaults.nozzleId);
-  const strip=stripAtPressure(item,defaults.designPressure);
   const pressure=pressureRange(item,defaults.nozzleId,defaults.arc);
-  const fl=computeFlow(item,{arc:defaults.arc,radius:defaults.r,pressureBar:defaults.designPressure,nozzleId:defaults.nozzleId});
-  const minutes=fl.precipMmHr!=null?runTimeMin(target,fl.precipMmHr):null;
+  const point={arc:defaults.arc,radius:defaults.r,pressureBar:defaults.designPressure,nozzleId:defaults.nozzleId};
+  const fl=computeFlow(item,point),precipitation=displayPrecipitation(item,point,fl);
+  const radiusVerified=item.performanceReview!=='per-row'||!!geometryAt(item,defaults.nozzleId,defaults.designPressure,defaults.arc);
   return <div className="p-3" aria-label={uiText("itemProperties", { name: item.id })}>
-    <CatalogPic item={item} className="mx-auto h-28 w-full max-w-[11rem]" />
-    <h2 className="mt-2 text-sm font-semibold"><bdi dir="ltr">Hunter {item.id}</bdi></h2>
+
+    <h2 className="mt-2 text-base font-semibold"><bdi dir="ltr">{manufacturerName(item)} {item.modelId??item.id}</bdi></h2>
     <p className="mt-1 text-xs text-muted">{catalogName(item)}</p>
-    <p className="mt-2 text-xs leading-relaxed">{catalogUse(item)}</p>
-    {item.type==="rotor" && <p className="mt-2 text-xs">{uiText("defaultNozzleLabel")}{nozzle?.size??"—"} · {nozzle ? catalogColor(nozzle.colorName) : uiText("noData")}</p>}
-    <dl className="mt-3 grid grid-cols-2 gap-x-2 gap-y-2 text-[11px]">
+    <p className="mt-2 text-sm leading-relaxed">{catalogUse(item)}</p>
+    {item.type==="rotor" && <p className="mt-2 text-xs">{uiText("defaultNozzleLabel")}{nozzle?.size??nozzle?.name??"—"} · {nozzle ? catalogColor(nozzle.colorName) : uiText("noData")}</p>}
+    <dl className="mt-3 grid grid-cols-2 gap-x-2 gap-y-2 text-[0.6875rem]">
       <FlowStats lpm={fl.lpm} m3h={fl.m3h}/>
-      <Stat k={item.strip?uiText("stripAtPressure"):uiText("radiusAtPressure")} v={item.coverageKind==="point"?uiText("noData"):item.strip?(strip?`${formatLenU(strip.w,units.length)} × ${formatLenU(strip.l,units.length)}`:uiText("noData")):formatLenU(defaults.r,units.length)}/>
-      <Stat k={uiText("workingPressure")} v={formatPressureU(defaults.designPressure,units.pressure)}/>
-      <Stat k={item.precipBasis==="single"?uiText("precipSingle"):uiText("precipSquare")} v={fl.precipMmHr==null?uiText("noData"):formatPrecipitation(fl.precipMmHr, units)}/>
-      <Stat k={uiText("precipTriangle")} v={fl.precipTriangleMmHr==null?uiText("noData"):formatPrecipitation(fl.precipTriangleMmHr, units)}/>
-      <Stat k={uiText("runTimeDepth", { depth: formatDepth(target, units) })} v={minutes==null?uiText("noData"):`${fmt1(minutes)} ${uiText("min")}`}/>
-      <Stat k={uiText("sector")} v={item.arcMin===item.arcMax?`${item.arcMax}°`:`${item.arcMin}–${item.arcMax}°`}/>
-      <Stat k={uiText("nozzlePressureRange")} v={pressure ? `${formatPressureU(pressure.min,units.pressure)}–${formatPressureU(pressure.max,units.pressure)}` : uiText("noData")}/>
+      <Stat k={coverageSizeLabel(item,undefined,true)} v={!radiusVerified?uiText("noData"):coverageSize(item,defaults.r,units.length,defaults.designPressure)}/>
+      <Stat k={uiText(catalogPressureLabel(item))} v={formatPressureU(defaults.designPressure,units.pressure)}/>
+      <PrecipitationStats value={precipitation} targetMm={target}/>
+      <Stat k={uiText(item.strip||hasStreamCoverage(item)||item.coverageKind&&item.coverageKind!=="sector"?"coveragePattern":"sector")} v={formatCatalogArc(item)}/>
+      <Stat k={uiText(item.pressureBasis==='inlet'?catalogPressureLabel(item):"nozzlePressureRange")} v={pressure ? `${formatPressureU(pressure.min,units.pressure)}–${formatPressureU(pressure.max,units.pressure)}` : uiText("noData")}/>
     </dl>
+    {item.coverageKind==="square"&&<p className="sq-size-hint">{uiText("sqSizeHint")}{item.squarePatternFraction===.75?` ${uiText("sqThreeQuarterHint")}`:""}</p>}
     <CatalogReference item={item} nozzle={nozzle}/>
+    <p className="mt-2 text-xs text-muted">{uiText("equipment.verification")}: {uiText(item.performanceReview==='per-row'&&fl.lpm!=null?'equipment.verifiedPoint':item.verificationStatus==='Needs Review'?"equipment.sourceConflict":item.verificationStatus==='Deprecated'?"equipment.deprecated":"equipment.verified")} · {item.verifiedOn}</p>
+    {item.verificationStatus==='Needs Review'&&<p className="mt-1 text-xs text-muted">{uiText(item.performanceReview==='per-row'?'equipment.rowReviewHint':'equipment.sourceConflictHint')}</p>}
+    {item.fullCircleRotation==='unknown'&&<p className="mt-1 text-xs text-muted">{uiText('equipment.rotationUnverified')}</p>}
     <CatalogSource item={item}/>
   </div>;
 }
 
-function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
-  const item = itemById(head.catalogId);
+export function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
+  const item = catalogForHead(head);
   const units = useProject((s) => s.units);
   const tx = useT();
   const zones = useProject((s) => s.project.zones);
   const target = useProject((s) => s.project.meta.targetMm);
   const editingSector = useProject(s => s.sectorEditId === head.id);
-  if (!item) return <p className="p-1.5 text-[11px] text-warn sm:p-4 sm:text-sm">{tx("modelReview")}</p>;
+  if (!item) return <p className="p-1.5 text-[0.6875rem] text-warn sm:p-4 sm:text-sm">{tx("modelReview")}</p>;
   const fl = headFlow(head);
-  const t = fl.precipMmHr ? runTimeMin(target, fl.precipMmHr) : null;
+  const pressure=nozzleTablePressure(item,head.designPressure);
+  const precipitation=displayPrecipitation(item,{arc:head.arc,radius:head.r,pressureBar:head.designPressure,nozzleId:head.nozzleId},fl);
   const upd = (patch: Partial<Head>) => useProject.getState().updateHead(head.id, patch);
   const live = (patch: Partial<Head>) => useProject.getState().patchHeadLive(head.id, patch);
   const nozzle = head.nozzleId ? item.nozzles.find((n) => n.id === head.nozzleId) : defaultNozzle(item);
-  const strip = stripAtPressure(item,head.designPressure);
   const bodies = bodiesFor(item);
   const bodyId = head.bodyId && bodies.some((b) => b.id === head.bodyId) ? head.bodyId : defaultBodyFor(item);
   const radius = headRadiusScale(item, head);
-  const pressures = pressureSteps(item, head.nozzleId, head.arc);
+  const pressures = headPressureSteps(item, head);
+  const square=item.coverageKind==="square";
+  const shortNozzle=square?[...item.nozzles].sort((a,b)=>Math.min(...a.performance.map(r=>r.radiusM))-Math.min(...b.performance.map(r=>r.radiusM)))[0]?.id:null;
+  const optionName=(n:typeof item.nozzles[number])=>square?tx(n.id===shortNozzle?"sqShortThrow":"sqLongThrow"):n.size??nozzleName(n);
   const pickNozzle = (id: string) => {
+    // SQ throw is a nozzle setting, independent of working pressure. The store
+    // preserves that pressure and derives the new footprint from its table row.
+    if (square) {
+      if (id !== (head.nozzleId ?? nozzle?.id)) upd({ nozzleId: id });
+      return;
+    }
     const n = item.nozzles.find((x) => x.id === id);
     if (!n) {
       upd({ nozzleId: id });
@@ -3671,7 +3467,7 @@ function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
       {onZones && <button type="button" className="zones-navigation" onClick={onZones}>{tx("zonesTitle")}</button>}
       <HeadPlacementSettings key={`${head.id}:${head.zone}`} head={head} item={item}/>
       <div className="relative">
-        <CatalogPic item={item} className="mx-auto h-28 w-full max-w-[11rem]" />
+
         <div className="head-card-actions">
         {item.coverageKind !== "point" && <button type="button" className="head-card-edit" aria-pressed={editingSector} disabled={head.locked || zones.some(z => z.id === head.zone && z.locked)}
           aria-label={tx(editingSector ? "finishSectorEdit" : "editSector")} title={tx(editingSector ? "finishSectorEdit" : "editSector")}
@@ -3682,27 +3478,28 @@ function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
           onClick={() => useProject.getState().removeHead(head.id)}><Trash2 size={18}/></button>
         </div>
       </div>
-      <p className="mt-1 text-[10px] font-semibold tracking-wide text-muted uppercase">{item.series}</p>
-      <h2 className="font-display text-sm leading-tight"><bdi dir="ltr">{item.id}</bdi></h2>
-      <p className="text-[11px] text-ink-soft">{catalogName(item)}</p>
+      <p className="mt-1 text-[0.625rem] font-semibold tracking-wide text-muted uppercase">{item.series}</p>
+      <h2 className="font-display text-base leading-tight"><bdi dir="ltr">{manufacturerName(item)} {item.modelId??item.id}</bdi></h2>
+      <p className="mt-2 text-sm leading-relaxed text-ink-soft">{catalogUse(item)}</p>
       {head.needsReview && <p className="mt-2 text-xs text-warn">{uiText("headVerifyHint")}</p>}
-      {item.type === "rotor" && item.nozzles.length > 1 && (
+      {item.nozzles.length > 1 && (
         <div className="mt-2">
-          <p className="text-[10px] font-semibold text-muted">{tx("nozzleSize")} · {tx("automaticNozzle")}</p>
-          <div className="mt-1 grid grid-cols-4 gap-1">
+          <p className="text-[0.625rem] font-semibold text-muted">{tx(square?"sqThrowSetting":"nozzleSize")}{item.type==='rotor'?` · ${tx("automaticNozzle")}`:''}</p>
+          <div className={square?"sq-nozzle-options":"mt-1 grid grid-cols-4 gap-1"}>
             {item.nozzles.map((n) => {
               const on = (head.nozzleId ?? nozzle?.id) === n.id;
+              const appearance=equipmentAppearance(item,n.id,'nozzle');
               return (
                 <button
                   key={n.id}
                   type="button"
                   onClick={() => pickNozzle(n.id)}
                   aria-pressed={on}
-                  title={`${nozzleName(n)} · ${catalogColor(n.colorName)}`}
-                  className={cn("h-8 rounded-sm text-[11px] font-semibold tabular", on ? "text-white" : "hover:opacity-90")}
-                  style={{ background: on ? n.color : "transparent", color: on && !isLightColor(n.color) ? "#fff" : "var(--color-ink)", border: `1px solid ${on ? n.color : "transparent"}` }}
+                  title={`${optionName(n)} · ${catalogColor(appearance.colorName)}${n.hydraulicVerificationStatus==='Needs Review'?` · ${tx("equipment.sourceConflict")}`:""}`}
+                  className={cn(square?"sq-nozzle-option":"h-8 rounded-sm text-[0.6875rem] font-semibold tabular", on ? "text-white" : "hover:opacity-90")}
+                  style={{ background: on ? appearance.color : "transparent", color: on && !isLightColor(appearance.color) ? "#fff" : "var(--color-ink)", border: `1px solid ${on ? appearance.color : square?"var(--color-line)":"transparent"}` }}
                 >
-                  {n.size ?? nozzleName(n)}
+                  {optionName(n)}{n.hydraulicVerificationStatus==='Needs Review' ? " ⚠" : ""}
                 </button>
               );
             })}
@@ -3710,11 +3507,11 @@ function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
         </div>
       )}
       <div className="mt-2">
-        <p className="mb-1 text-xs text-muted">{tx("recommendedPressure")} — {formatPressureU(workingPressureBar(item, bodyId, head.nozzleId), units.pressure)}</p>
-        <PressureSteps values={pressures} value={head.designPressure}
-          recommended={workingPressureBar(item, bodyId, head.nozzleId)}
+        <PressureSteps labelKey={catalogPressureLabel(item)} values={pressures} value={pressure}
+          recommended={item.recommendedPressureIsDefault?undefined:workingPressureBar(item, bodyId, head.nozzleId)}
           onChange={designPressure => upd({ designPressure })}/>
-        {radius && radius.max > radius.min && <ColorSlider
+        {square&&<p className="sq-size-hint">{tx("sqSizeHint")}{item.squarePatternFraction===.75?` ${tx("sqThreeQuarterHint")}`:""}</p>}
+        {!square && item.coverageKind!=="point" && item.placementSupported!==false && radius && radius.max > radius.min && <ColorSlider
           label={tx("radius")}
           color={HEAD_CONTROL_COLORS.radius}
           min={radius.min}
@@ -3725,7 +3522,7 @@ function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
           display={formatLenU(head.r, units.length)}
           onChange={(r) => live({ r })}
         />}
-        {item.arcMin !== item.arcMax && (
+        {item.coverageKind!=="point" && item.placementSupported!==false && item.arcMin !== item.arcMax && (
           <ColorSlider
             label={tx("sector")}
             color={HEAD_CONTROL_COLORS.sector}
@@ -3738,7 +3535,7 @@ function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
             onChange={(arc) => live({ arc })}
           />
         )}
-        {(item.strip || (item.coverageKind !== "point" && head.arc < 360)) && <ColorSlider
+        {(item.strip || item.coverageKind === "square" || (item.coverageKind !== "point" && head.arc < 360)) && <ColorSlider
           label={tx("rotation")}
           color={HEAD_CONTROL_COLORS.rotation}
           min={0}
@@ -3749,23 +3546,26 @@ function HeadCard({ head, onZones }: { head: Head; onZones?: () => void }) {
           onChange={(start) => live({ start })}
         />}
       </div>
-      <dl className="mt-2 grid grid-cols-2 gap-x-2 gap-y-1 text-[11px]">
+      <dl className="mt-2 grid grid-cols-2 gap-x-2 gap-y-1 text-[0.6875rem]">
         <FlowStats lpm={fl.lpm} m3h={fl.m3h}/>
-        <Stat k={item.strip?uiText("stripSize"):tx("radius")} v={item.coverageKind==="point"?tx("noData"):item.strip?(strip?`${formatLenU(strip.w,units.length)} × ${formatLenU(strip.l,units.length)}`:tx("noData")):formatLenU(head.r, units.length)} />
-        <Stat k={tx("workingPressure")} v={formatPressureU(head.designPressure, units.pressure)} />
-        <Stat k={item.precipBasis==="single"?uiText("precipSingle"):uiText("precipSquare")} v={fl.precipMmHr == null ? tx("noData") : formatPrecipitation(fl.precipMmHr, units)} />
-        <Stat k={uiText("precipTriangle")} v={fl.precipTriangleMmHr==null?tx("noData"):formatPrecipitation(fl.precipTriangleMmHr, units)}/>
-        <Stat k={uiText("runTimeDepth", { depth: formatDepth(target, units) })} v={t == null ? tx("noData") : `${fmt1(t)} ${tx("min")}`} />
+        <Stat k={coverageSizeLabel(item)} v={coverageSize(item,head.r,units.length,head.designPressure)} />
+        {(item.strip||hasStreamCoverage(item)||item.coverageKind&&item.coverageKind!=="sector")&&<Stat k={tx("coveragePattern")} v={coveragePatternLabel(item)}/>}
+        <Stat k={tx(catalogPressureLabel(item))} v={formatPressureU(pressure, units.pressure)} />
+        <PrecipitationStats value={precipitation} targetMm={target}/>
       </dl>
-      <CatalogSource item={item}/>
+      {(item.manufacturerId==='toro'||item.manufacturerId==='k-rain')&&fl.kind==='matched-precip'&&fl.note&&<p className="mt-2 text-xs text-muted">{fl.note}</p>}
+      <p className="mt-2 text-xs text-muted">{uiText("equipment.verification")}: {uiText(item.performanceReview==='per-row'&&fl.lpm!=null?'equipment.verifiedPoint':item.verificationStatus==='Needs Review'?"equipment.sourceConflict":item.verificationStatus==='Deprecated'?"equipment.deprecated":"equipment.verified")} · {item.verifiedOn}</p>
+    {item.verificationStatus==='Needs Review'&&<p className="mt-1 text-xs text-muted">{uiText(item.performanceReview==='per-row'?'equipment.rowReviewHint':'equipment.sourceConflictHint')}</p>}
+    {item.fullCircleRotation==='unknown'&&head.arc===360&&<p className="mt-1 text-xs text-muted">{uiText('equipment.rotationUnverified')}</p>}
+    <CatalogSource item={item}/>
 
-      {item.nozzles.length > 1 && item.type !== "rotor" && (
-        <label className="mt-2 block text-[10px] text-muted">
+      {item.nozzles.length > 1 && item.type !== "rotor" && !square && (
+        <label className="mt-2 block text-[0.625rem] text-muted">
           {tx("nozzle")}
-          <select value={head.nozzleId ?? ""} onChange={(e) => pickNozzle(e.target.value)} className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[13px] shadow-border">
+          <select value={head.nozzleId ?? ""} onChange={(e) => pickNozzle(e.target.value)} className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[0.8125rem] shadow-border">
             {item.nozzles.map((n) => (
               <option key={n.id} value={n.id}>
-                {n.size ? `${n.size} · ${nozzleName(n)}` : nozzleName(n)}
+                {n.size ? `${n.size} · ${nozzleName(n)}` : nozzleName(n)}{n.hydraulicVerificationStatus==='Needs Review' ? ` · ${tx("equipment.sourceConflict")}` : ""}
               </option>
             ))}
           </select>
@@ -3807,6 +3607,7 @@ function EstimateCard() {
   const units = useProject(s => s.units);
   const project = useProject((s) => s.project);
   const heads = project.heads;
+  const engineeringBom=useMemo(()=>engineeringMaterials(project,units),[project,units,locale,numberFormat]);
   const bomBodyQty = project.bomBodyQty ?? {};
   const [saveAsk, setSaveAsk] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -3815,14 +3616,14 @@ function EstimateCard() {
     const spr = new Map<string, { key: string; item: CatalogItem; name: string; ids: string[] }>();
     const bod = new Map<string, { body: CatalogItem; ids: string[]; recIds: string[] }>();
     for (const h of heads) {
-      const item = itemById(h.catalogId);
+      const item = catalogForHead(h);
       if (!item) continue;
       const key = item.type === "rotor" ? `${item.id}:${h.popUpMm ?? item.popUpMm}` : item.id;
       const s = spr.get(key) ?? { key, item, name: bomLineName(item, h.popUpMm), ids: [] };
       s.ids.push(h.id);
       spr.set(key, s);
       if (item.type === "rotor") continue;
-      const body = bodyForHead(item, h.bodyId, h.popUpMm);
+      const body = bodyForHead(item, h.bodyId, h.popUpMm, h.bodySnapshot);
       if (!body) continue;
       const b = bod.get(body.id) ?? { body, ids: [], recIds: [] };
       b.ids.push(h.id);
@@ -3856,7 +3657,7 @@ function EstimateCard() {
     const compatible: CatalogItem[][] = [];
     for (const id of ids) {
       const h = heads.find((x) => x.id === id);
-      const item = h ? itemById(h.catalogId) : null;
+      const item = h ? catalogForHead(h) : null;
       if (!item) continue;
       compatible.push(bodiesFor(item));
     }
@@ -3869,26 +3670,26 @@ function EstimateCard() {
         className="w-full"
         variant="solid"
         size="sm"
-        disabled={saving || sprinklers.length === 0}
+        disabled={saving || (sprinklers.length === 0 && engineeringBom.rows.length === 0)}
         onClick={() => setSaveAsk(true)}
       >
         {t("saveEstimate")}
       </Button>
       {sprinklers.length === 0 ? (
-        <p className="mt-2 text-[11px] text-muted">{t("heads")}: 0</p>
+        <p className="mt-2 text-[0.6875rem] text-muted">{t("heads")}: 0</p>
       ) : (
         <ul className="mt-2 space-y-2">
-          <li className="flex items-center gap-2 px-1.5 text-[10px] font-semibold text-muted">
+          <li className="flex items-center gap-2 px-1.5 text-[0.625rem] font-semibold text-muted">
             <span className="w-5 text-center">{t("colNo")}</span>
             <span className="flex-1">{t("colName")}</span>
             <span>{t("colQty")}</span>
           </li>
           {sprinklers.map((g, i) => (
             <li key={g.key} className="flex items-center gap-2 rounded-sm border border-line p-1.5">
-              <span className="w-5 shrink-0 text-center text-[11px] tabular text-muted">{i + 1}</span>
-              <CatalogPic item={g.item} className="h-9 w-9" />
-              <span className="min-w-0 flex-1 text-[11px] font-medium leading-snug">{g.name}</span>
-              <span className="shrink-0 text-[11px] tabular text-muted">
+              <span className="w-5 shrink-0 text-center text-[0.6875rem] tabular text-muted">{i + 1}</span>
+
+              <span className="min-w-0 flex-1 text-[0.6875rem] font-medium leading-snug">{g.name}</span>
+              <span className="shrink-0 text-[0.6875rem] tabular text-muted">
                 {formatNumber(g.ids.length, 0)} {t("pcs")}
               </span>
             </li>
@@ -3900,10 +3701,10 @@ function EstimateCard() {
             return (
               <li key={g.body.id} className="rounded-sm border border-line p-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="w-5 shrink-0 text-center text-[11px] tabular text-muted">{sprinklers.length + i + 1}</span>
-                  <CatalogPic item={g.body} className="h-9 w-9" />
-                  <span className="min-w-0 flex-1 text-[11px] font-medium leading-snug">{bomLineName(g.body)}</span>
-                  <label className="flex shrink-0 items-center gap-1 text-[10px] text-muted">
+                  <span className="w-5 shrink-0 text-center text-[0.6875rem] tabular text-muted">{sprinklers.length + i + 1}</span>
+
+                  <span className="min-w-0 flex-1 text-[0.6875rem] font-medium leading-snug">{bomLineName(g.body)}</span>
+                  <label className="flex shrink-0 items-center gap-1 text-[0.625rem] text-muted">
                     <LocalizedNumberInput
                       className="h-7 w-11 rounded-sm bg-bg-2 px-1 text-center text-xs tabular shadow-border"
                       aria-label={`${t("colQty")}: ${bomLineName(g.body)}`}
@@ -3917,7 +3718,7 @@ function EstimateCard() {
                 </div>
                 {choices.length > 0 && (
                   <select
-                    className="mt-1.5 h-8 w-full rounded-sm bg-bg-2 px-1 text-[11px] text-ink shadow-border"
+                    className="mt-1.5 h-8 w-full rounded-sm bg-bg-2 px-1 text-[0.6875rem] text-ink shadow-border"
                     aria-label={bomLineName(g.body)}
                     value={g.body.id}
                     disabled={g.ids.some(id => heads.some(h => h.id === id && (h.locked || project.zones.some(z => z.id === h.zone && z.locked))))}
@@ -3927,7 +3728,7 @@ function EstimateCard() {
                   </select>
                 )}
                 {rec.length > 0 && (
-                  <p className="mt-1 text-[10px] leading-snug text-muted">
+                  <p className="mt-1 text-[0.625rem] leading-snug text-muted">
                     {t("recommended")}: {rec.map((b) => bomLineName(b!)).join(", ")}
                   </p>
                 )}
@@ -3936,6 +3737,11 @@ function EstimateCard() {
           })}
         </ul>
       )}
+      {(engineeringBom.rows.length>0||engineeringBom.incomplete)&&<section className="mt-3 border-t border-line pt-3">
+        <h3 className="text-sm font-semibold">{t('engineering.networks')}</h3>
+        <ul className="mt-2 space-y-2">{engineeringBom.rows.map((row,i)=><li key={row.key} className="rounded-sm border border-line p-2"><div className="flex items-start gap-2"><span className="shrink-0 text-xs text-muted">{formatNumber(sprinklers.length+bodies.length+i+1,0)}</span><span className="min-w-0 flex-1 text-sm">{row.name}</span><span className="shrink-0 text-sm tabular">{formatNumber(row.qty,row.digits)} {row.unit}</span></div>{row.note&&<p className="mt-1 text-xs text-muted">{row.note}</p>}</li>)}</ul>
+        {engineeringBom.incomplete&&<p role="status" className="mt-2 text-xs text-muted">{t('engineering.materialReview')}</p>}
+      </section>}
       <Dialog.Root open={saveAsk} onOpenChange={open => { if (!saving) setSaveAsk(open); }}>
         <Dialog.Portal container={typeof document === "undefined" ? undefined : document.querySelector(".app-shell")}>
           <Dialog.Overlay className="estimate-dialog-overlay estimate-export-overlay" />
@@ -3980,41 +3786,7 @@ function EstimateCard() {
 }
 
 export function ZoneReview() {
-  return <div className="zone-review"><PumpBox /></div>;
-}
-
-function PumpBox() {
-  const t = useT();
-  const project = useProject((s) => s.project);
-  const units = useProject((s) => s.units);
-  const rec = recommendPump(project);
-  if (!rec) return project.heads.length ? <p className="mt-2 text-xs text-muted">{uiText("pumpMissingFlow")}</p> : null;
-  const us = units.flow === "gpm" || units.flow === "gph" || units.pressure === "psi" || units.length === "ft" || units.length === "in";
-  const qMain = formatFlowU(rec.qLpm, units.flow);
-  const qAlt = formatFlowU(rec.qLpm, units.flow === "gpm" ? "gph" : units.flow === "gph" ? "gpm" : units.flow === "m3h" ? "lpm" : "m3h");
-  const hMain = formatLenU(rec.headM, units.length);
-  const hAlt = formatPressureU(rec.pBar, units.pressure);
-  return (
-    <div className="mt-1.5 rounded-sm bg-bg-2 px-1.5 py-1.5">
-      <p className="text-xs font-semibold text-ink">{t("pumpRec")}</p>
-      <p className="mt-0.5 text-[11px] font-medium leading-snug">
-        Q {qMain} · {qAlt}
-      </p>
-      <p className="text-[11px] font-medium leading-snug">
-        H {hMain} · {hAlt}
-      </p>
-      <p className="mt-0.5 text-[10px] leading-snug text-muted">
-        {t("pumpOneZone")}: {rec.zoneName} ({formatFlowU(rec.zoneMaxLpm, units.flow)})
-      </p>
-      <p className="mt-1 text-xs text-muted">{t("zonePressure")}: {formatPressureU(rec.workingBar, units.pressure)} · {rec.pressureZoneName}</p>
-      <p className="text-[10px] leading-snug text-muted">{t("pumpNote")}</p>
-      <details className="mt-2 text-xs text-muted">
-        <summary>{t("pumpBasis")}</summary>
-        <p className="mt-1">{t("pumpEstimate", { loss: formatPressureU(rec.lossBar, units.pressure), elevation: formatPressureU(rec.elevBar, units.pressure) })}</p>
-        <a className="underline" href="https://www.hunterirrigation.com/sites/default/files/dg_student_guide_dom.pdf" target="_blank" rel="noreferrer">Hunter · {t("designGuide")}</a>
-      </details>
-    </div>
-  );
+  return <IrrigationSystemCards showZones={false}/>;
 }
 
 function ZoneCard({ zoneId }: { zoneId: number }) {
@@ -4034,33 +3806,33 @@ function ZoneCard({ zoneId }: { zoneId: number }) {
   const over = q != null && q > limit + 0.05;
   return (
     <div className="p-1.5 sm:p-4">
-      <p className={cn("text-[11px]", over ? "text-warn" : "text-muted")}>
+      <p className={cn("text-[0.6875rem]", over ? "text-warn" : "text-muted")}>
         {zoneLabel(z)}: {heads.length} · {q == null ? uiText("noFlowData") : formatFlowU(q, units.flow)}
         {over ? ` · > ${formatFlowU(limit, units.flow)}` : ""}
       </p>
-      <p className="mt-2 text-[9px] font-semibold tracking-wide text-muted uppercase">{t("waterSource")}</p>
-      <label className="mt-1 block text-[10px] text-muted">{t("sourceFlow")} · {flowLabel(units.flow)}
+      <p className="mt-2 text-[0.5625rem] font-semibold tracking-wide text-muted uppercase">{t("waterSource")}</p>
+      <label className="mt-1 block text-[0.625rem] text-muted">{t("sourceFlow")} · {flowLabel(units.flow)}
         <LocalizedNumberInput value={avail == null ? null : fromLpm(avail, units.flow)} min={0.001}
           placeholder={formatNumber(fromLpm(DEFAULT_ZONE_LPM, units.flow), 2)} onCommit={v => { const n = v == null ? null : toLpm(v, units.flow); patchWater({ availableLpm: n }); if (v != null) setMaxLpm(formatNumber(v, 2)); }}
-          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border" />
+          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[1rem] text-ink shadow-border" />
       </label>
-      <label className="mt-1 block text-[10px] text-muted">{t("sourceP")} · {pressureLabel(units.pressure)}
+      <label className="mt-1 block text-[0.625rem] text-muted">{t("sourceP")} · {pressureLabel(units.pressure)}
         <LocalizedNumberInput value={project.water.dynamicBar == null ? null : fromBar(project.water.dynamicBar, units.pressure)} min={0.001} onCommit={v => patchWater({ dynamicBar: v == null ? null : toBar(v, units.pressure) })}
-          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border" />
+          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[1rem] text-ink shadow-border" />
       </label>
-      <label className="mt-1 block text-[10px] text-muted">{t("elevation")} · {lenLabel(units.length)}
+      <label className="mt-1 block text-[0.625rem] text-muted">{t("elevation")} · {lenLabel(units.length)}
         <LocalizedNumberInput value={project.water.elevationM == null ? null : fromMeters(project.water.elevationM, units.length)} onCommit={v => patchWater({ elevationM: v == null ? null : toMetersLen(v, units.length) })}
-          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border" />
+          className="mt-0.5 h-8 w-full rounded-sm bg-bg-2 px-1.5 text-[1rem] text-ink shadow-border" />
       </label>
-      <label className="mt-2 block text-[10px] text-muted">
+      <label className="mt-2 block text-[0.625rem] text-muted">
         {t("maxZoneFlow")} · {flowLabel(units.flow)}
         <input
           value={maxLpm}
           onChange={(e) => setMaxLpm(e.target.value)}
-          className="mt-0.5 h-7 w-full rounded-sm bg-bg-2 px-1.5 text-[16px] text-ink shadow-border"
+          className="mt-0.5 h-7 w-full rounded-sm bg-bg-2 px-1.5 text-[1rem] text-ink shadow-border"
         />
       </label>
-      <p className="mt-1 text-[10px] text-muted">{t("autoZoneHint")}</p>
+      <p className="mt-1 text-[0.625rem] text-muted">{t("autoZoneHint")}</p>
       <Button
         className="irrigation-zone-action mt-2 w-full"
         size="sm"

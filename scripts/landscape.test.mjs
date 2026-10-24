@@ -102,7 +102,7 @@ test("plants edit, duplicate, undo, export and reopen independently without chan
   assert.deepEqual(reopened.drawing.plants,project.drawing.plants);
   const persisted = await store.persist.getOptions().storage.getItem("irrigation-designer-v3");
   assert.deepEqual(persisted.state.project.drawing.plants,project.drawing.plants);
-  assert.match(app.projectToSvg(project),/Берёза повислая/);assert.match(app.projectToDxf(project),/PLANTS/);
+  assert.match(app.projectToSvg(project),/Берёза повислая/);assert.match(app.projectToDxf(project),/TREES/);
   assert.deepEqual({panX:store.getState().panX,panY:store.getState().panY,pxPerMeter:store.getState().pxPerMeter},view);
   store.getState().selectPlant(id);store.getState().updatePlant(id,{locked:true});store.getState().deleteSelected();
   assert.ok(store.getState().project.drawing.plants[id]);

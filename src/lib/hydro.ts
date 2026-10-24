@@ -1,7 +1,9 @@
-import { headFlow } from "@/lib/flow";
+import {equipmentTechnology} from "./equipment-library";
+import {matchedPrecipitationClass} from "./equipment-groups";
+import { headFlow, geometryAt } from "@/lib/flow";
 import { drawingOrMigrate } from './cad/engine';
 import { figureAtPoint, irrigationFigures } from './irrigation-figures';
-import { itemById, workingPressureBar } from "@/lib/hunter-catalog";
+import { catalogForHead, defaultNozzle, workingPressureBar, nozzleTablePressure } from "@/lib/equipment-catalog";
 import { defaultZones, zoneLabel, renumberProjectZones, MAX_ZONES, type Head, type Project, type Zone } from "@/lib/project-types";
 
 /** Typical 1″ valve / household tap if the source flow is unknown. */
@@ -56,19 +58,47 @@ export function redistributeZonesAfterRemoval(project: Project): Project {
   return renumberProjectZones({ ...project, heads, zones: remaining.length ? remaining : defaultZones() });
 }
 
-/** Group key: precipitation class + pressure band so mixed MP/spray/rotor never share a zone. */
+/** Declared matched families share a class; other settings need the same published application rate. */
 export function hydroKey(h: Head): string {
-  const item = itemById(h.catalogId);
-  if (headFlow(h).lpm == null) return `unknown|${h.id}`;
-  const precip = item?.precipClass ?? "unknown";
+  const item = catalogForHead(h);
+  const flow=headFlow(h);
+  if (!item || flow.lpm == null) return `unknown|${h.id}`;
+  const rate=flow.precipMmHr;
+  const kind=equipmentTechnology(item);
+  // A strip's application rate depends on spacing/overlap; absent a known rate,
+  // keep models separate instead of treating all unrated footprints as compatible.
   const p = headWorkingBar(h);
-  const band = p >= 3.2 ? "p35" : p >= 2.45 ? "p28" : "p21";
-  return `${precip}|${band}`;
+  const layoutKey=[item.id,h.nozzleId??'',h.r,h.arc,p].join(':');
+  const nozzle=h.nozzleId?item.nozzles.find(n=>n.id===h.nozzleId):defaultNozzle(item);
+  const recommended=nozzle?.recommendedBar??item.recommendedPressureBar;
+  // A nominal MPR promise applies at the recommended pressure. Do not let a
+  // broad pressure band mask a large difference between actual table rates.
+  // These official charts express nominal 30 psi as 2.07 bar or an exact SI
+  // conversion. The same nozzle pressure may be supplied directly or by PRS30.
+  // Normalize only these documented points, never a surrounding pressure band.
+  const chartEquivalent=item.manufacturerId==='rain-bird'&&(
+    ['HE-VAN-8','HE-VAN-10'].includes(item.modelId??'')&&recommended===2.1&&Math.abs(p-2.07)<1e-6||
+    ['5H','5Q','10H','10Q'].includes(item.modelId??'')&&
+      (recommended===2.1||Math.abs(recommended-2.068427187953493)<1e-6)&&Math.abs(p-2.068427187953493)<1e-6);
+  const matched=Math.abs(p-recommended)<1e-6||chartEquivalent?matchedPrecipitationClass(item,h.nozzleId,h.arc):null;
+  const he=(item.manufacturerId??'hunter')==='hunter'&&item.family==='he';
+  const nominalRadius=he?geometryAt(item,h.nozzleId,p,h.arc)?.radiusM:null;
+  // Pro HE is matched across adjustable sectors. At non-recommended pressure or
+  // a screw-reduced radius, use that claim only for the same model/settings.
+  // Do not mistake rounded sector chart cells for different zone technologies,
+  // or imply that differently reduced radii retain the same precipitation.
+  const heConfigured=he&&(Math.abs(p-recommended)>=1e-6||nominalRadius==null||Math.abs(h.r-nominalRadius)>.01)
+    ?`hunter:he-setting:${item.id}:${nozzle?.id??''}:${h.r.toFixed(4)}`:null;
+  // Retain chart precision instead of treating an arbitrary 5 mm/h bin as a
+  // manufacturer compatibility rule. Verified MPR families have their own class.
+  const precip = heConfigured??matched??`${kind}|${rate==null?`layout:${layoutKey}`:Math.round(rate*100)/100}`;
+  return `${precip}|p:${(matched?(chartEquivalent?2.1:recommended):p).toFixed(4)}`;
 }
 
 export function headWorkingBar(h: Head): number {
-  const item = itemById(h.catalogId);
-  return h.designPressure ?? (item ? workingPressureBar(item, h.bodyId, h.nozzleId) : 2.8);
+  const item = catalogForHead(h);
+  const bar=h.designPressure ?? (item ? workingPressureBar(item, h.bodyId, h.nozzleId) : 2.8);
+  return item?nozzleTablePressure(item,bar):bar;
 }
 
 export function zoneFlow(heads: Head[], zoneId: number): number | null {
@@ -88,7 +118,7 @@ export function zonePressure(heads: Head[], zoneId: number): number | null {
   for (const h of heads) {
     if (h.zone !== zoneId) continue;
     const pressure = headWorkingBar(h);
-    if (!itemById(h.catalogId) || !Number.isFinite(pressure) || pressure <= 0) return null;
+    if (!catalogForHead(h) || !Number.isFinite(pressure) || pressure <= 0) return null;
     bar = Math.max(bar, pressure);
   }
   return bar;

@@ -74,7 +74,7 @@ test('magnifier is enabled for precision drawing and geometry editing, never nor
   assert.equal(canShowMagnifier({...state,cadEditId:'rectangle',editDrag:true}),true);
   assert.equal(canShowMagnifier({...state,editDrag:true,blocked:true}),false);
   assert.equal(canShowMagnifier({...state,editDrag:true,catalogOpen:true}),false);
-  assert.equal(canShowMagnifier({...state,drawSub:'freehand'}),false);
+  assert.equal(canShowMagnifier({...state,drawSub:'freehand'}),true);
 });
 
 test('live layer drag preserves all row slots and moves neighbours without remeasuring them', () => {

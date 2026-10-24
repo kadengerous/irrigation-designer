@@ -219,7 +219,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -384,7 +384,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -489,7 +489,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -714,7 +714,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -879,7 +879,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -984,7 +984,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -1209,7 +1209,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -1374,7 +1374,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -1479,7 +1479,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -1704,7 +1704,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -1929,7 +1929,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -1943,8 +1943,8 @@
     "type": "nozzle",
     "colorName": "слоновая кость",
     "color": "#C9B896",
-    "arcMin": 180,
-    "arcMax": 180,
+    "arcMin": 90,
+    "arcMax": 90,
     "rMin": 4.2672,
     "rMax": 4.8768,
     "rNom": 4.572,
@@ -1977,7 +1977,7 @@
             "flowM3H": 0.0386112,
             "precipSquareMmH": 29.718,
             "precipTriangleMmH": 14.732,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 2.4,
@@ -1987,7 +1987,7 @@
             "flowM3H": 0.0408824,
             "precipSquareMmH": 23.368,
             "precipTriangleMmH": 11.684,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 2.8,
@@ -1997,7 +1997,7 @@
             "flowM3H": 0.0431537,
             "precipSquareMmH": 24.892,
             "precipTriangleMmH": 12.446,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 3.1,
@@ -2007,7 +2007,7 @@
             "flowM3H": 0.0476962,
             "precipSquareMmH": 27.432,
             "precipTriangleMmH": 13.716,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 3.4,
@@ -2017,7 +2017,7 @@
             "flowM3H": 0.0522387,
             "precipSquareMmH": 28.194,
             "precipTriangleMmH": 13.97,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 3.8,
@@ -2027,7 +2027,7 @@
             "flowM3H": 0.0545099,
             "precipSquareMmH": 24.384,
             "precipTriangleMmH": 12.192,
-            "arcDeg": 180
+            "arcDeg": 90
           }
         ],
         "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/mp-rotator/mp-rotatorr-strip-nozzle",
@@ -2040,7 +2040,7 @@
       "ox": 0,
       "oy": -1.524
     },
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "stripPerformance": [
@@ -2086,8 +2086,8 @@
     "type": "nozzle",
     "colorName": "медный",
     "color": "#B87333",
-    "arcMin": 180,
-    "arcMax": 180,
+    "arcMin": 90,
+    "arcMax": 90,
     "rMin": 4.2672,
     "rMax": 4.8768,
     "rNom": 4.572,
@@ -2120,7 +2120,7 @@
             "flowM3H": 0.0386112,
             "precipSquareMmH": 29.718,
             "precipTriangleMmH": 14.732,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 2.4,
@@ -2130,7 +2130,7 @@
             "flowM3H": 0.0408824,
             "precipSquareMmH": 23.368,
             "precipTriangleMmH": 11.684,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 2.8,
@@ -2140,7 +2140,7 @@
             "flowM3H": 0.0431537,
             "precipSquareMmH": 24.892,
             "precipTriangleMmH": 12.446,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 3.1,
@@ -2150,7 +2150,7 @@
             "flowM3H": 0.0476962,
             "precipSquareMmH": 27.432,
             "precipTriangleMmH": 13.716,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 3.4,
@@ -2160,7 +2160,7 @@
             "flowM3H": 0.0522387,
             "precipSquareMmH": 28.194,
             "precipTriangleMmH": 13.97,
-            "arcDeg": 180
+            "arcDeg": 90
           },
           {
             "pressureBar": 3.8,
@@ -2170,7 +2170,7 @@
             "flowM3H": 0.0545099,
             "precipSquareMmH": 24.384,
             "precipTriangleMmH": 12.192,
-            "arcDeg": 180
+            "arcDeg": 90
           }
         ],
         "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/mp-rotator/mp-rotatorr-strip-nozzle",
@@ -2183,7 +2183,7 @@
       "ox": 0,
       "oy": 0
     },
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "stripPerformance": [
@@ -2326,7 +2326,7 @@
       "ox": -4.572,
       "oy": 0
     },
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "stripPerformance": [
@@ -2619,7 +2619,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -2736,7 +2736,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -2961,7 +2961,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -3126,7 +3126,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -3231,7 +3231,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "trajectoryNote": "Многоструйная; единый угол не указан"
@@ -3626,7 +3626,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -4020,7 +4020,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -4248,8 +4248,8 @@
     "inlet": "½″ female",
     "popUpMm": null,
     "use": "Pro High-Efficiency 8 ft / 2,4 м. Замена 8A. Корпус PRS30.",
-    "sourceDocument": "Hunter — Pro High-Efficiency Performance Data",
-    "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/pro-high-efficiency-nozzles",
+    "sourceDocument": "Hunter Pro High-Efficiency Nozzles Product Cutsheet (US, 2025-05)",
+    "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
     "nozzles": [
       {
         "id": "8A-HE",
@@ -4453,18 +4453,18 @@
             "pressureBar": 2.8,
             "pressureKPa": 280,
             "radiusM": 2.7432,
-            "flowLMin": 4.769619,
-            "flowM3H": 0.2861771,
+            "flowLMin": 5.148160026,
+            "flowM3H": 0.308889602,
             "precipSquareMmH": 41.148,
             "precipTriangleMmH": 47.498,
             "arcDeg": 360
           }
         ],
-        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/pro-high-efficiency-nozzles",
+        "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -4492,8 +4492,8 @@
     "inlet": "½″ female",
     "popUpMm": null,
     "use": "Pro High-Efficiency 10 ft / 3,0 м. Замена 10A.",
-    "sourceDocument": "Hunter — Pro High-Efficiency Performance Data",
-    "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/pro-high-efficiency-nozzles",
+    "sourceDocument": "Hunter Pro High-Efficiency Nozzles Product Cutsheet (US, 2025-05)",
+    "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
     "nozzles": [
       {
         "id": "10A-HE",
@@ -4610,7 +4610,7 @@
             "flowLMin": 3.974682,
             "flowM3H": 0.2384809,
             "precipSquareMmH": 42.164,
-            "precipTriangleMmH": 50.038,
+            "precipTriangleMmH": 48.768,
             "arcDeg": 270
           },
           {
@@ -4620,7 +4620,7 @@
             "flowLMin": 4.428932,
             "flowM3H": 0.2657359,
             "precipSquareMmH": 46.99,
-            "precipTriangleMmH": 56.388,
+            "precipTriangleMmH": 54.102,
             "arcDeg": 270
           },
           {
@@ -4704,11 +4704,11 @@
             "arcDeg": 360
           }
         ],
-        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/pro-high-efficiency-nozzles",
+        "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -4952,7 +4952,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -5196,7 +5196,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -5224,8 +5224,8 @@
     "inlet": "½″ female",
     "popUpMm": null,
     "use": "Pro High-Efficiency 17 ft / 5,2 м. Замена 17A.",
-    "sourceDocument": "Hunter — Pro High-Efficiency Performance Data",
-    "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/pro-high-efficiency-nozzles",
+    "sourceDocument": "Hunter Pro High-Efficiency Nozzles Product Cutsheet (US, 2025-05)",
+    "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
     "nozzles": [
       {
         "id": "17A-HE",
@@ -5432,15 +5432,15 @@
             "flowLMin": 20.062682,
             "flowM3H": 1.2037609,
             "precipSquareMmH": 44.958,
-            "precipTriangleMmH": null,
+            "precipTriangleMmH": 51.816,
             "arcDeg": 360
           }
         ],
-        "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/pro-high-efficiency-nozzles",
+        "sourceUrl": "https://www.hunterirrigation.com/sites/default/files/2025-05/RC-198-ProHE-SS-US-Web.pdf",
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "dataNote": "В онлайн-таблице Hunter для 360° / 40 PSI значение осаждения при треугольной схеме противоречиво; до уточнения показано «Нет данных»."
@@ -5535,7 +5535,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -5629,7 +5629,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -5723,7 +5723,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -5817,7 +5817,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -5911,7 +5911,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6005,7 +6005,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6099,7 +6099,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6193,7 +6193,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6287,7 +6287,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6381,7 +6381,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6475,7 +6475,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6569,7 +6569,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6663,7 +6663,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6757,7 +6757,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6851,7 +6851,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -6945,7 +6945,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -7039,7 +7039,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -7133,7 +7133,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -7227,7 +7227,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -7321,7 +7321,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -7415,7 +7415,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector"
   },
@@ -7509,7 +7509,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "single",
     "coverageKind": "sector"
   },
@@ -7603,7 +7603,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "single",
     "coverageKind": "sector"
   },
@@ -7697,7 +7697,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "single",
     "coverageKind": "sector"
   },
@@ -7791,7 +7791,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "single",
     "coverageKind": "sector"
   },
@@ -7885,7 +7885,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "single",
     "coverageKind": "sector"
   },
@@ -7979,7 +7979,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "single",
     "coverageKind": "sector"
   },
@@ -8153,7 +8153,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "dataNote": "Осаждение зависит от схемы размещения полос. Для расчёта времени задайте фактическую площадь зоны.",
@@ -8281,7 +8281,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "dataNote": "Осаждение зависит от схемы размещения полос. Для расчёта времени задайте фактическую площадь зоны.",
@@ -8409,7 +8409,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "dataNote": "Осаждение зависит от схемы размещения полос. Для расчёта времени задайте фактическую площадь зоны.",
@@ -8537,7 +8537,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "dataNote": "Осаждение зависит от схемы размещения полос. Для расчёта времени задайте фактическую площадь зоны.",
@@ -8665,7 +8665,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "dataNote": "Осаждение зависит от схемы размещения полос. Для расчёта времени задайте фактическую площадь зоны.",
@@ -8793,7 +8793,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "strip",
     "coverageKind": "strip",
     "dataNote": "Осаждение зависит от схемы размещения полос. Для расчёта времени задайте фактическую площадь зоны.",
@@ -9203,7 +9203,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "pgj-2.5"
@@ -9580,7 +9580,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "srm-1.5"
@@ -10249,7 +10249,7 @@
         "recommendedBar": 2.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "pgp-5"
@@ -10786,7 +10786,7 @@
         "recommendedBar": 3.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "pgp-ultra-2_5"
@@ -11323,7 +11323,7 @@
         "recommendedBar": 3.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i-20-2_5"
@@ -11939,7 +11939,7 @@
         "recommendedBar": 4.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i25-8"
@@ -12280,7 +12280,7 @@
         "recommendedBar": 4.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i40-15"
@@ -12631,7 +12631,7 @@
         "recommendedBar": 4.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i40on-15"
@@ -12645,18 +12645,18 @@
     "type": "rotor",
     "colorName": "ротор",
     "color": "#2f6f9a",
-    "arcMin": 50,
+    "arcMin": 60,
     "arcMax": 360,
-    "rMin": 13.7,
-    "rMax": 24.7,
+    "rMin": 13.1,
+    "rMax": 21.3,
     "rNom": 19,
     "precipClass": "rotor",
     "precipMmHr": null,
     "thread": "1½″ female",
     "body": "I-50",
     "recommendedPressureBar": 3.5,
-    "recommendedPressureMin": 1.7,
-    "recommendedPressureMax": 4.5,
+    "recommendedPressureMin": 2.5,
+    "recommendedPressureMax": 7,
     "inlet": "1½″ female",
     "popUpMm": 100,
     "use": "Снято в 2022. Замена: I-40.",
@@ -12725,7 +12725,8 @@
       }
     ],
     "discontinued": true,
-    "dataNote": "Архивная модель: рабочие характеристики не подтверждены текущей таблицей Hunter."
+    "dataNote": "Архивная модель: рабочие характеристики не подтверждены текущей таблицей Hunter.",
+    "verifiedOn": "2026-10-10"
   },
   {
     "id": "I-50-ON",
@@ -12738,16 +12739,16 @@
     "color": "#2f6f9a",
     "arcMin": 360,
     "arcMax": 360,
-    "rMin": 13.7,
-    "rMax": 24.7,
+    "rMin": 15.2,
+    "rMax": 23.2,
     "rNom": 19,
     "precipClass": "rotor",
     "precipMmHr": null,
     "thread": "1½″ female",
     "body": "I-50",
     "recommendedPressureBar": 3.5,
-    "recommendedPressureMin": 1.7,
-    "recommendedPressureMax": 4.5,
+    "recommendedPressureMin": 2.5,
+    "recommendedPressureMax": 7,
     "inlet": "1½″ female",
     "popUpMm": 100,
     "use": "Снято в 2022. Замена: I-40-ON.",
@@ -12816,7 +12817,8 @@
       }
     ],
     "discontinued": true,
-    "dataNote": "Архивная модель: рабочие характеристики не подтверждены текущей таблицей Hunter."
+    "dataNote": "Архивная модель: рабочие характеристики не подтверждены текущей таблицей Hunter.",
+    "verifiedOn": "2026-10-10"
   },
   {
     "id": "I-80",
@@ -13257,7 +13259,7 @@
         "recommendedBar": 5.5
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "dataNote": "Данные для комплекта основного и вспомогательных сопел, указанного в таблице Hunter.",
@@ -13702,7 +13704,7 @@
         "recommendedBar": 5.5
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "dataNote": "Данные для комплекта основного и вспомогательных сопел, указанного в таблице Hunter.",
@@ -14190,7 +14192,7 @@
         "recommendedBar": 6.9
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i90-63"
@@ -14677,7 +14679,7 @@
         "recommendedBar": 6.9
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i9036-48"
@@ -15214,7 +15216,7 @@
         "recommendedBar": 3.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i-20-ss-2_5"
@@ -15830,7 +15832,7 @@
         "recommendedBar": 4.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i25-8"
@@ -16171,7 +16173,7 @@
         "recommendedBar": 4.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "i40-15"
@@ -16615,7 +16617,7 @@
         "recommendedBar": 5.5
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "dataNote": "Данные для комплекта основного и вспомогательных сопел, указанного в таблице Hunter.",
@@ -17017,7 +17019,7 @@
         "recommendedBar": 4.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "dataNote": "Данные для комплекта основного и вспомогательных сопел, указанного в таблице Hunter.",
@@ -17608,7 +17610,7 @@
         "recommendedBar": 4.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "dataNote": "Данные для комплекта основного и вспомогательных сопел, указанного в таблице Hunter.",
@@ -18242,7 +18244,7 @@
         "recommendedBar": 4.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "dataNote": "Данные для комплекта основного и вспомогательных сопел, указанного в таблице Hunter.",
@@ -18962,7 +18964,7 @@
         "recommendedBar": 4.8
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "dataNote": "Данные для комплекта основного и вспомогательных сопел, указанного в таблице Hunter.",
@@ -19082,7 +19084,7 @@
         "recommendedBar": 7.6
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "st90-73"
@@ -19201,7 +19203,7 @@
         "recommendedBar": 7.6
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "st90-73"
@@ -19612,7 +19614,7 @@
         "recommendedBar": 6
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "square",
     "coverageKind": "sector",
     "defaultNozzleId": "st16-18"
@@ -19687,9 +19689,9 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
+    "coverageKind": "streams",
     "pressureCompensating": true
   },
   {
@@ -19762,9 +19764,9 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
+    "coverageKind": "streams",
     "pressureCompensating": true
   },
   {
@@ -19837,9 +19839,9 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
+    "coverageKind": "streams",
     "pressureCompensating": true
   },
   {
@@ -19912,9 +19914,9 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
+    "coverageKind": "streams",
     "pressureCompensating": true
   },
   {
@@ -19987,9 +19989,9 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
+    "coverageKind": "streams",
     "pressureCompensating": true
   },
   {
@@ -20062,9 +20064,9 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
+    "coverageKind": "streams",
     "pressureCompensating": true
   },
   {
@@ -20137,10 +20139,16 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
-    "pressureCompensating": true
+    "coverageKind": "streams",
+    "pressureCompensating": true,
+    "radiusByPopUpMm": [
+      {
+        "popUpMm": 150,
+        "radiusM": 0.6096
+      }
+    ]
   },
   {
     "id": "MSBN-50V",
@@ -20212,10 +20220,16 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
-    "pressureCompensating": true
+    "coverageKind": "streams",
+    "pressureCompensating": true,
+    "radiusByPopUpMm": [
+      {
+        "popUpMm": 150,
+        "radiusM": 0.9144
+      }
+    ]
   },
   {
     "id": "PCN-25",
@@ -20287,7 +20301,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20362,7 +20376,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20437,7 +20451,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20512,7 +20526,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20587,7 +20601,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20662,7 +20676,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20737,7 +20751,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20812,7 +20826,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20887,7 +20901,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -20962,7 +20976,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -21037,7 +21051,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -21112,7 +21126,7 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "pressureCompensating": true
@@ -21155,7 +21169,7 @@
         "sourceUrl": "https://www.hunterirrigation.com/irrigation-product/nozzles/bubblers-bubbler-nozzles"
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
     "coverageKind": "point",
     "dataNote": "Расход регулируется: менее 2 US gal/min (7,57 л/мин). Фиксированный расход и радиус Hunter не публикует."
@@ -21250,9 +21264,9 @@
         "recommendedBar": 2.1
       }
     ],
-    "verifiedOn": "2026-09-18",
+    "verifiedOn": "2026-10-10",
     "precipBasis": "none",
-    "coverageKind": "sector",
+    "coverageKind": "streams",
     "dataNote": "Специальный баблер. Таблица Hunter указывает радиус; скорость осаждения не опубликована."
   },
   {

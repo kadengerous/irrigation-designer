@@ -1,5 +1,19 @@
 # Project requirements
 
+## Application settings and UI scale
+
+Use rem for interface text, icons, control dimensions and spacing, including
+Tailwind arbitrary values. `src/lib/ui-scale.ts` applies the user's UI size at
+the document root; use `uiPixels` only when positioning UI in measured viewport
+coordinates. Never apply CSS zoom/scale to the canvas or change project geometry,
+pan or pixels per metre when changing UI size. Keep viewport media queries in px.
+Settings have one opaque frame shared by Interface, Units and Language, with
+scrolling inside the content area on constrained screens. Preserve technical
+canvas colours when switching themes. Keep all nine themes available: crystal,
+pearl, sage, ice, sand, lavender, light, mint and graphite. The obsolete matte
+preference maps to mint; lavender replaces its duplicate in the chooser. Keep
+technical canvas colours independent of these interface palettes.
+
 ## Localization is part of every feature
 
 From 2026-09-19, all existing and new user-facing surfaces must support all 20 languages: English (en), Russian (ru), Spanish (es), Brazilian Portuguese (pt-BR), French (fr), Italian (it), German (de), Arabic (ar), Turkish (tr), Polish (pl), Simplified Chinese (zh-CN), Dutch (nl), Czech (cs), Greek (el), Hungarian (hu), Romanian (ro), Slovak (sk), Hebrew (he), Ukrainian (uk), and Japanese (ja). The shared registry is `src/lib/locale-config.ts`.

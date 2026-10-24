@@ -39,7 +39,7 @@ test("sector handles, inspector state, manufacturer limits and undo share one ge
 
     for (const model of placeableCatalog().filter(i => i.arcMin===360 && !i.strip && i.coverageKind!=="point")) {
       const full={...head,...catalogHeadDefaults(model),catalogId:model.id};
-      assert.deepEqual(sectorHandlePoints(full,model,40).map(h=>h.kind),["radius"],model.id);
+      assert.deepEqual(sectorHandlePoints(full,model,40).map(h=>h.kind),model.coverageKind==='square'?["radius","rotation"]:["radius"],model.id);
     }
     for (const model of placeableCatalog().filter(i=>i.strip)) {
       assert.deepEqual(sectorHandlePoints({...head,...catalogHeadDefaults(model)},model,40).map(h=>h.kind),["rotation"],model.id);

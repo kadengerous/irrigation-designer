@@ -67,8 +67,8 @@ test('animation uses angular speed, emission history and separate bubbler patter
     const historical = w.wateringJets(head, 30 - w.wateringFlightSeconds(head), profile)[0];
     assert.ok(Math.abs(path.at(-1).x - Math.cos(historical.angle) * head.r) < 1e-8);
     assert.ok(path.every(p => Math.hypot(p.x,p.y) <= head.r + 1e-8));
-    assert.equal(w.wateringProfile({ ...head, catalogId: 'PCB-25' }).bubblePattern, 'trickle');
-    assert.equal(w.wateringProfile({ ...head, catalogId: 'PCB-20' }).bubblePattern, 'umbrella');
+    assert.equal(w.wateringProfile({ ...head, ...catalogHeadDefaults(CATALOG.find(item=>item.id==='PCB-25')), catalogId: 'PCB-25' }).bubblePattern, 'trickle');
+    assert.equal(w.wateringProfile({ ...head, ...catalogHeadDefaults(CATALOG.find(item=>item.id==='PCB-20')), catalogId: 'PCB-20' }).bubblePattern, 'umbrella');
     for (const item of CATALOG.filter(item => item.type !== 'body')) {
       const instance = { ...head, ...catalogHeadDefaults(item), catalogId: item.id };
       const p = w.wateringProfile(instance);

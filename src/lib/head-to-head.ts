@@ -1,5 +1,5 @@
 import type { Head, Project } from './project-types';
-import { itemById } from './hunter-catalog';
+import { catalogForHead,  itemById } from './equipment-catalog';
 import { coverageRuleFor } from './coverage-rules';
 import { drawingOrMigrate } from './cad/engine';
 import { figureAtPoint, irrigationFigures } from './irrigation-figures';
@@ -20,7 +20,7 @@ export function directedReach(a:Head,b:Head,tolerance=HEAD_TO_HEAD_TOLERANCE_M):
 export function significantHeadPairs(project:Project,target:Surface):[Head,Head][] {
   const figures=irrigationFigures(drawingOrMigrate(project));
   const heads=project.heads.filter(h=>{
-    const item=itemById(h.catalogId);
+    const item=catalogForHead(h);
     return item&&coverageRuleFor(item,h.nozzleId)==='HEAD_TO_HEAD'&&[h.x,h.y,h.r,h.arc,h.start].every(Number.isFinite)&&h.r>0&&h.arc>0&&h.arc<=360;
   });
   const owners=new Map(heads.map(h=>[h.id,figureAtPoint(h,figures)?.id]));

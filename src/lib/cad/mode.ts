@@ -27,6 +27,7 @@ export type CadMode =
   | "draw_fill"
   | "draw_dim"
   | "draw_text"
+  | "draw_cut"
   | "draw_trim"
   | "draw_extend"
   | "draw_copy"
@@ -55,6 +56,7 @@ const DRAW_MODES: Partial<Record<DrawSub, CadMode>> = {
   fill: "draw_fill",
   dim: "draw_dim",
   text: "draw_text",
+  cut: "draw_cut",
   trim: "draw_trim",
   extend: "draw_extend",
   copy: "draw_copy",

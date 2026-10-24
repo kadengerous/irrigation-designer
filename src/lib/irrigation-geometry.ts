@@ -1,7 +1,10 @@
+import {operatingGeometryAvailable} from "./flow";
+import {specialFootprint} from "./equipment-footprint";
+import {landscapeExclusions} from "./landscape-objects";
 import clipping, { type MultiPolygon, type Polygon, type Ring } from "polygon-clipping";
 import { ellipseWorldPts, faceHoles, facePoints } from "./cad/engine";
 import { isExclusion, layerPurpose } from "./cad/types";
-import { itemById, stripAtPressure } from "./hunter-catalog";
+import { catalogForHead,  itemById, stripAtPressure, supportsArc } from "./equipment-catalog";
 import { polyPoints } from "./project-types";
 import type { Head, Project, Pt } from "./project-types";
 
@@ -26,7 +29,7 @@ export const cleanCoverageSurface = (s: Surface) => s.filter(p => surfaceArea([p
 const ring = (points: Pt[]): Ring => points.map(p => [p.x, p.y]);
 
 /** Uses canonical CAD faces, including holes and hidden layers. Visibility is a view setting. */
-export function irrigationSurfaces(project: Project): { target: Surface; unmodeled: Surface } {
+export function irrigationSurfaces(project: Project, {includeImplicitSiteIrrigation = false} = {}): { target: Surface; unmodeled: Surface; excluded: Surface } {
   const targets: Surface[] = [], excluded: Surface[] = [], unmodeled: Surface[] = [];
   const d = project.drawing;
   // Legacy polygon migration is intended for editing and can discard hidden shapes and CAD types.
@@ -42,7 +45,7 @@ export function irrigationSurfaces(project: Project): { target: Surface; unmodel
       const polygon: Polygon = [ring(points), ...(g.holes ?? []).filter(h => h.length >= 3).map(ring)];
       if (polygon.some(r => r.some(p => !p.every(Number.isFinite)))) throw new Error("invalid-geometry");
       const type = g.cadType ?? g.kind;
-      if (type === "site") continue;
+      if (type === "site" && !includeImplicitSiteIrrigation) continue;
       (isExclusion(type) || type === "water" ? excluded : targets).push([polygon]);
     }
   } else for (const f of Object.values(d.faces)) {
@@ -59,14 +62,15 @@ export function irrigationSurfaces(project: Project): { target: Surface; unmodel
     const polygon: Polygon = [ring(points), ...faceHoles(d, f.id).filter(h => h.length >= 3).map(ring)];
     if (polygon.some(r => r.some(p => !p.every(Number.isFinite)))) throw new Error("invalid-geometry");
     // A site outline is a boundary, not automatically a watered lawn.
-    if (f.type === "site" && !f.hydro?.purpose) continue;
+    if (f.type === "site" && !f.hydro?.purpose && !includeImplicitSiteIrrigation) continue;
     if (layerPurpose(f) === "none") excluded.push([polygon]);
     else if (f.hydro?.method === "drip" || f.hydro?.method === "bubbler") unmodeled.push([polygon]);
     else targets.push([polygon]);
   }
+  if(d)for(const points of landscapeExclusions(d))excluded.push([[ring(points)]]);
   const exclusions = unionSurfaces(excluded);
   return { target: cleanSurface(subtractSurface(unionSurfaces(targets), unionSurfaces([exclusions, ...unmodeled]))),
-    unmodeled: subtractSurface(unionSurfaces(unmodeled), exclusions) };
+    unmodeled: subtractSurface(unionSurfaces(unmodeled), exclusions), excluded:exclusions };
 }
 
 function arcSegments(radius: number, angle: number) {
@@ -76,8 +80,10 @@ function arcSegments(radius: number, angle: number) {
 
 /** The footprint used on the plan: sector or pressure-specific rotated strip. */
 export function headSurface(h: Head, radialAllowance = 0): Surface {
-  const item = itemById(h.catalogId);
-  if (!item || item.coverageKind === "point" || ![h.x, h.y, h.start, h.arc, h.r].every(Number.isFinite)) return [];
+  const item = catalogForHead(h);
+  if (!item || !operatingGeometryAvailable(item,h) || !supportsArc(item,h.arc) || h.r<0 || (item.coverageKind === "point"||item.coverageKind === "streams") || ![h.x, h.y, h.start, h.arc, h.r].every(Number.isFinite)) return [];
+  const special=specialFootprint(h);
+  if(special)return h.r>0 ? [[special.map(p=>[h.x+p.x,h.y+p.y])]] : [];
   const a = h.start * Math.PI / 180;
   const transform = (x: number, y: number): [number, number] => [h.x + x * Math.cos(a) - y * Math.sin(a), h.y + x * Math.sin(a) + y * Math.cos(a)];
   if (item.strip) {

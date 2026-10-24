@@ -1,12 +1,16 @@
 .automatic-plan-controls { flex-shrink: 0; }
-.footer-tools-scroll {display:flex;align-items:center;gap:8px;flex:1 1 0;min-width:0;overflow-x:auto;overflow-y:hidden;touch-action:pan-x;overscroll-behavior-x:contain;}
-.app-shell .app-footer .diagnostic-check-trigger {position:static;flex:0 0 auto;margin-inline-start:0;max-width:min(180px,28vw);}
+.footer-tools-scroll {display:flex;align-items:center;gap:0.5rem;flex:1 1 0;min-width:0;overflow-x:auto;overflow-y:hidden;touch-action:pan-x;overscroll-behavior-x:contain;}
 @media (pointer:coarse) {
-  .automatic-plan-controls .mobile-icon-button {min-width:44px!important;width:44px!important;min-height:44px!important;height:44px!important;}
+  .automatic-plan-controls .mobile-icon-button {min-width:2.75rem!important;width:2.75rem!important;min-height:2.75rem!important;height:2.75rem!important;}
 }
 .automatic-plan-controls .mobile-icon-button { position: relative; touch-action: manipulation; }
 .automatic-plan-controls .mobile-icon-button > * { pointer-events: none; }
 .automatic-plan-controls .mobile-icon-button[aria-pressed=true] {background:#d4efdd!important;color:#235b38!important;border:1px solid #78a98a!important;}
-.automatic-dimension-star { position: absolute; inset-inline-end: 2px; top: 0; font-size: 12px; color: var(--color-ink); }
-.coverage-display-legend { position: fixed; z-index: 35; bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px)); inset-inline-end: 1rem; width: min(260px, calc(100vw - 2rem)); max-height: 35vh; overflow: auto; padding: .6rem; background: var(--color-surface, white); color: var(--color-ink, #203346); border: 1px solid var(--color-line, #ced7df); border-radius: .65rem; box-shadow: 0 4px 20px #0002; font-size: 13px; }
-.coverage-display-legend .diagnostic-legend { margin: 0; }
+.automatic-plan-controls .automatic-dimension-icon { width: 1.75rem; height: 1.5rem; flex: none; }
+.coverage-display-legend { position: fixed; z-index: 35; bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px)); inset-inline-end: 1rem; width: min(16.25rem, calc(100vw - 2rem)); max-height: 35vh; overflow: auto; padding: .6rem; background: var(--color-surface, white); color: var(--color-ink, #203346); border: 1px solid var(--color-line, #ced7df); border-radius: .65rem; box-shadow: 0 0.25rem 1.25rem #0002; font-size: 0.8125rem; }
+.coverage-display-legend .diagnostic-legend { margin: 0; border-top: 0; }
+.coverage-display-legend .diagnostic-legend h4 { padding-inline-end: 1.8rem; }
+.coverage-legend-close { position: absolute; inset-inline-end: .25rem; top: .25rem; display: grid; place-items: center; width: 2rem; height: 2rem; border: 0; border-radius: .4rem; background: transparent; color: inherit; cursor: pointer; }
+.coverage-legend-close svg { width: .9rem; height: .9rem; }
+.coverage-legend-close:hover { background: var(--color-line); }
+.coverage-legend-close:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }

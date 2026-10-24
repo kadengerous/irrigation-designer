@@ -1,11 +1,15 @@
+import {operatingGeometryAvailable} from "./flow";
+import {specialFootprint} from "./equipment-footprint";
 import { dist, headingDeg, pointInPoly, polygonArea, type Pt } from "@/lib/geometry";
-import { itemById, stripAtPressure } from "@/lib/hunter-catalog";
+import { catalogForHead,  itemById, stripAtPressure, supportsArc } from "@/lib/equipment-catalog";
 import type { Geom, Head } from "@/lib/project-types";
 import { polyPoints } from "@/lib/project-types";
 
 export function headCovers(h: Head, p: Pt, toleranceM = 0): boolean {
-  const item = itemById(h.catalogId);
-  if (!item || item.coverageKind === "point" || ![h.x,h.y,h.r,h.arc,h.start,p.x,p.y].every(Number.isFinite) || h.r<=0 || h.arc<=0 || h.arc>360) return false;
+  const item = catalogForHead(h);
+  if (!item || !operatingGeometryAvailable(item,h) || !supportsArc(item,h.arc) || (item.coverageKind === "point"||item.coverageKind === "streams") || ![h.x,h.y,h.r,h.arc,h.start,p.x,p.y].every(Number.isFinite) || h.r<=0 || h.arc<=0 || h.arc>360) return false;
+  const special=specialFootprint(h);
+  if(special)return pointInPoly(p,special.map(q=>({x:h.x+q.x,y:h.y+q.y})));
   if (item?.strip) {
     const strip = stripAtPressure(item, h.designPressure);
     return !!strip && pointInStrip(h, p, strip);
@@ -74,6 +78,8 @@ export function coverageStats(lawn: Pt[], heads: Head[], step = 0.45, holes: Pt[
     maxY = Math.max(maxY, p.y);
   }
   for (const h of heads) {
+    const special=specialFootprint(h);
+    if(special){for(const p of special){minX=Math.min(minX,h.x+p.x);minY=Math.min(minY,h.y+p.y);maxX=Math.max(maxX,h.x+p.x);maxY=Math.max(maxY,h.y+p.y);}continue;}
     minX = Math.min(minX, h.x - h.r);
     minY = Math.min(minY, h.y - h.r);
     maxX = Math.max(maxX, h.x + h.r);

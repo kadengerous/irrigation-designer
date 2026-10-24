@@ -4,6 +4,30 @@ import test from "node:test";
 import { createServer } from "vite";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import ts from "typescript";
+
+test("main menu closes without resetting the active phone tool or drawing", async () => {
+  const app=await readFile(new URL("../src/components/designer/designer-app.tsx",import.meta.url),"utf8");
+  const menu=app.slice(app.indexOf('className="project-menu-trigger'),app.indexOf('<Menu />'));
+  const click=menu.match(/onClick=\{\(\) => \{([\s\S]*?)\n            \}\}/)[1];
+  const key=app.match(/const onKey = \(e: KeyboardEvent\) => \{([\s\S]*?)\n    \};\n    const up/)[1];
+  const compile=body=>ts.transpileModule(body,{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText;
+  for(const panel of ['tools','properties','library','irrigation']){
+    let open=false,activePanel=panel,prevented=0,stopped=0;
+    const state={tool:'draw',drawSub:'polygon',draft:{points:[{x:1,y:2}]}};
+    const original=JSON.stringify(state);
+    const useProject={getState:()=>new Proxy(state,{get(target,key){if(key in target)return target[key];return ()=>assert.fail('menu must not call drawing action '+String(key));}})};
+    const setOpen=value=>{open=typeof value==='function'?value(open):value;};
+    const toggle=()=>new Function('nameRequired','projectFormOpen','isPhone','setFileMenuOpen','setExportDrawOpen','setGridOpen','setMobilePanel','useProject',compile(click))(false,false,true,setOpen,()=>{},()=>{},value=>{activePanel=value;},useProject);
+    toggle();assert.equal(open,true);assert.equal(activePanel,panel);
+    toggle();assert.equal(open,false);assert.equal(activePanel,panel);
+    toggle();
+    const press=keyName=>new Function('e','fileMenuOpen','setFileMenuOpen','setExportDrawOpen','setGridOpen','useProject',compile(key))({key:keyName,preventDefault(){prevented++;},stopImmediatePropagation(){stopped++;}},open,setOpen,()=>{},()=>{},useProject);
+    press('Delete');assert.equal(open,true);
+    press('Escape');assert.equal(open,false);assert.equal(prevented,1);assert.equal(stopped,1);
+    assert.equal(activePanel,panel);assert.equal(JSON.stringify(state),original);
+  }
+});
 
 test("layer manager keeps a vertical reorder list and exposes front/back actions", async () => {
   const app=await readFile(new URL("../src/components/designer/designer-app.tsx",import.meta.url),"utf8");

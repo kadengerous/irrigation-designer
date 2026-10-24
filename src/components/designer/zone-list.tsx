@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import { useProject, drawingForEditing } from "@/lib/project-store";
-import { zoneLabel, type Project, type Zone } from "@/lib/project-types";
+import { zoneLabel, zoneColor, type Project, type Zone } from "@/lib/project-types";
 import { formatNumber, tr, type Locale } from "@/lib/i18n";
 import { formatAreaU, formatFlowU, formatPrecipitation, formatPressureU, type UnitPrefs } from "@/lib/units";
 import { zoneFlow, zonePressure } from "@/lib/hydro";
@@ -12,17 +12,20 @@ import { useZoneDeletion } from "./zone-delete-dialog";
 import { HeadLayerRow, IrrigationLayerActions, IrrigationLayerRow } from "./irrigation-layer-row";
 import { ZoneDragProvider, ZoneDropTarget } from "./zone-drag";
 
-export function ZoneLayerRow({ project, zone, open, active, selectedIds, units, locale, onToggle, onDelete }: {
+export function ZoneLayerRow({ project, zone, open, active, selectedIds, units, locale, onToggle, onDelete, readOnly = false, editableHeads = false, onSelect, onSelectHead }: {
   project: Project; zone: Zone; open: boolean; active: boolean; selectedIds: string[]; units: UnitPrefs; locale: Locale;
   onToggle: () => void; onDelete: (button: HTMLButtonElement) => void;
+  readOnly?: boolean; editableHeads?: boolean; onSelect?: () => void; onSelectHead?: (id:string) => void;
 }) {
+  const [openHeadId, setOpenHeadId] = useState<string | null>(null);
+  useEffect(() => { if (!open) setOpenHeadId(null); }, [open]);
   const name = zoneLabel(zone);
   const heads = project.heads.filter(head => head.zone === zone.id);
   const q = zoneFlow(heads, zone.id), pressure = zonePressure(heads, zone.id);
   const t = (key: string) => tr(locale, key);
   return <IrrigationLayerRow name={name} rowKey={`zone:${zone.id}`} kind="zone" selected={active}
     hidden={zone.hidden} locked={zone.locked} open={open} onToggle={onToggle} locale={locale}
-    icon={null} onSelect={() => useProject.getState().focusZone(zone.id)}>
+    icon={<span className="zone-color-marker" aria-hidden="true" style={{background:zoneColor(zone.id)}}/>} onSelect={onSelect??(() => useProject.getState().focusZone(zone.id))}>
     <div className="zone-demand" aria-label={`${name}: ${t("flow")}, ${t("zonePressure")}`}>
       <span>{q == null ? t("noData") : formatFlowU(q, units.flow)}</span>
       <span title={t("zonePressure")}>{pressure == null ? t("noData") : formatPressureU(pressure, units.pressure)}</span>
@@ -31,8 +34,8 @@ export function ZoneLayerRow({ project, zone, open, active, selectedIds, units, 
     <ZoneStatistics project={project} zone={zone} units={units} locale={locale}/>
     <IrrigationLayerActions name={name} hidden={zone.hidden} locked={zone.locked} deleteDisabled={heads.some(head => head.locked)}
       onVisibility={() => useProject.getState().toggleZoneHidden(zone.id)} onLock={() => useProject.getState().toggleZoneLocked(zone.id)}
-      onDelete={onDelete} locale={locale}/>
-    <label className="zone-name-editor"><span>{t("faceName")}</span>
+      onDelete={readOnly?undefined:onDelete} locale={locale}/>
+    {!readOnly&&<label className="zone-name-editor"><span>{t("faceName")}</span>
       <input key={`${zone.id}:${name}`} defaultValue={name} disabled={zone.locked}
         onBlur={event => {
           const next = event.currentTarget.value.trim();
@@ -43,10 +46,13 @@ export function ZoneLayerRow({ project, zone, open, active, selectedIds, units, 
           if (event.key === "Escape") { event.currentTarget.value = name; event.currentTarget.blur(); }
           else if (event.key === "Enter") event.currentTarget.blur();
         }}/>
-    </label>
+    </label>}
     <div className="zone-member-list" role="group" aria-label={tr(locale, "zoneHeadCount", { n: formatNumber(heads.length, 0) })}>
-      {heads.length ? project.heads.map((head, index) => head.zone === zone.id && <HeadLayerRow key={head.id} head={head}
-        number={index + 1} zone={zone} selected={selectedIds.includes(head.id)} units={units} locale={locale}/>)
+      {readOnly && !editableHeads ? heads.map(head=><button type="button" key={head.id} className="engineering-zone-head irrigation-layer-name" aria-pressed={selectedIds.includes(head.id)} onClick={()=>onSelectHead?.(head.id)}><span className="zone-color-marker" aria-hidden="true" style={{background:zoneColor(zone.id)}}/><bdi dir="ltr">{head.catalogId}</bdi></button>) : heads.length ? project.heads.map((head, index) => head.zone === zone.id && <HeadLayerRow key={head.id} head={head}
+        number={index + 1} zone={zone} selected={selectedIds.includes(head.id)} units={units} locale={locale}
+        expanded={openHeadId === head.id} onExpandedChange={value => setOpenHeadId(value ? head.id : null)}
+        onPreview={onSelectHead?()=>onSelectHead(head.id):undefined}
+        onInspect={readOnly?()=>{useProject.getState().setTool('place');useProject.getState().selectHead(head.id);}:undefined}/>)
         : <p className="mobile-empty">{t("zoneIsEmpty")}</p>}
     </div>
   </IrrigationLayerRow>;

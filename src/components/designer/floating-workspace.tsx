@@ -1,4 +1,6 @@
 import { text as uiText } from "@/lib/i18n";
+import { useProject } from "@/lib/project-store";
+import { uiPixels } from "@/lib/ui-scale";
 import {
   useLayoutEffect,
   useEffect,
@@ -64,9 +66,12 @@ export function useFloatingPlacement(
   preferred: (b: Box) => { x: number; y: number },
   priority: number,
   enabled = true,
+  constrainBounds?: (bounds: Box) => Box,
 ) {
   const preference = useRef(preferred);
   preference.current = preferred;
+  const constrain = useRef(constrainBounds);
+  constrain.current = constrainBounds;
   const [box, setBox] = useState<Box | null>(null);
   useLayoutEffect(() => {
     if (!enabled) { setBox(null); return; }
@@ -76,11 +81,12 @@ export function useFloatingPlacement(
       cancelAnimationFrame(timer);
       const el = ref.current;
       if (el) {
-        const bounds = workspaceBounds();
+        const workspace = workspaceBounds();
+        const bounds = constrain.current?.(workspace) ?? workspace;
         // scroll dimensions preserve the desired size after a temporary constraint.
-        const width = Number(el.dataset.naturalWidth) || Math.max(el.scrollWidth, el.offsetWidth);
+        const width = uiPixels(Number(el.dataset.naturalWidth)) || Math.max(el.scrollWidth, el.offsetWidth);
         const height =
-          Number(el.dataset.naturalHeight) || Math.max(el.scrollHeight, el.offsetHeight);
+          uiPixels(Number(el.dataset.naturalHeight)) || Math.max(el.scrollHeight, el.offsetHeight);
         const next = placeFloating(
           bounds,
           { width, height },
@@ -121,22 +127,24 @@ function tooltipButton(target: EventTarget | null): HTMLButtonElement | null {
 
 /** A single tooltip system covers native buttons and shared Button components alike. */
 export function WorkspaceTooltips() {
+  const enabled = useProject(s => s.showHints);
   const [active, setActive] = useState<{ button: HTMLButtonElement; label: string } | null>(null);
   useEffect(() => {
+    setActive(null);
     let timer: ReturnType<typeof setTimeout> | undefined, pending: HTMLButtonElement | null = null;
     let touchFocus = false;
     const labelFor = (button: HTMLButtonElement) => button.closest<HTMLElement>("[data-tool-label]")?.dataset.toolLabel ||
       button.getAttribute("aria-label") || button.getAttribute("title") || button.dataset.toolTitle || button.textContent?.trim() || "";
     const prepare = () => {
       for (const button of document.querySelectorAll<HTMLButtonElement>("button[title]")) {
-        if (!tooltipButton(button)) continue;
+        if (enabled && !tooltipButton(button)) continue;
         button.dataset.toolTitle = button.title;
         button.removeAttribute("title");
       }
     };
     const hide = () => { clearTimeout(timer); pending = null; setActive(null); };
     const show = (button: HTMLButtonElement | null, delay: number) => {
-      if (!button) { hide(); return; }
+      if (!enabled || !button) { hide(); return; }
       if (pending === button) return;
       hide(); pending = button;
       timer = setTimeout(() => {
@@ -174,8 +182,8 @@ export function WorkspaceTooltips() {
         button.title = button.dataset.toolTitle!; delete button.dataset.toolTitle;
       }
     };
-  }, []);
-  return active ? <WorkspaceTooltipBubble button={active.button} label={active.label}/> : null;
+  }, [enabled]);
+  return enabled && active ? <WorkspaceTooltipBubble button={active.button} label={active.label}/> : null;
 }
 
 function WorkspaceTooltipBubble({ button, label }: { button: HTMLButtonElement; label: string }) {

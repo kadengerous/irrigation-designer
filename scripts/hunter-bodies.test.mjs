@@ -20,7 +20,7 @@ test("Hunter bodies: mounting, actual heights, regulator pressure, persistence a
     const item = id => { const value = cat.itemById(id); assert.ok(value, id); return value; };
     const make = (id, suffix = "") => ({ ...catalogHeadDefaults(item(id)), id: id + suffix, catalogId: id,
       x: 0, y: 0, start: 0, zone: 1, popUpMm: cat.defaultPopUpMm(item(id)), locked: false, needsReview: false });
-    const bodies = cat.CATALOG.filter(row => row.type === "body");
+    const bodies = cat.CATALOG.filter(row => row.type === "body" && row.manufacturerId === "hunter");
     assert.equal(bodies.length, 58);
     assert.equal(new Set(bodies.map(row => row.sku)).size, bodies.length);
     const heights = family => [...new Set(bodies.filter(body => body.bodyFamilyId === family).map(body => body.popUpMm))].sort((a, b) => a - b);
@@ -29,7 +29,7 @@ test("Hunter bodies: mounting, actual heights, regulator pressure, persistence a
     assert.deepEqual(heights("PRS40"), [0, 75, 100, 150, 300]);
     assert.deepEqual(heights("PRS30"), [0, 75, 100, 150, 300]);
 
-    for (const model of cat.placeableCatalog()) {
+    for (const model of cat.placeableCatalog().filter(row => row.manufacturerId === "hunter")) {
       const h = make(model.id), options = cat.bodiesFor(model);
       if (model.type === "rotor" || model.id.startsWith("PCB-") || model.id === "AFB") {
         assert.deepEqual(options, [], `${model.id}: no separate spray body`);
@@ -81,8 +81,9 @@ test("Hunter bodies: mounting, actual heights, regulator pressure, persistence a
     assert.equal(pcb.heads[0].popUpMm, 0);
 
     const lines = estimateLines({ ...emptyProject(), heads: [mp, { ...tall, id: "tall" }, rotor, { ...rotor, id: "rotor-tall", popUpMm: 300 }] });
-    assert.equal(lines.filter(line => line.name.startsWith("Корпус")).length, 2, "body heights have separate quantities");
-    assert.ok(lines.some(line => line.name.includes("I-20-12") && line.name.includes("30 см")));
+    assert.ok(lines.some(line => line.name === "Hunter PROS-04-PRS40"));
+    assert.ok(lines.some(line => line.name === "Hunter PROS-06-PRS40"), "body heights have separate quantities with original catalog names");
+    assert.ok(lines.some(line => line.name === "Hunter I-20-12"));
     useProject.setState({ project: { ...emptyProject(), heads: [mp] }, past: [], future: [] });
     useProject.getState().updateHead(mp.id, { bodyId: "PROS-12-PRS30" });
     const current = useProject.getState().project.heads[0];

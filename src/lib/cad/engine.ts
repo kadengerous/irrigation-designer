@@ -1,3 +1,5 @@
+import { editRoundedFace, rebuildRoundedFace, transformRounding } from "./rounding-engine";
+import { roundedBounds } from "./corner-rounding";
 import { closedPathSideStarts, closestOnSegment, dist, pointInPoly, polygonArea, shoelace, type Pt } from "@/lib/geometry";
 import { applyConstraints, autoSegmentConstraints } from "@/lib/cad/constraints";
 import { defaultLayerState, emptyDrawing, irrigationRegionType, layerForType, type CadDim, type CadDrawing, type CadEdge, type CadFace, type CadLayerId, type CadVertex, type RegionType } from "@/lib/cad/types";
@@ -423,7 +425,7 @@ export function isTriangleFace(d: CadDrawing, faceId: string): boolean {
 /** Curves and pencil contours never expose their sampled CAD segments as sides. */
 export function isDrawnCurveFace(d: CadDrawing, faceId: string): boolean {
   const face = d.faces[faceId];
-  if (!face) return false;
+  if (!face || face.rounding) return false;
   if (face.spline || face.freehand) return true;
   // Compatibility with contours saved by older builds, where a smooth stroke
   // was expanded into dozens of tiny straight sides without source metadata.
@@ -701,6 +703,7 @@ export function rebuildFaces(d: CadDrawing, defaultType: RegionType) {
       circle: old?.circle,
       ellipse: old?.ellipse,
       rect: old?.rect,
+      rounding: old?.rounding,
       spline: old?.spline,
       freehand: old?.freehand,
       pointShape: old?.pointShape,
@@ -896,7 +899,8 @@ export function tessellateEdge(a: Pt, b: Pt, bulge: number, minSeg = 8): Pt[] {
   if (Math.abs(bulge) < 1e-6) return [a, b];
   const ac = arcCenter(a, b, bulge);
   if (!ac) return [a, b];
-  const n = Math.max(minSeg, Math.ceil(Math.abs(ac.sweep) / (Math.PI / 18)));
+  const step = Math.min(Math.PI / 36, 2 * Math.acos(Math.max(-1, 1 - 0.0005 / ac.r)));
+  const n = Math.max(minSeg, Math.ceil(Math.abs(ac.sweep) / Math.max(1e-4, step)));
   const a0 = Math.atan2(a.y - ac.c.y, a.x - ac.c.x);
   const pts: Pt[] = [a];
   for (let i = 1; i < n; i++) {
@@ -1018,16 +1022,29 @@ export function deleteFace(d0: CadDrawing, faceId: string): CadDrawing {
   if (!f) return d;
   const ids = new Set(f.outer.map((h) => h.e));
   for (const h of f.holes) for (const x of h) ids.add(x.e);
+  const candidates=new Set([...ids].flatMap(id=>d.edges[id]?[d.edges[id]!.a,d.edges[id]!.b]:[]));
+  delete d.faces[faceId];
+  const retained=new Set(Object.values(d.faces).flatMap(face=>[...face.outer,...face.holes.flat()].map(h=>h.e)));
   for (const id of ids) {
     const ed = d.edges[id];
     if (!ed) continue;
-    const other = ed.faceL === faceId ? ed.faceR : ed.faceL === ed.faceR ? null : ed.faceL;
     if (ed.faceL === faceId) ed.faceL = null;
     if (ed.faceR === faceId) ed.faceR = null;
-    if (!ed.faceL && !ed.faceR && !other) delete d.edges[id];
+    if (!retained.has(id)) delete d.edges[id];
   }
-  delete d.faces[faceId];
-  rebuildFaces(d, "lawn");
+  // Do not rebuild unrelated contours, their holes or identities after a deletion.
+  const used=new Set(Object.values(d.edges).flatMap(edge=>[edge.a,edge.b]));
+  const removed=new Set([...ids].filter(id=>!d.edges[id]));
+  for(const id of candidates)if(!used.has(id)){delete d.vertices[id];removed.add(id);}
+  for(const [id,c] of Object.entries(d.constraints??{}))if(removed.has(c.a)||(c.b&&removed.has(c.b)))delete d.constraints![id];
+  for(const dim of Object.values(d.dims??{})) {
+    const key=dim.autoKey??dim.id.replace(/^auto:/,'');
+    if((dim.aId&&removed.has(dim.aId)) || (dim.bId&&removed.has(dim.bId)) ||
+      dim.faceAxis?.id===faceId || key.startsWith(`face:${faceId}:`) ||
+      key.startsWith(`irrigation:${faceId}:`) || key.startsWith('edge:')&&removed.has(key.slice(5)))
+      delete d.dims![dim.id];
+  }
+  if(d.faceOrder)d.faceOrder=d.faceOrder.filter(id=>id!==faceId);
   return d;
 }
 
@@ -1039,6 +1056,8 @@ export function setFaceType(d0: CadDrawing, faceId: string, type: RegionType): C
 }
 
 export function moveVertex(d0: CadDrawing, vertexId: string, p: Pt): CadDrawing {
+  const rounded = Object.values(d0.faces).find(f => f.rounding?.corners.some(c => c.id === vertexId));
+  if (rounded) return editRoundedFace(d0, rounded.id, d => moveVertex(d, vertexId, p));
   const d = cloneDrawing(d0);
   if (!d.vertices[vertexId]) return d;
   d.vertices[vertexId] = { ...d.vertices[vertexId]!, x: p.x, y: p.y };
@@ -1049,7 +1068,7 @@ export function moveVertex(d0: CadDrawing, vertexId: string, p: Pt): CadDrawing 
 /** Move one merged-contour node without reapplying primitive CAD constraints. */
 export function prepareFusionControls(d0: CadDrawing, faceId: string): CadDrawing {
   const face=d0.faces[faceId];
-  if(!face?.pointShape || face.nodeEdit || face.outer.length<8) return d0;
+  if(!face?.pointShape || face.rounding || face.nodeEdit || face.outer.length<8) return d0;
   const vertices=faceVertices(d0,faceId), n=vertices.length;
   const gentle=vertices.map((p,i)=>{
     const a=vertices[(i+n-1)%n]!,b=vertices[(i+1)%n]!;
@@ -1392,6 +1411,7 @@ export function moveFace(d0: CadDrawing, faceId: string, dx: number, dy: number)
   if (f.rect) f.rect = { ...f.rect, x: f.rect.x + dx, y: f.rect.y + dy };
   if (f.spline) f.spline = { ...f.spline, pts: f.spline.pts.map((p) => ({ x: p.x + dx, y: p.y + dy })) };
   if (f.freehand) f.freehand = { ...f.freehand, pts: f.freehand.pts.map((p) => ({ x: p.x + dx, y: p.y + dy })) };
+  transformRounding(d, faceId, p => ({x:p.x+dx,y:p.y+dy}));
   return d;
 }
 
@@ -1423,6 +1443,7 @@ export function rotateFace(d0: CadDrawing, faceId: string, deg: number, origin?:
   if (f.ellipse) f.ellipse = { ...f.ellipse, rot: ((f.ellipse.rot ?? 0) + deg) % 360 };
   if (f.spline) f.spline = { ...f.spline, pts: f.spline.pts.map(rot) };
   if (f.freehand) f.freehand = { ...f.freehand, pts: f.freehand.pts.map(rot) };
+  transformRounding(d, faceId, rot);
   return d;
 }
 
@@ -1505,6 +1526,7 @@ export function duplicateFace(d0: CadDrawing, faceId: string, dx = 0.8, dy = 0.8
     freehand: f.freehand
       ? { ...f.freehand, pts: f.freehand.pts.map((point) => ({ x: point.x + dx, y: point.y + dy })) }
       : undefined,
+    rounding: f.rounding ? { corners: f.rounding.corners.map((p,i) => ({id:`round-${id}-${i}`,x:p.x+dx,y:p.y+dy})), radii:[...f.rounding.radii] } : undefined,
     pointShape: f.pointShape,
     nodeEdit: f.nodeEdit
       ? { curvedVertexIds: f.nodeEdit.curvedVertexIds.map((id) => vmap.get(id)).filter((id): id is string => Boolean(id)),
@@ -1518,6 +1540,7 @@ export function duplicateFace(d0: CadDrawing, faceId: string, dx = 0.8, dy = 0.8
   };
   assignLoopFaces(d, d.faces[id]!.outer, id);
   for (const hole of d.faces[id]!.holes) assignLoopFaces(d, hole, id);
+  if (d.faces[id]!.rounding) rebuildRoundedFace(d, id);
   return { drawing: d, id };
 }
 
@@ -1701,6 +1724,7 @@ function writeRectMeta(d: CadDrawing, faceId: string, r: { x: number; y: number;
 }
 
 export function setRectSize(d0: CadDrawing, faceId: string, w: number, h: number): CadDrawing {
+  if (d0.faces[faceId]?.rounding) return editRoundedFace(d0, faceId, d => setRectSize(d, faceId, w, h));
   const f = d0.faces[faceId];
   if (!f || w <= EPS || h <= EPS) return d0;
   if (f.rect) {
@@ -1738,6 +1762,7 @@ export function setRectSize(d0: CadDrawing, faceId: string, w: number, h: number
 
 /** Resize a triangle in its own base/altitude frame while keeping its centroid and orientation. */
 export function setTriangleSize(d0: CadDrawing, faceId: string, w: number, h: number): CadDrawing {
+  if (d0.faces[faceId]?.rounding) return editRoundedFace(d0, faceId, d => setTriangleSize(d, faceId, w, h));
   if (w <= EPS || h <= EPS) return d0;
   const verts = faceVertices(d0, faceId).slice(0, 3);
   const metrics = triangleMetrics(verts);
@@ -1763,6 +1788,7 @@ export function setTriangleSize(d0: CadDrawing, faceId: string, w: number, h: nu
 
 /** Set all three triangle sides while preserving its centroid and base orientation. */
 export function setTriangleSides(d0: CadDrawing, faceId: string, base: number, left: number, right: number): CadDrawing {
+  if (d0.faces[faceId]?.rounding) return editRoundedFace(d0, faceId, d => setTriangleSides(d, faceId, base, left, right));
   if (base <= EPS || left <= EPS || right <= EPS || left + right <= base + EPS || base + left <= right + EPS || base + right <= left + EPS) return d0;
   const verts = faceVertices(d0, faceId).slice(0, 3);
   const metrics = triangleMetrics(verts);
@@ -1837,6 +1863,7 @@ export function setRectFromEdge(
   edge: 0 | 1 | 2 | 3,
   p: Pt,
 ): CadDrawing {
+  if (d0.faces[faceId]?.rounding) return editRoundedFace(d0, faceId, d => setRectFromEdge(d, faceId, edge, p));
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f?.rect) return d;
@@ -1845,6 +1872,7 @@ export function setRectFromEdge(
 }
 
 export function setRectFromDiag(d0: CadDrawing, faceId: string, a: Pt, c: Pt): CadDrawing {
+  if (d0.faces[faceId]?.rounding) return editRoundedFace(d0, faceId, d => setRectFromDiag(d, faceId, a, c));
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f) return d;
@@ -1940,6 +1968,7 @@ export function scaleEllipse(d0: CadDrawing, faceId: string, k: number): CadDraw
 }
 
 export function scaleFaceAbout(d0: CadDrawing, faceId: string, k: number, origin?: Pt): CadDrawing {
+  if (d0.faces[faceId]?.rounding) return editRoundedFace(d0, faceId, d => scaleFaceAbout(d, faceId, k, origin ?? faceCentroid(d0, faceId)));
   if (layerFaceIds(d0, faceId).length > 1) return transformLayer(d0, faceId, { scale: k }, origin);
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
@@ -2173,6 +2202,7 @@ export function chamferVertex(d0: CadDrawing, vertexId: string, distM: number): 
 }
 
 export function mirrorFace(d0: CadDrawing, faceId: string, axis: "h" | "v"): CadDrawing {
+  if (d0.faces[faceId]?.rounding) return editRoundedFace(d0, faceId, d => mirrorFace(d, faceId, axis));
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f) return d;
@@ -2195,19 +2225,23 @@ export function mirrorFace(d0: CadDrawing, faceId: string, axis: "h" | "v"): Cad
   return d;
 }
 
-export function addDim(d0: CadDrawing, a: Pt, b: Pt, offset = 0.45): CadDrawing {
+export function addDim(d0: CadDrawing, a: Pt, b: Pt, offset = 0.45, heads: {aHeadId?:string;bHeadId?:string} = {}): CadDrawing {
   const d = cloneDrawing(d0);
   d.dims = { ...(d.dims ?? {}) };
   const id = nid("dim");
   const aId = findVertexAt(d, a, 0.18);
   const bId = findVertexAt(d, b, 0.18);
-  d.dims[id] = { id, a: { ...a }, b: { ...b }, offset, aId: aId ?? undefined, bId: bId ?? undefined };
+  d.dims[id] = { id, a: { ...a }, b: { ...b }, offset, aId: aId ?? undefined, bId: bId ?? undefined, ...heads };
   return d;
 }
 
 export function resolveDim(d: CadDrawing, dim: CadDim): { a: Pt; b: Pt } {
   if (dim.faceAxis) {
     const f = d.faces[dim.faceAxis.id];
+    if (f?.rounding) {
+      const b=roundedBounds(f.rounding.corners,f.rounding.radii),a={x:b.minX,y:b.minY};
+      return {a,b:dim.faceAxis.axis==="x"?{x:b.maxX,y:b.minY}:{x:b.minX,y:b.maxY}};
+    }
     if (f?.circle || f?.ellipse) {
       const c = f.circle ?? f.ellipse!;
       const r = f.circle?.r ?? (dim.faceAxis.axis === "x" ? f.ellipse!.rx : f.ellipse!.ry);
@@ -2245,6 +2279,14 @@ export function outsideDimensionOffset(d: CadDrawing, a: Pt, b: Pt, distance: nu
 export function setDimensionLength(d: CadDrawing, id: string, length: number): CadDrawing {
   const dim = d.dims?.[id];
   if (!dim || !Number.isFinite(length) || length <= 0) return d;
+  if(dim.faceAxis) {
+    const f=d.faces[dim.faceAxis.id];
+    if(f?.rounding) {
+      if(f.locked || d.layers?.[layerForType(f.type)]?.locked)return d;
+      const b=roundedBounds(f.rounding.corners,f.rounding.radii);
+      return setRoundedBounds(d,f.id,dim.faceAxis.axis==="x"?length:b.width,dim.faceAxis.axis==="y"?length:b.height);
+    }
+  }
   const {a,b} = resolveDim(d,dim);
   const current = dist(a,b);
   if (current < 1e-9) return d;
@@ -2311,7 +2353,7 @@ export function headInsideFace(d: CadDrawing, faceId: string, p: Pt): boolean {
   const f = d.faces[faceId];
   if (!f) return false;
   if (f.circle) return dist(p, { x: f.circle.cx, y: f.circle.cy }) <= f.circle.r + CONTOUR_SLACK;
-  const pts = f.rect ? rectWorldCorners(f.rect) : facePoints(d, faceId);
+  const pts = f.rect && !f.rounding ? rectWorldCorners(f.rect) : facePoints(d, faceId);
   if (pts.length < 3) return false;
   return pointInPoly(p, pts) || distToLoop(p, pts) <= CONTOUR_SLACK;
 }
@@ -2342,6 +2384,11 @@ export function scaleFace(d0: CadDrawing, faceId: string, factor: number, origin
 }
 
 export function scaleFaceAxis(d0: CadDrawing, faceId: string, sx: number, sy: number, origin?: Pt): CadDrawing {
+  if (d0.faces[faceId]?.rounding) {
+    const next=editRoundedFace(d0, faceId, d => scaleFaceAxis(d, faceId, sx, sy, origin ?? faceCentroid(d0,faceId)));
+    if(next!==d0 && next.faces[faceId]?.rect)next.faces[faceId]!.rect=inferRectFromPoints(next.faces[faceId]!.rounding!.corners)??undefined;
+    return next;
+  }
   const d = cloneDrawing(d0);
   const f = d.faces[faceId];
   if (!f || !Number.isFinite(sx) || !Number.isFinite(sy)) return d;
@@ -2360,6 +2407,17 @@ export function scaleFaceAxis(d0: CadDrawing, faceId: string, sx: number, sy: nu
     };
   }
   if (f.rect) f.rect = { ...f.rect, w: f.rect.w * sx, h: f.rect.h * sy };
+  return d;
+}
+
+export function setRoundedBounds(d0: CadDrawing,faceId:string,width:number,height:number): CadDrawing {
+  if(!(width>0&&height>0)||!Number.isFinite(width+height)||!d0.faces[faceId]?.rounding)return d0;
+  let d=d0;
+  for(let i=0;i<12;i++) {
+    const r=d.faces[faceId]!.rounding!,b=roundedBounds(r.corners,r.radii);
+    if(Math.abs(b.width-width)+Math.abs(b.height-height)<1e-7)break;
+    d=scaleFaceAxis(d,faceId,width/b.width,height/b.height,{x:(b.minX+b.maxX)/2,y:(b.minY+b.maxY)/2});
+  }
   return d;
 }
 
@@ -3339,7 +3397,7 @@ export function setGroupMemberAppearance(d0: CadDrawing, id: string, patch: {fil
 export function setLayerFlag(d0: CadDrawing, id: CadLayerId, patch: { visible?: boolean; locked?: boolean }): CadDrawing {
   const d = cloneDrawing(d0);
   d.layers = { ...(d.layers ?? defaultLayerState()) };
-  d.layers[id] = { ...d.layers[id]!, ...patch };
+  d.layers[id] = { ...(d.layers[id]??{visible:true,locked:false}), ...patch };
   return d;
 }
 
@@ -3448,7 +3506,7 @@ export function ensureRectMeta(d0: CadDrawing, faceId: string): CadDrawing {
 export function rectMetaMatchesFace(d: CadDrawing, faceId: string): boolean {
   const f = d.faces[faceId];
   if (!f?.rect) return false;
-  const verts = faceVertices(d, faceId);
+  const verts = f.rounding?.corners ?? faceVertices(d, faceId);
   if (verts.length !== 4) return false;
   const corners = rectWorldCorners(f.rect);
   let best = Infinity;
@@ -3501,7 +3559,7 @@ export function inferEllipseFromPoints(pts: Pt[]): { cx: number; cy: number; rx:
 
 export function ensureEllipseMeta(d0: CadDrawing, faceId: string): CadDrawing {
   const f = d0.faces[faceId];
-  if (!f || f.ellipse || f.circle || f.rect) return d0;
+  if (!f || f.rounding || f.ellipse || f.circle || f.rect) return d0;
   const ell = inferEllipseFromPoints(faceVertices(d0, faceId));
   if (!ell) return d0;
   const d = cloneDrawing(d0);
@@ -3510,6 +3568,7 @@ export function ensureEllipseMeta(d0: CadDrawing, faceId: string): CadDrawing {
 }
 
 export function snapFaceToGrid(d0: CadDrawing, faceId: string, step: number): CadDrawing {
+  if (d0.faces[faceId]?.rounding) return editRoundedFace(d0, faceId, d => snapFaceToGrid(d, faceId, step));
   const d = cloneDrawing(d0);
   if (step <= 0) return d;
   const f = d.faces[faceId];
@@ -3685,7 +3744,7 @@ export function toPolygons(d: CadDrawing): Geom[] {
       });
       continue;
     }
-    if (f.rect) {
+    if (f.rect && !f.rounding) {
       geoms.push({
         id: f.id,
         type: "rect",
@@ -3706,7 +3765,7 @@ export function toPolygons(d: CadDrawing): Geom[] {
     if (pts.length < 3) continue;
     geoms.push({
       id: f.id,
-      type: f.rect ? "rect" : "poly",
+      type: f.rect && !f.rounding ? "rect" : "poly",
       kind,
       cadType: type,
       points: pts,
@@ -3757,7 +3816,7 @@ export function drawingOrMigrate(project: { polygons: Geom[]; drawing?: CadDrawi
     const heads = new Map(project.heads.map(h => [h.id, h]));
     const dims = Object.fromEntries(Object.entries(d.dims ?? {}).flatMap(([id, dim]) => {
       if (!dim.aHeadId && !dim.bHeadId) return [[id, dim]];
-      const a = heads.get(dim.aHeadId!), b = heads.get(dim.bHeadId!);
+      const a = dim.aHeadId ? heads.get(dim.aHeadId) : dim.a, b = dim.bHeadId ? heads.get(dim.bHeadId) : dim.b;
       return a && b ? [[id, { ...dim, a: { x: a.x, y: a.y }, b: { x: b.x, y: b.y } }]] : [];
     }));
     const resolved = { ...drawing, dims }; dimensionDrawings.set(project, resolved); return resolved;
@@ -3871,6 +3930,7 @@ export function transformLayer(d0: CadDrawing, id: string, change: { dx?: number
     if (f.circle) { const p = point({ x: f.circle.cx, y: f.circle.cy }); f.circle = { cx: p.x, cy: p.y, r: f.circle.r*k }; }
     if (f.ellipse) { const p = point({ x: f.ellipse.cx, y: f.ellipse.cy }); f.ellipse = { ...f.ellipse, cx: p.x, cy: p.y, rx: f.ellipse.rx*k, ry: f.ellipse.ry*k, rot: (f.ellipse.rot ?? 0)+angle }; }
     if (f.rect) { const p = point({ x: f.rect.x+f.rect.w/2, y: f.rect.y+f.rect.h/2 }); f.rect = { x: p.x-f.rect.w*k/2, y: p.y-f.rect.h*k/2, w: f.rect.w*k, h: f.rect.h*k, rot: f.rect.rot+angle }; }
+    transformRounding(d, id, point);
     if (f.spline) f.spline = { ...f.spline, pts: f.spline.pts.map(point) };
     if (f.freehand) f.freehand = { ...f.freehand, pts: f.freehand.pts.map(point) };
   }

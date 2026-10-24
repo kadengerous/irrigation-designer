@@ -1,15 +1,23 @@
 import assert from 'node:assert/strict';
 import test,{before,after} from 'node:test';
 import {createServer} from 'vite';
-let server,catalog,flow,check,geometry,h2h,coverage,partition,emptyProject;
+let server,catalog,flow,check,geometry,h2h,coverage,partition,emptyProject,selectAutomaticHead;
 before(async()=>{
  server=await createServer({server:{middlewareMode:true,hmr:false}});
  const load=p=>server.ssrLoadModule('/src/lib/'+p+'.ts');
  catalog=await load('hunter-catalog');flow=await load('flow');geometry=await load('irrigation-geometry');h2h=await load('head-to-head');coverage=await load('coverage');
+ ({selectAutomaticHead}=await load('automatic-head'));
  ({checkProject:check}=await load('irrigation-diagnostics'));({partitionCoverage:partition}=await load('diagnostic-coverage'));({emptyProject}=await load('project-types'));
 });
 after(async()=>{await server?.close();});
-const head=(id,x,y,r,patch={})=>({...flow.catalogHeadDefaults(catalog.itemById('MP2000-360')),id,catalogId:'MP2000-360',x,y,r,start:0,arc:360,zone:1,...patch});
+const head=(id,x,y,r,patch={})=>{
+ const arc=patch.arc??360,series=r<=3?'MP800SR':r<=6.4?'MP2000':r<=9?'MP3000':'I-20';
+ const item=catalog.itemById(series==='I-20'?series:`${series}-${arc===360?360:90}`);
+ const pressure=r<=2||series==='MP3000'?2.1:r<=5.5?2.8:3.8;
+ const fit=selectAutomaticHead(r,arc,pressure,[item]);
+ assert.ok(fit,`physical coverage fixture: ${item.id}, ${r} m, ${arc}°`);
+ return {...fit,id,x,y,zone:1,...patch};
+};
 const lawn=(id,x,y,w,h)=>({id,type:'poly',kind:'lawn',cadType:'lawn',closed:true,points:[{x,y},{x:x+w,y},{x:x+w,y:y+h},{x,y:y+h}]});
 const project=heads=>({...emptyProject(),heads,zones:[{id:1,name:'Zone 1'}],polygons:[lawn('site',-1,-1,20,20)]});
 test('directed working radius, not catalog maximum; numeric tolerance never inflates coverage',()=>{
@@ -19,8 +27,8 @@ test('directed working radius, not catalog maximum; numeric tolerance never infl
  assert.equal(h2h.directedReach(a,{...b,x:5.501}).reached,true);
  assert.equal(h2h.directedReach(a,{...b,x:5.503}).reached,false);
  assert.equal(coverage.headCovers(a,{x:5.501,y:0}),false);
- assert.equal(coverage.headCovers({...a,arc:90},{x:0,y:-1}),false);
- assert.equal(h2h.directedReach({...a,start:90,arc:90},{...b,x:4.8}).reached,false);
+ assert.equal(coverage.headCovers(head('quarter',0,0,5.5,{arc:90}),{x:0,y:-1}),false);
+ assert.equal(h2h.directedReach(head('quarter',0,0,5.5,{start:90,arc:90}),{...b,x:4.8}).reached,false);
  const report=check(project([a,b]));assert.ok(report.some(i=>i.id==='h2h-a-b'));assert.ok(!report.some(i=>i.id==='h2h-b-a'));
 });
 test('a remote non-neighbour contributes coverage and downgrades the same short link from error to warning',()=>{
@@ -46,7 +54,8 @@ test('corner, strip, bubbler and unverified custom models never inherit universa
  assert.equal(catalog.itemById('PCN-25').coverageRule,'CUSTOM');
  assert.ok(catalog.CATALOG.every(i=>['HEAD_TO_HEAD','SPECIAL','CUSTOM'].includes(i.coverageRule)));
  for(const id of ['MP-CORNER','MP-LCS-515','PCN-25','G-70-B']){
-  const p=project([head('a',0,0,2,{catalogId:id}),head('b',6,0,2)]);
+  const item=catalog.itemById(id),special={...flow.catalogHeadDefaults(item),id:'a',catalogId:id,x:0,y:0,start:0,zone:1};
+  const p=project([special,head('b',6,0,2)]);
   assert.ok(!check(p).some(i=>i.id.startsWith('h2h-')));
  }
 });

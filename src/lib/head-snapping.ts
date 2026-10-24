@@ -1,6 +1,8 @@
 import { arcCenter, ellipseWorldPts, facePoints } from "./cad/engine";
 import { layerForType, type CadDrawing, type SnapHit } from "./cad/types";
 import { dist, projectOnSegment, type Pt } from "./geometry";
+import { catalogForHead,  itemById } from "./equipment-catalog";
+import type { Head } from "./project-types";
 import { figureAtPoint, irrigationFigures } from './irrigation-figures';
 
 export function sameFigureHeads(point: Pt, heads: (Pt & {id:string})[], drawing: CadDrawing, nearDistance=0, faceId?:string) {
@@ -64,21 +66,43 @@ function targetsFor(d: CadDrawing): Targets {
   return targets;
 }
 
+type SnapHead = Pt & {id:string} & Partial<Pick<Head,"r"|"start"|"arc"|"catalogId">>;
+
+/** Finite sector boundaries; never snap to the invisible remainder of a circle. */
+function withSectors(drawing: CadDrawing, heads: SnapHead[], excludeHead?:string): Targets {
+  const base=targetsFor(drawing);
+  const targets:Targets={corners:[...base.corners],lines:[...base.lines],arcs:[...base.arcs]};
+  for(const h of heads){
+    if(h.id===excludeHead || h.r == null || h.start == null || h.arc == null || h.r<=0)continue;
+    const item=h.catalogId ? catalogForHead(h) : undefined;
+    if(item?.strip || item?.coverageKind==='point')continue;
+    const start=h.start*Math.PI/180, sweep=h.arc*Math.PI/180;
+    targets.arcs.push({c:{x:h.x,y:h.y},r:h.r,start,sweep});
+    if(h.arc<360-1e-8)for(const angle of [start,start+sweep]){
+      const pt={x:h.x+h.r*Math.cos(angle),y:h.y+h.r*Math.sin(angle)};
+      targets.corners.push({pt});
+      targets.lines.push({a:{x:h.x,y:h.y},b:pt});
+    }
+  }
+  return targets;
+}
+
 export function snapSprinklerPoint(point: Pt, drawing: CadDrawing, options: {
   snapOn: boolean; pxPerMeter: number; pointerType?: string;
-  snapGridOn?: boolean; gridStep?: number; heads?: (Pt & { id: string })[]; excludeHead?: string;
+  snapGridOn?: boolean; gridStep?: number; heads?: SnapHead[]; excludeHead?: string; sectorEdit?: boolean;
 }): SnapHit {
   const grid = () => options.snapGridOn && options.gridStep && options.gridStep > 0
     ? { pt: { x: Math.round(point.x/options.gridStep)*options.gridStep, y: Math.round(point.y/options.gridStep)*options.gridStep }, kind: 'grid' as const }
     : { pt: point, kind: 'none' as const };
-  if (!options.snapOn) return grid();
+  if (!options.snapOn) return { pt: point, kind: "none" };
   const tolerance = (options.pointerType === "touch" ? 22 : options.pointerType === "pen" ? 14 : 12) / Math.max(options.pxPerMeter, 1e-6);
-  const targets = targetsFor(drawing);
+  const targets = withSectors(drawing,options.heads ?? [],options.excludeHead);
   let best: SnapHit = { pt: point, kind: "none" }, distance = tolerance;
   const consider = (pt: Pt, kind: "end" | "mid" | "edge", target: Target) => {
     const d = dist(point, pt);
     if (d <= distance) { best = { pt: { x: pt.x, y: pt.y }, kind, faceId: target.faceId, edgeId: target.edgeId }; distance = d; }
   };
+  if(options.sectorEdit) for(const h of options.heads ?? []) if(h.id!==options.excludeHead) consider(h,"end",{});
   for (const corner of targets.corners) consider(corner.pt, "end", corner);
   if (best.kind === "end") return best;
   for (const line of targets.lines) if(line.midpoint) consider({ x:(line.a.x+line.b.x)/2,y:(line.a.y+line.b.y)/2 },'mid',line);
@@ -127,6 +151,7 @@ export function snapSprinklerPoint(point: Pt, drawing: CadDrawing, options: {
   }
   if (intersection) return intersection;
   if (best.kind === 'edge') return best;
+  if(options.sectorEdit)return {pt:{x:point.x,y:point.y},kind:'none'};
   const aligned = { ...point }; let kind: SnapHit['kind'] = 'none';
   for (const axis of ['x','y'] as const) {
     const head = heads.filter(h => Math.abs(point[axis]-h[axis])<=alignTolerance)

@@ -4,6 +4,7 @@ import type { CadDrawing } from './cad/types';
 
 /** Visual size follows zoom out; pointer hit targets remain independently usable. */
 export const headSymbolScale = (px: number) => Math.min(1, Math.max(0, px) / 36);
+export const HEAD_SYMBOL_RADIUS=11;
 
 /** Keep model words intact while making an inward label compact. */
 export function equipmentLabel(text:string,scale:number,compact=false) {

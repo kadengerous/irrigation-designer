@@ -1,5 +1,5 @@
 import { tr, type Locale } from "@/lib/i18n";
-import type { CatalogItem } from "@/lib/hunter-catalog";
+import type { CatalogItem } from "@/lib/equipment-catalog";
 
 export { popUpHeight as popUpLabel } from "@/lib/catalog-localization";
 import { popUpHeight as popUpLabel } from "@/lib/catalog-localization";

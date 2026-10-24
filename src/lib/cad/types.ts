@@ -1,5 +1,7 @@
 import { text as uiText } from "@/lib/i18n";
+import {staticImageSrc} from '../static-image-src';
 import type { Pt } from "@/lib/geometry";
+import type { LandscapeObject } from "../landscape-objects";
 import type { TextureSize } from "./texture-mapping";
 import type { PlantCategory, PlantRecord, PlantIrrigationContext } from "../landscape-types";
 
@@ -64,6 +66,8 @@ export type CadFace = {
   circle?: { cx: number; cy: number; r: number };
   ellipse?: { cx: number; cy: number; rx: number; ry: number; rot?: number };
   rect?: { x: number; y: number; w: number; h: number; rot: number };
+  /** Original editable corners; outer contains the actual tangent lines and circular arcs. */
+  rounding?: { corners: CadVertex[]; radii: number[] };
   spline?: { pts: Pt[]; closed: boolean };
   /** Smoothed pencil stroke. Open strokes live as standalone faces without CAD edges. */
   freehand?: { pts: Pt[]; closed: boolean };
@@ -115,13 +119,18 @@ export type CadDim = {
 
 export type CadPlant = {
   id: string;
+  /** Omitted in older projects: preserve the original illustrated view. */
+  visualMode?: import('../landscape-types').LandscapeVisualMode;
   kind: PlantCategory;
   x: number;
   y: number;
   r: number;
+  /** Degrees about the crown centre, independent of its diameter. */
+  rotation?: number;
   /** Snapshot keeps identification and source references available in saved projects. */
   catalogId?: string;
   catalog?: PlantRecord;
+  hidden?: boolean;
   locked?: boolean;
   irrigation?: Partial<PlantIrrigationContext> & { zoneId?: number | null };
 };
@@ -133,6 +142,8 @@ export type CadLayerId =
   | "paving"
   | "landscape"
   | "plants"
+  | "trees" | "shrubs" | "flowers" | "grasses"
+  | "furniture" | "lighting" | "decor" | "equipment"
   | "irrigation"
   | "pipes"
   | "dims"
@@ -145,6 +156,10 @@ export const CAD_LAYERS: { id: CadLayerId; key: string }[] = [
   { id: "paving", key: "layerPaving" },
   { id: "landscape", key: "layerLandscape" },
   { id: "plants", key: "layerPlants" },
+  { id: "trees", key: "plantCategory_tree" },
+  { id: "shrubs", key: "plantCategory_shrub" },
+  { id: "flowers", key: "plantCategory_flower" },
+  { id: "grasses", key: "plantCategory_grass" },
   { id: "irrigation", key: "layerIrrigation" },
   { id: "pipes", key: "layerPipes" },
   { id: "dims", key: "layerDims" },
@@ -181,7 +196,7 @@ export type CadText = {
 
 export type CadDrawing = {
   suppressedAutoDimensions?: string[];
-  irrigationDimensions?: {offset:number;suppressed?:string[];headIds?:string[]};
+  irrigationDimensions?: {headsOnly?:boolean;offset:number;suppressed?:string[];headIds?:string[]};
   automaticDimensionMode?: 'plan' | 'irrigation';
   faceOrder?: string[];
   version: number;
@@ -192,7 +207,8 @@ export type CadDrawing = {
   texts?: Record<string, CadText>;
   constraints?: Record<string, CadConstraint>;
   plants?: Record<string, CadPlant>;
-  layers?: Record<CadLayerId, { visible: boolean; locked: boolean }>;
+  landscapeObjects?: Record<string, LandscapeObject>;
+  layers?: Record<CadLayerId, { visible: boolean; locked: boolean; name?: string }>;
 };
 
 export type SnapKind =
@@ -231,6 +247,7 @@ export type CadTool =
   | "fill"
   | "dim"
   | "text"
+  | "cut"
   | "trim"
   | "extend"
   | "copy"
@@ -319,31 +336,69 @@ export const FACE_FILLS = [
   "#3a3a38",
   "#1a1a18",
   "#ffffff",
+  "#f97316",
+  "#14b8a6",
+  "#2563eb",
 ] as const;
 
-export type FaceTexture = { id: `texture:${string}`; label: string; src: string; patternScale?: number; baseRotation?: 0 | 90 };
+export type FaceTexture = { id: `texture:${string}`; label: string; src: string; patternScale?: number; baseRotation?: 0 | 90; roof?: "hip" | "gable" };
 
-/** Row order in the six-column material palette. */
+/** Available materials; IDs also identify textures in saved projects. */
 export const FACE_TEXTURES: readonly FaceTexture[] = [
   { id: "texture:pavers-gray", get label() { return uiText("material_tile_gray"); }, src: "/materials/pavers-gray.png" },
   { id: "texture:pavers-brick", get label() { return uiText("material_clinker"); }, src: "/materials/pavers-brick.png" },
   { id: "texture:decking", get label() { return uiText("material_deck"); }, src: "/materials/decking.png" },
-  { id: "texture:roof-shingle", get label() { return uiText("material_shingle"); }, src: "/materials/roof-shingle.png" },
-  { id: "texture:roof-metal", get label() { return uiText("material_metal_roof"); }, src: "/materials/roof-metal.png", baseRotation: 90 },
+  { id: "texture:roof-shingle", get label() { return uiText("material_shingle"); }, src: "/materials/roof-shingle.png", roof: "hip" },
+  { id: "texture:roof-metal", get label() { return uiText("material_metal_roof"); }, src: "/materials/roof-metal.png", roof: "hip" },
   { id: "texture:flagstone", get label() { return uiText("material_flagstone"); }, src: "/materials/flagstone.png", patternScale: 0.06 },
   { id: "texture:pavers-beige", get label() { return uiText("material_tile_beige"); }, src: "/materials/pavers-beige.png" },
   { id: "texture:asphalt", get label() { return uiText("material_asphalt"); }, src: "/materials/asphalt.png" },
   { id: "texture:concrete", get label() { return uiText("material_concrete"); }, src: "/materials/concrete.png" },
-  { id: "texture:roof-tile", get label() { return uiText("material_roof_tile"); }, src: "/materials/roof-tile.png", baseRotation: 90 },
+  { id: "texture:roof-tile", get label() { return uiText("material_roof_tile"); }, src: "/materials/roof-tile.png", roof: "hip" },
   { id: "texture:pool-water", get label() { return uiText("material_pool"); }, src: "/materials/pool-water.png" },
   { id: "texture:gravel", get label() { return uiText("material_gravel"); }, src: "/materials/gravel.png" },
-  { id: "texture:greenhouse", get label() { return uiText("material_greenhouse"); }, src: "/materials/greenhouse.png", baseRotation: 90 },
+  { id: "texture:greenhouse", get label() { return uiText("material_greenhouse"); }, src: "/materials/greenhouse.png", roof: "gable" },
   { id: "texture:mulch", get label() { return uiText("material_mulch"); }, src: "/materials/mulch.png", patternScale: 0.06 },
   { id: "texture:soil", get label() { return uiText("material_soil"); }, src: "/materials/soil.png" },
   { id: "texture:sand", get label() { return uiText("material_sand"); }, src: "/materials/sand.png" },
   { id: "texture:pebbles", get label() { return uiText("material_pebble"); }, src: "/materials/pebbles.png", patternScale: 0.06 },
   { id: "texture:rubber-surface", get label() { return uiText("material_rubber"); }, src: "/materials/rubber-surface.png", patternScale: 0.06 },
+  { id: "texture:roof-metal-tile", get label() { return uiText("texture:roof-metal-tile"); }, src: "/materials/roof-metal-tile.png", roof: "hip" },
+  { id: "texture:roof-slate", get label() { return uiText("texture:roof-slate"); }, src: "/materials/roof-slate.png", roof: "hip" },
+  { id: "texture:roof-natural-slate", get label() { return uiText("texture:roof-natural-slate"); }, src: "/materials/roof-natural-slate.png", roof: "hip" },
+  { id: "texture:pond-water", get label() { return uiText("texture:pond-water"); }, src: "/materials/pond-water.png" },
+  { id: "texture:river-water", get label() { return uiText("texture:river-water"); }, src: "/materials/river-water.png" },
+  { id: "texture:gravel-white", get label() { return uiText("texture:gravel-white"); }, src: "/materials/gravel-white.png", patternScale: 0.06 },
+  { id: "texture:gravel-black", get label() { return uiText("texture:gravel-black"); }, src: "/materials/gravel-black.png", patternScale: 0.06 },
+  { id: "texture:greenhouse-polycarbonate", get label() { return uiText("texture:greenhouse-polycarbonate"); }, src: "/materials/greenhouse-polycarbonate.png", roof: "gable" },
+  { id: "texture:greenhouse-bronze", get label() { return uiText("texture:greenhouse-bronze"); }, src: "/materials/greenhouse-bronze.png", roof: "gable" },
+  { id: "texture:roof-thatch", get label() { return uiText("texture:roof-thatch"); }, src: "/materials/roof-thatch.png", roof: "hip" },
+  { id: "texture:roof-cedar", get label() { return uiText("texture:roof-cedar"); }, src: "/materials/roof-cedar.png", roof: "hip" },
+  { id: "texture:lake-water", get label() { return uiText("texture:lake-water"); }, src: "/materials/lake-water.png" },
+  { id: "texture:sea-water", get label() { return uiText("texture:sea-water"); }, src: "/materials/sea-water.png" },
+  { id: "texture:stream-water", get label() { return uiText("texture:stream-water"); }, src: "/materials/stream-water.png" },
+  { id: "texture:fountain-water", get label() { return uiText("texture:fountain-water"); }, src: "/materials/fountain-water.png" },
+  { id: "texture:reflecting-water", get label() { return uiText("texture:reflecting-water"); }, src: "/materials/reflecting-water.png" },
+  { id: "texture:crushed-brick", get label() { return uiText("texture:crushed-brick"); }, src: "/materials/crushed-brick.png", patternScale: 0.06 },
+  { id: "texture:greenhouse-timber", get label() { return uiText("texture:greenhouse-timber"); }, src: "/materials/greenhouse-timber.png", roof: "gable" },
+  { id: "texture:greenhouse-film", get label() { return uiText("texture:greenhouse-film"); }, src: "/materials/greenhouse-film.png", roof: "gable" },
+  { id: "texture:gazebo-wood", get label() { return uiText("texture:gazebo-wood"); }, src: "/materials/gazebo-wood.png", roof: "hip" },
+  { id: "texture:pavilion-metal", get label() { return uiText("texture:pavilion-metal"); }, src: "/materials/pavilion-metal.png", roof: "hip" },
+  { id: "texture:pergola", get label() { return uiText("texture:pergola"); }, src: "/materials/pergola.png" },
+  { id: "texture:lawn-parterre", get label() { return uiText("texture:lawn-parterre"); }, src: "/materials/lawn-parterre.png", patternScale: 0.06 },
+  { id: "texture:lawn-sport", get label() { return uiText("texture:lawn-sport"); }, src: "/materials/lawn-sport.png", patternScale: 0.06 },
+  { id: "texture:lawn-meadow", get label() { return uiText("texture:lawn-meadow"); }, src: "/materials/lawn-meadow.png", patternScale: 0.06 },
+  { id: "texture:lawn-striped", get label() { return uiText("texture:lawn-striped"); }, src: "/materials/lawn-striped.png", patternScale: 0.24 },
 ] as const;
+
+export const FACE_TEXTURE_GROUPS = [
+  { key: "material_lawn", ids: ["texture:lawn-parterre", "texture:lawn-sport", "texture:lawn-meadow", "texture:lawn-striped"] },
+  { key: "materialGroupRoof", ids: ["texture:roof-shingle", "texture:roof-metal", "texture:roof-tile", "texture:roof-metal-tile", "texture:roof-slate", "texture:roof-natural-slate", "texture:roof-thatch", "texture:roof-cedar"] },
+  { key: "materialGroupSurfaces", ids: ["texture:pavers-gray", "texture:pavers-brick", "texture:pavers-beige", "texture:decking", "texture:flagstone", "texture:asphalt", "texture:concrete", "texture:rubber-surface"] },
+  { key: "materialGroupWater", ids: ["texture:pool-water", "texture:pond-water", "texture:river-water", "texture:lake-water", "texture:sea-water", "texture:stream-water", "texture:fountain-water", "texture:reflecting-water"] },
+  { key: "materialGroupGround", ids: ["texture:soil", "texture:mulch", "texture:sand", "texture:gravel", "texture:pebbles", "texture:gravel-white", "texture:gravel-black", "texture:crushed-brick"] },
+  { key: "materialGroupStructures", ids: ["texture:greenhouse", "texture:greenhouse-polycarbonate", "texture:greenhouse-bronze", "texture:greenhouse-timber", "texture:greenhouse-film", "texture:gazebo-wood", "texture:pavilion-metal", "texture:pergola"] },
+].map(group => ({ key: group.key, textures: group.ids.map(id => FACE_TEXTURES.find(texture => texture.id === id)!) }));
 
 /** Retired choices remain renderable in saved projects. */
 export const ALL_FACE_TEXTURES: readonly FaceTexture[] = [
@@ -351,6 +406,8 @@ export const ALL_FACE_TEXTURES: readonly FaceTexture[] = [
   { id: "texture:lawn", get label() { return uiText("material_lawn"); }, src: "/materials/lawn.png" },
   { id: "texture:vegetable-beds", get label() { return uiText("material_beds"); }, src: "/materials/vegetable-beds.png", patternScale: 0.06 },
 ];
+
+for(const texture of ALL_FACE_TEXTURES)texture.src=staticImageSrc(texture.src);
 
 export function faceTexture(fill: string | undefined): FaceTexture | undefined {
   return ALL_FACE_TEXTURES.find((texture) => texture.id === fill);

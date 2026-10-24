@@ -6,8 +6,8 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { LocalizedNumberInput } from "./localized-number-input";
 import { useProject } from "@/lib/project-store";
-import { formatNumber, parseLocalizedNumber, tr } from "@/lib/i18n";
-import { fromMeters, lenLabel, toMetersLen } from "@/lib/units";
+import { formatNumber, tr } from "@/lib/i18n";
+import { localeDirection } from "@/lib/locale-config";
 import { loadImageReference, referenceFileKind, type PdfReference, type RasterPage } from "@/lib/reference-file";
 import type { Underlay } from "@/lib/project-types";
 
@@ -82,22 +82,10 @@ function PdfPageDialog({ document, name, onUse, onCancel }: { document: PdfRefer
   </Dialog.Portal></Dialog.Root>;
 }
 
-function NumberField({ label, value, disabled, onChange }: { label: string; value: number; disabled: boolean; onChange: (value: number) => void }) {
-  const locale = useProject(s => s.locale), [draft, setDraft] = useState(formatNumber(value, 2));
-  const numberFormat = useProject(s => s.numberFormat);
-  useEffect(() => setDraft(formatNumber(value, 2)), [value, locale, numberFormat]);
-  const commit = () => {
-    // Focusing a rounded display value must not resize a calibrated reference.
-    if (draft === formatNumber(value, 2)) return;
-    const n = parseLocalizedNumber(draft);
-    if (Number.isFinite(n)) onChange(n); else setDraft(formatNumber(value, 2));
-  };
-  return <label className="reference-field">{label}<input inputMode="decimal" value={draft} disabled={disabled} onChange={e => setDraft(e.target.value)} onBlur={commit} onKeyDown={e => { if (e.key === "Enter") { commit(); e.currentTarget.blur(); } }} /></label>;
-}
-
 export function ReferencePanel({ onUpload, busy }: { onUpload: () => void; busy: boolean }) {
   const locale = useProject(s => s.locale), t = (key: string, vars?: Record<string, string | number>) => tr(locale, key, vars);
-  const u = useProject(s => s.project.underlay), scaled = useProject(s => s.project.scaleCalibrated), units = useProject(s => s.units);
+  const u = useProject(s => s.project.underlay), scaled = useProject(s => s.project.scaleCalibrated);
+  const container=typeof document==='undefined'?undefined:document.querySelector<HTMLElement>('.app-shell');
   const [deleteAsk, setDeleteAsk] = useState(false);
   const [unlockAsk, setUnlockAsk] = useState(false);
   const patch = useProject(s => s.patchUnderlay);
@@ -118,19 +106,24 @@ export function ReferencePanel({ onUpload, busy }: { onUpload: () => void; busy:
         <input type="range" min={0} max={100} step={1} value={Math.round((1 - u.opacity) * 100)} onChange={e => patch({ opacity: 1 - Number(e.target.value) / 100 })} />
       </label>
       <p className={scaled ? "reference-note" : "reference-note reference-scale-required"} role="status">{t(scaled ? "referenceScaled" : "referenceUnscaled")}</p>
-      <Button className="w-full" disabled={u.locked || !u.visible} onClick={() => {
+      <Button className="w-full reference-calibrate-action" disabled={u.locked || !u.visible} onClick={() => {
         useProject.getState().setTool("scale"); useProject.setState({ referenceOpen: false });
       }}><Ruler />{t(scaled ? "referenceChangeScale" : "referenceScale")}</Button>
-      <div className="reference-field-grid">
-        <NumberField label={`${t("referenceX")} · ${lenLabel(units.length)}`} disabled={u.locked} value={fromMeters(u.x, units.length)} onChange={v => patch({ x: toMetersLen(v, units.length) })} />
-        <NumberField label={`${t("referenceY")} · ${lenLabel(units.length)}`} disabled={u.locked} value={fromMeters(u.y, units.length)} onChange={v => patch({ y: toMetersLen(v, units.length) })} />
-        <NumberField label={`${t("referenceWidth")} · ${lenLabel(units.length)}`} disabled={u.locked} value={fromMeters(u.width, units.length)} onChange={v => { const width = toMetersLen(v, units.length); if (width > 0) patch({ width, height: u.height * width / u.width }); }} />
-        <NumberField label={`${t("referenceRotation")} · °`} disabled={u.locked} value={u.rotation} onChange={rotation => patch({ rotation })} />
-      </div>
       <p className="reference-note">{t(u.locked ? "referenceLockedHint" : "referenceSetupHint")}</p>
-      <Button className="w-full" variant="solid" onClick={() => { patch({ locked: true }); useProject.getState().setReferenceOpen(false); }}>{t("referenceFinish")}</Button>
       <div className="reference-actions"><Button disabled={busy} onClick={onUpload}><Upload />{t("referenceReplace")}</Button><Button className="text-danger reference-delete" aria-label={t("referenceDelete")} onClick={() => setDeleteAsk(true)}><Trash2 /></Button></div>
-      {deleteAsk && <div className="reference-confirm" role="alert"><p>{t("referenceDeleteConfirm")}</p><div className="reference-actions"><Button onClick={() => setDeleteAsk(false)}>{t("cancel")}</Button><Button className="text-danger reference-delete" onClick={() => { useProject.getState().setUnderlay(null); setDeleteAsk(false); }}>{t("delete")}</Button></div></div>}
+      <AlertDialog.Root open={deleteAsk} onOpenChange={setDeleteAsk}>
+        <AlertDialog.Portal container={container}>
+          <AlertDialog.Overlay className="reference-dialog-overlay reference-delete-overlay" />
+          <AlertDialog.Content className="reference-page-dialog reference-delete-dialog" dir={localeDirection(locale)}>
+            <AlertDialog.Title className="font-semibold">{t("referenceDelete")}</AlertDialog.Title>
+            <AlertDialog.Description>{t("referenceDeleteConfirm")}</AlertDialog.Description>
+            <div className="reference-actions">
+              <AlertDialog.Cancel asChild><Button>{t("cancel")}</Button></AlertDialog.Cancel>
+              <AlertDialog.Action asChild><Button className="text-danger reference-delete" onClick={() => { useProject.getState().setUnderlay(null); setDeleteAsk(false); }}><Trash2 />{t("delete")}</Button></AlertDialog.Action>
+            </div>
+          </AlertDialog.Content>
+        </AlertDialog.Portal>
+      </AlertDialog.Root>
       <AlertDialog.Root open={unlockAsk && u.locked && scaled} onOpenChange={setUnlockAsk}>
         <AlertDialog.Portal>
           <AlertDialog.Overlay className="reference-dialog-overlay" />

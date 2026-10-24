@@ -194,7 +194,8 @@ test("reference workflow, persistence and twenty-language engineering interface"
         assert.ok(ref.includes(i18n.tr(locale,"referenceTransparency")));
         assert.ok(ref.includes(i18n.tr(locale,"referenceScale")));
         assert.match(ref,/<input type="range"[^>]*value="50"/);
-        assert.match(ref,/inputMode="decimal"[^>]*disabled=""/);
+        assert.doesNotMatch(ref,/inputMode="decimal"/);
+        assert.match(ref,/<button[^>]*reference-calibrate-action[^>]*disabled=""/);
         const review = renderToStaticMarkup(React.createElement(ZoneReview,{onCheck(){}}));
         assert.ok(!review.includes(i18n.tr(locale,"checkIrrigation")), locale);
         assert.ok(!review.includes(i18n.tr(locale,"checkProject")), locale);

@@ -23,7 +23,7 @@ export class MagnifierRenderer {
   private context = new LensContext(this.canvas);
   constructor() { this.canvas.context = this.context; }
 
-  render(stage: Konva.Stage, focus: Pt, width: number, height: number, size: number, dpr: number, background: string, zoom = MAGNIFIER_ZOOM) {
+  render(stage: Konva.Stage, focus: Pt, width: number, height: number, size: number, dpr: number, background: string, zoom = MAGNIFIER_ZOOM, excludeObjectId?:string, placement=false) {
     const canvas = this.canvas, context = this.context;
     if (canvas.getPixelRatio() !== dpr) canvas.setPixelRatio(dpr);
     if (canvas.width !== Math.round(size * dpr) || canvas.height !== Math.round(size * dpr)) canvas.setSize(size, size);
@@ -39,6 +39,8 @@ export class MagnifierRenderer {
     context.scale(zoom * scaleX, zoom * scaleY);
     const paint = (node: Konva.Node, symbol: Konva.Node | null = null) => {
       if (!node.isVisible()) return;
+      if(excludeObjectId&&node.getAttr('placementId')===excludeObjectId)return;
+      if(placement&&node.hasName('magnifier-placement-overlay'))return;
       // Dimensions, zero readouts and point numbers obscure the join at 5x.
       // Skip their text only in this private view; user-authored notes remain part of the drawing.
       if ((node.getClassName() === "Text" || node.getClassName() === "TextPath") && !node.hasName("drawing-annotation")) return;

@@ -40,6 +40,7 @@ export function placeFloating(
   wanted: { x: number; y: number },
   obstacles: Box[],
   gap = 8,
+  minimumWidth = 0,
 ): Box {
   const w = Math.min(size.width, bounds.width),
     h = Math.min(size.height, bounds.height);
@@ -91,7 +92,7 @@ export function placeFloating(
       ].filter((p) => p.width > 0 && p.height > 0);
     });
   }
-  const slot = slots.sort(
+  const slot = slots.filter(slot=>slot.width>=minimumWidth).sort(
     (a, b) =>
       Math.min(b.width, w) * Math.min(b.height, h) - Math.min(a.width, w) * Math.min(a.height, h) ||
       distance(a) - distance(b),
@@ -103,6 +104,32 @@ export function placeFloating(
     width: Math.min(w, slot.width),
     height: Math.min(h, slot.height),
   };
+}
+
+/** Guidance must stay readable. Measure from unconstrained text each time, then
+ * reflow at a real free slot; do not inherit a narrow box from the last frame. */
+export function placeGuidance(
+  bounds:Box,
+  measure:(maximumWidth:number)=>{width:number;height:number},
+  wanted:{x:number;y:number},
+  obstacles:Box[],
+  minimumWidth=192,
+  maximumWidth=480,
+  gap=8,
+):Box {
+  const hidden={x:bounds.x,y:bounds.y,width:0,height:0};
+  const natural=measure(maximumWidth),minimum=Math.min(minimumWidth,natural.width);
+  if(bounds.width<minimum||bounds.height<=0)return hidden;
+  let size=measure(Math.min(maximumWidth,bounds.width));
+  for(let pass=0;pass<4;pass++){
+    const box=placeFloating(bounds,size,wanted,obstacles,gap,minimum);
+    if(box.width<minimum||box.height<=0)return hidden;
+    const wrapped=measure(box.width);
+    if(wrapped.width<=box.width+.5&&wrapped.height<=box.height+.5)return {...box,width:Math.min(box.width,wrapped.width),height:wrapped.height};
+    if(Math.abs(size.width-wrapped.width)<.5&&Math.abs(size.height-wrapped.height)<.5)return hidden;
+    size=wrapped;
+  }
+  return hidden;
 }
 
 export function workspaceBounds(): Box {
@@ -141,6 +168,22 @@ export function workspaceBounds(): Box {
     }
   }
   return bounds;
+}
+
+/** Keep contextual guidance beside the tools, inside the free sidebar boundary. */
+export function guidanceBounds(bounds: Box, toolbar: Box | null, rtl = false, gap = 8, minimumWidth = 96): Box {
+  if (!toolbar) return bounds;
+  const right = bounds.x + bounds.width, bottom = bounds.y + bounds.height;
+  const edge = rtl ? Math.min(right, toolbar.x - gap) : Math.max(bounds.x, toolbar.x + toolbar.width + gap);
+  const width = rtl ? edge - bounds.x : right - edge;
+  if (width >= minimumWidth) {
+    const y = clamp(toolbar.y, bounds.y, bottom);
+    return { x: rtl ? bounds.x : edge, y, width, height: bottom - y };
+  }
+  // A full-width phone toolbar leaves no side slot; use the area just below it.
+  const y = Math.max(bounds.y, toolbar.y + toolbar.height + gap);
+  if (y < bottom) return { ...bounds, y, height: bottom - y };
+  return { ...bounds, height: Math.max(0, toolbar.y - gap - bounds.y) };
 }
 
 const FIXED_OBSTACLES =

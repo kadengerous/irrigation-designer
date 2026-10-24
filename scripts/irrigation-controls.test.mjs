@@ -9,14 +9,15 @@ test("pressure defaults, zone transfers, deletion and pump demand stay consisten
   const server = await createServer({ server:{middlewareMode:true,hmr:false} });
   try {
     const {placeableCatalog,itemById,workingPressureBar} = await server.ssrLoadModule("/src/lib/hunter-catalog.ts");
-    const {catalogHeadDefaults,headFlow} = await server.ssrLoadModule("/src/lib/flow.ts");
+    const {catalogHeadDefaults,headFlow,boundedPressure,pressureSteps} = await server.ssrLoadModule("/src/lib/flow.ts");
     const {zoneFlow,zonePressure,recommendPump} = await server.ssrLoadModule("/src/lib/hydro.ts");
     const {emptyProject} = await server.ssrLoadModule("/src/lib/project-types.ts");
     globalThis.window = {localStorage:globalThis.localStorage};
     const {useProject} = await server.ssrLoadModule("/src/lib/project-store.ts");
     for (const item of placeableCatalog()) {
       const defaults = catalogHeadDefaults(item);
-      assert.equal(defaults.designPressure,workingPressureBar(item,defaults.bodyId,defaults.nozzleId),item.id);
+      const recommended=workingPressureBar(item,defaults.bodyId,defaults.nozzleId);
+      assert.equal(defaults.designPressure,boundedPressure(pressureSteps(item,defaults.nozzleId,defaults.arc),recommended)??recommended,item.id);
     }
     const makeHead = (id,model,zone) => ({...catalogHeadDefaults(itemById(model)),id,catalogId:model,zone,x:10,y:15,start:20,locked:false});
     const heads = [makeHead("a","I-20",1),makeHead("b","I-20",2),makeHead("c","G-75-B",2)];
@@ -35,7 +36,8 @@ test("pressure defaults, zone transfers, deletion and pump demand stay consisten
     assert.equal(zonePressure(project.heads,1),0);
     assert.equal(zonePressure(project.heads,2),heads[1].designPressure);
     assert.equal(zonePressure(project.heads,3),Math.max(heads[0].designPressure,heads[2].designPressure));
-    assert.deepEqual(project.heads.map(h=>({...h,zone:1})),heads.map(h=>({...h,zone:1})),"zone transfer does not change nozzle, geometry or pressure settings");
+    assert.deepEqual(project.heads.map(({zoneAssignment,...h})=>({...h,zone:1})),heads.map(h=>({...h,zone:1})),"zone transfer does not change nozzle, geometry or pressure settings");
+    assert.ok(project.heads.filter(h=>["a","c"].includes(h.id)).every(h=>h.zoneAssignment==="manual"),"explicit transfers retain manual membership");
     const pump=recommendPump(project);
     assert.equal(pump.zoneId,3);
     assert.ok(Math.abs(pump.qLpm-zoneFlow(project.heads,3)*1.1)<1e-8);

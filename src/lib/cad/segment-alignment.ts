@@ -74,11 +74,11 @@ export function segmentAlignmentGuides(point: Pt, anchors: readonly Pt[], pxPerM
 }
 
 /** Capture a nearby reference axis exactly, before grid rounding can pull it away. */
-export function snapSegmentAlignment(raw: Pt, fallback: Pt, anchors: readonly Pt[], px: number): Pt {
+export function snapSegmentAlignment(raw: Pt, fallback: Pt, anchors: readonly Pt[], px: number, tolerancePx=6): Pt {
   const point = { ...fallback };
   for (const guide of segmentAlignmentGuides(raw, anchors, px)) {
     const coordinate = guide.axis === "horizontal" ? "y" : "x";
-    if (Math.abs(raw[coordinate] - guide.anchor[coordinate]) * px <= 6) {
+    if (Math.abs(raw[coordinate] - guide.anchor[coordinate]) * px <= tolerancePx) {
       point[coordinate] = guide.anchor[coordinate];
     }
   }
